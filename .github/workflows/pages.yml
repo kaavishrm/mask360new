@@ -23,7 +23,12 @@ jobs:
         with:
           node-version: 22
       - run: node website/build.mjs
+        env:
+          # Remove SITE_BASE once mask360.agency is attached as the custom domain.
+          SITE_BASE: /${{ github.event.repository.name }}
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: website/public

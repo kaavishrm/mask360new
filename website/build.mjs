@@ -11,6 +11,8 @@ const MARK = readFileSync(join(OUT, 'assets/brand/m360.svg'), 'utf8')
   .replace(/ width="[\d.]+" height="[\d.]+"/, '')
   .replace('<svg', '<svg aria-hidden="true" focusable="false"');
 const VER = String(Date.now()).slice(-6);
+const BASE = (process.env.SITE_BASE || '').replace(/\/$/, ''); // e.g. /mask360new for a sub-path host
+const B = (p) => BASE + p;
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => String(s).replace(/<[^>]+>/g, '');
@@ -20,7 +22,7 @@ function img(ref, { alt = '', span = 12, ar, eager = false, cls = '' } = {}) {
   const [slug, name] = ref.split('/');
   const e = manifest[slug] && manifest[slug][name];
   if (!e) throw new Error('unknown image ' + ref);
-  const base = `/assets/img/${slug}/${name}`;
+  const base = `${BASE}/assets/img/${slug}/${name}`;
   const srcset = e.sizes.map((w) => `${base}-${w}.webp ${w}w`).join(', ');
   const src = `${base}-${e.sizes[Math.min(1, e.sizes.length - 1)]}.webp`;
   const ratio = ar || `${e.w}/${e.h}`;
@@ -28,8 +30,8 @@ function img(ref, { alt = '', span = 12, ar, eager = false, cls = '' } = {}) {
 }
 
 function video(name, { alt = '', ar = '16/9', cls = '', mobile } = {}) {
-  const v = `/assets/video/${name}`;
-  const m = mobile ? ` data-mobile="/assets/video/${mobile}"` : '';
+  const v = `${BASE}/assets/video/${name}`;
+  const m = mobile ? ` data-mobile="${BASE}/assets/video/${mobile}"` : '';
   return `<div class="pic ${cls}" style="--ar:${ar}"><video class="loop" autoplay muted loop playsinline preload="metadata" poster="${v}-poster.webp" aria-label="${esc(alt)}" data-loop${m}><source src="${v}.webm" type="video/webm"><source src="${v}.mp4" type="video/mp4"></video></div>`;
 }
 
@@ -38,13 +40,13 @@ function media(item, opts = {}) {
   return img(item.img, { alt: item.alt, span: item.span || opts.span || 12, ar: item.ar || opts.ar, eager: opts.eager });
 }
 
-const header = `<header class="top"><a class="mark" href="/" aria-label="Mask360, home">${MARK}</a><nav aria-label="Primary">${nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join('')}</nav></header>`;
+const header = `<header class="top"><a class="mark" href="${B('/')}" aria-label="Mask360, home">${MARK}</a><nav aria-label="Primary">${nav.map((n) => `<a href="${B(n.href)}">${n.label}</a>`).join('')}</nav></header>`;
 
 const footer = `<footer class="foot night" id="footer">
-  <div class="fcol s4"><a class="mark" href="/" aria-label="Mask360, home">${MARK}</a><p class="mt">${esc(site.legal)}</p></div>
+  <div class="fcol s4"><a class="mark" href="${B('/')}" aria-label="Mask360, home">${MARK}</a><p class="mt">${esc(site.legal)}</p></div>
   <div class="fcol s3"><p class="micro">Offices</p>${site.offices.map((o) => `<p class="mt-s"><b>${o.city}</b><br>${o.lines.join('<br>')}</p>`).join('')}<p class="mt-s">${site.cities.join(', ')}</p></div>
   <div class="fcol s3"><p class="micro">Write</p><p class="mt-s"><a class="link" href="mailto:${site.email}">${site.email}</a></p><p class="mt-s"><a class="link" href="mailto:${site.founderEmail}">${site.founderEmail}</a></p></div>
-  <div class="fcol s2"><p class="micro">Index</p><p class="mt-s"><a href="/work/">Work</a><br><a href="/#studio">Studio</a><br><a href="/contact/">Contact</a><br><a href="${site.credentials}" rel="noopener">Credentials</a></p></div>
+  <div class="fcol s2"><p class="micro">Index</p><p class="mt-s"><a href="${B('/work/')}">Work</a><br><a href="${B('/#studio')}">Studio</a><br><a href="${B('/contact/')}">Contact</a><br><a href="${site.credentials}" rel="noopener">Credentials</a></p></div>
   <div class="end"><span>${esc(home.footer.end)}</span><span>© <span data-year>2026</span> ${site.name}</span></div>
 </footer>`;
 
@@ -62,9 +64,9 @@ function page({ path, title, description, image, body, cls = '', jsonld }) {
 <meta property="og:type" content="website"><meta property="og:site_name" content="${site.name}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url}"><meta property="og:image" content="${ogImage}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${ogImage}">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=${VER}">
+<link rel="icon" href="${BASE}/assets/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="${BASE}/assets/brand/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="${BASE}/assets/brand/apple-touch-icon.png"><link rel="manifest" href="${BASE}/site.webmanifest">
+<link rel="preload" href="${BASE}/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="${BASE}/assets/css/site.css?v=${VER}">
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ''}
 </head>
 <body class="${cls}">
@@ -74,7 +76,7 @@ ${header}
 ${body}
 </main>
 ${footer}
-<script src="/assets/js/site.js?v=${VER}" defer></script>
+<script src="${BASE}/assets/js/site.js?v=${VER}" defer></script>
 </body>
 </html>`;
   const file = join(OUT, path.endsWith('/') ? path + 'index.html' : path);
@@ -91,7 +93,7 @@ const org = {
 };
 
 const bySlug = Object.fromEntries(cases.map((c) => [c.slug, c]));
-const caseCard = (c, span, ar, eager = false) => `<a class="item s${span}" href="/work/${c.slug}/">${img(c.featured.img, { alt: c.featured.alt, span, ar, eager })}<div class="cap"><b>${esc(c.short)}</b><span>${esc(c.kicker)}, ${c.year}</span></div></a>`;
+const caseCard = (c, span, ar, eager = false) => `<a class="item s${span}" href="${BASE}/work/${c.slug}/">${img(c.featured.img, { alt: c.featured.alt, span, ar, eager })}<div class="cap"><b>${esc(c.short)}</b><span>${esc(c.kicker)}, ${c.year}</span></div></a>`;
 
 // ---------- Home ----------
 const H = home;
@@ -105,7 +107,7 @@ const homeBody = `
 </section>
 
 <section class="sec work" id="work">
-  <div class="head"><div><p class="micro">${esc(H.work.micro)}</p><h2 class="h2">${H.work.h2}</h2></div><a class="btn" href="/work/">${esc(H.work.link)}</a></div>
+  <div class="head"><div><p class="micro">${esc(H.work.micro)}</p><h2 class="h2">${H.work.h2}</h2></div><a class="btn" href="${B('/work/')}">${esc(H.work.link)}</a></div>
   <div class="grid">${featured.map(([s, span, ar], i) => caseCard(bySlug[s], span, ar)).join('')}</div>
 </section>
 
@@ -133,7 +135,7 @@ const homeBody = `
 
 <section class="sec night" id="studio">
   <div class="split">
-    <div class="s5"><p class="micro">${esc(H.studio.micro)}</p><h2 class="h2 mt">${H.studio.h2}</h2><p class="lede mt">${esc(H.studio.text)}</p><a class="btn mt" href="/contact/">Book the studio</a></div>
+    <div class="s5"><p class="micro">${esc(H.studio.micro)}</p><h2 class="h2 mt">${H.studio.h2}</h2><p class="lede mt">${esc(H.studio.text)}</p><a class="btn mt" href="${B('/contact/')}">Book the studio</a></div>
     <div class="s7">${video(H.studio.video, { alt: H.studio.caption, ar: '16/9' })}<p class="micro mt-s">${esc(H.studio.caption)}</p></div>
   </div>
 </section>
@@ -147,7 +149,7 @@ const homeBody = `
 <section class="sec" id="contact">
   <div class="split">
     <div class="s6"><p class="micro">${esc(H.contact.micro)}</p><h2 class="h2 mt">${H.contact.h2}</h2><p class="lede mt">${esc(H.contact.text)}</p></div>
-    <div class="s6 contact-links"><p><a class="link big" href="mailto:${site.email}">${site.email}</a></p><p class="mt-s"><a class="link big" href="mailto:${site.founderEmail}">${site.founderEmail}</a></p><p class="mt"><a class="btn" href="/contact/">Write to us</a></p></div>
+    <div class="s6 contact-links"><p><a class="link big" href="mailto:${site.email}">${site.email}</a></p><p class="mt-s"><a class="link big" href="mailto:${site.founderEmail}">${site.founderEmail}</a></p><p class="mt"><a class="btn" href="${B('/contact/')}">Write to us</a></p></div>
   </div>
 </section>`;
 
@@ -192,7 +194,7 @@ cases.forEach((c, i) => {
 <section class="sec pt0 work"><div class="grid">${c.gallery.map((g) => `<div class="item s${g.span || 12}">${media(g, { span: g.span || 12 })}${g.caption ? `<p class="micro mt-s">${esc(g.caption)}</p>` : ''}</div>`).join('')}</div></section>
 </article>
 <section class="sec paper next">
-  <a href="/work/${next.slug}/"><p class="micro">Next</p><h2 class="h2">${esc(next.short)}</h2><p class="muted mt-s">${esc(next.kicker)}, ${next.year}</p></a>
+  <a href="${BASE}/work/${next.slug}/"><p class="micro">Next</p><h2 class="h2">${esc(next.short)}</h2><p class="muted mt-s">${esc(next.kicker)}, ${next.year}</p></a>
 </section>`;
   const [slug, name] = c.featured.img.split('/');
   const e = manifest[slug][name];
@@ -212,7 +214,7 @@ const contactBody = `
   <div class="split start">
     <form class="form s7" action="${C.form.action}" method="POST" accept-charset="UTF-8">
       <input type="hidden" name="_subject" value="${esc(C.form.subject)}">
-      <input type="hidden" name="_next" value="${site.url}/contact/thanks/">
+      <input type="hidden" name="_next" value="${site.url}${BASE}/contact/thanks/">
       <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="field"><label class="micro" for="f-name">Name</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
@@ -233,14 +235,14 @@ const contactBody = `
   </div>
 </section>`;
 page({ path: '/contact/', title: C.title, description: C.description, body: contactBody });
-page({ path: '/contact/thanks/', title: 'Received, Mask360', description: 'Your message reached Mask360.', body: `<section class="sec title"><p class="micro">Contact</p><h1 class="display">Received.</h1><p class="lede mt">We reply within two working days. Until then, the work is <a class="link" href="/work/">this way</a>.</p></section>` });
-page({ path: '/404.html', title: 'Nothing here, Mask360', description: 'Page not found.', body: `<section class="sec title"><p class="micro">404</p><h1 class="display">Nothing here.</h1><p class="lede mt">The work is <a class="link" href="/work/">this way</a>.</p></section>` });
+page({ path: '/contact/thanks/', title: 'Received, Mask360', description: 'Your message reached Mask360.', body: `<section class="sec title"><p class="micro">Contact</p><h1 class="display">Received.</h1><p class="lede mt">We reply within two working days. Until then, the work is <a class="link" href="${B('/work/')}">this way</a>.</p></section>` });
+page({ path: '/404.html', title: 'Nothing here, Mask360', description: 'Page not found.', body: `<section class="sec title"><p class="micro">404</p><h1 class="display">Nothing here.</h1><p class="lede mt">The work is <a class="link" href="${B('/work/')}">this way</a>.</p></section>` });
 
 // ---------- sitemap, robots, manifest ----------
 const urls = ['/', '/work/', '/contact/', ...cases.map((c) => `/work/${c.slug}/`)];
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.url}${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /contact/thanks/\nSitemap: ${site.url}/sitemap.xml\n`);
-writeFileSync(join(OUT, 'site.webmanifest'), JSON.stringify({ name: site.name, short_name: site.name, start_url: '/', display: 'browser', background_color: '#0a0a0a', theme_color: '#0a0a0a', icons: [{ src: '/assets/brand/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/assets/brand/icon-512.png', sizes: '512x512', type: 'image/png' }] }, null, 1));
+writeFileSync(join(OUT, 'site.webmanifest'), JSON.stringify({ name: site.name, short_name: site.name, start_url: BASE + '/', display: 'browser', background_color: '#0a0a0a', theme_color: '#0a0a0a', icons: [{ src: BASE + '/assets/brand/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: BASE + '/assets/brand/icon-512.png', sizes: '512x512', type: 'image/png' }] }, null, 1));
 
 // ---------- copy checks ----------
 const banned = /[—–]|!|elevate|seamless|journey|unlock|world-class|thrilled|template/i;
