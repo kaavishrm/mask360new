@@ -8,6 +8,7 @@ The quiet arrogance of a house that shows you the palace and does not explain it
 - Bureau Borsche: the editorial grid, one grotesk set huge and tight against small tracked captions, hairline rules.
 - Ssense: monochrome, the work on plain grounds, an index as the interface for the work list, product-grade restraint.
 - Aman: emptiness photographed as abundance. The Anantara pavilion at dusk is the first image for that reason.
+- Fiber (the Framer template Kaavish sent): the chrome. A thin strip with live clocks and the mark, socials as initials, the floating pill navigation at the bottom, a percentage counter on first load, small quiet labels on a scrim, tight image grids.
 - The module reference (the 2026 Edition board): the card system, curved corners, dark and light alternation, photo cells that interrupt the grid, numbers only on a true sequence.
 
 ## What we are not doing

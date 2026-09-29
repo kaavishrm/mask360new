@@ -18,9 +18,35 @@ export const site = {
 };
 
 export const nav = [
+  { label: 'Index', href: '/' },
   { label: 'Work', href: '/work/' },
+  { label: 'Frames', href: '/frames/' },
   { label: 'Studio', href: '/#studio' },
   { label: 'Contact', href: '/contact/' },
+];
+
+// Header strip: live clocks for the two markets, and socials as initials (add handles when ready).
+export const clocks = [
+  { city: 'Mumbai', tz: 'Asia/Kolkata' },
+  { city: 'Dubai', tz: 'Asia/Dubai' },
+];
+export const social = [
+  // { initials: 'IG', label: 'Instagram', href: 'https://www.instagram.com/...' },
+  // { initials: 'LI', label: 'LinkedIn', href: 'https://www.linkedin.com/company/...' },
+];
+
+// The Frames page: single images from across the work, no captions beyond the client.
+export const frames = [
+  ['anantara/pavilion-dusk', 'Anantara Jewel Bagh'], ['zorae/chiaroscuro', 'ZORÁE'], ['ajio-luxe-weekend/chivas-pavilion', 'Ajio Luxe Wkend'],
+  ['zorae/earrings-water', 'ZORÁE'], ['anantara/peacock-bar', 'Anantara Jewel Bagh'], ['ef-athletic/tennis-balls', 'EF Athletic'],
+  ['anantara/facade-night', 'Anantara Jewel Bagh'], ['zorae/necklace-skin', 'ZORÁE'], ['ajio-luxe-weekend/ferrari-canopy', 'Ajio Luxe Wkend'],
+  ['chivas/chivas-bottle', 'Chivas Regal'], ['anantara/blue-alcove', 'Anantara Jewel Bagh'], ['zorae/wet-hair', 'ZORÁE'],
+  ['ef-athletic/palms', 'EF Athletic'], ['anantara/mosaic-hall', 'Anantara Jewel Bagh'], ['zorae/pear-ring', 'ZORÁE'],
+  ['ajio-luxe-weekend/gallery', 'Ajio Luxe Wkend'], ['zorae/organic-silhouettes', 'ZORÁE'], ['anantara/chef', 'Anantara Jewel Bagh'],
+  ['stregis/stregis-skyline', 'The St. Regis Mumbai'], ['zorae/ring-sand', 'ZORÁE'], ['ef-athletic/beach', 'EF Athletic'],
+  ['anantara/colonnade', 'Anantara Jewel Bagh'], ['zorae/hand-face', 'ZORÁE'], ['ajio-luxe-weekend/maybach', 'Ajio Luxe Wkend'],
+  ['fireboltt/fireboltt-glasses', 'Fire-Boltt'], ['anantara/courtyard-dusk', 'Anantara Jewel Bagh'], ['zorae/eyes-closed', 'ZORÁE'],
+  ['ef-athletic/group-padel', 'EF Athletic'], ['anantara/wardrobe', 'Anantara Jewel Bagh'], ['zorae/choker-product', 'ZORÁE'],
 ];
 
 export const home = {
@@ -37,9 +63,9 @@ export const home = {
     micro: 'What we do',
     h2: 'Three pillars. <em>One house.</em>',
     items: [
-      { label: 'Content', title: 'Creative content marketing', text: 'Identity, design, packaging, content systems, social and creator distribution.', list: ['Brand identity and packaging', 'Content systems and calendars', 'Film, stills and design', 'Social and creator distribution'] },
-      { label: 'Experiential', title: 'Experiences and launches', text: 'Private UHNI evenings, brand and product launches, retail weekends, festival and expo scale.', list: ['Private experiences', 'Launches and activations', 'Retail weekends and festivals', 'Spatial and 3D design direction'] },
-      { label: 'Systems', title: 'Performance and AI systems', text: 'Media, measurement and the workflows around the tools. We build the system, then run it.', list: ['Paid media and search', 'CRM, tracking and reporting', 'GenAI content pipelines', 'Site, schema and bots'] },
+      { label: 'Content', img: 'zorae/necklace-skin', title: 'Creative content marketing', text: 'Identity, design, packaging, content systems, social and creator distribution.', list: ['Brand identity and packaging', 'Content systems and calendars', 'Film, stills and design', 'Social and creator distribution'] },
+      { label: 'Experiential', img: 'ajio-luxe-weekend/chivas-pavilion', title: 'Experiences and launches', text: 'Private UHNI evenings, brand and product launches, retail weekends, festival and expo scale.', list: ['Private experiences', 'Launches and activations', 'Retail weekends and festivals', 'Spatial and 3D design direction'] },
+      { label: 'Systems', img: 'anantara/mosaic-hall', title: 'Performance and AI systems', text: 'Media, measurement and the workflows around the tools. We build the system, then run it.', list: ['Paid media and search', 'CRM, tracking and reporting', 'GenAI content pipelines', 'Site, schema and bots'] },
     ],
   },
   process: {

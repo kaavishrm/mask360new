@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { site, nav, home, contactPage, cases, featured, otherWork } from './content.mjs';
+import { site, nav, clocks, social, frames, home, contactPage, cases, featured, otherWork } from './content.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'public');
@@ -40,17 +40,23 @@ function media(item, opts = {}) {
   return img(item.img, { alt: item.alt, span: item.span || opts.span || 12, ar: item.ar || opts.ar, eager: opts.eager });
 }
 
-const header = `<header class="top"><a class="mark" href="${B('/')}" aria-label="Mask360, home">${MARK}</a><nav aria-label="Primary">${nav.map((n) => `<a href="${B(n.href)}">${n.label}</a>`).join('')}</nav></header>`;
+const header = (active) => `<div class="loader" aria-hidden="true"><span class="pct">0</span><span class="unit">%</span></div>
+<header class="bar">
+  <div class="bar-l">${clocks.map((c) => `<span class="clock"><time data-tz="${c.tz}">00:00</time> ${esc(c.city.toUpperCase())}</span>`).join('')}</div>
+  <a class="mark" href="${B('/')}" aria-label="Mask360, home">${MARK}</a>
+  <div class="bar-r">${social.map((x) => `<a href="${x.href}" aria-label="${esc(x.label)}" rel="noopener">${esc(x.initials)}</a>`).join('')}<a class="mail" href="mailto:${site.email}">${site.email}</a></div>
+</header>
+<nav class="pill" aria-label="Primary">${nav.map((n) => `<a href="${B(n.href)}"${n.href === active ? ' aria-current="page"' : ''}>${n.label}</a>`).join('')}</nav>`;
 
 const footer = `<footer class="foot night" id="footer">
   <div class="fcol s4"><a class="mark" href="${B('/')}" aria-label="Mask360, home">${MARK}</a><p class="mt">${esc(site.legal)}</p></div>
   <div class="fcol s3"><p class="micro">Offices</p>${site.offices.map((o) => `<p class="mt-s"><b>${o.city}</b><br>${o.lines.join('<br>')}</p>`).join('')}<p class="mt-s">${site.cities.join(', ')}</p></div>
   <div class="fcol s3"><p class="micro">Write</p><p class="mt-s"><a class="link" href="mailto:${site.email}">${site.email}</a></p><p class="mt-s"><a class="link" href="mailto:${site.founderEmail}">${site.founderEmail}</a></p></div>
-  <div class="fcol s2"><p class="micro">Index</p><p class="mt-s"><a href="${B('/work/')}">Work</a><br><a href="${B('/#studio')}">Studio</a><br><a href="${B('/contact/')}">Contact</a><br><a href="${site.credentials}" rel="noopener">Credentials</a></p></div>
+  <div class="fcol s2"><p class="micro">Index</p><p class="mt-s"><a href="${B('/work/')}">Work</a><br><a href="${B('/frames/')}">Frames</a><br><a href="${B('/#studio')}">Studio</a><br><a href="${B('/contact/')}">Contact</a><br><a href="${site.credentials}" rel="noopener">Credentials</a></p></div>
   <div class="end"><span>${esc(home.footer.end)}</span><span>© <span data-year>2026</span> ${site.name}</span></div>
 </footer>`;
 
-function page({ path, title, description, image, body, cls = '', jsonld }) {
+function page({ path, title, description, image, body, cls = '', jsonld, active = '' }) {
   const url = site.url + path;
   const ogImage = site.url + (image || '/assets/brand/og.jpg');
   const html = `<!doctype html>
@@ -71,7 +77,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 </head>
 <body class="${cls}">
 <a class="skip" href="#main">Skip to content</a>
-${header}
+${header(active)}
 <main id="main">
 ${body}
 </main>
@@ -93,7 +99,7 @@ const org = {
 };
 
 const bySlug = Object.fromEntries(cases.map((c) => [c.slug, c]));
-const caseCard = (c, span, ar, eager = false) => `<a class="item s${span}" href="${BASE}/work/${c.slug}/">${img(c.featured.img, { alt: c.featured.alt, span, ar, eager })}<div class="cap"><b>${esc(c.short)}</b><span>${esc(c.kicker)}, ${c.year}</span></div></a>`;
+const caseCard = (c, span, ar, eager = false) => `<a class="item s${span}" href="${BASE}/work/${c.slug}/">${img(c.featured.img, { alt: c.featured.alt, span, ar, eager, cls: 'labelled' }).replace('</div>', `<div class="cap"><b>${esc(c.short)}</b><span>${c.year}</span></div></div>`)}</a>`;
 
 // ---------- Home ----------
 const H = home;
@@ -113,7 +119,7 @@ const homeBody = `
 
 <section class="sec night" id="what">
   <div class="head"><div><p class="micro">${esc(H.pillars.micro)}</p><h2 class="h2">${H.pillars.h2}</h2></div></div>
-  <div class="cards">${H.pillars.items.map((p) => `<div class="card"><p class="micro">${esc(p.label)}</p><div><h3 class="h3">${esc(p.title)}</h3><p>${esc(p.text)}</p><ul>${p.list.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></div></div>`).join('')}</div>
+  <div class="cards">${H.pillars.items.map((p) => `<div class="pillar">${img(p.img, { alt: p.title, span: 4, ar: '4/5', cls: 'labelled' }).replace('</div>', `<div class="cap"><b>${esc(p.label)}</b></div></div>`)}<h3 class="h3 mt-s">${esc(p.title)}</h3><p class="muted">${esc(p.text)}</p><ul class="list">${p.list.map((l) => `<li>${esc(l)}</li>`).join('')}</ul></div>`).join('')}</div>
 </section>
 
 <section class="sec paper" id="how">
@@ -153,7 +159,7 @@ const homeBody = `
   </div>
 </section>`;
 
-page({ path: '/', title: site.title, description: site.description, body: homeBody, cls: 'home', jsonld: org });
+page({ path: '/', title: site.title, description: site.description, body: homeBody, cls: 'home', jsonld: org, active: '/' });
 
 // ---------- Work index ----------
 const indexSpans = { 'anantara-jewel-bagh': 8, 'zorae': 4, 'ajio-luxe-weekend': 4, 'lollapalooza-nexa': 4, 'ef-athletic': 4, 'st-regis-mumbai': 6, 'dior-istituto-marangoni': 6, 'fire-boltt': 8, 'chivas-regal': 4 };
@@ -173,7 +179,7 @@ const workBody = `
   </div>
   <p class="mt"><a class="btn" href="${site.credentials}" rel="noopener">Open the credentials deck</a></p>
 </section>`;
-page({ path: '/work/', title: 'Work, Mask360', description: 'Selected work by Mask360 for Anantara, ZORÁE, Ajio Luxe, Lollapalooza India, Dior, St. Regis, EF Athletic, Fire-Boltt and Chivas Regal.', body: workBody });
+page({ path: '/work/', title: 'Work, Mask360', description: 'Selected work by Mask360 for Anantara, ZORÁE, Ajio Luxe, Lollapalooza India, Dior, St. Regis, EF Athletic, Fire-Boltt and Chivas Regal.', body: workBody, active: '/work/' });
 
 // ---------- Case pages ----------
 cases.forEach((c, i) => {
@@ -199,8 +205,18 @@ cases.forEach((c, i) => {
   const [slug, name] = c.featured.img.split('/');
   const e = manifest[slug][name];
   const og = `/assets/img/${slug}/${name}-${e.sizes.find((w) => w <= 1440) || e.sizes[0]}.webp`;
-  page({ path: `/work/${c.slug}/`, title: `${strip(c.short)}, ${site.name}`, description: c.lede, image: og, body, cls: 'case' });
+  page({ path: `/work/${c.slug}/`, title: `${strip(c.short)}, ${site.name}`, description: c.lede, image: og, body, cls: 'case', active: '/work/' });
 });
+
+// ---------- Frames ----------
+const framesBody = `
+<section class="sec title">
+  <p class="micro">Frames</p>
+  <h1 class="display">Single frames, <em>no captions.</em></h1>
+  <p class="lede mt">Stills and film frames from across the work. Hover for the house.</p>
+</section>
+<section class="sec pt0 work"><div class="grid tight">${frames.map(([ref, who]) => `<div class="item s4">${img(ref, { alt: who, span: 4, ar: '4/5', cls: 'labelled' }).replace('</div>', `<div class="cap hover"><b>${esc(who)}</b></div></div>`)}</div>`).join('')}</div></section>`;
+page({ path: '/frames/', title: 'Frames, Mask360', description: 'Single frames from Mask360 work for Anantara, ZORÁE, Ajio Luxe, EF Athletic, Chivas Regal, St. Regis and Fire-Boltt.', body: framesBody, active: '/frames/' });
 
 // ---------- Contact ----------
 const C = contactPage;
@@ -234,12 +250,12 @@ const contactBody = `
     </div>
   </div>
 </section>`;
-page({ path: '/contact/', title: C.title, description: C.description, body: contactBody });
+page({ path: '/contact/', title: C.title, description: C.description, body: contactBody, active: '/contact/' });
 page({ path: '/contact/thanks/', title: 'Received, Mask360', description: 'Your message reached Mask360.', body: `<section class="sec title"><p class="micro">Contact</p><h1 class="display">Received.</h1><p class="lede mt">We reply within two working days. Until then, the work is <a class="link" href="${B('/work/')}">this way</a>.</p></section>` });
 page({ path: '/404.html', title: 'Nothing here, Mask360', description: 'Page not found.', body: `<section class="sec title"><p class="micro">404</p><h1 class="display">Nothing here.</h1><p class="lede mt">The work is <a class="link" href="${B('/work/')}">this way</a>.</p></section>` });
 
 // ---------- sitemap, robots, manifest ----------
-const urls = ['/', '/work/', '/contact/', ...cases.map((c) => `/work/${c.slug}/`)];
+const urls = ['/', '/work/', '/frames/', '/contact/', ...cases.map((c) => `/work/${c.slug}/`)];
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.url}${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /contact/thanks/\nSitemap: ${site.url}/sitemap.xml\n`);
 writeFileSync(join(OUT, 'site.webmanifest'), JSON.stringify({ name: site.name, short_name: site.name, start_url: BASE + '/', display: 'browser', background_color: '#0a0a0a', theme_color: '#0a0a0a', icons: [{ src: BASE + '/assets/brand/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: BASE + '/assets/brand/icon-512.png', sizes: '512x512', type: 'image/png' }] }, null, 1));
