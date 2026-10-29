@@ -27,7 +27,7 @@ How space is organised on the page, screen, poster, slide, frame and post: grid 
 - [Terms introduced](#terms-introduced)
 - [Sources and further reading](#sources-and-further-reading)
 
-How this file relates to the rest: design-taste, SKILL.md, sections 2 and 5 ("Composition") state the taste rule (a grid you can feel, broken once; margins generous; align to an edge) and section 7 fixes the house layer. This file is the craft beneath it: how a grid is built, measured and broken, and why each value holds. Type sizes and leading live in 03-typography.md (sections 5 to 7); perception and Gestalt in 02-perception-and-psychology.md; platform pixel specs in 26-platform-and-format-specs-2026.md (sections 2, 4, 7 and 11); cinematography and shot sizes in 14-video-preproduction-and-cinematography.md; print, packaging and out-of-home (OOH) production in 20-print-packaging-ooh-and-physical-production.md; component-level UI layout in 06-ui-design-craft.md; tokens in 07-design-systems-and-tokens.md, section 6.11.
+How this file relates to the rest: design-taste, SKILL.md, sections 2 and 5 ("Composition") state the taste rule (a grid you can feel, broken once; margins generous; align to an edge) and section 7 fixes the house layer. This file is the craft beneath it: how a grid is built, measured and broken, and why each value holds. Type sizes and leading live in 03-typography.md (sections 5 to 7); perception and Gestalt grouping (how the eye organises parts into wholes) in 02-perception-and-psychology.md; platform pixel specs in 26-platform-and-format-specs-2026.md (sections 2, 4, 7 and 11); cinematography and shot sizes in 14-video-preproduction-and-cinematography.md; print, packaging and out-of-home (OOH) production in 20-print-packaging-ooh-and-physical-production.md; component-level UI layout in 06-ui-design-craft.md; tokens in 07-design-systems-and-tokens.md, section 6.11.
 
 ## 1. Grid anatomy
 
@@ -35,7 +35,7 @@ A grid is a set of invisible lines that fixes where things may start, stop and a
 
 ### 1.1 The parts
 
-Three terms recur through the file. Measure is the length of a line of text, counted in characters. Leading is the vertical distance from one baseline to the next. An em is a distance equal to the type size (12 pt type, 12 pt em).
+Three terms recur through the file. Measure is the length of a line of text, counted in characters. Leading is the vertical distance from one baseline (the line on which letters sit) to the next. An em is a distance equal to the type size (12 pt type, 12 pt em).
 
 | Part | Definition | Typical print value | Typical screen value | Why it exists |
 |---|---|---|---|---|
@@ -131,11 +131,11 @@ The one-module system. The 136 px module with 24 px gutters (160 px pitch) also 
 
 ### 2.4 Adapting one layout across formats
 
-A 360 campaign ships 30 to 80 sizes from one idea, from a 728 x 90 leaderboard to an 850 x 2000 mm roll-up. The one-module system covers 1:1 to 9:16; adaptation covers the rest. Sort every deliverable into five ratio families (width to height) and design one master layout per family.
+A 360 campaign ships 30 to 80 sizes from one idea, from a 728 x 90 leaderboard to an 850 x 2000 mm roll-up (a free-standing banner that retracts into a base cassette). The one-module system covers 1:1 to 9:16; adaptation covers the rest. Sort every deliverable into five ratio families (bands of width to height) and design one master layout per family. A lock-up is the fixed arrangement of mark, wordmark and any strapline (18-brand-strategy-and-identity-design.md, section 3.4).
 
 | Family | Ratio | Formats (ratio) | Master layout |
 |---|---|---|---|
-| Extreme horizontal | Wider than 2.5:1 | Leaderboard 728 x 90 (8.1:1), billboard 970 x 250 (3.9:1), 12 x 4 m unipole (3:1) | One row: image, line, mark side by side; horizontal lock-up |
+| Extreme horizontal | Wider than 2.5:1 | Leaderboard 728 x 90 (8.1:1), billboard 970 x 250 (3.9:1), 12 x 4 m unipole (a roadside board on a single pole, 3:1) | One row: image, line, mark side by side; horizontal lock-up |
 | Landscape | 1.5:1 to 2.5:1 | 16:9 film and slides (1.78:1), link ads 1.91:1, 40 x 20 ft hoarding (2:1) | Image across two thirds, line and mark in the remaining third |
 | Near square | 0.75:1 to 1.5:1 | 1:1, 4:5 (0.8:1), the 3:4 grid tile, medium rectangle 300 x 250 (1.2:1) | The 6-column module system above |
 | Portrait | 0.5:1 to 0.75:1 | A series (0.71:1), 2:3 posters, 9:16 (0.56:1), half page 300 x 600 (0.5:1) | Image above, line on a flowline, mark at the foot |
@@ -143,9 +143,9 @@ A 360 campaign ships 30 to 80 sizes from one idea, from a 728 x 90 leaderboard t
 
 - Fixed across families: the mark's anchor (same corner or same axis, 6.14); the line, hung from a flowline at a fixed fraction of the height; type sized from the format's short side; the colour field and the image treatment.
 - Changed per family: lock-up orientation (house rule: horizontal above about 2:1, stacked below about 1:1.5, from the lock-up set in 18-brand-strategy-and-identity-design.md, section 3.4); the number of elements (extreme families carry image, line and mark only, as on OOH, 13.2); the crop.
-- Approve the two extreme families first. A key visual that survives 8:1 and 1:3.75 survives every ratio between them; approving only the 4:5 and adapting later is the usual cause of a broken hoarding or skyscraper.
+- Approve the two extreme families first. A key visual (the campaign's master image and line) that survives 8:1 and 1:3.75 survives every ratio between them; approving only the 4:5 and adapting later is the usual cause of a broken hoarding or skyscraper.
 - One master photograph per campaign, with a marked focal point and a protect zone (the area every crop must keep) per family, shot at UHD (3840 x 2160) or larger, because a 9:16 crop of UHD is 1215 x 2160 and needs no upscale (16-editing-colour-grading-and-delivery.md, section 10.5).
-- The adaptation matrix: rows are formats; columns are languages (English, Arabic, Hindi) and placements; each cell records size, safe zone, owner and approval status. Above about 30 cells, build the masters with rules (Figma auto layout with minimum and maximum widths and variable modes per language, or InDesign Liquid Layout, 18.2), so adaptation is mechanical and QA is visual. IAB sizes and weights: 26-platform-and-format-specs-2026.md, section 3.6; Indian and UAE OOH sizes: 20-print-packaging-ooh-and-physical-production.md, sections 7.1 and 7.2.
+- The adaptation matrix: rows are formats; columns are languages (English, Arabic, Hindi) and placements; each cell records size, safe zone, owner and approval status. Above about 30 cells, build the masters with rules (Figma auto layout with minimum and maximum widths and variable modes per language, or InDesign Liquid Layout rules, which scale or reposition page items when the page size changes, 18.2), so adaptation is mechanical and QA is visual. IAB (Interactive Advertising Bureau) sizes and weights: 26-platform-and-format-specs-2026.md, section 3.6; Indian and UAE OOH sizes: 20-print-packaging-ooh-and-physical-production.md, sections 7.1 and 7.2.
 
 ## 3. The Swiss method: building the grid from the type
 
@@ -167,7 +167,7 @@ The Dutch line made the grid visible. Wim Crouwel's "Vormgevers" poster for the 
 3. Count the lines that fit in the live area height at the leading: 708 pt / 12 pt = 59 lines on the A4 in section 2.3.
 4. Choose the number of fields per column (rows). Each field holds n lines; fields are separated by one empty line. Total lines = rows x n + (rows - 1). For 6 rows: 6n + 5 = 59, so n = 9. If the arithmetic does not close, adjust the bottom margin and keep the leading, because the leading was chosen for reading.
 5. Choose columns. The gutter equals one line of leading (12 pt). Column width = (live width - gutters) / columns.
-6. Define field edges by type: the top of a field aligns with the cap height of the first line of text in it; the bottom aligns with the baseline of the last line. An image placed in a field therefore sits flush with the cap tops of the adjacent text and ends on its last baseline. This is the detail that makes a Swiss page look locked.
+6. Define field edges by type: the top of a field aligns with the cap height (the height of a capital letter above the baseline) of the first line of text in it; the bottom aligns with the baseline of the last line. An image placed in a field therefore sits flush with the cap tops of the adjacent text and ends on its last baseline. This is the detail that makes a Swiss page look locked.
 7. Test with the worst content, then adjust once. Müller-Brockmann's examples run from 8 to 32 fields per page; more fields give more freedom and less visible order.
 
 Screen translation: body 16/24 px gives a 24 px row unit and a 24 px gutter; fields of 5 lines are 120 px with 24 px gaps. On the web the cap-top and baseline alignment needs `text-box-trim` (03-typography.md, section 5.4), so that a heading's box starts at its cap height. It became Baseline newly available on 18 August 2026, when Firefox 154 shipped it (Baseline: the WebDX Community Group status for a feature that works in the current Chrome, Edge, Firefox and Safari; "widely available" follows 30 months later; web-features data, read October 2026).
@@ -265,7 +265,7 @@ Hierarchy is the order in which a viewer reads the elements, set by the designer
 - Separation between adjacent levels: at least 1.25 times in size, or a change of two weight steps (300 to 500, 400 to 700), or a change of colour value of at least 40 points of lightness. One variable changed strongly is clearer than three changed weakly.
 - Order of tools, cheapest first: position (top left in left-to-right scripts), space around, size, weight, colour. Space and position cost nothing and preserve calm, which is why design-taste, SKILL.md, section 5 says hierarchy from weight and space before size.
 - Entry points: Mario García and Pegie Stark's eye-tracking study for the Poynter Institute (Eyes on the News, 1991) reported that readers entered newspaper pages most often through the dominant photograph or artwork, then the headline. Plan two or three entry points per spread, and write captions as a second headline layer, because the caption sits beside the first entry point.
-- Predicted attention: Neurons Predict and Attention Insight draw heatmaps from saliency models trained on eye-tracking data. Use them to compare variants before media spend (does the first fixation land on the product and the mark?). They model bottom-up saliency and say nothing about comprehension or intent (02-perception-and-psychology.md, section 2.3), so treat them as a second squint test and never as proof.
+- Predicted attention: Neurons Predict and Attention Insight draw heatmaps from saliency models (saliency: bottom-up conspicuity computed from local contrast) trained on eye-tracking data. Use them to compare variants before media spend (does the first fixation land on the product and the mark?). They model bottom-up saliency and say nothing about comprehension or intent (02-perception-and-psychology.md, section 2.3), so treat them as a second squint test and never as proof.
 
 ### 6.2 Contrast and scale ratios
 
@@ -362,7 +362,7 @@ Unity is the sense that every element belongs to one system (shared grid, type, 
 
 ### 6.14 The mark in the layout
 
-The mark is a marker (1.1): one fixed position per format family, and a size derived from its minimums (18-brand-strategy-and-identity-design.md, section 3.3: wordmark 80 to 120 px wide on screen, symbol alone 24 to 32 px, print wordmark 20 to 25 mm).
+The mark (the logo: symbol, wordmark or both) is a marker (1.1): one fixed position per format family, and a size derived from its minimums (18-brand-strategy-and-identity-design.md, section 3.3: wordmark 80 to 120 px wide on screen, symbol alone 24 to 32 px, print wordmark 20 to 25 mm).
 - Size from the rendered scale. A 1080 px post shown 402 CSS px wide renders at 0.372 scale, so a wordmark that must reach 80 to 120 px on screen is 215 to 322 px wide on the canvas, 20 to 30 percent of the width (222 to 332 px at 390 CSS px). A symbol alone needs 65 to 86 px, 6 to 8 percent.
 - The profile grid cannot carry the mark: a 4:5 post shows its central 1012 px in a 133 px tile (0.13 scale), so the wordmark would need about 610 px, 56 percent of the width. Recognition in the grid comes from image treatment and colour; the mark is sized for the full-screen view.
 - Three positions cover luxury practice: centred at the foot (the signature position of fashion and jewellery print advertising); a corner of the terminal area (bottom right in left-to-right layouts, bottom left in Arabic-led layouts, 16.1); centred at the head (mastheads, invitations, menus).
@@ -417,7 +417,7 @@ Round and pointed forms (O, C, S, A, V, a circle, a triangle) must extend beyond
 - Sidebearings: display type at large sizes shows its left sidebearing (the built-in space before the glyph) as a visible indent against body text aligned to the same edge. At 160 px an H or a round O can sit 6 to 12 px in from the edge. Pull the headline left by the measured amount (a negative margin or text-indent in em units, so it scales).
 - Round letters at the edge (O, C, G, Q) and diagonals (A, V, W) need further pull than straight stems.
 - Hanging punctuation: opening quotation marks, hyphens and full stops at line ends hang into the margin so the text edge looks straight. InDesign's Optical Margin Alignment does it automatically; CSS `hanging-punctuation` is implemented in Safari only, and is not Baseline as of October 2026 (03-typography.md, section 8.6).
-- Icons beside text: align the icon's optical centre to the text's x-height centre (lowercase) or cap-height centre (labels in caps); the line box includes half-leading and misleads. A 20 px icon beside 16 px text usually sits 1 px higher than box centring places it.
+- Icons beside text: align the icon's optical centre to the text's x-height centre (the height of lowercase x; for lowercase labels) or cap-height centre (labels in caps); the line box includes half-leading and misleads. A 20 px icon beside 16 px text usually sits 1 px higher than box centring places it.
 - Bullets and numbers: hang them outside the text edge so the text itself aligns with the column.
 
 ### 7.6 The 2 px that matters
@@ -494,7 +494,7 @@ Material Design's density scale reduces component height by 4 dp per step (0, -1
 
 - Apple Human Interface Guidelines: 44 x 44 pt minimum hit target.
 - Material Design: 48 x 48 dp minimum touch target, with at least 8 dp between targets.
-- WCAG 2.2, Success Criterion 2.5.8 Target Size (Minimum), Level AA: pointer targets at least 24 x 24 CSS px, or spaced so that a 24 px diameter circle centred on each undersized target overlaps no other target or circle (W3C Understanding document, read October 2026). SC 2.5.5 Target Size (Enhanced), Level AAA: 44 x 44 CSS px.
+- Web Content Accessibility Guidelines (WCAG) 2.2, Success Criterion (SC) 2.5.8 Target Size (Minimum), Level AA: pointer targets at least 24 x 24 CSS px, or spaced so that a 24 px diameter circle centred on each undersized target overlaps no other target or circle (W3C Understanding document, read October 2026). SC 2.5.5 Target Size (Enhanced), Level AAA: 44 x 44 CSS px.
 - House rule: 44 px minimum on every touch target, with 8 px between adjacent targets; the visual element may be smaller (a 24 px icon) if its hit area is padded to 44. Reason: the WCAG minimum is a floor for compliance, and luxury audiences include older clients on phones with large text settings.
 
 ### 8.6 Optical versus mathematical spacing
@@ -513,9 +513,9 @@ Responsive layout reflows one design fluidly across widths; adaptive layout swit
 ### 9.1 Mobile first
 
 Design the narrowest layout first and add structure as width allows. Reasons: the phone layout forces the content order (one column admits one order, which becomes the hierarchy for every other size); CSS written with `min-width` queries adds rules as the screen grows, which is simpler than removing them; and in India and the Gulf the phone is the primary screen for consumer luxury, so the phone layout is the flagship.
-- Test widths: 320 CSS px, the conformance floor (WCAG 2.2 SC 1.4.10 Reflow, AA: no two-dimensional scrolling at 320 CSS px wide, which equals a 1280 px window at 400 percent zoom); 360 (the narrowest common Android device); 390 and 402 (iPhone); 440 (iPhone Pro Max); 768; 1024; 1366 and 1536 (the most common Windows laptop resolutions after 1920 x 1080, at 125 percent scaling; 06-ui-design-craft.md, section 1.3); 1440; 1920.
+- Test widths: 320 CSS px, the conformance floor (WCAG 2.2 SC 1.4.10 Reflow, AA: no two-dimensional scrolling at 320 CSS px wide, which equals a 1280 px window at 400 percent zoom); 360 (the narrowest common Android device); 390 and 402 (iPhone); 440 (iPhone Pro Max); 768; 1024; 1366 and 1536 (the next most common desktop resolutions after 1920 x 1080 in StatCounter's ranking; 1536 x 864 is a 1920 x 1080 Windows laptop at 125 percent scaling; 06-ui-design-craft.md, section 1.3); 1440; 1920.
 - SC 1.4.12 Text Spacing (AA): the layout survives line height of 1.5 times the font size, paragraph spacing of 2 times, letter spacing of 0.12 em and word spacing of 0.16 em with no clipped text. That rules out fixed-height cards, fixed-height hero text boxes and text baked into images. SC 1.4.4 Resize Text (AA): text resizes to 200 percent.
-- SC 1.3.2 Meaningful Sequence (A): when `grid-area`, `order` or `row-reverse` moves boxes, the DOM still follows the reading order, because CSS `reading-flow` works only in Chromium (limited availability, MDN, October 2026).
+- SC 1.3.2 Meaningful Sequence (A): when `grid-area`, `order` or `row-reverse` moves boxes, the DOM order (the order of elements in the HTML, which screen readers and the Tab key follow) still follows the reading order, because CSS `reading-flow` works only in Chromium (limited availability, MDN, October 2026).
 - Short viewports: zoom shrinks the CSS viewport height as well, so sticky headers and booking bars collapse below about 500 CSS px of height (`@media (max-height: 500px)`; 11-accessibility-and-inclusive-design.md, sections 2.2 and 8.2).
 
 ### 9.2 Breakpoints, and why container queries replace most of them
@@ -565,14 +565,14 @@ Jen Simmons named intrinsic web design in her 2018 talks (An Event Apart, "Every
 | `lh` and `rlh` units | Baseline since November 2023; widely available since May 2026 | Spacing in lines, so vertical rhythm survives a change of type scale (3.3) |
 | `text-box-trim` | Baseline newly available, 18 August 2026 | Trims half-leading so type aligns to cap height and baseline |
 | Viewport units `dvh`, `svh`, `lvh` | Baseline since December 2022 | Full-height sections that do not jump as the phone's browser bars move (9.7) |
-| Anchor positioning (`anchor-name`, `position-anchor`, `anchor()`, `position-area`, `position-try-fallbacks`) | `anchor-name`, `position-area` and `position-try-fallbacks` Baseline newly available since January 2026 (Firefox 147); `position-anchor` since September 2026 (Safari 27); the feature as a whole not yet Baseline (MDN and web-features data, October 2026) | Tooltips, menus and image labels placed relative to another element, with fallback positions when space runs out; combine with `popover` so the element renders in the top layer, outside z-index stacking (10.9) |
+| Anchor positioning (`anchor-name`, `position-anchor`, `anchor()`, `position-area`, `position-try-fallbacks`) | `anchor-name`, `position-area` and `position-try-fallbacks` Baseline newly available since January 2026 (Firefox 147); `position-anchor` since September 2026 (Safari 27); the feature as a whole not yet Baseline (MDN and web-features data, October 2026) | Tooltips, menus and image labels placed relative to another element, with fallback positions when space runs out; combine with `popover` so the element renders in the top layer, outside `z-index` stacking (10.9) |
 | `reading-flow` | Limited availability: Chromium only (Chrome 137); not Baseline (MDN, October 2026) | Makes focus order follow the visual order of a grid; until it is Baseline, keep DOM order equal to reading order (9.1) |
 | Masonry (`display: grid-lanes`) | Experimental; not yet Baseline (MDN, October 2026) | Pinterest-style packed columns; use only as progressive enhancement with a grid fallback |
-| Native `dialog` and `popover` | Baseline (`dialog` 2022, `popover` attribute April 2024) | Overlays in the top layer, outside z-index stacking (section 10.9) |
+| Native `dialog` and `popover` | Baseline (`dialog` 2022, `popover` attribute April 2024) | Overlays in the top layer, outside `z-index` stacking (section 10.9) |
 
 ### 9.7 The fold
 
-The fold is the bottom edge of the first screen. Users scroll, and attention decays with depth. Nielsen Norman Group, "Scrolling and attention" (2018; 120 participants, more than 130,000 fixations on 1920 x 1080 screens): 57 percent of viewing time above the fold and 74 percent in the first two screenfuls; their 2010 study on 1024 x 768 screens found 80 percent above the fold. Consequences:
+The fold is the bottom edge of the first screen. Users scroll, and attention decays with depth. Nielsen Norman Group, "Scrolling and attention" (Therese Fessenden, 2018; 120 participants, more than 130,000 fixations on 1920 x 1080 screens): 57 percent of viewing time above the fold and 74 percent in the first two screenfuls; their 2010 study on 1024 x 768 screens found 80 percent above the fold. Consequences:
 - The first screen states what the page is and gives one reason to continue; the rest can sit below the fold.
 - The best scroll cue is content cut by the fold (an image or a line of text visibly continuing); "scroll down" arrows are a weak substitute. A full-height hero with nothing breaking the bottom edge is the false floor that stops scrolling.
 - On phones the fold sits about 700 to 850 CSS px down after browser chrome, and moves with the address bar; use the dynamic viewport units for full-height sections so they do not jump (`dvh` tracks the visible height as the browser bars move; `svh` is the smallest height, with the bars shown; `lvh` the largest, with the bars hidden).
@@ -610,16 +610,16 @@ Every child sits at the `65ch` measure by default, and images opt into `wide` or
 
 The sticky split is the most common structure on luxury property, hotel and jewellery collection sites.
 - Two columns on the 12-column grid (6:6 or 7:5). One holds media with `position: sticky; top: 0; height: 100dvh` (plus `align-self: start` inside a grid, or the item stretches and never sticks); the other carries text sections at a measure of 45 to 60 characters, each at least `100dvh` tall so each media change has time to register.
-- The media changes as each text section enters the viewport, driven by `IntersectionObserver` or a CSS scroll-driven animation (12-motion-principles-and-ui-motion.md, section 7.2; 21-web-design-and-digital-craft.md, section 6.4). Under `prefers-reduced-motion: reduce`, swap with a cut in place of a cross-fade.
+- The media changes as each text section enters the viewport, driven by `IntersectionObserver` (the browser API that reports when an element enters the viewport) or a CSS scroll-driven animation (12-motion-principles-and-ui-motion.md, section 7.2; 21-web-design-and-digital-craft.md, section 6.4). Under `prefers-reduced-motion: reduce` (the user's system setting to reduce motion), swap with a cut in place of a cross-fade.
 - Below the medium width class it stacks into image-then-text pairs, in DOM order.
 - Uses: floor-by-floor residence narratives, room categories, collection stories. One sticky split per page (the one peak in 9.8); several in a row make the scroll feel stuck.
 - Sticky fails silently when an ancestor has `overflow: hidden` or `overflow: auto`, because that ancestor becomes the scroll container; check the ancestors first.
 
 ### 9.11 Type on images across breakpoints
 
-The quiet zone planned at the shoot (11.3) sits in one place in one crop, and a responsive hero recrops the image at every width, so the type position is defined per crop.
-- Desktop 16:9 or 21:9: type in the planned quiet third.
-- Phone: serve a 4:5 or 9:16 portrait variant through the `picture` element (art direction: 06-ui-design-craft.md, section 14.4; 21-web-design-and-digital-craft.md, section 4.1) and move the type below the image or into a quiet zone recomposed for that crop.
+The quiet zone (a calm area of the image, such as sky or wall, kept for type) is planned at the shoot (11.3) for one crop, and a responsive hero recrops the image at every width, so the type position is defined per crop.
+- Desktop 16:9 or 21:9: type in the planned quiet third (15.3).
+- Phone: serve a 4:5 or 9:16 portrait variant through the `picture` element (art direction: a differently composed image per viewport; 06-ui-design-craft.md, section 14.4; 21-web-design-and-digital-craft.md, section 4.1) and move the type below the image or into a quiet zone recomposed for that crop.
 - One file for every width: set `object-position` to the focal point (for example `object-position: 70% 35%`) so `object-fit: cover` crops around the subject.
 - A scrim (a gradient of 20 to 40 percent black, 02-perception-and-psychology.md, section 3.8) steadies type over a quiet zone; over a busy area it fails, and the type moves.
 - Check contrast at every breakpoint, because the pixels under the text change with the crop (04-colour.md; 06-ui-design-craft.md, section 14.5).
@@ -653,7 +653,7 @@ A list (master) and the selected item's detail. On expanded windows both show (l
 - Cards for heterogeneous items or items led by an image (properties, products, stories): each card a small composition with one image ratio, one title style and one action.
 - Card grids: equal widths from a column grid or an auto-fill grid; align internal parts across the row with subgrid so prices and buttons sit on one line.
 - The design-taste cheap tell "symmetrical hero with three cards" and "everything the same width and weight" (SKILL.md, section 3) applies: a card grid needs one larger lead item or a change of scale to have a hierarchy.
-- Bento grids: a modular card layout of unequal cells (1 x 1, 2 x 1, 1 x 2, 2 x 2) on a 4 or 6 column base, named after the Japanese lunch box; the current fashion is widely traced to Apple's product pages and keynote feature-summary slides. House rules: one lead cell at 2 x 2 or larger carries the one idea (6.11); 5 to 9 cells, since more read as a dashboard; one gap across the whole bento, smaller than the cell padding (16 to 24 px gap with 24 to 40 px padding at desktop, 8.4); concentric radii (8.4); one content type per cell (an image, a number or a sentence), because the same icon, heading and sentence in every cell is the generated look (22-ai-era-craft-and-generative-tools.md, sections 2.5 and 9.2). On phones, one column in priority order with the lead cell first and DOM order to match (SC 1.3.2, 9.1); `grid-auto-flow: dense` only where order carries no meaning.
+- Bento grid: a modular card layout of unequal cells (1 x 1, 2 x 1, 1 x 2, 2 x 2) on a 4 or 6 column base, named after the Japanese lunch box; the current fashion is widely traced to Apple's product pages and keynote feature-summary slides. House rules: one lead cell at 2 x 2 or larger carries the one idea (6.11); 5 to 9 cells, since more read as a dashboard; one gap across the whole bento, smaller than the cell padding (16 to 24 px gap with 24 to 40 px padding at desktop, 8.4); concentric radii (8.4); one content type per cell (an image, a number or a sentence), because the same icon, heading and sentence in every cell is the generated look (22-ai-era-craft-and-generative-tools.md, sections 2.5 and 9.2). On phones, one column in priority order with the lead cell first and DOM order to match (SC 1.3.2, 9.1); `grid-auto-flow: dense` only where order carries no meaning.
 
 ### 10.5 Dashboards
 
@@ -696,11 +696,11 @@ Layering is the stacking order of elements on the z-axis. Without a scale, `z-in
 ### 10.10 Product listing and product page layouts
 
 Anatomy, luxury variations and imagery specifications are in 21-web-design-and-digital-craft.md, sections 8.2 and 8.3. The grid arithmetic:
-- Listing: 2 across on phones; 3 across at desktop for luxury and 4 for volume commerce, which is 4 or 3 columns each on the 12-column base. On the 1200 px luxury container a 3-across tile is 384 px wide (4 x 78 + 3 x 24) and 480 px tall at 4:5; on a 390 phone with 20 px margins and a 16 px gutter, a 2-across tile is 167 px wide and 209 px tall.
+- Listing (product listing page, PLP): 2 across on phones; 3 across at desktop for luxury and 4 for volume commerce, which is 4 or 3 columns each on the 12-column base. On the 1200 px luxury container a 3-across tile is 384 px wide (4 x 78 + 3 x 24) and 480 px tall at 4:5; on a 390 phone with 20 px margins and a 16 px gutter, a 2-across tile is 167 px wide and 209 px tall.
 - One image ratio for the whole listing, chosen once: 4:5 or 2:3 for fashion on model, 1:1 or 4:5 for jewellery and beauty packshots. Mixed ratios break the rows.
 - Name and price aligned across each row with subgrid (9.6), the price one size below the name and quiet.
 - Editorial tiles span 2 columns at a fixed rhythm (every 8 to 12 cells, 21, section 8.2). A break after every 12 products completes a row at 2, 3 and 4 across, so the rhythm survives every breakpoint (6.6).
-- Product page at desktop: a 7-column gallery of images stacked at gallery width (690 px on the 1200 container) beside a 5-column buy box (486 px) with `position: sticky`, so price, size and the action stay in view while the images scroll. On phones: first image, then name, price and action above the fold, with the gallery as a horizontal carousel (`scroll-snap-type: x mandatory`) at the listing ratio.
+- Product page (product detail page, PDP) at desktop: a 7-column gallery of images stacked at gallery width (690 px on the 1200 container) beside a 5-column buy box (486 px) with `position: sticky`, so price, size and the action stay in view while the images scroll. On phones: first image, then name, price and action above the fold, with the gallery as a horizontal carousel (`scroll-snap-type: x mandatory`) at the listing ratio.
 
 ## 11. Composition in photography and film
 
@@ -768,7 +768,7 @@ In a bound publication the reader sees two pages at once, so the spread is the u
 ### 12.2 Gutter behaviour and binding
 
 - Perfect binding (glued spine) swallows several millimetres of each inside margin into the spine; the thicker the book, the more. Keep type at least 15 to 20 mm from the spine and keep faces and products out of the binding zone in crossing images. Ask the printer for the binding allowance per page count.
-- Saddle stitching (stapled) causes creep: inner pages push outward and are trimmed more at the fore-edge (the outer, unbound edge), so their outside margins shrink. The printer's imposition (the arrangement of pages on the press sheet) compensates; keep outside margins generous enough to absorb it. Production detail is in 20-print-packaging-ooh-and-physical-production.md.
+- Saddle stitching (stapled) causes creep: inner pages push outward and are trimmed more at the fore-edge (the outer, unbound edge), so their outside margins shrink. The printer's imposition (the arrangement of pages on the press sheet) compensates; keep outside margins generous enough to absorb it. Production detail is in 20-print-packaging-ooh-and-physical-production.md, sections 1.10 and 1.11.
 - Lay-flat bindings (Otabind, Swiss binding) allow images and even type to cross the gutter cleanly; specify them for photography books and luxury property brochures.
 
 ### 12.3 Folios and running heads
@@ -811,7 +811,7 @@ Picture editing is a core creative-director task in fashion, hospitality and pro
 - Horizons and eye lines continue across the gutter or break by at least a module; a step of a few millimetres reads as an error (7.7).
 - Gazes and movement face into the spread or towards the copy (6.12).
 - Sequence by rhythm: wide, medium, detail, then a pause image. Three images of the same shot size in a row flatten a carousel, a profile row or an editorial sequence.
-- Edit from a contact sheet at thumbnail size first, because pairs and sequences are judged at a glance before they are judged at full size.
+- Edit from a contact sheet (every frame of the shoot as thumbnails on one page) first, because pairs and sequences are judged at a glance before they are judged at full size.
 
 ### 12.9 Menus
 
@@ -820,7 +820,7 @@ Restaurant and bar menus are a frequent F&B deliverable with their own reading e
 - Placement: put high-margin dishes first and last within each category, where serial position favours them (02-perception-and-psychology.md, section 6.6). Menu engineering, the analysis of each dish by margin and popularity, comes from Michael Kasavana and Donald Smith, Menu Engineering (1982).
 - Price format: Sybil Yang, Sheryl Kimes and Mauro Sessarego ("$ or dollars: effects of menu-price formats on restaurant checks", Cornell Hospitality Report, 2009) found guests spent more when prices were plain numerals than when they carried a dollar sign. House practice for luxury menus: numerals with no rupee or dirham symbol, the price set after the description in the same size, and no right-aligned price column with leader dots, since a column invites comparison (consultant practice reported in William Poundstone, Priceless, 2010).
 - Grid: one category per column or panel; measure 35 to 50 characters (4.4); dish name, description and price as one block, with categories two to three times further apart than dishes (6.8).
-- UAE: confirm VAT-inclusive price display with the client for each emirate. India: FSSAI menu marks (20, section 9.4).
+- UAE: confirm VAT-inclusive price display with the client for each emirate. India: the Food Safety and Standards Authority of India (FSSAI) menu marks (20, section 9.4).
 
 ## 13. Posters and out-of-home
 
@@ -828,12 +828,12 @@ Restaurant and bar menus are a frequent F&B deliverable with their own reading e
 
 A poster is read from a distance, often in motion, in seconds. Out-of-home (OOH) is any advertising format encountered outside the home: hoardings, bus shelters, transit, malls, airports, digital screens.
 - Legibility from visual angle: a letter is resolvable at normal (20/20) acuity when it subtends 5 minutes of arc (Snellen's standard). That threshold is about 1.45 cm of letter height per 10 m of distance; for comfortable reading at a glance, use at least three times it: about 4.5 cm of cap height per 10 m, 13 cm at 30 m, 44 cm at 100 m.
-- The sign-industry rule of thumb, about 25 mm (1 in) of letter height per 3 m (10 ft) for impact, gives larger values than the threshold method and is the safer choice for moving viewers. Production tables and site-specific rules (roadside hoardings in Mumbai, Sheikh Zayed Road unipoles) are in 20-print-packaging-ooh-and-physical-production.md.
+- The sign-industry rule of thumb, about 25 mm (1 in) of letter height per 3 m (10 ft) for impact, gives larger values than the threshold method and is the safer choice for moving viewers. Production tables and site-specific rules (roadside hoardings in Mumbai, Sheikh Zayed Road unipoles) are in 20-print-packaging-ooh-and-physical-production.md, sections 7.1, 7.2 and 7.4.
 - Digital LED: minimum text height of 30 wall pixels (26-platform-and-format-specs-2026.md, section 5.11; at P3.9 pitch, 3.9 mm between LED centres, that is about 12 cm).
 
 ### 13.2 The seven word rule, one image and one line
 
-- Seven words or fewer on a roadside poster is the long-standing OOH rule of thumb, because the passing viewer reads only a glance's worth. Fewer is better; the mark counts as a word. The arithmetic: at 60 km/h a board legible from 150 m is in view for about 9 s (20-print-packaging-ooh-and-physical-production.md, section 7.5), but a single glance away from the road should not exceed 2 s (NHTSA's Visual-Manual Driver Distraction Guidelines for In-Vehicle Electronic Devices, 2013: 2 s per glance, 12 s in total per task, used here as the benchmark for a safe glance). At about 238 words per minute (Brysbaert, 2019; 02-perception-and-psychology.md, section 4.5) a 2 s glance reads about 8 words, less the fixation needed to find the board. Placements where the viewer stands or walks (malls, airports, metro platforms; 20, section 7.7) can carry a second line.
+- Seven words or fewer on a roadside poster is the long-standing OOH rule of thumb, because the passing viewer reads only a glance's worth. Fewer is better; the mark counts as a word. The arithmetic: at 60 km/h a board legible from 150 m is in view for about 9 s (20-print-packaging-ooh-and-physical-production.md, section 7.5), but a single glance away from the road should not exceed 2 s (the US National Highway Traffic Safety Administration's Visual-Manual Driver Distraction Guidelines for In-Vehicle Electronic Devices, 2013: 2 s per glance, 12 s in total per task, used here as the benchmark for a safe glance). At about 238 words per minute (Brysbaert, 2019; 02-perception-and-psychology.md, section 4.5) a 2 s glance reads about 8 words, less the fixation needed to find the board. Placements where the viewer stands or walks (malls, airports, metro platforms; 20, section 7.7) can carry a second line.
 - One image, one line, one mark. Each extra element divides the glance.
 - Contrast for distance: tonal contrast of type against ground matters more than colour contrast at distance and at dusk (04-colour.md for contrast measures).
 - Composition: the image carries the idea at 100 m; the line completes it at 30 m; the mark and any call to action are read at 10 m or never. Design for the three distances in that order and check each with a scaled print viewed at the scaled distance (an A4 print of a 12 x 4 m hoarding viewed from about 2 m is about an 80 m view, since the print is 1/40 scale).
@@ -859,7 +859,7 @@ Paula Scher (Pentagram partner since 1991) made the Public Theater's identity an
 
 ### 13.7 Event stages and LED walls
 
-- Deliver at the wall's own pixel map, 1:1 (26-platform-and-format-specs-2026.md, section 5.11: a 12 x 4 m wall at P3.9 is 3077 x 1026 px).
+- Deliver at the wall's own pixel map (its native resolution: wall width in millimetres divided by the pixel pitch), 1:1 (26-platform-and-format-specs-2026.md, section 5.11: a 12 x 4 m wall at P3.9 is 3077 x 1026 px).
 - The speaker, lectern and stage furniture hide the lower centre of the wall, and audience heads hide the bottom band from the back rows. House working rule (judgement, untested by measurement): type in the upper two thirds and clear of the lectern position; confirm against the stage plan and a sightline check from the back row and the outermost side seats.
 - Size type for the back row with the method in 13.1: at 30 m, cap height at least 13 cm, which on a P3.9 wall is 33 px of cap height, about 48 px type in a face whose cap height is 0.7 of the em.
 - Walls of 32:9 or wider: compose in three zones (house scheme): the brand in the centre while the stage is empty, content on the flanks while someone speaks.
@@ -915,7 +915,7 @@ A deck is read as a sequence, so pacing matters as much as layout.
 In India and the Gulf, founder clients read the send-ahead PDF and the post-meeting PDF on a phone, through WhatsApp or email.
 - The arithmetic: a 1920 px canvas shown full width on a 390 px phone in portrait renders at 0.203 scale, so 28 px body becomes 5.7 CSS px. Turned to landscape (844 px) the scale is 0.44 and body is 12.3 px, still below the 16 px web body.
 - Rule: the presented deck and the read deck are two files from one master. The read deck either sets body at 40 px or larger on the 1920 canvas (17.6 px at landscape phone width), or is rebuilt at 1080 x 1350 on the 4:5 post grid (2.3), where 40 px body renders at 14.4 CSS px on a 390 phone (0.361 scale) and reads in portrait without rotating the phone.
-- What the speaker would have said moves into a caption band on each slide; one idea per slide still holds (14.2), and the detail goes in a leave-behind (23-critique-taste-and-craft-judgement.md, section 3, row 129).
+- What the speaker would have said moves into a caption band on each slide; one idea per slide still holds (14.2), and the detail goes in a leave-behind (the document left with the client after the meeting; 23-critique-taste-and-craft-judgement.md, section 3, row 129).
 - Send it as a PDF document attachment, which WhatsApp delivers as a file; images and video sent in chat are recompressed (26-platform-and-format-specs-2026.md, section 2.9). Export a tagged PDF (11-accessibility-and-inclusive-design.md, section 13.1).
 
 ## 15. Social posts, stories and thumbnails
@@ -944,7 +944,7 @@ Meta's safe zone for Reels and Stories (ads guide, read October 2026): keep 14 p
 
 - The interface (UI chrome: the platform's buttons, names, captions and progress bars drawn over the content) sits on the image. Text under it is unreadable and looks careless.
 - Subtitles and captions for video: inside the live area, centred horizontally, in the lower part of the live area (around y 1000 to 1200 on 1080 x 1920), clear of the bottom 672 px where the platform caption sits.
-- Contrast for overlaid type: a quiet zone in the image (sky, wall) is better than a drop shadow or a box; plan it at the shoot (section 11.3).
+- Contrast for overlaid type: a quiet zone in the image (9.11) is better than a drop shadow or a box; plan it at the shoot (section 11.3).
 
 ### 15.4 The profile grid as a whole
 
@@ -985,7 +985,7 @@ Arabic is written right to left (RTL), so the layout mirrors: reading starts top
 - Side by side: two mirrored columns sharing a central axis, English on the left reading out from the centre and Arabic on the right. Double the central gutter (two gutters) so the scripts separate cleanly. Works for menus, invitations, signage and corporate brochures.
 - Stacked: Arabic above English (or English above Arabic) with each block aligned to its own reading edge. Works on narrow formats, phones and social posts.
 - Two editions: one layout per language, mirrored; the best result for long documents and websites, at twice the design and QA effort.
-- Prominence: government, real-estate and many Gulf clients expect Arabic first or at least equal in size; confirm per client and emirate, and check the signage and advertising permit rules in 20-print-packaging-ooh-and-physical-production.md.
+- Prominence: government, real-estate and many Gulf clients expect Arabic first or at least equal in size; confirm per client and emirate, and check the signage and advertising permit rules in 20-print-packaging-ooh-and-physical-production.md, sections 7.2 and 8.2.
 - Optical size match: Arabic set at the same point size as Latin looks smaller; adjust so the two scripts look equal in weight and height, typically by setting Arabic one or two sizes larger with more leading.
 
 ### 16.3 Devanagari and Indian scripts
@@ -1114,7 +1114,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 | Portrait post 3:4 | 1080 x 1440 | Sides 72, top and bottom 92 | 6 x 136 | 24 | 8 x 136 | 8 px | Wordmark 20 to 30 percent of width | Fills the grid tile; test feed behaviour first |
 | Story or Reel 9:16 | 1080 x 1920 | Safe: top 269 (290 with TikTok), bottom 672, sides 65 (right 200 with TikTok) | 6 x 136 inside x 72 to 1008 (type in columns 1 to 5 on TikTok) | 24 | 6 x 136 inside y 290 to 1226 | 8 px | Wordmark 20 to 30 percent of width, inside the safe zone | Image full-frame; type in the square |
 | YouTube thumbnail | 1280 x 720 (upload 3840 x 2160) | 64 | Thirds: 3 x about 384 | 0 | Thirds | n/a | None; colour field and type carry the channel | Nothing in the bottom-right corner (duration stamp) |
-| Open Graph image | 1200 x 630 (export 2400 x 1260) | n/a | n/a | n/a | n/a | n/a | None | Campaign still with no type, since the title renders under it (21-web-design-and-digital-craft.md, section 9.3); subject inside the central 600 x 300 so 1:1 crops hold (26, section 4.2) |
+| Open Graph image (the `og:image` link preview) | 1200 x 630 (export 2400 x 1260) | n/a | n/a | n/a | n/a | n/a | None | Campaign still with no type, since the title renders under it (21-web-design-and-digital-craft.md, section 9.3); subject inside the central 600 x 300 so 1:1 crops hold (26, section 4.2) |
 
 ## Terms introduced
 
@@ -1133,6 +1133,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Atmospheric perspective: distant planes rendered lighter and lower in contrast, which signals depth.
 - Balance: the state in which the visual weights on either side of an axis feel resolved.
 - Baseline grid: horizontal lines at the body leading to which every baseline snaps.
+- Baseline (typography): the line on which letters sit.
 - Baseline (web platform): the WebDX Community Group status for a feature that works in current Chrome, Edge, Firefox and Safari; widely available 30 months after it is newly available.
 - Bento grid: a modular card layout of unequal cells (1 x 1, 2 x 1, 1 x 2, 2 x 2) on a 4 or 6 column base.
 - Bleed: image area printed beyond the trim so that trimming error shows no white edge.
@@ -1141,6 +1142,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Breakpoint: a width at which a layout changes structure.
 - Buy box: the block on a product page holding name, price, options and the purchase action.
 - Canon of page construction: the medieval and incunabula method of placing a text block on a page by diagonals or ninths.
+- Cap height: the height of a capital letter above the baseline.
 - Central fixation bias: the tendency of viewers to fixate the centre of an image first, whatever its content.
 - ch: a CSS unit equal to the advance width of the 0 glyph in the current font.
 - Closure: the eye's completion of a figure that a frame edge or a gap leaves incomplete.
@@ -1159,10 +1161,12 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Cross-alignment (incremental leading): a caption or display leading that meets the body baseline grid after a whole number of lines.
 - Crosshead: a subhead inside the body of a long article.
 - Crystallographic balance: equal emphasis across the whole surface with no focal point.
+- Deep and flat space: Bruce Block's terms for space shown by perspective, overlap and size change, and for frontal, planimetric space without those cues.
 - Density: the amount of content per unit of screen area, set by spacing and control heights.
 - Density-independent pixel (dp): Android's layout unit, mapped to physical pixels through the device scale factor.
 - Device pixel ratio: the number of device pixels per CSS pixel.
 - Direction: the path the eye takes through a layout.
+- DOM order: the order of elements in the HTML, which screen readers and the Tab key follow.
 - Dynamic symmetry: Jay Hambidge's system of composing with root rectangles, diagonals and reciprocals.
 - Dynamic viewport units: dvh (the visible height as browser bars move), svh (smallest, bars shown) and lvh (largest, bars hidden).
 - Edge pressure: tension created by an element placed very close to, but not bleeding off, a frame edge.
@@ -1182,6 +1186,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - fr: a CSS grid unit equal to one share of the free space in the grid's tracks.
 - Frame within a frame: an element of the scene (door, arch, window) that frames the subject inside the image.
 - Framing: the choice of what a frame includes and excludes.
+- Gestalt grouping: the principles by which the eye organises parts into wholes.
 - Golden canon: Tschichold's name for the 2:3 page with a 2:3 text area placed in ninths.
 - Golden ratio: the proportion of about 1.618 in which the whole relates to the larger part as the larger to the smaller.
 - Grey-box layout (wireframe): boxes for every element placed on the grid before real content, to test hierarchy and pace.
@@ -1199,6 +1204,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - International Typographic Style: the grid-based, asymmetric, sans serif design of Zurich and Basel from the 1950s.
 - Intrinsic web design: Jen Simmons's term for layouts that size themselves from content and space using modern CSS.
 - Irradiation (halation): the effect that makes light strokes on a dark ground look heavier than the same strokes dark on light.
+- Key visual: a campaign's master image and line, from which every format is adapted.
 - Keylines: reference shapes that fix each icon's size within its grid.
 - Kubrick frame: one-point perspective symmetry with a centred vanishing point and a mirrored scene.
 - Layer-cake pattern: scanning that fixates headings and reads the body only under a relevant one.
@@ -1207,8 +1213,11 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Lead room (nose room): extra space in the direction a subject faces or moves.
 - Leading: the distance from one baseline to the next.
 - Leading lines: lines in a scene that carry the eye to the subject.
+- Leave-behind: the document left with the client after a meeting, carrying the detail the slides leave out.
 - lh and rlh: CSS units equal to one line-height of the element, and of the root element.
+- Liquid Layout: InDesign rules that scale or reposition page items when the page size changes.
 - Live area (type area, Satzspiegel): the region inside the margins where content sits.
+- Lock-up: the fixed arrangement of mark, wordmark and any strapline.
 - Logical properties: CSS properties named by flow direction (inline, block, start, end) that flip in right-to-left layouts.
 - Manuscript grid: a single text block in a margin frame.
 - Margin: the space between the format edge and the live area.
@@ -1224,6 +1233,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Morphological box: a grid of parameters (rows) and options (columns) in which a design is one path (Gerstner, after Zwicky).
 - Negative space: the unoccupied area of a page or frame, of any colour.
 - One-point perspective: a composition with a single central vanishing point.
+- Open Graph image: the og:image picture that apps show as a link preview.
 - Optical adjustment: a correction applied so that a layout looks right where measurement says it is right.
 - Optical alignment: placement adjusted so edges look aligned, compensating for shape and sidebearing.
 - Optical centre: the point that looks centred, slightly above the geometric centre.
@@ -1245,6 +1255,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Protect zone: the area of a master image that every crop must keep.
 - Proximity: grouping of elements by distance.
 - Pull quote: an extract from the text set large to draw the browsing reader.
+- Quiet zone (image): a calm area of an image, such as sky or wall, kept to carry type.
 - Radial balance: elements arranged around a central point.
 - Ratio family: a band of format aspect ratios that shares one master layout.
 - Read deck: the version of a deck built to be read alone on a phone or screen, without a presenter.
@@ -1254,12 +1265,14 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Responsive layout: one layout that reflows fluidly across widths.
 - Rhythm: the pattern of intervals between repeated elements.
 - Right-to-left (RTL): scripts written from the right, such as Arabic, whose layouts mirror.
+- Roll-up: a free-standing printed banner that retracts into a base cassette.
 - Root rectangle: a rectangle whose long side is the square root of an integer times its short side.
 - Row: a horizontal division of the live area.
 - Rule of thirds: placing a subject on the lines or intersections of a 3 x 3 division of the frame.
 - Running head: a title repeated at the top or bottom of each page.
 - Saddle stitching: binding by staples through the fold.
 - Safe zone: the inner area of a format kept free of text and logos because of trim or interface overlay.
+- Saliency: bottom-up conspicuity of a region, computed from local contrast in colour, intensity and orientation.
 - Scale: size relative to the format and to the other elements.
 - Scrim: a gradient or tint laid over an image so that type on it reads.
 - Shirorekha: the headline from which Devanagari letters hang.
@@ -1277,6 +1290,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Standfirst (dek, sell): the summary between headline and body.
 - Sticky split: a two-column layout in which a media column stays fixed while text sections scroll beside it.
 - Subgrid: a CSS grid value that lets a child grid use its parent's tracks.
+- Success criterion (SC): a single testable requirement in WCAG, such as SC 1.4.10 Reflow.
 - Symmetric balance: mirrored weight about a central axis.
 - Tangent: two edges that just touch, creating unwanted tension.
 - Tension: visual energy from near-collision, imbalance, unexpected scale or crop.
@@ -1285,6 +1299,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Thumb zone: the lower area of a phone screen within thumb reach, where platforms place their action rows.
 - Top layer: the browser layer above all stacking contexts, used by modal dialogs and popovers.
 - UI chrome: the platform interface drawn over or around content.
+- Unipole: a roadside advertising board on a single pole.
 - Unity: the sense that every element belongs to one system.
 - Van de Graaf canon: the diagonal construction placing a text block whose height equals the page width.
 - Variety: the controlled difference that keeps a system alive.
@@ -1293,6 +1308,7 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Visual weight: the apparent pull of an element on the eye and on the balance of a layout.
 - Weber's law: the smallest noticeable difference is a roughly constant fraction of the magnitude.
 - Window size classes: Android's named width ranges: compact under 600 dp, medium, expanded, large, and extra-large from 1600 dp.
+- x-height: the height of lowercase x, which sets the apparent size of a face.
 - Z pattern: the eye's path across the top, diagonally down and across the bottom of a sparse layout.
 
 ## Sources and further reading

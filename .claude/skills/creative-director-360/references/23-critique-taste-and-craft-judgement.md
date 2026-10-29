@@ -481,7 +481,7 @@ Six stages, in order, for a 30-minute crit of one piece. The order matters becau
 | 5. Evaluate | 6 | Reviewers, CD last | Against the brief and the rubric (section 13); idea first, craft second; each problem with a severity (4.5) | A heap of equal-weight nitpicks |
 | 6. Suggest and decide | 5 | Reviewers suggest directions with references; CD decides aloud | Actions written with owner and date | Leaving with three versions of the decision |
 
-The CD speaks last in stages 3 to 5, because a senior's first remark ends independent observation in the room.
+The CD speaks last in stages 3 to 5, because a senior's first remark ends independent observation in the room (anchoring: 02-perception-and-psychology.md, section 12).
 
 ### 4.2 The Pixar braintrust rules
 
@@ -518,7 +518,7 @@ Jakob Nielsen's usability severity scale (Nielsen Norman Group, November 1994) r
 
 | Rating | Meaning in creative work | Examples | Action |
 |---|---|---|---|
-| S4 | Ship-blocker | Idea absent or off-brief; legal or regulatory miss (the RERA registration number, required in Indian project advertising by section 11(2) of the Real Estate (Regulation and Development) Act 2016, missing; the Trakheesi permit, the Dubai property advertising permit, missing on a listing); wrong brand mark; accessibility failure on a core path | Fix before anyone outside the studio sees it |
+| S4 | Ship-blocker | Idea absent or off-brief; legal or regulatory miss (the RERA registration number, required in Indian project advertising by section 11(2) of the Real Estate (Regulation and Development) Act 2016, missing; the Trakheesi permit, the Dubai property advertising permit, missing on a listing; 24-business-of-creative-and-agency-operations.md, section 14.7); wrong brand mark; accessibility failure on a core path | Fix before anyone outside the studio sees it |
 | S3 | Major | Hierarchy broken; the hero image wrong; a grade that turns skin orange; LCP over 2.5 seconds | Fix this round |
 | S2 | Minor | Kerning pairs, a near-miss alignment, a caption font | Fix this round if time, else next |
 | S1 | Polish | A hold two frames long, a rag that could be smoother | Batch into the finishing pass |
@@ -536,14 +536,14 @@ Design-taste, section 8, sets the order. The diagnostic, in sequence:
 4. Would it survive a different execution? An idea that dies when the typeface changes was an execution.
 5. Only now: craft, from section 2 and section 3.
 
-The reason for the order is cost and sunk cost: polish applied to a dead idea makes it harder to kill (section 8.5), and an hour of kerning notes on a route that will be dropped wastes the maker's next day.
+The reason for the order is cost and sunk cost: polish applied to a dead idea makes it harder to kill (section 8.4), and an hour of kerning notes on a route that will be dropped wastes the maker's next day.
 
 ### 4.7 Critique vocabulary
 
 | Term | Definition | How you see it | In a note |
 |---|---|---|---|
 | Hierarchy | The order in which the eye takes in elements, set by size, weight, colour, position and space | Squint and list what you see first, second, third | "Hierarchy reads price, image, name; the brief wants name first" |
-| Rhythm | The pattern of repetition and interval across a page, sequence or edit | Flick through pages or watch at 2x speed; feel the beats | "The rhythm is all quarter notes; give it one long hold" |
+| Rhythm | The pattern of repetition and interval across a page, sequence or edit | Flick through pages or watch at double speed; feel the beats | "The rhythm is all quarter notes; give it one long hold" |
 | Tension | A deliberate imbalance that holds attention: scale, crop, silence, an unexpected pairing (design-taste, section 1) | The one element you keep looking back at | "There is no tension; everything is correctly placed" |
 | Resolution | The sense that the piece arrives and ends; tension released | The last frame, slide or element feels final | "The film stops without resolving; the last shot needs to land the idea" |
 | Specificity | The degree to which a choice could belong only to this brand | Cover the logo | "This could be any Dubai tower; find the one fact only this one has" |
@@ -571,7 +571,12 @@ The reason for the order is cost and sunk cost: polish applied to a dead idea ma
 | Thumbnail test | Shrink to about 120px wide | Whether the piece survives as a grid tile or search result | Shape and primary element still readable |
 | Mute test (film) | Watch with sound off, then listen with picture off | Whether picture and sound each carry the story | Picture alone tells it; sound alone sets mood |
 | Overnight test | Leave it; look first thing next morning before email | Fatigue blindness | The verdict holds |
-| Other-room test | View from 3 to 5m away | OOH and signage legibility; poster scale | Headline and mark read at distance |
+| Other-room test | View from 3 to 5m away | OOH and signage legibility; poster scale | Headline and mark read at distance; for OOH, cap height at least the viewing distance divided by 360, and about the distance divided by 120 for impact (20, section 7.4) |
+| In-feed test | Drop the post into a screen recording of the target customer's feed between 10 real posts, and check the 3:4 profile grid tile (the grid shape since January 2025; 26, section 2) | Stopping power and brand recognition in context | It stops the eye and reads as the brand before the handle is seen |
+| Shelf test | Place the pack among the three nearest competitors at the distance a shopper stands from the shelf | Findability and price tier | Found first; read as the right price tier |
+| In-situ test | Composite the OOH artwork onto a photograph of the actual site, by day and by night | Scale, surround, glare and legibility on site | Reads at the site's viewing distance in both lights |
+| Competitor wall | The piece beside the three best category competitors and one best-in-world reference | Distinctiveness and relative craft | Distinct from all three and at least equal in craft to the best of them |
+| Swap test (copy) | Replace the brand name in the line with a competitor's | Specificity of the claim | The line becomes false or absurd; if it is still true, it is rewritten |
 
 ### 4.9 Choosing the method
 
@@ -582,6 +587,47 @@ The reason for the order is cost and sunk cost: polish applied to a dead idea ma
 | Junior's first big piece; cross-discipline review | Critical Response Process (4.3) | Keeps the maker in control and motivated |
 | Workshop with a client team of 8 to 15 | I like, I wish, what if (4.4) | Everyone speaks; CD converts wishes into problems |
 | Final QA before delivery | Checklists (section 5), rubric (section 13) | Completeness matters more than conversation |
+| Mid-process check on one maker's work | Desk crit: one to one at the maker's screen, 10 to 15 minutes | Fast and private; keeps momentum |
+| Group review of work in progress | Pin-up: work printed or projected at real size on the wall | Scale and sequence visible; everyone sees the same object |
+| Final review before a client or an award entry | Jury: reviewers who did not see the process, scoring with the rubric | Fresh eyes counter habituation (4.11) |
+| Many pieces, many reviewers | Gallery walk: silent written notes on cards beside each piece | A volume of notes without the loudest voice |
+| Team or client in another city | Remote crit: shared at 100 percent, reviewers open the link on their own device, cameras on; for async rounds a recorded 3 to 5 minute walk-through | Everyone sees true size and colour; the recording is the record |
+
+### 4.10 The review environment
+
+Colour, type and motion verdicts made on an uncalibrated laptop, a projector or an iPhone with True Tone on are a weekly source of wrong notes and disputed sign-offs.
+
+| Medium | Review condition | Reason and standard |
+|---|---|---|
+| Screen colour | Display calibrated to D65 (the daylight white point, about 6500K) at about 120 cd/m²; True Tone and Night Shift (Apple's features that shift the white point with ambient light or time of day) off | 04-colour.md, sections 4.4 and 4.5 |
+| Print | ISO 3664:2009 viewing booth at D50 (about 5000K) and 2000 lux; office LED and window light excluded | The condition printers proof to; most print disputes start under the wrong light (04, section 10; 20, section 5) |
+| Film | The grading reference monitor (Rec.709, the HD video colour standard, gamma 2.4, dim surround), then a phone at about 50 percent brightness | The monitor shows the master; the phone shows what most viewers see (16, section 8) |
+| Web | The house test Android and an iPhone, with campaign links also opened inside the Instagram and WhatsApp WebViews | 21-web-design-and-digital-craft.md, section 14 |
+| Social | Posted to a private test account and seen in the real app | The export window has no interface, no compression and no feed |
+| OOH | Composited onto a photograph of the actual site at true scale | 20, section 7 |
+
+Rule: every sign-off in the log names the device and the viewing condition.
+
+### 4.11 Biases in the room
+
+02-perception-and-psychology.md, sections 8.10 and 12.2, defines these biases from the user's side; in a crit they distort the reviewers.
+
+| Bias | How it shows in a crit | Counter |
+|---|---|---|
+| Halo and the aesthetic-usability effect (Masaaki Kurosu and Kaori Kashimura, CHI 1995) | The most polished route also wins on idea and usability | Show routes at equal fidelity |
+| Order effects | The first or last route shown wins | Vary the order between sessions and say why each route sits where it does |
+| Mere exposure and habituation (Robert Zajonc, 1968) | After 12 rounds the team likes what it has lived with and stops seeing defects | A cold reader who has not seen earlier rounds |
+| IKEA effect (Michael Norton, Daniel Mochon and Dan Ariely, 2012) | Makers overvalue what they built | Makers speak last in the evaluate stage (4.1) |
+| Anchoring | The first opinion or number voiced sets the range | Silent look and written verdicts before discussion (4.1, 4.4) |
+| HiPPO (highest paid person's opinion; popularised by Avinash Kaushik) | The room converges on the most senior view | The CD speaks last; the client's senior speaks after the team has presented |
+| Groupthink (Irving Janis, Victims of Groupthink, 1972) | Nobody voices the doubt everyone holds | One person holds the devil's advocate role, rotated per crit |
+| Law of triviality (C. Northcote Parkinson, Parkinson's Law, 1957) | The committee approves the reactor in minutes and argues about the bike shed: 40 minutes on logo colour, two on the idea | An agenda that puts the idea first and timeboxes craft notes |
+
+### 4.12 Critique upstream: brief crit, tissue session, pre-mortem
+
+- Brief crit, six questions (the brief's anatomy is in 19-campaigns-and-creative-direction.md, section 2): one audience named as a person; one measurable objective; a single-minded proposition in one sentence; an insight stated as a tension; mandatories listed; budget and dates. A brief that fails two goes back to the client before work starts.
+- Tissue session: rough routes (a scamp, a headline and a reference each) shown to the client before production, at equal fidelity, to kill cheaply.
+- Pre-mortem (Gary Klein, "Performing a Project Premortem", Harvard Business Review, September 2007): imagine it is six months after launch and the campaign has failed in public; everyone writes the reasons silently for 3 minutes, then reads them out. Seed the Mask360 failure modes: a festival or religious misread, an ASCI or UAE permit breach, meme risk, an AI disclosure backlash.
 
 ## 5. Self-critique checklists per deliverable
 
@@ -631,26 +677,28 @@ Run before any piece goes to the CD, and again before it goes to the client. Que
 
 ### 5.6 Social post
 
+Full platform checklist: 17-short-form-social-and-platform-craft.md, section 10.
+
 - Stop: 1. Does it stop a thumb in the first frame without a logo? 2. Does it read as a 120px grid tile? 3. Is the cover frame designed?
 - Read: 4. Key text outside the platform UI zones? 5. Legible on a phone at arm's length? 6. One message only?
 - Brand: 7. Cover the handle: is it ours? 8. Does it belong in the grid beside the last nine posts? 9. Is the caption in the brand voice, without emojis or exclamation marks (house rule)?
 - Craft: 10. Exported at the platform's native size and frame rate (26, section 2)? 11. Carousel margins identical slide to slide? 12. Captions burned in once, with no doubling by auto captions? 13. Alt text written?
-- Compliance: 14. Paid partnership label where required; ASCI influencer guidelines in India; the Advertiser Permit in the UAE, administered by the National Media Authority since it replaced the UAE Media Council in December 2025 (16, section 10.1)? 15. Music licensed for commercial use on that platform?
+- Compliance: 14. Paid partnership label where required; ASCI influencer guidelines in India; the Advertiser Permit in the UAE, administered by the National Media Authority since it replaced the UAE Media Council in December 2025 (24-business-of-creative-and-agency-operations.md, section 14.7)? 15. Music licensed for commercial use on that platform?
 - Edit: 16. Have I cut the last line of the caption? 17. Would the client's most discerning customer save it? 18. Is it something only this brand could post? 19. Does it advance the campaign idea or just fill the calendar? 20. Would I post it on the agency's own account?
 
 ### 5.7 Print piece
 
-- Object: 1. Is the paper chosen first and proofed (04, section 10)? 2. Does the finish serve the idea (one foil, one emboss, or none)? 3. Is the format a standard sheet size, or is the waste priced? 4. Grain direction parallel to folds?
+- Object: 1. Is the paper chosen first and proofed (04, section 10; 20, section 2)? 2. Does the finish serve the idea (one foil, one emboss, or none)? 3. Is the format a standard sheet size, or is the waste priced? 4. Grain direction parallel to folds?
 - Colour: 5. Correct output profile for stock (coated or uncoated)? 6. One rich black build? 7. Total ink under the printer's limit? 8. Small type and hairlines in a single ink? 9. Brand colour proofed against the Pantone or the master swatch?
 - Type: 10. Body size readable when printed (print-it-out test)? 11. Kerning, rag, widows and orphans checked on the printed proof? 12. Real small caps and correct figures?
-- Prepress: 13. Bleed (usually 3mm) and safe area set? 14. Images at 300ppi at final size, in CMYK or managed RGB per the printer? 15. Overprint and knockout checked in Acrobat Output Preview? 16. Dielines on their own layer, set to overprint?
+- Prepress: 13. Bleed (usually 3mm) and safe area set? 14. Images at 300ppi at final size, in CMYK or managed RGB per the printer? 15. Overprint (ink printed over another) and knockout (the ink beneath removed) checked in Acrobat Output Preview? 16. Dielines (the cutting and folding outline) on their own layer, set to overprint?
 - Finish: 17. Contract proof signed? 18. Press check booked for anything with brand colour or skin? 19. Packaging tested in the hand, opened and closed ten times? 20. What does it feel like to hold, and is that the brand?
 
 ### 5.8 OOH
 
-- Read: 1. Does the idea read in the time the viewer has: about 3 seconds at 60km/h on Sheikh Zayed Road, about 1 second at a Mumbai signal (19, section 6)? 2. Seven words or fewer in the headline? 3. Legible from the real viewing distance (the other-room test at scale)? 4. One image, one line, one mark?
+- Read: 1. Does the idea read in the time the viewer has? At 60km/h a car covers about 17m a second, and at 100km/h a board legible from 150m is in view for under six seconds, of which the driver spares a fraction; the house works to about 3 seconds of reading on Sheikh Zayed Road, while a signal or Mumbai congestion gives a longer dwell (19, section 6.2; 20, section 7.5; 05, section 13; as of October 2026). 2. Seven words or fewer in the headline? 3. Legible from the real viewing distance (the other-room test at scale)? 4. One image, one line, one mark?
 - Site: 5. Is it designed for this site's real context (a Bandra flyover, Sheikh Zayed Road, an airport walkway)? 6. Does the art survive the site's surround, lighting at night and the sun's glare? 7. For DOOH (digital out-of-home screens), does the motion work in the loop length and without sound (16, section 12.10)?
-- Craft: 8. Artwork at the printer's scale and resolution, with bleed for the frame? 9. Colour proofed on the real substrate (flex, vinyl, backlit)? 10. Small type removed (nothing under the minimum readable size for the distance)?
+- Craft: 8. Artwork at the printer's scale and resolution, with bleed for the frame? 9. Colour proofed on the real substrate (flex, vinyl, backlit)? 10. Small type removed: nothing under the minimum legible cap height of viewing distance divided by 360, with the headline at about distance divided by 120 (at 60m, about 17cm and 50cm; 20, section 7.4)?
 - Compliance: 11. Municipal permissions and content rules for the city? 12. Real estate: RERA number and QR (India) or Trakheesi permit (Dubai) present and legible?
 - Taste: 13. Cover the logo: whose is it? 14. Would it be photographed and shared by passers-by? 15. Is it the brand's single idea, or a cut-down of the film? 16. Would it embarrass the client if it ran for six months? 17. Does it work as a set across sites? 18. What can still be removed? 19. Does it look premium in the photograph the client will post? 20. Has it been seen at real size, on a wall or a projector?
 
@@ -662,12 +710,54 @@ Run before any piece goes to the CD, and again before it goes to the client. Que
 - Craft promise: 11. Can it be made at the budget and timeline at the house standard? 12. What is the hero execution, and is it the strongest expression? 13. What will make it look expensive, specifically?
 - Proof: 14. What will the client measure, and can this idea move it? 15. What could go wrong in public, and what is the plan? 16. Would a D&AD jury see an idea, craft and impact (12.3)? 17. Would the client's competitor wish they had it? 18. Does the team want to make it? 19. If we kill it, what do we lose? 20. Is there a simpler version of the same idea?
 
+### 5.10 Photography selects
+
+- Set: 1. One white balance across the set? 2. One grade, one crop logic, one aspect family? 3. Is the hero the strongest frame, or only the most expensive setup? 4. Does the edit run as a sequence (wide, medium, detail, people)? 5. Verticals for 9:16 and 4:5 crops, with the subject safe?
+- Frame: 6. Focus on the subject at 100 percent (eyes, stones, the engraving)? 7. Highlights and shadows holding detail on marble, white linen and black suits? 8. Catchlights from a shaped source? 9. Verticals straight in architecture? 10. Distractions removed in camera or listed for retouch (exit signs, cables, air-conditioning units)?
+- Retouch: 11. Retouch specified per frame in writing? 12. Skin texture kept at 100 percent, with no liquify near straight lines? 13. Beauty-claim retouching checked against the disclosure rules (16, section 10.1)?
+- Rights: 14. Model releases signed for every recognisable person? 15. Property releases for private interiors and recognisable buildings? 16. Usage, territory and term agreed with the photographer in writing (24, section 4)? 17. Artwork, logos and trademarks in frame cleared?
+- Delivery: 18. Masters in the agreed colour space and resolution, with web derivatives? 19. Filenames versioned and credited? 20. Would the client's most discerning customer save this frame? 21. Which frame would I cut?
+
+### 5.11 Real estate render set
+
+- Truth: 1. Every amenity shown is in the sanctioned plan, with nothing added (RERA section 12; 2.13)? 2. Artist's impression line on every render? 3. RERA number and QR (India) or Trakheesi permit (Dubai) on every published use? 4. Window views true to the site, or labelled?
+- Light: 5. Sun angle computed for the site's latitude and the stated time? 6. Sky and glazing reflections agree? 7. Interior lights match the time of day? 8. One colour temperature logic per scene?
+- Camera: 9. Lens about 24mm full-frame equivalent or longer at 1.2 to 1.6m eye height? 10. Verticals straight? 11. Rooms read at their true size against a known object (a door, a bed)?
+- Materials: 12. Bevels on hard edges? 13. Roughness varied, with wear where hands touch? 14. Contact shadows and ambient occlusion checked at 100 percent? 15. Plants varied, with no repeated instances?
+- Life and set: 16. Entourage cast for the buyer, varied, none cloned? 17. People dressed for the climate and the market? 18. Cars, furniture and art plausible for the price tier? 19. One grade and one time-of-day logic across the set? 20. Is the hero render the one that carries the idea? 21. Would a buyer walking the show flat feel misled by any frame?
+
+### 5.12 Packaging
+
+- Shelf: 1. Shelf test passed against the three nearest competitors (4.8)? 2. Read as the right price tier at shopper distance? 3. Brand found in two seconds from any face that faces out?
+- Hand: 4. Lid fit tested ten times, settling slowly with no clack or stick? 5. Corners free of glue and wrap creasing on pre-production samples? 6. Inserts in a material that suits the category (no black PE foam for luxury)? 7. Ribbon ends sealed? 8. Weight and balance right in the hand?
+- Sequence: 9. Unboxing ordered (outer, card, tissue, product, accessories)? 10. Is the first thing seen the right thing? 11. Can the customer repack it?
+- Law: 12. Mandatory declarations legible and complete (Legal Metrology rules in India; 20, section 6)? 13. Barcode on the base or back? 14. Recycling marks and material codes present? 15. Market-specific labelling (Arabic for the Gulf where the category requires it) checked against 20, section 6?
+- Print: 16. Dielines checked against a physical sample? 17. Finishes proofed on the real board? 18. Colour consistent across board, wrap paper and printed insert?
+- Taste: 19. Cover the logo: whose box is this? 20. Would a customer keep the box? 21. What can be removed?
+
+### 5.13 Email
+
+- Inbox: 1. Subject names the content honestly, with no fake "Re:"? 2. Preheader written as a second headline? 3. Sender name recognisable?
+- Render: 4. Readable with images off (live-text headline and body)? 5. HTML under Gmail's 102KB clip limit? 6. Images under 150KB each and 600KB in total (21, section 10)? 7. Dark-mode logo swap or keyline supplied? 8. Tested in Apple Mail, the Gmail app on Android and Outlook for Windows? 9. Single column on phones, 600 to 640px wide on desktop?
+- Read: 10. Body at least 14px, 16px on mobile? 11. Tap targets 44px high? 12. One primary call to action that says what happens next? 13. Alt text written for every image that carries meaning?
+- Brand: 14. Brand face loaded with a matched fallback, or headlines set as live text in a system face? 15. Photography at the house standard? 16. Footer, unsubscribe and postal address complete?
+- Taste: 17. Cover the logo: whose email is this? 18. Would the client's best customer open the next one? 19. One idea per email? 20. What can be cut?
+
+### 5.14 Event or activation
+
+- Arrival: 1. What does the guest see, hear and smell in the first 10 seconds? 2. Is the way in obvious without signage? 3. Is signage above the sightline once the room is full?
+- Room: 4. Sightline from the worst seat checked in person? 5. Florals and props below the speaker's chin line? 6. One key light temperature, gels matched? 7. Sound checked at full-room level, with the room's absorption? 8. Run of show timed to the minute, transitions rehearsed?
+- Camera: 9. Stage designed for the 16:9 livestream and the 9:16 phone crops? 10. LED pixel pitch fine enough for the camera distance, with no moiré (20, section 7)? 11. A photo moment lit for phones? 12. Projection square or warp-corrected?
+- Brand: 13. Logos confined to one designated wall? 14. Does the set carry the idea on its own? 15. Materials true to the brand at touching distance?
+- Safety and law: 16. Permits, fire exits and capacity cleared? 17. Religious and cultural calendar checked for the date? 18. Photography consent at the door?
+- Close: 19. Does the night end on a designed moment? 20. What does the guest take home? 21. What will the guest post, and does it look premium in that photograph?
+
 ## 6. Giving feedback
 
 ### 6.1 The four rules
 
 1. Specific: location, mechanism, value (rung 3 or 4 of the articulation ladder, 1.4). "The caption sits 24px from the image; take it to 8px so they pair."
-2. Reference based: the reference opened on screen, with the thing to take named. Taste argued in words is opinion; argued with references it is evidence (19, section 10.2).
+2. Reference based: the reference opened on screen, with the thing to take named. References turn a taste argument into evidence (19, section 10.2).
 3. One fix at a time: per round, the top three notes by severity, in order. Changes interact; thirty simultaneous notes produce thirty compromises and a maker who can no longer see the piece.
 4. The why: every note carries its reason, so the maker can apply the principle next time without the CD.
 
@@ -712,13 +802,13 @@ The chain of voice on set is client to CD to photographer or director to talent.
 | Notes to the photographer quietly at the monitor | Critique in front of the client or the crew | Authority on set is a working tool |
 | "We have it. Thank you." when it is there | Continuing to shoot "for safety" past the point | Over-shooting dilutes the edit and tires talent |
 
-Video village etiquette: one CD voice at the monitor, the client briefed before the day on when and how to give notes (between takes, to the CD), and the shot list as the arbiter of time.
+Video village (the monitor station where director, CD and client watch takes) etiquette: one CD voice at the monitor, the client briefed before the day on when and how to give notes (between takes, to the CD), and the shot list as the arbiter of time.
 
 ### 6.6 To 3D and motion artists
 
 - Notes by frame number and timecode, with the curve named: "the ease-out on the bottle lands hard at frame 46; soften the last 8 frames" or "hold 12 frames longer on the reveal at 24fps".
 - Easing given as values when it matters (`cubic-bezier(0.2, 0, 0, 1)`), or as a reference clip with its timecode (12-motion-principles-and-ui-motion.md, section 15).
-- Approve at the cheapest stage: animatic, then playblast or viewport capture, then lighting stills, then the final render. A note on timing after a final render costs render hours (13-motion-graphics-and-3d-production.md).
+- Approve at the cheapest stage: animatic (timed storyboard frames with sound), then playblast (a fast viewport render) or viewport capture, then lighting stills, then the final render. A note on timing after a final render costs render hours (13-motion-graphics-and-3d-production.md).
 - Materials and light notes are given on stills, where they can be judged at rest (13 owns the pipeline).
 - Ask for the graph editor view when a move feels wrong and nobody can say why; the curve shows it.
 
@@ -754,19 +844,44 @@ No Deliverable      Where              Note (what, why)                         
 1  Hero film 30s   00:00:04:12        Logo appears before the product; ...     Product first, see ref A        S3   Edit   Open
 ```
 
+- WhatsApp, voice notes and red circles: in India and the Gulf most team and client feedback arrives this way. Colour, sharpness and type are never judged from a WhatsApp-forwarded file, because WhatsApp recompresses images and video even in its HD setting; masters travel as a Document or as a versioned link (Frame.io, Figma, Drive) with the version in the filename (`_v07`), and an approval counts only against a versioned link. Voice notes are transcribed into the feedback doc the same day, because a voice note is neither searchable nor a record; red-circle screenshots are rewritten in the note format with a severity. One thread per project, and every reply states the decision ("changed in v08, link").
+
 ### 6.10 The feedback sandwich problem
 
-The sandwich (praise, criticism, praise) fails for three reasons: the recipient learns that praise signals bad news and discounts all of it; the criticism is buried between two softer statements and leaves the room diluted; and generic praise ("love the energy") carries no information. The house format replaces it: one specific thing working (information about what to keep), the problem with its why, the fix with its reference. Praise is given when it is earned and specific, and on its own when the work is good.
+The sandwich (praise, criticism, praise) was popularised in management practice by Mary Kay Ash in the 1980s. Roger Schwarz, "The 'Sandwich Approach' Undermines Your Feedback" (Harvard Business Review, 19 April 2013), argues that it weakens both the feedback and the working relationship; the house follows him. House observation of the mechanism: the recipient learns that praise signals bad news and discounts all of it; the criticism, buried between two softer statements, leaves the room diluted; and generic praise ("love the energy") carries no information. Kim Scott's Radical Candor (2017) supplies the positive frame, care personally and challenge directly, and names the failures: ruinous empathy (care without challenge), obnoxious aggression (challenge without care) and manipulative insincerity (neither). The house format: one specific thing working (information about what to keep), the problem with its why, the fix with its reference. Praise is given when it is earned and specific, and on its own when the work is good.
 
 ### 6.11 How to say it is not working
 
-1. Say it early. The cost of a kill rises every day (section 8.5).
+1. Say it early. The cost of a kill rises every day (section 8.4).
 2. Say it to the maker first, privately, before the room or the client.
 3. Say it plainly: "This route is not working." Then the reason in one sentence, at rung 3.
 4. Separate the person from the work, and name what the maker did well in the process, specifically.
 5. Name what survives: the reference, the type choice, the insight.
 6. Give the next step and the time: "Two new routes by Thursday from the insight; drop the gold."
 7. Never say "it's fine" about work that is not, because juniors learn the standard from what the CD lets through.
+
+### 6.12 To developers: reviewing the build
+
+For web and app work the build is the week's feedback stream; the QA gates are 06-ui-design-craft.md, section 20, and 21-web-design-and-digital-craft.md, section 15.
+- Review the staging URL on the house test devices: a 2023 or 2024 Android sold at about ₹12,000 to 18,000 and an iPhone (21, section 14), with campaign links also opened inside the Instagram and WhatsApp WebViews (the browsers embedded in those apps). The Figma file is the spec; the build is the thing reviewed.
+- Every note carries the URL, viewport width, browser, a screenshot, the expected value and its token name: "space-6 is 24px; the build shows 20px at 390px wide in Chrome on Android". A note that says only "match the design" goes back to its writer.
+- Compare with a 50 percent opacity overlay (the PerfectPixel extension, or Dev Mode compare) at the 2px tolerance of 06, section 20. Judge motion in the Chrome DevTools Animations panel at 25 and 10 percent speed, and give easing as the token or the `cubic-bezier()` value.
+- Visual regression testing (automated screenshot comparison against approved baselines: Chromatic for Storybook, Percy, Playwright's `toHaveScreenshot`) catches drift between rounds (07-design-systems-and-tokens.md, section 9.2).
+- Each note is marked design defect (the spec was wrong or missing) or build defect (the build departs from a correct spec) with its S-rating, one ticket per screen in the tracker (Linear or Jira), and comments go on Vercel preview deployments where the stack has them.
+
+### 6.13 Feedback across cultures in a Mumbai and Dubai studio
+
+Section 10 covers culture in the work; this covers culture in the room, in a studio that mixes Indian, Emirati, Lebanese, British and Filipino staff and presents to hierarchical clients.
+- Erin Meyer, The Culture Map (2014), places countries on an evaluating scale of how negative feedback is given: American managers wrap it in positives, while French, Dutch, Israeli and German managers state it directly. Upgraders (absolutely, totally) and downgraders (kind of, slightly; British understatement is the classic case) change how strong a note sounds, so "a few small things to look at" from a British reviewer can mean the route is in trouble. The house reads the book for each nationality in the team and calibrates per person.
+- Power distance (Geert Hofstede's measure of how far less powerful people accept unequal power) scores high for India (77), the UAE (74) and Saudi Arabia (72) on The Culture Factor's comparison tool (read October 2026). In the room, juniors rarely contradict the CD, and "yes" can mean "I heard you".
+- Counters: silent written cards before discussion (4.4); the Critical Response Process for juniors (4.3); ask "what would you change?" before giving your note; confirm each action in writing after the crit; correct a senior client person only in a one-to-one, never in front of their juniors.
+
+### 6.14 To printers, creators, illustrators and stylists
+
+- Printers at press check: notes against the signed contract proof and the colour bar, as density or hue ("magenta down in the skin, hold the black"). An ink-key change in one zone moves every image in that column of the sheet, so trade-offs are agreed before the press runs (20, sections 5.4 and 5.5).
+- Creators and influencers: brief the outcome, the mandatories and the disclosure (ASCI influencer guidelines in India; the UAE Advertiser Permit, 19, section 16); give them the facts and leave the lines to them, because their voice is what the brand pays for; one round of notes, on the first cut.
+- Illustrators and lettering artists: notes at the sketch stage, because redrawing after inking or vectorising costs days.
+- Stylists and set designers: approval on a lit test frame seen through the camera, because a mood board shows intent only; notes route through the photographer (6.5).
 
 ## 7. Receiving feedback and decision rights
 
@@ -815,6 +930,22 @@ The signed brief (19, section 2) is the referee: objective, audience, single-min
 
 Hold when the note breaks the idea, damages long-term brand equity, breaches law or ethics, or fails accessibility. Let go when the note is taste on an element that does not carry the idea, when the client is right, or when the fight costs more trust than the element is worth. House rules: hold on at most one thing per round, because a CD who fights every note is heard on none; hold with evidence: a reference, a test or data; and after two refusals of the same route by the decision maker, stop presenting it (19, section 10.4).
 
+### 7.6 When the data disagrees with the eye
+
+Performance creative makes "the ugly ad won the test" a weekly note. Two bounds. The cautionary case: Doug Bowman left Google in March 2009 ("Goodbye, Google", stopdesign.com), citing a team that could not decide between two blues and tested 41 shades between them. The evidence for brand building: Les Binet and Peter Field, The Long and the Short of It (IPA, 2013), about 60:40 brand to activation as the starting balance (19-campaigns-and-creative-direction.md, section 4.5).
+
+House rule: the CD decides the idea, the distinctive assets and anything that builds memory; data chooses between executions of one idea at the activation end (hook, first frame, offer, call to action, format). A winning "ugly" variant is read for its mechanism (the product clearer, the hook faster, the price visible), and that mechanism is then crafted well; the ugliness is never the lesson. The success metric is written down before launch; tests run at least 7 days to cover weekday cycles; brand metrics are never judged from a 3-day test. Derived metrics: hook rate (3-second video views divided by impressions) and hold rate (ThruPlays, Meta's count of plays to completion or to 15 seconds, divided by 3-second views).
+
+### 7.7 When the public hates it
+
+Reverted: Gap's new logo (4 October 2010, withdrawn about a week later); Tropicana Pure Premium's redesign by Arnell Group (January 2009, reverted after about two months, with sales reported down about 20 percent because shoppers could not find the product); Cracker Barrel's removal of its Old Timer figure (August 2025, reversed within about a week; 01-history-and-movements.md). Held: the London 2012 logo by Wolff Olins (June 2007), ridiculed at launch and used through the Games; Airbnb's Bélo (July 2014; 12.1), remixed online and kept. Jaguar's November 2024 rebrand is in 18-brand-strategy-and-identity-design.md, section 7.
+
+Rule: separate reaction to change, which decays in weeks, from functional failure (shoppers cannot find the product, as with Tropicana) and from betrayal of core customers (Cracker Barrel). Judge on behaviour (sales, share of search; 18); comment sentiment measures only the reaction to change. A holding window of about 8 to 12 weeks is agreed with the client before launch and broken early only by behaviour data.
+
+### 7.8 Receiving feedback as the CD
+
+Douglas Stone and Sheila Heen, Thanks for the Feedback (2014), separate three kinds of feedback (appreciation, coaching, evaluation) and three triggers that block hearing it (truth: "this is wrong"; relationship: "who are you to say"; identity: "I am not good at this"). House protocol for any note the CD receives: thank, restate it in your own words, ask "what is the one thing?", hold any defence in the room, and decide after the overnight test (4.8). Upward feedback: a quarterly anonymous survey asks makers to rate how useful the CD's crits were (1 to 5) and the one thing to change; the CD reads the results to the team.
+
 ## 8. Killing work and the edit
 
 ### 8.1 The courage to remove
@@ -831,17 +962,13 @@ Design-taste names the edit as the final skill (section 4, step 6, and section 5
 2. Hide one at a time (Figma: toggle visibility; Resolve or Premiere: disable the clip; copy: delete the sentence).
 3. Ask: does the piece still carry the idea and do its job? If yes, it stays hidden.
 4. Continue until a removal breaks the idea or the function.
-5. Restore the last removed element. Then apply the one accessory rule (8.4).
+5. Restore the last removed element, then remove one more decorative element: the one accessory rule, after the dressing advice commonly attributed to Coco Chanel (look in the mirror before leaving and take one thing off; design-taste, section 4). If the piece survives the overnight test (4.8), it stays off.
 
-### 8.4 The one accessory rule
-
-The dressing advice commonly attributed to Coco Chanel (look in the mirror before leaving and take one thing off) applied to finished work: after the remove-until-it-breaks pass, remove one more decorative element. If the piece survives the night (the overnight test, 4.8), it stays off.
-
-### 8.5 Sunk cost in creative work
+### 8.4 Sunk cost in creative work
 
 The sunk-cost fallacy is letting past, unrecoverable investment drive a future decision. In studios it shows as "we spent three weeks on this route", "the shoot cost ₹40 lakh", or 600 generated images from which one must be used. The only question: knowing what we know today, starting fresh, would we choose this? Clients carry sunk cost too (a logo the founder drew, a render already paid for); acknowledge the investment, then decide on the future.
 
-### 8.6 Saving the idea for later
+### 8.5 Saving the idea for later
 
 Killed routes are kept. Every one goes into the idea bank with: the brief it answered, the one-sentence idea, the boards, the reason it was killed, and tags (category, mechanism, tone). The bank is read quarterly against live briefs; a route killed for a jeweller's budget may be right for a hotel's launch. Ownership rules for unused concepts are in the contract (24, section 4).
 
@@ -863,6 +990,8 @@ The rule (where a look lives tells its age: fashion houses and award nominees fo
 ### 9.3 The three-year test
 
 Ask of each element: will this embarrass the client in three years? Sort elements into structure (grid, typeface, photography approach, proportion, colour logic) and surface (effects, trend type, trend colour, motion fads). House rule: at most one surface trend per piece, placed in a layer that is cheap to replace (a campaign asset, a social template); the mark and the core system carry none. Identity work is judged at ten years: Rand's IBM stripes (1972) and the Hermès box carry no surface trend.
+
+Two dials sharpen the test. MAYA (Raymond Loewy's "most advanced, yet acceptable"; 02-perception-and-psychology.md, section 10.4) sets how far to push a client: name where the client's buyer sits, then push to the edge of what that buyer accepts. The Lindy effect (Albert Goldman, "Lindy's Law", The New Republic, 1964; extended by Benoit Mandelbrot and by Nassim Nicholas Taleb in Antifragile, 2012) holds that for non-perishable things expected remaining life grows with age: a typeface or grid with 60 years of use is likelier to hold to 2036 than a 2024 look, so the three-year test asks how old each element's lineage is.
 
 ### 9.4 Timelessness markers
 
@@ -907,7 +1036,28 @@ A second script set as an afterthought (smaller, a different weight, stuck at th
 
 ### 10.5 Local reference worlds
 
-Category benchmarks with their India and GCC notes are in design-taste, references/worlds.md. Critique questions to add for these markets: would this read as luxury to a first-generation buyer in Mumbai and to an old family in Delhi? Would an Emirati family find the imagery respectful? Does the Arabic look designed or translated? Is the festival treatment specific to this brand, or the market's default gold-and-lamps?
+Category benchmarks with their India and GCC (Gulf Cooperation Council) notes are in design-taste, references/worlds.md. Critique questions to add for these markets: would this read as luxury to a first-generation buyer in Mumbai and to an old family in Delhi? Would an Emirati family find the imagery respectful? Does the Arabic look designed or translated? Is the festival treatment specific to this brand, or the market's default gold-and-lamps?
+
+### 10.6 Regional codes inside India and the Gulf
+
+"Indian luxury" and "Gulf luxury" are each several codes. A brief names the region before the moodboard does.
+
+| Region | Codes | Critique note |
+|---|---|---|
+| South Indian bridal | Kanjeevaram silk, temple jewellery, jasmine in the hair | Gold heavier and more sculptural than the North Indian kundan look |
+| Bengali | The red-bordered white sari, shankha-pola (conch and coral bangles) | Red and white is the bridal and festival pair |
+| Punjabi | Chooda bangles, phulkari ("flower work") embroidery | Saturated colour; celebration is loud by design |
+| Parsi | Gara embroidery with motifs from the China trade | Fine needlework; restraint inside ornament |
+| Goan | Lime-washed Indo-Portuguese façades, azulejo-like tile | A Mediterranean register inside India |
+| Dubai | Cosmopolitan and expatriate global luxury | Arabic often co-equal; the buyer may be from anywhere |
+| Abu Dhabi | Cultural and institutional: the Saadiyat Cultural District, the Louvre Abu Dhabi | Heritage and culture read as status |
+| Saudi Arabia | Heritage revival: Najdi mud-brick, Diriyah; the Saudi Architecture Characters Map, launched by Crown Prince Mohammed bin Salman on 17 March 2025 with 19 regional architectural styles | A Riyadh brief checks the region's style before any architectural motif |
+
+Charged colours and symbols: saffron carries religious meaning and contemporary party-political association in India, so saffron-led work is reviewed by a native reviewer; the Saudi flag carries the shahada (the Muslim declaration of faith), so it is never altered, never printed on disposable items and never flown at half-mast.
+
+### 10.7 Rasa as critique vocabulary
+
+The Natya Shastra (attributed to Bharata) names eight rasas (the aesthetic emotions an audience tastes): shringara (love), hasya (comedy), karuna (compassion), raudra (fury), vira (heroism), bhayanaka (fear), bibhatsa (disgust) and adbhuta (wonder). Later theorists added shanta (peace), defended by Abhinavagupta (about the 10th to 11th century). Use: name the intended dominant rasa of a film before the crit (bridal jewellery: shringara, with karuna at the vidaai, the bride's farewell; a heritage hotel: shanta; a launch: adbhuta) and check that every shot serves it. A film whose rasas mix with no dominant one reads as muddled, and Indian clients recognise the vocabulary.
 
 ## 11. Portfolio and work review for hiring
 
@@ -925,7 +1075,22 @@ The first screen is five minutes per portfolio (24-business-of-creative-and-agen
 
 ### 11.2 What to look for
 
-Decisions (can each be explained from the brief and the content); restraint (what was left out; how few devices carry the work); range (at least two registers, for example a luxury hotel and a cultural institution); craft under constraint (a real client, a real budget, a regulatory line, a bilingual requirement handled well); systems (the work shown across 20 applications as well as the hero); writing (case studies written plainly, with numbers).
+- Decisions: each can be explained from the brief and the content.
+- Restraint: what was left out, and how few devices carry the work.
+- Range: at least two registers, for example a luxury hotel and a cultural institution.
+- Craft under constraint: a real client, a real budget, a regulatory line, a bilingual requirement handled well.
+- Systems: the work shown across 20 applications as well as the hero.
+- Writing: case studies written plainly, with numbers.
+
+| Role | Ask for | Read it for |
+|---|---|---|
+| Copywriter | Headlines in a campaign sequence, one long-copy piece, a script | Three read aloud: voice, range, one fact per line |
+| Motion designer | A 60 to 90 second reel, breakdowns and one project file | The first 10 seconds; timing and easing; the candidate's own share in the breakdowns |
+| Photographer or DP (director of photography) | The contact sheet or raw selects from one shoot | The eye and the edit, which finals hide |
+| UI/UX designer | A case study with research, edge states and a sourced metric | States designed; the metric's source |
+| 3D artist | Clay and wireframe passes beside the final | Modelling and lighting, judged apart from the render |
+
+Bias controls: names, schools and agencies stripped from the first screen; two reviewers score independently on the same rubric; the shortlist decision is written down before any interview.
 
 ### 11.3 The questions
 
@@ -952,7 +1117,7 @@ Decisions (can each be explained from the brief and the content); restraint (wha
 
 ### 11.5 The test brief
 
-Paid at the candidate's day rate, capped at 4 to 6 hours, with a real-shaped brief and one hard constraint (a bilingual lockup, a 9:16 cutdown, a RERA line on a hoarding). Deliverables: a reference board with the borrowed thing named for each, the idea in one sentence, one finished piece, and a 150-word rationale. Second part, 30 minutes: a written critique of a weak piece in the house format (verdict, what works, what does not, the fix). Scored with the rubric (section 13) by two reviewers independently.
+Paid at the candidate's day rate, capped at 4 to 6 hours, with a real-shaped brief and one hard constraint (a bilingual lockup, a 9:16 cutdown, a RERA line on a hoarding). Deliverables: a reference board with the borrowed thing named for each, the idea in one sentence, one finished piece, and a 150-word rationale. Second part, 30 minutes: a written critique of a weak piece in the house format (verdict, what works, what does not, the fix). Scored with the rubric (section 13) by two reviewers independently. The brief is one the house has already answered, because a live client brief would make the test spec work by another name (24-business-of-creative-and-agency-operations.md, section 11.1).
 
 ## 12. Case studies of critique
 
@@ -976,6 +1141,8 @@ Three reviews, read for the question the form forced (the verdicts are subscribe
 2. Mastercard by Pentagram, reviewed by Armin on 14 July 2016, subtitle "Coming Full Circle(s)" (tags: circles, geometric, overlap, overlay, sans serif). An evolution: the interlocking circles simplified and the wordmark set in lowercase outside them. The question: how much equity was kept against how much change was gained. In January 2019 Mastercard dropped the name from the symbol in most uses, which shows how much recognition the circles carried. Lesson: an evolution is judged on equity kept, and the critic must say whether the change was visible enough to justify its cost.
 3. White & Case by Uncommon Creative Studio, reviewed by Armin on 26 October 2026, subtitle "Legally Bold" (tags: ampersand, blue, law firm, ligature, proprietary type, serif; 109 comments by 29 October). Law firms default to serifs and navy. The question: can a proprietary serif and an ampersand ligature distinguish a partnership inside its category's own codes? Lesson: in conservative categories, critique judges differentiation within convention, which is the situation of most Mask360 real estate and jewellery clients.
 
+Argument mapping: Stephen Toulmin, The Uses of Argument (1958), breaks an argument into six slots: claim; grounds (the evidence, here the image); warrant (the principle linking grounds to claim); backing (the reference or standard behind the warrant); qualifier (how strongly the claim holds); rebuttal (the strongest counter-reading). Mastercard mapped from public evidence: claim, the evolution kept equity; grounds, the before and after; warrant, recognition rests on the overlapping circles; backing, the January 2019 dropping of the name; qualifier, in most uses; rebuttal, the change was too small to justify its cost. Airbnb's rebuttal slot holds the remixes (did the story carry the mark?); White & Case's warrant is differentiation within convention, and its rebuttal is that serif and blue are what every law firm uses. Every house long-form review (1.11) fills all six slots and reports Brand New's reader poll (Great, Fine, Bad; 18-brand-strategy-and-identity-design.md, section 7.6) as the audience verdict, apart from the critic's.
+
 ### 12.2 An Awwwards jury: the score profile as the comment
 
 Awwwards weights Design 40 percent, Usability 30, Creativity 20 and Content 10; each site goes to at least 18 jurors; the three scores furthest from the average are removed; Honorable Mentions (Awwwards' spelling) go to sites scoring 6.5 or more, and the Developer Award to sites scoring above 7 with the developer jury (awwwards.com/about-evaluation, read October 2026). Site of the Day pages publish scores per juror and per category, without written comments; the profile is the critique.
@@ -997,7 +1164,15 @@ Reading it: the weighted categories reproduce the overall exactly (0.4 by 7.65 p
 
 ### 12.3 A D&AD jury: reading a pencil
 
-D&AD's levels (dandad.org/awards/pencils, read October 2026): Black Pencil "for ground-breaking work", awarded to a handful or none in a year; Yellow Pencil for "true creative excellence"; Graphite for work "worthy of consideration for a Yellow Pencil"; Wood Pencil for "the best of the year"; Shortlist for merit. Juries have approximately seven judges led by a Jury President, and judge "ideas, craft and impact", separating work that is well made from work that moves the industry forward and work that deserves a Pencil (dandad.org/awards/judging). For New Blood the criteria are stated outright: a good idea, well executed, relevant to the brief.
+Juries have approximately seven judges led by a Jury President and judge "ideas, craft and impact" (dandad.org/awards/judging). The levels (dandad.org/awards/pencils; both read October 2026):
+
+| Level | D&AD wording | House reading |
+|---|---|---|
+| Black Pencil | "for ground-breaking work"; a handful or none in a year | Changed what the category thought possible |
+| Yellow Pencil | "true creative excellence" | The standard to study |
+| Graphite Pencil | Work "worthy of consideration for a Yellow Pencil" | Study it for the step it missed |
+| Wood Pencil | "the best of the year" | Excellent in its year |
+| Shortlist | Merit | Well made and worth filing |
 
 Example in the 2026 archive: Bottega, a family-run Italian café and sandwich shop in Brooklyn; identity and environmental graphics by Pentagram New York (partner Andrea Trabucco-Campos); Wood Pencil, New Brand Identity. The archive page publishes no jury rationale. The house therefore writes its own jury note when it judges or pre-judges an entry, in three sentences mapped to D&AD's three words, plus the level. Idea: what the work proposes and whether it is new to the category. Craft: the execution at its strongest and weakest point. Impact: what it changed for the client or the category, with the number if there is one. Level: Shortlist, Wood, Graphite, Yellow or Black, and the one thing that would have moved it up a level.
 
@@ -1011,48 +1186,53 @@ Example in the 2026 archive: Bottega, a family-run Italian café and sandwich sh
 Illustrative composites written to show the house format (design-taste, section 8); the projects are invented, the values are the kind the CD writes.
 
 Critique 1: hotel microsite, a 22-room heritage hotel in Jaipur.
-- Verdict: competent, one idea short of expensive.
+- Verdict: not presentable, with an open S4 (no idea yet); rubric 2.25 on the site profile (13.1), cheap, with the idea gate and the function cap both applying. The photography is expensive.
 - What works: the courtyard photographs at first light. Real sandstone, real shadow, nobody in frame; they carry the place better than any line on the page.
-- What does not: (1) Idea: the page lists rooms, spa and dining in three equal cards and the headline "Experience timeless royal luxury" could sit on any palace hotel in Rajasthan; there is no idea yet. (2) The 14MB autoplay hero video puts LCP at about 4 seconds on a mid-range Android; the target is 2.5. (3) Eleven sections fade up on scroll. (4) The hotel's Devanagari name is set in a default system font at half the Latin size. (5) Image captions in #B5B5B5 on white measure 2.05:1 against the 4.5:1 minimum. (6) The booking widget uses 4px corners inside 24px cards.
+- What does not: (1) Idea, S4: the page lists rooms, spa and dining in three equal cards and the headline "Experience timeless royal luxury" could sit on any palace hotel in Rajasthan; there is no idea yet. (2) S3: the 14MB autoplay hero video puts LCP at about 4 seconds on a mid-range Android; the target is 2.5. (3) S2: eleven sections fade up on scroll. (4) S3: the hotel's Devanagari name is set in a default system font at half the Latin size. (5) S3: image captions in #B5B5B5 on white measure 2.05:1 against the 4.5:1 minimum. (6) S2: the booking widget uses 4px corners inside 24px cards.
 - The fix: Idea first: "the house wakes slowly"; the scroll follows one day from first light to lamps, using the existing photographs in time order. Headline: the one fact only this house has (the year the courtyard was built, the family that still lives on the top floor). Hero: the first-light still as an AVIF poster under 200KB, video loaded after interaction. One motion: the light shifting across the courtyard, scroll-linked; everything else still. Devanagari name drawn with the Latin in one lockup (03, section 15). Captions to #767676 or darker (4.54:1). Widget radius 16px, concentric with the card. References: Aman's property pages for margin and pace; The Postcard for the host's voice; RAAS Jodhpur for heritage without gold.
+- Scores: idea 2, specificity 2, hierarchy 3, craft 3, restraint 2, coherence 3, register 3, currency 3, function and access 1, ending 3; weighted 2.25.
 
 Critique 2: jewellery reel, 30 seconds, a Mumbai fine jewellery brand's bridal edit.
-- Verdict: cheap.
+- Verdict: not presentable, with an open S4 (no idea); rubric 1.75 on the film profile, cheap.
 - What works: the macro of the clasp mechanism at 0:18; the only shot that shows how the piece is made and handled.
-- What does not: (1) Idea: necklaces rotate on black velvet with a sparkle overlay and the super "Timeless elegance for your special day"; it is a catalogue with music. (2) The logo fills frame one, so the reel announces itself as an ad. (3) The score starts on frame one and cuts land 2 to 4 frames off the beat. (4) The one hand shot has orange skin; blacks are crushed on the velvet so the setting detail is lost. (5) Captions are editor-default white with a heavy stroke, in the bottom 15 percent of the 9:16 frame, under the platform interface.
+- What does not: (1) Idea, S4: necklaces rotate on black velvet with a sparkle overlay and the super "Timeless elegance for your special day"; it is a catalogue with music. (2) S3: the logo fills frame one, so the reel announces itself as an ad. (3) S2: the score starts on frame one and cuts land 2 to 4 frames off the beat. (4) S3: the one hand shot has orange skin; blacks are crushed on the velvet so the setting detail is lost. (5) S3: captions are editor-default white with a heavy stroke, in the bottom 15 percent of the 9:16 frame, under the platform interface.
 - The fix: Make the clasp shot the idea: "fastened by family", the moment a mother fastens the necklace on the bride. Worn on skin in low window light, with a hard point source for fire in the stones and soft fill for the gold. Open on room tone and a 1.5-second hold on hands; music enters on the first cut; cut on or a frame before the beat. Grade skin onto the skin tone line before any look (16, section 8.5); lift blacks to hold the setting. Captions in the brand face, above the bottom safe zone (26, section 2). Logo on the end frame only, on the master artwork. Cutdowns at 15 and 6 seconds built from the same idea. References: Cartier's long-form films for pace, Sophie Bille Brahe for jewellery worn on skin, Zoya for Indian restraint (design-taste, references/worlds.md).
+- Scores: idea 1, specificity 1, hierarchy 2, craft 2, restraint 2, coherence 3, register 2, currency 2, function and access 2, ending 2; weighted 1.75.
 
 Critique 3: agency deck, Mask360 credentials for a Dubai developer's launch pitch.
-- Verdict: competent.
+- Verdict: competent, at the floor: rubric 3.05 on the default profile, no open S4.
 - What works: the Mumbai launch case study, with the enquiry numbers and the timeline on one slide; proof stated plainly.
-- What does not: (1) Idea: the hero of the deck is Mask360; the client appears on slide 19. House rule: the client is the hero. (2) 41 slides; slide 2 is a logo wall. (3) Slides run about 60 percent text against the house 70 visual to 30 text. (4) Three headline sizes (28, 32, 36px) that read as one. (5) The client's real colour is absent; the deck uses the Mask360 white ground. (6) The strategy slide has three focal points. (7) It ends on "Thank you".
+- What does not: (1) Idea, S3: the hero of the deck is Mask360; the client appears on slide 19. House rule: the client is the hero. (2) S2: 41 slides; slide 2 is a logo wall. (3) S2: slides run about 60 percent text against the house 70 visual to 30 text. (4) S2: three headline sizes (28, 32, 36px) that read as one. (5) S3: the client's real colour is absent; the deck uses the Mask360 white ground. (6) S3: the strategy slide has three focal points. (7) S2: it ends on "Thank you".
 - The fix: 16 slides. Open on the client's buyer and the insight, then the idea in one sentence, then the work, then the proof (case studies after the idea), then the decision asked for. Client deck rules from design-taste, section 7: #0A0A0A ground, the client's real hex from their guidelines as the only colour, Space Grotesk at 700 for headlines at about 96px against 300-weight body at 20px. One idea per slide; the logo wall goes to an appendix. Last slide: the decision and the date. References: Apple keynote pacing; Pentagram's case study pages for showing work large and unlabelled.
+- Scores: idea 3, specificity 3, hierarchy 2, craft 3, restraint 3, coherence 4, register 4, currency 3, function and access 4, ending 1; weighted 3.05.
 
 ## 13. The critique rubric
 
 ### 13.1 Dimensions, weights and anchors
 
-Scored 1 to 5 per dimension; anchors at 1, 3 and 5, with 2 and 4 between them. Weights favour the idea, the house's first question, in the way Awwwards weights design and D&AD leads with ideas.
+Scored 1 to 5 per dimension; anchors at 1, 3 and 5, with 2 and 4 between them. Weights favour the idea, the house's first question, in the way Awwwards weights design and D&AD leads with ideas. Each weight profile (a set of weights for one deliverable type) sums to 100. The default serves decks and anything unlisted; site or app gives function and access 20, because a page that fails LCP and contrast cannot be expensive (Awwwards gives usability 30 percent, 12.2); identity drops ending, which has no meaning for a mark, and judges currency at ten years (9.3); a campaign idea scores the craft promise (5.9, questions 11 to 13) in the craft row and has no hierarchy to judge.
 
-| Dimension | Weight | 1: cheap | 3: competent | 5: expensive |
-|---|---|---|---|---|
-| Idea | 20 | No idea, or a category cliché; cannot be said in a sentence | A clear idea that answers the brief; seen before | One sentence, specific, surprising, inevitable once seen |
-| Specificity | 10 | Could be any brand in the category | Belongs to the category and the client's tier | Only this brand; passes cover the logo |
-| Hierarchy | 10 | Three or more focal points; the eye wanders | Clear order with one competing element | One entry point, an intended path, and a resolution |
-| Craft | 15 | S3 and S4 defects (section 3); defaults everywhere | A few S2 defects; type, colour and alignment sound | No defect visible at 400 percent; detail rewards inspection |
-| Restraint | 10 | Every device in the kit; effects stacked | Some excess; one or two removable elements | Remove-until-it-breaks applied; every element earns its place |
-| Coherence | 10 | Each touchpoint looks like a different brand | Consistent with occasional drift | One system across every format and script |
-| Register | 10 | Wrong voice and cultural tone for the audience | Appropriate but generic | Pitched exactly for this audience, market and occasion |
-| Currency | 5 | Dead or peaking looks used straight | Current without a point of view | Rising or timeless, used with a reason; passes the three-year test |
-| Function and access | 5 | Fails contrast, performance or platform specs | Passes the thresholds | Passes with margin; reduced motion and bilingual handled |
-| Ending | 5 | Stops; "Thank you"; a logo with a whoosh | A clean close | The last moment carries the idea |
+| Dimension | Default | Identity | Site or app | Film | Campaign idea | 1: cheap | 3: competent | 5: expensive |
+|---|---|---|---|---|---|---|---|---|
+| Idea | 20 | 20 | 15 | 20 | 30 | No idea, or a category cliché; cannot be said in a sentence | A clear idea that answers the brief; seen before | One sentence, specific, surprising, inevitable once seen |
+| Specificity | 10 | 15 | 10 | 10 | 15 | Could be any brand in the category | Belongs to the category and the client's tier | Only this brand; passes cover the logo |
+| Hierarchy | 10 | 5 | 10 | 5 | 0 | Three or more focal points; the eye wanders | Clear order with one competing element | One entry point, an intended path, and a resolution |
+| Craft | 15 | 20 | 15 | 20 | 5 | S3 and S4 defects (section 3); defaults everywhere | A few S2 defects; type, colour and alignment sound | No defect visible at 400 percent; detail rewards inspection |
+| Restraint | 10 | 10 | 10 | 10 | 5 | Every device in the kit; effects stacked | Some excess; one or two removable elements | Remove-until-it-breaks applied; every element earns its place |
+| Coherence | 10 | 15 | 5 | 5 | 15 | Each touchpoint looks like a different brand | Consistent with occasional drift | One system across every format and script |
+| Register | 10 | 5 | 5 | 10 | 15 | Wrong voice and cultural tone for the audience | Appropriate but generic | Pitched exactly for this audience, market and occasion |
+| Currency | 5 | 5 | 5 | 5 | 5 | Dead or peaking looks used straight | Current without a point of view | Rising or timeless, used with a reason; passes the three-year test |
+| Function and access | 5 | 5 | 20 | 5 | 5 | Fails contrast, performance or platform specs | Passes the thresholds | Passes with margin; reduced motion and bilingual handled |
+| Ending | 5 | 0 | 5 | 10 | 5 | Stops; "Thank you"; a logo with a whoosh | A clean close | The last moment carries the idea |
 
 ### 13.2 Scoring rules
 
 - Weighted score: sum of (score times weight) divided by 100.
 - Idea gate: if Idea scores below 3, the weighted score is capped at 2.5, because craft cannot rescue a missing idea (4.6).
+- S4 gate: any open S4 (4.5) puts "not presentable" at the head of the verdict line; the score is still logged for the maker's trend line and stays inside the studio.
+- Function cap: function and access at 1 holds the verdict at competent or below, whatever the weighted score.
 - Verdict: 4.2 and above expensive; 3.0 up to 4.2 competent; below 3.0 cheap. The verdict line in the house format uses these words.
-- Calibration: two scorers, independently. A difference of more than 1 point on any dimension is discussed with the piece on screen and the reference beside it; the agreed score is logged.
+- Calibration: two scorers, independently. A difference of more than 1 point on any dimension is discussed with the piece on screen and the reference beside it; the agreed score is logged. Anchor exemplars (three scored reference pieces per dimension, one each at 1, 3 and 5) are re-scored by the CD and the ACD each quarter; the target is 80 percent of dimension scores within 1 point between scorers.
 - The log: date, piece, maker, scores, verdict, the top three notes. Over a quarter, a maker's trend line is the growth record (00, section 9, holds the self-assessment rubrics).
 
 ### 13.3 The verdict vocabulary
