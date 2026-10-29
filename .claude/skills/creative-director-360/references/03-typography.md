@@ -110,7 +110,7 @@ Letters that measure equal look unequal; type design corrects for the eye.
 
 ## 2. Classification
 
-Classification is a vocabulary for briefing, not a law. The four systems below are the ones a creative director meets in foundry sites, briefs and critiques.
+Classification is a working vocabulary for briefing and critique; it binds nothing. The four systems below are the ones a creative director meets in foundry sites, briefs and critiques.
 
 ### 2.1 Vox-ATypI
 
@@ -129,7 +129,7 @@ Maximilien Vox published his system in 1954. The Association Typographique Inter
 | Lineal, humanist | Sans based on roman proportions and calligraphic stroke, open apertures | Gill Sans (Eric Gill, 1928); Syntax (Hans Eduard Meier, 1968); Frutiger (Adrian Frutiger, 1976) |
 | Glyphic (Incises) | Flared, chiselled, as if carved | Albertus (1932 to 1940); Optima (1958); Trajan (1989) |
 | Script (Scriptes) | Imitates cursive handwriting, often joined | Mistral (Roger Excoffon, 1953); Snell Roundhand (Matthew Carter, 1966) |
-| Graphic (Manuaires) | Drawn letters, brush or pen, not meant to join | Banco (Excoffon, 1951); Cooper Black (Oswald Cooper, 1922) |
+| Graphic (Manuaires) | Drawn letters, brush or pen, each standing apart | Banco (Excoffon, 1951); Cooper Black (Oswald Cooper, 1922) |
 | Blackletter (Fractures) | Broken strokes, gothic | Textura of the Gutenberg Bible (1455); Fette Fraktur (1850) |
 | Gaelic (added 2010) | Irish uncial-derived letterforms | Duibhlinn, Gadelica (Michael Everson) |
 
@@ -297,7 +297,7 @@ Hyphenation rules (InDesign Hyphenation dialog; Bringhurst chapter 2):
 - Do not hyphenate capitalised words, the last word of a paragraph, or across a column or page (InDesign checkboxes).
 - Hyphenate ragged text lightly and justified text freely; a justified paragraph with hyphenation off is a defect.
 
-CSS: `hyphens: auto` requires a `lang` attribute on the element or document (the dictionary is chosen by language). `hyphenate-limit-chars: 7 3 3` sets minimum word length, minimum before, minimum after; the initial value `auto` lets the browser choose, and the specified fallback defaults are 5, 2, 2. MDN marks `hyphenate-limit-chars` as limited availability (Chromium supports it; Firefox and Safari did not as of the MDN table read for this file; verify). `hyphenate-limit-lines` (consecutive hyphens) is only in Safari with the -webkit- prefix.
+CSS: `hyphens: auto` requires a `lang` attribute on the element or document (the dictionary is chosen by language). `hyphenate-limit-chars: 7 3 3` sets minimum word length, minimum before, minimum after; the initial value `auto` lets the browser choose, and the specified fallback defaults are 5, 2, 2. MDN marks `hyphenate-limit-chars` as Limited availability as of October 2026: Chromium ships it, Firefox and Safari had not at the last compatibility table the house read; verify before relying on it and keep the InDesign values as the reference. `hyphenate-limit-lines` (consecutive hyphens) is only in Safari with the -webkit- prefix.
 
 ### 6.4 Rivers, widows, orphans, runts
 
@@ -362,7 +362,7 @@ Platform ramps (section 11.4): iOS Dynamic Type at the default Large setting run
 
 - Weight before size: two weights of one family (300 and 700, or 400 and 600) carry three levels of hierarchy at one size when combined with space. Reason: a weight change is read in peripheral vision, a 2px size change is read only on inspection. Medium weights (500) are for buttons and nothing else (design-taste); the house pairs 300 body with 500 bold inside it.
 - Case: sentence case for everything that is read; small tracked caps (section 4.3) for one label level per view; Title Case reads as a press release. ALL CAPS at body size reduces reading speed because word shapes vanish.
-- Colour: body in ink, secondary text in grey at a contrast of at least 4.5:1 (section 11.6), one accent word only as the house italic flame gesture. A coloured heading beside a black body does not create hierarchy, it creates two voices.
+- Colour: body in ink, secondary text in grey at a contrast of at least 4.5:1 (section 11.6), one accent word only as the house italic flame gesture. A coloured heading beside a black body reads as two voices; the hierarchy still has to come from weight and space.
 - Space: the level above weight. A heading with 48px above and 16px below outranks a heading 4px larger with equal spacing.
 
 ## 8. Micro-typography
@@ -422,7 +422,7 @@ The ellipsis is one character … (U+2026), spaced by the font, never three full
 | Punctuation space | U+2008 | Width of a full stop | Aligning decimals |
 | Zero-width space | U+200B | 0 | Allows a line break inside a long URL or compound without showing a hyphen |
 
-Numbers in India: the lakh and crore system groups digits as 1,00,000 and 1,00,00,000; set with the same comma glyph, no thin spaces. The rupee sign ₹ (U+20B9; design by D. Udaya Kumar, adopted 15 July 2010, encoded in Unicode 6.0 in October 2010) sits before the number with no space: ₹1,25,000. The UAE dirham: the Central Bank of the UAE unveiled a new dirham symbol on 27 March 2025 (a D crossed by two horizontal lines, drawn from the flag); it was encoded as U+20C3, UAE DIRHAM SIGN, in Unicode 18.0, released in September 2026. Until fonts and keyboards catch up, the ISO code AED after a space (AED 4,500) is the safe form; the Central Bank's usage guide places the symbol before the numeral and says it should not be combined with "AED" or "Dh". Check that any face used for Gulf pricing carries U+20C3 (section 18); as of October 2026 most do not.
+Numbers in India: the lakh and crore system groups digits as 1,00,000 and 1,00,00,000; set with the same comma glyph, no thin spaces. The rupee sign ₹ (U+20B9; design by D. Udaya Kumar, adopted 15 July 2010, encoded in Unicode 6.0 in October 2010) sits before the number with no space: ₹1,25,000. The UAE dirham: the Central Bank of the UAE unveiled a new dirham symbol on 27 March 2025 (a D crossed by two horizontal lines, drawn from the flag); it was encoded as U+20C3, UAE DIRHAM SIGN, in Unicode 18.0, released in September 2026. Until fonts and keyboards catch up, the ISO code AED after a space (AED 4,500) is the safe form; the Central Bank's usage guideline places the symbol before the numeral, and its full list of dos and don'ts should be read before any Gulf pricing layout. Check that any face used for Gulf pricing carries U+20C3 (section 18); as of October 2026 most do not.
 
 ### 8.6 Hanging punctuation and optical margin alignment
 
@@ -491,3 +491,610 @@ OpenType features are tagged substitution and positioning rules inside the font 
 | opsz | Optical size (variable axis) | `font-optical-sizing: auto` | `font-variation-settings: "opsz" 24` |
 
 InDesign exposes the same tags in the Character panel menu, OpenType submenu, and in paragraph and character styles under OpenType Features; Figma exposes them in Type settings, Details. A feature that is greyed out means the font does not carry it: the specimen check in section 18 exists to catch this before the pitch.
+
+## 10. Variable fonts
+
+A variable font is one OpenType file that carries a design space: a default outline per glyph plus deltas that move its points along named axes, so that any position between the masters can be instantiated at render time. The format is OpenType Font Variations, part of OpenType 1.8, announced jointly by Microsoft, Google, Apple and Adobe at ATypI Warsaw in September 2016. The tables that matter when reading a file in Wakamai Fondue (section 19): `fvar` (the axes and named instances), `gvar` or `CFF2` (the deltas), `avar` (axis mapping, so that the visual middle of the weight range sits at the numeric middle) and `STAT` (style attributes, which let an application build a correct style menu from axis values).
+
+### 10.1 Axes
+
+| Axis | Tag | Registered | Range convention | CSS property |
+|---|---|---|---|---|
+| Weight | wght | Yes | 1 to 1000; 400 regular, 700 bold | `font-weight: 350` |
+| Width | wdth | Yes | Percent of normal; 100 normal, 75 condensed, 125 extended | `font-width: 87.5%` (legacy name `font-stretch`) |
+| Optical size | opsz | Yes | Points; the font-size by default | `font-optical-sizing: auto` (section 3.2) |
+| Slant | slnt | Yes | Degrees, counter-clockwise, so a forward lean is negative: Roboto Flex runs -10 to 0 | `font-style: oblique 10deg` |
+| Italic | ital | Yes | 0 upright, 1 italic; a switch, where slnt is a dial | `font-style: italic` |
+| Grade | GRAD | No (custom, uppercase tag) | Roboto Flex -200 to 150 | `font-variation-settings: "GRAD" 50` |
+| Custom | XTRA, XOPQ, YOPQ, YTLC, YTAS, YTDE, YTFI (parametric axes), SOFT, WONK (Fraunces), MONO, CASL, CRSV (Recursive) | No | Foundry-defined | `font-variation-settings` only |
+
+Registered axes use lowercase tags and map to high-level CSS; custom axes use uppercase tags and are reachable only through the low-level property. The rule from section 9 applies again: `font-variation-settings` is one property, so a redeclaration on a child wipes every axis set on the parent; set all needed axes in one declaration, and prefer `font-weight`, `font-width` and `font-style` wherever they exist. In `@font-face`, declare the ranges the file carries so the browser can match requests: `font-weight: 300 700; font-stretch: 75% 125%; font-style: oblique 0deg 10deg;`.
+
+Grade deserves a line of its own. GRAD thickens or thins strokes without changing advance widths, so a change of grade does not reflow the line. Weight changes do reflow. Reasons to use grade: hover states on links and buttons that must not jiggle the layout, dark mode (light type on dark reads heavier, so drop the grade by 10 to 20 units to match the perceived weight of dark-on-light), and compensating for a thin rendering on Windows (section 11). Roboto Flex (Font Bureau for Google, 2022) carries GRAD -200 to 150 and twelve other axes; it is the reference file for learning what parametric axes do.
+
+### 10.2 Named instances
+
+A named instance is a stored axis position with a style name (Light, Regular, Semibold Condensed) in the `fvar` table. Applications that do not expose axis sliders (Microsoft Office, older design tools, many video tools) show only the named instances, so a variable file whose designer stored four instances offers four styles there and a continuum in Figma and the browser. When briefing a foundry on a custom variable face, specify the instances as well as the axes: the client's Word documents will use nothing else.
+
+### 10.3 Performance
+
+One variable file replaces a set of statics. The file is larger than one static and smaller than the set once two or three styles are needed, because the deltas compress well and the shared tables are stored once; the exact break-even depends on the design (a face with many masters carries more delta data). Measure with the real files: export the subsets you would ship (section 12.2) in both forms and compare in DevTools. For the house face, Space Grotesk ships on Google Fonts as a variable file covering wght 300 to 700; the house uses 300, 500, 600 and 700, so one variable file beats four statics and removes the four requests. The Web Almanac 2024 chapter on fonts reports about 33 percent of desktop pages and 34 percent of mobile pages using variable fonts, with Google Fonts serving 92 percent of them on desktop; variable has gone from novelty to default in six years.
+
+### 10.4 Animating axes
+
+Axis values are animatable: `transition: font-variation-settings 300ms ease-out` works in every current browser, and `font-weight` itself interpolates in Chromium, Firefox and WebKit. Rules:
+
+- Animate GRAD or a custom axis where the layout must stay fixed; animate wght only on a single line whose container has a fixed width and `white-space: nowrap`, because every frame of a weight animation reflows.
+- Animate on a transform-free element; font variation changes force text re-rasterisation each frame, so limit the animated run to a headline, never a paragraph.
+- Respect `prefers-reduced-motion: reduce`: freeze the axis at its end value.
+- The performative kinetic type that design-taste lists as rising (variable type reacting to scroll, pointer or sound) is built on these axes; the motion rules sit in 12-motion.md and the video execution in 13-video.md.
+
+### 10.5 Who ships variable
+
+As of October 2026: Google Fonts (most new families, including Space Grotesk, Fraunces, Roboto Flex, Inter 4, Newsreader, Literata); Fontshare (Satoshi, General Sans, Cabinet Grotesk, Switzer, Clash and others ship variable alongside statics); Dinamo (ABC Diatype, ABC Favorit, ABC Whyte and most of the catalogue, plus Font Gauntlet, Dinamo's own browser tool for testing axes); Grilli Type (GT Flexa was built as a variable face; others follow); Pangram Pangram (Neue Montreal, Editorial New and most families offer variable versions); Commercial Type and Klim ship variable for a growing part of their catalogues; Monotype (Helvetica Now Variable); Font Bureau and Type Network (Amstelvar, Roboto Flex, the parametric experiments). Check the foundry page for whether the variable file is a separate licence line; some foundries price it as its own product.
+
+### 10.6 Pitfalls
+
+- Interpolation artefacts: a face drawn with two masters interpolates its middle; kinks appear at joins and overlaps if the masters are not compatible. Test the instances you will use (the house 500 and 600) at 16px on Windows before adopting.
+- Hinting: most variable fonts ship unhinted or autohinted; on 1x Windows screens at 12 to 14px they render softer than a hinted static (section 11.2).
+- Tool support: Figma supports variable axes in the type panel (shipped 2023); InDesign and Illustrator expose axes in the Character panel; After Effects supports variable fonts in the Character panel; Microsoft Office shows named instances only; Keynote and Google Slides likewise. Export statics for decks that leave the house.
+- Style naming: a badly built `STAT` table produces menus such as "Söhne Regular Regular" or lists the family twice in Windows; this is a foundry defect to report, and a reason to open the file in Wakamai Fondue before buying.
+- Synthesis: when a variable file lacks an italic axis, browsers synthesise an oblique unless `font-synthesis: none` is set (section 8.7). Check the file carries `ital` or a separate italic file.
+- Licensing: a variable file is still font software; subsetting it or re-exporting instances as statics is modification under most EULAs (section 16.5).
+
+## 11. Type on screen
+
+### 11.1 The rendering stack
+
+Text on screen passes through three stages, and each platform uses different software for them:
+
+| Stage | Job | macOS and iOS | Windows | Android and Chrome | Linux |
+|---|---|---|---|---|---|
+| Shaping | Turning a string of codepoints into positioned glyphs: ligatures, kerning, Arabic joining, Devanagari reordering | Core Text's shaper (Chrome on macOS uses HarfBuzz) | DirectWrite's shaper (Chrome and Firefox use HarfBuzz) | HarfBuzz | HarfBuzz |
+| Rasterising | Turning outlines into pixel coverage | Core Graphics (through Core Text) | DirectWrite (GDI with ClearType in legacy apps) | FreeType (through Skia) | FreeType |
+| Compositing | Painting the glyph bitmaps into the frame with colour and effects | Core Animation | Direct2D, DirectComposition | Skia | Cairo, Skia |
+
+HarfBuzz (Behdad Esfahbod) is the shaping engine inside Chrome, Firefox, Android, LibreOffice and most of the open-source stack; its correctness with Devanagari conjuncts and Arabic joining is why those scripts render consistently across those applications and inconsistently in older Windows applications that still use Uniscribe. DirectWrite arrived with Windows 7 in 2009 and replaced GDI text for modern applications; GDI with ClearType remains in some legacy software and renders with heavy hinting and colour fringes.
+
+### 11.2 Hinting
+
+Hinting is instruction data in a font that nudges outlines onto the pixel grid at small sizes, so that stems land on whole pixels and x-heights are consistent across letters. TrueType hints are a byte-coded programme per glyph (the `fpgm`, `prep`, `cvt` and per-glyph instructions) that can move points arbitrarily; PostScript and CFF hints are declarative (stem widths, alignment zones called blue zones) and the rasteriser decides what to do with them. Platform policy differs: Windows honours hints (strong grid-fitting, crisp but distorted shapes, thin weights breaking up); macOS and iOS ignore most hints and render the true outline with antialiasing (softer, heavier, faithful to the drawing); FreeType sits between, with an autohinter that infers hints when a font has none. The practical consequence: a light weight (300) that looks elegant on a Mac looks ragged and grey on a 1x Windows laptop at 14px. The house body weight of 300 therefore holds at 16px and up, and labels below 14px step to 400 on every platform. Tools: ttfautohint (Werner Lemberg, FreeType project) adds hints to unhinted web fonts; test on a real 1x Windows screen, since every designer's Mac hides the problem.
+
+### 11.3 Antialiasing and font smoothing
+
+- Greyscale antialiasing: each pixel takes a shade proportional to the coverage of the outline. Every platform does this at 2x and above.
+- Subpixel antialiasing: uses the red, green and blue stripes of an LCD pixel as three horizontal subpixels, tripling horizontal resolution at the cost of colour fringes. Microsoft's ClearType (2000) is the canonical form. Apple removed subpixel antialiasing from macOS in 10.14 Mojave (2018); the reason given was that it requires knowing the background colour at render time, which GPU compositing with transparency cannot guarantee. Since then macOS renders greyscale only, which on a 1x external monitor looks thinner and blurrier, and on Retina looks the same as before.
+- Font smoothing in CSS: `-webkit-font-smoothing: antialiased` (macOS only) switches from subpixel to greyscale and thins the rendering; post-Mojave it changes little on the OS but still affects Chrome's own rendering path; `-moz-osx-font-smoothing: grayscale` is the Firefox equivalent. The house uses them only for light type on dark grounds (the client deck surface on #0A0A0A), where greyscale stops the strokes bloating; on white grounds leave the default, because the thinned rendering lowers contrast.
+- Gamma: macOS and Windows apply different gamma to the antialiasing ramp; the same grey text measures darker on a Mac. One more reason the Windows check is mandatory before a client sees a build.
+
+### 11.4 Density and the 1x worst case
+
+Retina (2x) and 3x displays render at 326 to 460 pixels per inch on phones and 218 to 254 ppi on Mac laptops, where hinting and subpixel tricks stop mattering because a 1px hairline is already below the eye's resolution at viewing distance. The 1x case still exists: the office Windows laptop at 1366 by 768 and 96 to 110 ppi, the Indian and Gulf enterprise desktop, the hotel back-office screen. Design for 2x, test on 1x, and let the 1x result decide the minimum weight and size. In CSS, `@media (min-resolution: 2dppx)` lets you drop to a lighter weight only where the density can carry it.
+
+### 11.5 Minimum sizes per platform
+
+| Platform | Default body | Minimum | Source |
+|---|---|---|---|
+| iOS, iPadOS | 17pt | 11pt | Apple Human Interface Guidelines, Typography, as of October 2026 |
+| macOS | 13pt | 10pt | Apple HIG |
+| tvOS | 29pt | 23pt | Apple HIG |
+| visionOS | 17pt | 12pt | Apple HIG |
+| watchOS | 16pt | 12pt | Apple HIG |
+| Android (Material 3) | 14sp (body medium) or 16sp (body large) | 11sp (label small) as the smallest token; 12sp (body small) is the practical floor for anything read | Material 3 type scale, Jetpack Compose Typography defaults |
+| Web | 16px (the browser default and the house body) | 12px for legal and timestamps; nothing below | Section 7.3; WCAG 2.2 sets no minimum size and instead requires 200 percent zoom (1.4.4) and the text spacing tolerance of 1.4.12 |
+
+Points on Apple platforms and sp on Android are density-independent units: 1pt is one CSS-pixel equivalent at 1x and two device pixels at 2x; sp equals dp (density-independent pixel) at the user's default font scale and grows with it. Use sp for text and dp for layout on Android, so that a user's larger font setting scales the words and leaves the chrome alone.
+
+### 11.6 Dynamic Type and sp scaling
+
+iOS Dynamic Type scales each text style along a curve rather than by one factor. At the Large (default) setting the styles run Large Title 34/41, Title 1 28/34, Title 2 22/28, Title 3 20/25, Headline 17/22 semibold, Body 17/22, Callout 16/21, Subhead 15/20, Footnote 13/18, Caption 1 12/16, Caption 2 11/13 (size over leading, in points). At the largest accessibility setting Body reaches 53/62 and Caption 2 40/48, so a layout that holds Body at the default must also survive Body at three times the size: that is the design test, and the reason iOS layouts stack vertically at large sizes. Apple's own tracking table for SF Pro is the best published example of size-dependent tracking: +41 units (thousandths of an em) at 6pt, 0 at 12pt, -26 at 17pt, then back to +3 at 24pt; the reversal at 20 to 24pt is the point where the system swaps the Text optical size for Display, which is drawn tighter and so needs positive tracking to match. Static mockups in Figma using the discrete SF cuts need these values typed in; the running system applies them automatically.
+
+Android 14 extended user font scaling to 200 percent with a non-linear curve (large styles scale less than small ones), which is the same idea as Dynamic Type: the system protects headlines from growing off the screen while body text doubles. Test both platforms at the largest setting before sign-off.
+
+### 11.7 Contrast and weight on screen
+
+Contrast ratios for text (4.5:1 for body, 3:1 for large text, where large means 24px, or 18.66px at bold, under WCAG 2.2 1.4.3) are specified in 04-colour.md, section 6 and 11-accessibility.md. Two typographic facts they depend on: thin weights lower effective contrast because the stroke covers less of each pixel and antialiasing greys it (APCA, the candidate algorithm for WCAG 3, scores weight and size together for this reason), and grey secondary text at 300 weight on white routinely fails 4.5:1 where the same grey at 400 passes. The house secondary grey is chosen against the 300 weight, which is the stricter case.
+
+## 12. Web font engineering
+
+### 12.1 Formats
+
+Ship WOFF 2.0 only. It wraps OpenType (TrueType or CFF outlines, variable included) in Brotli compression with font-specific preprocessing; the W3C published WOFF File Format 2.0 as a Recommendation on 8 August 2024 after years as a de facto standard, and every current browser reads it. The Web Almanac 2024 fonts chapter measured WOFF2 at 81 percent of font files served on desktop and 78 percent on mobile, with a median font file of 39 KB. WOFF 1.0 (zlib, 2012) is only for a legacy embedded browser you have been told to support; raw TTF and OTF on the web waste 30 to 50 percent of bytes and leak the desktop file; EOT and SVG fonts are dead.
+
+### 12.2 Subsetting
+
+A font file carries every glyph the designer drew: Latin, extended Latin, Cyrillic, Greek, Vietnamese, symbols. A marketing page in English uses about 200 of them. Subsetting removes the rest.
+
+- `unicode-range` in `@font-face` declares which codepoints a file covers; the browser downloads the file only if the page uses a character in that range. Google Fonts splits every family this way (latin, latin-ext, cyrillic, devanagari, arabic as separate files), which is why a Google Fonts CSS response lists one family a dozen times. Self-hosted fonts should copy the pattern: a Latin file, a Latin-extended file for French and Portuguese names, a Devanagari file, an Arabic file.
+- pyftsubset (part of fontTools, Python) does the cutting: `pyftsubset Font.ttf --unicodes="U+0020-007E,U+00A0-00FF,U+20B9,U+20C3" --layout-features='*' --flavor=woff2 --output-file=font-latin.woff2`. Keep `--layout-features='*'` or the OpenType features (kerning, small caps, figures) are stripped with the glyphs. Add the rupee and dirham codepoints to every Latin subset for Mask360 work.
+- glyphhanger (Zach Leatherman) spiders a site, collects the characters used, and drives pyftsubset with that list; useful for a fixed microsite, dangerous for a CMS where editors will type characters you removed.
+- Subsetting is modification of the font software; most web licences permit it for delivery and some foundries supply their own subsets and forbid re-cutting. Read the EULA (section 16).
+
+Weights: Indian and Gulf mobile traffic runs on networks where a 400 KB font bundle is visible. House budget: 100 KB of WOFF2 for a Latin-only page (two to three styles of one family, subset), 180 KB with a second script, measured in DevTools with the Font filter. A Devanagari subset of a well-made family runs 60 to 120 KB per style, Arabic Naskh with full contextual forms 50 to 150 KB, Nastaliq 200 KB and up, which is why a second script gets one weight.
+
+### 12.3 font-display, FOIT, FOUT, FOFT
+
+While a web font loads, the browser must show something. FOIT (flash of invisible text) hides the text until the font arrives; FOUT (flash of unstyled text) shows the fallback and swaps; FOFT (flash of faux text, Bram Stein's term, with Zach Leatherman's loading recipes) loads the roman first and lets the browser synthesise bold and italic until the real ones land. `font-display` in `@font-face` sets the policy with two timers, a block period (text invisible) and a swap period (fallback shown, swap allowed):
+
+| Value | Block | Swap | Use |
+|---|---|---|---|
+| block | About 3s | Infinite | Icon fonts only, where the fallback would show nonsense; the house uses SVG icons and never needs it |
+| swap | About 100ms, effectively none | Infinite | Brand faces on marketing pages: the words appear at once in the fallback and swap when ready |
+| fallback | About 100ms | About 3s | Body text where a late swap would be worse than staying in the fallback |
+| optional | About 100ms | None | Decorative or secondary faces; the browser may skip the font entirely on a slow connection |
+| auto | Browser decides, usually like block | | Never specify; set it explicitly |
+
+Web Almanac 2024 found `font-display: swap` on 44 percent of desktop pages and 45 percent of mobile pages. House rule: `swap` for the brand face, with a metric-matched fallback (12.5) so the swap moves nothing; `optional` for anything the page can live without; a preload (12.4) for the one display file above the fold so the swap rarely happens.
+
+### 12.4 Preload, preconnect, caching
+
+- `<link rel="preload" href="/fonts/sg-700.woff2" as="font" type="font/woff2" crossorigin>` in the head starts the download before the CSS is parsed. Use it for one or two files (the display weight and the body weight above the fold); preloading all of them delays the images. The `crossorigin` attribute is required even for same-origin fonts, because font fetches are CORS requests; without it the browser downloads the file twice.
+- `<link rel="preconnect" href="https://use.typekit.net" crossorigin>` opens the connection early for a third-party host; only useful if you must use one.
+- Serve fonts with `Cache-Control: public, max-age=31536000, immutable` and a hashed filename, so returning visitors never refetch. Chrome partitioned its HTTP cache by top-level site in version 86 (October 2020), so a Google Fonts file cached by another site is no longer reused on yours; the old argument that Google-hosted fonts are "probably already cached" is gone.
+
+### 12.5 Self-hosting versus Google Fonts versus Adobe Fonts
+
+| Option | How it loads | Privacy and law | Cost | House use |
+|---|---|---|---|---|
+| Self-hosted | Files on your origin or CDN, your `@font-face` | No third party sees the visitor | The licence fee; Google Fonts and Fontshare files are free to self-host under OFL or the ITF licence | Default for every house and client build |
+| Google Fonts hosted | CSS from fonts.googleapis.com, files from fonts.gstatic.com | Landgericht München I, judgment of 20 January 2022, case 3 O 17493/20: embedding Google Fonts so that the visitor's IP address reaches Google without consent breached the GDPR; 100 euros damages, a first-instance decision that still triggered a wave of warning letters in Germany. India's Digital Personal Data Protection Act 2023 and the UAE's Federal Decree-Law 45 of 2021 both define personal data broadly; self-hosting removes the question | Free | Prototypes only; never a shipped client site |
+| Adobe Fonts | A script or CSS embed tied to a web project and your Creative Cloud subscription; Adobe serves the files | Adobe's servers see the request; covered by Adobe's terms | Included in Creative Cloud; stops when the subscription or the project ends | Decks and print where the Adobe library is already licensed; avoid for client sites the client does not control |
+| Foundry-hosted (Klim, Commercial Type and others offer hosted web fonts) | Foundry CSS | Foundry servers see the request | Part of the web licence | When the EULA requires it |
+
+The Web Almanac 2024 counted about 57 percent of desktop sites loading from Google Fonts; the house treats that as a tell of a site built without a font decision.
+
+### 12.6 Matching the fallback: size-adjust and the override descriptors
+
+A swap causes layout shift when the fallback's glyph widths and vertical metrics differ from the web font's. Four `@font-face` descriptors on the fallback face fix it: `size-adjust` (scales every metric of the fallback by a percentage so its x-height and widths match), `ascent-override`, `descent-override` and `line-gap-override` (replace the fallback's vertical metrics so the line box matches). MDN lists `size-adjust` as Baseline Widely available since September 2023; the three overrides shipped in Chromium 87 and Firefox 89 and reached Safari with its 17 release in the same month. Pattern:
+
+```
+@font-face { font-family: "Space Grotesk"; src: url(/fonts/sg.woff2) format("woff2"); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: "SG Fallback"; src: local("Arial"); size-adjust: 104%; ascent-override: 97%; descent-override: 29%; line-gap-override: 0%; }
+body { font-family: "Space Grotesk", "SG Fallback", sans-serif; }
+```
+
+The percentages are illustrative; generate real ones with Capsize (Seek), Fontaine (the Nuxt team's tool, which writes the declarations automatically) or Brian Louis Ramirez's Fallback Font Generator, each of which reads the metrics of both files. Target: a Cumulative Layout Shift contribution from fonts of zero, inside the Core Web Vitals CLS budget of 0.1.
+
+### 12.7 The CSS Font Loading API
+
+`document.fonts.load('700 1em "Space Grotesk"')` returns a promise that resolves when the face is usable; `document.fonts.ready` resolves when all requested faces are done; `new FontFace(name, url, descriptors)` loads a font without a stylesheet. Use: add a class to `html` when the display face has loaded so that a scroll-driven headline animation (12-motion.md) starts on the real glyphs rather than on the fallback, and set `sessionStorage` so the class is applied immediately on the next page. Do not use it to hide text; `font-display` already does that job with the right timers.
+
+### 12.8 System font stacks
+
+When no brand voice is needed (an internal tool, a form inside a client's intranet, an email that cannot carry a web font), use the platform's own face. The UI stack: `font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;` yields SF on Apple, Segoe on Windows, Roboto on Android. Dan Klammer's Modern Font Stacks catalogues stacks by classification (a "Geometric Humanist" stack of Avenir, Montserrat, Corbel; a "Transitional" stack of Charter, Bitstream Charter, Sitka Text, Cambria) for pages that want a flavour at zero bytes. Email clients: only system faces render reliably, so a house email is set in the stack above with the brand face declared first for the clients that honour `@font-face` (Apple Mail and iOS Mail do; Gmail and Outlook do not).
+
+### 12.9 Checklist before a client site ships
+
+1. One family, two to four styles, WOFF2, subset per script, under the byte budget.
+2. `font-display: swap` plus a metric-matched fallback; preload the hero weight.
+3. Self-hosted on the client's domain under the client's web licence (section 16.3).
+4. `font-synthesis: none`; `font-kerning: normal`; `font-variant-numeric: tabular-nums` on every number column; `text-wrap: balance` on headings, `pretty` on paragraphs; `hyphens: auto` with `lang` set.
+5. Rupee and dirham glyphs present in the subset and rendered (section 8.5).
+6. Checked on a 1x Windows laptop in Chrome and Edge, on an Android phone at 200 percent font scale, and on iPhone at the largest accessibility size.
+
+## 13. Type in motion and video
+
+### 13.1 Kerning and tracking in After Effects
+
+After Effects measures kerning and tracking in thousandths of an em, the InDesign units, in the Character panel. Kerning offers Metrics (the font's pairs) and Optical (Adobe's shape analysis), with the same rule as section 4.2: Metrics for serious foundry faces, Optical for mixed faces or faces with thin kern tables, then hand-kern every title with the cursor between the pair and Option or Alt plus the arrow keys (the increment is set in Preferences, Type; the default of 20 units is coarse, set 5 for display work). Tracking is a text animator property as well as a static value, so a title can open from tight to normal over 600 to 900ms, which is the one kinetic move that reads as expensive; the Tsume property tightens by reducing each glyph's own sidebearings proportionally and is the better choice for CJK and for very large Latin where tracking alone leaves uneven gaps. Per-character animation uses Animators with Range Selectors (Position, Opacity, Tracking, Scale per character or word), the engine beneath every kinetic type piece; the motion principles are in 12-motion.md, section 4, and the edit and export chain in 13-video.md.
+
+### 13.2 Safe areas
+
+SMPTE ST 2046-1:2009 defines the action safe area as a centred rectangle 93 percent of the production aperture's width and height, and the title safe area as 90 percent. For 1920 by 1080 that puts title safe at 1728 by 972, inset 96 pixels horizontally and 54 vertically. Older 4:3 practice used 90 and 80 percent, and several editing applications still default to those values (After Effects' Preferences, Grids and Guides, hold the action-safe and title-safe margins and ship with the legacy 10 and 20 percent; set 7 and 10). Broadcast deliverables for Indian and Gulf channels still get reviewed against title safe, because consumer televisions overscan by a few percent.
+
+Social vertical video has its own safe zones, set by the platform's interface rather than the screen. Meta's Instagram Reels ad specification asks for 9:16 at 1440 by 2560 and for the top 14 percent, the bottom 35 percent and 6 percent on each side to be kept free of text, logos and anything that must be read, because the caption, the account name, the audio tag and the right-hand action column cover those bands. On a 1080 by 1920 frame that is about 270 pixels at the top, 670 at the bottom and 65 at each side. TikTok and YouTube Shorts publish comparable diagrams; check each before the edit rather than reusing one set, since the overlays move with interface updates. The house keeps one 9:16 master with a locked guide layer for each platform.
+
+### 13.3 Minimum sizes on video
+
+Video type is read at a distance and through compression, so screen rules do not carry over. House minimums, with the reason:
+
+| Delivery | Frame | Minimum body or subtitle | Minimum title | Reason |
+|---|---|---|---|---|
+| Television and OTT, 16:9 | 1920 by 1080 | 40px cap height (about 56px type) | 72px | Viewed at 2.5 to 3.5m on a 55-inch screen; below 40px cap height a subtitle needs a second read |
+| Same, UHD | 3840 by 2160 | Double the 1080 values | Double | Pixel count doubles, viewing geometry does not |
+| Instagram and TikTok, 9:16 | 1080 by 1920 | 48px type for captions | 96px | A 6-inch phone at 35cm; the frame is seen at about one third of its pixel size |
+| LinkedIn and YouTube feed, 16:9 or 1:1 | 1080 wide | 36px | 72px | Inline players are small; the frame is often 400px wide on a desktop feed |
+| Cinema and event screens | DCI 2K or 4K | Follow the venue's test; 1 percent of frame height is the floor | 3 percent of frame height | Seat distance varies by a factor of ten |
+
+Weight: nothing lighter than 400 on video. Hairlines strobe, break under H.264 and H.265 recompression at platform bitrates, and vanish over a bright background. High-contrast serifs (section 2.3) survive only at title sizes and only on a still or near-still background; a didone at caption size on a Reel is a defect.
+
+### 13.4 Duration on screen
+
+Reading speed sets the floor. Netflix's English Timed Text Style Guide caps subtitles at 20 characters per second for adult programmes and 17 for children's, with 42 characters per line, two lines, a minimum event of 5/6 of a second (20 frames at 24 fps) and a maximum of 7 seconds. Derived house rule for titles and kinetic lines: hold any line for at least 1.5 seconds, plus 0.3 seconds for every word beyond three; a six-word headline holds for 2.4 seconds before its out-animation begins; a single word can flash at 0.4 seconds only inside a sequence the viewer has already learned to read. Transitions count against reading time only when the type is already legible; a 500ms blur-in adds 500ms.
+
+### 13.5 Type over moving backgrounds
+
+- Prefer a still: a locked-off plate or a freeze under the title. If the background must move, place the type over the region with the least luminance change across the shot, checked on the luma waveform in Premiere or Resolve across the whole duration of the shot.
+- A scrim (a gradient darkening the band behind the type, 30 to 50 percent black, feathered) is the honest tool; drop shadows and glows are the cheap tells design-taste lists. A solid plate in the brand colour or a blurred copy of the footage behind the type both read as current.
+- Contrast: aim for the 4.5:1 body ratio of 04-colour.md against the lightest frame the type sits over, measured on that frame.
+- Devanagari and Arabic over footage need 10 to 15 percent more size than Latin for the same legibility because their distinguishing detail (matras, dots) is small (section 15).
+
+## 14. Type for print
+
+### 14.1 Units
+
+The PostScript point is 1/72 inch, 0.3528mm; 12 points make a pica; InDesign, Illustrator and every modern RIP use it. The Didot point (0.376mm) survives in old European specimens and some German presses; a 10pt Didot face is about 10.7pt PostScript, which matters when a client hands over a 1970s brand manual. Type size in print is the body (the em), so the visible cap height of a 10pt face is 6.5 to 7.5pt; two faces at 10pt can differ in apparent size by 15 percent (section 1.1), which is why specs quote the face with the size.
+
+### 14.2 Sizes and leading by job
+
+| Job | Size | Leading | Measure | Notes |
+|---|---|---|---|---|
+| Book text | 9.5 to 11pt | 12.5 to 14.5pt (1.3 to 1.35) | 60 to 70 characters | Serif text cut; old-style figures |
+| Magazine body | 8.5 to 10pt | 11 to 13pt | 45 to 60 in columns | Text or caption cut depending on stock |
+| Luxury lookbook and brochure | 8 to 9.5pt | 13 to 16pt (1.5 to 1.7) | 50 to 65 | The wide leading is the luxury gesture; generous margins (design-taste, physics of expensive) |
+| Captions and credits | 6.5 to 8pt | 8.5 to 10pt | Short | Caption cut if the family has one; lining figures for product codes |
+| Legal and ingredients | 6 to 7pt; 5pt only on coated stock with a sturdy face | 7 to 8.5pt | Any | India's Legal Metrology (Packaged Commodities) Rules 2011 set minimum letter heights for mandatory declarations by pack size; see 20-print.md and check the current schedule before a pack goes to artwork |
+| Business card | Name 9 to 10pt, details 7 to 8pt | 1.3 | | Hairline serifs fail below 8pt on uncoated card |
+| Poster and OOH | 72pt and up | 0.9 to 1.0 | Three to six words a line | Section 20 for distance rules |
+
+Print leading runs lower than screen leading because paper resolution is higher and the page is read at 30 to 40cm with its edges in view. Luxury editorial breaks the rule deliberately: 9/15 Tiempos Text on a wide measure reads as expensive precisely because it spends paper.
+
+### 14.3 Optical sizes and ink
+
+Ink spread (tone value increase, or dot gain in the older vocabulary) thickens every printed stroke as ink wicks into the fibres; uncoated paper gains more than coated, and newsprint most. ISO 12647-2 sets the target increase per paper type, which is why a contract proof made to ISO 12647-7 shows what the press will do and a laser proof does not. Consequences for type:
+
+- A text cut at 9pt on uncoated stock prints about one weight heavier; a 300 or Light reads as Regular, a Regular as Medium. Choose one step lighter on rough and uncoated stock (Munken, Colorplan, kraft), one step heavier on coated silk where the ink sits on the surface and thin strokes look thinner.
+- Hairlines: 0.25pt is the minimum printable rule on offset; a didone's thins at 10pt are near that limit and fill or break depending on the stock. Didones live above 14pt in print and above 24pt on uncoated.
+- Reversed (knocked-out) type: white type in a solid is where spread does the most damage, because the ink closes the counters from all sides. Minimum 8pt, no light weights below 12pt, no serifs with hairlines below 14pt, and never reversed out of a four-colour rich black (registration drift of 0.1mm blurs every edge); reverse out of 100 K or a single spot.
+- Small type in colour: set type under 10pt in a single ink (100 K or one Pantone), never in a CMYK build, for the same registration reason. The colour side of this rule sits in 04-colour.md, section 9, and the production chain in 20-print.md.
+- Caption cuts earn their keep in print more than on screen: Garamond Premier Caption at 7pt on uncoated holds its counters where the Regular clogs.
+
+### 14.4 Paper and weight
+
+Rough and toothy stock scatters light and softens edges; type on it reads warmer and a touch darker, so a grotesk loses its edge and a humanist serif gains. Coated gloss keeps every edge and shows the thinness of light weights without mercy. Tinted stock lowers contrast: a 300 weight on a cream or grey sheet drops below readable at 9pt. Check the combination on a printed sample at actual size, under the shop's light, and squint: the first thing to vanish is the thin, and a page that greys evenly has passed.
+
+## 15. Multiscript typography
+
+Mask360 ships Hindi and Marathi (Devanagari), Arabic, Urdu (Nastaliq), Tamil and Bengali beside English. The taste rule is in design-taste, references/type.md, section 2 (match the Latin's weight, x-height and rhythm; a Devanagari two weights heavier reads as an afterthought). This section is the mechanics.
+
+### 15.1 Devanagari anatomy
+
+- Shirorekha (headline): the horizontal bar from which letters hang; in running text the bars of consecutive letters join into one line per word, so the word boundary is the gap in the headline. It is the strongest horizontal in the script and plays the role the baseline plays in Latin for alignment; the eye reads along the top.
+- Base character band: the body of the consonant hangs below the headline; its depth is the script's equivalent of x-height and sets the apparent size.
+- Matras: vowel signs attached to consonants. Above the headline (i-matra's hook, e and ai strokes, chandrabindu, anusvara), below (u, uu, the vocalic r), beside (aa, ii, o, au as vertical bars). The space above the headline must hold the tallest matra stack; the space below must hold the deepest subscript conjunct.
+- Conjuncts: two or more consonants fused when the halant (virama) kills the inherent vowel; half forms (a consonant without its vertical stem) join the next full form, and some pairs produce a new glyph (ksha, tra, jna). Stacked conjuncts descend; a face with 300 conjuncts composes Hindi well, a face with 1,000 composes Sanskrit.
+- Nukta: the dot under a consonant for Urdu-derived sounds (qa, za, fa), easily lost at small sizes; a face that draws the nukta too small fails for Hindi news copy.
+- Localised forms: Marathi uses different shapes for la and some conjuncts; the `locl` feature switches them when the language is tagged (`lang="mr"`), which is why language tagging in HTML and InDesign decides whether the Marathi reader sees the right letters.
+
+Vertical metrics: a Devanagari line needs three zones (upper matras, base band, lower matras and conjuncts) where Latin needs ascender, x-height and descender; the base band is shallower than the Latin x-height band in most paired families, so Devanagari set at the same point size looks about 10 to 15 percent smaller and needs a size increase of that order beside sentence-case Latin. Beside all-caps Latin, raise the Devanagari further and shift its baseline, or avoid the pairing (the Alphabettes guide "Devanagari Typography 101" sets this out). Leading 1.6 to 1.8 (section 5.1). Tracking near zero: tracking Devanagari widely breaks the shirorekha into dashes and dissolves the words. Hierarchy comes from size, weight and colour, because the script has no case and no small caps.
+
+Faces and foundries: Indian Type Foundry (Kohinoor Devanagari, Poppins Devanagari, Hind, and the Fontshare regional cuts), Ek Type (Mukta, Baloo 2, Anek Devanagari, Modak), Universal Thirst (Devanagari, Tamil, Bengali with real design intent), Typotheque (multiscript families with Devanagari, Tamil, Bengali and Malayalam), Tiro Typeworks (Tiro Devanagari Hindi, Marathi and Sanskrit on Google Fonts, John Hudson and Fiona Ross), Google's Noto Sans and Noto Serif Devanagari as the fallback of last resort. Paired Latin and Devanagari in one family (Poppins, Anek, Mukta, Baloo, Hind) solves the matching problem at the cost of a Latin that is rarely distinguished; the stronger route for a luxury client is a chosen Latin plus a Devanagari matched by hand on headline height, stem weight and stroke contrast.
+
+### 15.2 Arabic
+
+- Direction and shaping: right to left; letters take isolated, initial, medial and final forms depending on neighbours, and the shaping engine (section 11.1) chooses them; a font without the joining logic shows disconnected letters, the most visible failure in Gulf work. No case; emphasis comes from weight, size and style.
+- Structure: a connecting baseline; tall ascenders (alif, lam, the tooth letters kaf and tah); deep descending bowls (jeem, hah, ain, noon, the final forms of many letters); dots (nuqta) above and below that distinguish letters that share a skeleton; optional vowel marks (harakat) that display and children's copy sometimes carry and advertising omits.
+- Styles: Naskh (the text style, rhythmically horizontal, right for body), Kufi (geometric and angular, the Gulf identity staple, right for logotypes and headlines), Thuluth and Diwani (calligraphic display, for heritage and hospitality brands, used once and large), Ruqah (informal, handwritten). Contemporary "Arabic sans" families draw a Kufi-rooted skeleton with grotesk proportions to pair with Latin grotesks.
+- Kashida (tatweel, U+0640): the elongation of a connecting stroke. Classical justification stretches kashidas rather than word spaces; browsers today justify Arabic by widening word spaces, which reads as crude, and Internet Explorer's `text-justify: kashida` has no successor in shipping browsers as of October 2026 (Chromium has an intent to prototype kashida justification with a `text-kashida-space` property; it is not shipped). Set Arabic ragged (ranged right) on the web; justify only in InDesign, where the Adobe World-Ready Paragraph Composer handles kashida insertion and diacritic placement (Preferences, Advanced Type, and the composer setting in the paragraph style). The composer ships in every InDesign edition; the separate Middle East edition is no longer needed for Arabic.
+- Numerals: Western digits (0 to 9) are standard in UAE government and commercial Arabic, including prices; Eastern Arabic-Indic digits (U+0660 to U+0669) are usual in Saudi, Egyptian and Levantine print. Confirm the client's convention per market; a Riyadh launch and a Dubai launch can carry different digits in the same campaign. Digits run left to right inside a right-to-left line, and the bidi algorithm handles that; brackets and guillemets mirror automatically when the font carries mirrored forms.
+- Foundries and faces: 29LT (Pascal Zoghbi; 29LT Bukra, Zarid, Azer), TPTQ Arabic (Peter Biľak and Kristyan Sarkis; Arabic companions to Typotheque's Latin families), Boutros Fonts (the Boutros family's decades of Arabic matching), Monotype's Arabic programme (Nadine Chahine's Frutiger Arabic, Neue Helvetica Arabic, Zapfino Arabic), the Dubai Font (Monotype for the Dubai government, 2017, free), Google's Noto Naskh Arabic and Noto Kufi Arabic, IBM Plex Sans Arabic, Cairo, Tajawal, Almarai, Readex Pro, Baloo Bhaijaan 2 on Google Fonts. The Khatt Foundation (Huda Smitshuijzen AbiFarès) and its Typographic Matchmaking projects are the reference literature for pairing Arabic with Latin.
+- Bilingual lockups: match the Latin cap height to the Arabic tooth height (the band of short letters, the Arabic x-height equivalent), match stem weight at the same size (the Arabic usually needs a lighter nominal weight to look equal because its strokes are horizontal and long), and align on the shared baseline, then centre optically because the Arabic's descending bowls pull its mass down. Never stretch or condense the Latin to equal the Arabic's length; let the two differ and align an edge. In a mirrored layout the Arabic ranges right and the Latin left with the mark between; stacked, the Arabic sits above for a Gulf client and below for an international one, decided once in the identity. Dubai's outdoor advertising rules require Arabic alongside English on signage; verify the current Dubai Municipality guidance before an OOH run.
+- Leading 1.6 to 1.8 for Naskh, because the dots and marks occupy the zones Latin leaves empty; size up 5 to 10 percent beside Latin for equal apparent size.
+
+### 15.3 Tamil and Bengali
+
+- Tamil: no headline, rounded forms with open loops, no stacked conjuncts of the Devanagari kind (Tamil uses pulli, a dot, to kill the inherent vowel), wide letters, so the same sentence runs longer than its Hindi equivalent and needs a wider measure or a smaller size. Vertical demands are modest; leading 1.5 to 1.6. Faces: Mukta Malar and Baloo Thambi (Ek Type), Hind Madurai (ITF), Catamaran, Noto Sans Tamil, Universal Thirst and Typotheque for considered design.
+- Bengali: a headline (matra) like Devanagari, heavier conjunct stacks and deeper descending forms, so the lower zone needs more room than Hindi; leading 1.7 to 1.8. Faces: Baloo Da 2 (Ek Type), Hind Siliguri (ITF), Tiro Bangla, Noto Sans Bengali, Universal Thirst for Kolkata and Dhaka work.
+
+### 15.4 Urdu and Nastaliq
+
+Urdu is written in Nastaliq, a hanging style in which each word descends diagonally from upper right to the baseline, with letters stacking rather than sitting side by side. A Nastaliq line therefore occupies twice the vertical space of a Naskh line at the same nominal size and words overlap vertically with the line above. Set line-height at 2.0 and up (one widely used starting value for Noto Nastaliq Urdu body text is 1.8 to 2.2, tested per face), size up 20 to 30 percent beside Latin, never track, and expect slow shaping: a Nastaliq font carries thousands of contextual substitutions and renders measurably slower than Naskh. Faces: Noto Nastaliq Urdu (Google), Jameel Noori Nastaleeq (free, from Pakistan, ubiquitous in Urdu print), Mehr Nastaliq Web (the Centre for Language Engineering, Lahore), Alvi Nastaleeq. Where Nastaliq is unavailable or must be small, Urdu can be set in Naskh (Noto Naskh Arabic carries the Urdu letters); readers accept it for captions and reject it for headlines. Markets: Urdu reaches Hyderabad, Lucknow and Delhi audiences in India and the large South Asian population in Dubai and Sharjah, which makes it a live script for Gulf F&B and retail.
+
+### 15.5 CSS for multiscript pages
+
+- `<html lang="ar" dir="rtl">` sets both language and direction; `direction: rtl` in CSS alone is for components. The `dir` attribute applies `unicode-bidi: isolate`, so the element's text is a separate bidi run; `unicode-bidi: plaintext` lets a block take the direction of its first strong character (for user-generated content); `bidi-override` forces direction and is almost never right.
+- Use logical properties (`margin-inline-start`, `padding-inline-end`, `text-align: start`, `inset-inline`) so that one stylesheet flips for Arabic and Urdu without a second file; the `:dir(rtl)` pseudo-class handles the exceptions. Mirror directional icons (back arrows, progress) and leave non-directional ones (a clock, a search glass) alone.
+- Wrap names and figures of unknown direction in `<bdi>` so that an English name inside an Arabic sentence does not drag the punctuation.
+- Per-script line-height through `:lang()` selectors: `:lang(hi), :lang(mr) { line-height: 1.7 } :lang(ar) { line-height: 1.7 } :lang(ur) { line-height: 2.1 }`.
+- Font loading: one `@font-face` per script with `unicode-range` (section 12.2), the Latin first in the stack so that digits and brand names in an Arabic page come from the Latin face when the Arabic face's Latin is weak, or the reverse when the Arabic face's Latin was drawn to match.
+
+| Script | Leading (body) | Size relative to Latin at equal apparent size | Tracking | Hierarchy tools |
+|---|---|---|---|---|
+| Latin | 1.4 to 1.6 | 100 percent | Display negative, body zero, caps positive | Size, weight, case, space |
+| Devanagari | 1.6 to 1.8 | 110 to 115 percent | Zero | Size, weight, colour, space |
+| Bengali | 1.7 to 1.8 | 110 to 115 percent | Zero | As Devanagari |
+| Tamil | 1.5 to 1.6 | 105 to 110 percent; wider measure | Zero | As Devanagari |
+| Arabic Naskh | 1.6 to 1.8 | 105 to 110 percent | Zero; kashida in InDesign only | Size, weight, style (Kufi for display) |
+| Urdu Nastaliq | 2.0 to 2.2 | 120 to 130 percent | Never | Size, weight; Naskh for captions |
+
+## 16. Licensing
+
+A font is licensed software; the EULA (end-user licence agreement) says who may use it, where and how much. The agency that ignores this is one client audit from a bill. Verify every figure below on the foundry's site before quoting a client: licensing pages change yearly, and the foundry pages for Klim, Dinamo, Grilli Type, Commercial Type and Pangram Pangram could not be re-read for this file in October 2026, so their lines carry what the house last confirmed.
+
+### 16.1 Licence types
+
+| Licence | Measured by | Covers | Does not cover |
+|---|---|---|---|
+| Desktop | Users or computers (1, 3, 5, 10 seats) | Installing the font, print, PDFs, images, logos and static social posts; usually video rendered from the desktop application | Serving it to a browser, embedding in an app, server-side rendering |
+| Web | Monthly pageviews across the licensee's domains, or a count of domains | `@font-face` on the named domains; often email marketing | A different company's site, including the agency's own showcase of the client's site |
+| App | Number of apps, monthly active users, or downloads | Embedding in iOS, Android and desktop apps | Web views that load from a server (web licence) |
+| ePub and digital publication | Titles or issues | Embedding in ePub, PDF magazines, interactive publications | |
+| Broadcast and video | Productions, channels, or audience size | Titles and graphics on television and streaming; some foundries fold social video into desktop and charge broadcast only for TV | |
+| Server and SaaS | Servers or documents generated | Automated document generation, personalisation engines, print-on-demand | |
+| OEM and hardware | Units | Fonts shipped inside devices and software | |
+| Logo and trademark | Sometimes a separate line or a clause | Using the font in a registered mark; some EULAs require a logo licence or forbid registration of a wordmark that is just the font | Modifying the font's own glyphs (section 16.5) |
+| Trial and test | Time or purpose | Pitch and mock-up work internally; some permit showing a client, some forbid any external use | Any shipped deliverable |
+
+### 16.2 Foundry patterns
+
+- Klim Type Foundry: separate EULAs per format (desktop by users, web by total monthly pageviews across all the licensee's domains, app by monthly active users or downloads, the app terms changed on 29 April 2019; the EULAs date from 2012 with a November 2016 revision). Klim's desktop licence has been read by the house as permitting logo creation; confirm the current wording before a client wordmark. The house has not found trial fonts on Klim's site; plan for a paid licence before a pitch in Söhne or Tiempos.
+- Dinamo: licences priced by the size of the licensee (a company-size tier covering desktop, web and app together under the Dinamo licence), free trial fonts after registration, and Font Gauntlet for testing. Verify the current tiers.
+- Grilli Type: moved from per-format licensing to a model priced by company size that covers desktop, web and app in one; free trial fonts. Verify.
+- Commercial Type: separate desktop, web (by monthly pageviews), app, broadcast and ePub licences, with broadcast and large-scale uses quoted; free trial fonts for test setting. Verify.
+- Pangram Pangram: free downloads for personal, non-commercial use after registration (the reason the faces are everywhere in student work), with paid commercial licences per use (desktop, web, app, social media, logo) priced by the licensee's size. Verify.
+- Fontshare (Indian Type Foundry): the ITF Free Font License allows personal and commercial use, including logos, web and apps, with downloads for self-hosting; redistribution, resale and modification of the files are prohibited. Read the licence at fontshare.com before promising a client a free identity face; the no-modification clause matters for subsetting (section 16.5).
+- Google Fonts: almost all families under the SIL Open Font License 1.1 (26 February 2007): any use, embedding and bundling permitted, the font may not be sold by itself, a modified version may not use the Reserved Font Name without permission, and documents made with the font are unaffected. A few are Apache 2.0 (Roboto) or the Ubuntu Font Licence. Self-hosting OFL fonts is fully permitted; subsetting creates a derivative that must drop the Reserved Font Name if redistributed, which an internal web build does not do.
+- Adobe Fonts: included with a Creative Cloud subscription; permits desktop use, print, logos, and web use through Adobe's web projects on domains tied to the account; font files may not be handed to clients or embedded in apps; use ends when the subscription ends. Right for internal decks and print where the house already pays; wrong for a client site the client must own.
+- Monotype: enterprise agreements and the Monotype Fonts subscription for large brands; Helvetica, Frutiger, Gotham (via Hoefler&Co, acquired 2021) and the Arabic programme sit here.
+
+### 16.3 Agency versus client ownership
+
+The licence belongs to the named licensee and does not transfer. Rules the house follows:
+
+1. The client buys the licence for their identity face in their own name, or the agency buys it as agent in the client's name with the invoice addressed to them. The agency's seats cover the agency's design work only.
+2. The web licence sits on the client's domain and in the client's account; the agency's showcase of the work uses images, never the live font.
+3. The scope of work line lists font licences as a pass-through cost with the foundry's price, the metric (seats, pageviews) and the renewal basis; a web licence by pageviews needs an upgrade path written in.
+4. A font register per client: family, foundry, licence type, metric, invoice, date, EULA PDF. Audits from global brands and their procurement teams ask for it.
+5. Handover delivers the outlined wordmark (vectors are documents, permitted under every EULA read by the house) and the register, never the font files, unless the licence is the client's own.
+6. India and the UAE both protect font software under copyright (as a computer programme in India under the Copyright Act 1957 as amended; under the UAE's Federal Decree-Law 38 of 2021 on copyright); enforcement is rare locally, but the client's international licensors and partners enforce by contract.
+
+### 16.4 Trial licences
+
+Use trial fonts to set a pitch, test rendering and measure payload; convert before anything leaves the building if the trial forbids external use, and name the trial status on the pitch page where it permits it. Trial files often carry a reduced character set or a watermark, so never measure a trial's subset size as the production figure.
+
+### 16.5 What counts as a derivative
+
+- Modifying the font software (editing glyphs in Glyphs or FontLab and re-exporting, converting OTF to WOFF2 without a web licence, generating static instances from a variable file, subsetting) is a derivative work and prohibited by most commercial EULAs without written permission; OFL permits it with the name change rule.
+- Converting text to outlines in Illustrator and reworking the vectors into a wordmark produces artwork, which every EULA the house has read permits; some foundries ask that the result not be used to recreate a font, and some charge a logo licence for a registered mark.
+- Commissioning a custom cut or a modification from the foundry is the route for a luxury identity that needs a changed glyph; Klim, Dinamo, Commercial Type and Grilli Type all offer it, and the price starts in the low thousands of dollars for a single glyph set and rises to six figures for a bespoke family with exclusivity.
+
+## 17. Choosing and pairing
+
+### 17.1 The decision procedure
+
+Run it in this order; each step eliminates candidates, and the taste canon in design-taste, references/type.md, section 2 supplies the starting list.
+
+1. Voice: three adjectives from the brand platform (see 02 brand file), translated into letterform terms. "Assured, quiet, precise" points to a grotesk with low contrast and closed apertures or a transitional serif; "heritage, warm, hand-made" points to a garalde or a humanist sans with translation modulation (section 1.5).
+2. Era: which classification period (section 2.2) the brand's story belongs to, and whether the face should agree with it or cut against it (the design-taste tension rule).
+3. Medium set: print only, web and app, video, OOH, packaging. A face without a text optical size is out for a product UI; a face without a sturdy caption cut is out for packaging legal copy.
+4. Scripts: Devanagari, Arabic, Tamil, Bengali, Urdu beside Latin. Either the family carries them (section 15) or a matched companion exists; otherwise the face is out, whatever its beauty.
+5. Weights and styles: at least a light-or-regular, a bold and a true italic; small caps, tabular and old-style figures, fractions, the rupee and dirham, case-sensitive forms (section 8 and 18).
+6. Variable availability and file size against the budget of section 12.2.
+7. Licensing: who is the licensee, which licences, at what metric, at what cost over three years; foundry trial available for the pitch.
+8. Exclusivity: search Fonts In Use and the category's competitors; a face the main competitor owns is out, and a face that three luxury hotel groups use is tired.
+9. Rendering: set the client's real headline, a price line, a date and a name with diacritics at 11px and 120px on a 1x Windows screen and on an iPhone.
+
+### 17.2 Superfamilies and the one-family rule
+
+A superfamily is one design idea cut across structures: sans, serif, mono, condensed, and in the best cases scripts (IBM Plex: Sans, Serif, Mono, Sans Arabic, Sans Devanagari, Sans Hebrew; Söhne with Söhne Breit, Schmal and Mono; Untitled Sans and Untitled Serif; ABC Diatype with Diatype Mono; Graphik with Graphik Arabic; Noto across everything, as a fallback). Reason to choose one: the shared skeleton guarantees agreement of proportion, so two voices (text and quote, Latin and Arabic) read as one brand. The house rule is one family per build; the second voice comes from an optical size, a width or a weight inside the family, which is the pairing design-taste calls the most expensive of all. Two families are right when the content has two authors (an editorial brand with a commissioned voice and a house voice), when a script companion is a different family by necessity, or when the identity's idea is the collision (a didone against a mono in a jewellery brand that sells engineering). Three is a defect.
+
+### 17.3 Pairing mechanics
+
+Pair by contrast of structure and agreement of proportion. Contrast: a monoline grotesk against a high-contrast serif, a geometric against a calligraphic, a wide against a narrow. Agreement: x-heights within about 5 percent of each other at the same size, cap heights within 5 percent, stem weights that look equal when the two sit on one line, similar apertures (both open or both closed), and the same modulation system (section 1.5) if either has contrast. Test by setting a line in each at 16px with a word of the other inside it; if one looks bigger, resize until equal and record the ratio as the pairing's size offset. Pairs that pass are listed in design-taste, references/type.md, section 3; this test is how new ones get added.
+
+## 18. Reading a specimen and evaluating a foundry
+
+### 18.1 What a specimen must show
+
+A specimen is the foundry's own demonstration of a face. Read it for evidence, since every specimen is set at its most flattering size.
+
+| Check | Where to look | Fail signal |
+|---|---|---|
+| Character set and languages | The glyph map or language list; count Latin-extended, Vietnamese, Cyrillic, Greek, and the scripts you need | "Latin" without a list; no language list at all |
+| Figures | Lining, old-style, tabular, proportional; the rupee and dirham; currency and maths symbols | One figure style only; no tabular set |
+| Small caps | Real `smcp` and `c2sc`; compare stem weight with the lowercase | Missing, or present only in some weights |
+| Italics | True italic with changed construction (single-storey a, cursive e) versus a sloped roman | A sloped roman sold as italic in a serif |
+| Optical sizes | Named cuts or an opsz range; look for a text sample at 9 to 12px | Display-only family offered for everything |
+| Weights | Count and spacing of the range; a 300 and a 700 that work at 16px | Six weights that are five sizes of one drawing |
+| OpenType features | The feature list: liga, dlig, calt, case, frac, ordn, ss01 onward, locl | No `case`; no `locl` in a family claiming many languages |
+| Kerning | A line of difficult pairs: AV, Ta, Yo, f), r., 7, quotation marks around W | Gaps in the foundry's own setting |
+| Variable file | Axes and ranges; named instances; `STAT` sanity | Weight axis only, named instances missing |
+| Vertical metrics | Ascender and descender values; consistent across weights | Weights that sit on different baselines in a browser |
+| Licensing | The metrics and prices on the page | Prices on request only |
+| The foundry | Catalogue depth, revision history, who drew it, support channel | A one-face shop with no updates since release |
+
+Designer credit matters beyond manners: a face by a named designer at a foundry with a revision history (Klim's changelogs, Commercial Type's version notes) will be fixed when a Devanagari conjunct breaks; a marketplace upload will not.
+
+### 18.2 The 30-minute test
+
+1. Minutes 0 to 5: drop the trial file into Wakamai Fondue; read the glyph count, axes, features, file size, vertical metrics.
+2. 5 to 12: in Figma or a browser, set the client's real headline at 120px with -0.02em, a lede at 24px, body at 16px and 300 weight, a caption at 12px with +0.02em, and a table of prices with `tnum`. Screenshot.
+3. 12 to 17: set the same on a 1x Windows machine; compare stems and counters at 16px and 12px.
+4. 17 to 22: set a bilingual line (Latin plus the client's script) and a price in rupees and dirhams; check the rupee and dirham glyphs, the matched weights, the leading.
+5. 22 to 27: set a paragraph with hyphenation and `text-wrap: pretty`; count the rag faults; set the ligatures and the quotation marks; check `case` on an all-caps label.
+6. 27 to 30: read the EULA metrics and price the three-year cost for the client's seats, pageviews and app. Decide.
+
+## 19. Tools
+
+| Tool | Maker | What it is for | Notes, as of October 2026 |
+|---|---|---|---|
+| Glyphs | Georg Seifert, Rainer Erich Scheichelbauer | Type design and font production on macOS; the industry default for Latin and Indic design | Glyphs 4.0 was released on 27 July 2026 according to the version history the house read; confirm on glyphsapp.com |
+| FontLab | Fontlab Ltd | Type design and production on macOS and Windows; the Windows option | FontLab 8 shipped in 2022 |
+| FontForge | Open source | Free font editor and format converter | Rough interface; right for inspection and conversion |
+| RoboFont | Frederik Berlaen | Python-scriptable font editor used in production foundries | |
+| Wakamai Fondue | Roel Nieskens | Drag a font into the browser and read its axes, features, glyph count, metrics, file size | First step of section 18.2 |
+| Samsa | Laurence Penney | Variable font inspector with axis sliders and table views | |
+| Font Gauntlet | Dinamo | Browser tester for variable fonts and animation | |
+| fontTools and pyftsubset | Open source (Python) | Subsetting, instancing, inspection | Section 12.2 |
+| glyphhanger | Zach Leatherman | Spider a site and subset to the characters used | |
+| ttfautohint | FreeType project | Add hints to unhinted web fonts for Windows 1x | Section 11.2 |
+| Capsize, Fontaine, Fallback Font Generator | Seek; Nuxt team; Brian Louis Ramirez | Metric-matched fallback declarations | Section 12.6 |
+| Utopia | James Gilyead and Trys Mudford, Clearleft | Fluid type and space calculators; defaults 360 to 1240px viewports, 18 to 20px base, ratios 1.2 to 1.25 | Section 7.2 |
+| Typescale | typescale.com | Modular scale preview in the browser | Section 7.1 |
+| Fontjoy | Jack Qiao | Machine-generated pairing suggestions | A source of candidates to test with section 17.3, never a decision |
+| Fonts In Use | Nick Sherman, Stephen Coles, Sam Berlow | Archive of real-world uses by face, industry and format | Exclusivity check in section 17.1 |
+| Modern Font Stacks | Dan Klammer | System stacks by classification | Section 12.8 |
+| Figma type panel | Figma | Variable axes, OpenType features under Details, Vertical trim, text styles bound to Variables | Vertical trim equals `text-box: trim-both cap alphabetic` (section 5.4) |
+| InDesign styles | Adobe | Paragraph and character styles, nested styles, GREP styles, Keep Options, Justification and Hyphenation dialogs, Balance Ragged Lines, Optical Margin Alignment (Story panel), World-Ready Paragraph Composer for Indic and Arabic | GREP styles the house keeps: `\d+` to a tabular-figures character style; `(?<=\s)\S+\s\S+$` to a no-break style to kill runts; `\b[A-Z]{2,}\b` to a tracked small-caps style; `[₹$€£]\d` to the figure style |
+| After Effects Character panel | Adobe | Kerning, tracking, Tsume, text animators | Section 13.1 |
+
+## 20. Reference table of recommended values
+
+House values, as of October 2026, with the sections that give the reasons. Sizes in px unless marked pt. Tracking in em. Leading as a ratio. Measure in characters per line.
+
+| Context | Size | Leading | Tracking | Measure | Weight | Figures and features | Section |
+|---|---|---|---|---|---|---|---|
+| Body, web | 16 to 18 | 1.5 to 1.6 | 0 | 55 to 70 (max-width 65ch) | 300 at 16px and up, 400 below | onum pnum in prose, liga on, hyphens auto | 5, 6, 7.3 |
+| Body, print | 9 to 10.5pt | 1.3 to 1.5 (1.5 to 1.7 for luxury) | 0 | 55 to 70 | Regular; one step lighter on uncoated | onum, smcp for abbreviations | 14 |
+| Lede and standfirst | 20 to 28 | 1.35 to 1.45 | 0 to -0.005 | 60 to 75 | 300 or 400 | | 7.3 |
+| Caption | 12 to 14 web; 6.5 to 8pt print | 1.35 to 1.45 | +0.01 to +0.02 | 35 to 50 | 400 | lnum tnum for product codes | 4.3, 14.2 |
+| Display, web | 56 to 160 | 0.95 to 1.05 | -0.02 to -0.04 | 3 to 8 words a line | 700 (house) | case for caps, dlig once if the face earns it, text-wrap balance | 4.3, 5.1, 7 |
+| Display, print | 36 to 200pt | 0.9 to 1.0 | -0.02 to -0.04 | 3 to 6 words | Display cut | Hand kerning on every line | 3, 14 |
+| UI label and micro caps | 11 to 13 | 1.3 to 1.4 | +0.08 to +0.14 in caps; +0.01 in lowercase | Short | 400 (house micro caps) | case, smcp or uppercase; never below 11px | 4.3, 11.5 |
+| Button | 14 to 16 | 1.0 with text-box trim | 0 (lowercase) or +0.06 (caps) | One to three words | 500 (the only medium use) | Sentence case preferred | 5.4, 7.4 |
+| Table and price list | 14 to 16 | 1.4 | 0 | | 400; 500 for totals | tnum lnum mandatory; minus sign U+2212; figure space for alignment | 8.5, 8.8 |
+| Deck, 1920 by 1080 | Body 24 to 28; headings 48 to 96; caption 18 | 1.3 body, 1.0 to 1.1 headings | Display -0.02 | 45 to 60 | House 300 body, 700 heads | Tabular figures in every chart | 7 |
+| Email | 16 to 18 | 1.5 | 0 | 50 to 65 | 400 | System stack with brand face first | 12.8 |
+| Video title, 16:9 at 1080p | 72 and up | 0.95 to 1.05 | -0.02 | 3 to 6 words | 500 and up | Hold 1.5s plus 0.3s per word over three | 13.3, 13.4 |
+| Video caption and lower third, 1080p | Name 36 to 44; subtitle 40px cap height | 1.1 to 1.2 | 0 | 42 characters per line, 2 lines | 400 and up | 20 characters per second ceiling | 13.3, 13.4 |
+| Vertical social, 1080 by 1920 | Captions 48 and up; headline 96 to 160 | 1.0 to 1.1 | -0.01 | 4 to 6 words a line | 500 and up | Inside the platform safe zone | 13.2 |
+| OOH poster and hoarding | Cap height about 25mm per 3m of viewing distance for comfortable reading, about 25mm per 7.5m at the limit (signage rule of thumb; test on site) | 0.9 to 1.0 | -0.02 to -0.03 | 3 to 7 words total | 500 and up | No hairlines; one message | 13.3, 20-print.md |
+| Devanagari body | 110 to 115 percent of the Latin size | 1.6 to 1.8 | 0 | 50 to 65 | Match the Latin stem weight by eye; nominal weights differ | locl for Marathi | 15.1 |
+| Arabic body | 105 to 110 percent of the Latin size | 1.6 to 1.8 | 0 | 50 to 65 | One nominal weight lighter than the Latin, judged by eye | Western or Eastern digits per market; ragged on web | 15.2 |
+| Urdu Nastaliq body | 120 to 130 percent | 2.0 to 2.2 | Never | 40 to 55 | Regular and bold only | Naskh for captions | 15.4 |
+
+## Terms introduced
+
+- Action safe: the centred 93 percent rectangle of a video frame (SMPTE ST 2046-1) inside which action must stay.
+- Antialiasing (greyscale, subpixel): shading edge pixels by coverage; subpixel uses the RGB stripes for triple horizontal resolution.
+- Aperture: the opening of a partly closed counter (c, e, a, s).
+- Apex and vertex: the top and bottom points where two diagonals meet.
+- Arm and leg: a horizontal or rising stroke attached at one end; a falling diagonal attached at one end.
+- Ascender and descender: the parts of lowercase letters above x-height and below the baseline.
+- Axis (stress): the angle of the thinnest points of a round letter; oblique in humanist faces, vertical in didones.
+- Axis (variable font): a named dimension of a variable font's design space (wght, wdth, opsz, slnt, ital, GRAD).
+- Ball, teardrop, beak, flag, finial, sheared terminal: shapes of a stroke's end that carries no serif.
+- Baseline: the line on which letters without descenders sit.
+- Baseline grid: fixed horizontal lines at the body leading to which baselines snap.
+- Bidi (bidirectional algorithm): the Unicode rules that order mixed left-to-right and right-to-left text; controlled in CSS by `direction` and `unicode-bidi`.
+- Blue zones: alignment zones in PostScript hinting where overshoots are suppressed at small sizes.
+- Bowl, counter, eye: a closed curved stroke; the white it encloses; the counter of e.
+- Bracketed and unbracketed serif: a serif joined to the stem by a curve, or meeting it at an angle.
+- Cap height: the height of flat-topped capitals.
+- Case-sensitive forms (`case`): punctuation and figures raised to centre on capitals.
+- ch unit: the advance width of the digit 0 in the current font; used for measure.
+- Class kerning: kerning stored by groups of similar shapes rather than by individual pairs.
+- Conjunct, half form, halant (virama): a fused consonant cluster in Indic scripts; a consonant without its stem; the mark that kills the inherent vowel.
+- Contrast (stroke): the ratio of thickest to thinnest stroke in a face.
+- Crossbar, crotch, joint, spur: a horizontal joining stroke; the inside angle of two strokes; where strokes meet; a small projection.
+- Derivative (font): a modified copy of the font software; permitted by OFL with a name change, prohibited by most commercial EULAs.
+- Didot point: 0.376mm, the older European point; the PostScript point is 0.3528mm.
+- Dynamic Type: Apple's per-style text scaling controlled by the user.
+- Ear, link, loop: parts of the binocular g.
+- EULA: end-user licence agreement, the contract that governs a font's use.
+- Figures (lining, old-style, tabular, proportional): cap-height uniform digits; x-height digits with extenders; equal-width digits; digits with individual widths.
+- Fitting and sidebearings: the designer's spacing of a face through the white on each side of every glyph.
+- FOIT, FOUT, FOFT: flash of invisible, unstyled, or faux text while a web font loads.
+- font-display: the `@font-face` descriptor setting the block and swap periods during loading.
+- Font Loading API: the JavaScript interface (`document.fonts`) for loading and observing fonts.
+- Fluid type: sizes interpolated between viewport widths with `clamp()`.
+- Grade (GRAD): a variable axis that changes stroke weight without changing advance widths.
+- GSUB and GPOS: the OpenType substitution and positioning tables that carry features and kerning.
+- Half-leading: the CSS model that splits line-height minus content height above and below the text.
+- Hanging punctuation and optical margin alignment: pushing marks into the margin so the text edge looks straight.
+- HarfBuzz: the open-source shaping engine inside Chrome, Firefox and Android.
+- Hinting: font instructions that fit outlines to the pixel grid at small sizes.
+- H&J: hyphenation and justification settings (word space, letter space, glyph scaling limits).
+- Hyphenation zone: the band at the right margin within which ragged text may hyphenate.
+- Ink spread (tone value increase, dot gain): the thickening of printed strokes as ink wicks into paper.
+- Ink trap: a notch at a junction that ink spread fills rather than clogging.
+- Kashida (tatweel): the elongation stroke in Arabic used for justification and emphasis.
+- Kerning (metric, optical): pair spacing from the font's tables; pair spacing computed from shapes.
+- Kufi, Naskh, Nastaliq, Thuluth, Diwani, Ruqah: Arabic-script styles, from geometric display to hanging Urdu text.
+- Leading: baseline-to-baseline distance, as a ratio or in points.
+- Ligature (standard, discretionary, contextual, historical): glyphs that replace letter sequences, by default, by choice, by context, or for antiquarian setting.
+- Localised forms (`locl`): language-specific glyph shapes switched by the language tag.
+- Matra: a vowel sign in Devanagari and related scripts, placed above, below or beside the consonant.
+- Measure: line length in characters.
+- Modular scale: a size sequence built by a fixed ratio.
+- Modulation (translation, expansion): how stroke thickness varies, by broad-nib angle or by pointed-pen pressure.
+- Named instance: a stored axis position with a style name inside a variable font.
+- Nukta: the subscript dot in Devanagari and Urdu-derived letters.
+- Optical compensation: adjustments (overshoot, thinning at joins, raised centres) that make equal-measuring shapes look equal.
+- Optical size and opsz: a cut drawn for a size range; the variable axis that carries it.
+- Orphan, widow, runt: a first line stranded at a column foot; a last line stranded at a column head; a last line of one word.
+- Overshoot: the extension of rounds and points past the guide lines.
+- Point and pica: 1/72 inch; 12 points.
+- Preload and preconnect: early fetch of a named resource; early connection to a host.
+- Prime: the mark for feet, inches, minutes and seconds (U+2032, U+2033).
+- Rag: the shape of the uneven edge of ranged text.
+- Reserved Font Name: a name an OFL font's author protects from use by modified versions.
+- Reversed (knocked-out) type: light type printed by leaving paper unprinted inside a solid.
+- River: a channel of white running down justified text.
+- Safe zone (social): the bands of a vertical video frame covered by the platform's interface.
+- Scrim: a gradient darkening placed behind type over footage.
+- Serif types (hairline, slab, wedge, flared or glyphic): the family of serif constructions.
+- Shaping: converting codepoints into positioned glyphs, including joining and reordering.
+- Shirorekha: the Devanagari headline from which letters hang.
+- Shoulder, spine, stem, tail: the arch leaving a stem; the curve of S; the main stroke; a descending finishing stroke.
+- size-adjust, ascent-override, descent-override, line-gap-override: `@font-face` descriptors that fit a fallback's metrics to the web font's.
+- Small caps (real, faux, petite): drawn capitals at about x-height; scaled capitals; capitals at exactly x-height.
+- sp and dp: Android scale-independent and density-independent pixels; sp follows the user's font scale.
+- Specimen: a foundry's demonstration document for a face.
+- STAT, fvar, gvar, avar: OpenType tables for style attributes, axes and instances, outline deltas, axis mapping.
+- Stylistic set and character variant (`ss01`, `cv01`): named alternate glyph groups and single-glyph alternates.
+- Subsetting and unicode-range: removing unused glyphs; declaring which codepoints a font file covers.
+- Superfamily: one design cut across sans, serif, mono, widths and scripts.
+- Swash: a flourished alternate form.
+- System font stack: a `font-family` list that resolves to each platform's own interface face.
+- text-box-trim and text-box-edge: CSS that removes half-leading and internal space above cap height and below baseline.
+- text-wrap balance and pretty: browser line breaking that equalises short blocks and improves paragraph rags.
+- Title safe: the centred 90 percent rectangle of a video frame (SMPTE ST 2046-1) inside which text must stay.
+- Tracking: uniform added or removed space across a run (`letter-spacing`).
+- Trial font: a foundry file licensed for testing and pitching only.
+- Tsume: proportional reduction of each glyph's sidebearings in Adobe applications.
+- UPM (units per em): the grid a font's em is divided into, 1000 or 2048.
+- Variable font: one OpenType file carrying a design space of axes between masters.
+- Vox-ATypI: the 1954 classification adopted by ATypI in 1962 and de-adopted in 2021.
+- WOFF2: the W3C web font container using Brotli compression.
+- World-Ready Paragraph Composer: InDesign's composer for Arabic, Hebrew and Indic text.
+- X-height: the height of the lowercase x.
+
+## Sources and further reading
+
+Books
+- Robert Bringhurst, The Elements of Typographic Style, 1992; 4th edition 2012.
+- Gerrit Noordzij, The Stroke: Theory of Writing, 1985; English edition 2005.
+- Karen Cheng, Designing Type, 2005; 2nd edition 2020.
+- Jost Hochuli, Detail in Typography, 1987; English edition 2008.
+- Erik Spiekermann, Stop Stealing Sheep and Find Out How Type Works, 1993; 3rd edition 2014.
+- Fiona Ross, The Printed Bengali Character and Its Evolution, 1999.
+- Huda Smitshuijzen AbiFarès, Arabic Typography: A Comprehensive Sourcebook, 2001.
+- Tim Ahrens and Shoko Mugikura, Size-specific Adjustments to Type Designs, 2014.
+- Richard Rutter, Web Typography, 2017.
+
+Specifications and standards
+- OpenType specification 1.9, Microsoft, https://learn.microsoft.com/typography/opentype/spec/
+- WOFF File Format 2.0, W3C Recommendation, 8 August 2024, https://www.w3.org/TR/WOFF2/
+- CSS Fonts Module Level 4, W3C, https://www.w3.org/TR/css-fonts-4/
+- CSS Inline Layout Module Level 3 (text-box-trim, text-box-edge), W3C, https://www.w3.org/TR/css-inline-3/
+- CSS Text Module Level 4 (text-wrap, hyphenate-limit-chars, hanging-punctuation, text-justify), W3C, https://www.w3.org/TR/css-text-4/
+- SMPTE ST 2046-1:2009, Safe Area and Safe Title Area Test Pattern for Television Systems, https://pub.smpte.org/doc/st2046-1/
+- ISO 12647-2:2013, Process control for the production of half-tone colour separations, proof and production prints, Part 2: Offset lithographic processes.
+- SIL Open Font License 1.1, 26 February 2007, https://openfontlicense.org/open-font-license-official-text/
+- Unicode 18.0 (UAE DIRHAM SIGN U+20C3), Unicode Consortium, https://www.unicode.org/versions/Unicode18.0.0/
+- WCAG 2.2, W3C Recommendation, 2023, https://www.w3.org/TR/WCAG22/
+- Apple Human Interface Guidelines, Typography, https://developer.apple.com/design/human-interface-guidelines/typography
+- Material Design 3, Typography, https://m3.material.io/styles/typography/overview
+- Netflix Timed Text Style Guide: General Requirements and English Timed Text Style Guide, https://partnerhelp.netflixstudios.com/
+- Meta, Instagram Reels ad specifications, https://www.facebook.com/business/ads-guide/update/video/instagram-reels
+- Landgericht München I, judgment of 20 January 2022, 3 O 17493/20 (Google Fonts and the GDPR).
+
+Articles, documentation and talks
+- Tim Brown, "More Meaningful Typography", A List Apart, 2011, https://alistapart.com/article/more-meaningful-typography/
+- James Gilyead and Trys Mudford, Utopia, https://utopia.fyi/
+- Chrome for Developers, "CSS text-box-trim", https://developer.chrome.com/blog/css-text-box-trim
+- web.dev, "New to the web platform in August 2026", https://web.dev/blog/web-platform-08-2026
+- web.dev, "CSS size-adjust for @font-face", https://web.dev/articles/css-size-adjust
+- MDN Web Docs, text-wrap, hyphenate-limit-chars, hanging-punctuation, text-justify, size-adjust, font-feature-settings, https://developer.mozilla.org/en-US/docs/Web/CSS/
+- HTTP Archive, Web Almanac 2024, Fonts chapter, https://almanac.httparchive.org/en/2024/fonts
+- Alphabettes, "Devanagari Typography 101: A guide for typesetting with Latin", https://www.alphabettes.org/devanagari-typography-101-a-guide-for-typesetting-with-latin/
+- Klim Type Foundry, "Changes to App Font licensing and pricing", 2019, https://klim.co.nz/blog/klim-type-foundry-end-user-licence-agreements/
+- Michael Tsai, "macOS 10.14 Mojave Removes Subpixel Anti-aliasing", 2018, https://mjtsai.com/blog/2018/06/09/macos-10-14-mojave-removes-subpixel-anti-aliasing/
+- Chromium blink-dev, "Intent to Prototype: CSS kashida justification", https://groups.google.com/a/chromium.org/g/blink-dev/c/WtV5cKOvhhc
+- Roel Nieskens, Wakamai Fondue, https://wakamaifondue.com/
+- Zach Leatherman, glyphhanger and "A Comprehensive Guide to Font Loading Strategies", https://www.zachleat.com/web/comprehensive-webfonts/
+- Dan Klammer, Modern Font Stacks, https://modernfontstacks.com/
+- Fonts In Use, https://fontsinuse.com/
+- Google Fonts Knowledge, https://fonts.google.com/knowledge
+- Wikipedia, Vox-ATypI classification; Emirati dirham sign; Indian rupee sign (for the dates cited in sections 2 and 8).

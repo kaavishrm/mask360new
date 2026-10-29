@@ -30,7 +30,7 @@ A web page is rendered by a device the designer has never seen, at a width that 
 
 Three working consequences:
 
-- Fixed pixel layouts break on the first device the designer did not test. Fluid units (percent, vw, rem, fr, cqi) and the clamp() function (section 2.9) replace them.
+- Fixed pixel layouts break on the first device the designer did not test. Fluid units (percent, vw, rem, fr, cqi) and the clamp() function (section 2.8) replace them.
 - Content must survive without any single enhancement: a font that fails to load, a script that is blocked, an image that is slow. This is progressive enhancement: build the HTML so the page works with nothing else, then layer CSS, then JavaScript (Steven Champeon coined the term in 2003).
 - Mobile first (Luke Wroblewski, 2009 essay and 2011 book) means the default CSS is the narrow layout and media queries add complexity as width grows. The reason is arithmetic: in India, Android is 93.89 percent of mobile OS share and iOS 6.05 percent (StatCounter, September 2026); in the UAE, Android is 73.3 percent and iOS 26.68 percent. A luxury audience in Dubai is heavily iPhone; a luxury audience in Mumbai is still mostly Android. Both are phones first.
 
@@ -196,13 +196,13 @@ Section 2.8 gives the Utopia derivation. A house scale, written as clamp() value
 
 | Token | Min (360px) | Max (1440px) | clamp() | Role |
 |---|---|---|---|---|
-| --display | 44px | 160px | clamp(2.75rem, -0.9028rem + 10.7407vw, 10rem) | h1 at 700, leading 0.95, tracking -3 percent; the design-taste "huge against tiny" |
-| --h2 | 32px | 72px | clamp(2rem, 0.75rem + 3.7037vw, 4.5rem) | Section heads at 600, leading 1.0 |
+| --display | 44px | 160px | clamp(2.75rem, 0.3333rem + 10.7407vw, 10rem) | h1 at 700, leading 0.95, tracking -3 percent; the design-taste "huge against tiny" |
+| --h2 | 32px | 72px | clamp(2rem, 1.1667rem + 3.7037vw, 4.5rem) | Section heads at 600, leading 1.0 |
 | --lede | 20px | 28px | clamp(1.25rem, 1.0833rem + 0.7407vw, 1.75rem) | Opening paragraphs at 300, leading 1.3 |
 | --body | 17px | 19px | clamp(1.0625rem, 1.0208rem + 0.1852vw, 1.1875rem) | Body at 300, leading 1.5 |
 | --micro | 11px | 11px | 0.6875rem | Fixed; caps labels at 400 with +12 percent tracking do not scale |
 
-Formula per row: slope = (max - min) / (1440 - 360) = (max - min) / 1080; intercept = min - slope x 360; the clamp middle is intercept in rem plus slope x 100 in vw. Check the display row: slope = 116 / 1080 = 0.10741; intercept = 44 - 38.67 = 5.33px... the sign shows why the display row has a negative rem intercept: a range this steep crosses zero below 360px, which is fine because clamp() floors it at 2.75rem. Fluid type is set on the html element with a base of 100 percent so that a user's browser font size preference still scales everything; setting html { font-size: 62.5% } to make 1rem equal 10px defeats that preference and is a defect.
+Formula per row: slope = (max - min) / (1440 - 360) = (max - min) / 1080; intercept = min - slope x 360; the clamp middle is intercept in rem plus slope x 100 in vw. Check the display row: slope = 116 / 1080 = 0.10741; intercept = 44 - 0.10741 x 360 = 44 - 38.67 = 5.33px = 0.3333rem; at 360px the middle term gives 5.33 + 38.67 = 44px and at 1440px it gives 5.33 + 154.67 = 160px, so the floor and ceiling only act outside that range. A steeper range can produce a negative intercept; that is fine, because clamp() floors the result at the minimum. Fluid type is set on the html element with a base of 100 percent so that a user's browser font size preference still scales everything; setting html { font-size: 62.5% } to make 1rem equal 10px defeats that preference and is a defect.
 
 ### 3.4 Line length, rag, hyphens, kerning, optical size
 
@@ -339,7 +339,7 @@ House budgets by page type, first view, compressed over the wire:
 
 | Page type | Total | JavaScript | Fonts | Hero media | Images in first viewport | Notes |
 |---|---|---|---|---|---|---|
-| Scroll-narrative microsite | 1.5MB | 150KB | 120KB | 200KB poster plus a loop under 2.5MB that loads after LCP | 400KB | Lenis plus GSAP plus ScrollTrigger is about 70KB gzipped; that is half the JS budget before a line of site code |
+| Scroll-narrative microsite | 1.5MB | 150KB | 120KB | 200KB poster plus a loop under 2.5MB that loads after LCP | 400KB | GSAP core, ScrollTrigger and Lenis together are about 40 to 50KB gzipped (check bundlephobia for the current builds); that is a third of the JS budget before a line of site code |
 | Brand or hospitality site | 1.2MB | 120KB | 120KB | 200KB | 400KB | Framework hydration counts against JS |
 | Shopify PLP | 1.0MB | 250KB | 80KB | none | 300KB | Theme JS plus apps; audit every app script |
 | Shopify PDP | 1.2MB | 250KB | 80KB | 200KB first gallery image | 400KB | Zoom images load on demand |
@@ -369,3 +369,749 @@ Heavy and slow reads cheap on a phone. The design-taste physics of expensive (sp
 - Preloading: the LCP image, the one or two critical fonts, nothing else; modulepreload for the first script chunk. Over-preloading starves the critical path.
 - Code splitting: ship the JavaScript for the first viewport and lazy-load the rest on interaction or intersection; a product configurator's 400KB bundle loads when the configurator scrolls into view.
 - Hydration cost: a framework that server-renders HTML and then re-runs the component tree in the browser to attach event handlers (React, Vue, Svelte in SSR mode) spends main-thread time proportional to the component count before anything is interactive; on a mid-range Android that is 500ms to 2s of blocked thread and a direct INP failure. Islands architecture (Astro's model: the page is static HTML and only the interactive components ship JavaScript) and React Server Components (Next.js App Router: components that render on the server and send no JavaScript) are the two mainstream answers. A marketing site with three interactive elements has no reason to hydrate a whole page.
+
+## 6. Motion on the web
+
+Principles, easing curves, durations and choreography are in 12-motion-principles-and-ui-motion.md (sections 3 to 5); the delight budget and the practitioner principles of Rauno Freiberg and Emil Kowalski are in its section 6. This section is the web delivery layer: which tool produces which move, what each costs in bytes and main-thread time, and where the house draws the line.
+
+### 6.1 The stack and what each piece costs
+
+| Layer | What it does | Cost | Use it for |
+|---|---|---|---|
+| CSS transitions and keyframes | Property changes over time, on the compositor when limited to transform, opacity, clip-path and filter | 0KB | Hover states, reveals, underlines, everything simple |
+| Web Animations API | The same animations driven from JavaScript, with play, pause, reverse and timeline control | 0KB | Interruptible UI motion without a library |
+| Scroll-driven animations (CSS) | Animation progress bound to scroll or to an element's passage through the viewport, off the main thread | 0KB | Reveals, progress bars, parallax under 0.2 ratio, the sticky chapter header (section 2.9 for support) |
+| View Transitions | Crossfade or shared-element morph between DOM states or pages | 0KB | Grid to detail morph, page transitions on a multi-page site |
+| Lenis (darkroom.engineering, 1.3.26 at the time of writing) | Smooth scroll that interpolates the native scroll position with a lerp (linear interpolation) factor each frame, keeping position: sticky, anchors and accessibility intact | Under 10KB gzipped (verify the current build) | The weighted scroll feel of the Awwwards genre |
+| GSAP 3.15 and ScrollTrigger (GreenSock, owned by Webflow since autumn 2024; every plugin free for commercial use since 2025 per Webflow's announcement) | Timeline animation with scrubbing, pinning, snapping, SplitText line reveals | Core about 25KB gzipped, ScrollTrigger about 13KB, SplitText about 6KB (approximate; check bundlephobia) | The one peak sequence, pinned chapters, line-by-line type reveals |
+| Motion (motion.dev, Matt Perry; the library formerly named Framer Motion) | Declarative React animation with springs, layout animation and gestures | A few KB for the vanilla animate function; several times that for the full React package (check the published sizes) | React sites that need spring physics and layout animations |
+| three.js r186 (releases page, September 2026) with React Three Fiber | WebGL and WebGPU scenes, shader transitions | 150KB and up gzipped before the scene | Section 4.6; one peak, budgeted |
+| Lottie and Rive | Vector animation runtimes | 60KB and 100 to 150KB | Section 4.7 |
+
+The rule that falls out of the table: every move that CSS can make, CSS makes. A library is loaded for the one thing CSS cannot do on this page, and the budget in section 5.2 decides whether that thing survives.
+
+### 6.2 GSAP and ScrollTrigger in practice
+
+ScrollTrigger binds a timeline to a scroll range. Its four controls are start and end (where the range begins and ends, in the form "top 80%" meaning the element's top crossing 80 percent of the viewport), scrub (true for a hard bind, a number in seconds for a lagged bind), pin (fixes an element in place for the range) and snap (settles to the nearest step when scrolling stops). House settings: scrub between 0.6 and 1.2 seconds so the motion trails the thumb with weight; pins no longer than 300 percent of the viewport height, because a longer pin reads as a stuck page on a phone; snap only on sequences with discrete states (a numbered process, a lookbook); markers on in development and stripped in the build.
+
+Two failure modes to check in every build. First, ScrollTrigger measures positions once; when images load late and change heights, every trigger below is wrong. The fix is width and height on every image and aspect-ratio on every media box (section 4.1), so nothing moves after measurement, with ScrollTrigger.refresh() after fonts load as a belt and braces. Second, iOS Safari changes the viewport height as the address bar collapses, firing resize and refreshing triggers mid-scroll; the fix is ScrollTrigger.config({ ignoreMobileResize: true }) and dvh units.
+
+SplitText (free since 2025) splits a headline into lines, words or characters so each can be revealed. The luxury pattern is per line, with overflow: hidden on a wrapper and the line moving from 100 percent below to 0 over 1.1 to 1.4 seconds on an expo ease-out with a stagger of 0.06 to 0.1 seconds per line. Per character reveals read as a 2019 template effect (design-taste, references/currency-2026.md) and double the DOM for nothing.
+
+### 6.3 Lenis and the smooth scroll question
+
+Lenis does not hijack scroll. It reads the wheel and touch input, interpolates the scroll position with a lerp of 0.1 by default (the house uses 0.08 to 0.1 on desktop, which reads heavier), and writes the native scroll position, so sticky elements, anchor links, find in page and screen readers work. By default it leaves touch devices on native scroll (syncTouch false), which is correct: a phone's own scroll physics is the one the user trusts, and most of the India audience is on a phone. Limitations stated in its own documentation: CSS scroll-snap is unsupported (use lenis/snap), and smooth scroll stops over iframes because they swallow wheel events.
+
+The accessibility position: smooth scroll changes the speed the user chose, and a few users with vestibular conditions find it nauseating. The house ships Lenis behind @media (prefers-reduced-motion: no-preference), initialises it only on pointer: fine devices, and never couples it to a pinned section longer than 300vh. The contested question is whether to use it at all; Awwwards juries reward it, Nielsen Norman Group and most accessibility practitioners warn against any scroll interference, and the house follows the middle: on, light, and off for anyone who asked the OS for less motion.
+
+### 6.4 Native scroll-driven animations and View Transitions
+
+A scroll-driven animation in CSS replaces the JavaScript scroll loop for reveals:
+
+```css
+@supports (animation-timeline: view()) {
+  .reveal { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+```
+
+The animation runs on the compositor, so a phone that drops frames in a JavaScript scroll handler holds 60fps here. animation-timeline: scroll() binds to the scroll container itself (a reading progress bar); view() binds to the element's passage through the viewport; animation-range names the slice of that passage. The @supports wrapper leaves Firefox and older Safari with the static state, which is the correct fallback: the content is visible, only the motion is missing.
+
+View Transitions animate between two states. Same-document: document.startViewTransition(() => updateDOM()) snapshots the old state, applies the change, and crossfades over 250ms by default; elements given the same view-transition-name in both states morph position and size. Cross-document: @view-transition { navigation: auto; } in both pages turns a plain link click on a multi-page site into the same morph, which is how a Shopify collection image can grow into the product page gallery without a framework. House settings: 350 to 500ms, the house ease-out curve from 12-motion-principles-and-ui-motion.md section 3.5, and ::view-transition-group(*) { animation-duration: 0s } under prefers-reduced-motion.
+
+### 6.5 The Locomotive and Immersive Garden patterns, dissected
+
+Locomotive (Montreal, a digital-first design agency since 2008 by its own copyright line; author of the locomotive-scroll library, whose current major version is built on Lenis) and Immersive Garden (Paris) between them defined the scroll narrative genre that Awwwards rewards and that DESIGN.md names as the first reference for the house site. What each pattern is, what it costs, and the house take:
+
+| Pattern | Mechanics | Cost | House take |
+|---|---|---|---|
+| Weighted scroll | Lenis at lerp 0.08 to 0.1 | Under 10KB; input lag by design | Keep, desktop only, reduced-motion off |
+| Preloader counter | A full-screen scrim with a percentage that tracks real asset loading, then a curtain wipe | Delays LCP by the loader's duration | Only when it is the idea (DESIGN.md: the Fiber chrome); never longer than the real load; skipped on repeat visits via sessionStorage; never under reduced motion |
+| Line-masked type reveal | SplitText lines, translateY 100 percent to 0, expo out, 0.08s stagger | DOM doubles per headline | Keep for h1 and section heads only |
+| Image reveal | clip-path inset from 100 percent to 0, or scale 1.15 to 1 over 1.2 to 1.6s, once, on entry | Compositor only | Keep; this is the house "slow scale on a case hero" |
+| Parallax layers | Background at 0.1 to 0.2 of scroll speed, foreground at 1 | Compositor via scroll-driven animation; sickness risk above 0.3 | Keep under 0.2; one layer; off under reduced motion |
+| Pinned chapter | A section pins for 200 to 300vh while content inside scrubs | Breaks native scroll expectation on phones; keyboard users lose place | Desktop only; vertical stack on phones |
+| Horizontal gallery | A row pinned and translated along x by vertical scroll | Same, plus iOS resize jumps | Desktop only; swipe carousel with scroll-snap on phones |
+| WebGL image distortion | Each image drawn as a plane with a displacement or RGB-shift fragment shader driven by scroll velocity or hover | 150KB plus a continuous GPU draw; drains a phone | The peak only, desktop only, with a static fallback; never on the Shopify PLP |
+| Image sequence scrub | 100 to 150 frames painted to canvas by scroll progress | 5 to 15MB | One per site at most; WebP frames; video fallback on phones (section 4.6) |
+| Curtain page transition | A full-screen panel wipes in, the route changes, the panel wipes out | 600 to 900ms of blank screen per navigation | Replace with a cross-document View Transition; the curtain hides a slow route |
+| Custom cursor | A div following the pointer, often with mix-blend-mode: difference | A pointermove handler every frame; invisible to touch, which is most of the traffic; a 2019 to 2022 tell | Almost never; a "drag" label on a gallery under pointer: fine is the one exception |
+| Ambient audio toggle | A muted-by-default soundscape with a visible switch | Autoplay blocked everywhere; a loud surprise if it fires | Never on a client site; acceptable on a film microsite with explicit opt-in |
+
+What to borrow is the pacing: a long stillness between moves, type that arrives after the image, one peak at roughly 60 percent of the page, and an ending that resolves. What to refuse is the weight: the 2024 to 2026 SOTD median is well over 10MB and the house budget is 1.5MB (section 5.2).
+
+### 6.6 The one peak rule, loaders and cursors in one paragraph each
+
+One peak. A page earns one moment that could not have been done in CSS alone (12-motion-principles-and-ui-motion.md section 5.8, and design-taste section 5, motion). Everything else holds still or moves with opacity and a few pixels. Two peaks compete and both lose; the test is whether a viewer can name the one thing that moved.
+
+Loaders. A preloader is right only when it is the idea: when the counter, the mark or the curtain is a brand gesture the client will recognise as theirs. It is wrong as a mask for a slow page, and Deloitte Digital's 2020 study "Milliseconds Make Millions" measured the price: a 0.1 second improvement in mobile site speed lifted retail conversions by 8.4 percent and travel conversions by 10.1 percent. A loader that adds 2 seconds spends that twenty times over. Rules: it tracks real loading; it is capped at 1.5 seconds visible; it never fires on the second visit; the content under it is already painted so LCP is honest; it does not run for reduced-motion users.
+
+Cursors. A custom cursor is a desktop-only effect on sites whose audience is on phones, it costs a handler per frame, and it reads as 2021. The house does not ship one unless the cursor is the interaction (a drag hint on a desktop gallery), and even then only under @media (pointer: fine).
+
+### 6.7 The house motion specification for a web page
+
+| Element | Move | Duration | Ease | Trigger | Reduced motion |
+|---|---|---|---|---|---|
+| Hero loop | Video plays | Loop | none | Load, muted, playsinline | Poster only |
+| Case hero image | scale 1.06 to 1 | 1.2s | expo out | Load | None |
+| Headline lines | translateY 100% to 0 under a mask | 1.2s, stagger 0.08s | expo out | Entry at 20 percent | Opacity only, 300ms |
+| Images in flow | opacity 0 to 1, translateY 16px to 0 | 600ms | house ease-out | view() entry 0 to 60 percent | Opacity only |
+| Links | Underline draws from the start edge | 250ms | ease-out | Hover and focus | Keep |
+| Page change | Cross-document View Transition crossfade | 350ms | house ease-out | Navigation | 0s |
+| Everything else | Still | | | | |
+
+Hover effects on cards, fade-up on every section, parallax on everything and auto-advancing sliders are listed as cheap tells in design-taste section 3 and are not in this table for that reason.
+
+## 7. Frameworks and platforms
+
+### 7.1 The decision table
+
+| Need | Choice | Why |
+|---|---|---|
+| Agency site, microsite, deal sheet, under about 30 pages, no editor | The house static build (website/build.mjs: content.mjs to HTML, no framework, no dependencies) | Zero JavaScript by default, nothing to update, 100 on every Lighthouse category is the floor |
+| Brand or hospitality site with a CMS and editorial pages | Astro with Sanity | Islands ship JavaScript only where an island exists; content collections; the editor gets a real studio |
+| Client marketing site the client's team will edit visually | Framer | The 2024 to 2026 agency default; motion and CMS built in; no code handover needed |
+| Client site that needs custom code, a large CMS and an agency maintaining it | Webflow | Designer plus CMS plus hosting in one; GSAP native since the acquisition |
+| Commerce | Shopify (Liquid theme; Hydrogen only with a developer on retainer) | Checkout, payments, fraud, apps; section 8 |
+| App-like product, logged-in states, commerce front with custom routing | Next.js 16 | React Server Components, Cache Components, the Vercel Shop reference |
+| Motion-heavy microsite with state (a configurator, a game) | SvelteKit | Compiled output, small bundles, Svelte 5 runes for state |
+| The team is Vue | Nuxt 4 | Same islands and server rendering story in Vue |
+| Form-heavy or data-heavy app | React Router 7 (the Remix project merged into it in November 2024) | Loaders and actions model the request and response directly |
+| Client insists on WordPress | WordPress 7.1 (19 August 2026) as a headless source, Astro or Next in front; or a lean block theme | Section 7.5 |
+| Squarespace, Wix | No | Section 7.7 |
+
+### 7.2 Code frameworks, October 2026
+
+- Next.js 16 shipped 21 October 2025 with stable Turbopack, Cache Components and React Compiler support; 16.2 (18 March 2026) made the Adapter API stable so a Next.js site deploys to Netlify, Cloudflare and AWS through OpenNext without Vercel; 16.3 (3 August 2026) added Instant Navigations; 16.4 (6 October 2026) added lazy compilation and React 19.3 features. It is the right tool when the site is an application. It is the wrong tool for a brochure: hydration cost, a build step and a dependency tree the client cannot maintain.
+- Astro 7.0 shipped 22 June 2026 on Vite 8 with a Rust compiler; 7.4 (15 October 2026) added separate build and runtime image services. Islands architecture (section 5.5) is native; a page with no island ships no JavaScript. The house default for a content site with a CMS.
+- SvelteKit on Svelte 5 (runes, October 2024) compiles components to plain DOM code with no virtual DOM; bundles are typically a third of the React equivalent. Choose it when the microsite has real state and the developer knows it.
+- Nuxt 4 (2025) for Vue teams; the same server rendering and islands story.
+- React Router 7 in framework mode is what Hydrogen (section 7.6) builds on as of the 2026-10 version.
+
+### 7.3 Webflow
+
+Webflow is a visual designer that writes real HTML and CSS classes, a CMS, and hosting, with GSAP integrated since Webflow bought GreenSock in autumn 2024. Strengths for agency work: the Designer produces clean markup when the designer names classes with discipline; the CMS handles collections and references; the hosting includes a CDN and SSL; the client can edit copy in the Editor without breaking layout; code export exists for static pages. Limits: no server-side logic (forms post to Webflow or a third party), custom code is pasted rather than built, interactions are keyframe based and heavy when stacked, ecommerce is weak for luxury (use Shopify), and third-party reports of a May 2026 pricing restructure describe a single Premium site plan (about $25 a month billed yearly, 50GB bandwidth, 20,000 CMS items across 40 collections) replacing the old CMS and Business plans, with Basic (about $15, no CMS) below it; Webflow's own pricing page could not be read at the time of writing, so verify there before quoting a client.
+
+### 7.4 Framer
+
+Framer became the agency default for marketing sites between 2024 and 2026 because it merged design, motion and publishing. Verified against framer.com/pricing in October 2026: Free (framer.website subdomain, 1GB bandwidth, 10 CMS collections, one free locale), Basic at $10 a month billed yearly (custom domain, 30 pages, 2 CMS collections, 1,000 CMS items, 50GB), Pro at $30 (150 pages expandable by $20 per 100 to 700, 10 collections expandable by $40 per 10 to 40, 2,500 CMS items expandable by $20 per 10,000 to 40,000, 100GB bandwidth expandable by $40 per 100GB to 2TB), localisation as an add-on at $20 per locale up to 20, Enterprise custom. The motion system is Framer's own (appear effects, scroll transforms, hover and press variants), which produces the fade-up-everything tell unless the designer removes the defaults; the taste rule is one considered move. Code components are React and need a developer. Limits: no code export (the site lives on Framer's hosting), limited control over markup (headings and landmarks need checking in the published HTML), and pages past 150 on Pro cost extra. The Fiber template Kaavish sent is the chrome reference in DESIGN.md; a template is a starting system and never the design.
+
+### 7.5 WordPress
+
+WordPress 7.1 "Mary Lou" shipped 19 August 2026; maintenance releases followed and 7.2 was in beta at the time of writing. When a client insists (a marketing team that already lives in it, a publisher, a hotel group with a central IT policy), two acceptable routes: a lean block theme with no page builder, Full Site Editing, a handful of audited plugins, managed hosting (WP Engine, Kinsta) with a CDN; or headless, where WordPress is the editor and an Astro or Next.js front end renders the pages through WPGraphQL or the REST API, which removes theme bloat and the plugin attack surface from the public site. The WordPress tell to refuse: a page-builder site (Elementor, Divi, WPBakery) with a 2 to 4MB home page, 30 plugins and a slider.
+
+### 7.6 Shopify
+
+Shopify is the house commerce platform. Two storefront models as of October 2026:
+
+- Liquid themes. Dawn is the reference theme in Shopify's developer documentation; Horizon is Shopify's own free theme (version 4.3.0, 9 October 2026) built on nested theme blocks. Almost every luxury store the house will build is a Liquid theme: checkout, payments, fraud, markets, apps and the Section Rendering API come included. Section 8.6 covers theme craft.
+- Hydrogen, Shopify's headless toolkit, documented at version 2026-10. The React Router 7 (framework mode) template deploys to Oxygen, Shopify's hosting; a Vercel Shop template on Next.js 16 App Router is the second official starting point; Nuxt, Astro, SvelteKit and SolidStart use the core directly. Hydrogen means owning the UI, routing, data loading, SEO, account pages and sessions. Choose it only when the storefront is itself the product (editorial commerce with custom routing) and a developer is on retainer for the life of the store.
+
+Shopify Payments is available in the United Arab Emirates and is not available in India (Shopify's supported countries page, October 2026), so an Indian store runs Razorpay, PayU, Cashfree or PhonePe as the gateway (section 8.7).
+
+### 7.7 Squarespace and Wix
+
+No. The reasons are specific: template systems that cannot be left (a Squarespace site is recognisable at a glance, which is the opposite of design-taste's specificity test), limited typographic control (no cascade layers, no container queries, no variable font axes, restricted tracking and leading), heavy runtimes (Wix's Thunderbolt renderer improved after 2021 and still ships hundreds of KB of JavaScript to a brochure page), hosting lock-in with no export, and a commerce layer that cannot do luxury PDP craft. The one acceptable case: a one-page personal site for an individual with no budget, and even then Framer Free does it better.
+
+### 7.8 Headless CMS
+
+| CMS | Model | Free tier, October 2026 | Choose when |
+|---|---|---|---|
+| Sanity | Structured content in a hosted content lake, GROQ query language, a React studio you customise, Portable Text for rich text | 20 seats, 10,000 documents, 100GB bandwidth, 250,000 API requests, 1M CDN requests, 2 public datasets; Growth $15 per seat per month | The house default for editorial luxury sites with Astro or Next |
+| Contentful | Enterprise content platform, content types, rich text, app framework | A free tier exists; limits not verified at the time of writing | The client is already on it |
+| Payload | Open source (MIT), TypeScript, Next.js native, self-hostable with Postgres or MongoDB; reported as acquired by Figma in June 2025 (verify) | Free to self-host | The team owns a Next.js codebase and wants the CMS inside it |
+| Storyblok | Visual editor with nested components, component schemas | A free developer tier | A marketing team that must see the page while editing |
+
+The rule: the CMS is chosen for the editor, and the front end for the visitor. A luxury site with three editors and a monthly cadence does not need a CMS at all; the house content.mjs pattern (every word in one file, a build that refuses banned words) is faster and cannot break.
+
+### 7.9 Hosting
+
+| Host | Free tier limits, October 2026 | Notes |
+|---|---|---|
+| Vercel | Hobby: 200 projects, 100 deployments a day, 100MB static upload, 45 minute builds, 50 domains per project, functions 300s and 2GB (vercel.com/docs/limits, updated 16 September 2026); Hobby is for personal, non-commercial use under Vercel's fair use guidelines, so client work goes on Pro | Image optimisation quotas in section 4.4; the house vercel.json sets build, cleanUrls, trailingSlash and immutable caching on /assets |
+| Netlify | Free plan is a 300 credit pool: bandwidth at 20 credits per GB (about 15GB), production deploys at 15 credits each (about 20); Personal at $9 a month with 1,000 credits | The house netlify.toml sets base, command, publish and the same cache header |
+| Cloudflare Pages | 500 builds a month, one at a time, 20,000 files a site, 25MiB per asset, 100 custom domains a project; the limits page states no bandwidth cap | The cheapest home for a static microsite with Indian and Gulf traffic through Cloudflare's edge |
+| GitHub Pages | Free for public repositories; GitHub documents a 1GB site size and a 100GB per month soft bandwidth limit | The house .github/workflows/pages.yml builds on every push that touches website/; root-relative links require a custom domain |
+
+All four put a CDN in front of the files; verify the Mumbai, Chennai, Dubai and Riyadh edge presence for the chosen host when the audience is there (section 5.5).
+
+### 7.10 Domains and DNS literacy
+
+A registrar sells the name; a DNS host answers queries about it; they can be different companies, and the client must own the registrar account in their own name, always, with the agency as a delegate. Record types a creative director will see in a launch: A and AAAA (name to IPv4 and IPv6 address), CNAME (name to another name; not allowed at the apex, which is why hosts offer ALIAS or ANAME records or an A record at the apex), MX (mail routing; never touched during a web launch, and the single most common thing a web launch breaks), TXT (verification strings and SPF), CAA (which certificate authorities may issue for the domain). TTL is the seconds a record is cached: lower it to 300 a day before a migration, raise it to 3600 or 86400 after. Canonical host: pick www or apex, 301 the other. HTTPS is automatic on every host above through Let's Encrypt; add HSTS once the redirects are stable. Country domains: .in is run by NIXI through accredited registrars; .ae by the TDRA's .ae Domain Administration through accredited registrars; both need the client's local entity details, so start the registration first.
+
+### 7.11 Analytics
+
+| Tool | Model | Notes, October 2026 |
+|---|---|---|
+| GA4 | Event based, free, 14 months maximum data retention on the free tier (2 months by default), BigQuery export free | Consent Mode v2 is required for EEA visitors since March 2024; needs a consent banner wherever consent law applies; the client's media team expects it |
+| Plausible | Cookieless, EU hosted, one script of under 1KB; Starter $9, Growth $14, Business $19 a month at the 10,000 pageview tier, 2 months free yearly | The house default for microsites: no banner needed by its own compliance statement, no identifiers |
+| PostHog | Product analytics, session replay, feature flags, surveys and experiments in one; a generous free tier (1M events a month on the 2025 pricing page; verify current limits, the October 2026 page could not be read) | Commerce funnels and apps |
+| Vercel Web Analytics and Speed Insights | Privacy-first pageviews and field Core Web Vitals per route | Any site on Vercel; the quickest honest field data for a microsite |
+
+The rule: analytics the client will read, and nothing else. A microsite with a pixel, GA4, Hotjar and a chat widget spends 300KB and a consent banner on data nobody opens.
+
+### 7.12 Consent management: GDPR, DPDP, PDPL
+
+- GDPR (EU, 2018) and the ePrivacy rules: non-essential cookies and trackers need prior consent; a banner with equal accept and reject; records of consent. Applies to any site that serves EU visitors, which a Dubai hotel does.
+- India: the Digital Personal Data Protection Act, 2023 (assented 11 August 2023) and the DPDP Rules, 2025. Commencement is phased: provisions including the Data Protection Board came into force on 13 November 2025; a further set on 13 November 2026; all remaining provisions on 13 May 2027. Consent must be free, specific, informed, unconditional and unambiguous, with a notice the data principal can request in English or any of the 22 languages in the Eighth Schedule; consent managers are registered intermediaries through which a person can give and withdraw consent; the Schedule to the Act sets penalties up to 250 crore rupees per instance for failing to take reasonable security safeguards. Practical reading for a site: a plain-language notice at the point of collection (the newsletter field, the enquiry form), a withdrawal route, and no pre-ticked boxes.
+- UAE: Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data, in force 2 January 2022, regulated by the UAE Data Office; processing needs consent unless an exception applies, and the Consumer Protection Law (Federal Law No. 15 of 2020) separately restricts using consumer data for marketing. DIFC and ADGM run their own regimes for entities inside the free zones. Saudi Arabia's PDPL has been enforced since September 2024.
+- Tools: Cookiebot, Osano, Termly, CookieYes (an Indian company, which matters for DPDP wording). Design: a bottom sheet, two equal buttons, 11px micro labels per the house system, no "accept all" in flame against a grey reject, no banner at all when the site runs cookieless analytics and no pixels.
+
+### 7.13 Forms and email capture
+
+- Native form markup first: labels, autocomplete attributes, inputmode="tel" and "email" so phones show the right keyboard, required and pattern validation with a designed error state (06-ui-design-craft.md section 5), a thanks page with a URL so it can be a conversion goal.
+- Delivery: the house site posts to FormSubmit (first submission triggers a one-time activation email to the inbox); Formspree (50 submissions a month free, Personal $15 monthly or $10 yearly); Netlify Forms on Netlify hosting (a monthly free quota; verify current terms); HubSpot forms when the client runs HubSpot (the embed script is heavy; load it on interaction); a route handler on Next.js when the site already has a server.
+- Spam: a honeypot field plus a time-to-submit check catches most; Cloudflare Turnstile is invisible when a challenge is needed; a puzzle CAPTCHA on a luxury enquiry form is a defect.
+- Email capture: a dialog element, never on load; trigger at 50 percent scroll or on exit intent on desktop, and never more than once per session; one field; the DPDP or GDPR notice line under it; double opt-in where consent law requires. Klaviyo (free up to 250 active profiles and 500 email sends a month, with $5 of mobile messages) is the Shopify-native choice; Mailchimp for a non-commerce list. Section 10 covers the email itself.
+
+## 8. Ecommerce craft
+
+### 8.1 The luxury commerce references and what each teaches
+
+| Reference | Status, October 2026 | What to borrow |
+|---|---|---|
+| Ssense (Montreal) | Entered creditor protection under Canada's CCAA in late August 2025 citing US tariffs, with about C$371M of debt, and put itself up for sale; the outcome was not recorded at the time of writing | The product index as interface: monochrome, three columns, plain grounds, no badges, the brand name as the only label; the editorial as a parallel site |
+| Net-a-Porter and Mr Porter | Acquired with YNAP by Mytheresa from Richemont in April 2025; the group was renamed LuxExperience B.V. on 1 May 2025 and also owns Yoox | The Edit and The Journal: commerce wrapped in a magazine; the PDP's "wear it with" |
+| Mytheresa (Munich) | Flagship of LuxExperience | Fewer products per view, designer-first navigation, a curated front page that changes weekly |
+| Ounass (Al Tayer, Dubai) | The Gulf's luxury marketplace | Arabic and English parity, rapid Dubai delivery as a headline promise, Ramadan and Eid edits as seasons, AED pricing with VAT included |
+| Aesop | | Product as still life on paper, no sale, no badges, long descriptions that read as essays, stores as content |
+| Bottega Veneta | Left social media in January 2021 | The site as a film; one product per screen; no grid on the home page |
+| The Row | | Grey ground, no faces, three images per product, nothing else |
+| Apple | | The PDP as a scroll story with the buy bar sticky; the configurator; the compare table |
+
+### 8.2 PLP anatomy, with the luxury variations
+
+A product listing page (PLP) is the collection or category grid. The contemporary default is 4 columns on desktop, 2 on phone, 24 to 48 per load, infinite scroll, filters in a left rail, badges for new and sale, quick add on hover. The luxury variations, with reasons: 3 columns on desktop and 2 on phone (1 for couture and high jewellery), because space is price; 12 to 24 per view with a "load more" button rather than infinite scroll, because the footer must be reachable and Google must find page 2; an editorial break every 8 to 12 cells (a full-bleed image, a line of copy), because a grid without rhythm is a warehouse; no badges, because urgency reads cheap; price as an 11px micro label under the name; hover swaps to the on-model image, which is the second image in the sequence; no quick add, because the product deserves its page; filters as a drawer opened from one word; image cells at 4:5 or 3:4 with aspect-ratio set so the grid never shifts.
+
+### 8.3 PDP anatomy and product imagery specifications
+
+The product detail page (PDP) in the luxury form: gallery on the left as a vertical scroll of 4 to 8 images on desktop (no thumbnails, no arrows) and a swipe carousel with scroll-snap and dots on the phone; the buy box sticky on the right with name, price, a colour selector that shows the material itself as a swatch, size, one full-width button, and one quiet line for Apple Pay or the instalment option; below, details and summary disclosures for description, materials, care, shipping and returns; "complete the look" as three products; reviews only when the brand believes in them (The Row and Aesop do not show them). Size and fit: a size guide in a dialog element with a measured table in cm, the model's height and the size worn ("Model is 178cm and wears S"), and honest fit notes; stock states: "in stock", "low stock" when true, "sold out" with notify me, never a fake countdown.
+
+Imagery specifications: master files at 4000px on the long edge; the on-site set at 2400 wide for zoom and 1200, 800 and 480 for the gallery and grid; 4:5 or 3:4 ratio held across the whole catalogue; the sequence in order: still life on the brand ground, on-model front, on-model side or back, detail, scale (in the hand or on the body), texture macro, and a 6 to 10 second loop; zoom at 2x on hover or tap, loading the 2400 file on demand; lighting, ground and retouching identical across the range (16-editing-colour-grading-and-delivery.md for grading); filenames and alt text per section 9.8.
+
+### 8.4 Cart and checkout
+
+Flows and their error paths are in 09-interaction-design-and-ux-patterns.md section 3. The web specifics: a cart drawer rather than a cart page for a small catalogue, updated through Shopify's Section Rendering API without a reload; the order summary visible at every step; guest checkout always; address autocomplete; the Baymard Institute's long-running average documented cart abandonment rate is 70.19 percent, and its 2024 survey of reasons leads with extra costs too high (48 percent), the site wanted an account (26 percent), not trusting the site with card details (25 percent), slow delivery (23 percent) and a long checkout (22 percent). Each of those is a design decision: show shipping and tax on the PDP, allow guest checkout, show the payment marks and the padlock, state delivery dates by pincode or emirate, and keep checkout to one page. Shopify's checkout is edited through Checkout Extensibility (branding settings and extensions), never a theme file; Shop Pay is the fastest path for returning buyers.
+
+### 8.5 Speed for commerce
+
+The Deloitte figure in section 6.6 is the commercial argument. The Shopify-specific causes of a slow store: apps that inject scripts on every page (audit the theme's app embeds and remove any the store does not actively use), hero sliders, unoptimised product images bypassing the Shopify CDN, and third-party review and chat widgets. Shopify serves WebP and AVIF automatically through the image_url filter when a width is given; preconnect to cdn.shopify.com; defer every non-critical script; keep theme JavaScript under the 250KB budget in section 5.2; check the admin's Web Performance report, which is field data.
+
+### 8.6 Shopify theme craft
+
+- Architecture: templates (JSON files in templates/ that list sections in order; a Liquid template holds code), sections (Liquid files in sections/ that merchants add and reorder in the theme editor, each with a schema), blocks (modules inside a section that merchants add, remove and reorder), theme blocks (blocks defined once in blocks/ and reusable across sections, nested in Horizon), section groups (JSON containers for header and footer areas), config/settings_schema.json (the theme settings the merchant sees) and config/settings_data.json (their values), snippets (partial Liquid files included with render), assets.
+- Liquid in one paragraph: {{ product.title }} outputs a value; {% if product.available %} and {% for image in product.images %} control flow; filters transform with a pipe, so {{ image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '480, 800, 1200' }} produces a responsive img element from the Shopify CDN; objects such as product, collection, cart, customer and shop expose the store's data.
+- Metafields attach custom data to products, collections, customers and the shop under a namespace.key, with definitions and types (single-line text, rich text, file, product reference, date, JSON) set in the admin; metaobjects are standalone structured records (a "designer" or "store" entry) referenced from products. Luxury uses: materials and care, the designer's note, a lookbook of related editorial, a "wear it with" reference list.
+- Base theme: Dawn is the documented reference and the leanest base; Horizon (free, Shopify, 4.3.0 on 9 October 2026, nested theme blocks) is the newer base with more editor flexibility. The house starts from whichever the brief needs, strips the demo content and app embeds, rebuilds the type and spacing tokens as CSS custom properties, and keeps the theme's accessibility and checkout wiring.
+- Tooling: Shopify CLI (shopify theme dev for local preview, theme push), Theme Check for linting, GitHub integration so a theme deploys from a branch, and the theme editor for the merchant.
+
+### 8.7 Payments in India and the UAE
+
+| Market | Method | Facts, October 2026 | Design consequence |
+|---|---|---|---|
+| India | UPI | About 20 billion transactions worth about 25 trillion rupees in August 2025, and about 84 percent of India's digital payments in 2025 | UPI must be the first option at checkout; QR and intent flows on phone; the UPI logo marks |
+| India | Razorpay | Rate card: 2 percent plus 18 percent GST on domestic cards, up to 3 percent on international cards, zero setup and annual fees; its UPI rate is stated inconsistently on the page, so take the contract rate | The default gateway on Shopify in India, since Shopify Payments is unavailable there |
+| India | Cards | RBI card-on-file tokenisation since October 2022: merchants store network tokens, never the card number | "Save card" means a token; say so in the microcopy |
+| India | EMI and cash on delivery | EMI through the gateway; COD remains expected in India even at premium price points | Offer EMI on jewellery; limit COD by value and pincode; never hide it on a page that otherwise reads expensive |
+| UAE | Shopify Payments, Apple Pay, cards | Shopify Payments available in the UAE; Apple Pay widespread on an iPhone-heavy audience | Apple Pay as the express button above the form |
+| UAE | Tabby | Split in 4 or up to 12 monthly payments; regulated by the Central Bank of the UAE | One quiet line under the price: "or 4 payments of AED 1,250 with Tabby" |
+| UAE and KSA | Tamara | Pay in up to 4 instalments or in full; Tamara FZE licensed by the Central Bank of the UAE; positioned as Sharia compliant | Same line; show both only if the client has both |
+| UAE | Cash on delivery | Still a material share of Gulf ecommerce | Offer it with a fee, disclosed early |
+
+### 8.8 Shipping and tax display
+
+UAE VAT is 5 percent (since 1 January 2018) and consumer prices are shown inclusive; Saudi VAT is 15 percent. India's GST on apparel changed under the September 2025 rate rationalisation (5 percent up to a price threshold, 18 percent above it; confirm the current thresholds with the client's accountant), gold jewellery carries 3 percent plus GST on making charges, and consumer prices are shown inclusive of all taxes. The design rule in both markets: the price on the PDP is the price at checkout, shipping and duties are stated on the PDP by destination, delivery is an estimated date range rather than "3 to 5 business days", and cross-border orders state whether duties are prepaid (DDP) or collected on delivery (DAP), because a surprise duty charge is the first reason in the Baymard list.
+
+### 8.9 The post-purchase experience
+
+The confirmation page states the order number, what happens next and when, and nothing else; no upsell dialog. Transactional email within a minute, a shipped email with tracking, a delivered email, and a single follow-up at 10 to 14 days (a care note or a request for a review, never both). In India and the Gulf, WhatsApp order updates through the WhatsApp Business Platform (approved message templates) are read far more than email. Packaging is the brand's last page: Aesop's paper, The Row's grey box; the unboxing is photographed by the customer and becomes the next campaign. Account creation is offered after the purchase, never demanded before it.
+
+## 9. SEO and discoverability as craft
+
+### 9.1 Semantic structure and crawlability
+
+Section 2.1 is the foundation: one h1, ordered headings, landmarks, text as text. Add: every link is an a element with an href (a div with a click handler is invisible to Googlebot and to the keyboard); content that must rank is in the server-rendered HTML, because Googlebot renders JavaScript on a second pass that can lag by days; text inside WebGL, canvas, SVG paths or an image does not exist for the index. Framer and Webflow output is crawlable; a Spline hero is a picture to the index.
+
+### 9.2 Titles, descriptions, canonicals
+
+The title element is the search result's headline: 50 to 60 characters (Google truncates at about 600px), unique per page, the page's subject first and the brand last, sentence case, no exclamation marks, per the house copy rules. The meta description is 150 to 160 characters and is rewritten by Google more often than not; write it as the one line a confident person would say about the page. A canonical link on every page prevents the www and apex, trailing slash and UTM variants from splitting ranking; a Framer site without a title set per page ships "Untitled" into the index, which is the most common luxury SEO defect the house meets.
+
+### 9.3 Open Graph and X cards
+
+The preview card when a link lands in WhatsApp, iMessage, LinkedIn, Slack or X is drawn from Open Graph meta tags: og:title, og:description, og:image, og:url, og:type. Meta's sharing documentation asks for og:image at least 1200 x 630 pixels, as close to 1.91:1 as possible, 200 x 200 minimum, under 8MB. X reads Open Graph as a fallback and its own twitter:card value summary_large_image (a 2:1 image; X's documentation could not be read at the time of writing, so verify its minimum and maximum pixel sizes there). House rule: a 1200 x 630 image per page, exported under 300KB, because WhatsApp previews, the ones that matter in India and the Gulf, have been observed to skip large images; the image is the campaign still with no text, since the title renders under it. Generate per-page cards for products and case studies with the Vercel OG image route or a build step; test with the LinkedIn Post Inspector and opengraph.xyz.
+
+### 9.4 Structured data
+
+JSON-LD in a script element is Google's preferred format. Types the house ships, with the schema.org vocabulary:
+
+| Page | Types | Required or expected properties |
+|---|---|---|
+| Every site | Organization (name, url, logo, sameAs), WebSite, BreadcrumbList | Logo at least 112 x 112; sameAs to Instagram and LinkedIn |
+| Product | Product with Offer (price, priceCurrency, availability), image, brand, sku | Google separates merchant listings (buyable pages, with shipping and return policy markup) from product snippets; meeting the listing requirements earns both |
+| Hotel or residence | Hotel or LodgingBusiness (name, address, geo, telephone, starRating, amenityFeature, checkinTime, checkoutTime, image) | Google's hotel prices come from Hotel Center feeds, so markup supports the knowledge panel and nothing more |
+| Event | Event (name, startDate, endDate, location, offers, eventStatus, performer, image) | Eligible for the event rich result |
+| Editorial | Article or NewsArticle (headline, image, datePublished, dateModified, author with Person) | Image at 1200 wide minimum, three ratios (16:9, 4:3, 1:1) where possible |
+| Video | VideoObject (name, thumbnailUrl, uploadDate, duration, contentUrl) | Required for video rich results and key moments |
+| FAQ | FAQPage | Google restricted FAQ rich results to government and health sites in August 2023; keep the markup for answer engines only |
+
+Structured data must match the visible text (Google's AI features guidance repeats this). Validate with the Rich Results Test and the Schema Markup Validator before launch.
+
+### 9.5 Sitemaps, robots and crawlers
+
+A sitemap.xml holds up to 50,000 URLs or 50MB uncompressed; larger sites use a sitemap index; lastmod only when it is true. robots.txt allows everything on production and the staging site carries noindex plus a password, because a staging site that ranks ahead of the launch is a real and recurring accident. Image sitemaps help a lookbook into Google Images. AI crawlers: GPTBot (OpenAI), ClaudeBot (Anthropic), PerplexityBot, and Google-Extended (which controls Gemini training and grounding, and has no effect on Search). The house default on client sites is to allow them, because being cited by an answer engine is discovery, unless the client's legal team objects. Google's documentation (updated 10 December 2025) states that no AI-specific text file, new markup or schema is needed to appear in AI Overviews or AI Mode; an llms.txt file is harmless and unproven.
+
+### 9.6 Core Web Vitals as a ranking signal
+
+Google's page experience documentation states that Core Web Vitals are used by its ranking systems. The effect is a tie-breaker between pages of similar relevance; field data at the 75th percentile on mobile is what counts (section 5.1). The house budgets pass the thresholds with margin, so the ranking question answers itself.
+
+### 9.7 AI search visibility and the luxury SEO trap
+
+What changed: AI Overviews (launched in the US in May 2024 and extended to over a hundred countries, India among the early ones, later that year) and AI Mode (US in May 2025, India in English in mid-2025, wider through 2025 and 2026) answer the query on the results page and link out through "query fan-out", which issues several sub-queries and surfaces a wider set of pages. Pew Research Center (July 2025) measured that users who saw an AI summary clicked a traditional result in 8 percent of visits, against 15 percent without one. Google reports AI feature clicks under the Web search type in Search Console and claims they are higher quality. The practical reading: informational queries lose clicks; brand, product and place queries still send them; being named in the answer is the new first position.
+
+What earns a citation, from Google's own guidance and the answer engines' behaviour: crawlable text that states facts plainly (opening hours, room counts, prices, materials, dates), structured data that matches that text, consistent entity data across the site, Google Business Profile, Merchant Center and third-party mentions, internal links, and pages that answer one question each. Controls: nosnippet, data-nosnippet, max-snippet and noindex limit what any Google feature shows.
+
+The luxury SEO trap is a beautiful site that is invisible: headlines as images, copy inside WebGL, a one-page site with no titles, "Untitled" pages, no alt text, an Instagram-only brand presence, and a loader that hides the content from Googlebot's render budget. The fix is section 2.1 plus 9.2 plus 9.4, and it costs nothing visual: the h1 can be set at 160px in the brand face and still be text.
+
+### 9.8 Image alt and naming
+
+Filenames describe the subject and the width (anantara-jewel-bagh-pavilion-dusk-1800.webp), because Google Images reads them; alt text describes the image for someone who cannot see it, without "image of", in under 125 characters, and is empty (alt="") for purely decorative images so screen readers skip them; the same alt feeds the answer engines. For jewellery and fashion, Google Images and Pinterest are discovery channels and an image sitemap with captions is worth the hour.
+
+### 9.9 International: hreflang, Arabic, Hindi
+
+- hreflang tells Google which language and region each page serves. Three equivalent methods (link elements in the head, HTTP Link headers for PDFs, or xhtml:link entries in the sitemap); use one. Every version must list itself and every other version (bidirectional), or the annotations are ignored. x-default names the fallback, usually the language selector or the English page. Codes are ISO 639-1 language, optionally with an ISO 3166-1 alpha-2 region: en-AE, ar-AE, en-IN, hi-IN, en-SA, ar-SA; a region alone is invalid. URL structure: /ae/en/ and /ae/ar/ under one domain is simplest to maintain and consolidates authority.
+- Arabic sites: dir="rtl" and lang="ar" on the html element; logical properties from the first line (section 2.7) so the layout mirrors; mirror directional icons (arrows, back) and never the logo; Arabic faces need 10 to 15 percent more size and line-height around 1.6 to 1.8 because of the ascender and descender depth; mixed English and Arabic runs use unicode-bidi: isolate; numerals in Gulf commerce are commonly Western digits even in Arabic copy, which the client confirms; 03-typography.md and design-taste references/type.md for the faces.
+- Hindi sites: lang="hi"; Devanagari faces with full conjunct coverage (Noto Sans Devanagari, Mukta, Tiro Devanagari Hindi), line-height about 1.7 so matras do not collide, hyphens: none; subset per script (section 3.1). Currency formatting through Intl.NumberFormat with en-IN gives the lakh grouping (1,00,000) that Indian readers expect; en-AE gives AED with two decimals.
+
+## 10. Email design
+
+### 10.1 The canvas and the client zoo
+
+An email is a web page rendered by a dozen engines that agree on almost nothing. The constants: 600 to 640px wide, a single column on phones, body type at 14px minimum (16px on mobile), tap targets 44px high, HTML under 102KB because Gmail clips a message above that and hides the rest behind a link (a long-documented behaviour that Litmus and Mailchimp both describe; Google's help pages do not state the number), images under 150KB each and under 600KB in total, layout in tables with role="presentation", and width declared in both the HTML attribute and the CSS. Outlook for Windows (2007 through 2021) renders with Microsoft Word's engine, so background images need VML, there is no flexbox, grid or web font, and padding on anchors is ignored; the hybrid method (max-width on a table, with MSO conditional comments supplying a fixed-width table for Outlook) is the standard answer. Apple Mail is WebKit and renders almost anything. The Gmail app with a non-Google account strips the style element, so critical styles are inlined.
+
+Litmus's email client share for September 2026 (over 1.5 billion opens): Apple 76.56 percent, Gmail 16.10, Outlook desktop 3.48, Yahoo 2.35, Google Android 0.94, Outlook.com 0.29. Apple's figure is inflated by Mail Privacy Protection, which pre-loads images and registers opens; India's real reading audience is heavily Gmail on Android, the Gulf's is Apple-heavy. Design for Apple Mail and Gmail first, then verify Outlook for Windows.
+
+### 10.2 Dark mode in email
+
+Three behaviours exist: no change (most web clients), partial inversion (the Gmail apps invert light backgrounds and leave images and dark text alone), and full inversion (Outlook for Windows and some Android clients). Apple Mail and iOS Mail honour prefers-color-scheme when the head carries meta name="color-scheme" content="light dark" and meta name="supported-color-schemes", so a @media (prefers-color-scheme: dark) block can set the dark palette. Rules: logos as transparent PNGs with a padded container or a light keyline so they survive inversion; no dark text baked into images; the paper ground #F3F2EE rather than pure white, because inverted white becomes pure black and crushes the type; test every send in both modes.
+
+### 10.3 Images off
+
+Corporate Outlook and privacy-minded users read with images blocked. The email must read without them: live text for the headline and the call to action, a bulletproof button built from a table cell with padding and a background colour (never an image), alt text on every image styled through the img element's font and colour so it reads as a caption, and a hero image at 2:1 under 150KB with its width attribute set to half its pixel width for retina. An image-only email is both invisible with images off and a spam signal.
+
+### 10.4 Fonts
+
+Web fonts load in Apple Mail, iOS Mail and a few Android clients through a link or @font-face in the head; Gmail and Outlook ignore them. The brand face is therefore an enhancement with a fallback stack chosen per brand: Georgia for a serif house, Helvetica then Arial for a grotesk. Sizes and line-height in px, letter-spacing works widely. Space Grotesk falls to Arial on Gmail; set the fallback's size one px smaller so the line count holds.
+
+### 10.5 The luxury newsletter references
+
+| Sender | Pattern |
+|---|---|
+| Aesop | One image, a long essay in a serif on paper, no grid, one quiet link at the end |
+| Ssense | A monochrome product grid with no copy; the index as a newsletter |
+| The Row | One image, one line, white ground, nothing else |
+| Monocle | An editorial digest: numbered sections, hairlines, a serif, a sponsor slot that looks like the content |
+| Mr Porter (The Journal) | Commerce as a magazine: a feature, then four products |
+
+The common anatomy: a thin masthead, one hero, a single column, hairlines rather than boxes, a palette of two, sentence case, no exclamation marks, a footer that states the address and the unsubscribe plainly.
+
+### 10.6 Tools, accessibility and deliverability
+
+Tools: Klaviyo for Shopify stores (free to 250 profiles and 500 sends a month; flows for welcome, abandoned cart, post-purchase), Mailchimp for non-commerce lists, MJML (a markup language that compiles to table-based HTML; the house default for hand-built emails), Litmus and Email on Acid for previews across the client zoo, Can I Email for support tables, Really Good Emails as the reference archive.
+
+Accessibility: lang on the html element, role="presentation" on layout tables, real headings, alt text, 4.5:1 contrast, 14px minimum, link text that says where it goes, a plain-text part.
+
+Deliverability: SPF, DKIM and DMARC records on a dedicated sending subdomain (news.brand.com), DMARC at p=none then quarantine; Google's and Yahoo's bulk sender requirements since February 2024 (senders over 5,000 messages a day must authenticate, offer RFC 8058 one-click unsubscribe, and keep the spam rate under 0.3 percent in Google Postmaster Tools); double opt-in; list hygiene; a warm-up for a new domain; a subject line under 50 characters in sentence case and a preheader of 40 to 90 characters, with the house copy rules applied.
+
+## 11. Microsites and campaign pages
+
+### 11.1 The house genre
+
+A microsite is a single page built for one launch, property, collection, event or pitch. The house form, from DESIGN.md and design-taste's house layer: scroll driven; nothing clickable except the navigation pill and one call to action; about 70 percent of the viewport time given to image and 30 percent to text; the client as the hero and the agency invisible; one idea carried from the first viewport to the last.
+
+### 11.2 Architecture: beats, the peak, the ending
+
+| Beat | Position | Content | Motion |
+|---|---|---|---|
+| Opening | 0 to 10 percent | The one line and the one image or loop; the thin strip chrome | The hero loop, the mark |
+| Rise | 10 to 55 percent | Three to five chapters, each one image and one claim; sections 14vh apart | Reveals only |
+| Peak | 55 to 70 percent | The one moment that needed WebGL, a sequence or a pin (section 6.5) | The peak |
+| Resolution | 70 to 90 percent | Detail, true numbers, the human gesture (a founder's line, a hand-drawn mark) | Reveals only |
+| Ending | 90 to 100 percent | A full-bleed closing image and the contact; design-taste's rule that the ending gets the same care as the opening | Still |
+
+Length: 6 to 9 viewports on desktop and under 12 on a phone; 400 to 700 words in total; weight per the microsite row in section 5.2. Navigation: a thin top strip with the mark and a floating pill at the bottom; no footer clutter; no hamburger menu for four links.
+
+### 11.3 The assets pipeline
+
+Shoot list before design, because the page is only as good as its images. Masters at 4000px on the long edge, graded as one set (16-editing-colour-grading-and-delivery.md); exports to the house widths (1800, 1200, 720 landscape; 1440, 1000, 640 portrait) as WebP through Sharp in the build or Squoosh by hand, with a 20px blurred placeholder or a dominant colour inlined for each; loops at 1280 wide, 24fps, muted, under 2.5MB; fonts subset to the glyphs used; assets-manifest.json records every file's dimensions so the build writes width and height. Generated imagery is disclosed per 22-ai-era-craft-and-generative-tools.md and never presented as a photograph.
+
+### 11.4 QR landing pages for out-of-home and print
+
+The QR code is a link printed in a place where the phone is the only device. Rules: a short vanity URL (brand.com/goa) that 302-redirects to the live page, so the destination can change after the print run; UTM parameters on the redirect (utm_source=ooh, utm_medium=qr, utm_campaign=name); error correction level H (30 percent) when a mark sits in the centre, M otherwise; a quiet zone of four modules; the minimum size rule of thumb is scanning distance divided by 10 (a code read from 1m is at least 10cm wide); black on light, never inverted on gloss without a test; vector SVG into the print file; a test on iOS Camera and Android Lens before the print is approved. The page itself: phone-only design, under 2 seconds on 4G, the same image as the poster so the continuity is instant, one action, no app download, no consent banner where cookieless analytics allow it.
+
+### 11.5 Deal sheets and pitch microsites
+
+A deal sheet (a single property or opportunity: the numbers, the plans, the gallery, the contact) is a page with a print stylesheet (section 14.6) so the same URL prints to A4 as the PDF the buyer forwards. A pitch microsite (the house new-business folder) is a private page built for one prospect: their name in the title, three references, the single idea, a scope. Both expire (11.8).
+
+### 11.6 Password protection
+
+Server-side only; a JavaScript password is defeated by view source. Options: Cloudflare Access (free for a small number of users, email one-time codes, in front of any host); Netlify site passwords on paid plans; Vercel's password protection as a paid add-on (verify the current plan and price); Framer and Webflow page passwords on paid plans; HTTP basic auth at the edge. Share the password in a separate message from the link, and never by WhatsApp broadcast.
+
+### 11.7 Analytics on a microsite
+
+Plausible or Vercel Web Analytics; goals for scroll depth at 25, 50, 75 and 100 percent, the call to action, and the QR source; a one-page report with sessions by source and device, the scroll funnel and the conversion, in the format in 24-business-of-creative-and-agency-operations.md. The scroll funnel is the design review: a drop before the peak means the peak is too far down.
+
+### 11.8 Expiry and archiving
+
+The end date is set at launch. After it: 301 to the brand's page, or keep the page live with "this campaign has ended" and noindex, or fold it into the agency case study. Before anything is taken down: a full-page capture at desktop and phone widths, a 30 to 60 second screen recording of the scroll for the showreel, the source in the repository, and the analytics export; the agency's right to show the work is in the contract (24-business-of-creative-and-agency-operations.md). Domain renewals are calendared; tracking scripts are removed from an archived page.
+
+## 12. Experimentation and analytics literacy
+
+### 12.1 GA4 events
+
+GA4 is event based: every hit is an event with parameters. Enhanced measurement collects page_view, scroll (at 90 percent depth), outbound click, site search, video engagement and file download automatically; recommended events (purchase, add_to_cart, begin_checkout, generate_lead, sign_up) carry standard parameters that power the ecommerce reports; custom events cover the rest. Conversions were renamed key events in March 2024. Google Tag Manager deploys the tags; Consent Mode v2 (section 7.12) gates them; server-side tagging moves the collection to a first-party endpoint, which survives ad blockers and Safari's tracking prevention. Free-tier retention is 2 months by default and 14 months at most, so the BigQuery export (free) is the archive. What a creative director reads: landing pages by sessions and engagement rate, key events by source, device split, country and city, the pages where engaged time collapses.
+
+### 12.2 PostHog, heatmaps and session replay
+
+PostHog bundles product analytics, session replay, feature flags, surveys and experiments, with autocapture of clicks and form submissions and a free tier that was 1M events a month on its 2025 pricing page (verify). Heatmaps and replay: Hotjar, now sold under Contentsquare (free plan up to 200,000 monthly sessions with one month of data and replays on 5 percent of sessions capped at 10,000; Growth from $39 a month billed yearly); Microsoft Clarity (free, heatmaps, replays, rage-click and dead-click detection, input masking by default). What to look for on a luxury page: the scroll map's drop before the peak (section 11.7), rage clicks on images that are not links (the "nothing clickable" rule needs an affordance or the image needs to be a link), dead zones below the fold on phones, and the size filter that separates desktop behaviour from phone behaviour. Replay must mask inputs and sits behind the consent banner where one is required.
+
+### 12.3 A/B testing and the sample size reality
+
+Tools: VWO (Wingify, Delhi), Optimizely, PostHog experiments, GrowthBook (open source), feature flags on Vercel Edge Config, and Shopify apps for theme tests; Google Optimize was shut down in September 2023. The arithmetic decides whether a test is possible: detecting a 20 percent relative lift on a 2 percent baseline conversion (2.0 to 2.4 percent) at 95 percent confidence and 80 percent power needs on the order of 15,000 to 16,000 visitors per variant, so a microsite with 3,000 visits over its life cannot run a valid test and a store with 50,000 monthly sessions can run about one a month. Rules: one variable per test, full weekly cycles (two to four weeks), no peeking at interim results, and qualitative methods (five moderated sessions, replay, a survey) wherever the numbers are too small; the five-user heuristic in 09-interaction-design-and-ux-patterns.md applies.
+
+### 12.4 What a creative director reads weekly
+
+Search Console (clicks, impressions, the Core Web Vitals report), the analytics landing page and device reports, five replays, PageSpeed Insights on the three key pages, uptime; monthly, the currency feeds in design-taste references/currency-2026.md, the Awwwards and siteInspire archives, and the engineering feeds that announce what the medium can now do: the WebKit blog, Chrome for Developers, web.dev, Smashing Magazine, Codrops, and the writers Bramus Van Damme (scroll-driven animations), Ahmad Shadeed (defensive CSS and RTL styling), Adam Argyle, Una Kravets, Jen Simmons and Josh Comeau.
+
+## 13. Design engineering as of October 2026
+
+### 13.1 The role
+
+A design engineer sits between design and front-end engineering and owns the feel: motion, interaction, component polish, and prototypes in code that settle arguments a Figma frame cannot. Vercel and Linear made the title common between 2022 and 2024. For the house, the creative director briefs and critiques one; the design engineer's outputs are production components with motion, prototypes, and the QA in 13.6. The hiring signal is a portfolio of details rather than pages.
+
+### 13.2 Figma to code
+
+Dev Mode is Figma's inspect surface (measurements, tokens, annotations, a Dev seat). Code Connect maps components in a code repository to Figma components so Dev Mode shows the team's real code instead of generated snippets; it is on Professional, Organization, Government and Enterprise plans with a Full or Dev seat, the Professional plan allows one active library and one framework, the CLI uses template files that work with any framework, and both the UI and CLI connections feed the Figma MCP server, which gives AI tools access to the connected components. Variables export to tokens per 07-design-systems-and-tokens.md section 4. The order that works: tokens and components mapped first, then any generated code reads the real system rather than inventing one.
+
+### 13.3 AI tools and their guardrails
+
+| Tool | Pricing, October 2026 | Right for | Guardrail |
+|---|---|---|---|
+| v0 (Vercel) | Free with 7 messages a day; Plus $30 per user a month; Business $100 | Layout exploration, React and shadcn components, a dashboard in an afternoon | Output carries the shadcn and Tailwind defaults; re-tokenise before it is a client page |
+| Lovable | Free with 5 daily build credits capped at 30 a month and 20 cloud credits; Pro and Business priced on the site | Internal tools and MVPs with Supabase | Never a luxury marketing site; the generated look is a tell |
+| Cursor | Free; Plus $8; Premium $30; Super $100; Ultra $200; Teams from $30 per user | The design engineer's editor with agents | Review every diff; tests and visual diffs in CI |
+| Claude Code | Anthropic's terminal agent; pricing on Anthropic's site | The house static build, this corpus, refactors, QA scripts; see 22-ai-era-craft-and-generative-tools.md | Same review; no secrets in prompts |
+
+Guardrails that apply to all of them: DESIGN.md and the token file in the system context so the output speaks the house language; the cheap-tells list from design-taste section 3 as a ban list; a human reviews every generated component against the state matrix in 06-ui-design-craft.md section 3; no generated code reaches checkout, payment or consent without review; licences checked on any generated asset; the performance budget enforced in CI; axe for accessibility and Playwright screenshots for visual regression. Generated output is a first draft at about 70 percent; the remaining 30 percent is the craft this file describes.
+
+### 13.4 Component libraries
+
+shadcn/ui is a set of components copied into the project rather than installed, with a CLI (v4 in March 2026), registries, an MCP server (August 2025), RTL support (January 2026), and Base UI as the default primitive layer since July 2026 with Radix still available through a unified package. Radix Primitives and Base UI are unstyled, accessible primitives; React Aria (Adobe) and Headless UI (Tailwind Labs) are the alternatives. Tailwind CSS v4 (January 2025) moved configuration into CSS with @theme, which makes tokens native. The house position: shadcn with Base UI and Tailwind for apps, dashboards and tools; hand-written CSS for marketing sites and microsites; and never the default shadcn styling on a luxury page, because it is the Inter-and-rounded-card look that design-taste names as the AI default.
+
+### 13.5 The craft references and what each teaches
+
+| Person | Role, October 2026 | What to learn |
+|---|---|---|
+| Rauno Freiberg | Interaction designer, Vercel and Devouring Details (rauno.me) | Invisible details: pointer targets larger than the visual, optical alignment, interruptible motion, the principle list that ends "Make it" |
+| Paco Coursey | Webmaster at Linear; previously the Vercel design system and site; cmdk, next-themes | Command menus as the interface, keyboard first, typographic restraint |
+| Emil Kowalski | Design engineer, previously Linear and Vercel; Sonner, Vaul, animations.dev; on a break per his site | Ease-out for entrances, 200 to 300ms, springs for gestures, why bounce reads wrong, drawer physics |
+| Jhey Tompkins | Brand Design Studio, Shopify; previously Google and Vercel | CSS-only craft, scroll-driven and anchor demos, CodePen as a sketchbook |
+| Bruno Simon | Three.js Journey (116 hours across 87 lessons; $95 for the three.js course, $45 for WebGPU and TSL, $120 for both) | WebGL from scratch, GLSL shaders, React Three Fiber, the GPU budget |
+| Mariana Castilho | Interaction design prototypes shared publicly; employer as of October 2026 not verified | Native-feeling gestures and state transitions on the web |
+| Also | Josh Comeau (springs, CSS), Cassie Evans (GSAP and SVG), Yuri Artiukh (shaders for agency sites), Manoela Ilic (Codrops) | |
+
+### 13.6 The design engineer QA bar
+
+60fps on a 2022 mid-range Android for every animation, verified in the DevTools Performance panel with no long task over 50ms during scroll; motion limited to transform, opacity and clip-path; reads batched before writes so layout is never thrashed; prefers-reduced-motion honoured; focus states designed rather than removed; a complete keyboard path; touch targets of 44 x 44 CSS px (Apple) and 48dp (Material), with WCAG 2.2's 24 x 24 minimum as the floor; hover only under @media (hover: hover); every state in the matrix; text selectable and right-click intact; 200 percent zoom survives; RTL and dark mode mirrored; a second tap mid-animation never breaks state; no jank with Lenis on iOS; icons optically aligned; durations from the token table in 12-motion-principles-and-ui-motion.md section 4.4.
+
+## 14. Cross browser and device reality
+
+### 14.1 Engines
+
+Blink (Chrome, Edge, Samsung Internet, Brave, Opera, and Android WebView), WebKit (Safari, and every browser on iOS, including Chrome and Firefox, under Apple's App Store rules; the EU has allowed alternative engines since iOS 17.4 in March 2024, but in India and the Gulf every iOS browser is WebKit), Gecko (Firefox). The house matrix: Safari on an iPhone, Chrome on a mid-range Android, Samsung Internet on the same, Safari on macOS, Chrome and Edge on Windows, Firefox on one of them.
+
+### 14.2 Safari quirks
+
+| Quirk | Behaviour | Fix |
+|---|---|---|
+| 100vh | Includes the space under the collapsing toolbar, so a 100vh hero leaves a strip | 100dvh or 100svh (section 2.9); Safari 26.0 also fixed lvh and vh inside SFSafariViewController |
+| backdrop-filter | Historically needed the -webkit- prefix; still safe to include | Both prefixed and unprefixed declarations |
+| Video autoplay | Only muted, playsinline, with the attribute in the HTML; Low Power Mode blocks it | Poster as the LCP image (section 4.5) |
+| Date inputs | Native wheel picker, placeholder cannot be styled | Accept the native control with min and max, or build a calendar |
+| Input zoom | Focusing an input under 16px font-size zooms the page | 16px minimum on inputs |
+| Hover sticks | A tap leaves the hover state on | @media (hover: hover) around hover styles |
+| Resize on scroll | The toolbar collapse fires resize events | ignoreMobileResize in ScrollTrigger; dvh |
+| Overscroll bounce and rubber-banding | Fixed headers float during the bounce | overscroll-behavior; avoid fixed elements that depend on the bottom edge |
+| Notch and home indicator | Content hides under them | viewport-fit=cover and padding from env(safe-area-inset-*) |
+| Storage | Script-written storage is capped at 7 days of non-use under Intelligent Tracking Prevention | Never rely on localStorage for anything that must persist |
+| Formats | WebP since Safari 14, AVIF since 16, JPEG XL since 17, WebGPU since 26 | picture with fallbacks (section 4.2) |
+
+### 14.3 iOS Chrome is WebKit
+
+Chrome on an iPhone is Safari with a different toolbar, so it carries every Safari quirk plus its own viewport sizing; a bug that appears only in Chrome on iOS is almost always the toolbar height. Test both, because the India and Gulf iPhone audience is split between them.
+
+### 14.4 Android fragmentation and the India test device
+
+StatCounter's India mobile vendor share for September 2026: Vivo 21.25 percent, Oppo 15.06, Xiaomi 14.76, Samsung 12.38, Realme 8.87, Motorola 6.5. The test device for the house is therefore a 2023 or 2024 Android sold between about 12,000 and 18,000 rupees (a Redmi Note, a Vivo Y or a Galaxy M), 4 to 6GB of RAM, a MediaTek Dimensity or Snapdragon 6-series chip, a 60Hz or 90Hz screen, and the vendor's skin (MIUI or HyperOS, Funtouch, ColorOS, One UI) with its battery saver, which throttles animation frames. Chrome and Samsung Internet are the browsers; many links open in the WhatsApp or Instagram in-app WebView, which is Chrome's engine with fewer features and no address bar, so test a link opened from WhatsApp. The Gulf audience skews to iPhone and Galaxy S and A series on fast 5G, which is why a page that passes in Dubai still fails in Jaipur.
+
+### 14.5 Network throttling
+
+Lighthouse's mobile simulation (150ms round trip, 1.6Mbps down, 750kbps up, 4x CPU slowdown) is the baseline; DevTools adds Slow 4G and 3G presets and custom profiles; the house custom profile for Indian 4G is 10Mbps down with 100ms latency and the CPU at 4x. WebPageTest from its Mumbai node on a real device is the honest number. Test the first view and the repeat view, and test from a WhatsApp WebView.
+
+### 14.6 Dark mode, reduced motion and print stylesheets
+
+Dark mode: every page tested under prefers-color-scheme: dark, including forced dark on Android (Chrome's auto-dark setting and vendor force-dark in WebViews can invert a light site that declares no color-scheme; declare color-scheme: light dark or light explicitly). Forced colours: Windows High Contrast replaces every colour, so hairlines and ghost buttons need real borders (section 2.9). Reduced motion: the whole motion table in 6.7 collapses to opacity or nothing.
+
+Print, for deal sheets and pitch pages: @page { size: A4; margin: 15mm } (Letter for a US client); under @media print hide navigation, video, loaders and motion; expand every details element; print the URL after key links with a[href]::after { content: " (" attr(href) ")" }; break-inside: avoid on cards and figures; print-color-adjust: exact on brand blocks that must keep their ground; body at 11 to 12pt; images at max-width 100 percent; a header with the mark and a footer with the page number and date. Test in Chrome and Safari print preview, and ship "Save as PDF" as the client's path.
+
+### 14.7 Testing tools
+
+BrowserStack and LambdaTest for real devices in the cloud; Playwright for scripted screenshots across engines in CI; DevTools device mode for layout only (it emulates size, not the engine); and the physical drawer: an iPhone from 2020 or later, the India Android from 14.4, an iPad, and a Windows laptop with Edge. The two-minute check per device: load from WhatsApp, scroll to the end, tap the call to action, rotate, go back.
+
+## 15. Launch QA checklist and maintenance plan
+
+### 15.1 The launch checklist
+
+Identity: favicon.ico at 32px and an SVG favicon (Safari accepts SVG favicons since 26.0), apple-touch-icon at 180px, manifest icons at 192 and 512, theme-color; a unique title and description per page; an Open Graph image per page at 1200 x 630 under 300KB; designed 404 and 500 pages with the navigation intact; the copyright year generated, never typed.
+
+Function: every form delivers to the right inbox and the notification lands (the FormSubmit activation clicked); the thanks page exists and is a goal; spam protection on; email capture writes to Klaviyo or the list; the consent banner behaves on accept, reject and reload; analytics events fire for the goals; Search Console verified and the sitemap submitted; robots.txt allows production.
+
+Performance: the budgets in section 5.2 met on the first view; LCP, INP and CLS green in the mobile lab run; fonts load with swap and a metric-matched fallback with zero shift; width and height on every image; posters on every video; no console errors; Brotli compression, HTTP/2 or HTTP/3, and immutable cache headers on fingerprinted assets.
+
+Accessibility: an axe pass with zero serious issues; a complete keyboard path with visible focus; 4.5:1 contrast on text and 3:1 on UI; alt text; a correct heading order; lang on the html element; a skip link; reduced motion honoured; 200 percent zoom without horizontal scroll; a screen reader pass on the main flow with VoiceOver on the iPhone.
+
+Cross browser: Safari on the iPhone, Chrome on the India Android, Samsung Internet, Safari on macOS, Chrome, Edge, Firefox; dark mode; RTL where an Arabic edition exists; the WhatsApp WebView.
+
+SEO: unique titles, canonicals, hreflang validated, structured data passing the Rich Results Test, noindex removed from production, 301s from every old URL, www and apex resolved to one host, HTTPS everywhere with HSTS, no mixed content.
+
+Infrastructure: DNS TTL raised after the cutover, SSL auto-renewing, the domain and the registrar account in the client's name, MX and mail records untouched and tested by sending and receiving one email, an uptime monitor, backups where a CMS exists, repository access handed over.
+
+Legal: a privacy policy covering DPDP, PDPL and GDPR as the audience requires; terms; a cookie policy if any cookie is set; shipping and returns on a store; photographer, model and location usage rights confirmed for the term; typeface licences for web use at the correct pageview tier; trademark symbols as the client's legal team wants them.
+
+Content: spelling in the client's chosen English, checked with a dictionary pass; the house copy rules (the build refuses an em dash, an exclamation mark or a banned word); no placeholder text; broken links checked with Screaming Frog or a link checker; phone numbers with +91 and +971 and a wa.me link; map pins verified; prices and dates current.
+
+Sign-off: client approval recorded in writing; a launch window of Tuesday to Thursday morning local time, never a Friday afternoon or the eve of a public holiday in either market (the UAE's weekend has been Saturday and Sunday since January 2022); a rollback plan (the previous deployment one click away on every host in 7.9).
+
+### 15.2 The maintenance plan
+
+| Cadence | Tasks |
+|---|---|
+| Daily | Uptime alerts read; forms spot-checked after any change |
+| Weekly | Analytics and Search Console glance (section 12.4); CMS and plugin security updates where a CMS exists; Core Web Vitals field report |
+| Monthly | Dependency updates with a visual regression run; Lighthouse on the three key pages against the budget; broken-link scan; content review with the client; domain and certificate expiry check; backup restore test |
+| Quarterly | Browser release notes read (Safari, Chrome, Firefox) for breaking changes and new capabilities; accessibility re-test; SEO audit; archive the quarter's campaign assets into the case study |
+| Yearly | Domain renewal; font and image licence audit; a currency review of the design against design-taste references/currency-2026.md; copy refresh; a decision to redesign, refresh or hold |
+
+The retainer that pays for this is scoped in 24-business-of-creative-and-agency-operations.md section 3; a site with no maintenance plan is a site that will be slower, less secure and less current within a year, and the client will read that as the agency's taste having aged.
+
+## Terms introduced
+
+- 2x rule: capping served image density at 2 device pixels per CSS pixel, because 3x files cost 2.25 times the bytes for no visible gain in photographs.
+- A and AAAA records: DNS records mapping a name to an IPv4 and an IPv6 address.
+- Adaptive bitrate: streaming that offers several renditions and switches between them by measured bandwidth.
+- AI Overviews and AI Mode: Google features that answer a query on the results page and link out through query fan-out.
+- Anchor positioning: CSS that positions an element relative to another named element, with fallback positions.
+- Art direction (images): serving a different crop per viewport through the picture element.
+- aspect-ratio: the CSS property that reserves a box's proportion before its media loads.
+- AVIF: an image format derived from the AV1 codec, 30 to 50 percent smaller than JPEG at matched quality.
+- Baseline: the shared browser-support vocabulary; newly available means all four engines, widely available means for 30 months.
+- Bulletproof button: an email button built from a table cell with padding and a background colour so it renders with images off.
+- CAA record: a DNS record naming which certificate authorities may issue for a domain.
+- Cache layers, see cascade layers.
+- Canonical link: the link element that names the preferred URL of a page among its variants.
+- Cascade: the algorithm that decides which competing CSS declaration wins, by origin, layer, specificity and order.
+- Cascade layers (@layer): named priority tiers in a stylesheet that beat specificity.
+- CDN: a content delivery network that caches a site at edge nodes near the visitor.
+- ch: a CSS unit equal to the width of the 0 glyph in the current font.
+- clamp(): a CSS function returning a preferred value held between a floor and a ceiling.
+- CLS, Cumulative Layout Shift: the Core Web Vital that sums unexpected layout movement; good is 0.1 or less.
+- CNAME: a DNS record pointing a name at another name.
+- Code Connect: Figma's bridge that maps a repository's components to Figma components for Dev Mode and the Figma MCP server.
+- Compositor-only properties: transform, opacity, clip-path and, with care, filter, which animate without layout or paint.
+- Consent Mode v2: Google's mechanism that adjusts tag behaviour according to the user's consent choices, required for EEA traffic since March 2024.
+- Consent manager: under India's DPDP Act, a registered intermediary through which a person gives, manages and withdraws consent.
+- Container query (@container): CSS that styles an element by the size or style of its container instead of the viewport.
+- Core Web Vitals: Google's three field metrics, LCP, INP and CLS, measured at the 75th percentile.
+- cqi: a container query unit, 1 percent of the container's inline size.
+- CrUX: the Chrome User Experience Report, the field dataset behind Core Web Vitals.
+- Custom properties: CSS variables, written --name and read with var(--name).
+- DASH: MPEG-DASH, the open segmented streaming format, played through Media Source Extensions.
+- DDP and DAP: delivered duty paid and delivered at place; whether cross-border duties are prepaid or collected on delivery.
+- Design engineer: the role between design and front-end engineering that owns motion, interaction and component polish in code.
+- details and summary: the native HTML disclosure elements.
+- Dev Mode: Figma's inspection surface for developers, sold as a seat.
+- dialog element: the native HTML modal with focus trapping, an inert background and Escape to close.
+- DKIM, SPF and DMARC: the three email authentication records (signature, permitted senders, and policy on failure).
+- dotLottie: the zipped Lottie container that bundles assets and cuts file size.
+- dvh, svh, lvh: viewport height units that account for a mobile browser's collapsing toolbar (dynamic, small, large).
+- Enhanced measurement: GA4's automatically collected events such as scroll, outbound click and video engagement.
+- Error correction level: the share of a QR code that can be damaged and still scan; level H is 30 percent.
+- fetchpriority: the HTML attribute that raises or lowers a resource's request priority.
+- Flexbox: one-dimensional CSS layout along a row or column.
+- font-display: the descriptor that decides what shows while a web font loads (swap, optional).
+- font-optical-sizing: the property that lets a variable font choose its design for the rendered size.
+- font-size-adjust: the property that normalises x-height across the fonts in a stack.
+- forced-colors: the media query true under Windows High Contrast, where the OS replaces colours.
+- Grid and subgrid: two-dimensional CSS layout, and a nested element adopting its parent's tracks.
+- GROQ: Sanity's query language for its content lake.
+- hanging-punctuation: the property that hangs opening quotes outside the text block; Safari only.
+- :has(): the CSS parent selector.
+- Headless CMS: an editing system that stores content and serves it by API to any front end.
+- HLS: HTTP Live Streaming, Apple's segmented streaming format with an .m3u8 playlist, native in Safari.
+- hreflang: the annotation that tells Google which language and region each page serves.
+- Hybrid email method: fluid tables capped by max-width, with MSO conditional comments supplying fixed widths to Outlook.
+- Hydration: a framework re-running its component tree in the browser to attach behaviour to server-rendered HTML.
+- hyphens: the property enabling dictionary hyphenation, which needs a lang attribute.
+- Image CDN: a service that serves resized, reformatted variants of a master image from URL parameters.
+- Image sequence scrub: painting 100 to 150 frames to a canvas by scroll progress.
+- INP, Interaction to Next Paint: the Core Web Vital for interaction latency; good is 200ms or less.
+- Intrinsic web design: Jen Simmons's 2018 frame for layouts that respond to content and container.
+- :is() and :where(): selector grouping functions with, respectively, the highest and zero specificity.
+- Islands architecture: a static page where only the interactive components ship JavaScript.
+- JPEG XL: a photography format with lossless JPEG recompression, universal only since late 2026.
+- JSON-LD: the script-based format for structured data that Google prefers.
+- Key events: GA4's name for conversions since March 2024.
+- Lazy loading: deferring an off-screen image or iframe request with loading="lazy".
+- LCP, Largest Contentful Paint: the Core Web Vital for load; good is 2.5 seconds or less.
+- LCP image: the largest image or text block in the first viewport, which decides LCP.
+- Lenis and lerp: the smooth scroll library, and the linear interpolation factor that gives scroll its weight.
+- Liquid: Shopify's templating language of output tags, logic tags and filters.
+- Logical properties: flow-relative CSS properties (inline-start, block-end) that mirror automatically in right-to-left text.
+- Long task: any main-thread task over 50ms, which blocks interaction and feeds INP.
+- Lottie: Airbnb's format and player for After Effects vector animation exported as JSON.
+- Metafields and metaobjects: Shopify's custom fields on resources, and standalone structured records.
+- Metric-matched fallback: an @font-face rule that adjusts a system font's widths and vertical metrics to match the web font so the swap moves nothing.
+- MJML: a markup language that compiles to table-based email HTML.
+- Mobile first: writing the narrow layout as the default CSS and adding complexity as width grows.
+- MX record: the DNS record that routes a domain's email.
+- Nesting (CSS): writing a component's states inside its own rule.
+- One peak rule: a page earns one motion moment beyond CSS; everything else holds still.
+- Open Graph: the meta tag protocol that draws link previews in messaging and social apps.
+- PDP: the product detail page.
+- PLP: the product listing page, a collection or category grid.
+- popover attribute: a native top-layer popover with light dismiss.
+- prefers-color-scheme and prefers-reduced-motion: media queries for the user's colour scheme and motion preferences.
+- Preload: a link rel="preload" hint that fetches a critical resource early.
+- Progressive enhancement: building the HTML to work alone, then layering CSS and JavaScript.
+- Query fan-out: an AI search feature issuing several sub-queries and surfacing a wider set of links.
+- React Server Components: components rendered on the server that send no JavaScript to the browser.
+- Rive: a design tool and runtime for stateful, input-driven vector animation.
+- robots.txt: the file that tells crawlers what they may fetch.
+- @scope: CSS that limits rules to a subtree with an optional lower boundary.
+- Scroll-driven animations: CSS animations whose progress is bound to scroll or an element's passage through the viewport.
+- scroll-snap: CSS that settles scroll on section or item boundaries.
+- ScrollTrigger: the GSAP plugin that binds a timeline to a scroll range with scrub, pin and snap.
+- Section Rendering API: Shopify's endpoint for re-rendering a section without a page reload.
+- Sections, blocks and theme blocks: Shopify's reusable page modules, the modules inside them, and blocks defined once for use across sections.
+- Semantic HTML: using the element that names the content, so structure exists before CSS.
+- size-adjust: the @font-face descriptor that scales a fallback font's glyph widths.
+- sizes and srcset: the attributes that list candidate image files and tell the browser the rendered width per breakpoint.
+- Sitemap: an XML list of a site's URLs, up to 50,000 per file.
+- Speed Index: the lab metric integrating visual completeness over time from a filmstrip.
+- SplitText: the GSAP plugin that splits text into lines, words or characters for reveals.
+- Structured data: machine-readable facts about a page in the schema.org vocabulary.
+- Subsetting and unicode-range: shipping only the glyphs a page needs, per script.
+- System font stack: a font-family list that renders each platform's own UI face at zero bytes.
+- text-box-trim: CSS that trims leading above the cap height and below the baseline.
+- text-wrap: balance and pretty: line-breaking modes that equalise short blocks and improve paragraph rags.
+- Tokenisation (cards): storing a network token in place of a card number, mandated by the RBI since October 2022.
+- TTL: the seconds a DNS record may be cached.
+- Utopia: the fluid type and space method of James Gilyead and Trys Mudford, built on clamp().
+- Variable font: one file carrying an axis range such as weight or optical size.
+- View Transitions: the API that animates between two DOM states or two pages.
+- Web Animations API: JavaScript control of CSS-equivalent animations with play, pause and reverse.
+- WebGL and WebGPU: the browser's GPU rendering APIs, the second with compute shaders and a modern pipeline.
+- WebP: Google's image format, 25 to 34 percent smaller than JPEG, universal since Safari 14.
+- WOFF2: the compressed web font container, the only format worth shipping.
+- x-default: the hreflang value naming the fallback page for unmatched languages.
+
+## Sources and further reading
+
+Books
+
+- John Allsopp, "A Dao of Web Design", A List Apart, 2000 (essay). https://alistapart.com/article/dao/
+- Ethan Marcotte, Responsive Web Design, A Book Apart, 2011 (second edition 2014).
+- Luke Wroblewski, Mobile First, A Book Apart, 2011.
+- Jeremy Keith, Resilient Web Design, 2016. https://resilientwebdesign.com/
+- Rachel Andrew, The New CSS Layout, A Book Apart, 2017.
+- Heydon Pickering and Andy Bell, Every Layout, 2019. https://every-layout.dev/
+- Addy Osmani, Image Optimization, Smashing Magazine, 2021.
+- Robert Bringhurst, The Elements of Typographic Style, Hartley and Marks, 1992 (fourth edition 2012).
+- Steve Krug, Don't Make Me Think, Revisited, New Riders, 2014.
+
+Specifications, standards and platform documentation
+
+- Web Vitals, web.dev, updated 31 October 2024. https://web.dev/articles/vitals
+- Lighthouse performance scoring, Chrome for Developers. https://developer.chrome.com/docs/lighthouse/performance/performance-scoring
+- Baseline, web-platform-dx and MDN. https://web.dev/baseline
+- Interop 2026, web-platform-tests. https://wpt.fyi/interop-2026
+- WebKit in Safari 26.0, 15 September 2025. https://webkit.org/blog/17333/webkit-in-safari-26-0/
+- CSS Scroll-driven Animations Module Level 1, W3C. https://www.w3.org/TR/scroll-animations-1/
+- CSS View Transitions Module Level 1 and Level 2, W3C. https://www.w3.org/TR/css-view-transitions-1/
+- CSS Anchor Positioning Module Level 1, W3C. https://www.w3.org/TR/css-anchor-position-1/
+- CSS Containment Module Level 3 (container queries), W3C. https://www.w3.org/TR/css-contain-3/
+- HTML Living Standard, WHATWG (dialog, popover, details). https://html.spec.whatwg.org/
+- WCAG 2.2, W3C Recommendation, 5 October 2023. https://www.w3.org/TR/WCAG22/
+- Utopia fluid type and space calculators. https://utopia.fyi/
+- HTTP Archive, Web Almanac 2025 (page weight chapter). https://almanac.httparchive.org/en/2025/
+- Alex Russell, "The Performance Inequality Gap" series. https://infrequently.org/
+- Google Search Central, "AI features and your website", updated 10 December 2025. https://developers.google.com/search/docs/appearance/ai-features
+- Google Search Central, Product structured data. https://developers.google.com/search/docs/appearance/structured-data/product
+- Google Search Central, localized versions of pages (hreflang). https://developers.google.com/search/docs/specialty/international/localized-versions
+- Google, Email sender guidelines (bulk sender requirements). https://support.google.com/a/answer/81126
+- RFC 8058, Signaling One-Click Functionality for List Email Headers, IETF, 2017. https://www.rfc-editor.org/rfc/rfc8058
+- Meta for Developers, sharing images for webmasters (og:image sizes). https://developers.facebook.com/docs/sharing/webmasters/images/
+- The Open Graph protocol. https://ogp.me/
+- schema.org (Product, Hotel, LodgingBusiness, Event, Article, VideoObject). https://schema.org/
+- Shopify.dev, theme architecture. https://shopify.dev/docs/storefronts/themes/architecture
+- Shopify.dev, Hydrogen (version 2026-10). https://shopify.dev/docs/storefronts/headless/hydrogen
+- Shopify Help Center, Shopify Payments supported countries. https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries
+- Shopify Theme Store, Horizon (version 4.3.0, 9 October 2026). https://themes.shopify.com/themes/horizon/styles/horizon
+- The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), India Code. https://www.indiacode.nic.in/
+- Ministry of Electronics and Information Technology, Data Protection Framework. https://www.meity.gov.in/data-protection-framework
+- UAE Government portal, data protection laws (Federal Decree-Law No. 45 of 2021). https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws
+- Razorpay pricing. https://razorpay.com/pricing/
+- Vercel limits, updated 16 September 2026. https://vercel.com/docs/limits
+- Vercel Image Optimization limits and pricing. https://vercel.com/docs/image-optimization/limits-and-pricing
+- Cloudflare Pages limits. https://developers.cloudflare.com/pages/platform/limits/
+- Netlify pricing. https://www.netlify.com/pricing/
+- GitHub Pages usage limits. https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+- Framer pricing. https://www.framer.com/pricing/
+- Webflow, "Webflow makes GSAP 100% free". https://webflow.com/blog/gsap-becomes-free
+- GSAP documentation (ScrollTrigger, SplitText). https://gsap.com/docs/v3/
+- Lenis, darkroom.engineering. https://github.com/darkroomengineering/lenis
+- three.js releases. https://github.com/mrdoob/three.js/releases
+- model-viewer. https://modelviewer.dev/
+- Next.js blog (16, 16.2, 16.3, 16.4). https://nextjs.org/blog
+- Astro blog (7.0, 7.4). https://astro.build/blog/
+- WordPress release archive. https://wordpress.org/news/category/releases/
+- shadcn/ui changelog. https://ui.shadcn.com/docs/changelog
+- Figma Help Center, Code Connect. https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect
+- Plausible pricing. https://plausible.io/#pricing
+- PostHog pricing. https://posthog.com/pricing
+- Contentsquare (Hotjar) pricing. https://contentsquare.com/pricing/
+- Formspree plans. https://formspree.io/plans
+- Klaviyo pricing. https://www.klaviyo.com/pricing
+- Sanity pricing. https://www.sanity.io/pricing
+- Litmus, email client market share, September 2026. https://www.litmus.com/email-client-market-share
+- Can I Email. https://www.caniemail.com/
+- MJML. https://mjml.io/
+- Baymard Institute, cart abandonment rate statistics. https://baymard.com/lists/cart-abandonment-rate
+- StatCounter, mobile vendor market share India. https://gs.statcounter.com/vendor-market-share/mobile/india
+
+Articles, talks and courses
+
+- Ethan Marcotte, "Responsive Web Design", A List Apart, 25 May 2010. https://alistapart.com/article/responsive-web-design/
+- Jen Simmons, "Everything You Know About Web Design Just Changed", An Event Apart, 2018 (talk).
+- Deloitte Digital, "Milliseconds Make Millions", 2020. https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html
+- Pew Research Center, "Google users are less likely to click on links when an AI summary appears in the results", July 2025. https://www.pewresearch.org/
+- Awwwards, evaluation criteria and Site of the Day archive. https://www.awwwards.com/
+- Rauno Freiberg, "Invisible Details of Interaction Design" and the Craft notes. https://rauno.me/craft
+- Emil Kowalski, animations.dev (course) and emilkowal.ski. https://animations.dev/
+- Paco Coursey, writing and cmdk. https://paco.me/
+- Jhey Tompkins, demos and writing. https://jhey.dev/
+- Bruno Simon, Three.js Journey (course). https://threejs-journey.com/
+- Bramus Van Damme, scroll-driven animations demos and tutorial. https://scroll-driven-animations.style/
+- Ahmad Shadeed, "RTL Styling 101". https://rtlstyling.com/
+- Josh Comeau, "A Friendly Introduction to Spring Physics". https://www.joshwcomeau.com/animation/a-friendly-introduction-to-spring-physics/
+- Codrops (Manoela Ilic), tutorials and demos. https://tympanus.net/codrops/
+- Locomotive, agency site. https://www.locomotive.ca/en

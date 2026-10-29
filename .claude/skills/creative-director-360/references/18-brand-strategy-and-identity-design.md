@@ -61,7 +61,7 @@ Critique of the template-driven version. The format is fine; the failure is fill
 
 Archetypes: recurring character types drawn from Carl Jung's work and applied to brands by Margaret Mark and Carol S. Pearson in "The Hero and the Outlaw" (2001). The twelve: Innocent, Explorer, Sage, Hero, Outlaw, Magician, Everyman (Regular Guy or Gal in the original), Lover, Jester, Caregiver, Creator, Ruler. Each carries a desire, a fear and a strategy: the Ruler desires control and fears chaos; the Lover desires intimacy and fears being unwanted.
 
-Why they are overused. Twelve bins cannot hold a market of millions of brands; almost every luxury brand files itself under Ruler, Lover or Creator, which gives the archetype zero discriminating power inside the category. They describe personality, which is the easiest part of a platform, and say nothing about position, which is the hardest. They are also a workshop convenience: a deck of cards makes a three-hour meeting feel productive. Use them as a vocabulary check after the position is set (does the tone we have written sound like one coherent character?), never as the strategy. Mark Ritson's criticism, repeated across his Marketing Week columns, is the house view: archetypes are a tool for writing, and a poor one for choosing.
+Why they are overused. Twelve bins cannot hold a market of millions of brands; almost every luxury brand files itself under Ruler, Lover or Creator, which gives the archetype zero discriminating power inside the category. They describe personality, which is the easiest part of a platform, and say nothing about position, which is the hardest. They are also a workshop convenience: a deck of cards makes a three-hour meeting feel productive. Use them as a vocabulary check after the position is set (does the tone we have written sound like one coherent character?); they are too coarse to be the strategy. Mark Ritson's criticism, repeated across his Marketing Week columns, is the house view: archetypes are a tool for writing, and a poor one for choosing.
 
 ### 1.4 Tone of voice frameworks
 
@@ -71,7 +71,7 @@ Tone of voice: the consistent manner in which a brand's words sound, separate fr
 - The "we are, we are never" pair list: three traits, each paired with the failure mode it must avoid ("confident, never boastful"). Its value is that it forbids something. Its risk is that every brand ends up "confident, never boastful".
 - A public content style guide in the Mailchimp manner (styleguide.mailchimp.com, published openly since 2016): voice principles, then rules for grammar, numbers, inclusive language, and every content type from push notifications to legal copy. Its value is that writers can use it without a brand team present.
 
-House rule: the tone is written as six example sentences in six situations (welcome, apology, price, sold out, legal, celebration) before any adjectives are chosen. The sentences are the standard; the adjectives are the index. Full verbal identity method lives in 10-copy-and-tone-of-voice.md.
+House rule: the tone is written as six example sentences in six situations (welcome, apology, price, sold out, legal, celebration) before any adjectives are chosen. The sentences are the standard; the adjectives are the index. Full verbal identity method lives in 10-ux-writing-and-content-design.md.
 
 ### 1.5 Brand architecture
 
@@ -192,7 +192,7 @@ Order of checks, cheapest first:
 
 1. Domain: the exact .com, .in and .ae; then .co and .ae alternatives. A premium exact .com on the aftermarket runs from about USD 2,000 to USD 50,000 in 2026 depending on the word; budget for it or name around it.
 2. Handles: Instagram, YouTube, LinkedIn, X, TikTok (TikTok is unavailable in India since June 2020 and active in the UAE). Instagram handles are limited to 30 characters; aim for the exact name under 15.
-3. Trademark pre-screen by class. Trademarks are registered per class under the Nice Classification (WIPO; 45 classes: 1 to 34 goods, 35 to 45 services; the 12th edition came into force on 1 January 2023 and is updated in a new version each January). A hospitality brand needs at least class 43 (hotel, restaurant services), 35 (retail, advertising) and often 3 (cosmetics, for amenities), 25 (clothing, for merchandise) and 41 (events).
+3. Trademark pre-screen by class. Trademarks are registered per class under the Nice Classification (WIPO; 45 classes: 1 to 34 goods, 35 to 45 services; the 13th edition, version NCL(13-2026), came into force on 1 January 2026, and WIPO publishes a new version each January). A hospitality brand needs at least class 43 (hotel, restaurant services), 35 (retail, advertising) and often 3 (cosmetics, for amenities), 25 (clothing, for merchandise) and 41 (events).
    - India: the public search at the IP India portal (tmrsearch.ipindia.gov.in) offers wordmark search (starts with, contains, match with), phonetic search (the most important for Indian names, because Indian examiners object on phonetic similarity) and Vienna code search for device marks. Search every relevant class with the name, its phonetic variants and its common misspellings.
    - UAE: the Ministry of Economy and Tourism (the trademark office; formerly the Ministry of Economy) runs the online search within its trademark e-services.
    - WIPO Global Brand Database (branddb.wipo.int): international registrations under the Madrid system plus many national collections; also an image similarity search for device marks.
@@ -233,7 +233,7 @@ House rule across both countries: file the wordmark in black and white first (wh
 
 ## 3. Logo and mark design
 
-The logo is the smallest part of an identity and the one the client will judge the whole project by. It must work at 16 pixels and 16 metres, in one colour, embroidered, debossed, and read correctly by a stranger in a second. Taste rules for marks are in design-taste; this section is construction.
+The logo is the smallest part of an identity and the one the client will judge the whole project by. It must work at 16 pixels and 16 metres, in one colour, embroidered, debossed, and read correctly by a stranger in a second. Taste rules for marks are in design-taste; this section covers construction.
 
 ### 3.1 Typology
 
@@ -252,7 +252,7 @@ The logo is the smallest part of an identity and the one the client will judge t
 
 ### 3.2 Construction: grids, geometry and optical correction
 
-A construction grid: the geometric scaffold a mark is drawn on. Use it to make decisions repeatable, never as proof. The "golden ratio circles" overlay on the Twitter bird (2012) and the Apple mark started a decade of after-the-fact grids pasted on finished logos; a grid presented in a case study with 40 circles is a tell that the grid came last.
+A construction grid: the geometric scaffold a mark is drawn on. Use it to make decisions repeatable; it proves nothing about quality. The "golden ratio circles" overlay on the Twitter bird (2012) and the Apple mark started a decade of after-the-fact grids pasted on finished logos; a grid presented in a case study with 40 circles is a tell that the grid came last.
 
 Geometry versus optics: a mark that is mathematically regular looks wrong, because the eye is not a ruler. Optical correction is the set of adjustments that make the form look regular:
 
@@ -282,7 +282,7 @@ Minimum sizes, with the physical reason:
 | Print, emblem with text | 15 to 20mm, with a simplified version below that | Text inside a crest drops out first |
 | Screen, mark alone | 24 to 32px | The thinnest stroke needs at least 1 device pixel at 1x; at 24px a mark with a stroke at 1/24 of its height is 1px |
 | Screen, wordmark | 80 to 120px wide | Same reason, across more letters |
-| Favicon | 16px, drawn separately | At 16px only a solid initial or a silhouette survives; Google asks for a square icon larger than 48px for search results |
+| Favicon | 16px, drawn separately | At 16px only a solid initial or a silhouette survives; Google requires a square of at least 8 by 8px for search results and recommends larger than 48 by 48px |
 | Embroidery | 25mm minimum, no stroke under 1mm, no detail under 2mm | Thread width is about 0.4mm; satin stitch needs at least 1mm |
 | Engraving, debossing | No stroke under 0.3mm, no counter under 0.5mm | Tool radius |
 | Signage | Legible at 10m per 25mm of cap height for a wordmark (a common signage rule) | Reading distance scales with cap height |
@@ -313,16 +313,16 @@ Supply, in this order and with the rule for each: full colour (primary); mono bl
 | AI | Working master | Layers named by version; keep live type on a locked layer for future edits |
 | PNG | Decks, documents, social, where vector is refused | Transparent, at 512, 1024, 2048 and 4096px on the long side, sRGB, plus versions on white and on the brand dark colour |
 | JPG | Only where transparency is impossible | sRGB, quality 90 |
-| App icon, iOS | App Store and device | One 1024 by 1024px opaque PNG in the asset catalogue; the system masks the corners; since iOS 18 the catalogue can hold dark and tinted appearances (verify current sizes on Apple's Human Interface Guidelines, app icons page) |
+| App icon, iOS | App Store and device | One 1024 by 1024px opaque PNG in the asset catalogue; the system masks the corners; since iOS 18 the catalogue holds dark and tinted appearances, and iOS 26 (2025) added layered icons built in Apple's Icon Composer for the Liquid Glass look, with default, dark, clear and tinted variants; verify current sizes and the .icon format on Apple's Human Interface Guidelines, app icons page, because the page changed twice in two years |
 | App icon, Android | Adaptive icon | Foreground and background layers at 108 by 108dp; only the inner 66 by 66dp is guaranteed visible under the launcher mask; the logo itself between 48 and 66dp (developer.android.com, adaptive icons) |
 | App icon, Google Play | Store listing | 512 by 512px, 32-bit PNG, sRGB, under 1024KB, full square with no rounded corners (Play applies a corner radius equal to 30% of the size) |
-| Favicon | Browser tab, search results, bookmarks | favicon.ico with 16, 32 and 48px; a PNG at 32 and 48px; an SVG favicon for modern browsers; apple-touch-icon at 180 by 180px; web manifest icons at 192 and 512px; Google accepts BMP, GIF, ICO, PNG, JPEG, PPM and TIFF and asks for a square larger than 48px |
+| Favicon | Browser tab, search results, bookmarks | favicon.ico with 16, 32 and 48px; a PNG at 32 and 48px; an SVG favicon for modern browsers; apple-touch-icon at 180 by 180px; web manifest icons at 192 and 512px; Google accepts BMP, GIF, ICO, PNG, JPEG, PPM and TIFF, requires a square of at least 8 by 8px and recommends larger than 48 by 48px (developers.google.com, favicon in search, read October 2026) |
 | Social avatars | Profile images | Upload 1080 by 1080px (Instagram displays at 320px, LinkedIn recommends 300 by 300px for company logos, X 400 by 400px; all crop to a circle, so keep the mark inside the inner 80%); verify on each platform's help centre, these change |
-| Lottie or MP4 | Animated mark (see 12-motion-design.md) | Lottie JSON for web and app, ProRes 4444 with alpha for broadcast and edit, MP4 H.264 for social |
+| Lottie or MP4 | Animated mark (see 12-motion-principles-and-ui-motion.md) | Lottie JSON for web and app, ProRes 4444 with alpha for broadcast and edit, MP4 H.264 for social |
 
 ### 3.7 The monogram tradition in luxury
 
-Luxury's monograms are property marks that became patterns: Louis Vuitton's Monogram canvas (Georges Vuitton, 1896, drawn to defeat counterfeiters), Goyard's chevron (1892), Gucci's GG (1960s, from Guccio Gucci's initials), Fendi's FF Zucca (Karl Lagerfeld, 1965), Dior Oblique (Marc Bohan, 1967), Celine's Triomphe (1972, from the chain around the Arc de Triomphe), Burberry's TB (Peter Saville, 2018, since retired in favour of the knight). The lesson for a new premium brand: a monogram works when it is a repeat pattern as well as a mark, when it interlocks with two or three letters at most, and when the brand has the patience to put it on product for a decade before expecting it to mean anything. A monogram launched with the brand and used only on the website is a lettermark with ambition. Indian houses with a working monogram: Sabyasachi's Bengal tiger functions as a crest rather than a monogram; Zoya and Tanishq use wordmarks with a secondary device. The Gulf's working monograms live in hospitality (the Jumeirah and Emaar property marks) and in Arabic calligraphic seals.
+Luxury's monograms are property marks that became patterns: Louis Vuitton's Monogram canvas (Georges Vuitton, 1896, drawn to defeat counterfeiters), Goyard's chevron (1892), Gucci's GG (1960s, from Guccio Gucci's initials), Fendi's FF Zucca (Karl Lagerfeld, 1965), Dior Oblique (Marc Bohan, 1967), Celine's Triomphe (1972, from the chain around the Arc de Triomphe), Burberry's TB (Peter Saville, 2018, since retired in favour of the knight). The lesson for a new premium brand: a monogram works when it is a repeat pattern as well as a mark, when it interlocks with two or three letters at most, and when the brand has the patience to put it on product for a decade before expecting it to mean anything. A monogram launched with the brand and used only on the website is a lettermark with ambition. Indian houses with a working monogram: Sabyasachi's Bengal tiger functions as a crest, with no interlocking letters; Zoya and Tanishq use wordmarks with a secondary device. The Gulf's working monograms live in hospitality (the Jumeirah and Emaar property marks) and in Arabic calligraphic seals.
 
 ### 3.8 Wordmark craft
 
@@ -336,7 +336,7 @@ A custom wordmark is the cheapest route to distinctiveness, because nobody else 
 
 ### 3.9 Trademark drawing
 
-The trademark drawing is the version of the mark filed with the registry. Rules: a clean vector in black on white (covers all colours in India and the UAE; a colour filing limits protection), no clear-space marks, no gradient (gradients are described in words if claimed), the wordmark and the device filed as separate applications so each is protected alone, and the exact lockup filed if the lockup is the famous form. Figurative elements are classified under the Vienna Classification (WIPO; ninth edition in force since 1 January 2023); the examiner uses these codes to search for similar devices, which is why the pre-screen in 2.4 includes a Vienna code search. Provide the filing files as PDF and JPG at 300dpi, 8 by 8cm, which both registries accept.
+The trademark drawing is the version of the mark filed with the registry. Rules: a clean vector in black on white (covers all colours in India and the UAE; a colour filing limits protection), no clear-space marks, no gradient (gradients are described in words if claimed), the wordmark and the device filed as separate applications so each is protected alone, and the exact lockup filed if the lockup is the famous form. Figurative elements are classified under the Vienna Classification (WIPO; tenth edition, VCL10, in force since 1 January 2026); the examiner uses these codes to search for similar devices, which is why the pre-screen in 2.4 includes a Vienna code search. Provide the filing files as PDF and JPG at 300dpi, 8 by 8cm, which both registries accept.
 
 ## 4. Identity system design
 
@@ -372,7 +372,7 @@ A graphic device: a recurring shape, line or pattern derived from the mark that 
 
 ### 4.8 Motion identity
 
-Decide: how the mark animates (one reveal, under 1.5 seconds, with the easing specified), the house easing curve, the transition vocabulary (two or three moves), the type behaviour (static, kinetic, or performative as in Studio Dumbar's work), and the sound pairing. Deliver the logo animation as Lottie and ProRes with alpha. Motion rules in 12-motion-design.md.
+Decide: how the mark animates (one reveal, under 1.5 seconds, with the easing specified), the house easing curve, the transition vocabulary (two or three moves), the type behaviour (static, kinetic, or performative as in Studio Dumbar's work), and the sound pairing. Deliver the logo animation as Lottie and ProRes with alpha. Motion rules in 12-motion-principles-and-ui-motion.md.
 
 ### 4.9 Sound identity
 
@@ -380,7 +380,7 @@ Decide whether the brand has a sonic logo (a 1 to 3 second audio mark), a music 
 
 ### 4.10 Verbal identity
 
-Decide: the tone (1.4), the naming hierarchy (1.6), the house vocabulary (words used, words banned), the bilingual rule (which language leads on which surface; whether Arabic is a translation or a parallel composition), and the strapline if there is one. Method in 10-copy-and-tone-of-voice.md; house copy rules in the mask360-copywriting skill.
+Decide: the tone (1.4), the naming hierarchy (1.6), the house vocabulary (words used, words banned), the bilingual rule (which language leads on which surface; whether Arabic is a translation or a parallel composition), and the strapline if there is one. Method in 10-ux-writing-and-content-design.md; house copy rules in the mask360-copywriting skill.
 
 ### 4.11 Packaging and print
 
@@ -388,7 +388,7 @@ Decide: the substrate family (paper weights, finishes, the one special process s
 
 ### 4.12 Digital and product
 
-Decide: the design tokens (colour, type, space, radius, elevation, motion) exported from the identity so the product team builds from the same values; the component priorities (buttons, forms, cards, navigation); the accessibility floor (WCAG 2.2 AA contrast of 4.5:1 for body text, which constrains the pale luxury palette on screens); the dark mode; and the email system (the most-seen brand surface for hospitality, and the least designed). Method in 06-ui-design.md and 07-ux-and-product.md.
+Decide: the design tokens (colour, type, space, radius, elevation, motion) exported from the identity so the product team builds from the same values; the component priorities (buttons, forms, cards, navigation); the accessibility floor (WCAG 2.2 AA contrast of 4.5:1 for body text, which constrains the pale luxury palette on screens); the dark mode; and the email system (the most-seen brand surface for hospitality, and the least designed). Method in 06-ui-design-craft.md and 07-design-systems-and-tokens.md.
 
 ### 4.13 Environmental and retail
 
@@ -406,7 +406,7 @@ Brian Collins's studio (Collins, New York and San Francisco) and Koto (founded L
 2. Build the world's physics: light, material, motion, sound, humour, the forbidden list.
 3. Design the five surfaces that matter most for this brand (for a hotel: arrival, the key, the room, the breakfast menu, the Instagram grid) before touching the logo.
 4. Draw the mark to fit the world.
-5. Write the rules from what was made, so the guidelines describe a working system instead of a theory.
+5. Write the rules from what was made, so the guidelines describe a working system, with every rule drawn from a made thing.
 
 ## 5. Process for an identity project
 
@@ -454,3 +454,527 @@ Pricing rule the house follows: price the strategy phase separately so a client 
 - Arabic or Devanagari added in week 14. Scripts are designed in phase 5 with the Latin.
 - The guidelines written as a theory. Write them from the applications made in phase 7.
 
+## 6. Brand guidelines
+
+Brand guidelines: the document, site or system that records every rule the identity runs on, so that people who were not in the room can produce work that belongs. A guideline that nobody opens has failed at its one job. The guideline is written from the applications made in phase 7, which is why it comes after them in the schedule (5.1).
+
+### 6.1 Structure
+
+| Section | What it holds | Typical length | Common failure |
+|---|---|---|---|
+| Strategy | Positioning statement, platform on one page, architecture diagram, audience in two paragraphs, the forbidden list | 4 to 6 pages | Twenty pages of workshop output nobody reads |
+| Logo | Primary mark, versions (3.5), lockups and bilingual lockups (3.4), clear space, minimum sizes (3.3), placement rule, misuse page with 8 to 12 real examples | 8 to 12 pages | A misuse page of imaginary crimes; the real ones are stretching and recolouring |
+| Colour | Every colour in Pantone C and U, CMYK, RGB, HEX, RAL and NCS where signage exists; proportions (the 60 30 10 split or the brand's own); approved text-on-colour pairs with WCAG ratios; dark-mode mapping | 4 to 6 pages | Six accents with no proportion rule, so every designer uses all six |
+| Typography | Families, weights, licences and who holds them, the scale by format, bilingual rules, fallbacks for email and Office | 6 to 8 pages | A face nobody at the client has a licence for |
+| Layout | Grids for the three master formats (4.3), margins, logo position, the bilingual mirrored grid | 4 to 6 pages | A grid drawn for A4 and applied to 1080 by 1920 |
+| Imagery | Photography direction, 20 to 40 approved frames, 6 to 10 rejected frames with the reason, retouch rule, illustration style if any | 8 to 12 pages | Stock frames shown as examples because the shoot has not happened |
+| Iconography | The set, the grid, stroke, naming, where icons may and may not appear | 2 to 4 pages | Icons from three open sets mixed |
+| Motion | Logo animation, the easing curve as a value (for example cubic-bezier(0.2, 0, 0, 1)), durations by move, examples as video files and Lottie | 2 to 4 pages plus files | Motion described in adjectives |
+| Voice | Principles, the six sentences in six situations (1.4), vocabulary used and banned, bilingual rule, examples by content type | 6 to 10 pages | Adjectives with no sentences |
+| Applications | The 15 to 30 surfaces from phase 7 shown finished, with specs | 10 to 20 pages | Mock-ups of surfaces that were never built |
+| Masters | Editable files (what the industry calls templates): deck, document, social formats, email, menu, signage | Files, with a one-page index | Masters that drift from the guideline within a month because they were made last |
+| Do and do not | 12 to 20 paired examples across all elements | 2 to 4 pages | Only logo misuse; colour and type misuse are more common |
+| Contacts and governance | Who approves what, the version number, the change log, where the assets live, the licence register | 1 to 2 pages | No owner named, so the guideline freezes at launch |
+
+A premium single brand's guideline runs 40 to 80 pages as a PDF; past about 120 pages it stops being read, because the people who need it are designers at the client working at speed. A group with several brands splits into a master guideline and one 20 to 30 page guideline per brand.
+
+### 6.2 Digital-first guidelines
+
+Digital-first guideline: a guideline published as a website, with assets downloadable from the page they are described on, and values held as design tokens (named values for colour, type, space, radius, elevation and motion, stored once and exported to Figma, code and the guideline itself; method in 07-design-systems-and-tokens.md). Three reasons the house delivers digital-first and treats the PDF as an export:
+
+1. A PDF is out of date the day the first new application ships; a site is edited in an hour.
+2. "Can you send the logo" is the most common client email after a launch; a guideline site with the file suite (3.6) on the logo page ends it.
+3. A token change (a hex value, a spacing step) propagates to the product, the Figma library and the guideline from one edit, so the three cannot drift.
+
+Platforms as of October 2026: Frontify (Swiss, founded 2013; the most used brand guideline platform among larger brands, with asset management and editable masters built in), Bynder (asset management first), Brandpad and Standards (standards.site; lightweight guideline sites for studios), Zeroheight (design system documentation that reads Figma libraries), Supernova (tokens and documentation together), and a static site built by the studio (cheapest, needs a developer for every change). A Frontify guideline for a single brand runs from about USD 3,000 to 10,000 a year in licence, which a Mask360 client must accept before the format is chosen; a studio-built static site costs once and dates slowly.
+
+A living system goes one step further: the Figma library, the code components (06-ui-design-craft.md), the token file and the guideline are one versioned thing, released together with a change log. This is right for a client with a product team and wrong for a boutique with one designer; for the boutique, a 40-page PDF, a Canva brand kit and a shared folder with the file suite is the honest deliverable.
+
+### 6.3 Examples to study
+
+| Guideline | Year and author | Where to read it | What it teaches |
+|---|---|---|---|
+| NASA Graphics Standards Manual | 1975, Danne & Blackburn (Richard Danne and Bruce Blackburn); the "worm" | Reissued 2015 by Jesse Reed and Hamish Smyth (Standards Manual) | A manual as a design object; grid-based page systems; the fragility of a modernist identity in a political organisation (the worm was retired in 1992 for the 1959 "meatball" and returned on hardware and merchandise from 2020) |
+| British Rail Corporate Identity Manual | 1965 onward, Design Research Unit; Gerald Barney's double arrow; Rail Alphabet by Jock Kinneir and Margaret Calvert | Reissued 2016 by Wallace Henning | A system for a nation: livery, signage, print, uniforms in binders added to over years; the double arrow outlived the company that commissioned it and is still the UK's national rail symbol |
+| Spotify | 2015 identity with Collins; brand site and developer design guidelines | spotify.design; developer.spotify.com (design guidelines for partners) | Rules written for third parties: how the mark appears inside someone else's app, the minimum sizes, the one green; the duotone image system that let a logo-light brand be recognised in a feed |
+| Uber | 2018, Wolff Olins with Uber's in-house team; Uber Move typeface by MCKL | brand.uber.com (public) | A brand system organised as elements (wordmark, composition, iconography, illustration, motion, photography, tone, typography, colour), each with a rule, an example and a reason, built for a company of thousands of designers in dozens of markets |
+| Airbnb | 2014, DesignStudio; the Bélo; Airbnb Cereal typeface 2018 with Dalton Maag | design.airbnb.com and the Cereal release notes | A community symbol launched with a story (the Bélo as belonging), the ridicule it drew, and the discipline of replacing a licensed face (Circular) with an owned one once the brand was large enough to justify it |
+| Mailchimp | 2018 identity by Collins; the content style guide public since 2016 under a Creative Commons licence | styleguide.mailchimp.com | The most useful public guideline is the writing guide, because writers use it daily; voice principles followed by rules for every content type down to legal copy and push notifications |
+| Burberry | 2023, in-house under Daniel Lee | No public guideline; study the stores, the campaigns and the site | The return of heritage assets (the Equestrian Knight circa 1901, a serif wordmark, the check) after the 2018 sans system; how a luxury house documents itself through applications, with no published manual |
+| Audi | 2017 identity; Audi Type by Bold Monday (Paul van der Laan and Pieter van Rosmalen); the rings flattened in 2017 and reduced to black and white in 2022 | audi.com/ci (public corporate identity portal) | A car company's identity published as a living portal with downloadable assets, motion specifications and sound; the case for an engineering brand treating its guideline as a product |
+
+Read each for one thing. The house reads NASA for page systems, British Rail for signage and uniforms, Uber for how to structure a web guideline, Mailchimp for voice, Audi for motion and sound specification.
+
+### 6.4 The agency deliverable format
+
+What Mask360 hands over at phase 8, in this order of priority:
+
+1. Brand on a page: one A3, the positioning, the mark, the palette, the type, three images, six sentences of voice. It goes on the wall at the client.
+2. Guideline site (or PDF for a small client) in the structure of 6.1, version 1.0, dated.
+3. Asset pack with a fixed folder structure and a naming convention, because an asset nobody can find is an asset that gets redrawn:
+
+```
+BRAND_Identity_v1.0_2026-11/
+  01_Logo/        BRAND_Logo_Primary_RGB.svg  BRAND_Logo_Primary_CMYK.pdf  BRAND_Logo_Mono_Black.svg ...
+  02_Colour/      BRAND_Colours.ase  BRAND_Tokens_Colour.json  BRAND_Colours.pdf
+  03_Type/        licences/  BRAND_TypeScale.pdf  (font files only where the licence allows redistribution)
+  04_Imagery/     approved/  rejected/  BRAND_Grade.cube  BRAND_Grade.xmp
+  05_Icons/       svg/  BRAND_Icons.fig
+  06_Motion/      BRAND_LogoReveal.json (Lottie)  BRAND_LogoReveal_ProRes4444.mov  BRAND_LogoReveal_1080.mp4
+  07_Masters/     deck/  document/  social/  email/  print/
+  08_Applications/ print-ready PDFs and dev-ready exports by surface
+  09_Guidelines/  BRAND_Guidelines_v1.0.pdf  link to the web guideline
+  README.txt      version, date, contacts, what changed
+```
+
+4. Figma library with published components and styles, and the token JSON (07-design-systems-and-tokens.md).
+5. Licence register: every typeface, photograph, illustration and music track, with the licence type, the holder (which must be the client, never the studio), the renewal date and the cost.
+6. Launch deck: the story of the identity in 20 to 30 slides for the client to show staff and partners.
+
+Versioning: 1.0 at launch; 1.1, 1.2 for additions (a new application, a new colour pair); 2.0 for a rebrand. The change log sits in the README and on the guideline site. Semantic versioning is borrowed from software because designers at the client will ask "which version is this" and the answer must be in the filename.
+
+## 7. Rebrand case studies
+
+Rebrand: a change to the identity, from a refresh (the same assets redrawn) to a replacement (new name, mark or system). Each case below is read for one lesson, with the facts dated. Verdicts on taste live in design-taste; this section records what happened and why.
+
+### 7.1 Luxury fashion
+
+- Yves Saint Laurent to Saint Laurent (2012). Hedi Slimane renamed the ready-to-wear house Saint Laurent Paris, set it in a plain grotesk and moved the design studio to Los Angeles. The press and the fans objected; the Cassandre YSL monogram (1961) stayed on beauty and accessories, where the money was. Kering's reports show the house's revenue roughly doubling across Slimane's tenure (about EUR 470 million in 2012 to about EUR 1.2 billion in 2016; verify against Kering's annual reports before quoting). Lesson: the "new" name was the 1966 Rive Gauche name, so the rename was a return; a famous monogram can be retired from one surface and kept where it earns.
+- Balenciaga (2017). Under Demna, a wide, plain sans wordmark (credited to Bureau Borsche, Munich) replaced the previous lettering, and the logo moved from the label to the product (the logo hoodie, the cap). The November 2022 campaign crisis showed that an identity's restraint cannot absorb a creative misjudgement in a campaign. Lesson: in the blanding era the wordmark became merchandise; the identity's job was to be printable at 400mm across a chest.
+- Celine (2018). Slimane dropped the accent from Céline, redrew the wordmark in a 1960s-referencing sans, wiped the brand's Instagram and started again. The #oldceline reaction lasted about two seasons; the Triomphe (1972) was revived as a hardware and canvas asset and became the house's best-selling signifier. Slimane left in 2024; Michael Rider was appointed creative director in October 2024. Lesson: the accent was an asset with fame and should have been kept; the dormant Triomphe was the asset that mattered; deleting the archive injured the brand more than the wordmark did, because a luxury brand's history is its moat.
+- Bottega Veneta (2018 to 2026). Daniel Lee (2018 to 2021) made a green (the "Bottega green") and the intrecciato weave the identity, kept the wordmark small and plain, and in January 2021 deleted the brand's social media accounts, replacing them with a quarterly digital magazine, Issue. Matthieu Blazy (2021 to 2025) carried the method on product and was announced as Chanel's artistic director in December 2024; Louise Trotter took over in 2025. Lesson: absence can be a code; the distinctive assets here are a colour and a texture, and the brand bought mental availability by leaving the channel every competitor used.
+- Burberry (2018, then 2023). Riccardo Tisci's 2018 identity (Peter Saville: a sans wordmark and a TB monogram) was replaced in February 2023 under Daniel Lee by a serif wordmark referencing the house's earlier lettering and the Equestrian Knight, which Burberry dates to a public competition circa 1901 and had dropped in 2018. Saville told Dezeen in June 2025 that abandoning continuity at Burberry's scale was "totally and utterly irresponsible". Lesson: the 2018 system threw away assets with high fame; the 2023 system brought them back; the sales decline of 2023 to 2024 traced to product and price, and the identity was the fastest and cheapest thing to fix, which is why it was fixed first.
+- Ferrari (the case for leaving the mark alone). The Cavallino Rampante came from the aviator Francesco Baracca's emblem, offered to Enzo Ferrari by Baracca's mother in 1923, and first appeared on cars in 1932 on the canary yellow of Modena. Two badge formats persist: the shield for Scuderia Ferrari and the rectangle for road cars. Ferrari's Centro Stile has been led by Flavio Manzoni since 2010, and the brand's expansion into fashion (first collection shown at Maranello in June 2021 under Rocco Iannone) left the mark untouched. The house found no verifiable logo redesign through October 2026. Lesson: a brand whose product is the identity extends by category, never by redrawing the mark.
+- Zara (2019). Baron & Baron (Fabien Baron) set the wordmark in a high-contrast Didone with overlapping letters. The design press called it illegible; the fascia and the bag are where a fashion retailer's wordmark lives, and there it worked; it is still in use in 2026. Lesson: the internet's verdict and the shopper's verdict differ; judge a wordmark on the surfaces that carry it.
+- Jaguar (2024 to 2026). On 19 November 2024 Jaguar released a film with no car under the line "Copy nothing", a mixed-case "JaGUar" wordmark, a redrawn leaper, a pastel palette and the phrase "exuberant modernism"; the Type 00 concept was shown on 2 December 2024 at Miami Art Week. The company had already wound down its model line ahead of an all-electric relaunch, so the registration collapse that followed (49 cars in Europe in April 2025 against 1,961 a year earlier; 2,845 from January to October 2025 across the EU, EFTA and the UK, down 86.2%, per ACEA data reported by Motor1) was partly planned and partly the cost of a gap with nothing to sell. The production car, named Type 01, was expected for 2026; a cyberattack on JLR in September 2025 halted production for weeks. Lesson: a rebrand with no product makes the identity the product, and the identity broke every category code at once, so the existing buyer had nothing to hold; the sequence (film, then car, then a two-year wait) was reversed; distinctiveness was bought by discarding every asset with fame.
+
+### 7.2 Global consumer and technology
+
+- Pepsi (2023). PepsiCo's in-house Design and Innovation team under Mauro Porcini returned the wordmark to the globe, in black and an electric blue, with a custom typeface, rolling out in North America from autumn 2023 and globally through 2024; the first change in 14 years. The black reads as Pepsi Zero Sugar's colour promoted to the master brand. Lesson: the 2008 Arnell identity (the "smile", with its leaked rationale of golden ratios) is the cautionary case; the 2023 mark is the 1970s to 1990s asset redrawn to pulse in motion, so the return was a return of fame.
+- Kia (2021). The new wordmark's joined letterforms read as "KN"; Carthrottle reported about 30,000 US Google searches a month for "KN car" after the launch. Lesson: legibility is tested with people who have never seen the name; a wordmark is read at a glance by a stranger, and elegance that costs a letter costs the brand.
+- Reddit (2023). Pentagram (Natasha Jen's team) rebuilt Snoo as a 3D character with a range of expressions, redrew Reddit Sans so the counters take a speech-bubble shape, and cut the palette from more than 100 colours to 15, ahead of the March 2024 listing. Lesson: a mascot is a distinctive asset that needs a character bible and a 3D model; cutting a palette from 100 to 15 is where the system work is.
+- Johnson & Johnson (2023). Wolff Olins replaced the 136-year-old script signature with a red sans built from single pen strokes on 14 September 2023, after the consumer business was spun off as Kenvue, which kept the old script on products. Lesson: architecture drove identity; the script had high fame and poor screen legibility, and once the consumer products left, the parent needed to look like a healthcare company.
+- Twitter to X (2023). On 23 and 24 July 2023 the bird (its 2012 drawing by Martin Grasser with Todd Waterbury and Angy Che) was replaced with an X glyph taken from a user's post, with no system behind it; the verb "tweet" outlived the logo. Lesson: an asset with near-total fame was discarded for a founder's preference, and the verbal assets (tweet, retweet) were not planned for; the rename without a system is the most expensive kind.
+
+### 7.3 India
+
+- Air India (2023). FutureBrand's identity, unveiled in New Delhi in August 2023 by Tata Sons chairman N. Chandrasekaran: "The Vista" mark drawn from the peak of the jharokha window frame used on the fleet since 1971, a palette of deep red, aubergine and gold, a chakra-derived pattern, a custom Air India Sans, and the Maharajah mascot (1946) moved to a secondary role on crockery and glassware. The first aircraft in the livery, an Airbus A350, entered service in December 2023. Lesson: a heritage asset was transformed and kept, and the public argument was about the demoted mascot, which proves it was the asset with the most fame; the livery is the largest surface and was designed first.
+- Zomato to Eternal (2025). The board approved renaming the listed parent Eternal Ltd on 6 February 2025; shareholders approved in March 2025 with over 99% of votes in favour; the ticker moved to ETERNAL and the consumer brand Zomato kept its red wordmark alongside Blinkit, Hyperpure and District. The name had been used internally since the 2022 Blinkit acquisition. Lesson: corporate and consumer names separate when a holding owns more than one consumer brand (1.6); the consumer mark did not move.
+- Cred (2018 onward). Kunal Shah's credit-card payments app took luxury's codes (black, white, restraint, no tagline, slow motion) into fintech and open-sourced its NeoPOP design system in 2021, while its campaigns (Rahul Dravid as the "Indiranagar ka gunda", 2021) did the opposite. Lesson: a quiet identity and loud campaigns are a workable tension when both are deliberate and the identity never flexes to meet the campaign.
+- Tata Neu (2022). The group's superapp launched on 7 April 2022 with a purple identity and NeuCoins rewards, endorsed by the Tata name across groceries, flights, hotels and jewellery. Lesson: an architecture problem (one app for a dozen categories with their own brands) cannot be solved by an identity; the brand first had to mean a reward programme before it could mean anything else.
+- Mokobara (2020 onward). The Bengaluru luggage brand made colour the asset in a category of black suitcases, with a lowercase wordmark and premium pricing. Lesson: in a category with no colour code, own the colour range; the product is the medium.
+- Blue Tokai Coffee Roasters (2013 onward). Founded in Delhi by Matt Chitharanjan and Namrata Asthana; every pack names the estate, the altitude and the roast date, under a peacock-feather mark. Lesson: transparency broke the commodity-coffee code and the pack carried the identity; the name's descriptor half (Coffee Roasters) did the explaining so the mark could stay quiet.
+
+### 7.4 The Gulf
+
+- Emirates (1985 onward). The Arabic calligraphic wordmark, paired with a serif Latin "Emirates", has stayed in place for four decades on the largest surfaces in aviation. Lesson: calligraphy drawn once and well is a permanent asset; the livery is the medium.
+- Etihad (2014). Landor's identity (Landor was Landor & Fitch from 2021 to 2023 and is Landor again, part of WPP) drew a facet pattern from the UAE's desert and Abu Dhabi's architecture, in sand and gold, with a modern calligraphic Arabic wordmark. Lesson: a national carrier's identity is a nation's; the pattern system did the differentiating that a wordmark could not, because every Gulf carrier has a calligraphic wordmark.
+- Emaar. The master brand sits on every tower it builds (Burj Khalifa, Dubai Mall), and endorses its hotel brands (Address, Vida, Palace, and Armani Hotel Dubai as a co-brand). Lesson: real estate's identity is the skyline; the sign on the building is the logo, and the endorsement system (1.5) lets each hotel keep its own codes.
+- Visit Dubai. The Department of Economy and Tourism (formed by merger in 2021) runs the city brand as a wordmark with its Arabic form and a campaign engine ("Dubai Presents", 2021, with Jessica Alba and Zac Efron). Lesson: a city brand is a wordmark and a release schedule; the city supplies the imagery, so the identity's job is to stay out of the way and be recognisable in the corner of a film.
+- Saudi Vision 2030 brands. Vision 2030 (announced April 2016) sits above a house of brands funded through the Public Investment Fund: NEOM (announced October 2017; the name from neo, new, plus M from the Arabic mustaqbal, future), The Red Sea, Diriyah, Qiddiya and ROSHN, each a place brand built before the place exists; the Saudi Tourism Authority's "Saudi, Welcome to Arabia" (2022); and Riyadh Season, the General Entertainment Authority's annual festival since 2019 with an identity refreshed each year. Lesson: state-funded brand building at a scale no private client reaches; the architecture is a house of brands under a parent most buyers never see; and a place brand with no place yet lives on renders and film, which is the arena Mask360's Gulf clients compete in for attention.
+
+### 7.5 The blanding era and the reversal
+
+Blanding: the convergence of luxury and technology wordmarks on near-identical geometric or grotesk sans between about 2012 and 2019 (Saint Laurent 2012, Balenciaga 2017, Burberry 2018, Celine 2018, Berluti 2018, Balmain 2018; in technology, Google 2015, Airbnb 2014 and a generation of start-ups set in Circular or Inter). The term is attributed to Thierry Brunfaut of Base Design, who wrote about it in 2018. The reasons were real: an app icon at 60px, a feed post at 1080px, global legibility, and a cost-free way to signal "modern". The cost was distinctiveness: on Romaniuk's grid (1.11), ten houses with the same sans share one asset, so the fame of each is also the fame of the others. The reversal began with Ferragamo's 2022 wordmark (Peter Saville) and Burberry's 2023 serif, and by 2026 the serif is the dominant luxury code (1.8), which is why design-taste, references/currency-2026.md lists expressive serifs as rising and warns against the cream-and-serif default. The house rule: the face follows the brand's own history; a brand without a history takes the skeleton its product's forms already have (3.8).
+
+### 7.6 The Brand New review lens and how to read a jury
+
+Brand New (underconsideration.com/brandnew) has reviewed identity work daily since 2006; it is run by Bryony Gomez-Palacio and Armin Vit from Bloomington, Indiana, and was publishing daily as of 28 October 2026. The format is fixed and worth copying for internal critique: the before and after side by side, the mark at small size, the wordmark alone, the applications, the designer's own rationale quoted, then a verdict on drawing, spacing, system and story, followed by a reader poll (Great, Fine, Bad). What the lens sees well: craft (a badly drawn join, uneven spacing, a lockup that fails at 24px), the gap between a studio's rationale and its result, and the case study film's tricks. What it cannot see: the strategy, the business reason, the constraints, how the client's staff will use the system, and sales. Jaguar (7.1) and Zara (7.1) were widely panned there and both remained in market; Brand New's "Bad" is a craft verdict with no information about commerce.
+
+Reading any jury (D&AD, Cannes Lions Design, the Transform Awards, Kyoorius in India, Dubai Lynx in the Gulf): entries are judged from a case study film and a board, so the studio's framing is part of the work; juries reward systems, motion and a single idea told in under two minutes; a studio's awards tell a client that its peers rate it, and nothing about whether it will listen. The house uses juries as a currency signal (what the profession rewards this year, cross-referenced with design-taste, references/currency-2026.md); a jury result says nothing about whether an identity worked.
+
+## 8. Luxury brand identity codes
+
+Codes here are the signs the luxury category shares (1.8), listed so that the house can decide which to keep, which to break, and which to borrow for a premium client without faking the economics (1.10).
+
+### 8.1 The European codes
+
+| Code | Canonical example | What it signals | How it is misused |
+|---|---|---|---|
+| Monogram | LV (1896), GG, CC, Triomphe (1972), Loewe Anagram (1970); see 3.7 | Property, lineage, a pattern that sells without a logo | A two-year-old brand launching a monogram on a website |
+| Heritage date | "Depuis 1854" (Louis Vuitton), "Maison fondée en 1837" (Hermès), Tiffany's 1837 | Time as proof; the brand outlived its first customers | "Est. 2023" set in a crest; a date with no story behind it |
+| Maison and the city | "Maison", "Paris", "Milano", "London" under the wordmark | Place as guarantor of craft; the city is a reason to believe | A Dubai brand writing "Paris" because the founder studied there |
+| Serif and the 2023 reversal | Burberry 2023, Ferragamo 2022, the Didones of Dior and Valentino | Continuity, print, the hand; sans signalled "modern" from 2012 to 2019 and signals "everyone" in 2026 | A serif chosen from the default list; see design-taste, references/type.md |
+| Colour ownership | Hermès orange (the box, adopted when cream card ran out in the 1940s), Tiffany Blue (1845 Blue Book; Pantone 1837 custom), Bottega green (2019), Valentino's PP Pink (2022, with Pantone), Cartier red | One saturated colour, held for decades, that triggers the name without it | Three accents; a colour chosen for a season; a palette |
+| Restraint | A mark under 10mm on a 300mm page; Aman; The Row | The brand does not need to shout; price is in the space | Restraint without an idea, which reads as empty |
+| The campaign film | One film a season, a named director (Sofia Coppola for Dior; Wes Anderson for Prada's "Candy", 2013; Jonathan Glazer for various houses) | Closeness to the arts (Kapferer's anti-law 17); the dream (anti-law 9) | A product video with a piano track; see 19-campaigns-and-creative-direction.md |
+| The lookbook | White or grey backdrop paper, one crop, every look at the same scale | The collection as a document; the buyer's tool made public | Lifestyle shots mixed into the lookbook, so neither function works |
+| The boutique | Peter Marino for Chanel, Dior, Louis Vuitton; the facade as the largest ad in the city | The store is the medium where selling happens (anti-law 9) | A boutique designed by the mall's fit-out contractor |
+| The box | Hermès orange, Tiffany blue, Cartier red, Louboutin's red sole (registered as a shape and colour mark in several jurisdictions) | The gift is the brand; the box outlives the purchase on a shelf | A box with a printed logo on a stock carton; see 20-print-and-packaging.md |
+
+### 8.2 India's luxury codes
+
+India's dominant luxury code is abundance held under discipline, which inverts the European code of restraint; the emergent code is restraint with a single Indian material.
+
+- Sabyasachi (founded 1999, Kolkata): the Bengal tiger crest, the heritage prints, the maximalist interiors (the Mumbai flagship at Horniman Circle, the New York store on Christopher Street from 2022), the jewellery line, the Sabyasachi Art Foundation. The brand builds a world (4.15) at a density no European house attempts, and the discipline is in the repetition: the same tiger, the same wall colour, the same mannequin, in every city. Lesson: world building, with one crest held constant.
+- Raw Mango (Sanjay Garg, 2008, Delhi): handloom saris, a near-empty frame, a lowercase wordmark, a palette drawn from the cloth. The brand broke the bridal code (gold, red, ornament) with plain weaves and silence, and became the emergent code's reference. Lesson: restraint reads as luxury in India when the material is unmistakably Indian.
+- Zoya (Titan, 2009): fine jewellery sold in boutiques designed as salons, with one-to-one appointments and a quiet wordmark. Lesson: service design (section 10) as the identity in a category where product photography is interchangeable.
+- Tanishq (Titan, 1994): the T mark, the Rivaah bridal sub-brand, the wedding films, and the trust codes (purity, buy-back) in a category where trust was local and family-held. Lesson: a national brand in jewellery is built on trust mechanics made visible, and the identity carries them.
+- A code specific to Indian jewellery: BIS hallmarking of gold jewellery has been mandatory in phases since June 2021, with a six-character alphanumeric HUID on each piece; the hallmark and the HUID are trust marks the identity must accommodate on tags, certificates and product pages, and a premium jeweller's packaging design starts from where they sit.
+- The Indian hospitality codes: the Taj's palace heritage (Taj Mahal Palace, Mumbai, 1903), the Oberoi's service codes, Aman's Indian properties (Aman-i-Khás, Amanbagh) as the restraint reference, and the new boutique hotels of Goa and Jaipur, where the emergent code is the single material (lime plaster, terrazzo, cane) and a hand-drawn mark.
+
+### 8.3 Gulf codes
+
+- Arabic calligraphy done well: the Emirates wordmark (1985), the Dubai Expo 2020 logo (drawn from a 4,000-year-old gold ring found at Saruq Al Hadid, unveiled 2016), the Etihad wordmark. The code is a wordmark that is calligraphy first and a translation second; the tell is a Latin wordmark with an Arabic font typed under it (3.4).
+- Amouage (Oman, founded 1983): the perfume house whose bottle references the khanjar dagger and the minaret, relaunched under creative director Renaud Salmon from 2019 with European perfumery's codes (the flacon, the campaign, the maison) and Omani materials (frankincense). Lesson: Gulf heritage expressed through the category's global codes, with the local material as the proof.
+- Ounass (Al Tayer Group, 2016): luxury e-commerce for the Gulf, named from the Arabic for "people", with a bilingual lockup and a delivery promise measured in hours for Dubai. Lesson: in the Gulf, service speed is a luxury code, and the identity's job is to look as considered as the brands it sells.
+- Bilingual lockups and the mandatory Arabic trade name on signage (2.6, 3.4) are a legal fact and a design code at once; the houses that do it well give the Arabic equal craft and often the leading position.
+- Gold is the dominant colour code of Gulf luxury; the emergent code is matte, sand, stone and dark green, visible across the Saudi giga-project brands and the newer Dubai hospitality launches. The house breaks gold quietly: one gold detail on a matte ground reads as the Gulf without reading as a souk.
+- The heritage and future duality: the Gulf's place brands run two codes at once, the Nabataean tombs of AlUla and the renders of The Line, Sharjah's heritage districts and Dubai's towers. A brand picks one as its ground and borrows the other as its tension (design-taste section 1, principle 5).
+
+## 9. Brand measurement
+
+What the identity work is accountable for, and what it cannot be. Numbers here are the ones the house can defend in a client review.
+
+### 9.1 Awareness and salience
+
+Awareness: the share of the target who know the brand exists. Unaided (spontaneous) awareness: named without a prompt ("which jewellers in Jaipur can you name"). Aided (prompted) awareness: recognised from a list. Top-of-mind: named first. Salience: Ehrenberg-Bass's refinement, the propensity to be thought of across buying situations, measured by asking which brands come to mind for each category entry point (1.11) and counting the links.
+
+Sampling arithmetic the house states before any tracker is sold: at a 95% confidence level, a sample of 300 carries a margin of about plus or minus 5.7 percentage points on a 50% result, a sample of 1,000 about 3.1 points. A quarter-on-quarter awareness move of 4 points on n = 300 is noise. Trackers for premium brands therefore run two to four waves a year with n at 500 or more per wave, or they run annually.
+
+### 9.2 Distinctive asset tracking
+
+Romaniuk's method (1.11), run annually for a mature brand: show each asset without the name (the colour swatch, the pattern, the mark's silhouette, the typeface in a neutral word, the sonic logo) to category buyers and ask which brand it belongs to. Fame is the share who name the brand; uniqueness is the share of all names given that are this brand. Plot on the grid. An identity project for a mature brand should move at least one asset into the "use or lose" quadrant within two years, or the system has decoration in it.
+
+### 9.3 Brand tracking surveys
+
+| Tracker | Method | Cadence | Use |
+|---|---|---|---|
+| YouGov BrandIndex | Daily online panel, metrics such as Buzz, Impression, Consideration, Current Customer | Continuous | Large consumer brands; India and UAE panels exist |
+| Kantar BrandZ | Consumer survey plus financial data; Meaningful, Different, Salient | Annual | Valuation and the Difference metric, which is the nearest industry measure of differentiation |
+| Interbrand Best Global Brands | Financial analysis, role of brand, brand strength; the 2026 edition leads with Apple at USD 514.6 billion | Annual | A valuation lens and a methodology to borrow for a client's own brand strength score (ten factors) |
+| Brand Finance Global 500 | Royalty relief valuation | Annual | Valuation for boards |
+| Custom tracker | Studio-written questionnaire, 12 to 20 questions, run through a panel (Kantar, Ipsos, YouGov, or a self-serve panel) | 2 to 4 waves a year | Premium brands with a definable buyer universe; cost in India from a few lakh per wave with a panel, more with recruitment of high-net-worth respondents |
+
+The questionnaire a premium tracker needs: unaided and aided awareness, salience by three to five category entry points, consideration, the distinctive asset test, two to three image statements tied to the positioning, and a net promoter question. Anything longer costs completion rate.
+
+### 9.4 Share of search
+
+Share of search: a brand's share of all search queries in its category (brand searches divided by the sum of searches for every brand in the set), proposed as a leading indicator of market share by Les Binet at the IPA's EffWorks Global in October 2020, using Google Trends data across categories including cars, energy and mobile phones. Share of search correlated with market share and moved ahead of it by months, with lead times that varied by category. Tools: Google Trends (relative index, free, 0 to 100), Google Ads Keyword Planner (monthly volumes), Google Search Console (the brand's own branded queries), and Semrush or Ahrefs for competitor volumes. Caveats: ambiguous names (Apple, Jaguar the animal), the Kia effect (7.2: searches for "KN car" are brand searches nobody attributes), and categories where the buyer searches on Instagram, where Google's data cannot see them, which includes most of Mask360's. The house reports share of search monthly for clients with a definable competitor set of 4 to 8 brands.
+
+### 9.5 The limits of brand metrics for small premium brands
+
+A Jaipur jeweller with 2,000 relevant buyers a year or a Goa hotel with 40 keys cannot be measured by a national panel; the relevant respondents are too few and too rich to sit on one. What works, reported monthly on one page:
+
+- Branded search volume trend (Keyword Planner and Search Console), with the exact name and its misspellings.
+- Direct and branded traffic share of site sessions.
+- "How did you hear about us" asked at checkout, booking or the first WhatsApp message, coded into six answers.
+- Instagram profile visits, saves and shares per post (saves signal intent for premium goods), DM and WhatsApp enquiry counts.
+- Press and creator mentions, counted and weighted by the audience's fit.
+- Price realisation: average discount depth and the share of sales at full price (an identity that works lets the brand discount less).
+- Repeat and referral rates.
+- Resale prices where a secondary market exists (jewellery, bags, watches): the clearest external verdict on a luxury brand's equity.
+
+The honest statement in a proposal: the identity will be judged on these proxies, on the first impression chain (10.2) walked quarterly, and on the brand's ability to hold price; a tracker is sold only when the buyer universe is large enough to sample.
+
+## 10. Brand experience design
+
+Brand experience: the sum of what a buyer meets, in the order they meet it. The identity system (section 4) is the vocabulary; the experience is the sentence. Method for hospitality in 08-service-design-and-hospitality.md; this section carries the identity director's part of it.
+
+### 10.1 Touchpoint mapping
+
+Touchpoint: any point where the buyer meets the brand (a search result, a doorman, an invoice). The map: list every touchpoint by stage (aware, consider, buy, use, return, advocate), with its owner at the client, a photograph of its current state, a score of 1 to 5 for brand fit and 1 to 5 for function, and its frequency. A hotel has 60 to 120 touchpoints; a jewellery brand 40 to 70. Prioritise by frequency multiplied by emotional weight (the arrival weighs more than the invoice; the invoice is seen more often). The top 15 to 30 become the applications of phase 7 (5.1). Most identity projects fail at the long tail: the OTP SMS, the parking ticket, the hold music, the "do not reply" email.
+
+### 10.2 The first impression chain
+
+The buyer meets the brand in a sequence, and the weakest link sets the impression. For a premium brand in 2026:
+
+1. The search result: the title tag (under about 60 characters so it is not cut), the meta description (about 155 characters), the favicon (3.3), sitelinks, and for hospitality and retail the Google Business Profile (photos, hours, reviews), which is the brand's largest unmanaged surface. Reviews stars are read before the logo is.
+2. The site: the hero as the single idea; Core Web Vitals (Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200ms, Cumulative Layout Shift under 0.1, which are Google's thresholds) because a slow luxury site reads as a cheap one; craft in 21-web-design-and-digital-craft.md.
+3. Social: the first nine tiles of the Instagram grid, the highlight covers, the bio line, and the pinned posts; the grid is the lookbook for most of Mask360's clients and is audited as one.
+4. Arrival: the approach, the door, the greeting within 30 seconds, the smell, the key or the fitting-room; for e-commerce, the confirmation page.
+5. Packaging: the box, the tissue, the card, the sequence of opening; the surface most photographed by the buyer.
+6. Email: the confirmation and the receipt are the most-read brand documents in hospitality and e-commerce and the least designed; they carry the identity on the smallest budget and highest open rate of anything the brand sends.
+
+The chain is walked in the audit (1.7), in phase 7, and quarterly after launch, by someone who did not design it, with a phone camera.
+
+### 10.3 Service design for hospitality
+
+Service blueprint (G. Lynn Shostack, Harvard Business Review, 1984): a diagram of the service across time with the customer's actions on top, the front-stage staff actions below the line of interaction, the back-stage actions below the line of visibility, and the support processes beneath. The identity director's contributions: the moments that matter (arrival, the first problem, departure), the staff as identity (uniform in 4.14, the greeting script that is forbidden, the vocabulary from 4.10), the printed and digital artefacts at each step, and the rule that brand standards (how it looks and sounds) and service standards (what happens) are written in one document, because a guest meets them as one thing. Full method in 08-service-design-and-hospitality.md.
+
+### 10.4 Retail and spatial identity
+
+The store is the medium where luxury sells (anti-law 9); the facade is the biggest advertisement the brand will ever own. Decisions the identity project must make with the architect (4.13): the fascia (in a Dubai mall, the landlord's tenant design criteria govern signage height, illumination and projection, so the lockup must have a version that passes them), the lighting temperature, the material board, the scent, the sound, the fitting-room (the most intimate brand surface), the point of sale (the receipt, the bag, the wrap) and the window programme (a calendar of 6 to 12 changes a year). Indian flagships to study for world building: Sabyasachi's Mumbai and Kolkata stores, Good Earth's Mumbai store, the Nicobar stores; Gulf: the Dubai Mall Fashion Avenue facades, Alserkal Avenue's galleries for the opposite register.
+
+### 10.5 Scent and sound
+
+Scent branding: a signature fragrance diffused in the brand's spaces, developed with a scent house (12.29 by Dawn and Samantha Goldworm; Air Aroma; ScentAir) and delivered through HVAC or standalone diffusers. Westin's White Tea (2006) is the best-known hotel case; the Edition hotels use Le Labo. Development costs run from about USD 10,000 upward per scent with a specialist house, plus diffusers and refills, by industry quotes; the rules are one scent, low intensity, never in food and beverage spaces, and documented in the guidelines with the supplier and the concentration. Sound: the sonic logo (4.9), the playlist programme (curated by a music agency or in-house, refreshed monthly, with a rule for time of day), the hold music, the notification and the door chime. Method in 15-sound-and-music.md.
+
+### 10.6 Consistency versus coherence
+
+Consistency: the same assets reproduced the same way everywhere. Coherence: the same character recognisable everywhere, with behaviour adapted to the medium. The positions: the mass-market school (and most guideline writers) prizes consistency because it is auditable; the brand-world school (Collins, Koto, 4.15) prizes coherence because a brand that behaves identically on a billboard and in a WhatsApp message reads as a machine. The house follows coherence with a fixed core and a flexible layer: the mark, the owned colour and the typeface do not flex; tone, imagery, motion and layout flex by surface within written ranges. The test: a stranger shown five touchpoints with the logos covered says they come from one house, and each touchpoint behaves correctly for its medium.
+
+## 11. Studios to study
+
+The canon and what to borrow from each in taste terms is in design-taste, references/canon.md. This table records facts (base, founding, named work) and the one craft lesson each studio teaches an identity designer. Facts checked against the studios' own sites in October 2026 where noted; founding years given only where the house is confident.
+
+| Studio | Base and founding | Work to study | What it teaches |
+|---|---|---|---|
+| Pentagram | London 1972; 23 partners as of October 2026, all practising designers; offices London, New York, Austin, Berlin | Mastercard (2016, Michael Bierut), Reddit (2023, Natasha Jen), Rolls-Royce (2020, Marina Willer), Windows 8 and Citi (Paula Scher); Samar Maakaroun (partner from 2024) for Arabic and Latin bilingual systems | The partnership model: the owner of the business draws the work; a mark reduced until only the idea is left (Mastercard's two circles) |
+| Collins | New York and San Francisco; Brian Collins | Spotify (2015), Dropbox (2017), Mailchimp (2018), Twitch (2019), San Francisco Symphony (2018) | The brand world before the logo (4.15); a vocabulary of moves shipped as the identity |
+| Koto | London 2015; five studios (Los Angeles, New York, London, Berlin, Sydney) as of October 2026 | Discord (2021), Amazon Music (2020), Zoopla (2021) | Optimism as a method; systems built to be used by in-house teams the day after launch |
+| Porto Rocha | New York; Leo Porto and Felipe Rocha | Work for Nike and Google | Type and image as one system; kinetic typography with an editorial eye |
+| Bureau Borsche | Munich 2007; Mirko Borsche | Zeit Magazin art direction, Balenciaga wordmark (2017), Bavarian State Opera | Editorial typography as identity; the fashion register of a wordmark |
+| Mother Design | London, New York, Los Angeles; the design arm of Mother (founded 1996) | Identity and campaign work for Mother's clients | Identity and advertising conceived in one room; the brand idea as a campaign platform |
+| DixonBaxi | London 2001; Simon Dixon and Aporva Baxi | Premier League (2016), Eurosport (2015), AC Milan (2019) | Motion-first identities for sport and entertainment; the system seen at 25 frames a second before it is seen on paper |
+| Wolff Olins | London 1965; Michael Wolff and Wally Olins; now Omnicom | Orange (1994), Tate (2000), London 2012 (2007), AOL (2009), Unilever (2004), Uber (2018), Johnson & Johnson (2023) | Strategy-led bravery; the dynamic identity (Tate, AOL) as a system of behaviour |
+| Landor | San Francisco 1941; Walter Landor; WPP; Landor & Fitch 2021 to 2023, Landor again since 2023 | FedEx (1994, Lindon Leader), Etihad (2014), City of Melbourne (2009) | The global network model; a hidden idea (the FedEx arrow) that rewards the second look |
+| Interbrand | London 1974; John Murphy; Omnicom | Best Global Brands annually since 2000 (2026: Apple at USD 514.6 billion); Juventus (2017) | The valuation vocabulary boards understand; brand strength as ten scored factors |
+| Base Design | Brussels 1993; Thierry Brunfaut and Dimitri Jeurissen; New York and Geneva | Cultural institutions including Bozar; Brunfaut's writing on blanding (7.5) | The Belgian typographic school; identities for institutions with many voices |
+| Studio Dumbar | The Hague 1977, now Rotterdam; Gert Dumbar; part of DEPT | Dutch Police (1993), Nederlandse Spoorwegen, Alzheimer Nederland (2018), the DEMO Design in Motion Festival | Performative type; motion as the primary identity carrier (12-motion-principles-and-ui-motion.md) |
+| Commission | London; David McFarline and Christopher Moorby | Zegna, Tiffany & Co. Blue Book (2024, 2026), RIMOWA, Aesop campaigns, Fenty, & Other Stories, Apple Music | Editorial pacing for luxury; typographic restraint with one tension per page |
+| Made Thought | London 2000; Ben Parker and Paul Austin | G.F Smith (2014), Stella McCartney | Paper and material as identity; print craft at the top of the market (20-print-and-packaging.md) |
+| Ragged Edge | London; Max Ottignon | Zopa, Papier | Challenger brands with a sentence-length point of view; the strategy visible in the work |
+| Otherway | London and New York | Strongbow, Lucky Saint, Fortnum & Mason, Cowshed, Rocket | Consumer brand worlds launched with campaign and motion on day one |
+| Anagrama | Monterrey 2009; Mexico City | Hospitality and packaging identities across Latin America | The Instagram-era case study and its emptiness as a luxury code; the most imitated studio on Behance, which is the warning |
+| Futura | Mexico City 2008; Vicky González and Iván García | Food, drink and hospitality identities | Humour and tactility; the hand-drawn mark as the counter to polish (design-taste section 1, principle 8) |
+| Savvy Studio | Monterrey and New York | Casa Bosques (the studio's own bookshop and chocolate brand), restaurants and hotels | Hospitality designed from the material up; a studio that owns brands and learns from running them |
+| Universal Favourite | Sydney; Dari Israelstam | Beauty, confectionery and packaging identities | Colour and packaging as the identity; the product shot as the brand |
+| Mucho | Barcelona 2003; also Paris, San Francisco, New York | Cultural and hospitality identities | The Spanish typographic school; one family set with conviction |
+| Hey | Barcelona 2007; Verònica Fuerte | Geometric identities and the studio's own shop | Geometry and colour with wit; a studio product line as a laboratory |
+| Studio Feixen | Lucerne; Felix Pfäffli | Südpol posters, work for Nike and Google | The poster as identity; scale contrast and colour as a system |
+| Codesign | Gurugram; Rajesh Dahiya | Royal Enfield, Licious, PhonePe, Tata Motors, Bira 91, Navi, Serendipity Arts Festival (2019) | Indian consumer scale with system rigour; the brand that must work in a kirana and an app |
+| Lopez Design | Gurugram; Anthony Lopez | Large-organisation and public-sector systems | Longevity in Indian identity practice; signage and systems for institutions |
+| Please See | Mumbai | Hospitality and fashion identities | Typographic restraint in Indian retail; the quiet wordmark in a loud market |
+| Ishan Khosla Design | New Delhi 2007; Ishan Khosla | The Typecraft Initiative (from 2011, with craftswomen's drawing traditions as type), exhibitions, publishing | Vernacular India as a source of letterforms and systems, beyond the motif; Devanagari and Latin drawn together |
+| Studio Kohl | Mumbai; Mira Malhotra | Illustration-led identities and packaging | Illustration as the identity carrier; feminist and pop registers in Indian branding |
+| Ladyfingers Co | India | Packaging and identity for Indian food, beverage and beauty start-ups | Pack-first identities; the shelf as the first impression |
+| Animal | New Delhi; Kunel Gaur | Campaign-led identities for Indian consumer brands | Indian pop-culture fluency; identity and content made by the same hands |
+| Flying Saucer | Mumbai | Experiential and hospitality identities | Identity extended into space and event; the Mumbai hospitality register |
+
+How to study a studio: read five case studies, cover the logos, and write the one move the studio repeats; then read its worst project to see what the move cannot save. Studios teach by their failures as much as their monographs.
+
+## 12. Identity QA checklist and file deliverables
+
+### 12.1 QA checklist
+
+Run before the final mark approval (phase 5) and again before handover (phase 10). Every item is a yes or the file does not ship.
+
+Strategy and naming
+
+1. The positioning statement and the onlyness statement are signed by the named decision maker, dated.
+2. The name passed linguistic checks in every language the brand will be spoken in (2.3), with written reports on file.
+3. Domain (.com, .in or .ae as relevant) and the Instagram handle are registered to the client, with the credentials handed over.
+4. Trademark pre-screen done in every relevant Nice class in India (IP India phonetic search) and the UAE, with Vienna code search on the device; counsel's clearance on file for the final name.
+
+The mark
+
+5. Drawn at 1,000 units with optical corrections (3.2), then checked at 24px, 16px favicon, 8mm print, 25mm embroidery and 1m signage.
+6. Clear space defined from an element of the mark; minimum sizes stated for print, screen, embroidery and engraving (3.3).
+7. Full colour, mono black, reversed and one-colour versions exist and each has been tested on a photograph, on the brand dark colour and on white.
+8. Lockups: horizontal, stacked, mark only; bilingual lockups with Arabic and Devanagari drawn and checked by a native reader; conjuncts and ligatures verified in the name itself (3.4).
+9. The wordmark is kerned by hand at three sizes; the squint test and the inverted test pass (3.8).
+10. The mark survives with the logo covered: the colour, type and device alone identify the brand on a feed post (design-taste section 4, test 1).
+11. No gradient, glow, bevel or shadow in the master mark; any effect is a separate, named variant.
+12. Trademark drawing exported in black on white, 8 by 8cm, 300dpi PDF and JPG, with the wordmark and the device as separate files (3.9).
+
+The system
+
+13. Every colour is specified in Pantone C and U, CMYK, RGB, HEX and as a token; text-on-colour pairs pass WCAG 2.2 AA (4.5:1 for body text, 3:1 for large text) and the pairs that fail are listed as decorative only.
+14. Typeface licences cover desktop, web and app at the client's traffic, in the client's name, with renewal dates in the licence register.
+15. Arabic and Devanagari companions chosen and tested in the three master formats; the mirrored grid for Arabic exists.
+16. The type scale, grid and margin rules are proven in A4, 1080 by 1350 and 1920 by 1080, with real copy in both languages.
+17. Photography direction documented with approved and rejected frames, and the grade delivered as a LUT (.cube) and a Lightroom preset (.xmp).
+18. Icon set shares terminal style and stroke logic with the mark; exported as SVG with a naming convention.
+19. The logo animation is under 1.5 seconds, delivered as Lottie, ProRes 4444 with alpha and H.264, with the easing curve written as a value.
+20. Design tokens exported as JSON and loaded into the Figma library; the token names match the guideline.
+21. Dark mode mapping defined for every colour and tested on the app icon, the site header and an email.
+
+Applications and guidelines
+
+22. The 15 to 30 priority touchpoints from the map (10.1) are designed for real, with print-ready and dev-ready files, and the first impression chain (10.2) walked end to end on a phone.
+23. The confirmation email, the OTP SMS and the invoice carry the identity.
+24. Signage meets the UAE Arabic trade name rule (2.6) and the landlord's tenant criteria where the brand is in a mall.
+25. The guideline is written from the applications, versioned 1.0, dated, with an owner, a change log and the licence register.
+26. The asset pack follows the folder structure in 6.4 and opens on a machine that has none of the studio's fonts installed.
+27. A stranger, given the guideline and the pack, produces a correct Instagram story in under 30 minutes. If they cannot, the guideline is rewritten.
+
+### 12.2 File deliverables and specs
+
+| Deliverable | Format | Spec | Naming |
+|---|---|---|---|
+| Logo masters, vector | SVG, PDF/X-4, EPS, AI | Outlined type; SVG under 20KB per mark with viewBox and cleaned decimals; CMYK and spot PDFs for print; RGB SVG for screen | BRAND_Logo_[Primary or Mono or Reversed]_[Horizontal or Stacked or Mark]_[RGB or CMYK or Pantone].ext |
+| Logo rasters | PNG, JPG | PNG transparent at 512, 1024, 2048 and 4096px long side, sRGB; JPG quality 90 on white and on the brand dark | BRAND_Logo_Primary_RGB_1024.png |
+| Bilingual lockups | SVG, PDF | Arabic and Devanagari as drawn outlines, with the alignment guide as a separate layer in the AI master | BRAND_Lockup_AR-EN_Horizontal.svg |
+| Favicon set | ICO, PNG, SVG | favicon.ico at 16, 32 and 48px; PNG at 32 and 48px; SVG favicon; apple-touch-icon 180 by 180px; manifest icons 192 and 512px; a square of at least 8 by 8px and larger than 48 by 48px recommended for Google | favicon.ico, icon-192.png, icon-512.png, apple-touch-icon.png |
+| App icons | PNG, Icon Composer .icon | iOS: 1024 by 1024px opaque PNG, plus the layered Icon Composer file for iOS 26 with default, dark, clear and tinted variants (verify on Apple's HIG); Android adaptive: foreground and background at 108 by 108dp, safe zone 66dp; Google Play: 512 by 512px 32-bit PNG under 1024KB, square | BRAND_AppIcon_iOS_1024.png, BRAND_AppIcon_Android_fg.svg |
+| Social avatars | PNG | 1080 by 1080px, mark inside the inner 80% for circular crops; verify current platform specs in 26-platform-and-format-specs-2026.md | BRAND_Avatar_1080.png |
+| Colour | ASE, JSON, PDF | Adobe Swatch Exchange with Pantone, CMYK, RGB; token JSON; a PDF chart with proportions and approved pairs | BRAND_Colours.ase, BRAND_Tokens_Colour.json |
+| Typography | PDF, licence files | Type specimen and scale; licence certificates in the client's name; font files only where redistribution is licensed | BRAND_TypeScale.pdf |
+| Grade | CUBE, XMP | 33-point .cube LUT for video and Lightroom .xmp for stills, from the same reference frame | BRAND_Grade_33.cube |
+| Icons | SVG, Figma | 24px grid, 1.5 or 2px stroke, named by function; Figma components published | icon-[function]-24.svg |
+| Motion | Lottie JSON, MOV, MP4 | Logo reveal under 1.5s; Lottie for web and app; ProRes 4444 with alpha at 1920 by 1080 and 1080 by 1920; H.264 MP4 at 1080p for social; easing curve stated in the README | BRAND_LogoReveal_[format].ext |
+| Sonic logo | WAV, MP3 | 48kHz 24-bit WAV master, 1 to 3 seconds; MP3 320kbps for reference; stems where composed (15-sound-and-music.md) | BRAND_Sonic_48k24.wav |
+| Masters | PPTX or Keynote, DOCX, Figma, Canva, HTML email | Deck at 16:9; document at A4; social formats at 1080 by 1350, 1080 by 1920 and 1080 by 1080; email at 600px wide with a dark-mode test | BRAND_Deck_Master_v1.0.pptx |
+| Applications | PDF/X-4, PNG, Figma | Print-ready with bleed (3mm) and crop marks; dev-ready exports with measurements; packaging dielines as separate layers (20-print-and-packaging.md) | BRAND_[Surface]_[Size]_v1.0.pdf |
+| Trademark drawings | PDF, JPG | Black on white, 8 by 8cm, 300dpi, wordmark and device as separate files | BRAND_TM_Wordmark.pdf, BRAND_TM_Device.pdf |
+| Guidelines | Web and PDF | Structure of 6.1; PDF under 50MB; web guideline with assets downloadable per page | BRAND_Guidelines_v1.0.pdf |
+| Figma library | Figma | Published styles and components; token variables; a cover page with the version | BRAND Library v1.0 |
+| Licence register | XLSX or Sheets | Every typeface, image, illustration, music track: licence type, holder, scope, renewal, cost | BRAND_LicenceRegister_v1.0.xlsx |
+| README | TXT | Version, date, change log, contacts, what is included | README.txt |
+
+## Terms introduced
+
+- Aided awareness: recognition of a brand from a prompted list.
+- Anti-laws of marketing: Kapferer and Bastien's rules for luxury that invert mass-marketing practice.
+- Archetypes: twelve recurring character types (Mark and Pearson, 2001) used to describe brand personality.
+- Awareness: the share of the target who know a brand exists; unaided, aided or top-of-mind.
+- Blanding: the 2012 to 2019 convergence of wordmarks on near-identical sans serifs.
+- Brand architecture: the system that organises how a company's brands relate to each other and to the parent.
+- Brand audit: an inventory of every live brand expression with judgement, in four lenses: visual, verbal, experiential, competitive.
+- Brand experience: the sum of what a buyer meets, in the order they meet it.
+- Brand guidelines: the document, site or system that records every rule the identity runs on.
+- Brand house: the diagram that arranges platform elements with essence at the top and pillars beneath.
+- Brand on a page: a single sheet carrying the positioning, mark, palette, type, images and voice.
+- Brand platform: the written set of foundational statements (purpose, vision, mission, values, personality, promise, proposition, pillars, essence) a brand operates from.
+- Brand tracker: a repeated survey measuring awareness, salience, consideration and image over time.
+- Brand world: the identity understood as a world with its own physics, where the logo is one object.
+- Branded house: one master brand across every offer, with descriptors.
+- Category codes: the signs a category shares that let a buyer recognise it in under a second.
+- Category entry points (CEPs): the cues a buyer starts from when a need arises, which a brand links itself to.
+- Clear space (exclusion zone): the margin around a mark that nothing else may enter, defined from an element of the mark.
+- Coherence: the same brand character recognisable everywhere, with behaviour adapted to each medium.
+- Combination mark: a symbol and a wordmark in a fixed lockup.
+- Connotation: what a sign suggests beyond what it shows.
+- Consistency: the same assets reproduced the same way on every surface.
+- Construction grid: the geometric scaffold a mark is drawn on.
+- Core Web Vitals: Google's three page-experience metrics (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) with pass thresholds of 2.5s, 200ms and 0.1.
+- Cultural strategy: Holt's method of building a brand by performing a myth that resolves a tension in the culture.
+- Denotation: what a sign literally shows.
+- Design tokens: named values for colour, type, space, radius, elevation and motion, stored once and exported everywhere.
+- Differentiation: being meaningfully different in what the brand offers.
+- Digital-first guideline: a guideline published as a website with downloadable assets and values held as tokens.
+- Distinctive asset tracking: an annual test showing each asset without the brand name to measure fame and uniqueness.
+- Distinctive brand assets (DBAs): non-name elements that trigger the brand name in memory, measured by fame and uniqueness.
+- Distinctiveness: being recognisable as yourself, quickly.
+- Dominant code: a category's current normal set of signs.
+- Double jeopardy law: smaller brands have fewer buyers who are also slightly less loyal.
+- Dynamic identity: a system of rules that produces many versions of the mark.
+- Emblem: type set inside a shape, crest-like.
+- Emergent code: a sign rising at the edge of a category.
+- Endorsed brand: an independent brand carrying a visible parent signature.
+- Fame: the share of category buyers who link an asset to the brand.
+- First impression chain: the sequence of surfaces a buyer meets first, from search result to email.
+- Frame of reference: the category the buyer shops a brand against on the day they decide.
+- Giga-project: the term used for Saudi Arabia's PIF-funded developments at the scale of a city or region.
+- Graphic device: a recurring shape, line or pattern derived from the mark that carries the identity when the logo is absent.
+- House of brands: independent brands under a parent invisible to buyers.
+- HUID: the six-character alphanumeric hallmark unique identification on BIS-hallmarked gold jewellery in India.
+- Hybrid architecture: a deliberate mix of architecture models by business unit.
+- Ink trap: a cut at a stroke junction that stops ink or pixels filling the join.
+- Kerning: adjustment of space between specific letter pairs.
+- Lettermark: initials set as letterforms.
+- Licence register: the record of every licensed asset with holder, scope, renewal and cost.
+- Line of interaction: in a service blueprint, the line between the customer's actions and front-stage staff actions.
+- Line of visibility: in a service blueprint, the line below which the customer cannot see the work.
+- Living system: a guideline, Figma library, code components and tokens released together as one versioned thing.
+- Lockup: the fixed relationship between mark, wordmark and strapline.
+- Luxury strategy: Kapferer and Bastien's claim that luxury is a business model with rules that invert mass marketing.
+- Madrid Protocol: WIPO's system for extending one trademark application to member countries through a single international registration.
+- Masters: editable files (deck, document, social, email) built to the guideline.
+- Mental availability: the propensity for a brand to be noticed or thought of in buying situations.
+- Monogram: initials interlaced into one form.
+- Myth: a connotation presented as natural fact.
+- Naming hierarchy: the grammar for how names stack from master to variant.
+- Nice Classification: WIPO's 45-class system for registering trademarks by goods and services; 13th edition in force from 1 January 2026.
+- Onlyness statement: Neumeier's "our brand is the only [category] that [benefit]".
+- Optical correction: adjustments that make a geometrically regular form look regular to the eye.
+- Overshoot: the extension of round and pointed forms past the baseline and cap line.
+- Physical availability: how easy a brand is to find and buy where and when the buyer looks.
+- Place brand: an identity for a city, region or development, often built before the place exists.
+- Portfolio strategy: deciding which brands to hold, fold, and where each sits on price and audience.
+- Positioning: the place a brand occupies in the buyer's mind relative to alternatives.
+- Positioning statement: the testable format "for [buyer], [brand] is the [frame] that [difference] because [proof]".
+- Price realisation: the share of sales at full price and the average discount depth.
+- Prior use: in Indian trademark law, an earlier unregistered use that can defeat a later registration.
+- Rebrand: a change to the identity, from a refresh to a replacement of name, mark or system.
+- Residual code: a sign fading from a category.
+- Responsive logo suite: one mark drawn at several levels of detail for different sizes.
+- Salience: the propensity to be thought of across buying situations, measured through category entry points.
+- Scent branding: a signature fragrance diffused in a brand's spaces.
+- Semantic versioning: numbering a guideline 1.0 at launch, 1.x for additions and 2.0 for a rebrand.
+- Semiotics: the study of signs and how meaning is made from them.
+- Service blueprint: a diagram of a service across time showing customer actions, front-stage and back-stage work.
+- Share of search: a brand's share of all search queries for the brands in its category, a leading indicator of market share.
+- Sonic logo: a 1 to 3 second audio mark.
+- Squint test: blurring a mark to check that its grey is even.
+- Sub-brand: a named offer under a master brand with its own personality.
+- Tone of voice: the consistent manner in which a brand's words sound, separate from what they say.
+- Top-of-mind awareness: the brand named first without a prompt.
+- Touchpoint: any point where a buyer meets the brand.
+- Touchpoint map: every touchpoint listed by stage, owner, current state, score and frequency.
+- Tracking: uniform letter spacing across a word.
+- Trade name: the licensed business name in the UAE, distinct from a trademark.
+- Trademark drawing: the version of a mark filed with a registry, black on white.
+- Unaided awareness: a brand named without a prompt.
+- Uniqueness: the share of an asset's brand links that go only to this brand.
+- Vienna Classification: WIPO's system of codes for the figurative elements of marks; tenth edition in force from 1 January 2026.
+- Wordmark (logotype): the name set in custom or chosen letterforms as the mark.
+
+## Sources and further reading
+
+Books
+
+- Al Ries and Jack Trout, Positioning: The Battle for Your Mind, 1981.
+- Geoffrey A. Moore, Crossing the Chasm, 1991.
+- Marty Neumeier, The Brand Gap, 2003; Zag, 2006.
+- Margaret Mark and Carol S. Pearson, The Hero and the Outlaw, 2001.
+- David A. Aaker and Erich Joachimsthaler, Brand Leadership, 2000.
+- Roland Barthes, Mythologies, 1957; Elements of Semiology, 1964.
+- Raymond Williams, Marxism and Literature, 1977.
+- Douglas B. Holt, How Brands Become Icons, 2004; with Douglas Cameron, Cultural Strategy, 2010.
+- Jean-Noël Kapferer and Vincent Bastien, The Luxury Strategy, 2009; second edition 2012.
+- Byron Sharp, How Brands Grow, 2010; Jenni Romaniuk and Byron Sharp, How Brands Grow Part 2, 2016; Jenni Romaniuk, Building Distinctive Brand Assets, 2018.
+- Wally Olins, Wally Olins: The Brand Handbook, 2008.
+- Alina Wheeler and Rob Meyerson, Designing Brand Identity, sixth edition, 2024.
+- Michael Johnson, Branding: In Five and a Half Steps, 2016.
+- Debbie Millman, Brand Thinking and Other Noble Pursuits, 2011.
+- Tom Geismar, Sagi Haviv and Ivan Chermayeff, Identify: Basic Principles of Identity Design in the Iconic Trademarks of Chermayeff & Geismar, 2011.
+- Paul Rand, Design, Form, and Chaos, 1993.
+- Michael Evamy, Logo, 2007; revised 2015.
+- Jesse Reed and Hamish Smyth (editors), NASA Graphics Standards Manual (reissue of Danne & Blackburn, 1975), 2015.
+- Wallace Henning (editor), British Rail Corporate Identity Manual (reissue of the Design Research Unit manual, 1965 onward), 2016.
+
+Articles, talks and reference pages
+
+- David A. Aaker and Erich Joachimsthaler, "The Brand Relationship Spectrum", California Management Review, 2000.
+- G. Lynn Shostack, "Designing Services That Deliver", Harvard Business Review, 1984.
+- Kate Moran, "The Four Dimensions of Tone of Voice", Nielsen Norman Group, 2016, https://www.nngroup.com/articles/tone-of-voice-dimensions/
+- Les Binet, "Share of search as a predictive measure", IPA EffWorks Global, 2020, https://ipa.co.uk/
+- Mailchimp Content Style Guide, https://styleguide.mailchimp.com/
+- Uber Brand Guidelines, https://brand.uber.com/
+- Audi Corporate Identity portal, https://www.audi.com/ci/
+- Spotify Design, https://spotify.design/ ; Spotify design guidelines for developers, https://developer.spotify.com/documentation/design
+- Pentagram, Reddit case study, https://www.pentagram.com/work/reddit/story
+- Pentagram, About, https://www.pentagram.com/about (23 partners, read October 2026)
+- Koto, About, https://koto.com/about (five studios, read October 2026)
+- Interbrand, Best Global Brands 2026, https://interbrand.com/best-global-brands/
+- Brand New, UnderConsideration, https://www.underconsideration.com/brandnew/
+- Design Week, "Burberry reverts to its roots under new creative officer Daniel Lee", February 2023, https://www.designweek.co.uk/issues/6-february-10-february-2023/burberry-new-logo-daniel-lee/
+- Dezeen, "Burberry logo redesign 'irresponsible' says Peter Saville", June 2025, https://www.dezeen.com/2025/06/13/burberry-logo-redesign-irresponsible-peter-saville/
+- Creative Review, "Johnson & Johnson unveils new logo and visual identity", September 2023, https://www.creativereview.co.uk/johnson-johnson-new-logo/
+- Creative Review, "Reddit's mascot gets a 3D glow up in identity refresh", November 2023, https://www.creativereview.co.uk/reddit-redesign-identity/
+- LBB Online, "How Pepsi designed its new logo", 2023, https://lbbonline.com/news/how-pepsi-designed-its-new-logo
+- Carthrottle, "'KN Car' googled by 30k users a month following Kia's logo rebrand", https://www.carthrottle.com/news/kn-car-googled-30k-users-month-following-kias-logo-rebrand
+- Motor1, "New Jaguar registrations were hilariously low last month", 2025, https://www.motor1.com/news/760854/jaguar-terrible-registration-numbers/
+- AirlineGeeks, "Air India finally takes off with refreshed livery and brand identity", August 2023, https://airlinegeeks.com/2023/08/10/air-india-finally-takes-off-with-refreshed-livery-and-brand-identity/
+- Storyboard18, "Zomato is now Eternal: shareholders approve name change of parent company", 2025, https://www.storyboard18.com/brand-marketing/zomato-is-now-eternal-shareholders-approve-name-change-of-parent-company-58765.htm
+- Mark Ritson, columns on distinctiveness, differentiation and archetypes, Marketing Week, https://www.marketingweek.com/
+
+Specifications, law and registries
+
+- WIPO, Nice Classification, NCL(13-2026), in force 1 January 2026, https://www.wipo.int/en/web/classification-nice
+- WIPO, Vienna Classification, VCL10, in force 1 January 2026, https://www.wipo.int/en/web/classification-vienna
+- WIPO Global Brand Database, https://branddb.wipo.int/
+- Office of the Controller General of Patents, Designs and Trade Marks (IP India), Trade Marks Act 1999 and Trade Marks Rules 2017, public search, https://ipindia.gov.in/ and https://tmrsearch.ipindia.gov.in/
+- Emblems and Names (Prevention of Improper Use) Act 1950, India.
+- Ministry of Corporate Affairs, India, Companies Act 2013 and Companies (Incorporation) Rules 2014, https://www.mca.gov.in/
+- UAE Federal Decree-Law No. 36 of 2021 on Trademarks; UAE Ministry of Economy trademark services, https://www.moec.gov.ae/
+- Bureau of Indian Standards, hallmarking of gold jewellery and HUID, https://www.bis.gov.in/
+- W3C, Web Content Accessibility Guidelines (WCAG) 2.2, 2023, https://www.w3.org/TR/WCAG22/
+- Google Search Central, "Define a favicon to show in search results", https://developers.google.com/search/docs/appearance/favicon-in-search
+- Google, Core Web Vitals thresholds, https://web.dev/articles/vitals
+- Apple Human Interface Guidelines, App icons, https://developer.apple.com/design/human-interface-guidelines/app-icons
+- Android Developers, Adaptive icons, https://developer.android.com/develop/ui/views/launch/icon_design_adaptive
+- Google Play Console Help, app icon specifications, https://support.google.com/googleplay/android-developer/answer/9866151
+- Material Symbols and icon design guidance, https://m3.material.io/styles/icons

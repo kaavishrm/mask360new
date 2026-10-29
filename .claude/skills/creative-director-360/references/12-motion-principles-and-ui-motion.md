@@ -128,11 +128,9 @@ All values verified against the CSS Easing Functions specification, the easings.
 | IBM Carbon | productive standard | (0.2, 0, 0.38, 0.9) | Task UI: dropdowns, tables, toggles. |
 | IBM Carbon | productive entrance / exit | (0, 0, 0.38, 0.9) / (0.2, 0, 1, 0.9) | Note the y2 of 0.9: the curve arrives slightly early, which reads crisp. |
 | IBM Carbon | expressive standard | (0.4, 0.14, 0.3, 1) | Page-level and primary-action moments. |
-| IBM Carbon | expressive entrance / exit | (0, 0, 0.3, 1) / (0.4, 0.14, 1, 1) | |
 | Microsoft Fluent 2 | curveDecelerateMid | (0, 0, 0, 1) | Entrances. Identical to M3 standard-decelerate and to Windows "fast out, slow in". |
 | Microsoft Fluent 2 | curveDecelerateMax / Min | (0.1, 0.9, 0.2, 1) / (0.33, 0, 0.1, 1) | Stronger / gentler entrances. |
 | Microsoft Fluent 2 | curveAccelerateMid | (1, 0, 1, 1) | Exits. |
-| Microsoft Fluent 2 | curveAccelerateMax / Min | (0.9, 0.1, 1, 0.2) / (0.8, 0, 0.78, 1) | |
 | Microsoft Fluent 2 | curveEasyEase / Max | (0.33, 0, 0.67, 1) / (0.8, 0, 0.2, 1) | Moves. |
 | Penner | easeOutCubic | (0.33, 1, 0.68, 1) | Small UI entrances. |
 | Penner | easeOutQuart | (0.25, 1, 0.5, 1) | Medium entrances. |
@@ -145,7 +143,6 @@ All values verified against the CSS Easing Functions specification, the easings.
 | Penner | easeInOutCubic | (0.65, 0, 0.35, 1) | Moves. |
 | Penner | easeInOutQuart / Quint | (0.76, 0, 0.24, 1) / (0.83, 0, 0.17, 1) | Moves with a stronger pause at each end. |
 | Penner | easeInOutExpo | (0.87, 0, 0.13, 1) | Hard moves; wipes. |
-| Penner | easeInOutCirc | (0.85, 0, 0.15, 1) | |
 | Penner | easeInBack / easeInOutBack | (0.36, 0, 0.66, -0.56) / (0.68, -0.6, 0.32, 1.6) | Anticipation. Brand film only. |
 | Penner | easeInSine / easeOutSine / easeInOutSine | (0.12, 0, 0.39, 0) / (0.61, 1, 0.88, 1) / (0.37, 0, 0.63, 1) | The gentlest family; near-linear. Crossfades. |
 
@@ -199,6 +196,21 @@ Each platform wraps the same physics in a different vocabulary. The table maps t
 | Jetpack Compose, `spring(dampingRatio, stiffness)` | dampingRatio (ζ), stiffness (k) | Defaults `DampingRatioNoBouncy` (1.0) and `StiffnessMedium` (1500). Constants: damping ratios HighBouncy 0.2, MediumBouncy 0.5, LowBouncy 0.75, NoBouncy 1.0; stiffness High 10000, Medium 1500, MediumLow 400, Low 200, VeryLow 50. | Compose's stiffness scale is large because its units are dp per second squared; 400 (MediumLow) is the usual content spring. |
 | Flutter, `SpringDescription(mass, stiffness, damping)` with `SpringSimulation` | mass, stiffness, damping | No named presets in the framework; `SpringDescription.withDampingRatio(mass:, stiffness:, ratio:)` takes ζ directly. | Used through `AnimationController.animateWith()`. |
 | CSS, `linear()` easing (CSS Easing Level 2) | A sampled curve | None; generate the samples from a spring function at build time (Chrome 113, Firefox 112, Safari 17.2 support `linear()`). | The only way to run a spring on the compositor in plain CSS. Fixed duration, so it is not interruptible with velocity; fine for enters and exits, wrong for gestures. |
+
+#### Material 3 Expressive motion schemes
+
+Material 3 Expressive (announced at Google I/O, May 2025) moved Material from curves to springs. The Compose Material 3 source (`MotionScheme.kt`, `StandardMotionTokens.kt`, `ExpressiveMotionTokens.kt`, androidx main branch, read October 2026) defines two schemes, each with six springs. Spatial springs move position and size; effects springs change colour, opacity and elevation, and are always critically damped, because an opacity that overshoots past 1 or a colour that bounces has no physical meaning. This is the clearest statement in any platform system of the house rule that bounce belongs to position only.
+
+| Spring | Standard scheme (damping ratio / stiffness) | Expressive scheme (damping ratio / stiffness) | Use |
+|---|---|---|---|
+| Fast spatial | 0.9 / 1400 | 0.6 / 800 | Small components: switches, chips, checkboxes |
+| Default spatial | 0.9 / 700 | 0.8 / 380 | Most moves: buttons, cards, list items |
+| Slow spatial | 0.9 / 300 | 0.8 / 200 | Large surfaces: sheets, full-screen containers |
+| Fast effects | 1.0 / 3800 | 1.0 / 3800 | Colour and opacity on small components |
+| Default effects | 1.0 / 1600 | 1.0 / 1600 | Colour and opacity, most cases |
+| Slow effects | 1.0 / 800 | 1.0 / 800 | Colour and opacity on large surfaces |
+
+The expressive fast spatial spring at damping 0.6 overshoots visibly; it is Google's consumer-app personality and is the one value in the table the house never uses. The standard scheme at 0.9 is the luxury register: a hint of settle, no visible bounce.
 
 ### 3.9 Why springs beat durations for interruptible motion
 
@@ -273,7 +285,7 @@ A stagger is a per-item delay that turns a group entrance into a sequence. Value
 
 ### 4.6 Frame arithmetic
 
-At 60Hz: 100ms is 6 frames, 200ms is 12, 300ms is 18, 500ms is 30. At 120Hz double each. A 70ms micro duration is 4 frames at 60Hz and 8 at 120Hz; this is why the same spec can feel crisper on a ProMotion phone. Specify in milliseconds and let the platform sample; never specify in frames for interface work (video, section 14, is specified in frames).
+At 60Hz: 100ms is 6 frames, 200ms is 12, 300ms is 18, 500ms is 30. At 120Hz double each. A 70ms micro duration is 4 frames at 60Hz and 8 at 120Hz; this is why the same spec can feel crisper on a ProMotion phone. Specify in milliseconds and let the platform sample; never specify in frames for interface work (video and motion graphics are specified in frames; see 13-motion-graphics-and-3d-production.md, section 1).
 
 ## 5. Choreography
 
@@ -302,7 +314,7 @@ The Material motion system (2020, carried into M3) names four patterns that cove
 
 ### 5.3 Shared element transitions
 
-A shared element is one that exists in both the outgoing and incoming view (the product image on a listing and on its detail page). It travels, resizes and keeps its identity while everything else crossfades. Rules: name at most two or three shared elements per transition (the image, the title, perhaps the price); keep aspect ratio changes honest with a crop rather than a stretch (object-fit cover during the move); give the shared element the full transition duration (300 to 400ms) while surrounding content enters shorter (200ms) and later (60 to 100ms delay). Implementation: View Transitions API `view-transition-name` (section 8), Motion `layoutId`, GSAP Flip, SwiftUI `matchedGeometryEffect`, Compose `SharedTransitionLayout`, Flutter `Hero`.
+A shared element is one that exists in both the outgoing and incoming view (the product image on a listing and on its detail page). It travels, resizes and keeps its identity while everything else crossfades. Rules: name at most two or three shared elements per transition (the image, the title, perhaps the price); keep aspect ratio changes honest with a crop rather than a stretch (object-fit cover during the move); give the shared element the full transition duration (300 to 400ms) while surrounding content enters shorter (200ms) and later (60 to 100ms delay). Implementation: View Transitions API `view-transition-name` (section 8), Motion `layoutId`, GSAP Flip, SwiftUI `matchedGeometryEffect`, Compose `SharedTransitionLayout` (stable since Compose 1.10, December 2025), Flutter `Hero`.
 
 ### 5.4 FLIP
 
@@ -383,3 +395,703 @@ WWDC18, Designing Fluid Interfaces (Chan Karunamuni, Nathan de Vries, Marcos Alo
 | Microsoft Fluent 2 | decelerate / accelerate / easy-ease at min, mid, max strengths; eight durations 50 to 500ms | Strongly asymmetric decelerate (0, 0, 0, 1) | A good library of exits. |
 | Apple | springs everywhere; duration and bounce | Gesture continuity, redirectability | The gesture model (section 9) is Apple's. |
 
+
+## 7. Scroll-driven motion
+
+Scroll is the one gesture every visitor performs, so motion tied to it is the house's main instrument on the web (design-taste, section 7: "Scroll-driven, nothing clickable"). It is also where the most vestibular harm and the most cheap tells live, so the rules are strict.
+
+### 7.1 Native scroll, smooth scroll, and when each is right
+
+Native scroll is the browser's own: it runs off the main thread, honours the OS's scroll physics (iOS deceleration, Windows wheel steps), supports `position: sticky`, anchors, find-in-page and screen readers for free. Smooth scroll libraries intercept wheel and touch input and interpolate the scroll position each frame, which makes scroll-linked motion look continuous on a mouse wheel (whose native input arrives in 100px steps) and gives the page a sense of weight.
+
+Lenis (darkroom.engineering, MIT; 1.3.27 on npm as of October 2026, 5.4KB gzipped) is the house smooth scroll because it wraps native scroll rather than replacing it, so sticky, anchors and accessibility keep working. Its defaults and the reason to keep or change each:
+
+| Option | Default | House setting and reason |
+|---|---|---|
+| `lerp` | 0.1 | 0.08 to 0.1. Linear interpolation (lerp) moves the current scroll 10% of the remaining distance per frame; lower is heavier. Below 0.06 the page lags the finger and reads broken. |
+| `easing` | `1.001 - 2^(-10t)` (an expo-out) | Keep. It is the same long-tail family as the reveal curve. |
+| `smoothWheel` | true | Keep. The whole point: mouse wheel steps become continuous. |
+| `syncTouch` | false | Keep false. Touch devices already have physical scroll; taking it over is the first thing a user on an iPhone notices and resents. |
+| `respectReducedMotion` | true | Keep. Smoothing is disabled for users with reduced motion set. |
+| `anchors` | false | Set true (anchor links are blocked otherwise). |
+| `autoRaf` | false | Set true unless GSAP's ticker drives the loop; otherwise one `requestAnimationFrame` loop for the page. |
+
+Native scroll is right when the page is a product (commerce listing, booking flow, dashboard), when the visitor comes to read, or when the JS budget is spent (21-web-design-and-digital-craft.md, section 5, puts Lenis plus GSAP plus ScrollTrigger at about 70KB gzipped). Smooth scroll is right on a scroll-narrative microsite where motion is the content. Never on a Shopify store.
+
+### 7.2 CSS scroll-driven animations
+
+Scroll-driven animations bind an animation's progress to scroll position instead of time: `animation-timeline: scroll()` follows a scroll container's position, `animation-timeline: view()` follows an element's progress through the viewport, and `animation-range` limits which part of that progress drives the animation. Because the browser owns the timeline, the animation runs off the main thread and never drops a frame to a busy script. Support as of October 2026 (MDN browser-compat-data): Chrome 115 (July 2023), Safari 26 (15 September 2025), Firefox 159 (October 2026); it is an Interop 2026 focus area. Wrap it in `@supports` and let older browsers show the element at rest.
+
+```css
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% entry 60%;   /* starts when 10% of the element is visible, done at 60% */
+  }
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+```
+
+The easing is `linear` on purpose: the finger is the easing (section 3.1). Range keywords: `entry` (the element crossing into view), `exit` (crossing out), `cover` (any part visible), `contain` (fully visible), `entry-crossing` and `exit-crossing`. Named timelines (`scroll-timeline-name` on the scroller, `timeline-scope` on an ancestor) let an element outside the scroller follow it: a progress bar in a fixed header following the article body.
+
+### 7.3 IntersectionObserver patterns
+
+`IntersectionObserver` fires a callback when an element's visibility crosses a threshold; it is the right tool for time-based reveals (play a 700ms animation once when the element arrives) as opposed to scroll-scrubbed ones. Use `threshold` 0.15 to 0.25 (fire when 15 to 25% of the element is visible, so a tall image begins before its midpoint reaches the fold), `rootMargin: "0px 0px -10% 0px"` (fire 10% before the bottom edge, so the reveal is under way as the eye arrives), and `observer.unobserve(el)` after the first fire so the reveal plays once. Never animate on exit and re-enter: a page that re-reveals on every scroll up is a tell (section 16).
+
+```js
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+}, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+```
+
+### 7.4 GSAP ScrollTrigger
+
+ScrollTrigger (GSAP 3.15.0 as of October 2026; core 28KB and ScrollTrigger 18KB gzipped) is the house tool for pinned and scrubbed sequences, the two things CSS scroll timelines still do awkwardly. The options that matter and their defaults from the GSAP documentation:
+
+| Option | Default | What it does and the house value |
+|---|---|---|
+| `start` / `end` | `"top bottom"` / `"bottom top"` (`"top top"` when pinned) | Where the trigger's edge meets the viewport's edge. Wrap in `clamp()` (3.12+) so a trigger near the page top does not start mid-progress. |
+| `scrub` | off | `true` locks progress to the scrollbar; a number is the catch-up time in seconds. House: 0.6 to 1.2, so the animation lags the finger with weight. |
+| `pin` | off | Holds the trigger element fixed for the scroll distance between start and end. One pinned scene per page beat; `pinSpacing` keeps the document's height honest. |
+| `snap` | off | Snaps progress to values or labels after scrolling stops; `delay` defaults to half the scrub time, `ease` to `power3`. Use on a stepped story (3 to 6 states), never on free reading. |
+| `anticipatePin` | 0 | Set 1 to pre-empt the one-frame jump when a fast scroll hits a pin. |
+| `fastScrollEnd` | off | Completes the animation if the user leaves faster than 2500px/s; set true on reveals so a flick never leaves half-revealed content. |
+| `toggleActions` | `"play none none none"` | Enter, leave, enter back, leave back. The default (play once) is right for reveals. |
+| `markers` | off | On during build, off in production. |
+
+`ScrollTrigger.normalizeScroll(true)` moves scrolling onto the JavaScript thread to stop the mobile address bar resizing the viewport mid-scene; it also removes native scroll physics, so use it only on a pinned narrative, never on a store.
+
+### 7.5 Horizontal scroll pitfalls
+
+A horizontal section driven by vertical scroll (pin the track, translate x as y progresses) is a legitimate beat once per page. The failures: the track is wider than the pinned distance so it jumps; the scroll distance is not proportional to track width (rule: scroll distance in px equals track overflow in px, 1:1, so the finger moves content at the same rate as the page); touch users with a horizontal pan inside a vertical page fight the direction lock; keyboard and screen reader users cannot reach content that only scrolls sideways. Provide the same content in document order and keep native horizontal scrolling (`overflow-x: auto; scroll-snap-type: x mandatory`) for galleries, which also gives free momentum on touch.
+
+### 7.6 Parallax rules
+
+Parallax is background and foreground moving at different rates to fake depth. Val Head's 2015 survey of vestibular triggers (A List Apart) puts exaggerated parallax and scroll-jacked backgrounds at the top of the list; design-taste, section 3, lists "parallax on everything" as a tell. House limits:
+
+- Amplitude: a background layer moves 10 to 20% of scroll delta relative to the content (that is, it lags by 80 to 90%); never above 30%. At 50% the layers separate into two pages.
+- Layers: two at most (image and content). Three-layer parallax reads as a 2013 agency site.
+- Never on text, never on the primary image, never on a layer with hard edges against a static one (the wobble tell, section 16).
+- Off entirely under reduced motion (section 11).
+- Implementation: transform only, from a scroll timeline or a scrubbed trigger; never from a scroll event handler that writes `top`.
+
+### 7.7 Reveal patterns: the fade-up epidemic and the alternative
+
+The fade-up (opacity 0 to 1, translateY 30px to 0, 600ms, on every section as it enters) is the default of every page builder and the signature of generated work. It fails because it is uniform: when everything arrives the same way, arrival means nothing, and the user spends the page waiting for content that is already in the DOM.
+
+The alternative is one peak per page: a single scroll-linked sequence that carries the idea (the product rotating as the story scrolls, the room assembling, the wordmark resolving) with everything else present at rest. Where a reveal is still right (an image that is the chapter's point), the house numbers: travel 8 to 24px, duration 700 to 900ms, `cubic-bezier(0.16, 1, 0.3, 1)`, triggered at 15 to 25% visibility, once; text never reveals, it is already there when the eye arrives (a reader cannot be made to wait for a sentence).
+
+### 7.8 Scroll narrative pacing: beats, holds and releases
+
+A scroll narrative is a page read as a sequence of scenes. The pacing vocabulary:
+
+- Beat: one idea, one scene, one move. A page has 4 to 7 beats; more and the visitor flicks.
+- Hold: a pinned section where scroll drives a transformation in place. Length in scroll distance: 100 to 200vh per hold (at 100vh the scene feels snatched; past 250vh the user wonders if the page is stuck). Two holds per page at most.
+- Release: free-scrolling content between holds, at natural document length, where the visitor regains the page's rhythm. A hold followed directly by a hold is the "stuck page" feeling.
+- Ratio: roughly one third of total scroll distance in holds, two thirds in release. The peak (section 7.7) is the longest hold and sits at about 60% of the page, after the visitor has invested and before they tire.
+- Ending: the last beat is static and typographic (design-taste, section 2: "An ending"). Motion that continues to the footer has nowhere to resolve.
+
+### 7.9 Performance rules for scroll motion
+
+- Never read scroll position in a `scroll` event to write styles; it runs on the main thread at the event rate and causes layout thrash. Use scroll timelines (compositor), IntersectionObserver (batched), or ScrollTrigger (one rAF, batched reads).
+- If a scroll listener is unavoidable, register it `{ passive: true }` so the browser does not wait for it before scrolling.
+- Animate `transform` and `opacity` only (section 12). A parallax that moves `background-position` repaints every frame.
+- `will-change: transform` on the handful of elements in the active scene, removed when the scene ends; never on every section (section 12.3).
+- Test on a mid-range Android with 4x CPU throttling in DevTools; a scene that holds 60fps on a MacBook and 20fps on a Redmi is a scene the Indian audience never sees working.
+
+### 7.10 The house scroll-driven microsite genre
+
+The genre (21-web-design-and-digital-craft.md, section 11, for the build and launch rules) is a single page for one launch (a residence, a collection, a hotel opening, an agency showcase) where the visitor scrolls through 4 to 7 beats with one peak, no clickable navigation beyond the final call to action, and the client as hero. Its motion contract, in order of priority: the hero holds still for the first second (nothing moves until the visitor does); the first scroll produces an immediate, proportional response (a scrubbed scene, with no delayed tween) so the page feels under hand; one hold carries the idea; type never reveals; the ending is still. Rupee and dirham pricing, Devanagari and Arabic text and any form live in the release sections where native scroll and selection work. Budget: Lenis plus GSAP plus ScrollTrigger at about 70KB gzipped is the ceiling for motion JS; everything else is CSS.
+
+## 8. Page and view transitions
+
+### 8.1 The View Transitions API, same document
+
+`document.startViewTransition(callback)` snapshots the current page, runs the callback (which updates the DOM), snapshots the new state and animates between them through a tree of pseudo-elements: `::view-transition` (the overlay root), `::view-transition-group(name)` (one transition), `::view-transition-image-pair(name)`, `::view-transition-old(name)` (a static snapshot of the outgoing state) and `::view-transition-new(name)` (a live view of the incoming state). Any element given a `view-transition-name` becomes its own group and moves and resizes between its old and new positions; everything else is the `root` group, which crossfades. Support as of October 2026 (MDN browser-compat-data): Chrome 111 (March 2023), Safari 18 (September 2024), Firefox 144 (October 2025). The default animation is a crossfade of about 250ms; override it:
+
+```css
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 240ms; }
+.product-image { view-transition-name: hero-image; view-transition-class: shared; }
+::view-transition-group(.shared) { animation-duration: 400ms; animation-timing-function: cubic-bezier(0.2, 0, 0, 1); }
+@media (prefers-reduced-motion: reduce) { ::view-transition-group(*) { animation-duration: 0.01ms; } }
+```
+
+`view-transition-class` styles many named elements with one rule. Transition types (`startViewTransition({ update, types: ['back'] })` with `:active-view-transition-type(back)`) let forward and back navigations run different choreography. Every `view-transition-name` on a page must be unique at the moment of capture, which is why lists name items by id.
+
+### 8.2 Cross-document view transitions
+
+For multi-page sites, both pages opt in with `@view-transition { navigation: auto; }` and the browser runs the same pseudo-element animation across a same-origin navigation with no JavaScript. Support: Chrome 126 (June 2024), Safari 18.2 (December 2024); Firefox had not shipped it as of October 2026 (Bugzilla 1860854), so a Shopify store or a static site gets the transition in Chrome and Safari and a plain navigation in Firefox, which is acceptable because the fallback is the web's default. The `pageswap` (outgoing) and `pagereveal` (incoming) events expose the navigation so a page can set names based on where it came from. Keep the incoming page's render-blocking resources small; the transition cannot start until the new page's first render.
+
+### 8.3 Framework integration as of October 2026
+
+| Framework | Status | How |
+|---|---|---|
+| Next.js 16 | `experimental.viewTransition: true` in `next.config.js`; the docs (updated April 2026) still label it experimental and not for production | React's `<ViewTransition>` component (exported as `unstable_ViewTransition` in the 2025 docs) wraps the subtree; Next triggers it on route changes. The route change itself is a same-document transition because the App Router swaps DOM. |
+| Astro 7 | Stable since Astro 3.0 (2023), when the flag was removed | `<ClientRouter />` in the layout head (renamed from `<ViewTransitions />` in Astro 5) upgrades links to same-document transitions with the `transition:name`, `transition:animate` and `transition:persist` directives; without the router, cross-document transitions work in supporting browsers from the CSS rule alone. |
+| Plain multi-page site, Shopify, WordPress | Cross-document API | The `@view-transition` rule on every page plus `view-transition-name` on the shared product image, nothing else. The house default for commerce. |
+
+### 8.4 Shared element continuity and route change choreography
+
+The route change is a container transform or a shared axis move (section 5.2) at page scale. The order: the shared element (one, at most two: the image and the title) travels for the full duration, 350 to 450ms on the move curve; the outgoing root fades in the first 40% of that time; the incoming content enters in the last 60% with ease-out and a 40 to 80ms delay after the shared element has begun, so the page appears to assemble around the object the user chose. Back navigation reverses the choreography exactly (section 5.7): the image returns to its slot in the listing, which the listing must scroll back into view before capture. Never transition two unrelated pages with a shared element; a fade through (section 5.2) is the honest move when nothing persists.
+
+### 8.5 Native equivalents
+
+SwiftUI: `matchedGeometryEffect(id:in:)` for in-view shared elements and, from iOS 18, `.navigationTransition(.zoom(sourceID:in:))` with `.matchedTransitionSource` for the system zoom from a thumbnail to a full view. Jetpack Compose: `SharedTransitionLayout` with `Modifier.sharedElement()` (identical content) and `Modifier.sharedBounds()` (container transform between different content), stable since Compose 1.10 (December 2025). Flutter: the `Hero` widget, matched by tag across routes. All three are FLIP under the hood (section 5.4).
+
+## 9. Gesture-driven motion
+
+A gesture is continuous input: the finger is on the glass and the interface is attached to it. Apple's WWDC18 session Designing Fluid Interfaces (section 6.4) is the canonical statement of the model, and Nathan Gitter's open-source reconstruction of its demos (github.com/nathangitter/fluid-interfaces) is the readable code. The model has five parts.
+
+### 9.1 Track the finger
+
+While the finger moves, the element moves with it 1:1, from the first frame, with no easing (easing on a tracked gesture is lag). Direct manipulation is the whole feeling of "fluid". Hysteresis: a swipe recogniser waits about 10 points of travel before committing to a direction, so a tap with a slight slide does not become a drag; a direction lock then holds the axis once the angle of travel is within about 30 degrees of it. Thresholds decide what happens at release, never whether the element responds (section 6.3, principle 8).
+
+### 9.2 Velocity projection
+
+At release the finger has a velocity. Where it would stop under scroll-view deceleration is the projected position, and the decision (snap open, snap closed, which corner) is made from the projection rather than from the current position. The WWDC18 formula, as written in Gitter's code:
+
+```
+projectedDistance = (velocity / 1000) * decelerationRate / (1 - decelerationRate)
+```
+
+with velocity in points per second (hence the division by 1000 to points per millisecond) and `UIScrollView.DecelerationRate.normal` of 0.998 or `.fast` of 0.99. A flick at 1000 points per second projects 499 points at the normal rate and 99 points at the fast rate; a slow drag at 200 points per second projects 100 and 20. The reason the projection matters: a sheet dragged 30% open and released with a fast upward flick should open, and a sheet dragged 70% open and released with a downward flick should close. Position alone gets both wrong.
+
+### 9.3 Rubber banding
+
+Past an edge, content keeps following the finger with diminishing returns, so the user feels the boundary rather than hitting it (squash and stretch in its only legitimate interface form, section 2). The formula that circulates from Apple's scroll view engineering and is reproduced in most open-source implementations:
+
+```
+offset = (1 - 1 / (x * c / d + 1)) * d
+```
+
+where x is the distance pushed past the edge, d is the dimension of the scroll view on that axis and c is the resistance constant, usually given as 0.55 for UIScrollView. With c at 0.55, a finger that travels a full screen height past the edge moves the content about 0.36 of the height; a quarter screen moves it about 0.12. Gitter's demo uses the simpler `pow(offset, 0.7)` and reads almost the same. Above about c 0.7 the edge feels soft; below 0.4 it feels like a wall. On the web, native overscroll is the browser's and `overscroll-behavior: contain` stops it propagating to the page; custom rubber banding is only for custom draggable surfaces (a sheet, a carousel built on pointer events).
+
+### 9.4 Snap points and detents
+
+A sheet has resting positions (detents): iOS `UISheetPresentationController` (iOS 15) offers `.medium` and `.large`, with custom detents from iOS 16; web drawers define their own as fractions of height. Release logic: project the position (9.2), choose the nearest detent to the projection, and spring there with the release velocity carried in, so a hard flick arrives faster than a gentle one. Spring for the arrival: response 0.3 to 0.4s, damping 0.8 when there is momentum, 1.0 when there is none (Gitter's picture-in-picture demo uses damping 1, response 0.4 for the corner snap).
+
+### 9.5 Interruptible springs and cancellation
+
+Every gesture-driven animation must accept a new touch mid-flight: the finger lands, the spring stops where it is, tracking resumes from that position with no jump. On iOS `UIViewPropertyAnimator` and SwiftUI springs do this; on the web, Motion's `drag` with `dragMomentum`, or a hand-rolled spring that stores position and velocity in state. Cancellation: a drag released inside the cancel zone (less than about 25 to 30% of the travel and below a velocity of about 500 points per second) springs back to the origin; destructive outcomes (delete, dismiss unsaved work) commit only on release, never on crossing a distance, so a user who changes their mind mid-gesture has the whole gesture to do so.
+
+### 9.6 Sheet and drawer physics
+
+The web reference for sheet feel is Vaul, Emil Kowalski's React drawer (2023), which reproduces the iOS sheet: track 1:1 downward, rubber band upward past the top, dismiss on projected distance or velocity, spring back otherwise, backdrop opacity tied to sheet position so the two read as one object, and the page behind scaling to about 0.95 as the sheet opens (the iOS 13 card modal). House values: open 350 to 400ms on the move curve or a spring at response 0.4 damping 1; dismiss by gesture on projection; dismiss by button 250ms ease-in; backdrop 0 to 0.4 opacity black on light pages, 0.6 on dark decks.
+
+### 9.7 Swipe thresholds
+
+Swipe-to-reveal (list actions): the first action reveals at 1:1 until its full width, then rubber bands; a full-width swipe past about 60% of the row with velocity commits the primary action (Mail's archive). Swipe-to-dismiss (cards, notifications): commit at 30% of width or 500 points per second, whichever comes first; the card continues off screen at its release velocity on a decelerating curve, never a fixed duration (a fixed duration makes a hard flick look slow). Paging carousels: commit at 20% of width or 300 points per second, snap with a spring at damping 1; auto-advance never (section 16).
+
+## 10. Microinteractions
+
+A microinteraction (Dan Saffer, Microinteractions, 2013) is a contained moment with a trigger, rules, feedback and loops. Its motion is feedback-only: the smallest, fastest move that confirms the state change. The house values, each with the reason:
+
+| Control | Motion | Numbers | Reason |
+|---|---|---|---|
+| Button press | Scale down uniformly, then release with ease-out; colour state layer crossfades | Scale 0.97 to 0.98; 50 to 80ms in (fast, the user caused it), 150 to 200ms release ease-out. State layer 10% pressed (06-ui-design-craft.md, section 3). | Scale below 0.95 reads as a toy; above 0.985 is invisible. The release is slower than the press because the press must feel instant and the release carries the "letting go". |
+| Toggle | Knob travels on one axis with ease-in-out; track colour crossfades | Knob 150 to 200ms; colour 150ms; never a bounce at the end | A toggle is binary; a bounce implies a third state. |
+| Checkbox | Tick draws in (SVG `stroke-dashoffset`) or fades; box fill crossfades | Tick 150 to 200ms ease-out; fill 100ms | The draw tells the user which box changed in a column of boxes. |
+| Radio and segmented control | The indicator slides between positions (FLIP) | 200 to 250ms on the move curve | A slide shows where the selection went; a crossfade loses that. |
+| Text field focus | Border or underline colour and width change; label floats | 150ms; label 200ms ease-out | Fast, because focus happens hundreds of times a day. |
+| Loader (indeterminate) | Appears only after a delay; rotates linearly | Show after 300ms; hide when done with a 100ms fade; rotation 1 to 1.2s per turn, linear (a mechanism) | A spinner for a 120ms request is a flash the user perceives as slowness that was not there. |
+| Skeleton | Static placeholder, optional shimmer | Use when expected wait exceeds 1s; shimmer 1.5 to 2s cycle, low contrast (4 to 8% luminance difference); crossfade to content 200ms | Skeletons set an expectation of layout; a shimmer faster than 1.5s reads as anxiety. |
+| Progress (determinate) | Bar advances with ease-out per update; never retreats | 200 to 300ms per step; minimum visible step 2% | A bar that jumps backward destroys trust in every later reading. |
+| Pull to refresh | Rubber-banded pull; indicator appears at threshold; release springs the content back | Threshold about 60 to 80 points; release spring response 0.35, damping 1; indicator 300ms fade out on completion | The threshold must be reachable with the thumb in one motion and not so low that a scroll to top triggers it. |
+| Like, save, favourite | Icon scales up and back with a short colour fill; a particle burst only on a low-frequency surface | Scale 1 to 1.2 to 1 over 300ms (ease-out up, ease-in-out back); fill 150ms | The overshoot is the one place the house allows scale past 1, because the action is emotional and infrequent. Twitter's 2016 heart is the reference; the house version drops the burst. |
+| Count and badge updates | New number enters from the direction of change (up for increment), old leaves opposite, clipped | 200ms; 12 to 16px travel | Direction encodes the change; the user reads the delta without comparing numbers. |
+| Toast | Enters from its edge with ease-out; exits ease-in | Enter 300 to 400ms; exit 200 to 250ms; auto-dismiss after 4 to 6s with the timer paused on hover | Enter slower than exit (section 4.2). Four seconds is the floor for a sentence to be read twice. |
+| Tooltip | Fade and 4px rise after a hover delay | Delay 300 to 500ms; 120 to 150ms in; 80ms out | The delay prevents tooltips firing as the pointer crosses a toolbar. |
+
+### 10.1 Pairing motion with haptics
+
+On native, the frame of state change gets a haptic, and the motion and the haptic start on the same frame; a haptic that lands 50ms after the visual change feels like a second event. The vocabulary: iOS `UIImpactFeedbackGenerator` (styles light, medium, heavy, and from iOS 13 soft and rigid), `UISelectionFeedbackGenerator` (a tick for each detent crossed: pickers, segmented controls, snap points), `UINotificationFeedbackGenerator` (success, warning, error) and SwiftUI's `.sensoryFeedback(_:trigger:)` from iOS 17; Android `HapticFeedbackConstants` (CONFIRM, REJECT, CLOCK_TICK, LONG_PRESS and others) through `View.performHapticFeedback` or Compose's `LocalHapticFeedback`. Pairings: button press, light impact on touch down and nothing on release; toggle, a selection tick as the knob lands; detent crossing in a sheet, selection tick; destructive commit, a rigid impact; success state, the notification success pattern. Never a haptic on hover, scroll or animation that the user did not cause. The tactile cue is listed in the component state matrix in 06-ui-design-craft.md, section 3; the web has no haptics API worth using (the Vibration API is Android-only and ignored on iOS), so web microinteractions carry the whole weight visually.
+
+## 11. Reduced motion and accessibility
+
+### 11.1 The preference
+
+`prefers-reduced-motion: reduce` is the user's statement, set in the OS (iOS Settings, Accessibility, Motion, Reduce Motion; macOS Accessibility, Display; Android Developer options "Remove animations" or the Accessibility animation toggle on some OEMs; Windows Settings, Accessibility, Visual effects, Animation effects). Browser support since Safari 10.1 (2017), Firefox 63, Chrome 74 (2019), so there is no browser excuse. It is a request to reduce, and the user who sets it still wants to know what changed; the failure modes are ignoring it (vestibular harm) and killing every transition (a page where state changes with no cue, which is a different accessibility failure).
+
+### 11.2 Implementation
+
+```css
+/* Tokens carry the preference: every component inherits it */
+:root { --dur-micro: 150ms; --dur-small: 250ms; --dur-large: 400ms; --travel: 16px; }
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-micro: 100ms; --dur-small: 150ms; --dur-large: 200ms; --travel: 0px; }
+  .parallax, .marquee, .idle-loop { animation: none; transform: none; }
+}
+```
+
+JavaScript: `matchMedia('(prefers-reduced-motion: reduce)').matches`, and listen for `change` because users toggle it mid-session. Motion: `useReducedMotion()` or `<MotionConfig reducedMotion="user">`, which drops transforms and keeps opacity automatically. GSAP: `gsap.matchMedia()` with a reduced-motion condition. Lenis: `respectReducedMotion` (default true). SwiftUI: `@Environment(\.accessibilityReduceMotion)`; UIKit `UIAccessibility.isReduceMotionEnabled`; Android reads the animator duration scale (`Settings.Global.ANIMATOR_DURATION_SCALE`, 0 when animations are removed). The blanket reset that sets every `animation-duration` to 0.01ms is a fallback for legacy pages, never the design; it also breaks any logic that waits on `transitionend`.
+
+### 11.3 What to keep and what to remove
+
+| Keep (safe) | Remove or replace |
+|---|---|
+| Opacity crossfades under 200ms | Parallax, any layer moving at a different rate from scroll |
+| Colour and border changes | Zoom and scale transitions larger than about 5% (iOS 7's zoom was the case that made Apple add the setting in 2013) |
+| Small translations under about 8px, or none | Large travel: full-screen slides, elements crossing more than about a third of the viewport |
+| Determinate progress | Autoplaying video and ambient loops (pause them; provide the poster) |
+| Focus rings and state layers | Scroll-jacking, smooth scroll libraries (Lenis disables itself), snap-driven narratives (serve the release layout) |
+| A single stagger collapsed to one fade | Infinite marquees, idle "breathing" loops, cursor followers, hover lifts |
+
+Val Head's triggers (A List Apart, 2015): large relative movement across the screen, exaggerated parallax, scroll-jacked backgrounds, motion against or unlinked from the scroll direction, and large perceived distance covered quickly; opacity, colour and blur changes are low risk. Apple's visionOS guidance adds a number: avoid sustained oscillation near 0.2Hz (one cycle every 5 seconds), the frequency people are most sensitive to, which rules out the slow "floating" idle loops on hero imagery.
+
+### 11.4 The standards
+
+WCAG 2.2: 2.2.2 Pause, Stop, Hide (Level A) applies to anything that moves, blinks or scrolls automatically for more than 5 seconds and requires a way to pause it (carousels, marquees, ambient video); 2.3.1 Three Flashes or Below Threshold (Level A) caps flashing at three per second; 2.3.3 Animation from Interactions (Level AAA) requires that motion triggered by interaction can be disabled unless essential, and names parallax explicitly. The house treats 2.3.3 as a floor on every luxury site, because the audience is older and wealthier than the web average and vestibular sensitivity rises with age. The vestibular safety numbers, the testing method and the Indian and UAE accessibility obligations (India's Rights of Persons with Disabilities Act 2016 and GIGW guidelines; the UAE's Federal Law No. 29 of 2006 and the TDRA digital accessibility policy) are in 11 (accessibility); this file only sets the motion values.
+
+## 12. Performance
+
+### 12.1 The pixel pipeline and what each property costs
+
+A frame passes through style (which rules apply), layout (where every box goes), paint (filling pixels into layers) and composite (placing layers on screen, on the GPU). A property's cost is which stage it re-enters:
+
+| Property changed | Stages re-run | Cost per frame | Verdict |
+|---|---|---|---|
+| `transform`, `opacity` | Composite only | Microseconds on the GPU; runs off the main thread even when script is busy | The only two properties to animate continuously |
+| `filter`, `backdrop-filter` | Composite (GPU) but each frame re-renders the effect over its area | A full-screen blur at 20px radius costs milliseconds on mobile; backdrop blur on a scrolling surface is the single most common cause of jank on luxury sites | Animate once, briefly, on a small area; never under scroll |
+| `clip-path`, `mask` | Paint or composite depending on the engine | Cheap on simple shapes, expensive on large images | Acceptable for reveals of one element |
+| `color`, `background-color`, `box-shadow`, `border` | Paint | Repaints the element's layer; shadow blur repaints a larger area | Fine for micro durations on small elements; a 400px card with an animated 40px shadow is a repaint of 230,000 pixels per frame |
+| `width`, `height`, `top`, `left`, `margin`, `padding`, `font-size` | Layout, paint, composite | Layout of the element and often its ancestors and siblings; a list of 50 items relaid 60 times a second | Never animate directly; use FLIP (section 5.4) |
+| Reading `offsetWidth`, `getBoundingClientRect()` after a write | Forces synchronous layout | Layout thrash: each read in a loop forces a full layout | Batch all reads, then all writes |
+
+### 12.2 GPU layers and memory
+
+A composited layer is a bitmap in GPU memory: width times height times 4 bytes. A full-screen layer on a 1440 by 3200 phone is 18.4MB; ten of them exhaust the budget on a mid-range device and the browser starts dropping layers, which causes repaint flashes. The browser promotes an element to its own layer for 3D transforms, `will-change`, video, canvas, and elements composited above a layer. Count layers in DevTools (Layers panel, or Rendering, Layer borders). Rule: fewer than ten promoted layers on screen at once; one for the active scene's moving element, one for a fixed header, one for the sheet.
+
+### 12.3 will-change discipline
+
+`will-change: transform` tells the browser to promote the element in advance so the first frame of an animation does not pay for layer creation. It is a reservation of memory, so it is set before an animation (on hover intent, on scene enter, a frame ahead) and removed after; a stylesheet that puts `will-change` on every card or every section is slower than one with none, because the memory and the compositing work are paid every frame for elements that never move. Never set it on `*`, never leave it on after the move, never use it as a "GPU acceleration" incantation.
+
+### 12.4 Diagnosing jank
+
+The Chrome DevTools Performance panel (as of October 2026) records a trace with CPU throttling presets (4x for a mid-range phone, 20x for the slowest; custom presets can be calibrated to a device), shows the frames track (each frame coloured by whether it hit the budget), long tasks (any main-thread task over 50ms, the RAIL threshold), the Interactions tab with INP (Interaction to Next Paint; good is under 200ms) broken into input delay, processing and presentation delay, and the Layout shifts tab with each shift's elements and score. The Animations panel inspects and slows running CSS and WAAPI animations (25% and 10% speed) to check curves by eye. The Rendering tab's Paint flashing shows every repaint in green; a scroll that lights up the whole page is a paint-bound animation. The method: record a scroll through the scene at 4x throttling, find the red frames, click one, read the bottom-up list for the function or the style recalc that owns it. Measure on a real mid-range Android (a Redmi or Samsung A series, the modal phone in Mumbai and Sharjah) before calling anything done; a trace on an M-series Mac proves nothing.
+
+### 12.5 Mobile budgets
+
+Per frame at 60Hz, after the browser's own work: about 8 to 10ms for script, style and layout, which is one `IntersectionObserver` callback or one ScrollTrigger tick; a React render does not fit. Per page: one smooth-scroll loop, one scroll-linked scene active at a time (kill the others with `ScrollTrigger` ranges or `animation-range`), no more than three simultaneous tweens on a phone, no `backdrop-filter` on scrolling surfaces, video under 1080p for hero loops with `playsinline muted loop` and a poster, and total motion JavaScript under about 70KB gzipped (section 7.1). Battery is a budget too: a 60fps idle loop on a hero image runs the GPU continuously; stop every loop when the tab is hidden (`visibilitychange`) and when the element leaves the viewport.
+
+### 12.6 Lottie versus CSS versus video versus Rive: the cost comparison
+
+Sizes measured from the published packages, October 2026, gzipped unless stated.
+
+| Approach | Runtime cost (download) | Per-frame cost | Right for | Wrong for |
+|---|---|---|---|---|
+| CSS transitions and keyframes, WAAPI | 0 | Compositor only when limited to transform and opacity | Every interface transition; reveals; logo idle loops built from SVG parts | Complex character or illustrative animation; anything a designer must iterate in After Effects |
+| GSAP 3.15 | Core 28KB; ScrollTrigger 18KB; Flip 10KB; ScrollSmoother 5.5KB | Main-thread JS per frame, batched well; transform-only tweens still composite | Scroll narratives, choreographed timelines, pinned scenes | A product UI where CSS or Motion already suffices |
+| Motion (React) 14 | About 59KB for the full build (a smaller `motion/mini` build exists for simple cases) | Hybrid: uses WAAPI and compositor where it can, JS where it must (springs, layout) | React product UI, layout and presence animation | Static marketing sites without React |
+| Lenis 1.3 | 5.4KB | One lerp per frame | Smooth scroll on narratives | Stores, apps, anything read |
+| Lottie (lottie-web 5.13) | Full player 76KB; light (SVG only) 46KB; canvas renderer 68KB; plus the JSON (keep under 100KB, 13-motion-graphics-and-3d-production.md, section 6) | SVG renderer creates a DOM node per shape and repaints vectors every frame; a 300-layer animation is a 300-element DOM animating; canvas renderer rasterises each frame on the CPU | Icon and logo animation designed in After Effects, 1 to 3 on a page, small on screen | Full-screen hero animation; anything with blur, gradients, mattes or more than a few hundred shapes; anything that must respond to input |
+| dotLottie (dotlottie-web 0.81) | 33KB JS plus a WebAssembly renderer of about 496KB gzipped (1.24MB raw), loaded once | Renders in WASM (ThorVG) to canvas; consistent across platforms; the `.lottie` container zips several animations, themes and state machines with shared assets | Many Lotties on one page or app; themed (dark mode) variants; interactive state machines | A single small icon, where the WASM download is larger than the benefit |
+| Rive (@rive-app/canvas 2.48) | 143KB (canvas), 117KB (canvas-lite, no raster images or text), 138KB (webgl2) | Its own renderer; state machines and data binding run inside; cheaper than Lottie per layer at the same complexity, more expensive to download | Interactive characters, animated UI that reacts to input and data, app onboarding, games | A page with one static reveal |
+| Video (H.264, H.265, AV1) | 0 runtime; the file (a 10s 1080p loop at 4 to 8Mbps is 5 to 10MB; AV1 at about half) | Hardware decode, nearly free per pixel; the cheapest way to move photographic pixels | Photographic motion, grain, light, anything rendered in a 3D package | Anything that must be crisp at every size, respond to input, or change with theme; text |
+
+Rule of choice: pixels that look like film are video; shapes that respond are Rive; shapes that only play are Lottie, small; everything else is CSS or the motion library already on the page.
+
+## 13. Implementation reference
+
+Versions are the npm or platform releases current in October 2026. Every snippet uses the house curves from section 3.5 and the reduced-motion tokens from section 11.2.
+
+### 13.1 CSS transitions and keyframes
+
+```css
+:root {
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);   /* expo out */
+  --ease-enter:  cubic-bezier(0.22, 1, 0.36, 1);  /* quint out */
+  --ease-exit:   cubic-bezier(0.4, 0, 1, 1);
+  --ease-move:   cubic-bezier(0.2, 0, 0, 1);      /* M3 standard */
+}
+.panel { transition: transform var(--dur-large) var(--ease-enter), opacity var(--dur-small) ease; }
+.panel[hidden] { transition-timing-function: var(--ease-exit); transition-duration: calc(var(--dur-large) * 0.7); }
+.hero-image { animation: reveal 900ms var(--ease-reveal) both; }
+@keyframes reveal { from { opacity: 0; transform: translateY(var(--travel)) scale(1.02); } }
+```
+
+A transition is interruptible by nature: changing the target mid-flight retargets from the current computed value with no hitch (section 3.9). Prefer `transition` for state changes and `@keyframes` only for entrances with more than two keyframes or for loops. `transition-behavior: allow-discrete` with `@starting-style` (Chrome 117, Safari 17.5, Firefox 129) animates `display: none` entrances without JavaScript, which is how a native `<dialog>` or `popover` fades in.
+
+### 13.2 Web Animations API
+
+```js
+const anim = el.animate(
+  [{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }],
+  { duration: 400, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'forwards' }
+);
+await anim.finished;           // a promise; chain the next step here
+anim.commitStyles(); anim.cancel();   // write the end state to inline style, free the animation
+```
+
+`Element.animate()` runs on the compositor for transform and opacity, exposes `playbackRate`, `currentTime`, `pause()` and `reverse()`, and accepts `composite: 'add'` so two animations on the same property combine instead of overwriting (a hover scale on top of an entrance). It is the engine beneath Motion and the right choice when the page has no library and CSS cannot express the sequence.
+
+### 13.3 GSAP 3
+
+GSAP 3.15.0 (April 2026). Webflow acquired GreenSock in October 2024 and GSAP 3.13 (30 April 2025) made the whole toolset, including the former Club plugins (SplitText, MorphSVG, ScrollSmoother, Flip and the rest), free for commercial use. The core ideas: a tween animates properties over time; a timeline sequences tweens with position parameters; plugins extend the targets.
+
+```js
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Flip } from 'gsap/Flip';
+gsap.registerPlugin(ScrollTrigger, Flip);
+gsap.defaults({ ease: 'expo.out', duration: 0.8 });
+
+// Choreographed reveal: container, then content, one stagger
+const tl = gsap.timeline({ scrollTrigger: { trigger: '.chapter', start: 'top 70%', once: true } });
+tl.from('.chapter__image', { y: 24, opacity: 0, duration: 0.9 })
+  .from('.chapter__line', { y: 12, opacity: 0, duration: 0.5, stagger: 0.04 }, '-=0.6'); // 40ms stagger, overlaps the image
+
+// Pinned, scrubbed hold: 150vh of scroll drives the sequence
+gsap.timeline({ scrollTrigger: { trigger: '.hold', start: 'top top', end: '+=150%', pin: true, scrub: 0.8, anticipatePin: 1 } })
+  .to('.hold__product', { rotate: 90, ease: 'none' })      // linear under scrub: the finger is the easing
+  .to('.hold__caption', { opacity: 1, ease: 'none' }, '<0.5');
+
+// Flip: grid to detail
+const state = Flip.getState('.card, .card__image');
+container.classList.add('is-detail');
+Flip.from(state, { duration: 0.45, ease: 'power3.inOut', scale: true, nested: true, absolute: '.card' });
+```
+
+Reduced motion with `gsap.matchMedia()`: define the animations inside `mm.add('(prefers-reduced-motion: no-preference)', () => { ... })` and the reduced branch sets end states with `gsap.set`. GSAP's named eases map to section 3.4: `power2` is quad, `power3` cubic, `power4` quart, `expo`, `circ`, `back`, `elastic`, `bounce`; `expo.out` is the house reveal.
+
+### 13.4 Motion (formerly Framer Motion)
+
+Motion 14 (October 2026), imported from `motion/react`; the Framer Motion name survives as a compatibility package. Three capabilities justify the 59KB: declarative springs with velocity carried across interruptions, `layout` animations (FLIP on any layout change) with `layoutId` for shared elements, and `AnimatePresence` for exit animations, which React cannot otherwise express because the element is already gone.
+
+```jsx
+import { motion, AnimatePresence, MotionConfig, useReducedMotion } from 'motion/react';
+
+const enter = { type: 'spring', visualDuration: 0.4, bounce: 0 };     // perceptual duration, critically damped
+export function Gallery({ items, selected, onSelect }) {
+  const reduce = useReducedMotion();
+  return (
+    <MotionConfig reducedMotion="user" transition={enter}>
+      <ul>{items.map((it) => (
+        <motion.li key={it.id} layout layoutId={`card-${it.id}`} onClick={() => onSelect(it)}
+          whileTap={{ scale: 0.98 }} whileHover={reduce ? undefined : { y: -2 }} />
+      ))}</ul>
+      <AnimatePresence mode="wait">
+        {selected && (
+          <motion.article key={selected.id} layoutId={`card-${selected.id}`}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.2, ease: [0.4, 0, 1, 1] } }} />
+        )}
+      </AnimatePresence>
+    </MotionConfig>
+  );
+}
+```
+
+Rules: `key` is what AnimatePresence tracks, so lists need stable ids; `mode="wait"` sequences exit then enter (a route change), `mode="popLayout"` takes exiting items out of flow so siblings reflow immediately (lists); spring defaults in the current docs are stiffness 1, damping 10, mass 1, bounce 0.25, duration 0.3s, and setting `stiffness`, `damping` or `mass` overrides `bounce` and `duration`, so pick one vocabulary per project (the house uses `visualDuration` and `bounce`, matching Apple's).
+
+### 13.5 React Spring
+
+`@react-spring/web` 10.1 (October 2026). Hooks (`useSpring`, `useSprings`, `useTrail`, `useTransition`, `useChain`) return animated values that bypass React rendering, so a spring updating 60 times a second does not re-render the tree. Config: `{ tension, friction, mass }` or a preset (`config.default` 170/26, `gentle` 120/14, `stiff` 210/20, `slow` 280/60; section 3.8); `clamp: true` removes overshoot. Its strength is physics on many elements (a trail of 20 items with inherited velocity); its cost is a second mental model next to Motion, so a project uses one or the other.
+
+### 13.6 Rive
+
+Rive is an editor and a runtime (`@rive-app/canvas` 2.48, with React, iOS, Android, Flutter and Unity runtimes). A state machine is a graph of animations with inputs (number, boolean, trigger), transitions with conditions and blend states; listeners map pointer events to inputs inside the file, so a button's hover and press states ship in the asset. Data binding (April 2025) adds view models: typed properties (number, string, boolean, colour, enum, trigger, and from mid-2025 lists, images and artboards) that the runtime sets and the file reacts to, so a price, a name or a swatch updates the animation without a transition per value.
+
+```js
+import { Rive, Fit, Layout } from '@rive-app/canvas';
+const r = new Rive({ src: '/mark.riv', canvas, autoplay: true, stateMachines: 'Idle', autoBind: true,
+  layout: new Layout({ fit: Fit.Contain }),
+  onLoad: () => { r.resizeDrawingSurfaceToCanvas(); r.viewModelInstance?.number('progress')?.value = 0.42; } });
+```
+
+Rive is the right tool when the animation must respond (a configurator, an onboarding character, a live progress mark) and the wrong one for a reveal that plays once.
+
+### 13.7 Lottie and dotLottie
+
+Lottie is After Effects vector animation exported as JSON by the Bodymovin plugin and played by lottie-web (renderers `svg`, `canvas`, `html`) or the dotLottie players. The `.lottie` container (dotLottie, open format from LottieFiles) zips one or more animations with shared assets, themes and state machines. Production rules from 13-motion-graphics-and-3d-production.md, section 6: under 100KB, no effects that Bodymovin cannot export (most blurs, mattes with gradients, expressions unless baked), test in the LottieFiles player before handoff.
+
+```html
+<script type="module">
+import { DotLottie } from 'https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web@0.81.0/+esm';
+const player = new DotLottie({ canvas: document.querySelector('#mark'), src: '/mark.lottie', autoplay: true, loop: false });
+matchMedia('(prefers-reduced-motion: reduce)').matches && player.setFrame(player.totalFrames - 1); // show the lock frame
+</script>
+```
+
+### 13.8 SwiftUI
+
+```swift
+// Implicit, tied to a value
+.animation(.smooth(duration: 0.35), value: isOpen)
+// Explicit
+withAnimation(.spring(duration: 0.4, bounce: 0)) { isOpen.toggle() }
+// Presets (iOS 17): .smooth (bounce 0), .snappy (0.15), .bouncy (0.3); extraBounce: adds to each
+// Phase animation (iOS 17): cycle through discrete states
+Image(systemName: "bell").phaseAnimator([false, true], trigger: rang) { view, phase in
+  view.rotationEffect(.degrees(phase ? 12 : 0))
+} animation: { _ in .snappy(duration: 0.25) }
+// Keyframe animation (iOS 17): tracks per property, each with its own keyframes and curves
+.keyframeAnimator(initialValue: Pose(), trigger: play) { view, pose in
+  view.scaleEffect(pose.scale).offset(y: pose.y)
+} keyframes: { _ in
+  KeyframeTrack(\.scale) { SpringKeyframe(1.04, duration: 0.3, spring: .smooth); CubicKeyframe(1.0, duration: 0.4) }
+  KeyframeTrack(\.y)     { LinearKeyframe(-8, duration: 0.3); SpringKeyframe(0, duration: 0.4, spring: .bouncy) }
+}
+// Shared element: matchedGeometryEffect(id:in:); zoom navigation (iOS 18): .navigationTransition(.zoom(sourceID:in:))
+```
+
+`phaseAnimator` and `keyframeAnimator` are iOS 17, macOS 14 and visionOS 1 (Apple developer documentation). Transactions carry animation through state; `.transaction { $0.animation = nil }` kills an inherited animation on a subtree. Apple's HIG motion page (updated 9 September 2025 for Liquid Glass) is the behavioural contract: purposeful, optional, brief and precise, cancellable, and sparing on frequent interactions; system components already animate and should not be re-animated.
+
+### 13.9 Jetpack Compose
+
+High-level first: `AnimatedVisibility` (enter and exit with `fadeIn`, `slideInVertically`, `expandVertically`), `AnimatedContent` (crossfade or custom transition between states, with `SizeTransform`), `Modifier.animateContentSize()`, `animate*AsState` (`animateFloatAsState`, `animateColorAsState`, `animateDpAsState`) for single values, `updateTransition` for several values that must move together, `Animatable` for gesture-driven springs with velocity, and `Modifier.animateItem()` in lazy lists for reorder. Specs: `spring(dampingRatio, stiffness)` with the constants in section 3.8, `tween(durationMillis, easing)` with `CubicBezierEasing`, `keyframes { }`, `repeatable`, `infiniteRepeatable`. Material 3 Expressive exposes the six scheme springs through `MaterialTheme.motionScheme` (`defaultSpatialSpec()`, `fastEffectsSpec()` and so on) so components inherit the house scheme (standard, section 3.8) from the theme. `SharedTransitionLayout` with `sharedElement` and `sharedBounds` is stable in Compose 1.10 (December 2025).
+
+```kotlin
+val scale by animateFloatAsState(if (pressed) 0.98f else 1f, MaterialTheme.motionScheme.fastSpatialSpec(), label = "press")
+AnimatedVisibility(visible, enter = fadeIn(tween(250)) + slideInVertically { it / 8 }, exit = fadeOut(tween(180))) { Sheet() }
+```
+
+### 13.10 Flutter basics
+
+Implicit widgets (`AnimatedContainer`, `AnimatedOpacity`, `AnimatedPositioned`, `AnimatedSwitcher`, and `TweenAnimationBuilder` for anything else) animate when their parameters change, with `duration` and `curve` (`Curves.easeOutExpo`, `Curves.easeOutQuint` match section 3.4). Explicit animation uses an `AnimationController(duration:, vsync:)`, a `Tween` (`ColorTween`, `IntTween`, `TweenSequence`) and `CurvedAnimation`, consumed by `AnimatedBuilder` or `AnimatedWidget`; physics come from `controller.animateWith(SpringSimulation(SpringDescription.withDampingRatio(mass: 1, stiffness: 400, ratio: 1), start, end, velocity))`. `Hero` handles shared elements across routes; `AnimatedList` handles insertion and removal. The `flutter_animate` package gives a chainable `.animate().fadeIn().slideY()` syntax; the `rive` package (0.14, now on the native C++ runtime) and the `lottie` package play the two asset formats.
+
+## 14. Motion in brand identity
+
+### 14.1 Kinetic and performative type
+
+Kinetic type is type that moves; performative type is type that behaves, responding to sound, data, input or time by rules rather than by a fixed timeline, so the identity is a system that performs rather than a film that plays. The reference studio is Studio Dumbar/DEPT (Rotterdam, founded by Gert Dumbar in 1977; creative director Liza Enebeis), whose work for Alzheimer Nederland, Amsterdam Sinfonietta, NN North Sea Jazz Festival, Instagram and the Utah Jazz ("brand in motion") treats the logotype's distortion, rhythm or assembly as the identity's primary expression, and whose DEMO Design in Motion Festival (editions 2019, 2022 and 2025) showed motion identity work across the digital screens of Amsterdam Centraal station. design-taste, section 6, lists kinetic, performative type as rising in 2026; the craft of making moving type readable (0.4 to 0.6 seconds per word, hold before move) is in 13-motion-graphics-and-3d-production.md, section 4. The house use: one performative behaviour per identity (a wordmark that breathes with the room's sound at an event; letterforms whose weight follows the time of day on a hotel site), defined as a rule with parameters, so it can be rebuilt in After Effects, in Rive and in code and remain the same identity.
+
+### 14.2 Logo animation anatomy
+
+Five states, each a decision: reveal (0.8 to 1.5s, the mark built from its own construction), hold (1 to 2s, the lock frame, pixel-identical to the static mark), idle (an optional loop of 1 to 2% scale or a 4 to 8s drift for screens that stay on), transition (how the mark hands over to the next scene, usually by holding while the ground changes) and exit (0.3 to 0.6s, faster than the reveal, because leaving slowly reads as reluctance). Production numbers, deliverables and sound sync are in 13-motion-graphics-and-3d-production.md, section 6. The identity-level rules this file adds: the reveal's curve is the brand's curve (the same expo-out that reveals the hero image reveals the mark, so the two feel related); the idle loop never oscillates near 0.2Hz (section 11.3); the exit's duration is about 0.7 of the reveal's, like every exit in the system; and the web version is CSS or a sub-100KB Lottie that shows the lock frame under reduced motion.
+
+### 14.3 Motion principles documents in brand guidelines
+
+A brand's motion guideline is the page that stops every agency and in-house team inventing their own physics. Uber publishes one in its public brand guide (assets.uber.com/guide/motion, as of October 2026), alongside logo, type and colour. Spotify and Stripe do not publish theirs; their motion is consistent enough to study on the products themselves (Spotify's Now Playing and transition language; Stripe's marketing site, where almost nothing moves and what moves is precise). At system level, Material 3 (section 3.8), IBM Carbon and Microsoft Fluent 2 (section 3.4) are the published references. What the document contains, in order: the motion idea in one sentence; three to five principles with a reason each; the curve family with values; the duration scale with tokens; the hierarchy (what moves first); the logo's five states with timings; the reduced-motion policy; a do and do-not board of six pairs; and reference files (After Effects project, Rive file, CSS tokens).
+
+### 14.4 Motion tokens
+
+Motion decisions are tokens like any other (07-design-systems-and-tokens.md, section 4, for the DTCG `duration`, `cubicBezier` and `transition` types, and section 11 for where motion sits in the system). A house set has about twelve: `duration.micro` 150ms, `duration.small` 250ms, `duration.large` 400ms, `duration.page` 600ms, `duration.reveal` 900ms, `duration.exit-ratio` 0.7; `easing.reveal` (0.16, 1, 0.3, 1), `easing.enter` (0.22, 1, 0.36, 1), `easing.exit` (0.4, 0, 1, 1), `easing.move` (0.2, 0, 0, 1); `spring.ui` {visualDuration 0.35, bounce 0}, `spring.gesture` {response 0.4, damping 0.85}; `travel.reveal` 16px. Each token carries its reduced-motion alias (section 11.2). A token set without a choreography page (which token applies to which component state) is a palette without a layout.
+
+### 14.5 How to write a motion language in five rules
+
+1. The one move. Name the single motion that carries the brand's idea, in a sentence a client can repeat: "Everything arrives slowly from stillness and settles." If it cannot be written, there is no motion language yet (the same test as design-taste, section 4).
+2. The curve family. One entrance curve, one exit curve, one move curve, with values; springs with one bounce value. The feel of a brand is its tail (section 3.5).
+3. The duration scale. Five tokens, with the exit ratio. Luxury sits at the top of each band (section 4.1).
+4. The hierarchy. Which element moves first, which follows, which never moves. Type never reveals; the product is the hero of every transition; the ground is still.
+5. The refusals. The five things this brand's motion never does, by name (section 16 is the list to choose from). For a Jaipur palace hotel: no bounce, no parallax, no autoplay, no hover lift, no spinner; for a Dubai streetwear label the list is different and shorter.
+
+## 15. Specifying motion for handoff
+
+### 15.1 The motion spec
+
+Every animated state change in a handoff file gets one row. A spec without a trigger or an easing is incomplete; a spec in words ("smooth", "subtle", "snappy") is no spec.
+
+| Element | Property | From | To | Duration | Easing | Delay | Trigger | Reduced motion |
+|---|---|---|---|---|---|---|---|---|
+| Sheet container | transform.y | 100% | 0 | 400ms | spring visualDuration 0.4, bounce 0 | 0 | tap "Reserve" | opacity 0 to 1, 150ms |
+| Sheet content | opacity | 0 | 1 | 250ms | enter (0.22, 1, 0.36, 1) | 60ms | follows container | same, no delay |
+| Backdrop | opacity | 0 | 0.4 | 300ms | ease | 0 | with container | same |
+| Sheet (dismiss) | transform.y | 0 | 100% | 250ms | exit (0.4, 0, 1, 1) | 0 | tap close, or drag past 30% or 500pt/s | opacity 1 to 0, 120ms |
+
+### 15.2 Timing charts
+
+A timing chart is the spec drawn: time on the x axis in milliseconds (with frame ticks at 16.7ms for anything under 300ms), one row per element, a bar from start to end with the curve's shape sketched inside it and delays visible as gaps. It is the only artefact that shows choreography (section 5) at a glance, because overlaps and the stagger rhythm are visible where a table hides them. Make it in Figma or on paper; the After Effects timeline screenshot with layer bars is an acceptable substitute for a brand film.
+
+### 15.3 Figma Smart Animate: what it can and cannot say
+
+Smart Animate matches layers across frames by name and position in the layer hierarchy and animates the differences in position, scale, rotation, opacity (use layer opacity), fill (solid, gradient and image) and blur. It does not animate drop or inner shadows, cannot morph between different shapes, treats overlays as new frames, and falls back to a dissolve the moment it meets an unsupported property (Figma help, read October 2026). The prototype easing menu offers the named curves, a custom cubic-bezier and spring presets with a custom spring (mass, stiffness, damping), so a Figma prototype can state the house curve exactly; it cannot express interruption, velocity, scroll-linked progress or a stagger beyond manual delays, and its spring values do not export to code. Use it to show sequence and feel to a client, and write the spec table for the engineer.
+
+### 15.4 Prototypes in ProtoPie and Rive, and when to go to code
+
+ProtoPie (Free; Basic USD 25 a month, single seat; Pro USD 47 per editor a month; Enterprise custom; ProtoPie Connect for hardware and multi-device from USD 20 per user a month, as of October 2026) prototypes gestures, sensors, variables and conditional logic with real springs and is the right tool for a sheet, a carousel or an onboarding flow that must be felt on the phone before it is built. Rive prototypes the asset itself with its state machine and is the right tool when the deliverable is the Rive file. Code (a React page with Motion, a SwiftUI preview) is the only honest test of interruption and performance, and it is a half-day job with current tooling; 09-interaction-design-and-ux-patterns.md, section 4, has the fidelity ladder and tool comparison. Rule: anything that will be felt under the finger is prototyped in ProtoPie or code; anything that will be watched is prototyped in Figma or After Effects.
+
+### 15.5 Video references
+
+A motion reference is a screen recording, never a description. Record at 60fps (iOS screen recording; QuickTime on Mac), then view at 0.25x to read the curve; name the file by what is borrowed ("sheet-dismiss-velocity-ios-mail.mov") and state in the brief which property of the reference is wanted: the curve, the duration, the choreography or the interruption behaviour, never the whole thing (design-taste, section 4, rule 1). Reference libraries: Mobbin and Screens for app flows; the Apple apps, Linear, Vercel and Arc for interface motion; Awwwards Site of the Day archives for scroll narratives; Studio Dumbar's reels for identity motion.
+
+### 15.6 The motion review checklist
+
+1. Does every move answer one of the six feedback jobs (section 6.1), or is it the one budgeted piece of decoration?
+2. Is the first frame of response inside 100ms of the input?
+3. Enter with ease-out, exit with ease-in, move with ease-in-out; exits about 0.7 of entrances?
+4. Durations inside their bands (section 4.1), luxury at the top of the band, nothing frequent above 300ms?
+5. One stagger at most, 20 to 60ms, total under 300ms?
+6. Parent before child on enter, child before parent on exit?
+7. Shared elements keep aspect ratio honest and return to their slot on the way back?
+8. Can every animation be interrupted and retargeted, and does input stay live throughout?
+9. Does gesture motion track 1:1, project velocity at release, and commit destructive outcomes only on release?
+10. Transform and opacity only for anything continuous; no layout properties, no backdrop blur under scroll?
+11. Under reduced motion: parallax, zoom, large travel and autoplay gone; state changes still visible?
+12. 60fps on a mid-range Android at 4x throttling, measured in a trace, with fewer than ten promoted layers?
+13. Type never reveals; the product is the hero of every transition?
+14. Nothing from the tell list (section 16)?
+15. One considered move on the page, and everything else still (design-taste, section 5)?
+
+## 16. The cheap motion tells and their fixes
+
+design-taste, section 3, names the motion tells; this is the diagnosis and the repair for each.
+
+| Tell | Why it reads cheap | Fix |
+|---|---|---|
+| Bounce everywhere | Exaggeration on objects with no reason to bounce; dates the work to 2014 to 2019 libraries | Bounce 0 (critically damped) on everything; 0.1 to 0.2 only on gesture release with momentum |
+| Overshoot on text | Letterforms that pass their position and return are unreadable during the move and cartoonish after | Text never overshoots and ideally never moves; if it must, 8px travel on expo-out |
+| Linear easing | Constant velocity reads as a mechanism or a bug | Ease-out on entrances, ease-in on exits; linear only for scrub, progress and rotation |
+| Uniform durations | Every element at 300ms regardless of size or distance, so large things teleport and small things crawl | Distance-based durations (section 4.3) or springs |
+| Everything animating | No hierarchy, so nothing is pointed at and the page reads as a slideshow | One considered move; everything else feedback-only under 200ms |
+| Slow fades over 600ms | Reads as a wait disguised as elegance; blocks reading | Crossfades 150 to 300ms; only a hero reveal earns 700 to 900ms, and only its tail is slow |
+| Parallax wobble | Layers at different rates with hard edges, jittering on wheel steps | Two layers, 10 to 20% rate difference, transform only, scrub-smoothed; or none |
+| Hover lift on cards | The 2017 Material card lifting 8px with a growing shadow on every card; repaint-heavy, meaningless | Hover changes one thing: an underline, a 2% image scale, a colour; no shadow growth |
+| Auto-advancing carousels | Users cannot read in time, lose control, and treat the moving panel as an ad; Nielsen's Siemens study (2013) found a 5-second rotation left the offer visible 20% of the time; Notre Dame's measurement found about 1% of visitors clicked a carousel feature | Static hero; a user-driven gallery with native scroll-snap if several images are essential |
+| Spinners for under 300ms | A flash that announces a delay the user would not have noticed | Show after 300ms; skeletons after 1s; optimistic UI for anything under 100ms |
+| Scroll-jacking | The page moves other than where the finger says; the top vestibular trigger | Native scroll; smoothing only on narratives and only with reduced motion honoured |
+| Scale from 0 | A cartoon pop; nothing in the world grows from nothing | Scale from 0.96 with a fade |
+| Counting numbers on every statistic | A trick for one number becomes noise on six | One stepped counter on the one figure that is the idea |
+| Typewriter headlines | Makes the reader wait for a sentence; dates to 2016 landing pages | Type is already there; the image or the mark moves |
+| Cursor followers and magnetic buttons | Agency-showcase cliché of 2019 to 2022; useless on touch | None; or a custom cursor that only changes shape over the one interactive element |
+
+## 17. Reference table: durations, easings and springs by use case
+
+House values, with the system token that most closely matches. "Exit" durations are the matching entrance at about 0.7.
+
+| Use case | Duration | Easing or spring | Nearest token | Note |
+|---|---|---|---|---|
+| Press state in | 50 to 80ms | ease-out cubic | Carbon fast-01 (70ms) | Scale 0.97 to 0.98 |
+| Press release | 150 to 200ms | easeOutCubic (0.33, 1, 0.68, 1) | M3 short3 / short4 | |
+| Hover colour or underline | 120 to 150ms | ease | Fluent durationFast (150ms) | Never a lift |
+| Toggle knob | 150 to 200ms | ease-in-out (0.42, 0, 0.58, 1) | M3 short4 | Track colour 150ms |
+| Menu, dropdown, popover in / out | 200 to 250 / 150ms | easeOutQuint (0.22, 1, 0.36, 1) / M2 accelerate | M3 medium1 | 8px travel, origin at the trigger |
+| Tab indicator slide | 200 to 250ms | M3 standard (0.2, 0, 0, 1) | M3 medium1 | FLIP |
+| Toast in / out | 300 to 400 / 200 to 250ms | easeOutQuint / ease-in | Carbon moderate-02 / slow-01 | Never bounce |
+| Dialog in / out | 250 to 300 / 150 to 200ms | easeOutQuint, scale 0.96 to 1 / ease-in | M3 medium2 | Backdrop 200ms, dialog 40ms later |
+| Sheet or drawer open | 350 to 400ms, or spring | spring visualDuration 0.4, bounce 0 (response 0.4, damping 1) | M3 medium4 | Gesture: projection and detents |
+| Sheet dismiss by button | 250ms | M2 accelerate (0.4, 0, 1, 1) | M3 medium1 | By gesture: release velocity |
+| List insert / remove | 200 to 300ms | M3 standard | M3 medium2 | FLIP siblings |
+| Stagger per item | 20 to 60ms | inherits the group's curve | | Total under 300ms |
+| Container transform (card to page) | 350 to 450ms | M3 standard | M3 medium4 / long1 | Content crossfades inside |
+| Shared element across routes | 350 to 450ms | M3 standard | M3 long1 | Root crossfade 240ms |
+| Route fade through | 250 to 300ms | ease | M3 medium2 | Luxury drops the 92% scale |
+| Hero or image reveal | 700 to 900ms | easeOutExpo (0.16, 1, 0.3, 1) | M3 extra-long1 to 3 | 8 to 24px travel; once |
+| Scroll-scrubbed scene | scroll-linked | linear (the finger eases) | | scrub 0.6 to 1.2 in ScrollTrigger |
+| Smooth scroll | continuous | lerp 0.08 to 0.1 | | Lenis; native on stores |
+| Logo reveal (brand film) | 800 to 1500ms | easeOutExpo | | Exit 300 to 600ms |
+| Logo idle loop | 4 to 8s cycle | sine in-out | | Never near 0.2Hz; 1 to 2% scale |
+| Skeleton shimmer | 1.5 to 2s cycle | linear | | 4 to 8% luminance difference |
+| Spinner | 1 to 1.2s per turn | linear | | Appears after 300ms |
+| Pull to refresh release | spring | response 0.35, damping 1 | | Threshold 60 to 80pt |
+| Like / favourite | 300ms | ease-out up, ease-in-out back | | Scale 1 to 1.2 to 1 |
+| Reduced motion: any of the above | 100 to 200ms | ease (opacity only) | | Travel 0, parallax off |
+| Gesture spring with momentum (iOS) | spring | response 0.3 to 0.4, damping 0.8 | Apple WWDC18 | Damping 1 without momentum |
+| Compose, small component | spring | damping 0.9, stiffness 1400 | M3 standard fast spatial | Effects: damping 1, stiffness 3800 |
+| Compose, large surface | spring | damping 0.9, stiffness 300 | M3 standard slow spatial | |
+
+## Terms introduced
+
+- animation-range: the CSS property that limits which part of a scroll or view timeline drives an animation, with keywords such as entry, exit, cover and contain.
+- Anticipation: a small move opposite to the main action before it begins; in interface it adds latency.
+- Apparent motion (phi phenomenon): the perception of movement from stills shown 40 to 100ms apart; the basis of screen animation.
+- Beat, hold, release: the units of scroll narrative pacing; a scene, a pinned stretch of scroll, and free scrolling between.
+- Compositor: the browser or OS stage that places already painted layers on screen on the GPU; transform and opacity changes run here alone.
+- Container transform: Material's pattern in which an element morphs into the view it opens.
+- Critically damped: a spring at damping ratio 1, the fastest arrival with no overshoot.
+- Cubic-bezier: an easing curve from (0, 0) to (1, 1) defined by two control points; x is time, y is progress.
+- Damping ratio: c over 2 sqrt(k m), the dimensionless number that sets whether a spring overshoots.
+- Data binding (Rive): typed view-model properties that the runtime sets and the Rive file reacts to.
+- Delight budget: the house allowance of one piece of decorative motion per screen or page.
+- Detent: a resting position of a sheet or drawer.
+- Doherty threshold: the finding (IBM, 1982) that productivity rises sharply when system response drops below 400ms.
+- dotLottie: the open container format that zips Lottie animations with shared assets, themes and state machines.
+- Easing: the function mapping elapsed time (0 to 1) to progress (0 to 1).
+- Fade through: Material's pattern of fade out, then fade in with a slight scale, for unrelated destinations.
+- FLIP: First, Last, Invert, Play; the technique that turns a layout change into a transform-only animation.
+- Follow through and overlapping action: parts continuing after the body stops, and parts moving at different rates.
+- Frame budget: the time available per frame, 16.7ms at 60Hz and 8.3ms at 120Hz.
+- Hysteresis: the distance (about 10 points) a gesture travels before a recogniser commits to it.
+- Interruptibility: the property that an animation can be retargeted mid-flight without a discontinuity.
+- IntersectionObserver: the browser API that reports when an element's visibility crosses a threshold.
+- Jank: a dropped or late frame perceived as a stutter.
+- Kinetic typography: type whose motion carries meaning.
+- Layout thrash: forcing synchronous layout by interleaving style writes and layout reads.
+- Lerp: linear interpolation; in smooth scroll, the fraction of remaining distance moved per frame.
+- linear(): the CSS easing function that takes a list of sampled points, used to run a spring curve in plain CSS.
+- Long task: a main-thread task over 50ms, which blocks input.
+- Lottie: After Effects vector animation exported as JSON by Bodymovin and played by a runtime.
+- Microinteraction: a contained interaction moment with a trigger, rules, feedback and loops (Saffer).
+- Motion spec: a row per animated change stating property, from, to, duration, easing, delay, trigger and reduced-motion behaviour.
+- Motion token: a named, platform-neutral value for a duration, easing or spring.
+- Natural frequency: sqrt(k over m), how fast a spring system wants to oscillate.
+- Overdamped: a spring at damping ratio above 1, creeping to its target.
+- Parallax: layers moving at different rates to fake depth.
+- Perceptual duration: the time a spring takes to visually arrive, stable as bounce changes (Apple's duration parameter).
+- Performative typography: type that behaves by rules in response to sound, data, input or time.
+- Pin: holding an element fixed for a stretch of scroll while a sequence plays.
+- Pixel pipeline: style, layout, paint, composite; the stages a frame passes through.
+- Projection: computing where a released gesture would stop under deceleration, to decide its destination.
+- Rubber banding: diminishing movement past an edge so the boundary is felt rather than hit.
+- Scroll-driven animation: a CSS animation whose progress is bound to a scroll or view timeline rather than time.
+- Scrub: linking an animation's progress directly to scroll position, optionally with a catch-up time.
+- Settling duration: the time until a spring's movement is technically below threshold; longer and less predictable than perceptual duration.
+- Shared axis: Material's pattern in which outgoing and incoming views move along one axis with a fade.
+- Shared element: an element that persists across two views and travels between its positions.
+- Skeleton: a static placeholder showing the layout of content still loading.
+- Smart Animate: Figma's prototype transition that animates differences between matching layers.
+- Snap point: a position a scrubbed or dragged element settles to after input stops.
+- Squash and stretch: deformation under force with volume conserved; in interface, only rubber banding.
+- Stagger: a per-item delay that turns a group entrance into a sequence.
+- Staging: presenting one idea at a time so the eye knows where to look.
+- State machine (Rive): a graph of animations with inputs, conditions and blend states shipped inside the asset.
+- Step easing: steps(n) holds that divide a duration into n equal jumps.
+- Timing chart: the motion spec drawn as bars over a millisecond axis, one row per element.
+- Underdamped: a spring at damping ratio below 1, which overshoots and oscillates.
+- Vestibular: of the inner ear's balance system; motion that disturbs it causes dizziness and nausea.
+- View timeline: a scroll-driven timeline tied to an element's progress through the viewport.
+- View transition: the browser API that snapshots two DOM states or pages and animates between them through pseudo-elements.
+- Web Animations API (WAAPI): the JavaScript interface (Element.animate) to the browser's animation engine.
+- will-change: the CSS hint that promotes an element to its own compositor layer in advance of an animation.
+
+## Sources and further reading
+
+Books
+- Frank Thomas and Ollie Johnston, The Illusion of Life: Disney Animation, 1981.
+- Jakob Nielsen, Usability Engineering, 1993.
+- Dan Saffer, Microinteractions: Designing with Details, 2013.
+- Val Head, Designing Interface Animation, 2016.
+- Robert Penner, Programming Macromedia Flash MX, 2002 (the easing equations, chapter 7).
+
+Specifications and standards
+- CSS Easing Functions Level 2 (W3C Working Draft), https://www.w3.org/TR/css-easing-2/
+- CSS Scroll-driven Animations Level 1 (W3C), https://www.w3.org/TR/scroll-animations-1/
+- CSS View Transitions Module Level 1 and Level 2 (W3C), https://www.w3.org/TR/css-view-transitions-1/ and https://www.w3.org/TR/css-view-transitions-2/
+- Web Animations Level 1 (W3C), https://www.w3.org/TR/web-animations-1/
+- Media Queries Level 5, prefers-reduced-motion (W3C), https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion
+- WCAG 2.2, Understanding SC 2.3.3 Animation from Interactions, https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html
+- MDN browser-compat-data (animation-timeline, Document.startViewTransition, @view-transition), https://github.com/mdn/browser-compat-data
+- Material Design 3, Motion (easing, duration and the Expressive physics system), https://m3.material.io/styles/motion/overview
+- Compose Material 3 source, MotionScheme.kt, StandardMotionTokens.kt, ExpressiveMotionTokens.kt, MotionTokens.kt, https://android.googlesource.com/platform/frameworks/support/+/androidx-main/compose/material3/material3/src/commonMain/kotlin/androidx/compose/material3/
+- IBM Carbon Design System, Motion, https://carbondesignsystem.com/elements/motion/overview/
+- Microsoft Fluent 2, Motion, https://fluent2.microsoft.design/motion
+- Apple Human Interface Guidelines, Motion, https://developer.apple.com/design/human-interface-guidelines/motion
+- Apple developer documentation, Spring, phaseAnimator, keyframeAnimator, NavigationTransition.zoom, https://developer.apple.com/documentation/swiftui/
+- Jetpack Compose animation documentation and compose-animation release notes, https://developer.android.com/develop/ui/compose/animation and https://developer.android.com/jetpack/androidx/releases/compose-animation
+- Flutter animations documentation, https://docs.flutter.dev/ui/animations
+
+Articles and talks
+- Chan Karunamuni, Nathan de Vries and Marcos Alonso, Designing Fluid Interfaces, WWDC18 session 803, https://developer.apple.com/videos/play/wwdc2018/803/
+- Jacob Xiao, Animate with springs, WWDC23 session 10158, https://developer.apple.com/videos/play/wwdc2023/10158/
+- Nathan Gitter, Building Fluid Interfaces (code), https://github.com/nathangitter/fluid-interfaces
+- Rauno Freiberg, Invisible Details of Interaction Design, https://rauno.me/craft/interaction-design
+- Emil Kowalski, Great Animations, https://emilkowal.ski/ui/great-animations, and animations.dev
+- Paul Lewis, FLIP Your Animations, 2015, https://aerotwist.com/blog/flip-your-animations/
+- Val Head, Designing Safer Web Animation For Motion Sensitivity, A List Apart, 2015, https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/
+- Jakob Nielsen, Auto-Forwarding Carousels and Accordions Annoy Users and Reduce Visibility, Nielsen Norman Group, 2013, https://www.nngroup.com/articles/auto-forwarding/
+- Erik Runyon, Should I use a carousel?, https://shouldiuseacarousel.com/
+- Material Design, The motion system (container transform, shared axis, fade through, fade), https://m2.material.io/design/motion/the-motion-system.html
+- GSAP documentation: ScrollTrigger, Flip, and the GSAP 3.13 release post (29 April 2025), https://gsap.com/docs/v3/ and https://gsap.com/blog/3-13/
+- Motion documentation, transitions, layout animations and AnimatePresence, https://motion.dev/docs
+- Lenis README (darkroom.engineering), https://github.com/darkroomengineering/lenis
+- Rive documentation, state machines and data binding, https://rive.app/docs
+- dotLottie, https://dotlottie.io/
+- Chrome for Developers, View Transitions, https://developer.chrome.com/docs/web-platform/view-transitions and Scroll-driven animations, https://developer.chrome.com/docs/css-ui/scroll-driven-animations
+- Chrome DevTools, Performance panel, https://developer.chrome.com/docs/devtools/performance
+- Figma help, Create advanced animations with Smart Animate, https://help.figma.com/hc/en-us/articles/360039818874
+- easings.net, cubic-bezier approximations of the Penner equations, https://easings.net/
+- Studio Dumbar/DEPT, work, https://studiodumbar.com/work
