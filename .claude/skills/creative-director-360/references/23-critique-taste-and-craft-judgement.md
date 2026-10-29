@@ -101,7 +101,7 @@ The house reads Graham and Rams for structure, Sagmeister as the counterweight w
 
 Graham's 14 as crit questions: simple (what can go?); timeless (will it hold in 2036?); solves the right problem (is this the brief's problem?); suggestive (does it leave the viewer room to complete it?); often slightly funny (is there wit anywhere?); hard (where did the effort go?); looks easy (is the effort hidden?); uses symmetry (is repetition doing structural work?); resembles nature (does it borrow a model that already works in the world?); is redesign (how many versions came before this one?); can copy (whose solution did it learn from, openly?); often strange (is anything here unexpected?); happens in chunks (which moment or movement does it belong to?); often daring (what risk did it take?).
 
-Hara inherited a Muji whose art direction Ikko Tanaka set at its founding in 1980. Muji aims at the customer's rational "this will do" (kore de ii) over the craving "this is what I want" (kore ga ii); the Horizon campaign (2003, shot at the Salar de Uyuni in Bolivia and on the Mongolian grassland) makes that emptiness an image; his exhibitions RE-DESIGN (2000) and HAPTIC (2004) treat everyday objects as subjects for redesign and touch. Ex-formation (Hara's term for making the familiar unknown again, the reverse of adding information) gives a crit question: does the work make the viewer see a familiar thing as if for the first time?
+Hara inherited a Muji whose art direction Ikko Tanaka set at its founding in 1980. Muji aims at the customer's rational "this will do" (kore de ii) over the craving "this is what I want" (kore ga ii); the Horizon campaign (2003, shot at the Salar de Uyuni in Bolivia and on the Mongolian grassland) makes that emptiness an image; Hara's exhibitions RE-DESIGN (2000) and HAPTIC (2004) treat everyday objects as subjects for redesign and touch. Ex-formation (Hara's term for making the familiar unknown again, the reverse of adding information) gives a crit question: does the work make the viewer see a familiar thing as if for the first time?
 
 ### 1.7 History as a critique instrument
 
@@ -1244,7 +1244,7 @@ Scored 1 to 5 per dimension; anchors at 1, 3 and 5, with 2 and 4 between them. W
 - Hook rate: 3-second video views divided by impressions; hold rate is ThruPlays (Meta's plays to completion or to 15 seconds) divided by 3-second views.
 - I like, I wish, what if: a three-prompt group feedback format (keep, missing, possibility) used in design-thinking teaching.
 - Idea bank: the archive of killed routes, filed with brief, idea, reason and tags.
-- Idea gate: the rubric rule capping the score at 2.5 when Idea scores below 3.
+- Idea gate: the rubric rule capping the score at 2.5 when Idea scores below 3; the function cap likewise holds the verdict at competent or below when function and access scores 1.
 - IKEA effect: makers overvaluing what they built themselves (Norton, Mochon and Ariely, 2012).
 - Inevitability: the sense that no other solution was possible.
 - Ira Glass gap: the period in which a maker's taste exceeds their ability to execute.
@@ -1288,9 +1288,9 @@ Scored 1 to 5 per dimension; anchors at 1, 3 and 5, with 2 and 4 between them. W
 - Pre-mortem: imagining a project has already failed and listing why, before it starts (Gary Klein, 2007).
 - Press check: approving sheets on the press floor as they run.
 - QA: quality assurance, the completeness check before delivery.
-- Radical Candor: Kim Scott's frame of caring personally while challenging directly.
+- Radical Candor: Kim Scott's frame of caring personally while challenging directly; its failures are ruinous empathy, obnoxious aggression and manipulative insincerity.
 - Rag: the profile of the ragged edge of unjustified text.
-- Rasa: in the Natya Shastra, an aesthetic emotion the audience tastes; eight classical rasas, with shanta (peace) added later.
+- Rasa: in the Natya Shastra, an aesthetic emotion the audience tastes; eight classical rasas, with shanta (peace) added later; the vidaai, the bride's farewell, is the classic karuna moment.
 - Rec.709: the HD video colour standard.
 - Register: the formality and cultural tone the work speaks in.
 - Remove until it breaks: hiding elements one at a time until the idea or function fails, then restoring the last.
@@ -1327,6 +1327,7 @@ Scored 1 to 5 per dimension; anchors at 1, 3 and 5, with 2 and 4 between them. W
 - Transcreation: rewriting copy in another language for meaning and register.
 - True Tone and Night Shift: Apple's display features that shift the white point with ambient light or time of day.
 - Unintended alignment: edges nearly aligned or tangent, read as error.
+- Video village: the monitor station where director, CD and client watch takes.
 - Visual regression testing: automated screenshot comparison against approved baselines.
 - Warp wobble: rubbery distortion from over-applied stabilisation.
 - WCAG: the W3C Web Content Accessibility Guidelines, version 2.2 as of October 2026.
