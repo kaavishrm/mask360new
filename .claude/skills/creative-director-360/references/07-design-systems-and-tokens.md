@@ -27,7 +27,7 @@ How to build, govern and ship a system that keeps craft consistent across teams,
 
 ### 1.1 Five things people call a design system
 
-A design system is the full set of shared decisions, assets, code and rules that let many people build one coherent product family, plus the people and process that keep it alive. The other four terms name parts of it, and conflating them is the first failure of most agency proposals.
+A design system is the full set of shared decisions, assets, code and rules that let many people build one coherent product family, plus the people and process that keep it alive. The other four terms name parts of it; the consequences of conflating them follow the table.
 
 | Term | What it contains | What it lacks | Typical owner |
 |---|---|---|---|
@@ -41,7 +41,7 @@ The reason to be precise: a client who asks for a design system and receives a U
 
 ### 1.2 The layer stack
 
-Each layer depends on the ones above it. Change at the top propagates down, which is the whole point.
+Each layer depends on the ones above it. Change at the top propagates down.
 
 | Layer | Contents | Artefact | Failure mode when missing |
 |---|---|---|---|
@@ -49,11 +49,11 @@ Each layer depends on the ones above it. Change at the top propagates down, whic
 | Tokens | Named values for every foundation decision (colour, type, space, radius, motion) in a platform-neutral file | `.tokens.json`, Figma variables, generated CSS and platform code | Hard-coded hex values; no theming possible |
 | Primitives | Unstyled or minimally styled building blocks: box, stack, text, icon, visually-hidden, focus ring | Code package; in Figma, base components | Each component re-implements layout and focus |
 | Components | Styled, accessible, documented UI parts: button, input, card, dialog | Figma library plus code package | Drift between design and code; duplicated buttons |
-| Patterns | Compositions that solve a task: search and filter, checkout, onboarding, data table with bulk actions | Documentation with examples | Every team invents its own checkout |
+| Patterns | Compositions that solve a task: search and filter, checkout, onboarding, data table with bulk actions | Documentation with examples; see 09-interaction-design-and-ux-patterns.md sections 6 and 7 | Every team invents its own checkout |
 | Templates | Page-level layouts with slots: marketing landing, product detail, dashboard | Figma pages, code layouts | Inconsistent page rhythm; margins vary per page |
 | Content | Voice, terminology, microcopy rules, localisation rules, number and date formats | Content guidelines inside the docs site; see 10-ux-writing-and-content-design.md | Buttons say Submit, OK, Confirm and Done in one product |
 | Motion | Durations, easings, choreography rules, reduced-motion behaviour | Motion tokens plus a choreography page; see 12-motion-principles-and-ui-motion.md | Every transition a different speed |
-| Accessibility | Contrast, focus, keyboard, ARIA, reduced motion, testing | Baked into components plus CI tests; see 11-accessibility-and-inclusive-design.md | Retrofits cost more than the build |
+| Accessibility | Contrast, focus, keyboard, ARIA (Accessible Rich Internet Applications, the W3C attributes that expose roles and states to assistive technology), reduced motion, testing | Baked into components plus CI (continuous integration) tests; see 11-accessibility-and-inclusive-design.md | Retrofits cost more than the build |
 | Documentation | The site where all of the above is explained with usage, do and do not, code | Storybook, zeroheight, Supernova, Knapsack, or a custom site | Nobody knows the system exists |
 | Governance | Who decides, how to contribute, how versions ship, how to deprecate | A written process, a backlog, release notes | The system freezes at version 1 |
 
@@ -70,7 +70,7 @@ Brad Frost published "Atomic web design" on 10 June 2013 and the book Atomic Des
 - The chemistry names do not map to how teams talk. Nobody in a standup says "the organism is broken". Frost's answer in "Extending atomic design" (10 July 2019): the model "is not rigid dogma"; rename the stages to the team's own language.
 - The molecule and organism boundary is arbitrary. A card is a molecule to one team and an organism to another, so taxonomies drift and the folder structure becomes a theological argument.
 - Tokens are absent from the 2013 model. Frost's 2019 position: tokens are "subatomic particles" that become functional once applied to an atom, such as a button's background colour.
-- State is absent. Chris Cid proposed "ions" for component state; Frost's view is that such ideas "can live adjacent to atomic design" rather than inside it, because "design systems are an umbrella that a whole lot of things live under" and it is "a mistake to try to shoehorn all the diverse ingredients and considerations into one crowded place".
+- State is absent. Chris Cid proposed "ions" for component state; Frost's view is that such ideas "can live adjacent to atomic design", because "design systems are an umbrella that a whole lot of things live under" and it is "a mistake to try to shoehorn all the diverse ingredients and considerations into one crowded place".
 - It describes structure and says nothing about behaviour, content, motion or governance, which is where systems fail.
 
 ### 2.3 Functional and perceptual patterns (Alla Kholmatova, 2017)
@@ -85,6 +85,30 @@ Adobe Spectrum models the system as three token tiers (global, alias, component)
 
 House position: Kholmatova's vocabulary for talking to clients, Carbon's tokens-first build order, Spectrum's behaviour-skin separation in code. Atomic design stays as a teaching metaphor only.
 
+### 2.5 The ecosystem model and sanctioned deviation
+
+Brad Frost's "The design system ecosystem" (21 September 2023) replaces the single-library picture with layers, most of them optional and added only when a real need appears:
+
+| Layer | Frost's definition (paraphrased) | Agency mapping |
+|---|---|---|
+| Design tokens | "Low-level design definitions" for colour, type and spacing, held inside the core | The house semantic schema (5.2) plus each client's globals |
+| Core design system | The shared UI building blocks for design and development across the organisation: tokens, icons, components, a reference site | The house headless component layer (7.4) shared by every client |
+| Technology-specific implementations (optional) | Framework-specific and native implementations of the core components | The client's skin: React and Tailwind on web, SwiftUI or Compose where native apps exist |
+| Recipes (optional) | "Composed UI components to be used consistently across specific contexts", built by a product team from core ingredients | Client compositions kept in the client repository: villa gallery, room-rate card, ring configurator |
+| Smart components (optional) | "UI components wrapped in logic, functionality, or other smarts", such as validation or analytics | The booking widget wired to the client's engine; the enquiry form wired to the CRM |
+| Product layer | "The actual websites and apps that we ship to customers" | The client's sites and apps |
+
+Graduation rule: a recipe that a second client needs moves into the core through an RFC (10.2), with its client-specific parts turned into tokens.
+
+Sanctioned deviation. Systems pull toward sameness (the recognisable default shadcn/ui look is the current case), and a luxury brand's distinction lives in a few composed moments; design-taste section 3 lists the cheap tells. The house therefore allows an art-directed set piece (a campaign hero, a launch film embed, a scroll-driven story) to be bespoke when it meets four conditions:
+
+1. Every colour, type and motion value comes from tokens, so a rebrand still reaches it.
+2. It meets the accessibility floor in section 12 (contrast, focus, reduced motion).
+3. It is logged in a set-piece register with an owner, the page, the reason and a review date.
+4. It stays within a budget of one set piece per page.
+
+The register is what stops a run of exceptions from becoming a second, undocumented system. At each half-yearly parity audit (10.5), a set piece used on three or more pages is either promoted to a recipe or retired.
+
 ## 3. Token architecture
 
 ### 3.1 What a design token is
@@ -95,14 +119,14 @@ A design token is a named, platform-neutral value for a single design decision (
 
 | Tier | Also called | What it names | Example | Who references it |
 |---|---|---|---|---|
-| Global | Primitive, reference, base, option | A raw value with a descriptive name that says what it is, never what it is for | `color.stone.600: #6B6560`, `space.4: 16px`, `font.size.300: 1.25rem` | Alias tokens only |
+| Global | Primitive, reference, base, option | A raw value named for what it is (hue and step, or size in px) | `color.stone.600: #6B6560`, `space.4: 16px`, `font.size.300: 1.25rem` | Alias tokens only |
 | Alias | Semantic, system, functional, decision | A role in the interface, resolved to a global | `color.text.subtle: {color.stone.600}`, `space.inset.md: {space.4}` | Components and patterns |
 | Component | Scoped, pattern | A specific slot on a specific component, resolved to an alias | `button.primary.bg.hover: {color.action.primary.hover}` | That component only |
 
 Rules, each with its reason:
 
 - Components never reference globals directly. If a button reads `stone.600`, a dark theme cannot change it, because the theme swaps alias values and leaves globals alone.
-- Semantic names say the role (`text.subtle`), never the value (`text.grey`). A value name lies the moment the theme changes.
+- Semantic names say the role (`text.subtle`). A value name such as `text.grey` lies the moment the theme changes.
 - Keep the component tier small. Primer scopes its third tier to component CSS only (`button-primary-bgColor-hover`, `control-danger-borderColor-rest`); a system where each of 40 components carries 40 tokens has 1,600 names that every theme author must understand, and most of them only repeat an alias.
 - Globals are plentiful and boring; aliases are few and argued over. A healthy mid-sized system has about 150 to 400 global colour tokens across its ramps and 40 to 80 semantic colour roles (this is a house heuristic drawn from reading Carbon, Primer and Atlassian token lists; count your own).
 
@@ -112,7 +136,7 @@ The pattern most systems converge on is category, then property, then variant, t
 
 | Part | Vocabulary | Example |
 |---|---|---|
-| Category | color, font, space, size, radius, border, shadow, opacity, z, motion, breakpoint | `color` |
+| Category | `color`, `font`, `space`, `size`, `radius`, `border`, `shadow`, `opacity`, `z`, `motion`, `breakpoint` | `color` |
 | Property or role | text, bg, border, icon, surface, action, status, link | `color.text` |
 | Variant or emphasis | default, subtle, muted, strong, inverse, brand, accent, success, warning, danger, info | `color.text.subtle` |
 | State | default, hover, active, focus, disabled, selected, visited | `color.action.primary.hover` |
@@ -124,7 +148,9 @@ Verified house of style from the canonical systems, as of October 2026:
 - Material 3: reference tokens prefixed `md.ref` (palettes), system tokens `md.sys` (roles such as `md.sys.color.primary`), component tokens `md.comp`.
 - Fluent 2: global tokens ("context-agnostic", raw values) and alias tokens (semantic, condensing many values into one for shadows and type).
 
-Rules the house adds: no abbreviations a new engineer cannot read (`bg` and `fg` are the only accepted ones); singular nouns; numeric scales use three-digit steps with room between them (`100, 200, 300`) so a `150` can be inserted later without renaming; never encode the brand in a semantic name (`color.brand.primary`, never `color.mask360.orange`), because the same semantic schema must serve every client.
+Rules the house adds: no abbreviations a new engineer cannot read (`bg` and `fg` are the only accepted ones); singular nouns; numeric scales use three-digit steps with room between them (`100, 200, 300`) so a `150` can be inserted later without renaming; no client name inside a semantic name: `color.brand.primary` serves every client, while `color.mask360.orange` would need renaming for the next one.
+
+Nathan Curtis's "Naming Tokens in Design Systems" (EightShapes) is the reference taxonomy for the full grammar. A name is assembled from four level groups: namespace (system, theme, domain), object (group, component, element), base (category, concept, property) and modifier (variant, state, scale, mode). Read that way, `color.feedback.background.error` is category, concept, property, variant. The house mapping: the house category is Curtis's category; the house role is his concept plus property; variant and state are his modifiers. One modifier is banned from token names: mode. The resolver (4.3) selects light or dark, so a token named `color.bg.dark` breaks the moment a scoped dark section (5.3) sits inside a light page and the name has to hold a light value.
 
 ### 3.4 How many tokens, and which first
 
@@ -141,7 +167,7 @@ Format facts to design against:
 - A token is any JSON object with a `$value` property, which is required. `$type` is recommended and may be inherited from a parent group; if no type can be determined the token is invalid, and tools "MUST NOT" guess a type by inspecting the value.
 - `$description` is a plain string. `$deprecated` is `true`, `false` or a string explaining the replacement. `$extensions` holds vendor data under reverse-domain keys (`com.mask360.figma`), and tools must preserve extension data they do not understand.
 - Groups are objects without `$value`. A group may carry `$type` (inherited by children), `$description`, `$deprecated`, `$extensions` and `$extends`, which merges another group's tokens beneath the local ones (local wins at the same path). `$root` is a reserved name for a group's base token (`color.accent.$root`).
-- Aliases: curly braces `{color.stone.600}` resolve to the target's whole `$value`. A JSON Pointer `"$ref": "#/color/stone/600"` can target any location, including a sub-property. Circular chains are errors.
+- Aliases: curly braces `{color.stone.600}` resolve to the target's whole `$value`. A JSON Pointer (the RFC 6901 path syntax for addressing a location inside a JSON document) such as `"$ref": "#/color/stone/600"` can target any location, including a sub-property. Circular chains are errors.
 - Names cannot begin with `$` and cannot contain `{`, `}` or `.`.
 - Media type `application/design-tokens+json` (with `application/json` also allowed; tools must accept both); file extensions `.tokens` or `.tokens.json`.
 - Types defined: seven scalar (`color`, `dimension`, `fontFamily`, `fontWeight`, `duration`, `cubicBezier`, `number`) and six composite (`strokeStyle`, `border`, `transition`, `shadow`, `gradient`, `typography`). Font style, percentage or ratio, and file are listed as still to be documented.
@@ -162,11 +188,11 @@ Value shapes that trip people up:
 
 ### 4.2 The colour module
 
-The Color Module 2025.10 (the specification keeps the American spelling in its title) defines a colour value as an object: `colorSpace` (required), `components` (required array of numbers or `none`), `alpha` (optional, 0 to 1, default 1) and `hex` (optional six-digit fallback; six digits so it never conflicts with `alpha`). Fourteen colour spaces are named: `srgb`, `srgb-linear`, `hsl`, `hwb`, `lab`, `lch`, `oklab`, `oklch`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz-d65`, `xyz-d50`. `none` marks a missing component (an `hsl` hue of `none` is different from `0` and interpolates differently). Gamut mapping and interpolation are non-normative, so two tools may round a Display P3 token to sRGB differently; the house rule is to store `oklch` with a `hex` fallback and let 04 (colour) govern how ramps are generated.
+The Color Module 2025.10 (the specification keeps the American spelling in its title) defines a colour value as an object: `colorSpace` (required), `components` (required array of numbers or `none`), `alpha` (optional, 0 to 1, default 1) and `hex` (optional six-digit fallback; six digits so it never conflicts with `alpha`). Fourteen colour spaces are named: `srgb`, `srgb-linear`, `hsl`, `hwb`, `lab`, `lch`, `oklab`, `oklch`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz-d65`, `xyz-d50`. `none` marks a missing component (an `hsl` hue of `none` is different from `0` and interpolates differently). Gamut mapping (fitting a colour that lies outside a display's range into that range) and interpolation are non-normative, so two tools may round a Display P3 token to sRGB differently. The house rule is to store `oklch` (OKLCH: lightness, chroma and hue in the Oklab perceptual colour space, where equal numeric steps look like equal steps) with a `hex` fallback, and to let 04-colour.md section 8 govern how ramps are generated.
 
 ### 4.3 The resolver module
 
-Under the Resolver Module 2025.10, a resolver document (`.resolver.json`, `application/json`) says how token values vary by context. Root keys: `version` (must be `2025.10`) and `resolutionOrder` (required), plus optional `sets` and `modifiers`. A set is a list of `sources` (files); when a token appears twice the last wins. A modifier has a `contexts` map (the spec recommends at least two, with an optional `default`), for example a `theme` modifier with `light` and `dark`. The tool receives inputs such as `{"theme": "dark"}` and loads the matching sources in `resolutionOrder`, later items overriding earlier ones. This is the first standard way to say "brand B, dark, compact" in a file rather than in a tool's proprietary theme feature, which is why an agency with many clients should adopt it now.
+Under the Resolver Module 2025.10, a resolver document (`.resolver.json`, `application/json`) says how token values vary by context. Root keys: `version` (must be `2025.10`) and `resolutionOrder` (required), plus optional `sets` and `modifiers`. A set is a list of `sources` (files); when a token appears twice the last wins. A modifier has a `contexts` map (the spec recommends at least two, with an optional `default`), for example a `theme` modifier with `light` and `dark`. The tool receives inputs such as `{"theme": "dark"}` and loads the matching sources in `resolutionOrder`, later items overriding earlier ones. This is the first standard, tool-neutral way to say "brand B, dark, compact" in a file, which is why an agency with many clients should adopt it now.
 
 ### 4.4 A minimal file
 
@@ -197,34 +223,57 @@ Under the Resolver Module 2025.10, a resolver document (`.resolver.json`, `appli
 | Tool | What it does | State as of October 2026 | Limits to know |
 |---|---|---|---|
 | Style Dictionary | Open-source transformer: reads token JSON, outputs CSS custom properties, SCSS, JS, iOS, Android, Compose and more | v5.7.1 (24 October 2026). v4.0.0 added DTCG support; v5.0.0 shipped May 2025; v5.3.0 added the 2025.10 structured colour with 14 colour spaces and `color/oklch`, `color/oklab`, `color/p3`, `color/lch` transforms with a hex fallback for out-of-gamut colours; v5.4.0 object-form dimensions; v5.7.0 object-form durations | Transforms are yours to write for anything unusual; it has no UI; a 6-line config is the whole product |
-| Tokens Studio for Figma | Plugin that manages token sets and themes inside Figma, syncs to Git, exports to variables and styles | Free tier plus Pro. Pro features: themes, modified colours, multi-file sync to remote storage, branch switching, non-local variables and styles, export using themes. Sync providers: GitHub, GitLab, Bitbucket, Azure DevOps, JSONBin, Supernova, Tokens Studio Platform, URL, generic versioned server. A settings toggle switches "W3C DTCG" and "Legacy" formats | Pricing (tokens.studio, October 2026): Free (1 editor, 1 project, 1 theme group with 2 theme options); Team at 39 euros per extra editor per month billed annually with one editor included and 5 projects; Organization at 499 euros per month plus 49 euros per extra editor with 5 editors included and SSO as an add-on; Enterprise custom. The plugin's legacy format predates the spec, so new projects set DTCG from day one |
+| Tokens Studio for Figma | Plugin that manages token sets and themes inside Figma, syncs to Git, exports to variables and styles | The paid plugin features (themes, modified colours, multi-file sync to remote storage, branch switching, non-local variables and styles, export using themes) now sit in the Team plan, which absorbed the former Starter Plus, Pro and Essential plans. Sync providers: GitHub, GitLab, Bitbucket, Azure DevOps, JSONBin, Supernova, Tokens Studio Platform, URL, generic versioned server. A settings toggle switches "W3C DTCG" and "Legacy" formats | Pricing (tokens.studio, October 2026): Free (1 editor, 1 project, 1 theme group with 2 theme options, no paid plugin features); Team 39 euros per month billed annually with 1 editor included, 39 euros per extra editor (up to 150), 5 projects; Organization 499 euros per month billed annually with 5 editors included, 49 euros per extra editor, SSO as an add-on. The plugin's legacy format predates the spec, so new projects set DTCG from day one. Its output needs `@tokens-studio/sd-transforms` before Style Dictionary can read it (row below) |
 | Specify | Token pipeline platform between Figma and code | Closed. Its post "Saying Goodbye: The End of Specify" (25 October 2024) set the sunset for 15 November 2024 | Remove it from proposals and inherited client documentation; move any Specify pipeline to Style Dictionary |
-| Figma variables and modes | Native tokens in Figma with types colour, number, string, boolean; modes per collection for theming | Pricing page (October 2026): 10 modes per collection on Professional, 20 on Organization, "Unlimited modes (via extended collections)" on Enterprise. The limits were 4 on Professional and Organization and 40 on Enterprise until the increase announced on Figma's community forum in late 2025, which is why older articles disagree. Native import and export of modes as DTCG JSON (13.1). Full seats: Professional $16, Organization $55 and Enterprise $90 per month, the latter two billed annually; Dev seats $12, $25 and $35. Tokens Studio's documentation cites a Figma limit of 5,000 variables per collection | No composite types (a type style stays a style, so typography tokens need a plugin or a convention); number variables carry no unit; modes cannot nest, so brand times theme times density must be flattened or split across collections; native DTCG import reads colour in sRGB or HSL only, dimensions in px only and durations in s only, so OKLCH tokens arrive through their hex fallback |
-| Penpot | Open-source design tool with native tokens aligned to the DTCG format | Supports border radius, colour, dimensions, opacity, sizing, spacing, stroke width, rotation, typography, numbers, shadows; gradients "not available yet"; global, alias and semantic tiers; themes; JSON import and export; a Tokens Studio converter | Smaller ecosystem than Figma; relevant for clients who need self-hosting |
+| Figma variables and modes | Native tokens in Figma with types colour, number, string, boolean; modes per collection for theming | Pricing page (October 2026): 10 modes per collection on Professional, 20 on Organization, "Unlimited modes (via extended collections)" on Enterprise. The limits were 4 on Professional and Organization and 40 on Enterprise until the increase announced on Figma's community forum in late 2025, which is why older articles disagree. Native import and export of modes as DTCG JSON since November 2025 (see 13.1). Full seats: Professional $16, Organization $55 and Enterprise $90 per month, the latter two billed annually; Dev seats $12, $25 and $35. Tokens Studio's documentation cites a Figma limit of 5,000 variables per collection | No composite variable type, but text styles bind number and string variables to every font property, so a composite typography token becomes a text style with each property bound (4.6); number variables carry no unit; modes cannot nest, so brand times theme times density must be flattened or split across collections; native DTCG import reads colour in sRGB or HSL only, dimensions in px only and durations in s only, so OKLCH tokens arrive through their hex fallback |
+| Penpot | Open-source design tool whose native tokens, its documentation says, "adhere to the Design Tokens Format Module" | Token types (help centre, October 2026): border radius, colour, dimension, opacity, rotation, sizing, spacing, stroke width, number, typography (including a typography composite) and shadow; themes; JSON import and export as a single file, a multifile folder or a ZIP. Penpot notes that units will become mandatory "in upcoming releases" to follow the format fully | Smaller ecosystem than Figma; relevant for clients who need self-hosting |
 | Supernova | Hosted system platform: Figma import, token themes, docs site, code exporters | Starter free (3 editors, 1 design system, 1 token theme, 1 Storybook source), Pro $399 per month (10 editors, 2 systems, unlimited themes, custom code exporters), Enterprise custom with SAML 2.0 | Lock-in on the docs; export the tokens repo as your own |
 | Knapsack | Enterprise platform: token manager, Figma integration, docs with live code, Git-backed | Contact-sales pricing; Basic 5+ users, Core 10+ (adds custom domain, SSO, "up to 4 modes/collections"), Pro 20+ (up to 12 modes or collections, 3 framework renderers, workspace analytics) | Enterprise only; wrong size for most Mask360 clients |
+| `@tokens-studio/sd-transforms` | Style Dictionary transforms plus a `tokens-studio` preprocessor that make Tokens Studio exports readable | 2.0.3 (10 December 2025, npm), which requires Style Dictionary 5; the 1.x line paired with Style Dictionary 4. `ts/resolveMath` evaluates expressions (`4*1.5px` becomes `6px`, rounded by `mathFractionDigits`); `ts/color/modifiers` turns lighten, darken and mix modifiers into concrete colours; `ts/typography/compose/shorthand` writes Compose typography | Without it, maths expressions and colour modifiers reach the output as raw strings, so the 13.2 pipeline fails on its first run for any client authoring in Tokens Studio; the preprocessor must be named explicitly in the config |
+| Terrazzo (formerly Cobalt UI) | DTCG-first CLI that validates tokens and generates code through plugins for CSS, Sass, JS and TypeScript, Swift and Tailwind | `@terrazzo/cli` 2.10.0 (21 October 2026, npm); MIT; listed among adopters on designtokens.org | Fewer platform formats than Style Dictionary; the alternative when a team wants stricter DTCG validation and fewer custom transforms |
+| Validators | Design Token Validator (Anima), Design Tokens Language Server (completion and errors in the editor) and Project Wallace, all listed among adopters on designtokens.org (October 2026) | Run in CI before every build (13.2) | A validator catches a missing `$type`, a broken alias or a circular reference before the transformer emits a wrong value |
 
+House position: Style Dictionary by default, Terrazzo acceptable, validation always.
+
+### 4.6 Figma variable settings the system team owns
+
+Four settings decide whether Figma variables behave as tokens. The system team sets them and consumers inherit them.
+
+| Setting | What it does (Figma help centre and plugin API, October 2026) | House rule |
+|---|---|---|
+| Scope | Limits which fields offer the variable in the picker. Number variables can be scoped to gap, corner radius, width and height, stroke, effects, layer opacity, colour opacity, font size, weight, line height, letter spacing, paragraph spacing and paragraph indent; colour variables to frame fill, shape fill, text fill, stroke and effects; string variables to text content, font family and font style | Scope every alias to its use, so a `space` variable appears for gap and padding only; give primitives no scope, so they drop out of every picker |
+| Code syntax | Stores one name per platform (Web, Android, iOS), up to three per variable, shown in Dev Mode code snippets for CSS, SwiftUI and Compose | The sync script writes `var(--color-text-default)` into the Web slot and the generated Swift and Kotlin names into the others, so Dev Mode shows the name the code uses |
+| Hide from publishing | Keeps a variable out of the published library | Hide every primitive; consumers see only aliases, which enforces the 3.2 tier rule in the tool |
+| Text style bindings | Text styles bind number variables to size, weight, line height, letter spacing, paragraph spacing and indent, and string variables to family and weight or style | A composite typography token is a text style with every property bound, so a viewport or script mode switches the whole type scale |
+
+Dev Mode is Figma's inspection view for engineers (Dev and Full seats on paid plans), where specs, code snippets and Code Connect output appear.
+
+Check designs is Figma's linter for these rules (help centre, October 2026; Organization, Enterprise, Education K-12 and Government plans; Figma states it "does not use LLMs or generative AI"). It flags hard-coded colours, text styles, corner radius and spacing that a variable could replace, labels an exact value match "Match", ranks other suggestions by similarity, variable naming and hierarchy, and usage across the team, and flags components, variables and styles from the wrong library. Limits: one page at a time, selections up to 25,000 layers, colour styles cannot be swapped (only a hard-coded colour can be bound to a variable), and detached or wrong components are replaced by hand. Handoff step 1 (13.6) requires a clean run.
+
+## 5. Theming and multi-brand strategy
 ## 5. Theming and multi-brand strategy
 
 ### 5.1 The theme axes
 
 A theme is a complete set of alias values for one context. Axes that commonly need themes, each with its reason:
 
-| Axis | Values | Why it is a theme rather than a component variant |
+| Axis | Values | Why it is a theme |
 |---|---|---|
 | Colour scheme | light, dark | Every surface, text and border role changes; the component must not know |
 | Contrast | default, high contrast (GitHub's Primer ships light and dark high-contrast themes; Fluent UI ships a high-contrast theme; Windows forced-colours mode is a system state the CSS must also respect) | Contrast is a user need, applied globally |
 | Brand | brand A, brand B, sub-brand | An agency's components must serve many clients with one code base |
-| Density | compact, comfortable, spacious (Atlassian's spacing documentation names customisable density as a goal of its 8px scale) | Space and size tokens shift together; a data-heavy admin and a luxury storefront differ by density, never by component |
+| Density | compact, comfortable, spacious (Atlassian's spacing documentation names customisable density as a goal of its 8px scale) | Space and size tokens shift together; a data-heavy admin and a luxury storefront share every component and differ only in density |
 | Motion | full, reduced | Reduced motion is a user preference (`prefers-reduced-motion`), applied globally |
-| Platform scale | desktop, mobile (Spectrum's model) | Touch targets and type sizes scale together |
+| Platform scale | desktop, mobile (Spectrum's model), distance (in-room tablet, lobby kiosk, signage) | Touch targets and type sizes scale together. A distance theme (house heuristics) raises minimum body text to about 24 to 32px at kiosk distance and more for signage, scaled by viewing distance per 20-print-packaging-ooh-and-physical-production.md; sets touch targets to 64px or more for standing use; and removes hover states, while sharing the web semantic schema |
 | Script and direction | Latin, Devanagari, Arabic; LTR, RTL | Line heights, font families and logical spacing change together (see 6.2) |
+
+Three platform signals feed the contrast and scheme axes. Under `@media (forced-colors: active)` (forced-colours mode, Windows contrast themes replacing page colours with the user's palette), the build maps surface, text, border and focus aliases to CSS system colours (`Canvas`, `CanvasText`, `LinkText`, `ButtonText`, `ButtonFace`, `Highlight`, `GrayText`); `forced-color-adjust: none` is allowed only on brand marks and data swatches, where the colour is the content. `prefers-contrast: more` is an input to the resolver's contrast modifier. `color-scheme: light dark` on every themed container makes native controls, scrollbars and autofill follow the scheme, which custom properties alone cannot reach.
 
 ### 5.2 Multi-brand for an agency
 
 The structure the house uses for clients:
 
-1. One semantic schema. Every client gets the same alias token names (`color.text.default`, `space.inset.md`, `radius.control`). The names are the agency's intellectual property; the values are the client's.
+1. One semantic schema. Every client gets the same alias token names (`color.text.default`, `space.inset.md`, `radius.control`). The schema is agency intellectual property licensed to each client (14.7); the values are the client's.
 2. One global set per client. A client's ramps, type families and radius values live in `brands/<client>/global.tokens.json`. Nothing else in the repository mentions the client.
 3. Themes as resolver modifiers. `brand` (one context per client), `scheme` (light, dark), `density` (default, compact). Resolution order: brand first, then scheme, then density, so a dark override can still be overridden by compact spacing.
 4. Components consume aliases only, so the component package is shared across every client and tested once.
@@ -234,7 +283,7 @@ The reason to invest: the third client costs a fraction of the first, and the ag
 
 ### 5.3 Luxury-specific theme decisions
 
-Luxury clients rarely want a dark mode as a user toggle; they want one considered scheme (see design-taste, section 2, colour discipline). Build the token structure for two schemes anyway, because photography-led pages often invert to a dark editorial section mid-page, and that section is a scoped theme (`data-theme="dark"` on a container) rather than a hand-coloured block. Density for luxury is comfortable or looser; keep compact for the admin side (hotel back office, jeweller inventory) that the same system also serves.
+Luxury clients rarely want a dark mode as a user toggle; they want one considered scheme (see design-taste, section 2, colour discipline). Build the token structure for two schemes anyway, because photography-led pages often invert to a dark editorial section mid-page, and that section is a scoped theme (`data-theme="dark"` on a container) that takes every colour from the dark aliases. Density for luxury is comfortable or looser; keep compact for the admin side (hotel back office, jeweller inventory) that the same system also serves.
 
 ## 6. Token categories, scales and values
 
@@ -248,9 +297,9 @@ The engineering of ramps, contrast and colour spaces is in 04-colour.md (section
 |---|---|---|---|
 | Eleven-step ramp | 50, 100, 200 to 900, 950 | Lightness ladder; no fixed meaning per step | Tailwind, Primer base scales, most agency systems |
 | Twelve-step functional scale | 1 to 12 | 1 app background, 2 subtle background, 3 component background, 4 hovered, 5 active or selected, 6 subtle border, 7 border and focus ring, 8 hovered border, 9 solid fill, 10 hovered solid, 11 low-contrast text, 12 high-contrast text | Radix Colors, Radix Themes, shadcn/ui themes |
-| Tonal palette | 13 tones: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100 | HCT tone (perceptual lightness); roles are assigned by tone, so a role such as `primary` is tone 40 in light and tone 80 in dark | Material 3 |
+| Tonal palette | 13 tones: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100 | HCT tone (HCT is Google's hue, chroma and tone colour model; tone is perceptual lightness); roles are assigned by tone, so a role such as `primary` is tone 40 in light and tone 80 in dark | Material 3 |
 
-The house default: one eleven-step ramp per hue in OKLCH with the lightness ladder fixed across hues (so `stone.600` and `flame.600` have the same L), generated as 04-colour.md section 8 describes, plus the Radix semantics written into the alias layer rather than into the ramp. The reason: an eleven-step ramp is what Tailwind v4, Style Dictionary examples and most client engineers already expect, and a fixed lightness ladder is what makes `text.on-accent` pass contrast on every hue without per-hue exceptions.
+The house default: one eleven-step ramp per hue in OKLCH with the lightness ladder fixed across hues (so `stone.600` and `flame.600` have the same L), generated as 04-colour.md section 8 describes, plus the Radix semantics written into the alias layer, so the ramp stays a pure lightness ladder. The reason: an eleven-step ramp is what Tailwind v4, Style Dictionary examples and most client engineers already expect, and a fixed lightness ladder is what makes `text.on-accent` pass contrast on every hue without per-hue exceptions.
 
 Semantic colour roles the house ships for every client (about 40, the count from Carbon and Primer landing in the same range):
 
@@ -265,7 +314,9 @@ Semantic colour roles the house ships for every client (about 40, the count from
 | Status | `status.success`, `status.warning`, `status.danger`, `status.info`, each with `bg`, `border`, `text`, `icon` |
 | Brand | `brand.accent` (the one owned colour from design-taste section 2), `brand.accent.subtle` |
 
-Rule: every `on-` role is computed and tested against its surface at WCAG 2.2 AA and tuned by APCA (04-colour.md section 6.4) at build time, in CI, so a client who changes the accent to a lighter gold finds out from a failing test and never from a user.
+Rule: every `on-` role is computed and tested against its surface at WCAG 2.2 (Web Content Accessibility Guidelines) AA and tuned by APCA (Accessible Perceptual Contrast Algorithm, the perceptual method proposed for WCAG 3, reported as an Lc value; 04-colour.md section 6.4) at build time, in CI, so a client who changes the accent to a lighter gold finds out from a failing test before release.
+
+Authored or computed state colours. CSS relative colour syntax (`oklch(from var(--color-action-primary) calc(l - 0.08) c h)`, about 88 percent global support on caniuse in October 2026) and `color-mix(in oklch, ...)` can derive hover and active states at runtime from one alias, with no state tokens. Computed states cut the token count and give every brand its states for free, but their contrast is never tested; authored states can be tested. House rule: author state tokens for every text-bearing pair, and allow computed states only for decorative tints and state layers, where the opacity tokens in 6.8 already apply.
 
 ### 6.2 Typography
 
@@ -273,14 +324,25 @@ Cross-reference 03-typography.md sections 5 to 7 for leading, measure and hierar
 
 | Token group | House scale | Reason |
 |---|---|---|
-| `font.family` | `sans` (the brand grotesk; house: Space Grotesk), `serif` (if the client owns one), `mono` (house: Departure Mono), `devanagari`, `arabic` | Script families are separate tokens because a Latin face rarely ships Devanagari or Arabic, and the fallback must be chosen, never left to the OS. Noto Sans Devanagari, Noto Naskh Arabic and IBM Plex Sans Arabic are the usual pairings; see 03-typography.md for matching x-height and weight |
-| `font.size` | 12, 13, 14, 16, 18, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160 px, named `100` to `1500` | A hand-tuned scale with wide gaps at the top, because luxury hierarchy is scale contrast (design-taste section 2) and a 1.25 modular scale gives too many medium sizes |
-| `font.weight` | 300, 400, 500, 600, 700 | House: 300 body, 500 emphasis, 600 h2, 700 h1 (design-taste section 7). Variable fonts make the intermediate steps free, but a token scale with five stops keeps designers from inventing a 450 |
+| `font.family` | `sans` (the brand grotesk), `serif` (if the client owns one), `mono`, `devanagari`, `arabic`; house faces per design-taste section 7 | Script families are separate tokens because a Latin face rarely ships Devanagari or Arabic, and the fallback is chosen explicitly in the token. Noto Sans Devanagari, Noto Naskh Arabic and IBM Plex Sans Arabic are the usual pairings; see 03-typography.md for matching x-height and weight |
+| `font.size` | 12, 13, 14, 16, 18, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160 px, authored in rem (0.75rem to 10rem) and named `100` to `1500` | A hand-tuned scale with wide gaps at the top, because luxury hierarchy is scale contrast (design-taste section 2) and a 1.25 modular scale gives too many medium sizes |
+| `font.weight` | 300, 400, 500, 600, 700 | House mapping per design-taste section 7. Variable fonts make the intermediate steps free, but a token scale with five stops keeps designers from inventing a 450 |
 | `font.lineHeight` | `tight` 1.05, `snug` 1.15, `base` 1.5, `relaxed` 1.65, `script` 1.75 | Unitless multipliers (the DTCG `typography.lineHeight` is a multiplier). `script` exists because Devanagari's matras and Arabic's ascending and descending marks collide at 1.5; 1.7 to 1.8 is the working range for mixed-script body copy |
 | `font.letterSpacing` | `tighter` -0.03em, `tight` -0.015em, `normal` 0, `wide` 0.06em, `wider` 0.12em | Negative at display sizes, zero in body, positive only for micro caps; Arabic takes no letter spacing at all (it breaks the joins), so the Arabic theme pins every tracking token to 0 |
 | `font.style` (composite) | `display.xl`, `display.lg`, `heading.1` to `heading.4`, `body.lg`, `body.md`, `body.sm`, `label.md`, `label.sm`, `caption`, `overline` | A composite `typography` token bundles family, size, weight, line height and letter spacing so a style is one decision in Figma and one class in code |
 
-Fluid type belongs in the alias layer as a CSS `clamp()` expression per style (`clamp(2.5rem, 1.2rem + 4vw, 6rem)` for `display.lg`), generated by a Style Dictionary transform from a min size, a max size and the two breakpoints, because a hand-written clamp per style drifts within a month. Figma cannot represent a clamp, so the Figma library carries the two endpoints as separate modes (`viewport: compact` and `viewport: expanded`).
+Six craft rules the type tokens enforce, each fixing a common bug in luxury commerce builds:
+
+1. Units. Font sizes are authored in rem and the px figures are names only. A px font size ignores the user's browser default, and WCAG 2.2 success criterion 1.4.4 Resize Text (AA) requires text to scale to 200 percent without loss.
+2. Input floor. Input, select and textarea text is at least 16px in every touch theme, because iOS Safari zooms the page when a focused field's text is under 16px, and the zoom breaks a booking form's layout.
+3. Numerals. `font.feature.numeric.tabular` (`font-variant-numeric: tabular-nums lining-nums`; tabular numerals are figures of equal width) applies to prices, nightly rates, dates and tables, so INR and AED columns align; running text keeps proportional figures; all-caps labels use case-sensitive forms (`font-feature-settings: "case"`) where the face has them.
+4. Optical size. Where the client face has an `opsz` axis, `font-optical-sizing: auto` is on by default and a display style may pin an `opsz` token.
+5. Leading trim. `font.trim.cap` (`text-box: trim-both cap alphabetic`) removes the space above cap height and below the baseline, so a 24px stack gap measures cap height to baseline. Chrome 133, Safari 18.2 and Firefox 154 ship it, about 87 percent global support (caniuse, October 2026); Capsize (SEEK's open-source library that computes the same trim from font metrics) is the fallback for older engines.
+6. Wrapping. Display and heading styles carry `text-wrap: balance` (about 89 percent support, caniuse, October 2026) and body styles `text-wrap: pretty`; engines without support ignore both, so they are safe progressive enhancement.
+
+Mixed-script lines also need size compensation: `font.size.adjust.devanagari` and `font.size.adjust.arabic` (emitted as CSS `font-size-adjust`, about 89 percent support) scale the second script to the Latin x-height so a bilingual line reads as one size; the matching method is in 03-typography.md.
+
+Fluid type belongs in the alias layer as a CSS `clamp()` expression per style (`clamp(2.5rem, 1.2rem + 4vw, 6rem)` for `display.lg`), generated by a Style Dictionary transform from a min size, a max size and the two breakpoints, because a hand-written clamp per style drifts within a month. Figma cannot represent a clamp, so the Figma library carries the two endpoints as separate modes (`viewport: compact` and `viewport: expanded`). The method is Utopia's (James Gilyead and Trys Mudford, utopia.fyi): define a type scale and a space scale at a minimum and a maximum viewport and let the browser interpolate. Its calculator defaults are 360px to 1240px, base text 18px to 20px, ratio 1.2 (minor third) to 1.25 (major third), and space steps at 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4 and 6 times the base (`3xs` to `3xl`). The house moves the maximum viewport to 1600px for luxury pages judged on large monitors.
 
 ### 6.3 Spacing
 
@@ -292,9 +354,11 @@ Fluid type belongs in the alias layer as a CSS `clamp()` expression per style (`
 | Primer | 4 | `base-size-4` upward | `base-size-N` with N in px |
 | House | 4 | 0, 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160, 200 | `space.0` to `space.200`, number equals px |
 
-The house names tokens by their pixel value (`space.24`) rather than by ordinal (`spacing-06`) because an ordinal scale cannot take a new step without renumbering, and because engineers read `24` without a lookup. The scale runs to 200px because luxury section rhythm on desktop sits at 120 to 200px (design-taste section 2, "margins twice what feels safe"); a system that stops at 64 forces every editorial page to hard-code its margins.
+The house names tokens by their pixel value (`space.24`), because an ordinal scale (`spacing-06`) cannot take a new step without renumbering, and engineers read `24` without a lookup. The scale runs to 200px because luxury section rhythm on desktop sits at 120 to 200px (design-taste section 2, "margins twice what feels safe"); a system that stops at 64 forces every editorial page to hard-code its margins.
 
-Semantic spacing aliases, so components never pick a raw step: `space.inset.xs` to `xl` (padding inside a container), `space.stack.xs` to `xl` (vertical rhythm between siblings), `space.inline.xs` to `xl` (horizontal gap), `space.section.sm`, `md`, `lg` (between page sections: 64, 120, 200 on desktop). Density themes (section 5.1) remap these aliases, so `compact` shifts `inset.md` from 16 to 12 and `section.lg` from 200 to 120 without touching a component.
+Semantic spacing aliases, so components never pick a raw step: `space.inset.xs` to `xl` (padding inside a container), `space.stack.xs` to `xl` (vertical rhythm between siblings), `space.inline.xs` to `xl` (horizontal gap), `space.section.sm`, `md`, `lg` (between page sections: 64, 120, 200 on desktop). Density themes (section 5.1) remap these aliases, so `compact` shifts `inset.md` from 16 to 12 and lowers the `section.lg` pair to 80 to 120 without touching a component.
+
+Section aliases are fluid pairs in Utopia's sense (a space pair interpolates from one step at the smallest viewport to a larger step at the widest): `section.lg` runs from 120px at 360px wide to 200px at 1600px, generated by the same Style Dictionary `clamp()` transform as type, and the Figma library holds the two ends as viewport modes. The reason: luxury pages are judged at 1440 to 1920px and on phones, and a breakpoint jump in rhythm is visible at the boundary. Spacing inside layout grids is in 05-layout-grids-and-composition.md section 8.
 
 ### 6.4 Sizing
 
@@ -302,7 +366,7 @@ Semantic spacing aliases, so components never pick a raw step: `space.inset.xs` 
 |---|---|---|
 | `size.control` | `sm` 32, `md` 40, `lg` 48 px | 48 is the Material minimum touch target, 44pt is Apple's; WCAG 2.2 success criterion 2.5.8 (Target Size Minimum, AA) requires 24 by 24 CSS px with spacing exceptions and 2.5.5 (AAA) 44 by 44. `md` at 40 is desktop comfortable; mobile themes set `md` to 48 |
 | `size.icon` | 16, 20, 24, 32, 48 | 24 is the drawing grid of Material Symbols, SF Symbols' medium scale and most open sets (Phosphor, Lucide); 16 and 20 are the inline sizes beside 14 and 16px text |
-| `size.container` | 640, 768, 1024, 1280, 1536 | Matches Tailwind's `max-w-*` and container query steps, so a Tailwind client needs no mapping |
+| `size.container` | 640, 768, 1024, 1280, 1536 | Matches Tailwind v4's breakpoint values (`--breakpoint-sm` to `2xl`) and its `container` utility. Tailwind's `max-w-*` and `@container` steps use the separate `--container-*` scale (`3xs` 256px to `7xl` 1280px, so `3xl` is 768 and `5xl` is 1024), which lacks 640 and 1536, so the build maps these tokens explicitly in `@theme` |
 | `size.measure` | 45ch, 65ch, 80ch | Reading measure (03-typography.md section 6); a token so that every long-form block uses the same one |
 | `size.avatar`, `size.thumbnail` | 24, 32, 40, 56, 80, 120 | Image slots on the 8 grid; 120 for the editorial contact card |
 
@@ -318,7 +382,7 @@ Semantic spacing aliases, so components never pick a raw step: `space.inset.xs` 
 | `radius.xl` | 16 to 24 | Sheets, image containers in soft brands |
 | `radius.full` | 9999 | Pills, avatars |
 
-Two rules with reasons. First, define `radius.control` and `radius.surface` as aliases and let the brand pick (the house layer uses curved edges everywhere, design-taste section 7; a jeweller's system may set both to 0), because a radius is a brand signal and the cheap tell "one radius on everything" (design-taste section 3) comes from a single raw token used for every element. Second, nested radii are concentric: inner radius equals outer radius minus the padding between them (a 16px card with 8px padding holds 8px-radius children), otherwise the corners visibly fight; Apple's HIG and Figma's "Smart corners" both encode this.
+Two rules with reasons. First, define `radius.control` and `radius.surface` as aliases and let the brand pick (the house layer uses curved edges everywhere, design-taste section 7; a jeweller's system may set both to 0), because a radius is a brand signal and the cheap tell "one radius on everything" (design-taste section 3) comes from a single raw token used for every element. Second, nested radii are concentric: inner radius equals outer radius minus the padding between them (a 16px card with 8px padding holds 8px-radius children), otherwise the corners visibly fight; Apple's Human Interface Guidelines (HIG) and Figma's "Smart corners" both encode this.
 
 ### 6.6 Border width
 
@@ -328,14 +392,14 @@ Two rules with reasons. First, define `radius.control` and `radius.surface` as a
 
 | Level | Material 3 (dp) | Typical use | House treatment |
 |---|---|---|---|
-| 0 | 0 | Page, flat cards | Hairline border, no shadow |
-| 1 | 1 | Raised card, switch thumb | `0 1px 2px rgba(ink, 0.06)` plus hairline |
-| 2 | 3 | Menu, dropdown, hover of level 1 | `0 2px 8px rgba(ink, 0.08)` |
-| 3 | 6 | Dialog, sheet | `0 8px 24px rgba(ink, 0.12)` |
-| 4 | 8 | Navigation drawer | Rare in house work |
-| 5 | 12 | Floating action button | Rare in house work |
+| 0 | 0 | Page, filled and outlined cards | Hairline border, no shadow |
+| 1 | 1 | Elevated card, modal navigation drawer | `0 1px 2px rgba(ink, 0.06)` plus hairline |
+| 2 | 3 | Menu, dropdown | `0 2px 8px rgba(ink, 0.08)` |
+| 3 | 6 | Dialog, sheet, floating action button | `0 8px 24px rgba(ink, 0.12)` |
+| 4 | 8 | Hover state only; M3 assigns no resting component | Rare in house work |
+| 5 | 12 | Hover and dragged states only; no resting component | Rare in house work |
 
-Shadows are composite tokens (`shadow` type, an array of layers), never hand-written in CSS. Two rules: use two layers (a tight ambient and a soft key) because one blur reads as a smudge; in dark schemes shadows vanish against dark surfaces, so elevation is expressed by surface lightness (Material's surface containers, Carbon's layers) and the shadow tokens drop to near zero alpha. Luxury systems use levels 0 to 2 almost exclusively (design-taste section 2, material honesty).
+Shadows are composite tokens (`shadow` type, an array of layers) that CSS references by name. Two rules: use two layers (a tight ambient and a soft key) because one blur reads as a smudge; in dark schemes shadows vanish against dark surfaces, so elevation is expressed by surface lightness (Material's surface containers, Carbon's layers) and the shadow tokens drop to near zero alpha. Luxury systems use levels 0 to 2 almost exclusively (design-taste section 2, material honesty).
 
 ### 6.8 Opacity
 
@@ -350,15 +414,15 @@ Shadows are composite tokens (`shadow` type, an array of layers), never hand-wri
 | `opacity.scrim` | 0.32 to 0.5 | 0.32 is Material's scrim; the house uses 0.4 to 0.5 over photography so a dialog reads as a separate layer |
 | `opacity.placeholder` | 0.6 | Keeps placeholder text at APCA Lc 30 and above (04-colour.md section 6.4) |
 
-Opacity tokens are the right tool for state layers and disabled states because they work on any brand colour without a second palette; they are the wrong tool for text colour, where a real alias (`text.subtle`) tests against contrast and opacity does not.
+Opacity tokens suit state layers and disabled states because they work on any brand colour without a second palette. Text colour uses a real alias (`text.subtle`), because only a solid value can be tested for contrast.
 
 ### 6.9 Z-index
 
-A named layer scale, so no engineer ever writes `z-index: 99999`. The house uses Chakra UI's scale because it is the most widely copied and already covers every layer type: `hide` -1, `base` 0, `docked` 10, `dropdown` 1000, `sticky` 1100, `banner` 1200, `overlay` 1300, `modal` 1400, `popover` 1500, `skipLink` 1600, `toast` 1700, `tooltip` 1800. The gaps of 100 leave room for a client's special case. Where the stack must change per theme (a cinema-style overlay on a luxury page), a semantic alias (`z.chrome`, `z.content.lifted`) sits between components and the scale.
+A named layer scale, so no engineer ever writes `z-index: 99999`. The house uses Chakra UI's twelve-step scale (values in 16.2, from `hide` at -1 to `tooltip` at 1800) because it is the most widely copied and already covers every layer type, from docked and dropdown through sticky, banner, overlay, modal and popover to skip link, toast and tooltip. The gaps of 100 between steps leave room for a client's special case. Where the stack must change per theme (a cinema-style overlay on a luxury page), a semantic alias (`z.chrome`, `z.content.lifted`) sits between components and the scale.
 
 ### 6.10 Motion
 
-Durations and easings are tokens; the choreography rules that combine them live in 12-motion-principles-and-ui-motion.md sections 3 to 5. Material 3's named sets are the most complete public reference and the house maps onto them.
+Durations and easings are tokens; the choreography rules that combine them live in 12-motion-principles-and-ui-motion.md sections 3 to 5. Material publishes two motion systems. The easing and duration set below (Material Components for Android 1.6.0 and later, and the M3 web guidance) is the most complete cubic-bezier reference, and the house maps onto it.
 
 | Material 3 token | Value | House alias |
 |---|---|---|
@@ -373,7 +437,20 @@ Durations and easings are tokens; the choreography rules that combine them live 
 | `easing.emphasized.decelerate` | cubic-bezier(0.05, 0.7, 0.1, 1) | `motion.easing.enter.emphasised` |
 | `easing.emphasized.accelerate` | cubic-bezier(0.3, 0, 0.8, 0.15) | `motion.easing.exit.emphasised` |
 
-The DTCG `transition` composite (duration, delay, timingFunction) lets a component ship `motion.transition.fade`, `motion.transition.slide` and `motion.transition.scale` as single tokens. A `motion.reduced` theme sets every duration to 0ms or 1ms and keeps opacity changes, which is how `prefers-reduced-motion` becomes a resolver modifier rather than a per-component media query (section 12.3).
+The DTCG `transition` composite (duration, delay, timingFunction) lets a component ship `motion.transition.fade`, `motion.transition.slide` and `motion.transition.scale` as single tokens. A `motion.reduced` theme sets every duration to 0ms or 1ms and keeps opacity changes, which is how `prefers-reduced-motion` becomes one resolver modifier that replaces per-component media queries (section 12.3).
+
+Since Material Components for Android 1.13.0 the library also ships a spring (physics) system, the motion model M3 Expressive leads with. A spring has no fixed duration; it is defined by a damping ratio (how fast oscillation decays; 1 means no overshoot) and a stiffness (how strongly it pulls towards the target):
+
+| Material spring | Damping, stiffness | Use |
+|---|---|---|
+| `motionSpringFastSpatial` | 0.9, 1400 | Position and size of small components (switches, buttons) |
+| `motionSpringFastEffects` | 1, 3800 | Colour and opacity of small components |
+| `motionSpringDefaultSpatial` | 0.9, 700 | Elements that partly cover the screen (bottom sheet, navigation drawer) |
+| `motionSpringDefaultEffects` | 1, 1600 | Effects on those elements |
+| `motionSpringSlowSpatial` | 0.9, 300 | Full-screen transitions |
+| `motionSpringSlowEffects` | 1, 800 | Full-screen effects |
+
+Speed is chosen by the size of the element or the distance it travels. Spatial springs may overshoot; effects springs use damping 1, because a colour or opacity that overshoots flickers. DTCG 2025.10 has no spring type, so the house stores springs under `$extensions` (`com.mask360.spring` with `dampingRatio` and `stiffness`), emits them natively to Compose and to SwiftUI (`spring(duration:bounce:)`, iOS 17 and later), and on the web emits a CSS `linear()` easing sampled from the spring, supported in every evergreen browser since December 2023. Luxury register: effects springs as published and spatial springs re-tuned to damping 1, so nothing bounces (12-motion-principles-and-ui-motion.md).
 
 ### 6.11 Breakpoints and grid
 
@@ -384,11 +461,24 @@ The DTCG `transition` composite (duration, delay, timingFunction) lets a compone
 | Material 3 window size classes | compact below 600, medium 600 to 839, expanded 840 to 1199, large 1200 to 1599, extra-large 1600 and up | Named ranges for layout decisions; the boundaries are the values given |
 | House | 480, 768, 1024, 1280, 1600 | 1600 added because luxury pages are viewed on large monitors where a 1280 cap looks like a mobile site stretched |
 
-Grid tokens: `grid.columns` 4 (compact), 8 (medium), 12 (expanded and up); `grid.gutter` 16, 24, 32; `grid.margin` 16, 32, 64, and 120 at 1600 and above. Container queries (`@container`, supported in every evergreen browser since 2023) move most component-level layout decisions off the viewport breakpoints; the breakpoint tokens then matter only for page templates. Devanagari and Arabic text runs about 10 to 30 percent longer than English for the same content, so templates are tested with the longest script before a breakpoint is fixed.
+Grid tokens: `grid.columns` 4 (compact), 8 (medium), 12 (expanded and up); `grid.gutter` 16, 24, 32; `grid.margin` 16, 32, 64, and 120 at 1600 and above; grid construction is in 05-layout-grids-and-composition.md section 9. Container queries (`@container`, which style a component by the size of its container; supported in every evergreen browser since 2023) move most component-level layout decisions off the viewport breakpoints; the breakpoint tokens then matter only for page templates. Devanagari and Arabic text runs about 10 to 30 percent longer than English for the same content, so templates are tested with the longest script before a breakpoint is fixed.
 
 ### 6.12 Icon sizes and strokes
 
-`size.icon` from 6.4, plus `icon.stroke` 1.5px at 24 (Lucide, Phosphor regular), 2px for the 16 size so it does not thin out, and an optical rule: an icon beside text is sized to the text's cap height plus 20 to 30 percent (20px beside 16px text) and aligned to the x-height centre, never to the line box centre, which sits too high.
+`size.icon` from 6.4, plus `icon.stroke` 1.5px at 24 (Lucide, Phosphor regular), 2px for the 16 size so it does not thin out, and an optical rule: an icon beside text is sized to the text's cap height plus 20 to 30 percent (20px beside 16px text) and aligned to the x-height centre (the line box centre sits too high).
+
+### 6.13 Image, surface and data-visualisation tokens
+
+Photography-led luxury systems lean on these categories more than any other, and most public systems omit them.
+
+| Token | Values | Reason |
+|---|---|---|
+| `ratio` | `square` 1:1, `portrait` 4:5, `classic` 3:2, `wide` 16:9, `cinema` 21:9, `story` 9:16 | Applied through CSS `aspect-ratio`. Media slots accept only these, so art direction crops to a system ratio; the set matches the social formats in 26-platform-and-format-specs-2026.md |
+| `overlay.scrim.image` | A gradient from transparent to `ink` (house start: 0.6 alpha) | Text on photography must clear 4.5:1 against the brightest image in the set, tested per campaign, because a scrim tuned on a dark interior fails on a white-sand beach |
+| Focal point | `object-position` stored per asset in the CMS (for example `50% 30%`) | The crop follows the subject when a 3:2 image fills a 9:16 slot |
+| `blur.backdrop` | 8, 16, 24 px | Glass surfaces over imagery, with a solid fallback under `prefers-reduced-transparency` where the browser supports it |
+| `dataviz.categorical.1` to `8` | Eight hues tested for colour-vision-deficiency separation, kept apart from `status.*` | Revenue dashboards for hotels and inventory views for real estate; red keeps its meaning of error |
+| `dataviz.sequential.<hue>`, `dataviz.diverging` | Ramps drawn from the 6.1 lightness ladder | Heatmaps and occupancy calendars; Carbon's data-visualisation palettes are the public model |
 
 ## 7. Component API design and the accessibility contract
 
@@ -396,17 +486,17 @@ A component's API is the set of props, slots, events and names through which des
 
 ### 7.1 Props, variants and sizes
 
-- Variants name intent, never appearance: `variant="primary | secondary | tertiary | ghost | destructive"`, because an appearance name (`variant="orange"`) lies after a rebrand and means nothing to a screen reader. Sizes use `sm | md | lg`, three stops, because each extra stop adds a full row to the state matrix and to the visual-regression bill; Spectrum ships four button sizes (S to XL) because it serves desktop and mobile scales, a need most agency clients do not have.
+- Variants name intent: `variant="primary | secondary | tertiary | ghost | destructive"`, because an appearance name (`variant="orange"`) lies after a rebrand and means nothing to a screen reader. Sizes use `sm | md | lg`, three stops, because each extra stop adds a full row to the state matrix (every variant, size and state combination a component must render; 06-ui-design-craft.md section 3) and to the visual-regression bill; Spectrum ships four button sizes (S to XL) because it serves desktop and mobile scales, a need most agency clients do not have.
 - Booleans multiply: six boolean props give 64 combinations, most of them meaningless (`isLoading` plus `isDisabled` plus `isActive`). Prefer one enum prop (`state="idle | loading | disabled"`) where states are exclusive.
-- Keep the props list under about 12 for a leaf component (a house ceiling); an API past 20 props is a sign that composition (7.2) was skipped, and every prop is a public contract that semver (10.3) makes expensive to remove.
-- Tone or status props map directly to the status alias tokens (6.1), so adding a `status.neutral` role is a token change and a one-line variant addition, never a redesign.
+- Keep the props list under about 12 for a leaf component (a house ceiling); an API past 20 props is a sign that composition (7.2) was skipped, and every prop is a public contract that semantic versioning (semver, 10.3) makes expensive to remove.
+- Tone or status props map directly to the status alias tokens (6.1), so adding a `status.neutral` role is a token change and a one-line variant addition.
 - The `cva` pattern (class-variance-authority, used throughout shadcn/ui) is the house default in Tailwind projects: a variant map in one place, a `cn()` merge, no runtime style objects.
 
 ### 7.2 Slots and composition over configuration
 
-Configuration is a single component with many props (`<Dialog title icon footerButtons onClose ...>`); composition is a family of small parts assembled by the consumer (`<Dialog.Root><Dialog.Trigger/><Dialog.Content><Dialog.Title/>...`). Composition wins past about ten props because every new need (an image in the header, two primary buttons, a form inside) becomes a new child instead of a new prop. Radix Primitives, React Aria Components, Base UI and Ark UI all ship this way, which is why shadcn/ui components are small files rather than configuration objects.
+Configuration is a single component with many props (`<Dialog title icon footerButtons onClose ...>`); composition is a family of small parts assembled by the consumer (`<Dialog.Root><Dialog.Trigger/><Dialog.Content><Dialog.Title/>...`). Composition wins past about ten props because every new need (an image in the header, two primary buttons, a form inside) becomes a new child instead of a new prop. Radix Primitives, React Aria Components, Base UI and Ark UI all ship this way, which is why shadcn/ui components are small files of composable parts.
 
-Slots are the Figma equivalent: a named region in a component instance that accepts any content (Figma's slot property, available on all plans, holds any layers inside a defined area of an instance without detaching it; Code Connect maps it with `figma.slot()`, in open beta as of October 2026). The reason to mirror slots in both tools is that a designer who swaps a card's media slot for a video and an engineer who passes `children` to `Card.Media` are making the same decision with the same name.
+Slots are the Figma equivalent: a named region in a component instance that accepts any content (Figma's slot property, available on all plans, holds any layers inside a defined area of an instance without detaching it; Code Connect maps it with `figma.slot()`, added in Code Connect 1.4.0 on 18 February 2026). The reason to mirror slots in both tools is that a designer who swaps a card's media slot for a video and an engineer who passes `children` to `Card.Media` are making the same decision with the same name.
 
 `asChild` (Radix) and `render` props (Base UI, React Aria) let a component lend its behaviour to a different element (a `Button` that renders as a Next.js `Link`), which keeps the DOM honest (one element, correct semantics) and avoids nested interactive elements, an accessibility failure.
 
@@ -416,7 +506,7 @@ A controlled component takes its value from props (`value` plus `onChange`) and 
 
 ### 7.4 Headless primitives, as of October 2026
 
-Headless (unstyled) components implement behaviour, state, keyboard handling and ARIA, and leave appearance to the consumer. For an agency serving many brands this is the whole point: one tested behaviour layer, many skins (the Spectrum lesson from 2.4).
+Headless (unstyled) components implement behaviour, state, keyboard handling and ARIA, and leave appearance to the consumer. For an agency serving many brands this gives one tested behaviour layer and many skins (the Spectrum lesson from 2.4).
 
 | Library | Maintainer | State (October 2026) | Frameworks | What to know |
 |---|---|---|---|---|
@@ -426,7 +516,18 @@ Headless (unstyled) components implement behaviour, state, keyboard handling and
 | Ark UI | Chakra team (Zag.js state machines) | 5.39.x stable; 6.0.0-next.0 pre-release on 6 October 2026 | React, Vue, Solid, Svelte | The only multi-framework option with one behaviour layer; Chakra UI v3 (3.37.0, 28 August 2026) is built on it |
 | Headless UI | Tailwind Labs | v2 line | React, Vue | Smaller surface (menu, listbox, combobox, dialog, disclosure, tabs, switch); fine for marketing sites |
 
-Rule: never write a dialog, menu, combobox, tooltip or date picker from scratch. Each APG pattern specifies a keyboard table, roles, states and focus management, and every one of these libraries has fixed years of screen-reader and browser bugs that a bespoke build will reintroduce.
+Rule: build every dialog, menu, combobox, tooltip and date picker on a headless library or on the platform primitives below. Each WAI-ARIA Authoring Practices Guide (APG) pattern specifies a keyboard table, roles, states and focus management, and every one of these libraries has fixed years of screen-reader and browser bugs that a bespoke build would reintroduce.
+
+The platform layer, October 2026. Many luxury marketing sites run on a CMS with no React layer (13.2), and since 2024 the browser itself ships several of these primitives:
+
+| Primitive | Support (October 2026) | What it gives | House use |
+|---|---|---|---|
+| Popover API (`popover` attribute, `popovertarget`) | Chrome 114, Safari 17, Firefox 125; Baseline since April 2024 | Top layer, light dismiss, Esc to close, focus return | Disclosures, navigation flyouts, non-modal panels |
+| `<dialog>` with `showModal()` | About 97 percent global support (caniuse) | Top layer, inert background, Esc to close | Modal dialogs on CMS sites |
+| CSS anchor positioning (`anchor-name`, `position-anchor`, `position-try`) | Chrome 125, Safari 26 (full in 27), Firefox 147; about 87 percent, most of it marked partial for minor gaps (caniuse) | Places a tooltip or menu against its trigger and flips it at the viewport edge without JavaScript | Tooltips and menus, with Floating UI (a JavaScript positioning library) as the fallback |
+| Customisable select (`appearance: base-select`) | Chrome 135 and Safari 27, none in Firefox; about 70 percent (caniuse) | A styleable native select that falls back to the classic control | Progressive enhancement only |
+
+House position: on CMS-built marketing sites, use native popover, dialog and anchor positioning for disclosures, flyouts and tooltips; keep a headless library for combobox, menu, date picker, tabs with manual activation and anything with type-ahead, where the APG keyboard contract goes beyond what the platform provides. The Open UI community group (open-ui.org) is where these controls are being standardised; track it.
 
 ### 7.5 Polymorphic components
 
@@ -434,16 +535,16 @@ A polymorphic component accepts an `as` prop (or `asChild`, or `render`) and cha
 
 ### 7.6 The accessibility contract of each component
 
-Every component documents its contract: role, name, keyboard behaviour, focus management and states, taken from the WAI-ARIA Authoring Practices Guide (APG), which lists 30 patterns as of October 2026 (accordion, alert, alert and message dialogs, breadcrumb, button, carousel, checkbox, combobox, dialog, disclosure, feed, grid, landmarks, link, listbox, menu and menubar, menu button, meter, radio group, slider, multi-thumb slider, spinbutton, switch, table, tabs, toolbar, tooltip, tree view, treegrid, window splitter).
+Every component documents its contract: role, name, keyboard behaviour, focus management and states, taken from the APG, which lists 30 patterns as of October 2026 (accordion, alert, alert and message dialogs, breadcrumb, button, carousel, checkbox, combobox, dialog, disclosure, feed, grid, landmarks, link, listbox, menu and menubar, menu button, meter, radio group, slider, multi-thumb slider, spinbutton, switch, table, tabs, toolbar, tooltip, tree view, treegrid, window splitter).
 
 | Component | Role and naming | Keyboard | Focus | Notes |
 |---|---|---|---|---|
 | Button | `button`; name from content or `aria-label` for icon-only | Enter and Space activate | Visible ring at 3:1 | Icon-only buttons are the most common failure in luxury UIs; the label is mandatory |
 | Link | `a[href]` | Enter | Ring | A link that performs an action is a button; the APG separates them |
 | Dialog (modal) | `dialog` with `aria-modal`, labelled by title | Esc closes; Tab cycles inside | Move focus in on open, return to trigger on close | Scroll lock and inert background; `<dialog>` element handles most of it |
-| Menu | `menu` and `menuitem` | Arrow keys move, Home and End, type-ahead, Esc closes | Roving tabindex | A dropdown of links is a disclosure plus a list, never a menu |
+| Menu | `menu` and `menuitem` | Arrow keys move, Home and End, type-ahead, Esc closes | Roving tabindex (only the active item has `tabindex="0"`; arrow keys move it) | A dropdown of links is a disclosure plus a list; the `menu` role is reserved for application commands |
 | Tabs | `tablist`, `tab`, `tabpanel` | Arrows move between tabs; automatic or manual activation | One tab stop | Manual activation when panels are expensive |
-| Combobox | `combobox` with `aria-expanded`, `listbox` popup | Arrows, Enter, Esc, type to filter | Focus stays in input; `aria-activedescendant` | The hardest pattern; use a library |
+| Combobox | `combobox` with `aria-expanded`, `listbox` popup | Arrows, Enter, Esc, type to filter | Focus stays in the input; `aria-activedescendant` points to the highlighted option by ID | The hardest pattern; use a library |
 | Switch | `switch` with `aria-checked` | Space toggles | Ring | Differs from checkbox in that it takes effect immediately |
 | Tooltip | `tooltip`, referenced by `aria-describedby` | Esc dismisses; shows on focus as well as hover | None | Never put essential content in a tooltip |
 | Toast | `status` or `alert` live region | Not focused on appear | None | A toast with an action needs a long timeout (house minimum 8 seconds) that pauses on hover and focus, because WCAG 2.2 success criterion 2.2.1 Timing Adjustable requires that users can extend a time limit |
@@ -457,7 +558,7 @@ Parity means the same component names, the same property names and the same prop
 
 | Figma | Code | Rule |
 |---|---|---|
-| Component `Button` | `Button` | One name, no suffixes (`Button / Primary` becomes a variant, never a second component) |
+| Component `Button` | `Button` | One name, no suffixes (`Button / Primary` becomes a value of the `Variant` property on `Button`) |
 | Variant property `Variant` with values `Primary, Secondary` | `variant="primary"` | Same words; case follows each tool (Figma Title case, code lower camel) |
 | Variant property `Size` with values `sm, md, lg` | `size="sm"` | Same tokens, same abbreviations |
 | Boolean property `Show icon` | `icon` slot or prop | Figma booleans become props or slots, and the doc page says which |
@@ -469,7 +570,18 @@ A parity audit (section 10.5) runs twice a year and lists every mismatch; the us
 
 ### 7.8 The internationalisation contract
 
-For Mask360's bilingual clients the contract includes: logical CSS properties only (`margin-inline-start`, never `margin-left`) so RTL mirrors without a second stylesheet; a `dir` attribute set at the root and honoured by every popup's placement logic (React Aria handles this; several others do not); numerals as a locale decision (`Intl.NumberFormat` with `en-IN` grouping 1,00,000 and `ar-AE` with Western or Eastern Arabic digits per client preference); dates through `Intl.DateTimeFormat`; currency tokens as formatting rules (INR with the rupee sign and lakh grouping, AED with "AED" before the amount in Latin text and "د.إ" in Arabic text; the Central Bank of the UAE's dirham symbol, announced in March 2025 and encoded as U+20C3 in Unicode 18 in September 2026, is missing from most fonts in October 2026, so it ships as an SVG icon token until the client's typefaces carry it); and text expansion allowances of 30 percent in every label slot. Mirroring rules for icons (arrows and progress mirror; clocks, logos and media controls do not) are documented per icon.
+For Mask360's bilingual clients every text-bearing component signs this contract (layout detail in 05-layout-grids-and-composition.md section 16; label length and tone in 10-ux-writing-and-content-design.md section 6):
+
+| Contract item | Rule | Reason |
+|---|---|---|
+| Logical properties | `margin-inline-start` in place of `margin-left`, `inset-inline-end` in place of `right`, throughout | RTL (right-to-left layout, for Arabic) mirrors without a second stylesheet |
+| Direction | `dir` set at the root and honoured by every popup's placement logic | React Aria handles this and several other libraries do not; a menu that opens to the wrong side clips off screen |
+| Numerals | `Intl.NumberFormat` with `en-IN` grouping (1,00,000) and `ar-AE` with Western or Eastern Arabic digits per client preference | Lakh grouping is what Indian buyers read; digit choice is a brand decision in the Gulf |
+| Dates | `Intl.DateTimeFormat` per locale | Day and month order and calendar conventions differ by market |
+| Currency | INR with the rupee sign and lakh grouping; AED as "AED" before the amount in Latin text and "د.إ" in Arabic text | Matches local convention in each script |
+| Dirham symbol | The Central Bank of the UAE's symbol (announced March 2025, encoded as U+20C3 in Unicode 18.0, released 16 September 2026) ships as an SVG icon token | Most fonts lack the glyph in October 2026; switch to text once the client's faces carry it |
+| Text expansion | A 30 percent allowance in every label slot | Devanagari and Arabic text runs about 10 to 30 percent longer than English (6.11) |
+| Icon mirroring | Arrows and progress indicators mirror; clocks, logos and media controls keep their direction; recorded per icon | A mirrored play button reads as rewind |
 
 ## 8. Canonical systems to study
 
@@ -479,7 +591,7 @@ Study each for the one thing it does best; copy none whole. Versions and dates v
 
 | System | Owner | State, October 2026 | What it does best | Borrow for |
 |---|---|---|---|---|
-| Material 3 and M3 Expressive | Google | M3 Expressive announced 13 May 2025, shipped on Pixel in Android 16 QPR1 (September 2025) and preinstalled on Pixel 10. Google's research article cites 46 studies and more than 18,000 participants, key elements found up to four times faster in eye tracking, up to 87 percent preference among 18 to 24 year olds | The most complete public token model (`md.ref`, `md.sys`, `md.comp`), dynamic colour from HCT, named motion and elevation scales (6.7, 6.10), window size classes | SaaS and Android-first consumer apps; the token tiers for everyone. Its expressive shapes and bold colour are the opposite of the house luxury register |
+| Material 3 and M3 Expressive | Google | M3 Expressive announced 13 May 2025, shipped on Pixel in Android 16 QPR1 (the first quarterly platform release of Android 16, September 2025) and preinstalled on Pixel 10. Google's research article cites 46 studies and more than 18,000 participants, key elements found up to four times faster in eye tracking, up to 87 percent preference among 18 to 24 year olds | The most complete public token model (`md.ref`, `md.sys`, `md.comp`), dynamic colour from HCT, named motion and elevation scales (6.7, 6.10), window size classes | SaaS and Android-first consumer apps; the token tiers for everyone. Its expressive shapes and bold colour are the opposite of the house luxury register |
 | Apple Human Interface Guidelines and Liquid Glass | Apple | Liquid Glass announced at WWDC on 9 June 2025 for iOS 26 and the 26-series platforms; two variants, regular (adaptive) and clear (for media-rich backgrounds); a control layer that floats above content; the system adapts it for Reduce Transparency and Increase Contrast. WWDC on 8 June 2026 brought iOS 27, refined Liquid Glass guidance for app icons, Icon Composer 2 and SF Symbols 8 in beta, and reintroduced design principles to the HIG | Platform conventions for iOS and macOS, SF Symbols, Dynamic Type, the discipline of separating navigation chrome from content | Any native iOS work for hospitality and retail clients; the layering idea. Glass as decoration on the web is a peaking trend (design-taste section 6) |
 | Microsoft Fluent 2 | Microsoft | Current; documents global tokens (raw values) and alias tokens (semantic, bundling shadows and type), with light, dark and high-contrast themes | High-contrast theming done properly; Windows forced-colours behaviour | Enterprise and government clients in the Gulf on Windows estates |
 
@@ -487,12 +599,12 @@ Study each for the one thing it does best; copy none whole. Versions and dates v
 
 | System | Owner | State, October 2026 | What it does best | Borrow for |
 |---|---|---|---|---|
-| Carbon | IBM | v11.119.0 released 21 October 2026 (`@carbon/react` 1.119.0), two-week release cadence with release candidates | Tokens-first architecture, four themes, layering tokens, the 2x grid, a spacing scale in multiples of 2, 4 and 8 (6.3) | Data-heavy admin and back-office products: hotel PMS dashboards, inventory |
+| Carbon | IBM | v11.119.0 released 21 October 2026 (`@carbon/react` 1.119.0), two-week release cadence with release candidates | Tokens-first architecture, four themes, layering tokens, the 2x grid, a spacing scale in multiples of 2, 4 and 8 (6.3) | Data-heavy admin and back-office products: hotel PMS (property management system) dashboards, inventory |
 | Polaris | Shopify | polaris.shopify.com now redirects to shopify.dev, which describes Polaris as "Shopify's unified UI framework built on web components"; each surface (Admin, Checkout, Customer accounts, Point of Sale extensions) gets its own subset of Polaris web components | Content guidelines woven into component docs; commerce patterns (index tables, resource lists, bulk actions) | F&B and retail clients on Shopify; the content-in-docs model for 10-ux-writing-and-content-design.md |
 | Atlassian Design System | Atlassian | Current; `space.100` = 8px, a scale from `space.0` to `space.1000` (80px) with negatives to -32px; colour tokens `color.text`, `color.icon.success` | The clearest token naming documentation; a spacing scale whose numbers are percentages of the base | Any SaaS with tables and forms; the naming grammar in 3.3 |
-| Primer | GitHub | `@primer/react` 38.43.0 on 23 October 2026, with a `@primer/mcp` package (1.1.2) shipped alongside so agents can query the system | Seven-segment token grammar (3.3); base, functional and component tiers; a nine-theme set, since GitHub offers light and dark, each with high-contrast, protanopia and deuteranopia, and tritanopia variants, plus dark dimmed | Developer-facing products; the MCP idea for exposing a system to AI tooling (section 13.4) |
+| Primer | GitHub | `@primer/react` 38.43.0 on 23 October 2026, with a `@primer/mcp` package (1.1.2), a Model Context Protocol (MCP) server through which AI agents query the system | Seven-segment token grammar (3.3); base, functional and component tiers; a nine-theme set, since GitHub offers light and dark, each with high-contrast, protanopia and deuteranopia, and tritanopia variants, plus dark dimmed | Developer-facing products; the MCP idea for exposing a system to AI tooling (section 13.4) |
 | Spectrum 2 and React Spectrum | Adobe | React Spectrum libraries v1.8.0 on 8 October 2026; S2 reached 1.0.0 on 16 December 2025, "the first stable version" of the second-generation system | Behaviour, state and skin separated (React Aria, React Stately, Spectrum); platform scales for desktop and mobile | The architecture of every house code library (2.4, 7.4) |
-| Lightning Design System | Salesforce | Current; the origin of design tokens (Jina Anne, 2014) | The token idea itself; dense enterprise patterns | Historical reference and CRM-adjacent client work |
+| Lightning Design System (SLDS 2) | Salesforce | The site presents Lightning Design System 2 as of October 2026; the origin of design tokens (Jina Anne, 2014). The supported customisation surface is global styling hooks, CSS custom properties prefixed `--slds-g-` | Publishing a small, stable set of CSS variables as the theming contract and keeping the rest private | CRM-adjacent client work; the styling-hooks idea for any system that clients theme themselves |
 | Base (Base Web) | Uber | Open source React library with a theme object (`createTheme`) and Styletron for styling; Uber Move is the brand typeface | A strict theme object every component reads; a good example of one brand, one theme | Logistics and marketplace clients |
 | Airbnb DLS | Airbnb | Private. Karri Saarinen's 2016 essay "Building a Visual Language" described it; Saarinen then co-founded Linear | The idea of a unified language across platforms, and the cultural argument for a system | The essay, for client decks explaining why a system |
 
@@ -502,19 +614,23 @@ Study each for the one thing it does best; copy none whole. Versions and dates v
 |---|---|---|---|
 | GOV.UK Design System | govuk-frontend v6.6.0 on 15 October 2026. Contribution criteria: useful and unique to propose; usable (tested with users including disabled people), consistent and versatile to publish | The best governance model in public: evidence-based contribution, research-backed patterns, plain language | The contribution process (10.2) and the accessibility floor |
 | USWDS | 3.14.0 on 18 August 2026 | Settings-driven theming through Sass tokens; Section 508 alignment; a utilities layer | Government and quasi-government work in India and the UAE where auditability matters |
+| UX4G 3.0 (National e-Governance Division, MeitY, Government of India) | v3.0: 50 plus components and patterns, design tokens, typography, colour and icons; a Figma kit in the Figma Community; an npm package with HTML, React and Angular setup guides; the UX4G Theme Craft 2.0 Figma plugin for theming; built to GIGW 3.0 (Guidelines for Indian Government Websites) accessibility standards; an accessibility widget | A national system that ships tokens and a theming plugin alongside code | Indian public-sector, PSU and tourism-board clients, whose websites fall under GIGW |
+| UAE Design System 3.0 (AEGOV, Telecommunication and Digital Government Regulatory Authority) | Version 3.0: components, blocks and patterns for federal websites; compatible with Tailwind CSS 4; open source under the TDRA-ae GitHub organisation (`aegov-dls`); an Arabic site at designsystem.gov.ae/ar | Arabic-first public design built on Tailwind | Arabic-first government and semi-government work in the UAE |
 
 ### 8.4 The product-led and developer-led systems
 
 | System | State, October 2026 | What it does best | Borrow for |
 |---|---|---|---|
 | Nord (Nordhealth) | Nordhealth's system for veterinary and healthcare software: 57 web components that work in plain HTML, React or Vue, about 300 icons, design tokens with a Tailwind integration, themes and a Figma toolkit | Framework-agnostic delivery through web components, so one system serves teams on different frameworks | Clients whose engineering teams span frameworks |
-| Geist (Vercel) | Current; components ship as `@vercel/geistcn` with assets in `@vercel/geistcn-assets`; typeset in Geist Sans and Geist Mono; a high-contrast colour system | Restraint in a developer product: grid, monochrome, hairlines | The register for Mask360's own agency showcase and for fintech clients; study it as taste, see design-taste references/canon.md |
+| Geist (Vercel) | Current; components ship as `@vercel/geistcn` with assets in `@vercel/geistcn-assets`; typeset in Geist Sans and Geist Mono; a high-contrast colour system | Restraint in a developer product: grid, monochrome, hairlines | The register for Mask360's own agency showcase and for fintech clients; study it as taste; see design-taste references/worlds.md and references/currency-2026.md |
 | Linear | No public system; the product is the document | Density with calm, keyboard-first, one accent, subtle elevation | Reference for "quiet SaaS" clients |
-| shadcn/ui | Not a dependency: components are copied into the project through the CLI (v4, March 2026). Changelog in 2026: Base UI documentation and RTL support (January), unified Radix package and blocks for both (February), registry include and validate (May), GitHub registries (June), Base UI as the default on 2 July and a React Aria entry (July), private GitHub registries and the Questionnaire component (August), a standalone `cn` package (September), Trace, Code Block and AI Elements (October) | The copy-in model (you own the code), registries as distribution, Tailwind v4 tokens as `@theme` | The default starting kit for a client web app; the private-registry feature is how an agency distributes a client system |
-| Radix Themes | 3.1.x (3.1.1 in June 2024, 3.1.3 current and undated on the releases page) | Twelve-step colour scales with fixed semantics (6.1), a `Theme` component with accent, grey, radius and scaling props | The colour semantics; quick prototypes |
+| shadcn/ui | Not a dependency: components are copied into the project through the CLI (v4, March 2026). Changelog in 2026: Base UI documentation and RTL support (January), unified Radix package and blocks for both (February), registry include and validate (May), GitHub registries (June), Base UI as the default and a React Aria entry (July), private GitHub registries and the Questionnaire component (August), a standalone `cn` package (September), Trace, Code Block and AI Elements (October) | The copy-in model (you own the code), registries as distribution, Tailwind v4 tokens as `@theme` | The default starting kit for a client web app; the private-registry feature is how an agency distributes a client system |
+| Radix Themes | 3.3.0 (31 January 2026, npm) is the latest release as of October 2026 | Twelve-step colour scales with fixed semantics (6.1), a `Theme` component with accent, grey, radius and scaling props | The colour semantics; quick prototypes |
 | Tailwind CSS v4 | `@theme` directive defines tokens as CSS variables that also generate utilities; namespaces `--color-*`, `--font-*`, `--text-*`, `--font-weight-*`, `--tracking-*`, `--leading-*`, `--breakpoint-*`, `--container-*`, `--spacing-*`, `--radius-*`, `--shadow-*`, `--ease-*`, `--animate-*` and others; `--spacing: 0.25rem` as the base; `@theme inline` for variable references; `--*: initial` to drop the defaults | A token system that engineers already use; the cleanest path from DTCG to utilities (13.2) | Every house web build |
 | Chakra UI | v3.37.0 on 28 August 2026, built on Ark UI 5.39 with a Panda CSS preset | Z-index scale (6.9), semantic tokens with conditions, recipes | Teams who want a styled library with a theme object |
 | Mantine | v9 line; 9.7.4 released 25 October 2026 | Breadth: 100 plus components, hooks, form library | Internal tools where speed beats brand |
+| Razorpay Blade | MIT; one package of cross-platform components for React web and React Native, with white-label theming; `@razorpay/blade` 12.130.2 on npm (October 2026) | One system across web and native apps from a single code base | Indian fintech, travel and commerce clients that ship web plus a React Native app |
+| CRED NeoPOP | Apache-2.0; `@cred/neopop-web` 1.0.0 published July 2022, a React library tuned for mobile and built on styled-components | A premium, high-contrast Indian fintech register | Reference for premium Indian fintech; check maintenance before adopting, since the web package has had one release |
 
 ### 8.5 Luxury versus SaaS: what to borrow
 

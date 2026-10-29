@@ -37,7 +37,7 @@ Content design is the practice of working out what a person needs to know or do 
 
 Product teams that treat words as part of the design (Shopify's Polaris content guidelines, Atlassian's design system content section, Microsoft's Writing Style Guide, Mailchimp's content style guide, Monzo's tone of voice, GOV.UK's content design manual) all share one structural choice: the writer is in the room when the flow is drawn, and the strings are reviewed in the same pull request as the component. Embedding the writer before the frames exist is the reason their products read as one voice. A writer brought in after the frames are built can only fit words into boxes that were sized for lorem ipsum.
 
-Three team models recur. Centralised: one content design team serves every squad, which keeps the voice consistent and loses context on each flow. Embedded: a writer sits in each product squad, which keeps context and lets terminology drift between squads. Hub and spoke: a content lead owns the voice chart, the terminology table and the review standard, and embedded writers ship the strings; mature in-house teams tend to end here because it keeps both the standard and the context. Two GOV.UK habits travel to any model: pair writing, in which the content designer writes with the subject expert in one session so that accuracy and plainness are settled together, and 2i (second pair of eyes), in which a second content designer reviews every piece before it publishes.
+Three team models recur. Centralised: one content design team serves every squad, which keeps the voice consistent and loses context on each flow. Embedded: a writer sits in each product squad, which keeps context and lets terminology drift between squads. Hub and spoke: a content lead owns the voice chart, the terminology table and the review standard, and embedded writers ship the strings; the house recommends it to clients because it keeps both the standard and the context. Two GOV.UK habits travel to any model: pair writing, in which the content designer writes with the subject expert in one session so that accuracy and plainness are settled together, and 2i (second pair of eyes), in which a second content designer reviews every piece before it publishes.
 
 The agency version: Mask360 sells content design as named deliverables, in the order a product needs them, each estimated per flow or per 100 strings so that product copy is scoped and priced as its own line: voice chart (section 2.4), terminology table (5.9), string audit (7.2), copy deck (12.3), content model (7.3), localisation brief (6.9 and 6.10). Pricing method is in 24-business-of-creative-and-agency-operations.md, section 3.
 
@@ -86,7 +86,7 @@ NN/g's companion study (Moran, "The Impact of Tone of Voice on Users' Brand Perc
 | Policy or price change | Wary of a trick | The change, the date, the effect on this person | "From 1 April, free cancellation on the Flexible rate moves from 48 to 72 hours before arrival. Your stay on 14 March keeps the old terms." | "We're updating our policies to serve you better" |
 | Suspension or overdue payment | Embarrassed, defensive | Facts, consequence, date, route; no threats | "Your membership payment of ₹25,000 is 10 days overdue. Benefits pause on 30 April. Update your card to keep them." | "Final warning", capitals, legal threats |
 | Bereavement, illness, a cancelled wedding | Grieving, exhausted | Plain human language, no brand flourish, the waiver route before any request for proof where policy allows | "We're sorry for your loss. We've cancelled the reservation and will return the ₹40,000 deposit. You don't need to send anything." | A certificate requested in the first message |
-| Data breach | Anxious, angry | The DPDP rule 7 content (section 4.19), in the order the person needs it | "On 2 May someone accessed guest emails and phone numbers. Card details were not affected. Ignore any message asking for a code. Questions: privacy@example.com" | Minimising ("a small number of guests"), legal register |
+| Data breach | Anxious, angry | The content rule 7 of India's Digital Personal Data Protection (DPDP) Rules 2025 asks for (section 4.19), in the order the person needs it | "On 2 May someone accessed guest emails and phone numbers. Card details were not affected. Ignore any message asking for a code. Questions: privacy@example.com" | Minimising ("a small number of guests"), legal register |
 
 ### 2.4 Voice charts
 
@@ -202,7 +202,7 @@ Secondary buttons: "Cancel" is acceptable only when it means "close this without
 
 Common buttons in Hindi and Arabic, as starting candidates for the terminology table (5.9): each Hindi pair is tested with five native readers and the decision recorded with its reason. Arabic buttons use the masdar (verbal noun) so the label carries no gender (section 5.7); the imperative احجز (masculine) or احجزي (feminine) forces a choice.
 
-| English | Hindi, everyday (house default, 6.10) | Hindi, shuddh (heritage and government-adjacent clients) | Arabic (simplified MSA) |
+| English | Hindi, everyday (house default, 6.10) | Hindi, shuddh (Sanskritised; heritage and government-adjacent clients) | Arabic (simplified Modern Standard Arabic, MSA) |
 |---|---|---|---|
 | Save | सेव करें | सहेजें | حفظ |
 | Cancel | कैंसल करें | रद्द करें | إلغاء |
@@ -240,7 +240,7 @@ Reason: placeholders disappear when the person starts typing, fail colour contra
 
 ### 4.4 Helper text
 
-Rule: one short line under or beside the field, present before the person types, stating the constraint or why the data is needed. Full sentence with a full stop if it is a sentence; fragment with no full stop if it is a format. Examples: "We'll only use this for booking updates." "At least 15 characters. A phrase is easiest to remember." (the NIST rule in section 4.25) "As it appears on your Emirates ID."
+Rule: one short line under or beside the field, present before the person types, stating the constraint or why the data is needed. Full sentence with a full stop if it is a sentence; fragment with no full stop if it is a format. Examples: "We'll only use this for booking updates." "At least 15 characters. A phrase is easiest to remember." (the password rule in section 4.25) "As it appears on your Emirates ID."
 
 ### 4.5 Validation and error messages
 
@@ -335,9 +335,9 @@ iOS 15 introduced four interruption levels: passive (delivered silently), active
 
 A permission request is the operating system (OS) dialogue (location, camera, notifications, contacts, tracking) whose wording the app cannot change beyond the purpose string, the sentence Apple requires in the app's Info.plist (NSCameraUsageDescription and its siblings) and shows inside the system dialogue. Priming is the app's own screen shown before the OS dialogue, explaining the benefit so that the person says yes once. Apple's App Review Guideline 5.1.1 requires the purpose string to explain clearly and specifically why the data is needed; vague strings ("This app needs camera access") are rejected. Ask only when the feature is about to be used, because iOS shows the system dialogue once and a refusal sends the person to Settings. The pattern side is in 09-interaction-design-and-ux-patterns.md, section 5.3.
 
-- iOS priming copy, from Apple's Human Interface Guidelines (Privacy, "Pre-alert screens", as of October 2026): one benefit in the person's terms and a single button titled "Continue" or "Next" that opens the system alert. Apple asks for no "Allow" on the custom button, because it borrows the alert's meaning, and no cancel or close control; it lists designs that cause rejection: incentives, a screen that looks like a request, an image of the alert, and annotation that draws the eye to Allow. Example: "Get a message when your table is ready." Button: "Continue".
+- iOS priming copy, from Apple's Human Interface Guidelines (HIG; Privacy, "Pre-alert screens", as of October 2026): one benefit in the person's terms and a single button titled "Continue" or "Next" that opens the system alert. Apple asks for no "Allow" on the custom button, because it borrows the alert's meaning, and no cancel or close control; it lists designs that cause rejection: incentives, a screen that looks like a request, an image of the alert, and annotation that draws the eye to Allow. Example: "Get a message when your table is ready." Button: "Continue".
 - App Tracking Transparency (ATT, iOS 14.5 and later) needs the system prompt and an NSUserTrackingUsageDescription string that names the use plainly: "Your data is used to show you Example Haveli offers on other apps and sites." Opt-in rates are low and vary by category; take the current figure from AppsFlyer or Adjust before planning iOS retargeting.
-- Android: since Android 13 (API level 33, 2022) notifications need the POST_NOTIFICATIONS runtime permission, so priming applies on Android too, and Android's guidance allows a rationale screen with a "No thanks" route. After a first refusal the app may show a rationale (shouldShowRequestPermissionRationale); after two refusals the system stops showing the dialogue, so the rationale is written once and carefully.
+- Android: since Android 13 (API level 33, 2022) notifications need the POST_NOTIFICATIONS runtime permission, so priming applies on Android too. Android's guidance asks for a "cancel" or "no thanks" option on the rationale screen, the opposite of Apple's rule, so the two platforms get different priming screens from one copy deck. After a first refusal the app may show a rationale (shouldShowRequestPermissionRationale); after two refusals the system stops showing the dialogue, so the rationale is written once and carefully.
 - Location: ask for "While using the app" and approximate location unless the feature needs precision (an in-resort buggy pickup does, a city guide does not), and say why in the string: "Your location lets the buggy find you on the estate."
 
 ### 4.14 Onboarding screens
@@ -386,17 +386,15 @@ Rupee formatting:
 - Indian grouping: three digits, then twos. ₹1,20,000 (one lakh twenty thousand); ₹1,20,00,000 (one crore twenty lakh). The en-IN locale in the International Components for Unicode (ICU) library and the browser's Intl.NumberFormat API produces this; en-US produces ₹12,000,000, which Indian readers misread.
 - Lakh (1,00,000) and crore (1,00,00,000) in display copy for property and large-ticket retail ("₹1.2 crore", "₹85 lakh"; "Cr" only in a table cell under a budget), full numerals on invoices, receipts and anything legal. Never mix "million" and "lakh" on one screen. For a Gulf or international audience add the converted figure in brackets: "₹1.2 crore (about AED 530,000)".
 - Paise exist (100 paise = ₹1) but most consumer prices are whole rupees; show ".00" only on invoices.
-- MRP (maximum retail price) on packaged goods in India is inclusive of all taxes under the Legal Metrology (Packaged Commodities) Rules 2011; a product page that shows "₹4,500 + GST" for a packaged cosmetic is wrong on two counts.
-- GST (goods and services tax) rates differ by category; the product copy states the applicable rate on the invoice and shows inclusive prices everywhere else.
+- MRP (maximum retail price) on packaged goods in India is inclusive of all taxes under the Legal Metrology (Packaged Commodities) Rules 2011; a product page that shows "₹4,500 + GST" (GST: India's goods and services tax) for a packaged cosmetic is wrong on two counts.
+- GST rates differ by category; the product copy states the applicable rate on the invoice and shows inclusive prices everywhere else.
 
-Dirham formatting:
+Dirham and riyal formatting:
 - The Central Bank of the UAE unveiled a dirham symbol on 27 March 2025; Unicode 18.0 (September 2026) encoded it as U+20C3 UAE DIRHAM SIGN. The symbol sits before the numeral; the house never sets it together with "AED" or "Dh", because a doubled currency marker reads as an error. As of October 2026 most fonts and keyboards have not shipped the glyph, so product UI uses the ISO code "AED 2,310" (code, space, number) and switches to the symbol when the brand's typeface carries it. Gulf News house style has been "Dh2,310"; the house avoids it in product copy because it is a newspaper convention.
 - Fils (100 fils = AED 1) appear on receipts; consumer prices are whole dirhams.
 - VAT at 5 per cent (since 1 January 2018) is included in displayed prices. Dubai hotel bills carry charges the booking flow must name before payment: service charge (10 per cent), municipality fee (7 per cent), VAT (5 per cent) and the Tourism Dirham per room per night (about AED 7 to 20 by hotel classification). Other emirates set their own fees (Abu Dhabi, for example, levies its own tourism and municipality fees and a per-night charge), so the figures are confirmed with the client's finance team before launch; the copy rule is that every line is named and totalled before "Pay".
-
-Riyal formatting:
 - The Saudi Central Bank (SAMA) introduced a riyal symbol in February 2025, and Unicode 17.0 (September 2025) encoded it as U+20C1 SAUDI RIYAL SIGN. Follow SAMA's usage guidance on placement and spacing, use "SAR 1,250" where the typeface lacks the glyph, and never set the code and the symbol together.
-- VAT has been 15 per cent since 1 July 2020 (Zakat, Tax and Customs Authority, ZATCA), and displayed prices include it.
+- Saudi VAT has been 15 per cent since 1 July 2020 (Zakat, Tax and Customs Authority, ZATCA), and displayed prices include it.
 
 #### Payment methods and payment states
 
@@ -442,7 +440,7 @@ The method choice is in 09-interaction-design-and-ux-patterns.md, section 5.2; t
 - Sign-in failure: "Email or password is incorrect", so the copy never confirms that an account exists, with a "Reset password" link beside it.
 - One-time codes: the screen states length, channel and expiry: "Enter the 6-digit code we sent to the number ending 4210. It expires in 10 minutes." "Resend code" appears after 30 seconds with a visible timer, with "Get the code on WhatsApp" as the second route, and the field accepts paste (WCAG 3.3.8, section 8.7).
 - OTP messages carry "Never share this code. Example Haveli will never ask for it." For autofill, the Android message ends with the app's 11-character SMS Retriever hash, and for iOS and Safari the last line is "@example.com #123456" (the domain-bound code format), so the code fills only on that domain.
-- Passkeys (FIDO credentials unlocked by the device's biometric or PIN): write "passkey" in lower case, as the FIDO Alliance's design guidelines do. The button reads "Sign in with a passkey". The creation prompt names the benefit and where it is saved: "Next time, sign in with your face or fingerprint. No password to remember. Saved to iCloud Keychain."
+- Passkeys (FIDO, Fast Identity Online, credentials confirmed with the device's biometric or screen lock): write "passkey" in lower case, as the FIDO Alliance's design guidelines do. The button reads "Sign in with a passkey". The creation prompt names the benefit and where it is saved: "Next time, sign in with your face or fingerprint. No password to remember. Saved to iCloud Keychain."
 
 ### 4.26 Search, filters and sort
 
@@ -587,7 +585,7 @@ Rules for the writer and the front-end together:
 - Isolate inserted values. A placeholder such as a name, a flight number or a URL inside an Arabic sentence must be wrapped in a bidi isolate (`<bdi>` in HTML, or the Unicode isolate characters U+2066 to U+2069 in plain strings), otherwise the algorithm may reorder the punctuation and digits around it. The classic failure: an Arabic string ending in "AED 2,310" that renders as "2,310 AED" with the comma displaced.
 - Numbers: decide the digit set per locale (section 6.5). Phone numbers and codes are always left-to-right runs and need the isolate.
 - Mirror what has direction and leave alone what does not. Back and forward arrows, progress indicators, sliders, the order of columns, the position of the primary button and the alignment of text all mirror. Clocks, media controls (play still points right), logos, checkmarks, phone handsets and anything depicting the physical world do not. Material's bidirectionality guidance and Apple's RTL guidance list the exceptions.
-- Use CSS logical properties (`margin-inline-start`, `padding-inline-end`, `text-align: start`) rather than left and right, so one stylesheet serves both directions; see 21-web-design-and-digital-craft.md, section 2.7.
+- Use CSS logical properties (`margin-inline-start`, `padding-inline-end`, `text-align: start`), named by flow direction, so one stylesheet serves both directions; see 21-web-design-and-digital-craft.md, section 2.7.
 - Arabic punctuation: the comma is "،" (U+060C), the question mark "؟" (U+061F), the semicolon "؛" (U+061B). A Latin "?" at the end of an Arabic sentence is a cheap tell that nobody who reads Arabic reviewed the build.
 - Mixed-script brand names: a Latin wordmark inside Arabic running text stays Latin (it is a logo); a transliterated brand name in Arabic script is a brand decision recorded in the identity (18-brand-strategy-and-identity-design.md, section 3.4 on bilingual lockups).
 
@@ -641,11 +639,9 @@ The formatter does the work; the writer chooses the pattern and checks the outpu
 | Grouping | 1,20,00,000 (lakh and crore groups) | 1,20,00,000; लाख and करोड़ in words | 12,000,000 | Pass the locale; never hard-code separators |
 | Decimal separator | . | . | Arabic decimal separator "٫" (U+066B) when Eastern digits are used; "." with Western digits | Follow the digit set |
 | Currency | ₹1,20,000 | ₹1,20,000 | AED 2,310 or the dirham sign where the font has it (section 4.21) | Code or symbol, never both |
-| Digit set | Western digits | Western digits by default; Devanagari digits (०१२३४५६७८९) with hi-IN-u-nu-deva, rare in consumer UI | Decision per client: Western (ASCII) digits are the norm on UAE government, transport and most retail interfaces and the house default for UAE Arabic UI; Eastern Arabic-Indic digits (U+0660 to U+0669) where the client's print and signage use them, and more often for Saudi and Egyptian audiences | Set the numbering system explicitly in the locale tag (ar-AE-u-nu-latn or ar-AE-u-nu-arab) rather than trusting a default, because defaults differ by locale and by CLDR version and the mismatch between a bill and a screen is a trust failure; Eastern digits are more common in Saudi consumer UI, so set nu explicitly for ar-SA too |
+| Digit set | Western digits | Western digits by default; Devanagari digits (०१२३४५६७८९) with hi-IN-u-nu-deva, rare in consumer UI | Decision per client: Western (ASCII) digits are the norm on UAE government, transport and most retail interfaces and the house default for UAE Arabic UI; Eastern Arabic-Indic digits (U+0660 to U+0669) where the client's print and signage use them, and more often for Saudi and Egyptian audiences | Set the numbering system explicitly in the locale tag (ar-AE-u-nu-latn or ar-AE-u-nu-arab), because defaults differ by locale and by CLDR version and the mismatch between a bill and a screen is a trust failure; Eastern digits are more common in Saudi consumer UI, so set nu explicitly for ar-SA too |
 
-Test the formatter output in each CLDR version a product ships on, because day periods and defaults change between versions. Intl here is the browser's internationalisation API, specified in ECMA-402.
-
-Hijri dates: Intl supports the islamic-umalqura calendar (the Umm al-Qura calendar used by Saudi Arabia) as a calendar extension (ar-SA-u-ca-islamic-umalqura); the UAE follows astronomical sighting for Ramadan and Eid, so a product must never compute an Eid date and present it as fact. Show the Gregorian first, the Hijri in a secondary style, and label holidays as "expected" until announced.
+Test the formatter output in each CLDR version a product ships on, because day periods and defaults change between versions. Intl here is the browser's internationalisation API, specified in ECMA-402. Hijri dates: Intl supports the islamic-umalqura calendar (the Umm al-Qura calendar used by Saudi Arabia) as a calendar extension (ar-SA-u-ca-islamic-umalqura); the UAE follows astronomical sighting for Ramadan and Eid, so a product must never compute an Eid date and present it as fact. Show the Gregorian first, the Hijri in a secondary style, and label holidays as "expected" until announced.
 
 ### 6.6 Cultural references
 
@@ -693,7 +689,7 @@ Every Hindi and Arabic product decides its register before the first string is t
 - No flags: a flag is a country. Arabic is official in more than 20 states, and India's flag stands for 22 scheduled languages.
 - The switcher sits in the same place on every screen (header or footer on the web, Settings in apps), marked with a globe icon or "Language" plus the endonym, and the choice is remembered in the account.
 - Never auto-switch on IP address alone: an Indian guest in Dubai is usually not an Arabic reader. Offer the switch, and treat the browser's Accept-Language header as a hint.
-- Direction switches to RTL with the language (section 6.2). Language, region and currency are separate choices ("Language: العربية", "Currency: AED"), because a Gulf resident may read English and pay in dirhams. W3C Internationalization's articles on language negotiation and on indicating the language of a link destination carry the detail.
+- Direction switches to RTL with the language (section 6.2). Language, region and currency are separate choices ("Language: العربية", "Currency: AED"), because a Gulf resident may read English and pay in dirhams. W3C Internationalization's article on indicating the language of a link destination carries the detail.
 
 ## 7. Content strategy
 
@@ -731,7 +727,7 @@ Example content model for a hotel group, as a starting point:
 
 ### 7.4 Headless CMS content modelling
 
-A headless CMS stores structured content and serves it over an API with no fixed presentation layer; the product, the site and the emails each render it. As of October 2026 the tools the house meets most are Sanity (schema as code, a customisable studio, GROQ, Graph-Relational Object Queries), Contentful (content types with a visual modeller, rich text as a structured JSON tree), Storyblok (component-based blocks with a visual editor), Payload (open source, code-first) and Strapi (open source). Modelling rules that protect the copy:
+A headless CMS stores structured content and serves it over an API with no fixed presentation layer; the product, the site and the emails each render it. As of October 2026 the tools the house meets most are Sanity (schema as code, a customisable studio, GROQ, Graph-Relational Object Queries), Contentful (content types with a visual modeller, rich text as a structured JSON (JavaScript Object Notation) tree), Storyblok (component-based blocks with a visual editor), Payload (open source, code-first) and Strapi (open source). Modelling rules that protect the copy:
 
 - Model the meaning. A field called "left column text" is a layout; a field called "cancellation summary" is content.
 - Keep rich text fields rare and small. Every rich text field is a place where a marketing manager will paste a Word document with its own typography; prefer typed fields with length limits and plain text.
@@ -793,7 +789,7 @@ Prerecorded video needs captions (WCAG 1.2.2, A) and an audio description or a t
 
 ### 8.6 Plain language for cognitive accessibility
 
-WCAG 2.2 section 3.1 (Readable) carries the content criteria: 3.1.1 Language of Page (A) and 3.1.2 Language of Parts (AA) require the `lang` attribute on the page and on any passage in another language (a Hindi string inside an English page, an Arabic brand name), so that screen readers switch pronunciation; 3.1.3 Unusual Words, 3.1.4 Abbreviations and 3.1.5 Reading Level are AAA and the house treats them as the standard for consent, payment and policy copy. The W3C Cognitive and Learning Disabilities Accessibility Task Force's "Making Content Usable for People with Cognitive and Learning Disabilities" (W3C Working Group Note, 2021) adds the patterns: clear words, short sentences, one idea per paragraph, consistent navigation, explicit instructions, no time limits without warning, and help that is easy to find. The reason these matter to a luxury product specifically: fatigue, jet lag, a second language and a wedding week are cognitive load, and the guest in all four states is the one trying to pay. The cognitive accessibility detail (COGA guidance, reading level, timeouts) is in 11-accessibility-and-inclusive-design.md, section 9.
+WCAG 2.2 section 3.1 (Readable) carries the content criteria: 3.1.1 Language of Page (A) and 3.1.2 Language of Parts (AA) require the `lang` attribute on the page and on any passage in another language (a Hindi string inside an English page, an Arabic brand name), so that screen readers switch pronunciation; 3.1.3 Unusual Words, 3.1.4 Abbreviations and 3.1.5 Reading Level are AAA and the house treats them as the standard for consent, payment and policy copy. The W3C Cognitive and Learning Disabilities Accessibility Task Force's "Making Content Usable for People with Cognitive and Learning Disabilities" (W3C Working Group Note, 2021) adds the patterns: clear words, short sentences, one idea per paragraph, consistent navigation, explicit instructions, no time limits without warning, and help that is easy to find. The reason these matter to a luxury product specifically: fatigue, jet lag, a second language and a wedding week are cognitive load, and the guest in all four states is the one trying to pay. The cognitive accessibility detail (the task force's guidance, reading level, timeouts) is in 11-accessibility-and-inclusive-design.md, section 9.
 
 ### 8.7 Strings that are accessibility attributes
 
@@ -852,7 +848,7 @@ The copy that tells the person what the AI is, what it can do, and what it canno
 
 ### 10.2 Streaming text conventions
 
-Streaming is the display of a response as it is generated. Conventions as observed across ChatGPT, Claude, Gemini and Perplexity, as of October 2026: a visible cursor or pulse while tokens arrive; a "Stop" control that replaces "Send" during generation; Markdown rendered progressively so that headings and lists form as they arrive rather than appearing as raw symbols; a short status line for tool use ("Checking availability for 14 to 16 March") in a quieter style than the answer; and the answer's first sentence written to stand alone, because people act on it before the rest arrives. The writer's rules for the model's output, set through the system prompt: sentence case, no exclamation marks, short paragraphs, numbers formatted for the locale, no em dashes (the house rule applies to generated text, and is enforced in the prompt and by a post-processing check), and a length budget per surface (a chat bubble in a hotel app holds about 300 characters comfortably).
+Streaming is the display of a response as it is generated. Conventions as observed across ChatGPT, Claude, Gemini and Perplexity, as of October 2026: a visible cursor or pulse while tokens arrive; a "Stop" control that replaces "Send" during generation; Markdown rendered progressively so that headings and lists form as they arrive; a short status line for tool use ("Checking availability for 14 to 16 March") in a quieter style than the answer; and the answer's first sentence written to stand alone, because people act on it before the rest arrives. The writer's rules for the model's output, set through the system prompt: sentence case, no exclamation marks, short paragraphs, numbers formatted for the locale, no em dashes (the house rule applies to generated text, and is enforced in the prompt and by a post-processing check), and a length budget per surface (a chat bubble in a hotel app holds about 300 characters comfortably).
 
 ### 10.3 Error and refusal copy
 
@@ -870,7 +866,7 @@ Never "I apologise for any inconvenience", never "As an AI language model", neve
 
 ### 10.4 Citations
 
-A citation in an AI answer is the link to the source the answer was drawn from. Rules: numbered inline markers that are tappable, a sources list in order of first use, the source's real title and domain rather than a bare URL, the retrieval date for anything time-sensitive, and a visible difference between a quotation and a paraphrase. For a client product, the sources are the client's own content (the policy, the menu, the rate) and the citation is the way the person checks the assistant: "Cancellation is free until 48 hours before arrival (Cancellation policy, updated 2 March 2027)". A citation that cannot be opened is decoration.
+A citation in an AI answer is the link to the source the answer was drawn from. Rules: numbered inline markers that are tappable, a sources list in order of first use, the source's real title and domain (a bare URL tells the person nothing), the retrieval date for anything time-sensitive, and a visible difference between a quotation and a paraphrase. For a client product, the sources are the client's own content (the policy, the menu, the rate) and the citation is the way the person checks the assistant: "Cancellation is free until 48 hours before arrival (Cancellation policy, updated 2 March 2027)". A citation that cannot be opened is decoration.
 
 ### 10.5 Short disclaimers
 
@@ -1095,12 +1091,12 @@ Hard limits are from the platform's documentation; visible limits ("about") depe
 | Google Play: app name, short description, full description | 30, 80, 4,000 characters | Hard (Play Console help) | Same count for full-width characters |
 | India SMS header (DLT) | 6 characters in practice | Hard | Plus the class suffix (-P, -S, -T, -G) since the 2025 amendment (section 4.12) |
 | UAE alphanumeric sender ID | 11 characters | Hard | Promotional IDs carry the "AD-" prefix |
-| RCS (Rich Communication Services) Business Messaging: rich card title, description, suggestion | 200, 2,000, 25 characters | Hard (Google RBM API reference) | Rich card payload up to 250 KB |
+| RCS (Rich Communication Services) Business Messaging: rich card title, description, suggestion | 200, 2,000, 25 characters | Hard (Google RCS Business Messaging API reference) | Rich card payload up to 250 KB |
 | Gmail: HTML email size | Clipped above 102 KB | Hard | Clipping hides the footer and legal text; keep transactional HTML lean |
 | Android notification channel name | A few words | Visible | System Settings truncates long names |
 | Apple Wallet pass front fields | A few words per value | Visible | Values truncate; policies go on the back |
 | Google Search: title link | About 50 to 60 characters (about 600 px) before truncation | Visible | Google may rewrite it |
-| Google Search: snippet from meta description | About 150 to 160 characters | Visible | Not a ranking factor; a click factor |
+| Google Search: snippet from meta description | About 150 to 160 characters | Visible | Written for the click; Google does not use it for ranking |
 | In-product elements | See section 5.10 | House budgets | Tab 10 to 12, button 20, toast 40, label 25, error 90, dialogue title 40 |
 
 ### 13.2 Forty microcopy fixes
@@ -1184,7 +1180,7 @@ Hard limits are from the platform's documentation; visible limits ("about") depe
 - Core strategy statement: the centre of Halvorson and Rach's model: what content the organisation will produce, for whom, to achieve what.
 - CSS logical properties: CSS properties named by flow direction (inline-start, inline-end), so one stylesheet serves left-to-right and right-to-left layouts.
 - Customer service window: the 24-hour period after a person's last message in which a WhatsApp business may reply freely; outside it only approved templates may be sent.
-- Deceptive pattern (dark pattern): an interface design that tricks or pressures a person into an action they did not intend; India's 2023 CCPA guidelines name 13.
+- Deceptive pattern (dark pattern): an interface design that tricks or pressures a person into an action they did not intend; India's 2023 Central Consumer Protection Authority guidelines name 13.
 - DLT (distributed ledger technology) platform: the operator-run registry in India on which commercial SMS headers and content templates are registered under TRAI's TCCCPR.
 - DOM (document object model): a page's element tree, whose order is the screen-reader reading order.
 - Domain model: a map of a subject's concepts and their relationships, drawn with subject experts before the content model.
@@ -1249,7 +1245,7 @@ Hard limits are from the platform's documentation; visible limits ("about") depe
 - PAN (Permanent Account Number): India's income-tax identifier, asked for on large invoices.
 - PAO: period after opening, the open-jar symbol with a month count on cosmetic labels.
 - Paraphrase test: asking a person to restate a policy or consent in their own words to check comprehension.
-- Passkey: a FIDO credential stored on a device or in a password manager and unlocked by biometric or PIN; written in lower case.
+- Passkey: a FIDO credential stored on a device or in a password manager and confirmed with a biometric or the screen lock; written in lower case.
 - PDP (product detail page): the page for one product with its specification, price and purchase action.
 - Permission priming: the app's own screen (Apple's pre-alert screen) shown before the OS permission dialogue to explain the benefit.
 - PIN code: India's 6-digit postal index number.
@@ -1312,60 +1308,88 @@ Books
 - Sarah Winters (Richards), Content Design, Content Design London, 2017.
 - Torrey Podmajersky, Strategic Writing for UX, O'Reilly, 2019.
 - Michael J. Metts and Andy Welfle, Writing Is Designing, Rosenfeld Media, 2020.
-- Kinneret Yifrah, Microcopy: The Complete Guide, second edition, 2019.
+- Kinneret Yifrah, Microcopy: The Complete Guide, second edition, Nemala, 2019.
 - Nicole Fenton and Kate Kiefer Lee, Nicely Said, New Riders, 2014.
 - Erika Hall, Conversational Design, A Book Apart, 2018.
 - Mike Atherton and Carrie Hane, Designing Connected Content, New Riders, 2018.
 - Alexandra Watkins, Hello, My Name Is Awesome, second edition, Berrett-Koehler, 2019.
-- Jakob Nielsen, Usability Engineering, Morgan Kaufmann, 1993.
+- Jakob Nielsen, Usability Engineering, Academic Press, 1993.
 - The Chicago Manual of Style, 18th edition, University of Chicago Press, 2024.
 
 Specifications and standards
 
-- W3C, Web Content Accessibility Guidelines (WCAG) 2.2, Recommendation, 5 October 2023, https://www.w3.org/TR/WCAG22/
+- W3C, Web Content Accessibility Guidelines (WCAG) 2.2, Recommendation, 5 October 2023, https://www.w3.org/TR/WCAG22/ (Understanding documents at https://www.w3.org/WAI/WCAG22/Understanding/)
 - W3C WAI, Images Tutorial and alt decision tree, https://www.w3.org/WAI/tutorials/images/
 - W3C, Making Content Usable for People with Cognitive and Learning Disabilities, Working Group Note, 2021, https://www.w3.org/TR/coga-usable/
 - Unicode, UAX #9 Unicode Bidirectional Algorithm, revision 52, Unicode 18.0.0, https://www.unicode.org/reports/tr9/
 - Unicode, UTS #35 LDML Part 9: MessageFormat, stable since CLDR 47 (2025), https://www.unicode.org/reports/tr35/tr35-messageFormat.html
 - Unicode CLDR, Language Plural Rules chart, https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html
-- Unicode Character Database, U+20C3 UAE DIRHAM SIGN, https://util.unicode.org/UnicodeJsps/character.jsp?a=20C3
+- Unicode code chart, Currency Symbols (U+20C1 SAUDI RIYAL SIGN, Unicode 17.0; U+20C3 UAE DIRHAM SIGN, Unicode 18.0), https://www.unicode.org/charts/PDF/U20A0.pdf
 - ECMA-402, ECMAScript Internationalization API Specification, https://tc39.es/ecma402/
-- ISO 8601 (date and time), ISO 4217 (currency codes), ISO 17100:2015 (translation services requirements).
+- ISO 8601-1:2019 (date and time), ISO 4217:2015 (currency codes), ISO 17100:2015 (translation services), ISO 24495-1:2023 (plain language, governing principles) and ISO 3758:2023 (textile care labelling code), ISO catalogue, https://www.iso.org/
 - OASIS, XLIFF Version 2.1, 2018, https://docs.oasis-open.org/xliff/xliff-core/v2.1/xliff-core-v2.1.html
-- 3GPP TS 23.038 (the GSM 7-bit default alphabet; SMS character limits).
-- Regulation (EU) 2024/1689 (the AI Act), Article 50, https://artificialintelligenceact.eu/article/50/
-- India, Digital Personal Data Protection Act 2023 and the Digital Personal Data Protection Rules 2025 (notified 13 November 2025).
-- India, Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 30 November 2023.
-- India, Real Estate (Regulation and Development) Act 2016; Legal Metrology (Packaged Commodities) Rules 2011; Cosmetics Rules 2020; Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules 2026, G.S.R. 120(E), 10 February 2026.
-- UAE, Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data; Federal Decree-Law No. 8 of 2017 on Value Added Tax.
+- 3GPP TS 23.038, Alphabets and language-specific information (the GSM 7-bit default alphabet), https://www.3gpp.org/ftp/Specs/archive/23_series/23.038/
+- IETF, RFC 8058, Signaling One-Click Functionality for List Email Headers, 2017, https://www.rfc-editor.org/rfc/rfc8058
+- NIST, SP 800-63B-4, Digital Identity Guidelines: Authentication and Authenticator Management, 2025, https://pages.nist.gov/800-63-4/sp800-63b.html
+- WICG, Origin-bound one-time codes delivered via SMS, https://wicg.github.io/sms-one-time-codes/
+- ASD-STE100 Simplified Technical English specification, https://www.asd-ste100.org/
+- Regulation (EU) 2024/1689 (the AI Act), Article 50, https://artificialintelligenceact.eu/article/50/; European Commission, AI Act Service Desk, Timeline for the implementation of the EU AI Act, https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act
+- Regulation (EC) No 1223/2009 on cosmetic products, https://eur-lex.europa.eu/eli/reg/2009/1223/oj
+- European Data Protection Board, Report of the work undertaken by the Cookie Banner Taskforce, adopted 17 January 2023, https://www.edpb.europa.eu/
+- India: Digital Personal Data Protection Act 2023 (Act No. 22 of 2023) and Digital Personal Data Protection Rules 2025 (notified 13 November 2025), https://www.meity.gov.in/
+- India: Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 30 November 2023; Consumer Protection (E-Commerce) Rules 2020; Legal Metrology (Packaged Commodities) Rules 2011; Cosmetics Rules 2020; FSSAI (Labelling and Display) Regulations 2020; BIS Hallmarking of Gold Jewellery and Gold Artefacts Order 2020.
+- India: Real Estate (Regulation and Development) Act 2016 (Act No. 16 of 2016), https://www.indiacode.nic.in/handle/123456789/2158
+- India: Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules 2026, G.S.R. 120(E), 10 February 2026.
+- India: TRAI, Telecom Commercial Communications Customer Preference Regulations 2018, and Second Amendment Regulations 2025 (12 February 2025), https://www.trai.gov.in/sites/default/files/2025-02/Regulation_12022025.pdf
+- India: Reserve Bank of India, Harmonisation of Turn Around Time and customer compensation for failed transactions (20 September 2019), card-on-file tokenisation (effective 1 October 2022) and the e-mandate framework (limits revised December 2023), https://www.rbi.org.in/
+- UAE: Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data; Federal Decree-Law No. 8 of 2017 on Value Added Tax; DIFC Data Protection Law No. 5 of 2020; ADGM Data Protection Regulations 2021; UAE legislation portal, https://uaelegislation.gov.ae/
+- Saudi Arabia: Personal Data Protection Law (SDAIA), in force 14 September 2023.
 
 Platform guidance (as of October 2026)
 
 - Apple, Human Interface Guidelines: Writing, https://developer.apple.com/design/human-interface-guidelines/writing
 - Apple, Human Interface Guidelines: Generative AI, https://developer.apple.com/design/human-interface-guidelines/generative-ai
-- Apple, App Store Connect help, App information (name and subtitle limits), https://developer.apple.com/help/app-store-connect/reference/app-information/
-- Google, Material Design 3, Content design, https://m3.material.io/foundations/content-design/overview
+- Apple, Human Interface Guidelines: Privacy (pre-alert screens, tracking requests), https://developer.apple.com/design/human-interface-guidelines/privacy
+- Apple, User privacy and data use (App Tracking Transparency), https://developer.apple.com/app-store/user-privacy-and-data-use/
+- Apple, App Review Guidelines, https://developer.apple.com/app-store/review/guidelines/
+- Apple, App Store Connect help: App information, https://developer.apple.com/help/app-store-connect/reference/app-information/ and Platform version information (keywords in bytes), https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information
+- Android Developers, Notification runtime permission, https://developer.android.com/develop/ui/views/notifications/notification-permission; Request runtime permissions, https://developer.android.com/training/permissions/requesting; SMS Retriever, https://developer.android.com/identity/sms-retriever
+- Google, Material Design 3, Content design, https://m3.material.io/foundations/content-design/overview; Navigation bar, https://m3.material.io/components/navigation-bar/overview
 - Google Play Console help, Store listing character limits, https://support.google.com/googleplay/android-developer/answer/9859152
+- Google, RCS Business Messaging API reference, https://developers.google.com/business-communications/rcs-business-messaging/reference/rest/v1/phones.agentMessages
+- Google, Email sender guidelines, https://support.google.com/a/answer/81126
 - Meta, WhatsApp Business Platform, Message template components, https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/components
 - Meta, WhatsApp Business Platform, Pricing, https://developers.facebook.com/docs/whatsapp/pricing
 - Microsoft, Writing Style Guide, https://learn.microsoft.com/en-us/style-guide/welcome/
 - Microsoft, Localization Style Guides (Hindi, Arabic and others), https://learn.microsoft.com/en-us/globalization/reference/microsoft-style-guides
 - Shopify, Polaris content guidelines, https://polaris.shopify.com/content
 - Mailchimp, Content Style Guide (CC BY-NC 4.0), https://styleguide.mailchimp.com/
-- GOV.UK, Writing to GOV.UK standards, https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/
+- GOV.UK, Writing to GOV.UK standards, https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/; Style guide A to Z, https://www.gov.uk/guidance/style-guide/a-to-z
+- GOV.UK Design System: Error summary, https://design-system.service.gov.uk/components/error-summary/; Error message, https://design-system.service.gov.uk/components/error-message/; Question pages, https://design-system.service.gov.uk/patterns/question-pages/; Names, https://design-system.service.gov.uk/patterns/names/
+- FIDO Alliance, Passkey design guidelines, https://fidoalliance.org/design-guidelines/
+- Vale prose linter, https://vale.sh/
 
 Articles and talks
 
 - Kate Moran, The Four Dimensions of Tone of Voice, Nielsen Norman Group, 2016, https://www.nngroup.com/articles/tone-of-voice-dimensions/
 - Kate Moran, The Impact of Tone of Voice on Users' Brand Perception, Nielsen Norman Group, 2016, https://www.nngroup.com/articles/tone-voice-users/
+- Jakob Nielsen, Microcontent: How to Write Headlines, Page Titles, and Subject Lines, 1998, https://www.nngroup.com/articles/microcontent-how-to-write-headlines-page-titles-and-subject-lines/
+- Jakob Nielsen, F-Shaped Pattern For Reading Web Content, 2006, https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/; Kara Pernice, the 2017 update, https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
 - Jakob Nielsen, How Little Do Users Read?, Nielsen Norman Group, 2008, https://www.nngroup.com/articles/how-little-do-users-read/
+- Harald Weinreich, Hartmut Obendorf, Eelco Herder and Matthias Mayer, Not Quite the Average: An Empirical Study of Web Use, ACM Transactions on the Web 2(1), 2008, https://doi.org/10.1145/1326561.1326566
+- Janice C. Redish, Readability formulas have even more limitations than Klare discusses, ACM Journal of Computer Documentation 24(3), 2000, https://doi.org/10.1145/344599.344637
 - Jakob Nielsen, Cloze Test for Reading Comprehension, Nielsen Norman Group, 2011, https://www.nngroup.com/articles/cloze-test-reading-comprehension/
 - Rachel Krause, 10 Design Guidelines for Reporting Errors in Forms, Nielsen Norman Group, 2019, https://www.nngroup.com/articles/errors-forms-design-guidelines/
 - Katie Sherwin, Placeholders in Form Fields Are Harmful, Nielsen Norman Group, 2014, https://www.nngroup.com/articles/form-design-placeholders/
-- Richard Ishida, Text size in translation, W3C Internationalization, https://www.w3.org/International/articles/article-text-size
+- Richard Ishida, Text size in translation, W3C Internationalization, https://www.w3.org/International/articles/article-text-size; Personal names around the world, https://www.w3.org/International/questions/qa-personal-names
+- W3C Internationalization, Indicating the language of a link destination, https://www.w3.org/International/questions/qa-link-lang
 - Rachel Lovinger, Content Modelling: A Master Skill, A List Apart, 2012, https://alistapart.com/article/content-modelling-a-master-skill/
 - Drew Clemens, Design Process in the Responsive Age, A List Apart, 2012, https://alistapart.com/article/design-process-in-the-responsive-age/
-- Daniel Jacobson, COPE: Create Once, Publish Everywhere, Programmable Web, 2009.
+- Daniel Jacobson, COPE: Create Once, Publish Everywhere, ProgrammableWeb, 2009 (no live URL confirmed).
 - Saleema Amershi et al., Guidelines for Human-AI Interaction, CHI 2019, https://www.microsoft.com/en-us/research/publication/guidelines-for-human-ai-interaction/
 - Google PAIR, People + AI Guidebook, https://pair.withgoogle.com/guidebook/
-- Maggie Stanphill et al., How Words Can Make Your Product Stand Out, Google I/O 2017 (talk).
+- Maggie Stanphill et al., How Words Can Make Your Product Stand Out, Google I/O 2017, https://www.youtube.com/watch?v=DIGfwUt53nI
+- Thomas Tullis and Larry Wood, How Many Users Are Enough for a Card-Sorting Study?, UPA 2004; Bob Bailey and Cari Wolfson's first-click study, 2009 (full citations in 08-ux-research-and-strategy.md, Sources).
+- WebAIM, Screen Reader User Survey #10, 2024, https://webaim.org/projects/screenreadersurvey10/
+- Evan Miller, Sample Size Calculator, https://www.evanmiller.org/ab-testing/sample-size.html
+- Baymard Institute, E-commerce search usability research, https://baymard.com/research/ecommerce-search
