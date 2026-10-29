@@ -129,6 +129,24 @@ US Letter, report (8.5 x 11 in, 612 x 792 pt). Body 10/12 pt.
 
 The one-module system. The 136 px module with 24 px gutters (160 px pitch) also fits the 1080 x 1920 story inside Meta's safe zone (section 15.2), so square, portrait and story assets from one campaign can share exact positions for the mark and the line. Building one module across formats is the cheapest consistency a campaign can buy.
 
+### 2.4 Adapting one layout across formats
+
+A 360 campaign ships 30 to 80 sizes from one idea, from a 728 x 90 leaderboard to an 850 x 2000 mm roll-up. The one-module system covers 1:1 to 9:16; adaptation covers the rest. Sort every deliverable into five ratio families (width to height) and design one master layout per family.
+
+| Family | Ratio | Formats (ratio) | Master layout |
+|---|---|---|---|
+| Extreme horizontal | Wider than 2.5:1 | Leaderboard 728 x 90 (8.1:1), billboard 970 x 250 (3.9:1), 12 x 4 m unipole (3:1) | One row: image, line, mark side by side; horizontal lock-up |
+| Landscape | 1.5:1 to 2.5:1 | 16:9 film and slides (1.78:1), link ads 1.91:1, 40 x 20 ft hoarding (2:1) | Image across two thirds, line and mark in the remaining third |
+| Near square | 0.75:1 to 1.5:1 | 1:1, 4:5 (0.8:1), the 3:4 grid tile, medium rectangle 300 x 250 (1.2:1) | The 6-column module system above |
+| Portrait | 0.5:1 to 0.75:1 | A series (0.71:1), 2:3 posters, 9:16 (0.56:1), half page 300 x 600 (0.5:1) | Image above, line on a flowline, mark at the foot |
+| Extreme vertical | Narrower than 0.5:1 | Skyscraper 160 x 600 (1:3.75), portrait unit 300 x 1050 (1:3.5), roll-up 850 x 2000 mm (1:2.35) | One stacked column: line, image, mark; stacked lock-up |
+
+- Fixed across families: the mark's anchor (same corner or same axis, 6.14); the line, hung from a flowline at a fixed fraction of the height; type sized from the format's short side; the colour field and the image treatment.
+- Changed per family: lock-up orientation (house rule: horizontal above about 2:1, stacked below about 1:1.5, from the lock-up set in 18-brand-strategy-and-identity-design.md, section 3.4); the number of elements (extreme families carry image, line and mark only, as on OOH, 13.2); the crop.
+- Approve the two extreme families first. A key visual that survives 8:1 and 1:3.75 survives every ratio between them; approving only the 4:5 and adapting later is the usual cause of a broken hoarding or skyscraper.
+- One master photograph per campaign, with a marked focal point and a protect zone (the area every crop must keep) per family, shot at UHD (3840 x 2160) or larger, because a 9:16 crop of UHD is 1215 x 2160 and needs no upscale (16-editing-colour-grading-and-delivery.md, section 10.5).
+- The adaptation matrix: rows are formats; columns are languages (English, Arabic, Hindi) and placements; each cell records size, safe zone, owner and approval status. Above about 30 cells, build the masters with rules (Figma auto layout with minimum and maximum widths and variable modes per language, or InDesign Liquid Layout, 18.2), so adaptation is mechanical and QA is visual. IAB sizes and weights: 26-platform-and-format-specs-2026.md, section 3.6; Indian and UAE OOH sizes: 20-print-packaging-ooh-and-physical-production.md, sections 7.1 and 7.2.
+
 ## 3. The Swiss method: building the grid from the type
 
 ### 3.1 The tradition
@@ -342,6 +360,33 @@ Direction is the path the eye takes through a layout.
 
 Unity is the sense that every element belongs to one system (shared grid, type, colour, spacing). Variety is the controlled difference that keeps the system alive. Working rule (house, in the discipline of The Vignelli Canon, 2010, which limits a body of work to a few typefaces and a few sizes): hold four or five variables constant (grid, typeface, palette, spacing scale, image treatment) and vary one or two per page (scale, crop, position). Variation in every variable is chaos; variation in none is monotony.
 
+### 6.14 The mark in the layout
+
+The mark is a marker (1.1): one fixed position per format family, and a size derived from its minimums (18-brand-strategy-and-identity-design.md, section 3.3: wordmark 80 to 120 px wide on screen, symbol alone 24 to 32 px, print wordmark 20 to 25 mm).
+- Size from the rendered scale. A 1080 px post shown 402 CSS px wide renders at 0.372 scale, so a wordmark that must reach 80 to 120 px on screen is 215 to 322 px wide on the canvas, 20 to 30 percent of the width (222 to 332 px at 390 CSS px). A symbol alone needs 65 to 86 px, 6 to 8 percent.
+- The profile grid cannot carry the mark: a 4:5 post shows its central 1012 px in a 133 px tile (0.13 scale), so the wordmark would need about 610 px, 56 percent of the width. Recognition in the grid comes from image treatment and colour; the mark is sized for the full-screen view.
+- Three positions cover luxury practice: centred at the foot (the signature position of fashion and jewellery print advertising); a corner of the terminal area (bottom right in left-to-right layouts, bottom left in Arabic-led layouts, 16.1); centred at the head (mastheads, invitations, menus).
+- Distance from the edges equals the format margin; clear space alone sits too tight against a trim or a platform overlay.
+- Record mark size in the guidelines as a ratio of the short side per ratio family (2.4), so adaptation applies it mechanically.
+
+### 6.15 Several marks on one layout
+
+Branded residences (developer, architect, operator), events (host, venue, sponsors) and hotels (owner, management company) put several marks on one surface, often with the hierarchy fixed by contract.
+- Equalise optical size by cap height or visual area. Width misleads: a compact emblem and a long wordmark of equal width differ several times in area.
+- One shared alignment: every mark on one baseline or one optical centre line, separated by a fixed gap at least as large as the larger mark's clear space (18-brand-strategy-and-identity-design.md, section 3.3), or by a hairline rule as tall as the marks.
+- Hierarchy by the ratios in 6.2: the lead brand at 1.5 to 2 times the partners' optical size; equal partners at equal size.
+- Sponsor tiers on backdrops, screens and invitations: equal size within a tier, a step of at least 1.5 times between tiers, and a fixed cell grid so each tier reads as one row. Sponsor order and size are often contractual, so get the sponsor schedule in writing before layout starts.
+- Gulf layouts: use each partner's own Arabic lock-up where one exists (18, section 3.4), and never retype a partner's name in a substitute font.
+
+### 6.16 Grouping principles as layout tests
+
+The mechanisms and their ranking are in 02-perception-and-psychology.md, sections 3.1 to 3.12. Four tests apply them:
+- Common region (Stephen Palmer, 1992) overrides proximity: a card border or tint groups more strongly than spacing. Use containers only where spacing cannot do the grouping; boxing every element groups nothing.
+- Similarity: identical treatment declares identical function. A non-link styled like a link, or a heading styled like a button, is a defect.
+- Continuity: aligned edges read as one line across a gap, which is why a flowline ties unequal columns into one page (1.1).
+- Closure: a figure cropped by the frame is completed beyond it, the mechanism behind intentional crops (11.8).
+- Test: view the layout in greyscale at 25 percent. The groups the eye sees must match the groups the content has.
+
 ## 7. Optical adjustments
 
 Geometry and perception disagree in predictable ways. Optical adjustment is the correction applied so that a layout looks right where measurement says it is right. Every correction below is small (1 to 5 percent, often 1 to 4 px), and every one is visible to a trained eye when missing.
@@ -541,6 +586,44 @@ Scroll length is measured in viewport heights and is a pacing decision. Length i
 - End with the same care as the start: a designed sign-off screen before the footer.
 - Measure with scroll-depth analytics (25, 50, 75, 100 percent); if more than half of sessions stop before 50 percent, cut or reorder.
 
+### 9.9 The named-line breakout grid
+
+Editorial and luxury pages mix measure-width text, wider images and full-bleed media in one flow. The named-line breakout grid places all three on one grid with no wrapper elements (the `grid` shorthand below sets the column tracks):
+
+```css
+.flow {
+  display: grid;
+  grid: auto-flow / [full-start] minmax(var(--margin), 1fr)
+    [wide-start] minmax(0, 8rem)
+    [text-start] min(65ch, 100% - 2 * var(--margin)) [text-end]
+    minmax(0, 8rem) [wide-end]
+    minmax(var(--margin), 1fr) [full-end];
+}
+.flow > * { grid-column: text; }
+.flow > .wide { grid-column: wide; }
+.flow > .full { grid-column: full; }
+```
+
+Every child sits at the 65ch measure by default, and images opt into `wide` or `full`. The 8rem tracks fill before the `1fr` tracks take the leftover space, and on a phone the side tracks collapse to the margin with no media query. It is the web form of spatial zones (1.1), and a step out by one zone is the readable break that 17.2 asks for. Base technique: Josh W. Comeau, "Full-bleed layout using CSS Grid" (5 October 2020, updated December 2025), with `1fr min(42rem, 100%) 1fr`; the named lines add the intermediate wide zone.
+
+### 9.10 Sticky split and scroll narratives
+
+The sticky split is the most common structure on luxury property, hotel and jewellery collection sites.
+- Two columns on the 12-column grid (6:6 or 7:5). One holds media with `position: sticky; top: 0; height: 100dvh` (plus `align-self: start` inside a grid, or the item stretches and never sticks); the other carries text sections at 45 to 60ch, each at least `100dvh` tall so each media change has time to register.
+- The media changes as each text section enters the viewport, driven by `IntersectionObserver` or a CSS scroll-driven animation (12-motion-principles-and-ui-motion.md, section 7.2; 21-web-design-and-digital-craft.md, section 6.4). Under `prefers-reduced-motion: reduce`, swap with a cut in place of a cross-fade.
+- Below the medium width class it stacks into image-then-text pairs, in DOM order.
+- Uses: floor-by-floor residence narratives, room categories, collection stories. One sticky split per page (the one peak in 9.8); several in a row make the scroll feel stuck.
+- Sticky fails silently when an ancestor has `overflow: hidden` or `overflow: auto`, because that ancestor becomes the scroll container; check the ancestors first.
+
+### 9.11 Type on images across breakpoints
+
+The quiet zone planned at the shoot (11.3) sits in one place in one crop, and a responsive hero recrops the image at every width, so the type position is defined per crop.
+- Desktop 16:9 or 21:9: type in the planned quiet third.
+- Phone: serve a 4:5 or 9:16 portrait variant through the `picture` element (art direction: 06-ui-design-craft.md, section 14.4; 21-web-design-and-digital-craft.md, section 4.1) and move the type below the image or into a quiet zone recomposed for that crop.
+- One file for every width: set `object-position` to the focal point (for example `object-position: 70% 35%`) so `object-fit: cover` crops around the subject.
+- A scrim (a gradient of 20 to 40 percent black, 02-perception-and-psychology.md, section 3.8) steadies type over a quiet zone; over a busy area it fails, and the type moves.
+- Check contrast at every breakpoint, because the pixels under the text change with the crop (04-colour.md; 06-ui-design-craft.md, section 14.5).
+
 ## 10. UI layout patterns
 
 Component anatomy and states are in 06-ui-design-craft.md; this section covers the arrangement of regions on a screen.
@@ -609,6 +692,15 @@ Layering is the stacking order of elements on the z-axis. Without a scale, z-ind
 - House scale: base 0, raised content 10, sticky header 100, dropdown and popover 200, overlay scrim 300, modal 400, toast 500, tooltip 600. Values are tokens (07-design-systems-and-tokens.md, section 6.9).
 - Stacking contexts: any element with `transform`, `opacity` under 1, `filter` or `isolation: isolate` creates a new stacking context, and children cannot escape it whatever their z-index. Most "z-index does not work" bugs are this.
 - The top layer: the native `dialog` element opened with `showModal()` and elements using the `popover` attribute render in the browser's top layer, above every stacking context. Use them for modals, menus and tooltips and the z-index scale shrinks to page-level elements.
+
+### 10.10 Product listing and product page layouts
+
+Anatomy, luxury variations and imagery specifications are in 21-web-design-and-digital-craft.md, sections 8.2 and 8.3. The grid arithmetic:
+- Listing: 2 across on phones; 3 across at desktop for luxury and 4 for volume commerce, which is 4 or 3 columns each on the 12-column base. On the 1200 px luxury container a 3-across tile is 384 px wide (4 x 78 + 3 x 24) and 480 px tall at 4:5; on a 390 phone with 20 px margins and a 16 px gutter, a 2-across tile is 167 px wide and 209 px tall.
+- One image ratio for the whole listing, chosen once: 4:5 or 2:3 for fashion on model, 1:1 or 4:5 for jewellery and beauty packshots. Mixed ratios break the rows.
+- Name and price aligned across each row with subgrid (9.6), the price one size below the name and quiet.
+- Editorial tiles span 2 columns at a fixed rhythm (every 8 to 12 cells, 21, section 8.2). A break after every 12 products completes a row at 2, 3 and 4 across, so the rhythm survives every breakpoint (6.6).
+- Product page at desktop: a 7-column gallery of images stacked at gallery width (690 px on the 1200 container) beside a 5-column buy box (486 px) with `position: sticky`, so price, size and the action stay in view while the images scroll. On phones: first image, then name, price and action above the fold, with the gallery as a horizontal carousel (`scroll-snap-type: x mandatory`) at the listing ratio.
 
 ## 11. Composition in photography and film
 
@@ -711,6 +803,25 @@ In a bound publication the reader sees two pages at once, so the spread is the u
 
 A full-bleed photograph across a spread with no type, or a single line, is the editorial equivalent of silence in music. Rules: the image must hold at that size (minimum 300 ppi at final size, so a 420 x 297 mm A4 spread needs about 4960 x 3508 px); no face or product in the gutter; one per story at most; placed where the narrative needs a pause or a reveal.
 
+### 12.8 Pairing and sequencing images
+
+Picture editing is a core creative-director task in fashion, hospitality and property work. House rules:
+- One lead image per spread, at least twice the linear size of the next (the 2 to 3 band in 6.2). Two images of equal size and equal interest side by side compete.
+- Pair across the gutter by one shared variable (horizon height, colour, gesture, form) and one contrast (scale or distance: a wide shot facing a detail), which is Block's contrast and affinity (11.7) applied to a pair.
+- Horizons and eye lines continue across the gutter or break by at least a module; a step of a few millimetres reads as an error (7.7).
+- Gazes and movement face into the spread or toward the copy (6.12).
+- Sequence by rhythm: wide, medium, detail, then a pause image. Three images of the same shot size in a row flatten a carousel, a profile row or an editorial sequence.
+- Edit from a contact sheet at thumbnail size first, because pairs and sequences are judged at a glance before they are judged at full size.
+
+### 12.9 Menus
+
+Restaurant and bar menus are a frequent F&B deliverable with their own reading evidence. Paper, binding and low-light legibility are in 20-print-packaging-ooh-and-physical-production.md, section 9.4.
+- Reading order: Sybil S. Yang's eye-tracking study ("Eye movements on restaurant menus: a revisitation on gaze motion and consumer scanpaths", International Journal of Hospitality Management, 2012) found diners read menus in order, like a book, which does not support the consultants' "sweet spot" at the upper right of a two-panel menu.
+- Placement: put high-margin dishes first and last within each category, where serial position favours them (02-perception-and-psychology.md, section 6.6). Menu engineering, the analysis of each dish by margin and popularity, comes from Michael Kasavana and Donald Smith, Menu Engineering (1982).
+- Price format: Sybil Yang, Sheryl Kimes and Mauro Sessarego ("$ or dollars: effects of menu-price formats on restaurant checks", Cornell Hospitality Report, 2009) found guests spent more when prices were plain numerals than when they carried a dollar sign. House practice for luxury menus: numerals with no rupee or dirham symbol, the price set after the description in the same size, and no right-aligned price column with leader dots, since a column invites comparison (consultant practice reported in William Poundstone, Priceless, 2010).
+- Grid: one category per column or panel; measure 35 to 50 characters (4.4); dish name, description and price as one block, with categories two to three times further apart than dishes (6.8).
+- UAE: confirm VAT-inclusive price display with the client for each emirate. India: FSSAI menu marks (20, section 9.4).
+
 ## 13. Posters and out-of-home
 
 ### 13.1 Viewing distance governs everything
@@ -744,6 +855,16 @@ Paula Scher (Pentagram partner since 1991) made the Public Theater's identity an
 - Margins on posters are proportionally smaller than on books (3 to 5 percent of the short side), because the poster's frame is the wall, the shelter or the hoarding structure; elements may bleed.
 - Use a simple modular grid (4 x 6 or 6 x 8) or a hierarchical layout around one image.
 - For bilingual Gulf OOH, Arabic and English share the face: mirrored or stacked layouts, each script set to its own optical size (section 16).
+- Marks: one fixed position per ratio family (6.14); sponsor and partner marks on event OOH follow 6.15.
+
+### 13.7 Event stages and LED walls
+
+- Deliver at the wall's own pixel map, 1:1 (26-platform-and-format-specs-2026.md, section 5.11: a 12 x 4 m wall at P3.9 is 3077 x 1026 px).
+- The speaker, lectern and stage furniture hide the lower centre of the wall, and audience heads hide the bottom band from the back rows. House working rule (judgement, untested by measurement): type in the upper two thirds and clear of the lectern position; confirm against the stage plan and a sightline check from the back row and the outermost side seats.
+- Size type for the back row with the method in 13.1: at 30 m, cap height at least 13 cm, which on a P3.9 wall is 33 px of cap height, about 48 px type in a face whose cap height is 0.7 of the em.
+- Walls of 32:9 or wider: compose in three zones (house scheme): the brand in the centre while the stage is empty, content on the flanks while someone speaks.
+- Side IMAG screens (image magnification: the live camera feed of the speaker) carry the speaker at 16:9 and follow the slide grid in 14.1.
+- Refresh rate, flash safety and playback codecs: 26, section 5.11; backdrop practice: 20-print-packaging-ooh-and-physical-production.md, section 8.6.
 
 ## 14. Slides and decks
 
@@ -764,7 +885,7 @@ Each slide makes one point, stated in its title as a sentence (the assertion-evi
 
 The house look (Space Grotesk, client decks on #0A0A0A with the client's real hex, 70 visual to 30 text, curved edges, scroll-driven presentation) is set in design-taste, SKILL.md, section 7, and implemented at the sizes in 26-platform-and-format-specs-2026.md, section 7.3. Layout consequences specific to this file:
 - 70 to 30 visual to text means most slides are image or diagram slides with a single line; text-only slides are the exception and get the most space.
-- Client as hero: the client's product or property fills the frame; the agency mark is small, fixed in one corner, the same position on every slide.
+- Client as hero: the client's product or property fills the frame; the agency mark is small, fixed in one corner, the same position on every slide (6.14; co-branded decks follow 6.15).
 - Scroll-driven decks (a web page presented by scrolling) use the 1440 web grid (section 2.3) with each "slide" a 100vh section; the 1920 grid applies when the deck is exported to PDF or PowerPoint.
 
 ### 14.4 Text sizes for projection and screen
@@ -788,6 +909,14 @@ A deck is read as a sequence, so pacing matters as much as layout.
 - Rhythm: alternate dense and open slides; a full-bleed image or a single statement every three to five slides resets attention.
 - Chapter dividers: a consistent divider layout, the same as the cover in reduced form, so the audience knows where they are.
 - The last slide gets the same care as the first: a closing image or line, designed like the cover.
+
+### 14.7 The send-ahead deck read on a phone
+
+In India and the Gulf, founder clients read the send-ahead PDF and the post-meeting PDF on a phone, through WhatsApp or email.
+- The arithmetic: a 1920 px canvas shown full width on a 390 px phone in portrait renders at 0.203 scale, so 28 px body becomes 5.7 CSS px. Turned to landscape (844 px) the scale is 0.44 and body is 12.3 px, still below the 16 px web body.
+- Rule: the presented deck and the read deck are two files from one master. The read deck either sets body at 40 px or larger on the 1920 canvas (17.6 px at landscape phone width), or is rebuilt at 1080 x 1350 on the 4:5 post grid (2.3), where 40 px body renders at 14.4 CSS px on a 390 phone (0.361 scale) and reads in portrait without rotating the phone.
+- What the speaker would have said moves into a caption band on each slide; one idea per slide still holds (14.2), and the detail goes in a leave-behind (23-critique-taste-and-craft-judgement.md, section 3, row 129).
+- Send it as a PDF document attachment, which WhatsApp delivers as a file; images and video sent in chat are recompressed (26-platform-and-format-specs-2026.md, section 2.9). Export a tagged PDF (11-accessibility-and-inclusive-design.md, section 13.1).
 
 ## 15. Social posts, stories and thumbnails
 
@@ -911,65 +1040,81 @@ Common breaks: an image crossing the gutter or margin, an element bleeding off t
 
 Run before any layout leaves the studio. Every item is a yes or a fix.
 
-Structure
+### 19.1 Structure
+
 1. Can the grid be stated in one line (format, margins, columns, gutter, rows, baseline)?
 2. Do margins exceed twice the gutter, with the bottom margin the largest in print?
 3. Does every element's left edge sit on a grid line (count unique left edges: five or fewer per view)?
 4. Do images occupy whole modules, with tops on cap height and bottoms on the baseline of adjacent text?
-5. Is body text inside its measure (45 to 75 characters single column, 35 to 50 multi-column, 65ch on the web)?
+5. Is body text inside its measure (45 to 75 characters single column, 35 to 50 multi-column, `65ch` on the web)?
+6. Do headings and captions meet the baseline grid, by whole-line leading or cross-alignment (3.3)?
 
-Hierarchy and composition
-6. Squint test: one focal point, then a second level, then texture?
-7. Are adjacent hierarchy levels at least 1.25 times apart in size, or two weight steps apart?
-8. Is internal spacing at most half the external spacing in every group (proximity)?
-9. Is all white space active (each region explainable)?
-10. Is there one deliberate tension or break, and no accidental tangents or edge pressure?
-11. Do faces and directional cues lead into the copy?
+### 19.2 Hierarchy and composition
 
-Optical and spacing
-12. Are round forms and icons optically sized and centred (circle about 10 percent larger than the square)?
-13. Are large headlines pulled left to compensate for sidebearings, and is punctuation hung?
-14. Is every spacing value on the scale (section 8.2)?
-15. Are touch targets 44 px or larger with 8 px between?
+7. Squint test: one focal point, then a second level, then texture?
+8. Are adjacent hierarchy levels at least 1.25 times apart in size, or two weight steps apart?
+9. Is internal spacing at most half the external spacing in every group (proximity)?
+10. In greyscale at 25 percent, do the groups the eye sees match the groups the content has (6.16)?
+11. Is all white space active (each region explainable)?
+12. Is there one deliberate tension or break, and no accidental tangents or edge pressure?
+13. Do faces and directional cues lead into the copy?
 
-Format-specific
-16. Print: 3 mm bleed, critical content 5 mm inside the trim, nothing in the binding zone, folios correct and absent on full-bleed pages?
-17. Web: tested at 360, 390, 768, 1024, 1440 and 1920; no horizontal scroll at 360; max-widths set; container queries on components; logical properties used?
-18. Social: type inside the strictest safe zone of every placement; post readable at 133 px wide in the profile grid; carousel seams clear of faces and type?
-19. Deck: titles at the same baseline on every slide; nothing critical in the outer 96 px; body at 28 px or larger?
-20. Bilingual: mirrored layout tested with the longest language; logos and photographs unflipped?
+### 19.3 Optical and spacing
 
-Final
-21. Overlay the grid at 200 percent: any 1 to 4 px misalignment fixed?
-22. Does the last page, slide, frame or screen get the same care as the first?
-23. Does the layout pass the design-taste tests (SKILL.md, section 4, step 7)?
+14. Are round forms and icons optically sized and centred (circle about 10 percent larger than the square)?
+15. Are large headlines pulled left to compensate for sidebearings, and is punctuation hung?
+16. Is every spacing value on the scale (section 8.2)?
+17. Are touch targets 44 px or larger with 8 px between?
+18. On dark grounds, is body text one weight lighter and are hairlines checked for swelling (7.8)?
+
+### 19.4 Format-specific
+
+19. Print: 3 mm bleed, critical content 5 mm inside the trim, nothing in the binding zone, folios correct and absent on full-bleed pages?
+20. Web: tested at 320, 360, 390, 768, 1024, 1366, 1440 and 1920; no horizontal scroll at 320 (SC 1.4.10); layout intact under SC 1.4.12 text spacing and at 200 percent text; DOM order equal to reading order; full-height sections checked at 1366 x 650; max-widths set; container queries on components; logical properties used?
+21. Social: type inside the strictest safe zone of every placement; post readable at 133 px wide in the profile grid; carousel seams clear of faces and type?
+22. Deck: titles at the same baseline on every slide; nothing critical in the outer 96 px; body at 28 px or larger; read deck checked on a 390 px phone in portrait, body 14 CSS px or larger (14.7)?
+23. Bilingual: mirrored layout tested with the longest language; logos and photographs unflipped?
+24. Adaptation: extreme ratio families approved first; mark size and position fixed per family; partner marks sized from the written sponsor schedule (2.4, 6.14, 6.15)?
+
+### 19.5 Final
+
+25. Overlay the grid at 200 percent: any 1 to 4 px misalignment fixed?
+26. Does the last page, slide, frame or screen get the same care as the first?
+27. Does the layout pass the design-taste tests (SKILL.md, section 4, step 7)?
 
 ## 20. Reference table: grids by format
 
-Worked values from sections 2 to 4 and 15; platform sizes from 26-platform-and-format-specs-2026.md. Print values in mm unless marked pt; screen values in CSS px.
+Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-platform-and-format-specs-2026.md. Print values in mm unless marked pt; screen values in CSS px. Mark sizes are minimums or canvas ratios from 6.14 and 18-brand-strategy-and-identity-design.md, section 3.3.
 
-| Format | Size | Margins | Columns x width | Gutter | Rows | Baseline or unit | Notes |
-|---|---|---|---|---|---|---|---|
-| Book, classical | 150 x 225 mm (2:3) | Inner 16.7, top 25, outer 33.3, bottom 50 | 1 x 100 | n/a | n/a | Body leading, for example 13 pt | Van de Graaf ninths, 2:3:4:6 |
-| A5 book or menu | 148 x 210 | Inner 12.3, top 17.5, outer 24.7, bottom 35 | 1 x 111, or 2 x 53 | 5 | n/a | 12 or 13 pt | Twelfths canon |
-| A4 editorial | 210 x 297 | Inside 15.9, outside 20.6, top 18.0, bottom 29.2 | 6 x 25.4 (72 pt) | 4.23 (12 pt) | 6 fields of 9 lines, 38.1 | 12 pt (9/12 body) | Section 2.3; 36 modules |
-| A4 luxury monograph | 210 x 297 | Inner 23.3, top 33, outer 46.7, bottom 66 | 1 x 140, or 2 x 67.9 | 4.23 | Free | 13 to 14 pt | Ninths canon |
-| A4 document | 210 x 297 | Top and outside 20, bottom and inside 25 | 12 x 10.08 | 4 | Free | 14 to 16.5 pt (10 to 11 pt body) | 26-platform-and-format-specs-2026.md, section 7.4 |
-| US Letter report | 612 x 792 pt | Sides 54 pt, top 54, bottom 78 | 6 x 74 pt | 12 pt | 4 fields of 13 lines, 156 pt | 12 pt (10/12 body) | Section 2.3 |
-| A3 poster | 297 x 420 | 15 all round | 6 x 40.3 | 5 | 8 x 44.4 | Not used | Hierarchical layout on a modular base |
-| Desktop 1440, luxury | 1440 wide | 120 | 12 x 78 | 24 | Free | 8 px | Content 1200 |
-| Desktop 1440, product | 1440 wide | 40 | 12 x 84 | 32 | Free | 8 px | Content 1360 |
-| Desktop 1280 | 1280 wide | 40 | 12 x 78 | 24 | Free | 8 px | Content 1200 |
-| Tablet 768 | 768 wide | 32 | 8 x 67 | 24 | Free | 8 px | Container queries do most of the work |
-| Phone 390 | 390 wide | 20 | 4 x 75.5 (fluid) | 16 | Free | 4 px type, 8 px space | 78.5 at 402, 68 at 360 |
-| Phone 360 (Android) | 360 wide | 16 | 4 x 70 (fluid) | 16 | Free | 4 and 8 px | Narrowest common width |
-| Email | 600 wide | 24 | 1 x 552, or 2 x 264 | 24 | Free | 8 px | Single column on phones |
-| Slide 16:9 | 1920 x 1080 | 120 all round | 12 x 118 | 24 | 6 x 120 (24 gaps) | 8 px | 72 modules; 26-platform-and-format-specs-2026.md, section 7.3 |
-| Square post | 1080 x 1080 | 72 | 6 x 136 | 24 | 6 x 136 | 8 px | Grid tile crops 135 each side |
-| Portrait post 4:5 | 1080 x 1350 | Sides 72, top and bottom 127 | 6 x 136 | 24 | 7 x 136 | 8 px | Grid tile crops 34 each side |
-| Portrait post 3:4 | 1080 x 1440 | Sides 72, top and bottom 92 | 6 x 136 | 24 | 8 x 136 | 8 px | Fills the grid tile; test feed behaviour first |
-| Story or Reel 9:16 | 1080 x 1920 | Safe: top 269 (290 with TikTok), bottom 672, sides 65 (right 200 with TikTok) | 6 x 136 inside x 72 to 1008 | 24 | 6 x 136 inside y 290 to 1226 | 8 px | Image full-frame; type in the square |
-| YouTube thumbnail | 1280 x 720 (upload 3840 x 2160) | 64 | Thirds: 3 x about 384 | 0 | Thirds | n/a | Nothing in the bottom-right corner (duration stamp) |
+| Format | Size | Margins | Columns x width | Gutter | Rows | Baseline or unit | Mark | Notes |
+|---|---|---|---|---|---|---|---|---|
+| Book, classical | 150 x 225 mm (2:3) | Inner 16.7, top 25, outer 33.3, bottom 50 | 1 x 100 | n/a | n/a | Body leading, for example 13 pt | Title page and spine only | Van de Graaf ninths, 2:3:4:6 |
+| A5 book or menu | 148 x 210 | Inner 12.3, top 17.5, outer 24.7, bottom 35 | 1 x 111, or 2 x 53 | 5 | n/a | 12 or 13 pt | Head or foot centre; wordmark 20 minimum | Twelfths canon; menu layout in 12.9 |
+| A4 editorial | 210 x 297 | Inside 15.9, outside 20.6, top 18.0, bottom 29.2 | 6 x 25.4 (72 pt) | 4.23 (12 pt) | 6 fields of 9 lines, 38.1 | 12 pt (9/12 body) | Masthead and running foot | Section 2.3; 36 modules |
+| A4 luxury monograph | 210 x 297 | Inner 23.3, top 33, outer 46.7, bottom 66 | 1 x 140, or 2 x 67.9 | 4.23 | Free | 13 to 14 pt | Title and colophon pages | Ninths canon |
+| A4 document | 210 x 297 | Top and outside 20, bottom and inside 25 | 12 x 10.08 | 4 | Free | 14 to 16.5 pt (10 to 11 pt body) | Header or foot; wordmark 20 to 25 | 26-platform-and-format-specs-2026.md, section 7.4 |
+| A4 landscape leave-behind | 297 x 210 | 15 all round | 12 x 18.4 | 4.2 | 6 x 26.5 (4.2 gaps) | 14 to 16 pt (11 to 12 pt body) | Foot, one fixed position | Printed form of the read deck (14.7) |
+| US Letter report | 612 x 792 pt | Sides 54 pt, top 54, bottom 78 | 6 x 74 pt | 12 pt | 4 fields of 13 lines, 156 pt | 12 pt (10/12 body) | Header or foot; wordmark 0.8 to 1 in | Section 2.3 |
+| A3 poster | 297 x 420 | 15 all round | 6 x 40.3 | 5 | 8 x 44.4 | Not used | Foot centre or terminal corner | Hierarchical layout on a modular base |
+| Roll-up | 850 x 2000 | 50 safe, plus the base cassette area | 4 x 172.5 | 20 | Free | Not used | Top band | Headline at standing eye level, about 1400 to 1800 from the floor (house estimate); printer confirms the cassette (20, section 12.3) |
+| Hoarding 40 x 20 ft | 12.2 x 6.1 m | 3 to 5 percent of the short side (183 to 305) | Hierarchical (13.2) | n/a | n/a | Type per 13.1 (cap 44 cm at 100 m) | Terminal corner, inside the margin | One image, one line, one mark; 20, section 7.1 |
+| LED wall | The wall's pixel map (12 x 4 m at P3.9 is 3077 x 1026) | Type in the upper two thirds | Three zones on 32:9 and wider | n/a | n/a | Cap 33 px at 30 m on P3.9 | Centre while the stage is empty | 13.7; 26-platform-and-format-specs-2026.md, section 5.11 |
+| Desktop 1920 | 1920 wide | 160 | 12 x 104 | 32 | Free | 8 px | Header; wordmark 80 to 120 rendered | Content 1600 (ultra breakpoint) |
+| Desktop 1440, luxury | 1440 wide | 120 | 12 x 78 | 24 | Free | 8 px | Header; wordmark 80 to 120 rendered | Content 1200; at 1366, margins 113 (9.4) |
+| Desktop 1440, product | 1440 wide | 40 | 12 x 84 | 32 | Free | 8 px | Header; wordmark 80 to 120 rendered | Content 1360 |
+| Desktop 1280 | 1280 wide | 40 | 12 x 78 | 24 | Free | 8 px | Header; wordmark 80 to 120 rendered | Content 1200 |
+| Tablet 768 | 768 wide | 32 | 8 x 67 | 24 | Free | 8 px | Header; wordmark 80 to 120 rendered | Container queries do most of the work |
+| Phone 390 | 390 wide | 20 | 4 x 75.5 (fluid) | 16 | Free | 4 px type, 8 px space | Header; wordmark 80 to 120 rendered | 78.5 at 402, 68 at 360 |
+| Phone 360 (Android) | 360 wide | 16 | 4 x 70 (fluid) | 16 | Free | 4 and 8 px | Header; wordmark 80 to 120 rendered | Narrowest common device; the WCAG floor is 320 (9.1) |
+| Email | 600 wide | 24 | 1 x 552, or 2 x 264 | 24 | Free | 8 px | Header; wordmark 125 or wider (80 on a 390 phone) | Single column on phones |
+| Slide 16:9 | 1920 x 1080 | 120 all round | 12 x 118 | 24 | 6 x 120 (24 gaps) | 8 px | Agency mark small, one fixed corner (14.3) | 72 modules; 26-platform-and-format-specs-2026.md, section 7.3 |
+| Read deck | 1080 x 1350 | Sides 72, top and bottom 127 | 6 x 136 | 24 | 7 x 136 | 8 px; body 40 px minimum | Wordmark 20 to 30 percent of width | 0.361 scale on a 390 phone (14.7) |
+| Square post | 1080 x 1080 | 72 | 6 x 136 | 24 | 6 x 136 | 8 px | Wordmark 20 to 30 percent of width | Grid tile crops 135 each side |
+| Portrait post 4:5 | 1080 x 1350 | Sides 72, top and bottom 127 | 6 x 136 | 24 | 7 x 136 | 8 px | Wordmark 20 to 30 percent of width | Grid tile crops 34 each side |
+| Portrait post 3:4 | 1080 x 1440 | Sides 72, top and bottom 92 | 6 x 136 | 24 | 8 x 136 | 8 px | Wordmark 20 to 30 percent of width | Fills the grid tile; test feed behaviour first |
+| Story or Reel 9:16 | 1080 x 1920 | Safe: top 269 (290 with TikTok), bottom 672, sides 65 (right 200 with TikTok) | 6 x 136 inside x 72 to 1008 (type in columns 1 to 5 on TikTok) | 24 | 6 x 136 inside y 290 to 1226 | 8 px | Wordmark 20 to 30 percent of width, inside the safe zone | Image full-frame; type in the square |
+| YouTube thumbnail | 1280 x 720 (upload 3840 x 2160) | 64 | Thirds: 3 x about 384 | 0 | Thirds | n/a | None; colour field and type carry the channel | Nothing in the bottom-right corner (duration stamp) |
+| Open Graph image | 1200 x 630 (export 2400 x 1260) | n/a | n/a | n/a | n/a | n/a | None | Campaign still with no type, since the title renders under it (21-web-design-and-digital-craft.md, section 9.3); subject inside the central 600 x 300 so 1:1 crops hold (26, section 4.2) |
 
 ## Terms introduced
 
@@ -1073,15 +1218,15 @@ Books
 - Josef Müller-Brockmann, Grid Systems in Graphic Design, Niggli, 1981.
 - Karl Gerstner, Designing Programmes, Niggli, 1964.
 - Emil Ruder, Typographie, Niggli, 1967.
-- Armin Hofmann, Graphic Design Manual: Principles and Practice, 1965.
+- Armin Hofmann, Graphic Design Manual: Principles and Practice, Niggli, 1965.
 - Jan Tschichold, The New Typography (Die neue Typographie, 1928), University of California Press, 1995; The Form of the Book, Hartley and Marks, 1991 (German edition 1975).
 - Raúl Rosarivo, Divina proporción tipográfica, 1947.
 - Robert Bringhurst, The Elements of Typographic Style, version 4.0, Hartley and Marks, 2012.
 - Timothy Samara, Making and Breaking the Grid, second edition, Rockport, 2017.
 - Kimberly Elam, Geometry of Design, Princeton Architectural Press, 2001; Grid Systems: Principles of Organizing Type, 2004.
 - Massimo Vignelli, The Vignelli Canon, Lars Müller, 2010.
-- Le Corbusier, The Modulor, 1954 (Le Modulor, 1950); Modulor 2, 1955.
-- Jay Hambidge, The Elements of Dynamic Symmetry, 1926.
+- Le Corbusier, Le Modulor, 1948 (English edition, The Modulor, 1954); Modulor 2, 1955 (English edition 1958).
+- Jay Hambidge, Dynamic Symmetry: The Greek Vase, Yale University Press, 1920; The Elements of Dynamic Symmetry, 1926.
 - György Doczi, The Power of Limits, Shambhala, 1981.
 - Gustav Theodor Fechner, Vorschule der Ästhetik, 1876.
 - John Thomas Smith, Remarks on Rural Scenery, 1797.
@@ -1092,10 +1237,15 @@ Books
 - David Bordwell, Figures Traced in Light, University of California Press, 2005.
 - Stephen Few, Information Dashboard Design, second edition, Analytics Press, 2013.
 - Nancy Duarte, Resonate, Wiley, 2010.
+- Ellen Lupton, Thinking with Type, Princeton Architectural Press, 2004; third edition 2024.
+- Mario R. García and Pegie Stark, Eyes on the News, Poynter Institute, 1991.
+- Michael L. Kasavana and Donald I. Smith, Menu Engineering: A Practical Guide to Menu Analysis, Hospitality Publications, 1982.
+- William Poundstone, Priceless: The Myth of Fair Value (and How to Take Advantage of It), Hill and Wang, 2010.
 - Heydon Pickering and Andy Bell, Every Layout, https://every-layout.dev
 
 Specifications, standards and platform documentation
-- ISO 216, Writing paper and certain classes of printed matter: trimmed sizes, A and B series.
+- ISO 216:2007, Writing paper and certain classes of printed matter: trimmed sizes, A and B series (third edition, 2007).
+- W3C, Web Content Accessibility Guidelines (WCAG) 2.2 (SC 1.3.2, 1.4.4, 1.4.10, 1.4.12): https://www.w3.org/TR/WCAG22/
 - W3C, Web Content Accessibility Guidelines 2.2, Understanding SC 2.5.8 Target Size (Minimum): https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
 - W3C, CSS Grid Layout Module Level 2 (subgrid): https://www.w3.org/TR/css-grid-2/
 - W3C, CSS Containment Module Level 3 (container queries): https://www.w3.org/TR/css-contain-3/
@@ -1104,6 +1254,11 @@ Specifications, standards and platform documentation
 - MDN, Subgrid: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid
 - MDN, Masonry layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 - MDN, text-box-trim: https://developer.mozilla.org/en-US/docs/Web/CSS/text-box-trim
+- MDN, anchor-name (Baseline 2026): https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name
+- MDN, reading-flow: https://developer.mozilla.org/en-US/docs/Web/CSS/reading-flow
+- MDN, length units (lh, rlh, ch): https://developer.mozilla.org/en-US/docs/Web/CSS/length
+- WebDX Community Group, web-features (Baseline status data), version 3.44.0, read October 2026: https://github.com/web-platform-dx/web-features
+- US National Highway Traffic Safety Administration, Visual-Manual NHTSA Driver Distraction Guidelines for In-Vehicle Electronic Devices, Federal Register, April 2013.
 - Android Developers, Use window size classes: https://developer.android.com/develop/ui/compose/layouts/adaptive/use-window-size-classes
 - Apple, Human Interface Guidelines, Layout: https://developer.apple.com/design/human-interface-guidelines/layout
 - Material Design 2, System icons (keylines): https://m2.material.io/design/iconography/system-icons.html
@@ -1111,21 +1266,28 @@ Specifications, standards and platform documentation
 - Meta, Ads guide, Instagram feed image: https://www.facebook.com/business/ads-guide/update/image/instagram-feed
 - Meta, Ads guide, Instagram Reels video: https://www.facebook.com/business/ads-guide/update/video/instagram-reels
 - YouTube Help, Add video thumbnails: https://support.google.com/youtube/answer/72431
+- Affinity by Canva, product page (single free application, read October 2026): https://www.affinity.studio/
 
 Articles, papers and talks
 - J. A. van de Graaf, "Nieuwe berekening voor de vormgeving", Tété, 1946.
 - I. C. McManus, "The aesthetics of simple figures", British Journal of Psychology, 1980.
+- I. C. McManus, R. Cook and A. Hunt, "Beyond the golden section and normative aesthetics: why do individuals differ so much in their aesthetic preferences for rectangles?", Psychology of Aesthetics, Creativity, and the Arts, 4(2), 2010.
+- Stephen E. Palmer, "Common region: a new principle of perceptual grouping", Cognitive Psychology, 24, 1992.
+- Sybil S. Yang, "Eye movements on restaurant menus: a revisitation on gaze motion and consumer scanpaths", International Journal of Hospitality Management, 31(3), 2012.
+- Sybil S. Yang, Sheryl E. Kimes and Mauro M. Sessarego, "$ or dollars: effects of menu-price formats on restaurant checks", Cornell Hospitality Report, 9(8), 2009.
 - George Markowsky, "Misconceptions about the golden ratio", The College Mathematics Journal, 23(1), 1992.
 - Christopher D. Green, "All that glitters: a review of psychological research on the aesthetics of the golden section", Perception, 24, 1995.
 - Clement Falbo, "The golden ratio: a contrary viewpoint", The College Mathematics Journal, 36(2), 2005.
 - Keith Devlin, "The myth that will not go away", Devlin's Angle, Mathematical Association of America, 2007.
 - Benjamin W. Tatler, "The central fixation bias in scene viewing", Journal of Vision, 7(14), 2007.
-- Nielsen Norman Group, "Scrolling and attention", 2018: https://www.nngroup.com/articles/scrolling-and-attention/
-- Nielsen Norman Group, "F-shaped pattern of reading on the web: misunderstood, but still relevant", 2017: https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
-- Ben Labay, CXL Institute and Speero, "Form field usability: should you use single or multi-column forms?", 2016: https://speero.com/post/form-field-usability-should-you-use-single-or-multi-column-forms-original-research/
+- Therese Fessenden, "Scrolling and attention", Nielsen Norman Group, 2018, updating Jakob Nielsen's 2010 article of the same name: https://www.nngroup.com/articles/scrolling-and-attention/
+- Kara Pernice, "F-shaped pattern of reading on the web: misunderstood, but still relevant", Nielsen Norman Group, 2017, updating Jakob Nielsen's 2006 F-pattern article: https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
+- Kara Pernice, "The layer-cake pattern of scanning content on the web", Nielsen Norman Group, 2019: https://www.nngroup.com/articles/layer-cake-pattern-scanning/
+- Ben Labay, CXL Institute, "Should you use single or multi-column forms? [Study]", 17 October 2016, now hosted by Speero: https://speero.com/post/form-field-usability-should-you-use-single-or-multi-column-forms-original-research/
 - Matteo Penzo, "Label placement in forms", UXmatters, 2006: https://www.uxmatters.com/mt/archives/2006/07/label-placement-in-forms.php
 - Heydon Pickering, "Axiomatic CSS and lobotomized owls", A List Apart, 2014: https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
-- Nathan Curtis, "Space in design systems", EightShapes, 2016: https://medium.com/eightshapes-llc
+- Nathan Curtis, "Space in design systems", EightShapes publication on Medium, 2016: https://medium.com/eightshapes-llc
+- Josh W. Comeau, "Full-bleed layout using CSS Grid", 2020, updated 2025: https://www.joshwcomeau.com/css/full-bleed/
 - Jen Simmons, "Everything you know about web design just changed", An Event Apart, 2018.
 - Guy Kawasaki, "The 10/20/30 rule of PowerPoint", 2005: https://guykawasaki.com/the_102030_rule/
 - Utopia fluid type and space calculators (James Gilyead and Trys Mudford, Clearleft): https://utopia.fyi
