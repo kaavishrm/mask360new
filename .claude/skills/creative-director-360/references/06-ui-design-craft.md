@@ -60,30 +60,30 @@ Logical widths are what you design to. Physical widths matter for asset export a
 | Device | Logical size (portrait) | Native pixels | Scale | Note |
 |---|---|---|---|---|
 | iPhone 16e and 17e | 390 x 844 pt | 1170 x 2532 | 3x | the budget line; the 16e has a notch rather than a Dynamic Island (the pill-shaped camera cutout that the system animates as a status surface); the 17e (11 March 2026) shares the logical size (ios-resolution.com) |
-| iPhone 16 | 393 x 852 pt | 1179 x 2556 | 3x | |
+| iPhone 16 | 393 x 852 pt | 1179 x 2556 | 3x | 6.1 inch; the 393pt width the 17 family replaced, still common in the installed base |
 | iPhone 17 and 17 Pro | 402 x 874 pt | 1206 x 2622 | 3x | 6.3 inch, 460 ppi |
 | iPhone Air | 420 x 912 pt | 1260 x 2736 | 3x | 6.5 inch |
 | iPhone 17 Pro Max | 440 x 956 pt | 1320 x 2868 | 3x | 6.9 inch |
 | iPhone 18 Pro and 18 Pro Max | 402 x 874 pt and 440 x 956 pt | 1206 x 2622 and 1320 x 2868 | 3x | released 18 September 2026 at the same logical sizes as the 17 Pro pair (ios-resolution.com listing, October 2026) |
 | iPhone Duo (fold), outer | 466 x 678 pt | 1398 x 2034 | 3x | 5.4 inch, 460 ppi; Apple's first foldable, announced 9 September 2026 and on sale 23 October 2026; Figma added iPhone Duo and iPhone 18 frame presets the same day (Figma release notes) |
 | iPhone Duo (fold), inner | 626 x 890 pt | 1878 x 2670 | 3x | 7.6 inch, 430 ppi; a tablet-class width in the hand; design the inner display with the medium window size class rules of section 16 |
-| iPad mini (7th gen) | 744 x 1133 pt | 1488 x 2266 | 2x | |
-| iPad (11th gen) and iPad Air 11 | 820 x 1180 pt | 1640 x 2360 | 2x | |
-| iPad Pro 11 (M4, M5) | 834 x 1210 pt | 1668 x 2420 | 2x | |
-| iPad Air 13 | 1024 x 1366 pt | 2048 x 2732 | 2x | |
-| iPad Pro 13 (M4, M5) | 1032 x 1376 pt | 2064 x 2752 | 2x | |
+| iPad mini (7th gen) | 744 x 1133 pt | 1488 x 2266 | 2x | 8.3 inch; the narrowest iPad, so it sets the compact iPad check |
+| iPad (11th gen) and iPad Air 11 | 820 x 1180 pt | 1640 x 2360 | 2x | 11 inch class |
+| iPad Pro 11 (M4, M5) | 834 x 1210 pt | 1668 x 2420 | 2x | 11 inch, tandem OLED |
+| iPad Air 13 | 1024 x 1366 pt | 2048 x 2732 | 2x | 13 inch; landscape width 1366pt reaches the large window class |
+| iPad Pro 13 (M4, M5) | 1032 x 1376 pt | 2064 x 2752 | 2x | 13 inch, tandem OLED |
 | Pixel 10 and Pixel 11 | about 412 x 923 dp | 1080 x 2424 | 2.625x (420dpi bucket) | 6.3 inch, 422 ppi on both (Google Store spec page for the Pixel 11, which ships with Android 17); 412dp is the de facto Android design width |
 | Galaxy S25 and S26 | about 384 to 412 dp wide | 1080 x 2340 | 2.6x to 2.8x depending on the user's display size setting | 6.2 inch (S25); 6.3 inch (S26, launched 25 February 2026, per retailer and 91mobiles spec listings) |
 | MacBook Air 13 | 1280 x 832 pt at exact 2x; the default scaled setting gives more space (1470 x 956 on the M2 and later models) | 2560 x 1664 | 2x or scaled | 13.6 inch, 224 ppi (Apple tech specs); check System Settings, Displays on the review machine |
 | MacBook Air 15 | 1440 x 932 pt at exact 2x | 2880 x 1864 | 2x or scaled | 15.3 inch, 224 ppi |
-| MacBook Pro 14 and 16 | 1512 x 982 pt and 1728 x 1117 pt (the default settings, exact 2x) | 3024 x 1964 and 3456 x 2234 | 2x | 14.2 and 16.2 inch, 254 ppi; the machines most Mumbai and Dubai clients review on |
+| MacBook Pro 14 and 16 | 1512 x 982 pt and 1728 x 1117 pt (the default settings, exact 2x) | 3024 x 1964 and 3456 x 2234 | 2x | 14.2 and 16.2 inch, 254 ppi (Apple tech specs) |
 | Desktop design artboards | 1440 x 900 and 1920 x 1080 | varies | 1x or 2x | 1440 covers scaled MacBook displays and most laptops; 1920 x 1080 has led StatCounter's desktop resolution share for years; 1536 x 864 and 1366 x 768 follow (Windows laptops at 125 per cent scaling) |
 
 Rules that follow from the table:
 - Design mobile at 390 or 402pt wide and check at 360dp (the floor for cheap Android still common in India, where sub-15,000 rupee phones ship 720 x 1600 panels at 2x, giving 360 x 800dp) and at 440pt. Anything that only works at 393 is untested.
 - The iPhone 17 family's 402pt width replaced the 393 of the 15 and 16; a 3-column product grid with 16pt gutters gains 3pt per column. Nothing to do, unless columns were hard-coded.
 - Android has no single width. Build on the window size classes (section 16) rather than device names.
-- The first viewport is the screen minus browser and OS chrome: tabs, address bar and bookmarks take about 80 to 140px of height, and the macOS menu bar or Windows taskbar takes more. A 1440 x 900 artboard's first viewport is therefore about 1440 x 780 in Chrome on a laptop, and a 1366 x 768 Windows laptop shows about 1366 x 650 (measure `window.innerHeight` in the client's own browser). Place the hero and its call to action against those heights and review every hero in a real browser window, never a full-frame artboard; the fold is discussed in 05-layout-grids-and-composition.md, section 9.7.
+- The first viewport is the screen minus browser and OS chrome: tabs, address bar and bookmarks take about 80 to 140px of height, and the macOS menu bar or Windows taskbar takes more. A 1440 x 900 artboard's first viewport is therefore about 1440 x 780 in Chrome on a laptop, and a 1366 x 768 Windows laptop shows about 1366 x 650 (measure `window.innerHeight` in the client's own browser). Place the hero and its call to action against those heights and review every hero in a real browser window, because a full-frame artboard hides the browser chrome; the fold is discussed in 05-layout-grids-and-composition.md, section 9.7.
 - Full device, viewport and format specs are in 26-platform-and-format-specs-2026.md, section 4.7.
 
 ### 1.4 Safe areas, status bar, Dynamic Island, home indicator
@@ -131,7 +131,7 @@ From the "Meet Liquid Glass" session (WWDC25 session 219):
 | Stacking | Glass on glass is forbidden | "always avoid glass on glass"; elements on glass use fills, transparency and vibrancy (Apple's blending that pulls colour from what sits behind the material so content on it stays legible) so they read as a thin overlay |
 | Tab bars and nav bars | Float as inset capsules, adapt to what scrolls beneath, flip light to dark by background; tab bars can shrink while scrolling and expand near the top; search often sits as a separate circular control | Keep 3 to 5 tabs; do not fight the shrink behaviour with a custom bar |
 | Toolbars | Controls float; a menu from a toolbar button morphs out of the same glass | One floating plane; "Liquid Glass dynamically morphs between the controls in each context" |
-| Sidebars and menus | Adapt to context; do not flip light and dark (surface too large, the flip would distract) | |
+| Sidebars and menus | Adapt to context; do not flip light and dark (surface too large, the flip would distract) | Use the system sidebar and menus; a custom sidebar loses the context adaptation and the accessibility settings |
 | Tinting | For primary actions only | "Avoid tinting all your elements. When every element is tinted, nothing stands out." Put colour into the content layer instead |
 | Legibility | Symbols flip light and dark mirroring the glass; localised dimming for small footprints; avoid content intersecting glass in steady states | Reposition or scale content to keep separation at launch |
 | Accessibility | Reduce Transparency makes glass frostier; Increase Contrast makes elements predominantly black or white with a contrasting border; Reduce Motion disables elastic properties | Automatic when the system material is used; custom glass gets none of it, which is the argument against faking it |
@@ -234,18 +234,18 @@ State: a named condition of a component that changes its appearance or behaviour
 | checked | boolean on | the check or thumb moves and the fill changes | fill plus glyph | 150 to 200ms |
 | indeterminate | mixed children or unknown | a dash in a checkbox, a sweeping bar in progress | distinct from checked and unchecked | 150 to 200ms, the same as checked, because it is the same control |
 | error | validation failed | border, helper text, icon | border colour plus a message plus an icon; 3:1 border contrast | 150ms; shake animations are a cheap tell |
-| warning | risky but allowed | amber accent plus text | icon plus text, never amber alone (WCAG 1.4.1), with amber text darkened to 4.5:1, which plain amber on white fails | 150ms |
+| warning | risky but allowed | amber accent plus text | an icon and text beside the amber (WCAG 1.4.1), with amber text darkened to 4.5:1, which plain amber on white fails | 150ms |
 | success | completed | green accent plus text or check | confirm and get out of the way; no confetti | 150ms in; the check holds 1.5 to 3 seconds, then the control returns to rest (section 10.5) |
 | read-only | shows a value that cannot be edited here | no border or a dashed one; text at full contrast; copyable | must look different from disabled (full contrast) | none, because nothing changes on interaction |
-| empty | no data | a message and an action (section 10.4) | a typographic message with one action, never a blank region, because blank reads as broken | cross-fade 150 to 200ms from the skeleton |
+| empty | no data | a message and an action (section 10.4) | a typographic message with one action, because a blank region reads as broken | cross-fade 150 to 200ms from the skeleton |
 | skeleton | first load | grey blocks in the final layout | blocks at the final sizes: title the thickest line, thinner for body, image blocks at their aspect token; shimmer optional | minimum display 300 to 500ms to avoid a flicker when data arrives fast |
 | dragged | being moved | lifted shadow and a state layer | state layer at 16 per cent (Material 3), elevation up one level | follows the pointer with no easing |
 | drop target | a dragged item hovers over a valid destination | border and fill | 2px dashed accent border plus a state layer at 8 per cent, so the user sees where the item will land before releasing | 100ms in, 0ms out on drop |
-| focus-within | focus is inside a composite field (a phone number with a country picker, a card number with expiry) | one ring around the group | the 2px ring drawn on the group with `:focus-within`, never two rings, because the group is one field to the user | 0ms |
+| focus-within | focus is inside a composite field (a phone number with a country picker, a card number with expiry) | one ring around the group | one 2px ring drawn on the group with `:focus-within`, because the group is one field to the user | 0ms |
 | visited | a link the user has opened | link colour only | a muted shade of the link colour; browsers let `:visited` change colour properties only, for privacy, so nothing else will apply | none |
 | pending | submitted and awaiting a server or human decision (booking request, know your customer (KYC) identity review, refund) | a status chip with a timestamp | neutral or amber chip, "Requested 14:05", persisting across sessions; distinct from loading because it can last days | 150ms |
 | offline or stale | cached data shown without a live connection | a timestamp and a quiet refresh | "Updated 10:42" beside the data; queued actions shown with a count ("2 changes will sync"), because the user must know what has not reached the server | 150ms |
-| streaming | AI output arriving in pieces | Stop replaces Send; content grows in place | new text announced politely at sentence boundaries, never per token (09-interaction-design-and-ux-patterns.md, section 10.1) | none for the text; 150ms for the control swap |
+| streaming | AI output arriving in pieces | Stop replaces Send; content grows in place | new text announced politely at sentence boundaries (09-interaction-design-and-ux-patterns.md, section 10.1), because per-token announcements flood a screen reader | none for the text; 150ms for the control swap |
 
 ### 3.3 State layering
 
@@ -260,7 +260,7 @@ Badge: a small dot or count attached to an icon or tab to signal something new o
 | Dot badge | 6dp (Material 3 small badge; Compose `BadgeTokens.Size`) | enough to register as a mark at arm's length without reading as a count |
 | Count badge | 16dp tall (Material 3 large badge), 11 to 12px tabular figures (equal-width digits, section 7.3), pill radius, capped at "99+" | the cap stops the badge growing into a label; tabular figures stop the width jumping as the count changes |
 | Badge placement | top-right of the icon (top-left in RTL), overlapping its live area (the icon's drawing region, section 11.1) by about a third, with a 2px ring in the surface colour | the ring separates badge from glyph on any ground |
-| Badge semantics | announced through the parent's accessible name ("Messages, 3 unread"), the badge itself `aria-hidden` | a screen reader otherwise reads "3" with no context |
+| Badge semantics | announced through the parent's accessible name (the label assistive technology reads for an element: "Messages, 3 unread"), the badge itself `aria-hidden` | a screen reader otherwise reads "3" with no context |
 | Badge lifecycle | cleared when the destination is visited; on at most one tab at a time in a luxury app | a row of red dots trains people to ignore all of them |
 | Chip | 32dp tall, 8dp radius in Material 3 (Compose `AssistChipTokens`: height 32dp, corner small) or the house sm or md token; 12 to 16px horizontal padding; 14px label at 500 | the height sits between a tag and a button, so chips read as selectable without competing with buttons |
 | Filter chip | a leading check plus a tonal fill when selected | colour alone fails WCAG 1.4.1 |
@@ -304,7 +304,7 @@ Padding ratio: horizontal padding equals 1.5x to 2x the vertical padding, becaus
 ### 4.4 Icon placement, loading, groups
 
 - Leading icon clarifies the verb (plus for add, arrow-up-right for external). Trailing icon only for disclosure (chevron down for a menu, arrow for "next step"). Never both.
-- Loading: keep the width, swap the label for a 16 to 20px spinner (or prefix the spinner and keep the label when the wait exceeds about 2 seconds), set `aria-busy`, disable repeat taps. Changing the label to "Saving..." is acceptable; shrinking the button is a defect.
+- Loading: keep the width, swap the label for a 16 to 20px spinner (or prefix the spinner and keep the label when the wait exceeds about 2 seconds), set `aria-busy`, disable repeat taps. Changing the label to "Saving…" (the ellipsis character) is acceptable; shrinking the button is a defect.
 - Button groups: segmented (connected, shared border) for mutually exclusive views; spaced 8 to 12px for independent actions; right-aligned in dialogs on desktop with the primary at the far right (macOS and web; far left in RTL, section 2.7) and stacked full-width on mobile with the primary on top.
 - Touch targets: Apple HIG 44 x 44pt, Material 48 x 48dp, WCAG 2.2 success criterion 2.5.8 (AA) 24 x 24 CSS px minimum with a spacing exception (a 24px circle centred on each target must not intersect another target), and 2.5.5 (AAA) 44 x 44. The house minimum is 44 on every platform; a 32px small button gets 6px of invisible hit area each side via padding or a pseudo-element.
 
@@ -417,7 +417,7 @@ Information scent: the cues (labels, icons, previews) that let a user predict wh
 
 Search field anatomy: `type="search"` inside a search landmark (the `<search>` element, Baseline since 2023, or `role="search"`; Baseline is the web platform's label for a feature supported in the current versions of Chrome, Edge, Firefox and Safari), `enterkeyhint="search"` so the mobile return key reads Search, a visible label or an `aria-label`, a leading magnifier, and a trailing clear button with a 44px target once text exists; 40 to 48px tall.
 - Suggestions start after 2 characters with a 150 to 300ms debounce (waiting until typing pauses before sending the request), enough to skip mid-word requests while staying inside the 1 second limit of section 10.1; the matched substring is bolded; recent searches show when the field is empty and can be cleared.
-- Keyboard: Up and Down move through suggestions, Enter opens the highlighted one or searches the typed text, Escape first clears the field and then closes the list (the combobox pattern in the WAI-ARIA Authoring Practices, the W3C's guide to Accessible Rich Internet Applications widgets).
+- Keyboard: Up and Down move through suggestions, Enter opens the highlighted one or searches the typed text, Escape first closes the list and, pressed again, clears the field (the combobox pattern in the WAI-ARIA Authoring Practices, the W3C's guide to Accessible Rich Internet Applications widgets).
 - On mobile, focusing search opens a full-screen search view with the keyboard up, because a suggestion list squeezed above the keyboard shows two rows.
 - Results restate the query and the count ("12 villas for 'Goa pool'"), offer spelling correction and keep the query editable in place; zero results follow section 10.4.
 - iOS 26 renders search as a separate floating control when the app declares `Tab(role: .search)` (section 2.1).
@@ -543,7 +543,7 @@ Toast (snackbar in Material): a brief message that appears without interrupting 
 
 - Banner: a persistent strip at the top of the content (offline, payment failed, trial ending, cookie consent) that stays until resolved or dismissed, pushes content down rather than covering it, one action.
 - Inline alert: a boxed message placed next to the thing it concerns (a form section, a card), four variants (info, success, warning, error) each with an icon and a 3px leading edge in the variant colour, icon plus colour plus text so no meaning rides on colour alone.
-- Consent banners are the exception to the one-primary rule of section 4.1: accept and reject get equal weight (same size, same emphasis, same row). India's Digital Personal Data Protection (DPDP) Rules, notified 13 November 2025 with notice and consent duties from 13 May 2027, require consent that is free, specific, informed and as easy to withdraw as to give; the Central Consumer Protection Authority's Guidelines for Prevention and Regulation of Dark Patterns (30 November 2023) name interface interference and confirmshaming among 13 prohibited patterns. Rules: nothing pre-ticked; a persistent footer link to change choices; the banner never covers the focused element or the page's primary action (WCAG 2.4.11); decline labels neutral ("Reject all"), never shaming ("No thanks, I prefer full price"). The legal detail is in 09-interaction-design-and-ux-patterns.md, section 13.4, and consent management on the web in 21-web-design-and-digital-craft.md, section 7.12.
+- Consent banners are the exception to the one-primary rule of section 4.1: accept and reject get equal weight (same size, same emphasis, same row). India's Digital Personal Data Protection (DPDP) Rules, notified 13 November 2025 with notice and consent duties from 13 May 2027, require consent that is free, specific, informed and as easy to withdraw as to give; the Central Consumer Protection Authority's Guidelines for Prevention and Regulation of Dark Patterns (30 November 2023) name interface interference and confirmshaming among 13 prohibited patterns. Rules: nothing pre-ticked; a persistent footer link to change choices; the banner never covers the focused element or the page's primary action (WCAG 2.4.11); decline labels neutral ("Reject all"); a shaming label ("No thanks, I prefer full price") is confirmshaming. The legal detail is in 09-interaction-design-and-ux-patterns.md, section 13.4, and consent management on the web in 21-web-design-and-digital-craft.md, section 7.12.
 
 ### 9.4 The overlay decision tree
 
@@ -565,8 +565,8 @@ Menu: a temporary list of actions or options opened from a button, a right click
 | Width | minimum 180px, maximum about 320px | narrower truncates labels; wider loses the link between trigger and list |
 | Height | at most about half the viewport, then the list scrolls | the menu must never push items off-screen |
 | Items | 32 to 36px tall on desktop, 44 to 48px on touch, 12px horizontal padding | the desktop height matches the small button; touch needs the platform target |
-| Leading icons | 16px on every item in a group or on none | a ragged left edge reads as missing icons |
-| Toggles | a check or radio glyph in the leading slot | selection needs a glyph, never colour alone |
+| Leading icons | 16px on every item in a group or on none | a ragged leading edge reads as missing icons |
+| Toggles | a check or radio glyph in the leading slot | selection needs a glyph as well as colour (WCAG 1.4.1) |
 | Shortcuts | trailing, in secondary colour, with platform names (Cmd on macOS, Ctrl on Windows) | they teach the shortcut without competing with the label |
 | Groups | dividers between groups; the destructive item last and in red | separation guards against a slip onto Delete |
 | Further input | an item that opens another step ends in the ellipsis character ("Rename…"), as Vercel's Web Interface Guidelines also specify | the user knows a dialog follows |
@@ -605,7 +605,7 @@ Optimistic UI: showing the result of an action before the server confirms it, th
 | error | what happened in plain words, with a reference id if support will need it | retry, and a route to support |
 | cleared or completed | acknowledge in one line ("All enquiries answered") | the next useful place to go |
 
-Copy follows 10-ux-writing-and-content-design.md. No illustration of a sad folder or an empty box in a luxury product: the empty state is a typographic moment with generous space, which design-taste's physics of expensive already prefers.
+Copy follows 10-ux-writing-and-content-design.md. No illustration of a sad folder or an empty box in a luxury product: the empty state is a typographic moment with generous space, which design-taste's physics of expensive already prefers (design-taste, section 2).
 
 ### 10.5 Errors, success, undo over confirm
 
@@ -722,12 +722,12 @@ One radius token per element class across the product. The "one radius on everyt
 | Token | Ratio | Use | Note |
 |---|---|---|---|
 | square | 1:1 | products, avatars, jewellery, menu items | the safest crop for unknown subjects |
-| landscape | 4:3 | room and villa tiles, cards | |
+| landscape | 4:3 | room and villa tiles, cards | the native ratio of phone camera sensors, so property photography arrives uncropped |
 | editorial | 3:2 | editorial cards, listing heroes on desktop | the 35mm frame; most photography arrives at it |
-| wide | 16:9 | video, desktop hero bands | |
+| wide | 16:9 | video, desktop hero bands | the video standard; footage fills it with no letterbox |
 | portrait | 4:5 | fashion, beauty, Instagram feed parity | the ratio most social content already exists in |
-| story | 9:16 | mobile hero, stories, reels | |
-| poster | 2:3 | campaign posters, book-like tiles | |
+| story | 9:16 | mobile hero, stories, reels | the full portrait phone screen and the Reels and Stories export |
+| poster | 2:3 | campaign posters, book-like tiles | close to the 27 x 40 inch film one-sheet, so campaign key art reuses without recomposition |
 | banner | 21:9 | desktop promo strips | never on mobile |
 
 CSS `aspect-ratio` on the box reserves the space before the image loads, which removes cumulative layout shift (CLS, Google's measure of unexpected movement of visible content). `object-fit: cover` with `object-position` set from a stored focal point (x and y as percentages saved per image in the CMS; DatoCMS, Sanity and Cloudinary all store a hotspot or gravity) so that faces, hands and the hero object stay in frame across every token; a centred crop loses heads on 4:5 and feet on 16:9. For portraits, eyes in the top third; for jewellery and product on a sweep backdrop, the object centred with 10 per cent margin so the crop never kisses the edge.
@@ -754,12 +754,12 @@ Art direction (serving a differently cropped or composed image per viewport, bey
 
 ### 14.5 Text over imagery
 
-Hero tiles, villa cards and campaign modules set text on photographs every week. WCAG 1.4.3 applies, measured against the lightest pixels behind the glyphs and not the image's average, so a caption that passes over the dark sea fails over the white villa wall in the same photograph. Methods in order of preference:
+Hero tiles, villa cards and campaign modules set text on photographs every week. WCAG 1.4.3 applies, measured against the lightest pixels behind the glyphs (an average over the image hides them), so a caption that passes over the dark sea fails over the white villa wall in the same photograph. Methods in order of preference:
 1. Choose or crop an image with calm negative space where the type sits, using the stored focal point of section 14.1.
 2. A gradient scrim from 0 to about 50 to 60 per cent ink over the bottom 40 to 50 per cent of the tile, under light type.
 3. A solid caption band below or beside the image.
 
-Text-shadow alone fails on busy areas and reads cheap. Re-check every aspect token, because 4:5 and 16:9 crops move the subject under the type; check in dark mode; and test with the real CMS images, never only the hero shot the layout was drawn around. Scrims over video are in 03-typography.md, section 13.5, and gradient restraint in design-taste, section 3.
+Text-shadow alone fails on busy areas and reads cheap. Re-check every aspect token, because 4:5 and 16:9 crops move the subject under the type; check in dark mode; and test with the real CMS images as well as the hero shot the layout was drawn around. Scrims over video are in 03-typography.md, section 13.5, and gradient restraint in design-taste, section 3.
 
 ## 15. Dark mode craft
 
@@ -792,7 +792,7 @@ Light text on dark appears heavier than the same weight dark on light, an effect
 
 ### 16.1 Window size classes and breakpoint behaviour per component
 
-Android's window size classes, confirmed on developer.android.com: compact width under 600dp (99.96 per cent of phones in portrait), medium 600 to 840dp (93.73 per cent of tablets in portrait, most unfolded inner displays), expanded 840 to 1200dp (97.22 per cent of tablets in landscape), large 1200 to 1600dp, extra-large 1600dp and above; height classes compact under 480, medium 480 to 900, expanded 900 and above. The house web breakpoints follow them (600, 840, 1200, 1600) with a 1024 step for the desktop navigation switch.
+Android's window size classes, confirmed on developer.android.com: compact width under 600dp (99.96 per cent of phones in portrait), medium 600 to 840dp (93.73 per cent of tablets in portrait, most unfolded inner displays), expanded 840 to 1200dp (97.22 per cent of tablets in landscape), large 1200 to 1600dp, extra-large 1600dp and above; height classes compact under 480, medium 480 to 900, expanded 900 and above. The house web breakpoints follow them (600, 840, 1200, 1600) with a 1024 step for the desktop navigation switch; grid construction, gutters and container-query breakpoints are in 05-layout-grids-and-composition.md, section 9.
 
 | Component | compact (under 600) | medium (600 to 840) | expanded (840 to 1200) | large and above |
 |---|---|---|---|---|
@@ -831,7 +831,7 @@ Android's window size classes, confirmed on developer.android.com: compact width
 | pinch | zoom on images and maps only | `touch-action: pinch-zoom` on the image region | never on UI; never disable page zoom (`user-scalable=no` breaks accessibility) |
 | edge swipe, left, and content pan | back (iOS from the leading edge and, since iOS 26, a leading-to-trailing pan anywhere in the content; Android from both edges with predictive back) | Android 10 and later limit `systemGestureExclusionRects` to 200dp per edge | a left-edge drawer open gesture conflicts with back on both platforms: open drawers from a button; carousels, sliders and leading swipe actions on pushed iOS screens compete with the content pan |
 | edge swipe, bottom | home and app switcher | the 34pt home indicator zone | no swipe-up controls within 34pt of the bottom |
-| edge swipe, top | notifications, Control Centre | | no swipe-down controls under the status bar |
+| edge swipe, top | notifications, Control Centre | on Face ID iPhones, Notification Centre from the top-left and Control Centre from the top-right | no swipe-down controls under the status bar |
 | pull down | refresh | threshold about 60 to 80pt; a tick haptic at the threshold | only on content lists; never on forms, never on screens where a drag has meaning |
 
 Every gesture has a visible alternative (a button, a menu) because gestures are undiscoverable; a swipe-to-delete without an Edit mode or a long-press menu fails the audit.
@@ -881,7 +881,7 @@ Motion is feedback when it answers one of four questions, and decoration otherwi
 | What changed? | a single attention cue | a row that was just added settling into place; a value that updated flashing once at 8 per cent of the accent |
 | What is happening now? | progress and loading (section 10) | a skeleton wave, a determinate bar |
 
-Everything else is decoration: fade-up on every section, hover lift on every card, looping bounces, parallax on everything (design-taste, section 3). The house budget on a product screen is one spatial move per transition and one feedback move per control; on a marketing page one considered move per viewport, which the taste skill's "slowness" rule already demands. Exits are shorter than entrances (Material's rule, because the user has already decided to leave). `prefers-reduced-motion` and the iOS and Android reduce-motion settings replace movement with cross-fades of the same duration, never with nothing, because a state change that happens with no transition is disorienting in its own way. Rauno Freiberg's "Invisible details of interaction design" (July 2023) is the reading for the physics: its sections on kinetic physics, responsive gestures, spatial consistency, fluid morphing, scroll landmarks and Fitts's law (the time to hit a target rises with its distance and falls with its size; 02-perception-and-psychology.md, section 8.1) are the vocabulary the house uses in motion critique.
+Everything else is decoration: fade-up on every section, hover lift on every card, looping bounces, parallax on everything (design-taste, section 3). The house budget on a product screen is one spatial move per transition and one feedback move per control; on a marketing page one considered move per viewport, which design-taste's "slowness" rule already demands (design-taste, section 2). Exits are shorter than entrances (Material's rule, because the user has already decided to leave). `prefers-reduced-motion` and the iOS and Android reduce-motion settings replace movement with cross-fades of the same duration, never with nothing, because a state change that happens with no transition is disorienting in its own way. Rauno Freiberg's "Invisible details of interaction design" (July 2023) is the reading for the physics: its sections on kinetic physics, responsive gestures, spatial consistency, fluid morphing, scroll landmarks and Fitts's law (the time to hit a target rises with its distance and falls with its size; 02-perception-and-psychology.md, section 8.1) are the vocabulary the house uses in motion critique.
 
 ## 19. Premium UI craft details
 
@@ -1089,6 +1089,7 @@ State audit: a systematic check that every component in a build renders every ap
 
 ## Terms introduced
 
+- Accessible name: the label assistive technology reads for an element, from its content, `aria-label` or `aria-labelledby`.
 - Ambient and key shadow: the soft, unoffset, low-alpha shadow that implies distance, and the sharp, offset shadow that defines the edge, in a two-part shadow model.
 - Anchor positioning: CSS (`anchor-name`, `position-anchor`, `anchor()`, `position-area`) that places an element relative to a named anchor element, with fallback positions when it would overflow.
 - APCA (Accessible Perceptual Contrast Algorithm): the contrast model proposed for WCAG 3, used by the house as a second opinion to WCAG 2.2.

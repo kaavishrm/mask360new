@@ -38,7 +38,7 @@ Illuminance (the light arriving on a surface, measured in lux) falls with the sq
 
 Exposure in stops: a stop is a doubling or halving of light. On the lens, f/2.8 to f/4 is one stop; on the shutter, 1/50 to 1/100 is one stop; on the sensor, ISO 800 to ISO 1600 is one stop. T-stops (measured transmission) are what cinema lenses carry; f-stops are geometric (focal length divided by aperture diameter) and ignore glass losses, so a T2.8 lens passes exactly as much light as any other T2.8 lens. An incident meter (Sekonic L-858D, or the L-308X at the budget end) with the dome pointed at the camera reads the light falling on the subject and is the honest way to set ratios; a reflective reading off a dark fabric or a white marble lobby lies in opposite directions.
 
-Sizing the key from the stop: the light an incident meter needs at the subject is lux = 340 × T² ÷ (ISO × t), where T is the T-stop and t the exposure time in seconds. The constant 340 is the calibration Sekonic uses for its dome; ISO 2720 allows about 240 to 400, so meters from different makers differ by up to a third of a stop. At 1/50 s and ISO 800, T2.8 needs about 170 lux (16 foot-candles; one foot-candle is 10.76 lux), T4 about 340, T5.6 about 670, T8 about 1,360 and T11 about 2,570; at ISO 3200, T2.8 needs about 42 lux. A jewellery macro at T8 to T11 therefore needs 8 to 16 times the light of a T2.8 interview, which is why 1,200 W heads appear on macro days (full table in 17.4). Use the sum to check a lamp list against the look before the recce: a key that must reach 1,360 lux through one stop of diffusion needs a lamp delivering about 2,700 lux bare at that distance.
+Sizing the key from the stop: the light an incident meter needs at the subject is lux = 340 × T² ÷ (ISO × t), where T is the T-stop and t the exposure time in seconds. The constant 340 is the calibration Sekonic uses for its dome; ISO 2720 allows about 240 to 400, so meters from different makers differ by up to a third of a stop. At 1/50 s and ISO 800, T2.8 needs about 170 lux (16 foot-candles; one foot-candle is 10.76 lux), T4 about 340, T5.6 about 670, T8 about 1,360 and T11 about 2,570; at ISO 3200, T2.8 needs about 42 lux. A jewellery macro at T8 to T11 therefore needs 8 to 16 times the light of a T2.8 interview, which is why 1,200 W heads appear on macro days (full table in 17.4). Use the sum to check a lamp list against the look before the recce (the location scouting visit): a key that must reach 1,360 lux through one stop of diffusion needs a lamp delivering about 2,700 lux bare at that distance.
 
 ### 1.2 Colour temperature
 
@@ -97,7 +97,7 @@ Luxury rarely lives at 1:1 (nothing to discover) or beyond 8:1 for long (the vie
 
 ### 1.6 Reading exposure on the monitor
 
-The creative director at video village judges light on a monitor, and a "too dark" note is only actionable when it says whether the information is on the sensor. The DIT (digital imaging technician) or the camera assistant sets up three tools (full treatment in 14-video-preproduction-and-cinematography.md, section 9):
+The creative director at video village (the monitor station where director and client watch) judges light on a monitor, and a "too dark" note is only actionable when it says whether the information is on the sensor. The DIT (digital imaging technician) or the camera assistant sets up three tools (full treatment in 14-video-preproduction-and-cinematography.md, section 9):
 
 - False colour: the monitor paints each brightness band a flat colour. ARRI's Rec 709 (the HD television colour and brightness standard) false colour, per ARRI's camera documentation: purple 0 to 2.5 per cent (black clipped), blue 2.5 to 4 per cent (just above clipping), green 38 to 42 per cent (18 per cent grey), pink 52 to 56 per cent (one stop over grey, the band where light skin sits), yellow 97 to 99 per cent (just below clipping), red 99 to 100 per cent (white clipped). Medium and dark complexions sit from green down to about 2 stops under grey; forcing every face into pink is how darker skin gets lifted into grey (6.1).
 - Waveform: a graph of brightness across the frame from 0 to 100 per cent. Keep the highlights the client needs (a white shirt, a window, a diamond's table) under 95 to 100 per cent, and the shadow detail a phone must show above 5 to 10 per cent (1.5).
@@ -170,7 +170,7 @@ Separation comes from any difference between subject and background: brightness 
 
 ### 2.12 Continuity across shots and days
 
-Light continuity is the reason a brand film from one DP (director of photography) cuts together and one from three does not. Log, per setup: fixture, modifier, distance, height, dimmer level, CCT, camera white balance, ISO, aperture, shutter, ND (neutral density filtration, which cuts light without changing colour), and a wide reference still. For exteriors, note the time and the sun's azimuth and elevation (Sun Seeker and PhotoPills give both) so that a pickup two days later is scheduled for the same sun. For interiors lit by windows, decide early whether the window is "the key" or "a practical" and block all coverage within the hour it holds. The reverse shot is the usual failure: the key side flips, the ratio changes, and the edit shows two rooms.
+Light continuity is what lets a brand film shot by several DPs (directors of photography) cut together as one. Log, per setup: fixture, modifier, distance, height, dimmer level, CCT, camera white balance, ISO, aperture, shutter, ND (neutral density filtration, which cuts light without changing colour), and a wide reference still. For exteriors, note the time and the sun's azimuth and altitude (Sun Seeker and PhotoPills give both) so that a pickup two days later is scheduled for the same sun. For interiors lit by windows, decide early whether the window is "the key" or "a practical" and block all coverage within the hour it holds. The reverse shot is the usual failure: the key side flips, the ratio changes, and the edit shows two rooms.
 
 Vertical-first and dual-ratio capture change the rig. A 9:16 frame is taller, so ceilings and floors enter it: rig keys higher, or overhead as a single soft space light (5.2), and move flags and stands out of the vertical safe area. When one camera protects both 16:9 and 9:16, put both frame lines on the monitor and check that lamp stands, the boom and the boom's shadow clear the taller crop (10.2; safe areas in 26-platform-and-format-specs-2026.md, section 5.6).
 
@@ -212,9 +212,9 @@ Diwali, wedding jewellery and iftar tables are seasonal staples, and flame light
 
 ### 3.1 Golden hour, blue hour, magic hour planning
 
-- Golden hour: the sun below about 6 degrees elevation, roughly the last hour before sunset and the first after sunrise; warm (3,000 to 3,500 K), low, long shadows, and about three stops dimmer than noon. In Mumbai or Dubai near the equator-side latitudes (19 and 25 degrees north) the sun drops fast, so "golden hour" is often 35 to 45 minutes; in a Jaipur winter it stretches a little.
+- Golden hour: the sun below about 6 degrees altitude, roughly the last hour before sunset and the first after sunrise; warm (3,000 to 3,500 K), low, long shadows, and about three stops dimmer than noon. In Mumbai or Dubai near the equator-side latitudes (19 and 25 degrees north) the sun drops fast, so "golden hour" is often 35 to 45 minutes; in a Jaipur winter it stretches a little.
 - Blue hour: the sun 4 to 6 degrees below the horizon, after sunset and before sunrise; the sky is a soft deep blue at 9,000 K and above while practicals and windows glow warm. The hotel exterior and the lit pool are shot here, with interiors already lit to balance (6.7).
-- Magic hour is the two together. Plan it with Sun Seeker (augmented-reality sun path on a phone) or PhotoPills (planner with sun, moon, Milky Way, and shadow length; the standard for stills shooters). Both show the sun's azimuth and elevation for any date and place, so the DP can promise "the sun will enter the courtyard arch at 17:12 on the 14th" before the recce.
+- Magic hour is the two together. Plan it with Sun Seeker (augmented-reality sun path on a phone) or PhotoPills (planner with sun, moon, Milky Way, and shadow length; the standard for stills shooters). Both show the sun's azimuth and altitude for any date and place, so the DP can promise "the sun will enter the courtyard arch at 17:12 on the 14th" before the recce.
 
 ### 3.2 Overcast as a softbox; harsh noon and how to use it
 
@@ -324,7 +324,7 @@ A hazer puts a fine, long-hanging mist (water-based glycol or glycerine fluid, o
 | Aputure STORM CS32 | 3,200 W | Tunable colour | listed $7,590 (Cine Kit with CF16 Fresnel $10,499) | The large tunable source for stages and day exteriors |
 | Aputure LS 300d II, LS 300x | 300 W | Daylight and bi-colour | LS 300d II listed $759 | Kickers, backlights, small interiors |
 | Nanlux Evoke 2400B | 2,400 W | Bi-colour 2,700 to 6,500 K with green and magenta plus or minus 80 | CRI 96, TLCI 97; over 300,000 lux at 1 m; IP55; AC 100 to 240 V at 26 A max | The HMI replacement for sunlight through a window |
-| Nanlux Evoke 5000B | 5,000 W | Bi-colour 2,700 to 6,500 K | CRI 97, TLCI 98, TM-30 Rf 96 and Rg 102, SSI 85 at 3,200 K and 74 at 5,600 K; about 555,250 lux at 1 m at 5,600 K with the reflector at 45 degrees; IP66; 46 kg with yoke; 44 dB(A) in smart fan mode; US list $14,800, or $15,500 with flight case (CineD launch report); about 19.8 lakh rupees in India including GST and duty on a 2025 retailer listing | Nanlux states its output approaches a 9 kW HMI; maximum draw 5,200 W, about 23 A at 230 V, beyond any 16 A Indian socket, so a generator or a venue's three-phase feed |
+| Nanlux Evoke 5000B | 5,000 W | Bi-colour 2,700 to 6,500 K | CRI 97, TLCI 98, TM-30 Rf 96 and Rg 102, SSI 85 at 3,200 K and 74 at 5,600 K; about 555,250 lux at 1 m at 5,600 K with the reflector at 45 degrees; IP66; 46 kg with yoke; 44 dB(A) in smart fan mode; US list $14,800, or $15,500 with flight case (CineD launch report); about 19.8 lakh rupees (1.98 million; a lakh is 100,000) in India including GST and duty on a 2025 retailer listing | Nanlux states its output approaches a 9 kW HMI; maximum draw 5,200 W, about 23 A at 230 V, beyond any 16 A Indian socket, so a generator or a venue's three-phase feed |
 | Aputure STORM 1200x | 1,200 W output, 1,550 W maximum draw | Tunable white 2,500 to 10,000 K, plus or minus 100 per cent green and magenta, xy colour control (setting colour by CIE chromaticity coordinates) | CRI 95 or above, TLCI 95 or above, TM-30 Rf 95, SSI 87 against tungsten and a 5,600 K daylight reference; 8,490 lux at 3 m bare and 22,500 lux with the 45 degree reflector at 5,600 K; IP65; head with yoke 9.5 kg; $2,990 | The tunable-white successor to the LS 1200d Pro |
 | Aputure STORM 1000c | 1,000 W | Full colour | $2,990 | The coloured 1,000 W key and accent |
 | Aputure STORM 700x and 400x | 700 W and 400 W | Tunable white | $1,690 and $1,059 | Mid-size keys and backlights |
@@ -381,7 +381,7 @@ Bi-colour lamps (two white emitter sets) give more output and better skin at any
 
 - App control for small crews: Aputure Sidus Link, Nanlux NANLINK and the Astera app set intensity, CCT, green and magenta and effects on every head from one phone, and store looks per setup for continuity (2.12).
 - Wireless DMX (LumenRadio CRMX), sACN and Art-Net (5.3) run pixel tubes and larger rigs from a console.
-- A board operator on a console (grandMA3 onPC, ETC Nomad, or an iPad app) programs cues such as passing car lights, a television's flicker or lightning; a programmed cue repeats identically across takes, which protects continuity and saves resetting by hand.
+- A board operator on a console (grandMA3 onPC, ETC Nomad, or an iPad app) stores cues such as passing car lights, a television's flicker or lightning; a stored cue repeats identically across takes, which protects continuity and saves resetting by hand.
 - At events, ask the lighting designer for a DMX universe for camera lights, so faces can be lifted without fighting the stage desk (6.11).
 
 ## 6. Lighting by subject
@@ -555,7 +555,7 @@ Mount under the second button line of a shirt or at the sternum under a dress, 1
 
 - The Sound Devices 833 and 888 are the feature-film mixers.
 - Camera audio on cinema bodies is usable (ARRI, Sony Venice and FX series have decent preamps) and on mirrorless cameras is a scratch track only.
-- Handover to post: record polyphonic BWF (Broadcast Wave Format, a WAV carrying timecode and metadata) with iXML metadata (scene, take, and track names such as "Boom" or "Lav Priya"), ISO tracks (each mic isolated) plus a mix track, and a daily sound report listing takes, circled takes and problems. Send a wireless feed of the mix to camera so dailies carry usable scratch audio.
+- Handover to post: record polyphonic BWF (Broadcast Wave Format, a WAV carrying timecode and metadata) with iXML metadata (scene, take, and track names such as "Boom" or "Lav Priya"), ISO tracks (each mic isolated) plus a mix track, and a daily sound report listing takes, circled takes (the director's chosen takes) and problems. Send a wireless feed of the mix to camera so dailies (the day's footage, synced for review) carry usable scratch audio.
 
 ### 10.5 Timecode, jam sync, the slate and the clap
 
@@ -579,7 +579,7 @@ Timecode is a running clock (hours, minutes, seconds, frames) written into every
 
 ### 10.8 Launch events: press feed, desk split, room mics
 
-For a launch, agree three feeds with the AV (audio-visual) company before the run of show: a press feed (a mult box, which splits one desk output into many XLR line outputs, for TV and creator crews); a multitrack split from the front-of-house desk to the recap recorder (over Dante audio networking or USB), so speeches arrive clean from the desk; and two room mics as an ORTF pair (10.1) for applause and atmosphere. Get the venue's dB(A) limit and curfew in writing before the run of show; ballroom limits are set per venue, and India's 10 pm loudspeaker rule (6.11) applies outdoors.
+For a launch, agree three feeds with the AV (audio-visual) company before the run of show (the minute-by-minute event schedule): a press feed (a mult box, which splits one desk output into many XLR line outputs, for TV and creator crews); a multitrack split from the front-of-house desk (the main console mixing for the audience) to the recap recorder (over Dante audio networking or USB), so speeches arrive clean from the desk; and two room mics as an ORTF pair (10.1) for applause and atmosphere. Get the venue's dB(A) limit and curfew in writing before the run of show; ballroom limits are set per venue, and India's 10 pm loudspeaker rule (6.11) applies outdoors.
 
 ## 11. Post sound: dialogue, foley, ambience, design
 
@@ -618,7 +618,7 @@ Native audio from generated video (Veo 3, Sora 2, Kling) usually carries generic
 ### 11.6 Voice-over casting, sessions and rights
 
 - Usage: a VO fee is licensed by medium (digital organic, paid social, TV, radio, cinema, OOH screens), territory and term (commonly one year, renewable), with perpetuity as a priced buyout (a one-off fee for all agreed uses). Write the terms on the purchase order, because a TV airing of a digital-only read is a breach. Rates are quoted per script and usage and are not published.
-- Session: 48 kHz 24-bit WAV, a large-diaphragm condenser (Neumann U 87 or TLM 103) at 15 to 20 cm with a pop filter, in a treated booth. Get three passes per line (as written; warmer and slower; quicker), plus wild takes of the brand name and the sign-off line, and slate each take by voice.
+- Session: 48 kHz 24-bit WAV, a large-diaphragm condenser (a studio microphone with a capsule about 25 mm across, detailed and warm close up; Neumann U 87 or TLM 103) at 15 to 20 cm with a pop filter, in a treated booth. Get three passes per line (as written; warmer and slower; quicker), plus wild takes of the brand name and the sign-off line, and slate each take by voice.
 - Remote direction: Source-Connect, ipDTL or Cleanfeed carry a broadcast-quality line between studios, so a Dubai creative director can direct a Mumbai artist live.
 - Contract clause: the artist's voice may not be used to train or clone a synthetic voice without a separate written licence and fee (the disclosure rule in section 16; voice rights in 22-ai-era-craft-and-generative-tools.md, section 7.4).
 
@@ -628,7 +628,7 @@ Native audio from generated video (Veo 3, Sora 2, Kling) usually carries generic
 
 | Route | Cost | Lead time | Ownership | Use |
 |---|---|---|---|---|
-| Needle drop (an existing commercial recording) | Highest; quoted per use, territory and term: lakhs of rupees for small catalogue tracks, crores or hundreds of thousands of dollars for global hits; unknown until asked | 4 to 8 weeks | Licensed for the agreed term; needs two licences (12.2) | A statement about taste: the one track that could only be this brand |
+| Needle drop (an existing commercial recording) | Highest; quoted per use, territory and term: lakhs of rupees for small catalogue tracks, crores (a crore is 10 million rupees) or hundreds of thousands of dollars for global hits; unknown until asked | 4 to 8 weeks | Licensed for the agreed term; needs two licences (12.2) | A statement about taste: the one track that could only be this brand |
 | Library or production music (pre-cleared catalogues licensed by subscription or per track) | Lowest | Same day | Licensed under the platform's terms (12.3) | Social volume, scratch tracks, beds where the sound design leads |
 | Composed (a composer writes to picture) | Between the two | 2 to 4 weeks | Owned through a buyout or assignment (15.3) | The house default for a brand film above the social tier; can become the sonic identity (section 15) |
 
@@ -877,7 +877,7 @@ Incident illuminance from lux = 340 × T² ÷ (ISO × t) (1.1), at 1/50 s; value
 
 ### 18.1 The light recce
 
-- Sun: azimuth and elevation at call time, at the planned hero shot and at wrap, for the actual shoot date (Sun Seeker or PhotoPills, 3.1); which windows take direct sun and when (3.3).
+- Sun: azimuth and altitude at call time, at the planned hero shot and at wrap, for the actual shoot date (Sun Seeker or PhotoPills, 3.1); which windows take direct sun and when (3.3).
 - Practicals: every lamp in every room listed with its kelvin and a judgement of its CRI; a spectrometer such as the Sekonic C-800 SpectroMaster reads CCT and CRI on the spot and settles arguments with a hotel's engineering team. Note which practicals have dimmers and who controls them.
 - Power: socket ratings (16 A in India), the venue electrician's name, the generator position agreed with sound (10.7), and the run from generator to set in metres of cable.
 - Flicker: mains is 50 Hz in India and the UAE, so test practicals, signage and LED walls at the planned shutter and frame rate (5.7, 6.11).
@@ -931,113 +931,241 @@ A creative director gets faster and better results by translating a feeling into
 
 - 32-bit float: a recording format storing each sample as a floating-point number so that signals above 0 dBFS are retained and can be reduced in post without clipping.
 - 3:1 rule: keep a second microphone at least three times as far from a source as the first to limit comb filtering.
+- 5.1: six-channel surround (left, right, centre, LFE, left surround, right surround), the broadcast and streaming surround standard.
+- AAF: Advanced Authoring Format, the file that carries an edit's audio tracks and fades to the mixer.
+- Abaya: the black over-garment worn by many Gulf women.
 - ADM BWF: a WAV file carrying Audio Definition Model metadata, the delivery format for Dolby Atmos masters.
 - ADR: automated dialogue replacement; re-recording lines in a studio to picture.
 - Ambience bed: a continuous background sound layer that runs under a scene to unify cuts.
 - Ambisonic: a full-sphere recording format decodable to any speaker layout.
+- Art-Net and sACN: protocols that carry DMX lighting control over Ethernet.
+- ASC: the American Society of Cinematographers.
+- AV company: the audio-visual contractor that runs sound, light and screens at an event.
+- B-camera: a second camera covering the same take from another angle.
+- Back light: a source behind the subject, high and opposite the key, that separates hair and shoulders from the background.
+- Beadboard: expanded polystyrene sheet used as a cheap large white bounce; sold in Mumbai as thermocol.
+- Beauty dish: a shallow metal reflector with a centre deflector, crisper than a softbox.
+- Best boy and sparks: the gaffer's deputy, and the lighting electricians.
 - Bi-colour: a fixture with warm and cool white emitter sets, tunable between them.
 - Black wrap: matte black aluminium foil moulded over lamps to control spill.
+- Blimp: a basket windshield around a microphone.
 - Blue hour: the period after sunset and before sunrise when the sun is 4 to 6 degrees below the horizon and the sky is deep blue.
 - Book light: a bounce followed by a diffusion frame in a V shape, giving a very large even soft source.
 - Boom: a pole-mounted microphone held above the frame line.
+- Bowens mount: the bayonet accessory mount most softboxes fit.
+- BPM: beats per minute, the tempo of a piece of music.
 - Bracketing: shooting several exposures at different levels of the same frame to merge later.
-- Broad and short lighting: keying the side of the face turned toward (broad) or away from (short) the camera.
+- Branchaloris: a real branch held in a beam to throw a leaf pattern.
+- Broad and short lighting: keying the side of the face turned towards (broad) or away from (short) the camera.
 - Butterfly (Paramount) lighting: key on the camera axis, high, producing a symmetrical shadow under the nose.
+- Buyout: a one-off fee for all agreed uses of a work or a performance.
+- BWF: Broadcast Wave Format, a WAV that carries timecode and metadata; polyphonic BWF holds several tracks in one file.
 - Catchlight: the reflection of the light source in the eye.
+- CCT: correlated colour temperature, the kelvin of the nearest black-body colour, quoted for LEDs and discharge lamps.
 - Chiaroscuro: strong light and dark contrast with much of the frame in shadow.
 - China ball: a paper lantern used as an omnidirectional soft source.
+- Circled takes: the director's chosen takes, marked on the sound and camera reports.
 - Clamshell: two stacked soft sources on axis, one above and one below the lens.
 - CMO: collective management organisation, a body that licenses and collects royalties on behalf of many rights holders.
 - COB: chip on board, an LED fixture with one dense emitter array that behaves as a point source.
 - Colour temperature: the kelvin value of the black body whose colour matches a light source.
 - Comb filtering: the hollow tone caused by summing two recordings of one source with a time offset.
+- Conform: rebuilding the edit's audio from the original recordings against the locked picture.
+- Content ID: YouTube's automated rights-matching system.
+- Convolution reverb: a reverb that applies a recorded impulse response so a dry sound takes on a real room.
 - CRI: colour rendering index; fidelity of a source against eight test colours, out of 100; R9 is the saturated red sample.
+- CRMX: LumenRadio's wireless DMX system.
 - Cross-polarisation: polarising filters on both light and lens to remove specular glare.
 - CTB and CTO: colour temperature blue and orange correction gels.
+- Cucoloris (cookie): a cut-out panel between a hard source and the subject that throws a pattern.
+- D65: the CIE standard daylight illuminant at 6,504 K, the display white point.
+- Dailies: the day's footage, synced for review.
+- Dante: a network protocol that carries many channels of audio over Ethernet.
+- Day for night: shooting in daylight, backlit and underexposed, and grading cool so it reads as night.
 - dB SPL: sound pressure level in decibels against the threshold of hearing.
+- dB(A): sound level weighted to the ear's sensitivity.
 - dBFS: decibels relative to digital full scale; 0 is the maximum.
 - dBTP: decibels true peak, the inter-sample peak after oversampling.
 - dBu: analogue level in decibels against 0.775 V.
+- DCP: Digital Cinema Package, the file set delivered to cinemas.
+- De-esser: a compressor that acts only on the sibilant band.
+- Dead cat (windjammer): a fur cover over a blimp that cuts wind noise.
 - Diffuse reflection: scattered return of light from a matte surface.
+- Distro: a power distribution box.
+- DIT: digital imaging technician, who manages camera files, monitoring and on-set colour.
+- Diya: a clay oil lamp, lit for Diwali and weddings.
+- DME: dialogue, music and effects stems delivered as separate files.
+- DMX: DMX512, the wired lighting-control standard of 512 channels per universe.
+- Dolby Atmos bed and objects: the fixed channel layout of an Atmos mix (bed) and the individual sounds carrying position metadata (objects).
+- DP: director of photography.
+- Drop-frame: a timecode count that skips two frame numbers each minute, except every tenth, to stay in step with the clock at 29.97 fps.
 - Ducking: an automatic level reduction of music keyed from dialogue.
 - Dulling spray: a matte aerosol applied to shiny surfaces to kill reflections.
+- Duv: the offset of a source's colour above (green) or below (magenta) the black-body curve.
 - Dynamic range: the span between noise floor and the loudest clean level.
-- Equivalent input noise (EIN): a preamp's self-noise referred to its input, in dBu; more negative is quieter.
+- EIN: equivalent input noise, a preamp's self-noise referred to its input, in dBu; more negative is quieter.
+- EL Zone System: Ed Lachman's monitor display that colours each stop above and below grey in its own hue.
+- EQ: equalisation, cutting or boosting frequency bands.
+- Eyeline: the direction a subject looks, set by where the interviewer sits.
+- F&B: food and beverage.
+- F-stop: the geometric aperture, focal length divided by aperture diameter.
 - Falloff: the rate at which illuminance drops with distance from a source.
+- False colour: a monitor mode that paints each brightness band a flat colour.
+- Fill light: a lower-intensity source opposite the key that sets the lighting ratio.
 - Flag, cutter, floppy: black panels that block light; a cutter is long and narrow; a floppy is a hinged double panel.
 - Flash blend: compositing one ambient exposure with several flash-lit exposures by hand.
+- Flutter echo: rapid ringing between parallel hard surfaces.
 - Focus stacking: merging several frames focused at different depths into one sharp image.
 - Fogger: a machine that produces dense, local, short-lived cloud.
 - Foley: sound performed to picture in a studio with props.
+- Foot-candle: illuminance of one lumen per square foot, 10.76 lux.
 - Fresnel: a lamp with a stepped lens that focuses from spot to flood.
+- Front-of-house desk: the main console mixing an event for the audience.
+- Gaffer: the chief lighting technician.
 - Gain staging: setting levels at each stage of the chain so processors work in range and the bus keeps headroom.
-- Golden hour: the period when the sun is below about 6 degrees elevation, warm and low.
+- Gobo: a metal or glass pattern slide in a projection fixture.
+- Golden hour: the period when the sun is below about 6 degrees altitude, warm and low.
 - Grid (egg crate): a fabric honeycomb on a soft source that limits spread.
 - Grid cloth: woven diffusion fabric, tough enough for large outdoor frames.
+- Grip: the crew member who rigs stands, flags and frames.
 - Hazer: a machine that produces a fine long-hanging mist to make light beams and depth visible.
+- HDR merge: combining bracketed exposures into one high dynamic range image.
+- HDRI: a high dynamic range panorama used to light a CG scene with a captured environment.
 - High key and low key: lighting with small shadow areas and bright grounds (high) or large shadow areas and dark grounds (low).
+- High-pass filter: a filter that removes everything below a set frequency.
 - HMI: a metal halide arc lamp with ballast, the brightest daylight source per watt.
 - HSS: high-speed sync; pulsed flash that allows shutter speeds above the sync speed.
+- IGBT strobe: a flash head that cuts the tube's discharge electronically for very short flash durations.
 - Illuminance: light arriving on a surface, measured in lux.
+- Impulse response: a recording of how a room answers a click or sweep, used to recreate that room.
+- Incident meter: a light meter with a dome that reads the light falling on the subject.
 - Integrated loudness: the gated average loudness of a whole programme, in LUFS.
+- Interrotron: Errol Morris's two-way teleprompter rig that puts the interviewer's face over the lens.
 - Inverse square law: illuminance falls with the square of distance from a point source.
+- IP rating: the IP code; the first digit rates dust protection, the second water.
 - IPRS: the Indian Performing Right Society, India's registered copyright society for composers, authors and publishers of musical and literary works.
+- ISO: the sensor's sensitivity rating; doubling it adds one stop of exposure.
+- ISO track: a single microphone recorded on its own track.
 - ISRC: International Standard Recording Code, the 12-character identifier of a recording.
+- iXML: metadata inside a BWF file carrying scene, take and track names.
+- Jaali: a pierced stone lattice screen in Indian architecture.
 - Jam sync: copying timecode from a master clock into a device that then free-runs.
+- K-weighting and gating: the BS.1770 filter that approximates the ear's sensitivity, and the exclusion of silence and quiet passages from the loudness average.
+- Kandura: the ankle-length robe worn by Emirati men.
+- Key light: the dominant source in a setup.
+- Khaleeji: the Gulf dialects of Arabic, such as Emirati and Saudi.
 - Kicker: a light from behind at 45 degrees on the fill side that lands on cheek and jaw.
+- kVA: kilovolt-amperes, a generator's apparent power rating.
+- Lakh and crore: 100,000 and 10 million in the Indian numbering system.
+- Large-diaphragm condenser: a studio microphone with a capsule about 25 mm across, detailed and warm close up.
 - Lavalier: a miniature microphone clipped or hidden on the body.
 - Leaf shutter: a shutter in the lens that syncs with flash at any speed.
+- LED volume: a virtual production stage whose LED walls surround and light the set.
+- Leq(m): equivalent continuous level, M-weighted, the trailer loudness measure.
 - LFE: the low-frequency effects channel, the .1 of 5.1.
+- Library (production) music: pre-cleared catalogue music licensed by subscription or per track.
 - Light painting: moving a source during a long exposure to build a reflection or a lit area.
 - Lighting ratio: key plus fill against fill, in the ASC definition.
 - Lightmen: the Indian industry term for lighting technicians supplied by the rental vendor.
+- Log: a flat, logarithmic camera recording that keeps highlight and shadow range for the grade.
 - Loop lighting: key placed so the nose shadow forms a small loop on the cheek.
 - LRA: loudness range, the spread of short-term loudness across a programme, in LU.
+- LU: loudness unit, equal to 1 dB on a loudness scale.
 - LUFS and LKFS: loudness units relative to full scale, the ITU-R BS.1770 measure.
+- Lux: the unit of illuminance, one lumen per square metre.
+- M&E: the music and effects mix without voice, the base for language versions.
 - Magic hour: golden hour and blue hour taken together.
+- Mashrabiya: a carved wooden lattice window screen in Gulf and Arab architecture.
 - Master use licence: permission from the owner of a recording to use that recording.
+- MFN: most favoured nation, a clause requiring terms no worse than the other rights holder receives.
 - Mid-side: a stereo method pairing a forward cardioid with a sideways figure-of-eight, decoded to adjustable width.
 - Mired: micro reciprocal degrees, one million divided by kelvin; the unit of gel shift.
 - Modelling lamp: the continuous lamp inside a strobe head that previews where the flash will fall.
+- Modern Standard Arabic: the formal written and broadcast register of Arabic.
+- Moiré: a shimmering interference pattern where a fine grid, such as an LED wall, beats against the sensor's.
 - Motivated light: light attributable to a visible or plausible source in the frame.
+- MPEG-H: an immersive broadcast audio codec.
+- Mult box: a box that splits one desk output into many XLR line outputs for press crews.
+- Nasheed: unaccompanied or voice-led devotional song.
+- ND: neutral density filtration, which cuts light without changing colour.
 - Needle drop: use of an existing commercial recording.
 - Negative fill: a black surface on the shadow side that absorbs ambient bounce.
 - Net (scrim): a mesh that reduces light by one (single) or two (double) stops without changing quality.
+- NLE and DAW: non-linear editing application, and digital audio workstation.
+- North light: skylight from a window that takes no direct sun.
 - Nyquist: the rule that a sample rate captures frequencies up to half its value.
+- Octabox: an eight-sided softbox.
+- OOH: out-of-home media, screens and posters in public places.
 - Open shade: a subject in shadow lit only by open sky.
+- Options: pre-priced extensions of term, territory and media agreed inside the first licence.
 - Original audio: a brand's own sound that other accounts can reuse on a platform.
 - ORTF: a near-coincident stereo pair of cardioids 17 cm apart at 110 degrees.
+- OTT, CTV and VOD: streaming services, connected TV, and video on demand.
 - Parabolic reflector: a deep, focusable reflector giving a specular centre with soft edges.
 - Phase and polarity: the time relationship between two signals, and the sign of a waveform.
+- Pixel pitch: the distance between LED centres on a screen, in millimetres.
+- Polar pattern: a microphone's sensitivity by direction: omni (all round), cardioid (rejects the rear), supercardioid and hypercardioid (narrower, with a small rear lobe), figure-of-eight (front and back).
 - Practical: a visible light source in the frame.
 - PRO: performing rights organisation, which collects performance royalties for compositions.
 - PWM: pulse width modulation, a dimming method that can flicker at high frame rates.
+- Q: the width of an EQ band; a higher Q is narrower.
+- RCCB: residual current circuit breaker, which cuts the supply on an earth leak.
+- Rec 709: the HD television colour and brightness standard.
+- Recce: the location scouting visit.
 - Rembrandt lighting: key high and 45 degrees to the side, leaving a lit triangle under the far eye.
 - RGBWW: fixtures that mix red, green, blue, warm white and cool white emitters.
 - Rim light: a source directly behind the subject that outlines it.
 - Riser, hit, whoosh, sub, texture: trailer sound-design elements (a rising build, an impact, a passing air sound, a sub-bass boom, a continuous tonal layer).
 - Room tone: a recording of a location's silence used to fill gaps in dialogue.
+- Run of show: the minute-by-minute event schedule.
 - Sample rate and bit depth: samples per second and bits per sample in digital audio.
 - Short-term loudness: loudness measured over a sliding 3 second window.
 - Shotgun microphone: an interference-tube microphone with a narrow forward pickup.
+- Shutter angle: exposure time multiplied by frame rate and by 360; a 180 degree shutter exposes for half the frame interval.
+- Sibilance: the hissing "s" and "sh" sounds of speech, concentrated at 5 to 8 kHz.
 - Sidechain: a processor input that lets one signal control the processing of another.
+- Silence move: a cut that drops all sound for 8 to 20 frames before a reveal or a line.
 - Slate: the clapperboard that labels and syncs a take; a smart slate displays timecode.
 - Snoot, barn doors: tube and hinged leaves that shape a hard beam.
+- Sonic identity: a brand's system of sound logo, theme, functional sounds, voice and usage rules.
 - Sonic logo: a 1 to 5 second sound that identifies a brand.
+- Sound hook: a single recognisable real sound or a specific spoken line placed at frame one of a social cut.
+- Soundalike: music commissioned to imitate a recognisable recording, arrangement or voice.
+- Space light: one overhead soft source over the whole set.
 - Specular reflection: mirror-like return of the light source from a glossy surface.
 - Split lighting: key at 90 degrees, lighting half the face.
 - SSI: spectral similarity index, the Academy measure (SMPTE ST 2122) comparing a source's spectrum with a reference.
 - Stems: a mix delivered as separate instrument or element groups.
+- Stop: a doubling or halving of light.
 - Strobe: studio flash, a short intense burst of light.
 - Sync licence: permission from the publisher to set a composition to picture.
 - Synthetically generated information: India's IT Rules term for content artificially created or altered to appear authentic.
 - T-stop: a measured transmission stop on a cinema lens.
+- t0.1 and t0.5: flash duration measured above 10 per cent and above half of peak output.
+- Tail slate: a slate shown upside down and clapped at the end of a take.
+- TASA: the Trailer Audio Standards Association, which sets the US trailer loudness ceiling.
+- TDRA and WPC: the UAE and Indian regulators of radio spectrum for wireless microphones.
+- Temp love: a client's attachment to a temp track the job cannot clear.
 - Tenting: enclosing a product in white fabric with lamps outside for shadowless gradients.
+- Three point lighting: key, fill and back light, the base grammar of film and TV lighting.
 - Timecode: the running clock written into recordings for synchronisation.
 - TLCI: television lighting consistency index, EBU Tech 3355, modelling an idealised three-chip camera.
 - TM-30: the IES rendering measure reporting fidelity (Rf) and gamut (Rg) against 99 samples.
 - True-peak limiter: a limiter that holds inter-sample peaks under a ceiling.
+- TVC: television commercial.
+- Ultrabounce: a white fabric with one black side, stretched on a frame for bounce.
+- Unaided attribution: naming the brand from a sound alone, without prompts.
+- Underslung boom: a boom held below the frame line, pointing up at the speaker.
+- Veiling flare: stray light scattered inside a lens that lifts the blacks and lowers contrast.
+- Video village: the monitor station where the director and client watch.
+- VO: voice-over.
+- Waveform: a monitor graph of brightness across the frame, from 0 to 100 per cent.
+- Wh: watt-hours, a battery's stored energy.
 - Wild lines and wild sound: lines or sounds recorded on set without the camera rolling.
+- Work-for-hire: a contract term under which the commissioning party owns the work from creation.
+- xy coordinates: CIE chromaticity values used to set a fixture's colour exactly.
+- Zebras: monitor stripes over every area above a set level.
+- Zero crossing: a point where the waveform passes through silence, where an edit makes no click.
 
 ## Sources and further reading
 
@@ -1051,60 +1179,68 @@ Books
 - Ric Viers, The Sound Effects Bible, 2008.
 - Jay Rose, Producing Great Sound for Film and Video, 4th edition, 2014.
 - Bobby Owsinski, The Mixing Engineer's Handbook, 5th edition, 2022.
-- Roger Deakins, Reflections: On Cinematography, Grand Central Publishing, 11 November 2025 (US; UK edition 12 February 2026).
+- Roger Deakins, Reflections: On Cinematography, 2025 (UK edition from Octopus; US and UK dates not confirmed from a publisher page).
 - Richard Avedon, In the American West, 1985.
 
 Specifications and standards
-- EBU R 128-2023, Loudness normalisation and permitted maximum level of audio signals, version 5, November 2023, https://tech.ebu.ch/docs/r/r128.pdf
-- EBU Tech 3341, Loudness metering: EBU mode metering to supplement EBU R 128, https://tech.ebu.ch/publications/tech3341
-- ITU-R BS.1770-5, Algorithms to measure audio programme loudness and true-peak audio level, 2023, https://www.itu.int/rec/R-REC-BS.1770
-- ATSC A/85:2026-07, Techniques for Establishing and Maintaining Audio Loudness for Digital Television, approved 8 July 2026, https://www.atsc.org/atsc-documents/a85-techniques-for-establishing-and-maintaining-audio-loudness-for-digital-television/
-- SMPTE ST 2122, Spectral Similarity Index (SSI); Academy overview at https://www.oscars.org/science-technology/projects/spectral-similarity-index-ssi
+- EBU R 128-2023, Loudness normalisation and permitted maximum level of audio signals, version 5, November 2023, https://tech.ebu.ch/docs/r/r128.pdf ; publication page with supplements s1, s2 and s4, https://tech.ebu.ch/publications/r128
+- EBU Tech 3341, Loudness metering: "EBU mode" metering to supplement EBU R 128 loudness normalisation, version 4.0, 21 November 2023, https://tech.ebu.ch/files/live/sites/tech/files/shared/tech/tech3341.pdf
 - EBU Tech 3355, Method for the assessment of the colorimetric properties of luminaires: the television lighting consistency index (TLCI), https://tech.ebu.ch/publications/tech3355
-- IES TM-30, Method for Evaluating Light Source Color Rendition, https://www.ies.org/
-- Netflix, Sound Mix Specifications and Best Practices (Partner Help Center; the article has moved behind the Netflix studio partner portal; summary at https://www.production-expert.com/production-expert-1/how-to-optimise-an-audio-mix-for-delivery-to-netflix)
+- ITU-R BS.1770-5, Algorithms to measure audio programme loudness and true-peak audio level, 2023, https://www.itu.int/rec/R-REC-BS.1770
+- ATSC A/85:2026-07, Techniques for Establishing and Maintaining Audio Loudness for Digital Television, approved 8 July 2026, https://www.atsc.org/wp-content/uploads/2026/07/A85-2026-07.pdf ; document page, https://www.atsc.org/atsc-documents/a85-techniques-for-establishing-and-maintaining-audio-loudness-for-digital-television/ ; press release, 15 July 2026, https://www.atsc.org/news/atsc-modernizes-industry-audio-loudness-guidance-with-revision-to-a-85-recommended-practice/
+- SMPTE ST 2122:2020, Spectral Similarity Index (SSI), published 8 June 2020, https://pub.smpte.org/doc/st2122/ ; Academy overview, https://www.oscars.org/science-technology/projects/spectral-similarity-index-ssi
+- ANSI/IES TM-30-20, IES Method for Evaluating Light Source Color Rendition, 2020 (check the IES for a later revision), https://www.ies.org/
+- ANSI C78.377-2017, Specifications for the Chromaticity of Solid State Lighting Products (check for a later revision).
+- ISO 2720:1974, General purpose photographic exposure meters (photoelectric type): guide to product specification.
+- Netflix, Sound Mix Specifications and Best Practices v1.5, https://backlothelp.netflix.com/hc/en-us/articles/360001794307-Netflix-Sound-Mix-Specifications-Best-Practices-v1-5 (the page now redirects to the partner portal; summary at https://www.production-expert.com/production-expert-1/how-to-optimise-an-audio-mix-for-delivery-to-netflix)
 - Apple, Apple Podcasts audio requirements, https://podcasters.apple.com/support/893-audio-requirements
 - Apple, Apple Digital Masters (PDF), https://www.apple.com/apple-music/apple-digital-masters/docs/apple-digital-masters.pdf
 - Spotify for Artists, Loudness normalization, https://support.spotify.com/us/artists/article/loudness-normalization/
+- Spotify Advertising, ad specs, https://ads.spotify.com/en-US/ad-specs/
 - YouTube Help, Recommended upload encoding settings, https://support.google.com/youtube/answer/1722171
-- Meta, Music Guidelines, https://www.facebook.com/legal/music_guidelines
+- Meta, Music Guidelines, https://www.facebook.com/legal/music_guidelines ; Meta Sound Collection, https://www.facebook.com/sound/collection/
+- TikTok Creative Center, Commercial Music Library, https://ads.tiktok.com/business/creativecenter/music/pc/en (returned a server error when fetched in October 2026)
+- Trailer Audio Standards Association (TASA), trailer loudness standard of 85 dB Leq(m); no public specification page was read for this file.
+- IATA, Lithium Battery Guidance Document (passenger provisions of the Dangerous Goods Regulations), https://www.iata.org/
 - EU Artificial Intelligence Act, Article 50, Transparency obligations, https://artificialintelligenceact.eu/article/50/
-- Regulation (EU) 2026/1744 (the Digital Omnibus on AI); summaries: Gibson Dunn, EU AI Act Omnibus agreement: postponed high-risk deadlines and other key changes, https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/ ; Jones Walker, Yes, August 2 still matters, https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html
+- The Digital Omnibus on AI (regulation number not confirmed against the Official Journal for this file); summaries: Gibson Dunn, EU AI Act Omnibus agreement: postponed high-risk deadlines and other key changes, https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/ ; Jones Walker, Yes, August 2 still matters, https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html
 - Government of India, Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026, G.S.R. 120(E), 10 February 2026; summary: Hogan Lovells, India introduces mandatory labelling for AI and 3-hour takedown for illegal content, https://www.hoganlovells.com/en/publications/india-introduces-mandatory-labelling-for-ai-and-3hour-takedown-for-illegal-content
+- Government of India, The Copyright Act, 1957, as amended by the Copyright (Amendment) Act, 2012, at the India Code portal, https://www.indiacode.nic.in/
+- Government of India, The Noise Pollution (Regulation and Control) Rules, 2000, at the Central Pollution Control Board, https://cpcb.nic.in/
+- UAE Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights, at the UAE legislation portal, https://uaelegislation.gov.ae/
 - UAE Ministry of Economy, guide to collective management of music rights; summary: Reed Smith, https://www.reedsmith.com/our-insights/blogs/viewpoints/102nr54/uae-ministry-of-economy-tourism-issues-guide-to-collective-management-of-music/
-- ATSC, A/85:2026-07 (PDF), https://www.atsc.org/wp-content/uploads/2026/07/A85-2026-07.pdf ; press release, 15 July 2026, https://www.atsc.org/news/atsc-modernizes-industry-audio-loudness-guidance-with-revision-to-a-85-recommended-practice/
-- EBU, R 128 publication page, https://tech.ebu.ch/publications/r128
-- Netflix, Sound Mix Specifications and Best Practices v1.5, https://backlothelp.netflix.com/hc/en-us/articles/360001794307-Netflix-Sound-Mix-Specifications-Best-Practices-v1-5
-- Government of India, The Noise Pollution (Regulation and Control) Rules, 2000.
-- Government of India, The Copyright Act, 1957, as amended by the Copyright (Amendment) Act, 2012.
-- UAE Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights.
+
+Cases
+- Midler v. Ford Motor Co., 849 F.2d 460 (9th Cir. 1988).
+- Waits v. Frito-Lay, Inc., 978 F.2d 1093 (9th Cir. 1992).
+- Thaler v. Perlmutter, No. 23-5233 (D.C. Cir., 18 March 2025).
 
 Product and tool documentation
-- Lee Filters, 204 Full C.T. Orange, https://leefilters.com/colour/204-full-c-t-orange/ and 201 Full C.T. Blue, https://leefilters.com/colour/201-full-c-t-blue/ ; diffusion range, https://leefilters.com/lighting/diffusion-packs/
-- Aputure, Light Storm range, https://aputure.com/collections/light-storm
-- Nanlux, Evoke 5000B coverage: Film and Digital Times, 12 July 2025, https://www.fdtimes.com/2025/07/12/nanlux-evoke-5000b/ ; CineD, https://www.cined.com/nanlux-evoke-5000b-introduced-5000w-led-spotlight-with-bi-color-and-green-magenta-control/
-- ARRI, M18, https://www.arri.com/en/lighting/daylight/m-series/m18
+- Lee Filters, 204 Full C.T. Orange, https://leefilters.com/colour/204-full-c-t-orange/ ; 205 Half C.T. Orange, https://leefilters.com/colour/205-half-c-t-orange/ ; 206 Quarter C.T. Orange, https://leefilters.com/colour/206-quarter-c-t-orange/ ; 201 Full C.T. Blue, https://leefilters.com/colour/201-full-c-t-blue/ ; 202 Half C.T. Blue, https://leefilters.com/colour/202-half-c-t-blue/ ; 203 Quarter C.T. Blue, https://leefilters.com/colour/203-quarter-c-t-blue/ ; diffusion range, https://leefilters.com/lighting/diffusion-packs/
+- Aputure, Light Storm range, https://aputure.com/collections/light-storm ; STORM range, https://www.aputure.com/collections/storm ; STORM 1200x, https://www.aputure.com/products/storm-1200x ; STORM XT52, https://www.aputure.com/products/storm-xt52 ; light modifiers, https://www.aputure.com/collections/light-modifiers
+- ARRI, LED lighting families, https://www.arri.com/en/lighting/led ; M18, https://www.arri.com/en/lighting/daylight/m-series/m18 ; false colour values from the ARRI camera user manuals, https://www.arri.com/
+- Nanlux, Evoke 5000B coverage: Film and Digital Times, 12 July 2025, https://www.fdtimes.com/2025/07/12/nanlux-evoke-5000b/ ; CineD, Nanlux Evoke 5000B introduced, https://www.cined.com/nanlux-evoke-5000b-introduced-5000w-led-spotlight-with-bi-color-and-green-magenta-control/
 - Quasar Science, Rainbow 2, https://www.quasarscience.com/products/rainbow-2
 - Astera, Titan Tube, https://astera-led.com/products/titan-tube/
 - Zoom, F3, https://zoomcorp.com/en/us/field-recorders/field-recorders/f3/
 - Newsshooter, Sound Devices MixPre II series features 32-bit float recording, 2019, https://www.newsshooter.com/2019/08/30/sound-devices-mixpre-ii-series-features-32-bit-float-recording/
 - Newsshooter, Aputure LS 1200d Pro now available, 2021, https://www.newsshooter.com/2021/12/15/aputure-ls-1200d-pro-led-light-now-available-to-order-for-3390-00-usd/
+- ProVideo Coalition, "Aputure Light Storm 600c Pro II: industry workhorse gets upgrade", https://www.provideocoalition.com/aputure-light-storm-600c-pro-ii-industry-workhorse-gets-upgrade/
 - RØDE, Wireless Pro, https://rode.com/en/microphones/wireless/wirelesspro
 - DJI, Mic 3, https://www.dji.com/mic-3
 - DPA, 4060 series, https://www.dpamicrophones.com/lavalier/4060-series-miniature-omnidirectional-microphone
-- iZotope, RX Advanced release notes, https://www.izotope.com/pages/release-notes/rx-advanced
+- iZotope, RX Advanced release notes, https://www.izotope.com/pages/release-notes/rx-advanced ; Mix, "iZotope remains in the restoration game with RX 12 launch", 29 April 2026, https://www.mixonline.com/technology/news-products/izotope-remains-in-the-restoration-game-with-rx-12-launch
 - Youlean, Loudness Meter, https://youlean.co/youlean-loudness-meter/
 - Waves, WLM Plus, https://www.waves.com/plugins/wlm-loudness-meter
 - Blackmagic Design, DaVinci Resolve Fairlight, https://www.blackmagicdesign.com/products/davinciresolve/fairlight
 - Adobe, Enhance Speech in Premiere Pro, https://helpx.adobe.com/premiere-pro/using/enhance-speech.html
+- Avid, press release on Pro Tools 2026.4, April 2026, https://www.avid.com/press-room/2026/04/avid-powers-faster-workflows-and-next-generation-immersive-audio-with-latest-pro-tools-release
+- Synthtopia, "Apple Logic Pro 12, MainStage 4 now available", 30 January 2026, https://www.synthtopia.com/content/2026/01/30/apple-logic-pro-12-mainstage-4-now-available-heres-whats-new/
+- Reaper, https://www.reaper.fm/
 - ElevenLabs, Pricing, https://elevenlabs.io/pricing
 - Descript, Pricing, https://www.descript.com/pricing
 - Artlist, Pricing, https://artlist.io/pricing ; Epidemic Sound, Pricing, https://www.epidemicsound.com/pricing/ ; Musicbed, Pricing, https://www.musicbed.com/pricing
-- Avid, press release on Pro Tools 2026.4, April 2026, https://www.avid.com/press-room/2026/04/avid-powers-faster-workflows-and-next-generation-immersive-audio-with-latest-pro-tools-release
-- Mix, "iZotope remains in the restoration game with RX 12 launch", 29 April 2026, https://www.mixonline.com/technology/news-products/izotope-remains-in-the-restoration-game-with-rx-12-launch
-- Synthtopia, "Apple Logic Pro 12, MainStage 4 now available", 30 January 2026, https://www.synthtopia.com/content/2026/01/30/apple-logic-pro-12-mainstage-4-now-available-heres-whats-new/
-- ProVideo Coalition, "Aputure Light Storm 600c Pro II: industry workhorse gets upgrade", https://www.provideocoalition.com/aputure-light-storm-600c-pro-ii-industry-workhorse-gets-upgrade/
-- Reaper, https://www.reaper.fm/
+- Hoopr, https://hoopr.ai/
 
 Articles, talks and podcasts
 - Twenty Thousand Hertz, "Ta-dum: the sound of Netflix" (Lon Bender, Todd Yellin, Charlie Campagna), https://www.20k.org/episodes/netflix
@@ -1114,7 +1250,8 @@ Articles, talks and podcasts
 - Music Business Worldwide, Emirates Music Rights Association (EMRA) granted first collective management licence in the UAE, 2025, https://www.musicbusinessworldwide.com/emirates-music-rights-association-emra-granted-first-collective-management-license-in-the-uae/ ; Finance Middle East, UAE issues second collective music rights licence to Music Nation, https://www.financemiddleeast.com/news/uae-issues-second-collective-music-rights-licence-to-music-nation/
 - Osborne Clarke, Use of music on social media platforms: what businesses and creators need to know, https://www.osborneclarke.com/insights/use-music-social-media-platforms-what-businesses-and-creators-need-know-about-usage
 - Team Deakins podcast (Roger and James Deakins), from April 2020, https://teamdeakins.libsyn.com/
-- Ava Berkofsky, interview on lighting dark skin for Insecure, Mic, 2017.
-- Amanda Petrusich, profile of Bradford Young, The New York Times, 2012.
+- Ava Berkofsky, interview on lighting dark skin for Insecure, Mic, 2017 (title and URL not re-verified for this file).
 - ProVideo Coalition, "Understanding lights' color spectrum accuracy", https://www.provideocoalition.com/understanding-lights-color-spectrum-accuracy/
-- Wikipedia, Color temperature, https://en.wikipedia.org/wiki/Color_temperature ; Lighting ratio, https://en.wikipedia.org/wiki/Lighting_ratio ; Intel Inside (jingle section), https://en.wikipedia.org/wiki/Intel_Inside ; I'm Lovin' It, https://en.wikipedia.org/wiki/I%27m_Lovin%27_It ; Ben Burtt, https://en.wikipedia.org/wiki/Ben_Burtt ; Bradford Young, https://en.wikipedia.org/wiki/Bradford_Young ; Richard Avedon, https://en.wikipedia.org/wiki/Richard_Avedon ; Juergen Teller, https://en.wikipedia.org/wiki/Juergen_Teller
+
+Secondary reference (used where no primary page was read)
+- Wikipedia, Color temperature (table of typical values), https://en.wikipedia.org/wiki/Color_temperature ; Lighting ratio, https://en.wikipedia.org/wiki/Lighting_ratio ; Intel Inside (jingle section), https://en.wikipedia.org/wiki/Intel_Inside ; I'm Lovin' It, https://en.wikipedia.org/wiki/I%27m_Lovin%27_It ; Ben Burtt, https://en.wikipedia.org/wiki/Ben_Burtt ; Bradford Young, https://en.wikipedia.org/wiki/Bradford_Young ; Richard Avedon, https://en.wikipedia.org/wiki/Richard_Avedon ; Juergen Teller, https://en.wikipedia.org/wiki/Juergen_Teller ; Roger Deakins (publisher of Reflections), https://en.wikipedia.org/wiki/Roger_Deakins

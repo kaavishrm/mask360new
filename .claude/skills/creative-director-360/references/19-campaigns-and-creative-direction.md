@@ -118,7 +118,7 @@ The creative brief is the one-page contract between strategy and creative. Its f
 | Mandatories | Logo, legal lines, languages, formats, the thing the founder insists on | Listed, so they stop being surprises |
 | Deliverables | Every asset with size, duration, language, quantity | Matches the estimate |
 | Budget | Production budget and media budget, separately | A real number, with currency (INR, AED, USD) |
-| Timing | Concept presentation, approval, production window, launch | Working days counted, holidays named (Diwali, Eid, the Dubai summer) |
+| Timing | Concept presentation, approval, production window, launch | Working days counted, holidays named (Diwali, Eid, the Dubai summer; the calendar in 6.12) |
 | Success measures | The metric that will be reported, and the baseline | Agreed with the client before creative starts |
 
 Why one page: a brief that runs to four pages has not finished the thinking. The discipline forces the strategist to choose, and the creative team to trust the choice. The famous briefs in 2.4 are all short.
@@ -287,7 +287,7 @@ As of October 2026 generative tools sit inside every stage of a campaign, and th
 | Ideation | Ask a model for the first 50 ideas any agency would have for the brief | They go straight onto the trash list (5.3): the model's average is the category's cliché |
 | References | Mood and lighting studies where no photograph exists | Labelled as generated on the board; a real reference outranks a generated one |
 | Presenting | AI animatics, which avoid the unlicensed-footage problem of a ripomatic (11.4) | Every AI frame shown to a client is captioned "not a shot frame", and the real version is costed before the meeting |
-| Pre-production | Previsualisation of camera moves and set builds | Shared with the director and DP as a question for them to answer |
+| Pre-production | Previsualisation of camera moves and set builds | Shared with the director and the director of photography (DP) as a question for them to answer |
 | Production and post | Versioning, localisation, dubbing, retouching clean-up, set extension | Logged in the production bible (14.8) as synthetic and disclosed (16.5) |
 | The hero frame | The metal, the stone, the weave, the skin, the room stay real | A luxury object rendered by a model is a claim about the object, so the house shoots it |
 
@@ -374,7 +374,7 @@ Creator partnerships are a main channel for luxury in Dubai and India. Direction
 
 - The creator brief is one page: the idea sentence; two or three moments the product must appear in (in hand, on skin, the place named); the mandatories; the "what we are not doing" list (5.3); and freedom over format and voice. Creator work is valuable because it reads as the creator's, so the house allows one concept approval and one draft approval and never line-edits the creator's voice.
 - Usage is priced separately from the post: reposting, paid usage as partnership ads or whitelisting (running the creator's post from their handle as an ad), each with a term (30, 90 or 365 days), a territory and an exclusivity window (24-business-of-creative-and-agency-operations.md, section 3.7).
-- Disclosure. India: ASCI's Guidelines for Influencer Advertising in Digital Media (launched May 2021, in force from June 2021) accept labels such as Advertisement, Ad, Sponsored, Collaboration, Partnership, Employee and Free gift, placed upfront; on video without text the label stays for at least 3 seconds on videos of 15 seconds or less, a third of the length up to 2 minutes, and the whole brand section beyond that (17, section 5.8). The Department of Consumer Affairs' "Endorsements Know-hows!" (January 2023) adds the statutory layer. UAE: the Advertiser Permit (16.6). Saudi Arabia: the Mawthooq licence for influencers who advertise, issued by the General Authority for Media Regulation; confirm the current fee and term before contracting.
+- Disclosure. India: the Advertising Standards Council of India's (ASCI) Guidelines for Influencer Advertising in Digital Media (launched May 2021, in force from June 2021) accept labels such as Advertisement, Ad, Sponsored, Collaboration, Partnership, Employee and Free gift, placed upfront; on video without text the label stays for at least 3 seconds on videos of 15 seconds or less, a third of the length up to 2 minutes, and the whole brand section beyond that (17, section 5.8). The Department of Consumer Affairs' "Endorsements Know-hows!" (January 2023) adds the statutory layer. UAE: the Advertiser Permit (16.6). Saudi Arabia: the Mawthooq licence for influencers who advertise, issued by the General Authority for Media Regulation; confirm the current fee and term before contracting.
 - The luxury test: book only a creator the house would photograph without the product (8.5). A creator whose audience follows for discounts teaches that audience the brand discounts.
 
 ### 6.11 Sound, scent and immersive
@@ -402,7 +402,7 @@ Hindu festival dates follow the panchang (the Hindu almanac) and move every year
 | Karva Chauth | October or November | North India | Jewellery and gifting; see the 2021 Dabur withdrawal (10.9) |
 | Dhanteras, Diwali | October or November; Dhanteras two days before Diwali | India | Dhanteras is the peak gold and jewellery buying day of the year; shoots finish by August |
 | Wedding season | From Dev Uthani Ekadashi (November) to about February, with a second window from about April to June | India | Weddings pause in Chaturmas (about July to November), Kharmas (mid December to mid January) and Pitru Paksha; bridal campaigns shoot before the monsoon |
-| Fashion weeks | FDCI India Couture Week in July; Lakmé Fashion Week x FDCI in March and October | India | Models, hair and make-up are booked around them |
+| Fashion weeks | FDCI (Fashion Design Council of India) India Couture Week in July; Lakmé Fashion Week x FDCI in March and October | India | Models, hair and make-up are booked around them |
 | Saudi Founding Day | 22 February | Saudi Arabia | National identity; symbols under 16.12 |
 | Ramadan, Eid al-Fitr | Ramadan expected to begin about 8 February 2027, subject to moon sighting; Eid al-Fitr at its end | Gulf, India | The Gulf's main advertising season (6.13) |
 | Eid al-Adha | About 70 days after Eid al-Fitr | Gulf, India | Family, travel and hospitality |
@@ -454,7 +454,7 @@ Bill Bernbach's lessons, as recorded in his agency's work and Bob Levenson's "Bi
 
 ### 7.4 Transcreation and bilingual lines
 
-Transcreation is rewriting a line natively in the target language from the idea sentence, as a native writer would have written it in the first place; translation carries the words across, and transcreation carries the idea. The process:
+Transcreation is rewriting a line natively in the target language from the idea sentence, as a native writer would have written it in the first place, so that the idea survives the crossing. The process:
 
 1. Brief the native writer with the idea sentence, the trash list and the references, and hold the English line back until they have written their own.
 2. Ask for two or three native options.
@@ -462,7 +462,7 @@ Transcreation is rewriting a line natively in the target language from the idea 
 4. Replace every pun; a pun is never translated.
 5. A second native speaker reads the final in layout (16.2).
 
-Arabic register: Modern Standard Arabic for government, luxury and formal work; Gulf (Khaleeji) dialect for warmth and social; Saudi dialect increasingly for KSA-only campaigns; Egyptian Arabic for pan-Arab entertainment. Arabic reads right to left, so the gaze and the product move right to left and directional graphics mirror; the script needs more vertical space, and the line is typeset by a native designer (right-to-left craft in 10-ux-writing-and-content-design.md, section 6.2; bilingual lockups in 18-brand-strategy-and-identity-design.md, section 3.4).
+Arabic register: Modern Standard Arabic for government, luxury and formal work; Gulf (Khaleeji) dialect for warmth and social; Saudi dialect increasingly for Saudi-only campaigns; Egyptian Arabic for pan-Arab entertainment. Arabic reads right to left, so the gaze and the product move right to left and directional graphics mirror; the script needs more vertical space, and the line is typeset by a native designer (right-to-left craft in 10-ux-writing-and-content-design.md, section 6.2; bilingual lockups in 18-brand-strategy-and-identity-design.md, section 3.4).
 
 India: the choice is between Devanagari Hindi, Roman-script Hinglish and the regional languages, market by market (10-ux-writing-and-content-design.md, sections 6.7 and 6.8). Piyush Pandey's lesson, told in "Pandeymonium" (2015): write in the language the audience thinks in. The reference lines are "Daag Achhe Hain" ("stains are good", Surf Excel, Lowe Lintas), "Thanda Matlab Coca-Cola" ("cold means Coca-Cola", McCann) and the Fevicol and Cadbury work in 9.3.
 
@@ -510,7 +510,7 @@ A lookbook is a sequence of images of a collection, in order. At the top houses 
 - Collaboration logic. Loewe x Studio Ghibli (Totoro 2021, Spirited Away 2022, Howl's Moving Castle 2023) borrowed a loved world and translated it into the house's craft. Tiffany x Nike (Air Force 1 1837, March 2023, US$400) put a house code on another brand's object and drew mixed reactions because the object did not change. Rule: the collaboration must produce an object neither party could make alone.
 - The drop model. Scarcity by time and number: a numbered run, a date, a queue. For Indian and Gulf clients, the drop maps onto the festival calendar (6.12) and the wedding season. Every number and deadline in a drop is a scarcity claim and needs evidence (16.10).
 - Scarcity and silence. In the house's observation (unquantified), the most expensive houses post least and buy least paid media relative to their revenue. A luxury client who asks for daily posts is asking to look like a premium brand.
-- When wit is allowed. Tension and wit are design-taste principles (design-taste, section 1, principles 5 and 8). The campaign limit: wit lands on scale, the object, culture or the house itself, and never on the customer, the price or the craft.
+- When wit is allowed. Tension and wit are design-taste principles (design-taste, section 1, principles 5 and 8). The campaign limit: wit lands on scale, the object, culture or the house itself; the customer, the price and the craft are off limits.
 
 ### 8.6 Jewellery and watches
 
@@ -680,7 +680,7 @@ Ideas die in production by a hundred reasonable decisions: the location that was
 
 On set, the director directs and the first assistant director (first AD) runs the floor (set roles: 14-video-preproduction-and-cinematography.md, section 1). The CD's station is video village (the monitor position where agency and client watch takes), and the CD's job there is four things: check each set-up against the approved board and the idea sentence; confirm the cover (alternative takes, a clean plate (the set shot empty, for compositing), a version without dialogue, a vertical framing for social) before the crew moves on; speak to the director between takes, through the agency producer where the production company's etiquette requires it, and leave the crew to the first AD; and keep the client at video village informed and away from the director. The reason for the chain: a set with two directors produces neither director's film. One rule for luxury shoots: the CD watches the monitor with the sound off for one take of every set-up, because the still frame is what the house will print (6.1).
 
-In the edit, the sequence runs assembly (every usable take in script order), rough cut, fine cut, picture lock (after which no frame changes), grade, sound mix and mastering (16-editing-colour-grading-and-delivery.md, sections 4 and 5). The CD's three passes: the idea pass on the assembly (is the idea on screen, is the ending the ending), the rhythm pass on the rough cut (the music, the breath before the line, the length), and the polish pass on the fine cut (every transition, every title, the logo's frame count). The CD never notes polish on an assembly, because a polish note signals to the editor that the structure is settled before it is.
+In the edit, the sequence runs assembly (every usable take in script order), rough cut (structure, order and length set), fine cut (every transition, title and frame count polished), picture lock (after which no frame changes), grade, sound mix and mastering (16-editing-colour-grading-and-delivery.md, sections 4 and 5). The CD's three passes: the idea pass on the assembly (is the idea on screen, is the ending the ending), the rhythm pass on the rough cut (the music, the breath before the line, the length), and the polish pass on the fine cut (every transition, every title, the logo's frame count). The CD never notes polish on an assembly, because a polish note signals to the editor that the structure is settled before it is.
 
 ### 10.7 QA gates and sign-off
 
@@ -1038,7 +1038,7 @@ A fixed annual sum, decided in January and listed by show, because a studio that
 
 ### 16.1 Representation and casting
 
-Cast for the audience that exists and the audience the brand wants, with the range of skin tones, ages, bodies and faces that the market holds. In Indian beauty and fashion the default has been fair, slim and young, which is why the Advertising Standards Council of India's (ASCI) guidelines on skin-lightening advertising (2014) prohibit depicting people with darker skin as unattractive, unsuccessful or inferior, and why Unilever renamed Fair & Lovely to Glow & Lovely in 2020. ASCI's Guidelines on Harmful Gender Stereotypes (June 2022), which followed its GenderNext study with Futurebrands (2021), bar portrayals that tie a person's worth or role to their gender, such as the woman who exists only to serve the family or the man mocked for caring; every casting brief and script is read against them. For the Gulf, casting for a campaign that will run across the UAE and Saudi Arabia is checked against each market's standards on dress and depiction before the shoot, because the edit cannot fix casting. The CD's casting rule: the person in the frame is someone the brand's buyer would recognise as themselves at their best, and the casting brief states the range explicitly so the agency cannot drift to the default.
+Cast for the audience that exists and the audience the brand wants, with the range of skin tones, ages, bodies and faces that the market holds. In Indian beauty and fashion the default has been fair, slim and young, which is why ASCI's guidelines on skin-lightening advertising (2014) prohibit depicting people with darker skin as unattractive, unsuccessful or inferior, and why Unilever renamed Fair & Lovely to Glow & Lovely in 2020. ASCI's Guidelines on Harmful Gender Stereotypes (June 2022), which followed its GenderNext study with Futurebrands (2021), bar portrayals that tie a person's worth or role to their gender, such as the woman who exists only to serve the family or the man mocked for caring; every casting brief and script is read against them. For the Gulf, casting for a campaign that will run across the UAE and Saudi Arabia is checked against each market's standards on dress and depiction before the shoot, because the edit cannot fix casting. The CD's casting rule: the person in the frame is someone the brand's buyer would recognise as themselves at their best, and the casting brief states the range explicitly so the agency cannot drift to the default.
 
 ### 16.2 Cultural borrowing
 
@@ -1046,7 +1046,7 @@ The line between borrowing and taking: permission, fluency and credit. Loewe's S
 
 ### 16.3 Greenwashing
 
-Greenwashing is an environmental claim made without verifiable evidence. A claim about environmental benefit needs the same substantiation as a claim about price. In India, ASCI's guidelines for advertisements making environmental or green claims took effect on 15 February 2024, and the Central Consumer Protection Authority's Guidelines for Prevention and Regulation of Greenwashing or Misleading Environmental Claims were notified in October 2024; both require that terms such as "sustainable", "eco-friendly" and "carbon neutral" be backed by verifiable evidence, with qualifiers and disclosures. The UK Competition and Markets Authority's Green Claims Code (2021) is the reference text the house uses for the six principles (truthful, clear, no omissions, fair comparisons, whole life cycle, substantiated). Rule: no green claim appears in a Mask360 deliverable without the evidence file in the production bible (14.8).
+Greenwashing is an environmental claim made without verifiable evidence. A claim about environmental benefit needs the same substantiation as a claim about price. In India, ASCI's guidelines for advertisements making environmental or green claims took effect on 15 February 2024, and the Central Consumer Protection Authority's (CCPA) Guidelines for Prevention and Regulation of Greenwashing or Misleading Environmental Claims were notified in October 2024; both require that terms such as "sustainable", "eco-friendly" and "carbon neutral" be backed by verifiable evidence, with qualifiers and disclosures. The UK Competition and Markets Authority's Green Claims Code (2021) is the reference text the house uses for the six principles (truthful, clear, no omissions, fair comparisons, whole life cycle, substantiated). Rule: no green claim appears in a Mask360 deliverable without the evidence file in the production bible (14.8).
 
 ### 16.4 Body image in beauty
 
@@ -1072,13 +1072,13 @@ Direct advertising of alcohol and tobacco on cable television is prohibited unde
 
 ### 16.9 Property advertising
 
-- India: section 11(2) of the Real Estate (Regulation and Development) Act 2016 requires every advertisement or prospectus for a registered project to show prominently the state RERA authority's website address and the project's registration number; an unregistered project may not be advertised. MahaRERA in Maharashtra has also required a QR code on project advertisements since 2023 (20-print-packaging-ooh-and-physical-production.md, section 7.2; confirm the current format before artwork).
+- India: section 11(2) of the Real Estate (Regulation and Development) Act 2016 requires every advertisement or prospectus for a registered project to show prominently the website address of the state real estate regulatory authority (RERA) and the project's registration number; an unregistered project may not be advertised. MahaRERA in Maharashtra has also required a QR code on project advertisements since 2023 (20-print-packaging-ooh-and-physical-production.md, section 7.2; confirm the current format before artwork).
 - Dubai: every property advertisement, social posts included, needs an advertising permit from the Dubai Land Department's Trakheesi system, and the permit number appears on the ad. In Abu Dhabi the regulator is ADREC, the Abu Dhabi Real Estate Centre.
 - Both markets: CGI is captioned as an artist's impression (9.7); stated areas follow the market's convention (carpet area in India); yield, return and payment-plan claims carry written substantiation in the production bible (14.8).
 
 ### 16.10 Dark patterns and scarcity claims
 
-The Central Consumer Protection Authority (CCPA) notified the Guidelines for Prevention and Regulation of Dark Patterns, 2023 on 30 November 2023. They name 13 patterns: false urgency, basket sneaking, confirm shaming, forced action, subscription trap, interface interference, bait and switch, drip pricing, disguised advertisement, nagging, trick question, SaaS billing and rogue malware. The drop model in 8.5 lives next to the first of them. Rules: every scarcity or urgency claim ("25 pieces", "ends Sunday", a countdown timer, "only 3 left") has an evidence file in the production bible (14.8) showing it is true while the ad runs; a microsite shows the full price, taxes and charges included, at the first mention, because drip pricing is on the list; and a paid creator post carries its label (6.10), because disguised advertisement is too. The interface craft is in 09-interaction-design-and-ux-patterns.md.
+The CCPA notified the Guidelines for Prevention and Regulation of Dark Patterns, 2023 on 30 November 2023. They name 13 patterns: false urgency, basket sneaking, confirm shaming, forced action, subscription trap, interface interference, bait and switch, drip pricing, disguised advertisement, nagging, trick question, SaaS billing and rogue malware. The drop model in 8.5 lives next to the first of them. Rules: every scarcity or urgency claim ("25 pieces", "ends Sunday", a countdown timer, "only 3 left") has an evidence file in the production bible (14.8) showing it is true while the ad runs; a microsite shows the full price, taxes and charges included, at the first mention, because drip pricing is on the list; and a paid creator post carries its label (6.10), because disguised advertisement is too. The interface craft is in 09-interaction-design-and-ux-patterns.md.
 
 ### 16.11 Data and personalisation
 
@@ -1152,72 +1152,142 @@ Delivery
 
 ## Terms introduced
 
+- 100 bad ideas: the rule that each pair writes 100 numbered ideas in a day, because the idea usually arrives after the first 50 clichés.
 - 360 creative director: a creative director who commands every craft (identity, film, web, social, space, print) well enough to brief, judge and correct the specialist in each, and does at least one at the specialist's level.
-- Advertiser Permit: the UAE Media Council's licence, free for its first three years, required of any individual who publishes paid or unpaid promotional content on social media in the UAE.
+- 6-3-5 brainwriting: Rohrbach's method in which six people write three ideas in five minutes and pass the sheet on, for six rounds.
+- ABCD framework: Google's checklist for YouTube creative: Attract, Brand, Connect, Direct.
+- Account planning: the discipline, begun in 1968 at Boase Massimi Pollitt and J. Walter Thompson London, that brings research and the audience's view into the brief.
+- Advertiser Permit: the UAE licence, free for its first three years, required of any individual who publishes paid or unpaid promotional content on social media in the UAE.
 - Agency producer: the studio's own producer, who owns the estimate, schedule, bids, rights and the production bible.
+- Andromeda: Meta's ad retrieval system, announced in December 2024, which matches distinct creatives to distinct people.
 - Animatic: storyboard frames cut to the chosen music with a scratch voice, used to present a film before it is shot.
 - Anti-laws of marketing: Kapferer and Bastien's rules that reverse conventional marketing for luxury brands, 24 in the second edition of "The Luxury Strategy".
-- Art and copy pair: the two-person creative unit of an art director and a copywriter, the structural form of advertising ideas since Bernbach's DDB.
+- Art and copy pair: the two-person creative unit of an art director and a copywriter, the working form of advertising ideas since DDB's founding in 1949.
+- Artist's impression: the caption on a computer-generated or illustrated frame of a building or product that does not yet exist.
+- ASCI: the Advertising Standards Council of India, the self-regulatory body that writes and enforces the ASCI Code and its guidelines.
+- Assembly: every usable take laid in script order, the first stage of the edit.
+- Baseline: the level of the brief's success measure captured before launch, against which results are read.
 - Big idea: one large, famous, repeated thought that organises a campaign, the Bernbach and Ogilvy tradition.
 - Braintrust: Pixar's group of experienced makers who give candid notes on work in progress without authority to mandate changes.
+- Brand lift study: a platform's randomised test-and-control survey that measures the effect of ads on recall and consideration.
+- Brand purpose: a brand's stated reason to exist beyond profit, used as a source of ideas; a contested strategy.
+- Branded residence: a residential building that carries a luxury, fashion or automotive brand's name and codes.
 - Brief back: the creative team's written restatement of the brief, under 200 words, within 24 hours of receiving it.
 - Call sheet: the daily schedule issued to cast and crew for a shoot.
 - Campaignable idea: an idea that produces its second and tenth execution as easily as its first.
 - Case film: the two-minute film that presents a campaign's problem, insight, idea, execution and results to an awards jury.
+- Category entry points (CEPs): the buying situations a brand must be linked to in memory, in Romaniuk's terms.
+- CCPA: India's Central Consumer Protection Authority, which issues statutory guidelines on misleading advertising, greenwashing and dark patterns.
+- CGI: computer-generated imagery.
+- Change request form: a one-page record of an addition's scope, price and date, signed before work starts.
+- Clean plate: the set shot empty, for compositing.
 - Client chair exercise: writing the five questions the client's own boss will ask them, the day before a presentation, and re-ordering the deck to answer them.
+- Clienteling: the one-to-one selling a client advisor does with known customers, in India and the Gulf mostly over WhatsApp.
+- Clienteling kit: the campaign assets cleared for advisors to send one to one: stills, a vertical cut, the story in the advisor's voice, an invitation and a lookbook PDF.
 - Codes: a brand's owned, repeated signs (a colour, a weave, an animal, a box), the luxury form of distinctive brand assets.
 - Concept: the organising thought a stranger could describe without seeing the work; an execution is one expression of it.
+- Contingency: the reserve in a production estimate, 10 percent of direct costs, released only by the CD and the client together.
+- Copywork: retyping great copy or redrawing great layouts by hand to learn their proportions.
 - Cover: alternative takes, framings and versions shot to protect the edit.
-- Creative effectiveness ladder: Hurman and Field's six levels for rating a campaign's effect, from influential idea to enduring icon.
+- Creative brief: the one-page contract between strategy and creative, with the fields in section 2.1.
+- Creative Effectiveness Ladder: Hurman and Field's six levels for rating a campaign's effect, from influential idea to enduring icon, set out in "The Effectiveness Code".
+- Creative fatigue: the fall in an ad's performance as the same audience sees it repeatedly.
+- Creativity templates: Goldenberg, Mazursky and Solomon's six recurring structures found in most award-finalist ads.
 - Crit: a structured critique of work in progress.
+- Cultural risk review: the pre-mortem and response plan run on work that touches religion, gender, caste, nation or community.
+- Dark patterns: interface practices that mislead or coerce users; India's CCPA names 13 in its 2023 guidelines.
 - Departure log: the record of every change from the approved PPM book, with who asked, why, and the CD's signature.
+- Dhanteras: the festival two days before Diwali, the peak gold and jewellery buying day in India.
 - Drop: a scarce, timed, announced release of one asset or product.
 - E&O insurance: errors and omissions cover for claims arising from the content of a broadcast work.
+- Elephant: the Kyoorius award, given at First List, Baby, Blue, Baby Black, Black and Purple levels.
+- EMI: equated monthly instalment, the fixed monthly repayment on an Indian consumer loan.
 - Execution: one expression of a concept.
+- Fine cut: the edit after the rough cut, in which every transition, title and frame count is polished before picture lock.
 - First AD: the first assistant director, who runs the floor on a shoot.
 - First and last 10 percent: the parts of a job the CD does personally (the first board and sketch; the final pass), with the middle delegated against the standards document.
 - FOOH: fake out-of-home, computer-generated placements composited into real streets and released as film.
+- GCC: the Gulf Cooperation Council states: Bahrain, Kuwait, Oman, Qatar, Saudi Arabia and the UAE.
 - Genuine brand extension: a product sharing a restricted brand's name that exists in the market at scale and is advertised without reference to the restricted product.
+- Get, Who, To, By: the one-line brief summary: get this audience, who believe this, to do that, by this direction.
+- Greenwashing: an environmental claim made without verifiable evidence.
 - Hero, hub, help: Google's model of a brand's content as a few big pieces, a regular series and always-on answers.
-- Intrecciato: Bottega Veneta's hand-woven leather technique, the house's principal code, 50 years old in 2025.
+- Hinglish: Hindi and English mixed in one sentence, usually in Roman script.
+- Holding statement: the first public response to a controversy, drafted before launch.
+- HUID: hallmark unique identification, the six-digit alphanumeric code on BIS-hallmarked gold jewellery in India.
+- Idea test: the four questions every idea must pass: it can be said in a sentence, it scales across channels, it comes from the brand, it is new.
+- Iftar: the meal that breaks the Ramadan fast at sunset.
 - Insight: a tension or truth that explains behaviour and opens a creative door; held by the audience already.
+- Intrecciato: Bottega Veneta's hand-woven leather technique, the house's principal code, 50 years old in 2025.
+- IPA: the Institute of Practitioners in Advertising (UK), whose Databank holds the effectiveness cases behind Binet and Field's work.
+- Iridium Effie: Effie Worldwide's global best-of-the-best award.
+- Karigar: an Indian artisan; in jewellery, the stone setter or goldsmith.
 - Kill list: the running record of killed routes with one line on why each died.
+- Lakh and crore: Indian number units: a lakh is 100,000 and a crore is 10 million.
+- Line producer: the production company's producer who runs the shoot's money and crew day by day; the executive producer (EP) owns the bid and the director relationship.
 - Lion: the Cannes Lions award, given as Grand Prix, Gold, Silver and Bronze in each of 31 Lions across 10 tracks in 2026; Titanium is the top track.
 - Lookbook: the ordered sequence of images of a collection, briefed as a film with no motion.
+- Masstige: a luxury name on a mass-market product, usually through a collaboration.
 - Master licence: the licence to use a specific recording of a composition, obtained from the label or owner.
+- Matching idea: integration in which each channel does what it is best at in service of one thought.
+- Matching luggage: the same key visual, headline and colour applied to every channel, integration in appearance only.
+- Mawthooq: Saudi Arabia's licence for influencers who advertise.
+- Modular asset system: the cuts, ratios, plates and end cards planned at PPM so paid variants can be built without losing the frame.
+- Moral rights: an author's rights of attribution and integrity, which under section 57 of India's Copyright Act survive assignment.
 - Muhurat: the astrologically chosen auspicious date and time that fixes many Indian launches, weddings and openings.
-- Matching idea: integration in which each channel does what it is best at in service of one thought; matching luggage is the same key visual applied everywhere.
 - No idea test: remove the headline and logo, then the picture, to see whether anything distinctive remains.
+- Off-plan: property sold before it is built.
 - One voice: the client's single appointed person who consolidates internal opinions into one written response per round.
 - One-off: a single execution with no second, such as a stunt or a launch film.
 - Overage: a cost beyond the approved estimate, requiring written approval before it is incurred.
+- Panchang: the Hindu almanac that sets festival and auspicious dates.
+- Partnership ads: a creator's post run as a paid ad from the creator's own handle, also called whitelisting.
 - Pencil: the D&AD award, in Black, Yellow (or White for Impact), Graphite and Wood, with shortlist below.
+- Performance standard: the one-page rule set for a luxury client's paid variants, signed with the media team.
 - Picture lock: the point in post-production after which no frame changes.
 - Pitch theatre: the agency ritual of branded rooms, reveals and chemistry films in a pitch, which the house declines in favour of the lean deck.
 - Platform idea: a campaignable idea that runs for years and absorbs product news, seasons and cultures without changing its sentence.
+- PPM: the pre-production meeting, at which the client signs the PPM book.
 - PPM book: the document signed at the pre-production meeting: treatment, boards, cast, locations, wardrobe, props, schedule, budget, usage and delivery list.
+- Pre-mortem: Gary Klein's exercise of imagining a project has already failed and listing why, before it starts.
 - Production bible: the single folder from which a stranger could deliver the job: brief, approvals, releases, licences with expiry dates, call sheets, specs, references, vendors.
+- Provocation: de Bono's tool of stating something absurd and moving from it to an idea.
+- Random entry: de Bono's tool of forcing a connection with an unrelated word or object.
 - Reasons to believe: the two or three specific, checkable proofs that support the proposition.
 - Release: the signed consent of a person to be photographed or filmed, with the usage terms.
+- RERA: an Indian state real estate regulatory authority under the Real Estate (Regulation and Development) Act 2016; in Dubai, the Real Estate Regulatory Agency of the Dubai Land Department.
+- Residual, dominant and emergent codes: the three tiers of a category's codes in commercial semiotics: fading, the current normal, and rising.
+- Reversal: de Bono's tool of taking the opposite of the category convention.
 - Ripomatic: existing footage from references cut to a script to show pace and tone, for internal use only.
+- Rough cut: the first structured edit after the assembly, in which order, length and music are set.
+- Round: one consolidated client response on one presented stage.
 - Rushes: the raw footage from a shoot.
 - Scam ad: work made for awards and run once or never, which the house refuses to enter.
 - Series: a repeatable social format with a constant and a variable, where the format is the idea and each post an execution.
+- Single idea sentence: the one sentence the idea is reduced to, written before any execution and carried on every document of the job.
 - Single-minded proposition: the one thing the work must leave in the audience's head, in one sentence of under 12 words.
+- Six Thinking Hats: de Bono's method of separating kinds of thinking, such as critique (black hat) and generation (green hat).
 - Small idea done perfectly: the luxury alternative to the big idea: a modest thought executed to an unmistakable standard.
+- Stage gate: a review point with an owner and one yes-or-no question that funds the next stage.
 - Standards document: the two-page per-job instrument (objective, idea sentence, references, trash list, tokens, tests, examples of done) that lets a CD delegate without the standard falling.
+- Sunk cost rule: the hours already spent on a route count for nothing in the decision to kill it.
 - Surrogate advertising: an advertisement that appears to promote a permitted product in order to promote a restricted one, defined in the CCPA's 2022 guidelines.
 - Sync licence: the synchronisation licence to use a composition with moving images, obtained from the publisher.
 - Synthetically generated content: ASCI's term for AI-generated or AI-altered material in advertising, subject to its 2026 labelling guidelines.
 - Teaser, launch, sustain: the three-phase sequencing of a campaign: scarcity, the hero and full channel set, then the series.
 - Territory: a creative direction with a feeling, a reference and a sample execution, short of a finished idea.
 - Three-bid rule: three production companies bid on the same treatment and specification so the bids are comparable.
+- Tissue session: a rough, low-cost showing of three territories to the client to get a directional choice.
 - Tone map: territories plotted on two axes the brief cares about, to show where the brand and competitors sit.
+- Trakheesi: the Dubai Land Department's system that issues permits for property advertising.
+- Transcreation: rewriting a line natively in another language from the idea sentence.
 - Trash list: the category tropes refused by name before work begins.
-- Treatment: the director's written and visual response to a script, with the approach, references and shot intentions, submitted with the bid.
+- Treatment: the director's written and visual approach to a script, with references and shot intentions, submitted with the bid.
+- Trunk show: a collection shown by appointment to top clients in a suite, a home or the store after hours.
 - Usage right: permission to use a created asset for a defined term, territory and set of media; a buyout is a lump-sum purchase of broad or unlimited usage.
 - Video village: the monitor position on a set where the agency and client watch takes.
-- Wet proof: a printed proof made on the job's actual paper and press conditions, used to approve colour on a luxury print job.
+- Wet proof: a proof printed on the job's own paper and press, used to approve colour on a luxury print job.
+- "What would make this generic" list: the five things that would turn the work into the category's work, written at concept approval and read before every shoot day and edit.
 - Written rationale: the one-page note sent within 24 hours of a presentation: task, insight, idea sentence, why this execution.
 
 ## Sources and further reading
@@ -1225,64 +1295,92 @@ Delivery
 Books
 
 - James Webb Young, "A Technique for Producing Ideas", 1940.
+- Rosser Reeves, "Reality in Advertising", 1961.
 - Edward de Bono, "Lateral Thinking", 1970; "Six Thinking Hats", 1985.
-- Bob Levenson, "Bill Bernbach's Book", 1987.
+- Brian Eno and Peter Schmidt, "Oblique Strategies" (card deck), 1975.
+- Raymond Williams, "Marxism and Literature", 1977.
 - David Ogilvy, "Ogilvy on Advertising", 1983.
+- Bob Levenson, "Bill Bernbach's Book", 1987.
 - Jon Steel, "Truth, Lies and Advertising: The Art of Account Planning", 1998.
 - Luke Sullivan, "Hey Whipple, Squeeze This", 1998 (later editions with Edward Boches).
+- Alyque Padamsee, "A Double Life", 1999.
 - Mario Pricken, "Creative Advertising", 2002.
 - Paul Arden, "It's Not How Good You Are, It's How Good You Want to Be", 2003; "Whatever You Think, Think the Opposite", 2006.
+- Douglas B. Holt, "How Brands Become Icons", 2004.
 - Michael Bierut, "Seventy-Nine Short Essays on Design", 2007; "How to use graphic design to sell things, explain things, make things look better, make people laugh, make people cry, and (every once in a while) change the world", 2015; "Now You See It and Other Essays on Design", 2017.
 - Jean-Noël Kapferer and Vincent Bastien, "The Luxury Strategy", 2009; second edition 2012.
 - Dave Trott, "Creative Mischief", 2009.
+- Douglas Holt and Douglas Cameron, "Cultural Strategy", 2010.
 - Byron Sharp, "How Brands Grow", 2010.
 - John Hegarty, "Hegarty on Advertising", 2011.
+- Jim Stengel, "Grow: How Ideals Power Growth and Profit at the World's Greatest Companies", 2011.
 - Les Binet and Peter Field, "The Long and the Short of It", IPA, 2013.
 - Ed Catmull with Amy Wallace, "Creativity, Inc.", 2014.
+- Piyush Pandey, "Pandeymonium", 2015.
+- Jenni Romaniuk, "Building Distinctive Brand Assets", 2018.
 - Orlando Wood, "Lemon: How the Advertising Brain Turned Sour", IPA, 2019.
+- Rachel Lawes, "Using Semiotics in Marketing", 2020.
+- Jenni Romaniuk, "Better Brand Health", 2022.
 
 Reports, codes, laws and standards
 
-- Peter Field, "The Crisis in Creative Effectiveness", IPA, 2019.
+- Nancy Etcoff, Susie Orbach, Jennifer Scott and Heidi D'Agostino, "The Real Truth About Beauty: A Global Report", for Dove, 2004.
+- Les Binet and Peter Field, "Effectiveness in Context", IPA, 2018.
+- Peter Field, "The Crisis in Creative Effectiveness", IPA, 2019, https://ipa.co.uk/knowledge/publications-reports/the-crisis-in-creative-effectiveness
+- Les Binet and Peter Field, "The 5 Principles of Growth in B2B Marketing", LinkedIn B2B Institute, 2019.
 - James Hurman and Peter Field, "The Effectiveness Code" (the Creative Effectiveness Ladder), Cannes Lions and WARC, 2020.
+- The Better Briefs Project, global survey of marketers and agencies on briefing, 2022.
 - Advertising Standards Council of India, The ASCI Code, https://www.ascionline.in/the-asci-code/
-- Advertising Standards Council of India, Guidelines for Responsible Labelling of Synthetically Generated Content in Advertising, September 2026, https://www.ascionline.in/
-- Central Consumer Protection Authority, Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022; Guidelines for Prevention and Regulation of Greenwashing or Misleading Environmental Claims, 2024, https://consumeraffairs.nic.in/
-- Cable Television Networks Rules, 1994, with the 2009 amendment on brand extensions; Cigarettes and Other Tobacco Products Act, 2003; Copyright Act, 1957 (India).
-- UAE Federal Decree-Law No. 55 of 2023 on Media Regulation; Cabinet Resolution No. 20 of 2025; UAE Media Council Advertiser Permit, https://uaemc.gov.ae/
-- UAE Federal Decree-Law No. 38 of 2021 on Copyrights and Neighbouring Rights.
+- Advertising Standards Council of India, Guidelines for Influencer Advertising in Digital Media (May 2021); Guidelines on Harmful Gender Stereotypes (June 2022), https://www.ascionline.in/guidelines/; guidelines for advertisements making environmental or green claims (in effect 15 February 2024); Guidelines for Responsible Labelling of Synthetically Generated Content in Advertising (29 September 2026; summarised in the Khaitan & Co note below).
+- Central Consumer Protection Authority, Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022; Guidelines for Prevention and Regulation of Dark Patterns, 2023; Guidelines for Prevention and Regulation of Greenwashing or Misleading Environmental Claims, 2024, https://consumeraffairs.nic.in/
+- Department of Consumer Affairs, "Endorsements Know-hows!", January 2023.
+- India: Real Estate (Regulation and Development) Act, 2016; Digital Personal Data Protection Act, 2023, and Digital Personal Data Protection Rules, 2025; Cable Television Networks Rules, 1994, with the 2009 amendment on brand extensions; Cigarettes and Other Tobacco Products Act, 2003; Copyright Act, 1957; Emblems and Names (Prevention of Improper Use) Act, 1950; State Emblem of India (Prohibition of Improper Use) Act, 2005; Flag Code of India, 2002.
+- Delhi High Court, TV Today Network v. Union of India, 2021.
+- Bureau of Indian Standards, hallmarking and HUID, https://www.bis.gov.in
+- UAE: Federal Decree-Law No. 55 of 2023 on Media Regulation; Cabinet Resolution No. 42 of 2025 (penalties); Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data; Federal Decree-Law No. 38 of 2021 on Copyrights and Neighbouring Rights; Advertiser Permit, https://uaemc.gov.ae/
+- Saudi Arabia: Personal Data Protection Law (in force 14 September 2023).
+- US Federal Trade Commission, Guides for the Jewelry, Precious Metals, and Pewter Industries (16 CFR Part 23), revised 2018.
 - Competition and Markets Authority (UK), Green Claims Code, 2021, https://www.gov.uk/government/publications/green-claims-code-making-environmental-claims
 - Cannes Lions, the Lions and tracks for 2026, https://www.canneslions.com/awards/lions
 - D&AD Awards, Pencil levels, categories and 2026 deadlines, https://www.dandad.org/awards/d-ad-awards/
 - Dubai Lynx, https://www.dubailynx.com/
 - Effie Worldwide, judging, https://www.effie.org/judging
-- Awwwards Annual Awards, https://www.awwwards.com/annual-awards/
+- Awwwards, Annual Awards winners (2025 edition), https://www.awwwards.com/annual-awards/winners
 
 Articles and talks
 
+- Jacob Goldenberg, David Mazursky and Sorin Solomon, "The Fundamental Templates of Quality Ads", Marketing Science 18(3), 1999, https://doi.org/10.1287/mksc.18.3.333
+- Michael Bierut, "On (Design) Bullshit", Design Observer, 9 May 2005, https://designobserver.com/on-design-bullshit/
+- Gary Klein, "Performing a Project Premortem", Harvard Business Review, September 2007, https://hbr.org/2007/09/performing-a-project-premortem
 - Ed Catmull, "How Pixar Fosters Collective Creativity", Harvard Business Review, September 2008, https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
-- Michael Bierut, "On (Design) Bullshit", Design Observer, 2005, https://designobserver.com/
-- Adweek, "These are the 4 Black Pencil winners of the 2026 D&AD Awards", September 2026, https://www.adweek.com/creativity/these-are-the-4-black-pencil-winners-of-the-2026-dad-awards/
-- Campaign, "Cannes Lions 2026: Oreo Cows and The Legacy of Virginia Giuffre win Titanium", June 2026, https://campaignlive.com/article/cannes-lions-2026-oreo-cows-legacy-virginia-giuffre-win-titanium/1963008
-- Shots, "Cannes Lions 2026: Film, Titanium, Glass and SDG winners", June 2026, https://shots.net/news/view/cannes-lions-2026-film-titanium-glass-and-sdg-winners
-- Campaign Middle East, "Dubai Lynx 2026: All the Grands Prix and top winners revealed", October 2026, https://campaignme.com/dubai-lynx-2026-all-the-grands-prix-and-top-winners-revealed/
-- exchange4media, "ASCI issues guidelines on responsible labelling of AI-generated ad content", September 2026, https://www.exchange4media.com/advertising-news/asci-issues-guidelines-on-responsible-labelling-of-ai-generated-ad-content-158710.html
+- Mumbrella, February 2013, report of a former Victorian transport official disputing the Dumb Ways to Die near-miss figures.
+- Edison Trends, Nike online sales data after "Dream Crazy", September 2018, as reported in the US business press.
+- Unilever, "Unilever's purpose-led brands outperform", June 2019.
+- Terry Smith, Fundsmith Equity Fund annual letter to shareholders, January 2022.
+- Reuters, 2024, report on the CCPA's draft tightening of surrogate advertising rules.
+- Meta Engineering, "Meta Andromeda: supercharging Advantage+ automation with the next-gen personalized ads retrieval engine", 2 December 2024, https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/
+- Manifest Media, report on Visit Dubai's "Dubai, A Whole New You" film with Saif Ali Khan and Sara Ali Khan, 16 July 2024, https://www.manifest-media.in/video/campaigns/160724/saif-ali-khan-and-sara-ali-khan-embark-on-a-journey-to-discover-a-who.html
+- Associated Press, "Jack McCollough and Lazaro Hernandez named creative directors at Loewe", 24 March 2025, https://www.ksat.com/entertainment/2025/03/24/jack-mccollough-and-lazaro-hernandez-named-creative-directors-at-loewe/
+- FashionUnited, "Bottega Veneta marks 50 years of Intrecciato as Creative Director Louise Trotter prepares for debut", May 2025, https://fashionunited.uk/news/fashion/bottega-veneta-marks-50-years-of-intrecciato-as-creative-director-louise-trotter-prepares-for-debut/2025052881931
+- The Irish Times, "Dior appoints Irishman Jonathan Anderson as sole creative director", 2 June 2025, https://www.irishtimes.com/life-style/fashion/2025/06/02/dior-appoints-irishman-jonathan-anderson-as-sole-creative-director/
 - The National, "UAE launches 'advertiser permit' for social media users and influencers", 30 July 2025, https://www.thenationalnews.com/news/uae/2025/07/30/uae-social-media-advertiser-permit/
 - Al Tamimi & Co, "UAE Introduces Mandatory Advertiser Permit for Content Creators", 2025, https://www.tamimi.com/law-update-articles/uae-introduces-mandatory-advertiser-permit-for-content-creators
+- Social Samosa, "ABBYs 2025: Enormous bags Creative Agency of the Year", 2025, https://www.socialsamosa.com/goafest/abbys-2025-creative-agency-of-the-year-enormous-9299781
+- Media Info Line, "Kyoorius announces winners at the Kyoorius Creative Awards 2025", 2025, https://www.mediainfoline.com/awards/kyoorius-announces-winners-at-the-kyoorius-creative-awards-2025
+- Storyboard18, "Who was Piyush Pandey? Legendary Indian adman and Ogilvy icon dies at 70", October 2025, https://www.storyboard18.com/brand-makers/who-was-piyush-pandey-legendary-indian-adman-and-ogilvy-icon-dies-at-70-83061.htm
+- WAM (Emirates News Agency), UAE Government issues Federal Decree-Law establishing the National Media Authority, December 2025, https://www.wam.ae/en/article/bn9xsue-uae-government-issues-federal-decree-law
+- Gulf News, "New UAE law: Advertiser Permit now mandatory for influencers and creators for social media", updated 1 February 2026, https://gulfnews.com/uae/new-uae-law-advertiser-permit-now-mandatory-for-influencers-and-creators-for-social-media-1.500427938
+- Communicate Online, "UAE influencers risk AED 10,000 fine for missing Advertiser Permit deadline", https://communicateonline.me/news/uae-influencers-risk-aed-10000-fine-for-missing-advertiser-permit-deadline/
 - Remfry & Sagar (Dhruv Goel and Udayvir Rana), "Surrogate advertising in India: where brand strategy meets regulatory risk", Legal500, 25 March 2026, https://www.legal500.com/intelligence/india/media-telecoms-it-entertainment/surrogate-advertising-in-india-where-brand-strategy-meets-regulatory-risk
-- Media Info Line, "Kyoorius announces winners at the Kyoorius Creative Awards 2025", https://www.mediainfoline.com/awards/kyoorius-announces-winners-at-the-kyoorius-creative-awards-2025
-- Social Samosa, "ABBYs 2025: Enormous bags Creative Agency of the Year", https://www.socialsamosa.com/goafest/abbys-2025-creative-agency-of-the-year-enormous-9299781
-- Adweek, "Claude's Super Bowl campaign mocking AI ads wins Cannes Lions Film Grand Prix", June 2026, https://www.adweek.com/?p=1950749
+- Adweek, "Claude's Super Bowl Campaign Mocking AI Ads Wins Cannes Lions Film Grand Prix", June 2026, https://www.adweek.com/creativity/claudes-super-bowl-campaign-mocking-ai-ads-wins-cannes-lions-film-grand-prix/
+- Campaign, "Cannes Lions 2026: Oreo Cows and The Legacy of Virginia Giuffre win Titanium", June 2026, https://campaignlive.com/article/cannes-lions-2026-oreo-cows-legacy-virginia-giuffre-win-titanium/1963008
+- Shots, "Cannes Lions 2026: Film, Titanium, Glass and SDG winners", June 2026, https://shots.net/news/view/cannes-lions-2026-film-titanium-glass-and-sdg-winners
 - Mediaweek, "Leo Australia and Suncorp win Titanium Grand Prix at Cannes Lions", June 2026, https://www.mediaweek.com.au/leo-australia-and-suncorp-win-titanium-grand-prix-at-cannes-lions/
 - medianews4u, "India ends Cannes Lions 2026 with five-medal haul, misses Gold and Grand Prix honours", 2026, https://www.medianews4u.com/india-ends-cannes-lions-2026-with-five-medal-haul-misses-gold-and-grand-prix-honours/
+- Adweek, "These are the 4 Black Pencil winners of the 2026 D&AD Awards", September 2026, https://www.adweek.com/creativity/these-are-the-4-black-pencil-winners-of-the-2026-dad-awards/
+- exchange4media, "ASCI issues guidelines on responsible labelling of AI-generated ad content", September 2026, https://www.exchange4media.com/advertising-news/asci-issues-guidelines-on-responsible-labelling-of-ai-generated-ad-content-158710.html
+- Fox Mandal, "ASCI issues guidelines for labelling of AI content in advertising", 2026, https://foxmandal.in/news/asci-issues-guidelines-for-labelling-of-ai-content-in-advertising/
+- Campaign Middle East, "Dubai Lynx 2026: All the Grands Prix and top winners revealed", October 2026, https://campaignme.com/dubai-lynx-2026-all-the-grands-prix-and-top-winners-revealed/
 - Dubai Lynx, "Dubai Lynx announces its 2026 Award winners as Creativity Week draws to a close", October 2026, https://www.dubailynx.com/hala-lynx/dubai-lynx-announces-its-2026-award-winners-as-creativity-week-draws-to-a-close
 - Khaitan & Co, "ERGO: ASCI Guidelines on SGC Labelling", 12 October 2026, https://www.khaitanco.com/sites/default/files/2026-10/Ergo_ASCI%20Guidelines%20on%20SGC%20Labelling_12%2010%202026.pdf
-- Fox Mandal, "ASCI issues guidelines for labelling of AI content in advertising", 2026, https://foxmandal.in/news/asci-issues-guidelines-for-labelling-of-ai-content-in-advertising/
-- Gulf News, "New UAE law: Advertiser Permit now mandatory for influencers and creators for social media", https://gulfnews.com/uae/new-uae-law-advertiser-permit-now-mandatory-for-influencers-and-creators-for-social-media-1.500427938
-- Communicate Online, "UAE influencers risk AED 10,000 fine for missing Advertiser Permit deadline", https://communicateonline.me/news/uae-influencers-risk-aed-10000-fine-for-missing-advertiser-permit-deadline/
-- Associated Press, "Jack McCollough and Lazaro Hernandez named creative directors at Loewe", 24 March 2025, https://www.ksat.com/entertainment/2025/03/24/jack-mccollough-and-lazaro-hernandez-named-creative-directors-at-loewe/
-- The Irish Times, "Dior appoints Irishman Jonathan Anderson as sole creative director", 2 June 2025, https://www.irishtimes.com/life-style/fashion/2025/06/02/dior-appoints-irishman-jonathan-anderson-as-sole-creative-director/
-- FashionUnited, "Bottega Veneta marks 50 years of Intrecciato as Creative Director Louise Trotter prepares for debut", May 2025, https://fashionunited.uk/news/fashion/bottega-veneta-marks-50-years-of-intrecciato-as-creative-director-louise-trotter-prepares-for-debut/2025052881931
-- Manifest Media, "Saif Ali Khan and Sara Ali Khan embark on a journey with Visit Dubai", July 2024, https://www.manifest-media.in/video/campaigns/160724/saif-ali-khan-and-sara-ali-khan-embark-on-a-journey-to-discover-a-who.html
-- Storyboard18, "Who was Piyush Pandey? Legendary Indian adman and Ogilvy icon dies at 70", October 2025, https://www.storyboard18.com/brand-makers/who-was-piyush-pandey-legendary-indian-adman-and-ogilvy-icon-dies-at-70-83061.htm
-- Wikipedia entries consulted for dates and credits: "Dumb Ways to Die", "Chanel No. 5", "Piyush Pandey", "Matthieu Blazy", "Loewe (fashion brand)", "The Man Your Man Could Smell Like", https://en.wikipedia.org/
+- Wikipedia entries consulted for dates and credits: https://en.wikipedia.org/wiki/Think_Small ; https://en.wikipedia.org/wiki/Surfer_(advertisement) ; https://en.wikipedia.org/wiki/Dumb_Ways_to_Die ; https://en.wikipedia.org/wiki/Chanel_No._5 ; https://en.wikipedia.org/wiki/The_Man_Your_Man_Could_Smell_Like ; https://en.wikipedia.org/wiki/Piyush_Pandey ; https://en.wikipedia.org/wiki/Matthieu_Blazy ; https://en.wikipedia.org/wiki/Loewe_(fashion_brand)

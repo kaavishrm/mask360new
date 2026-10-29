@@ -58,7 +58,7 @@ Eisenstein's position was collision (montage as conflict between shots); Pudovki
 
 ### 1.4 Continuity editing and the invisible cut
 
-Continuity editing is the system (Hollywood, codified by the 1920s) that hides the cut: the 180 degree rule (keep the camera on one side of the axis of action so screen direction holds), the 30 degree rule (change the angle by at least 30 degrees or the cut reads as a jump), shot reverse shot, eyeline match (a look off screen followed by what is looked at), match on action (cut during a movement so the movement carries the eye across the cut). Karel Reisz and Gavin Millar's The Technique of Film Editing (1953; second edition 1968) remains the manual. The invisible cut is the goal of this system: the audience follows the story and never notices the join.
+Continuity editing is the system (Hollywood, codified by the 1920s) that hides the cut: the 180 degree rule (keep the camera on one side of the axis of action so screen direction holds), the 30 degree rule (change the angle by at least 30 degrees or the cut reads as a jump), shot reverse shot (alternating shots of two people in conversation, usually over the shoulder), eyeline match (a look off screen followed by what is looked at), match on action (cut during a movement so the movement carries the eye across the cut). Karel Reisz and Gavin Millar's The Technique of Film Editing (1953; second edition 1968) remains the manual. The invisible cut is the goal of this system: the audience follows the story and never notices the join.
 
 ### 1.5 Discontinuity as style
 
@@ -130,9 +130,9 @@ On Instagram, TikTok and YouTube the first three seconds decide the view. Facebo
 
 When to show the brand is contested, and clients argue it every week:
 
-- Brand early. Google's ABCD framework for YouTube (Attract, Brand, Connect, Direct), built with Kantar, puts the brand inside the first 5 seconds; Google reported a 30 percent lift in short-term sales likelihood for ads that follow the ABCDs (Think with Google; figure as reported, not re-read this run). The Facebook IQ figures point the same way for feeds.
-- Brand through the film. Les Binet and Peter Field (The Long and the Short of It, IPA, 2013) found that long-term growth comes from emotional brand building sustained over months. Orlando Wood of System1 (Lemon, IPA, 2019; Look Out, IPA, 2021) tied long-term effect to right-brain features: living characters, a sense of place, dialogue, melody, a story, and distinctive brand assets present throughout.
-- House position. Paid social cutdowns keep the brand legible by 2 seconds, because their job is short-term response and the scroll will not wait. The hero brand film carries the brand through distinctive assets (the product, the place, the sonic mark) from the first shot and holds the mark itself for the end frame, because its job is long-term memory and an early logo announces an advertisement.
+- Brand early. Google's ABCD framework for YouTube (Attract, Brand, Connect, Direct), built with Kantar, puts the brand inside the first 5 seconds; Google reported a 30 percent lift in short-term sales likelihood for ads that follow the ABCDs (Think with Google; a reported figure, unverified at source this run). The Facebook IQ figures point the same way for feeds.
+- Brand through the film. Les Binet and Peter Field (The Long and the Short of It, IPA, 2013) found that long-term growth comes from emotional brand building sustained over months. Orlando Wood of System1 (Lemon, IPA, 2019; Look Out, IPA, 2021) tied long-term effect to right-brain features: living characters, a sense of place, dialogue, melody, a story, and distinctive brand assets (the colours, shapes, sounds and characters a brand owns) present throughout.
+- House position. Paid social cutdowns keep the brand legible by 2 seconds, because their job is short-term response and the scroll will not wait. The hero brand film carries the brand through distinctive assets (the product, the place, the sonic mark, which is the brand's short audio signature) from the first shot and holds the mark itself for the end frame, because its job is long-term memory and an early logo announces an advertisement.
 
 ### 3.5 Structure by length
 
@@ -153,13 +153,13 @@ Hero-first or vertical-first is contested, and the media plan settles it:
 
 - Hero-first: broadcast, cinema, YouTube and the brand film, where the 16:9 or scope composition is the art and the verticals are versions.
 - Vertical-first: social-led campaigns whose media plan sits mostly in Reels, Stories and Shorts, all 9:16 placements (Meta's ads guide; 26-platform-and-format-specs-2026.md, section 3.1).
-- House position: decided at the brief from the media plan. When 9:16 placements carry most of the paid budget, the 9:16 cut is the hero. It is cut first, from its own shot list: closer shot sizes, the subject held in the central 1080 by 1440 band, ASL 0.8 to 1.5 s, the hook inside the first second. It is shot natively vertical or open gate at 6K or above (14-video-preproduction-and-cinematography.md, section 10.7; 17-short-form-social-and-platform-craft.md, section 6.1), and the 16:9 is derived from it. The reason: a vertical reframed from a wide horizontal carries shot sizes chosen for a television at 3 m, which read small and distant on a phone at 30 cm, and that is why reframes look like leftovers.
+- House position: decided at the brief from the media plan. When 9:16 placements carry most of the paid budget, the 9:16 cut is the hero. It is cut first, from its own shot list: closer shot sizes, the subject held in the central 1080 by 1440 band, ASL 0.8 to 1.5 s, the hook inside the first second. It is shot natively vertical or open gate (the full sensor area, recorded without cropping to a delivery ratio) at 6K or above (14-video-preproduction-and-cinematography.md, section 10.7; 17-short-form-social-and-platform-craft.md, section 6.1), and the 16:9 is derived from it. The reason: a vertical reframed from a wide horizontal carries shot sizes chosen for a television at 3 m, which read small and distant on a phone at 30 cm, and that is why reframes look like leftovers.
 
 Each cutdown gets its own music edit, cut on bar and phrase boundaries and ending on a button (a final hit) or a natural out under the end frame; a fade forced by length sounds truncated. Tools: Premiere's Remix (re-times a track to a target duration by recombining its sections; check every join by ear), the library's own stems and alternate lengths (ask for 60, 30, 15 and 6 second edits when licensing), and composer cutdowns per 15-lighting-and-sound.md, section 12. The licence names every length and territory.
 
 ### 3.7 Pattern interrupts
 
-A pattern interrupt is a deliberate break in the rhythm (a hold after fast cuts, a silence, a frame of black, a change of format) that resets attention. Place one at the turn and nowhere else in a 30; one every 10 to 15 seconds in a long social piece. The social mechanics (hooks, retention curves, caption cadence) are in 17-short-form-social-and-platform-craft.md.
+A pattern interrupt is a deliberate break in the rhythm (a hold after fast cuts, a silence, a frame of black, a change of format) that resets attention. Place one at the turn and nowhere else in a 30; one every 10 to 15 seconds in a long social piece. The social mechanics (hooks, retention curves, caption cadence) are in 17-short-form-social-and-platform-craft.md, section 1.
 
 ## 4. Structure for commercial lengths
 
@@ -268,10 +268,10 @@ Frame.io (Adobe; V4 current as of October 2026) gives frame-accurate comments, a
 
 | Plan | Price per member per month | Members | Storage | Mounted Storage (the project as a desktop drive) | Review security |
 |---|---|---|---|---|---|
-| Free | 0 USD | Up to 2 | 2 GB | 2 GB | Basic links |
-| Pro | 15 USD | Up to 5 | 2 TB plus 2 TB per additional member | 250 GB | Passphrase, link expiry, downloads off, one static watermark template |
+| Free | 0 USD | Up to 2 | 2 GB | 2 GB | Not listed on the pricing page |
+| Pro | 15 USD | Up to 5 | 2 TB plus 2 TB per additional member | 250 GB | Passphrase, link expiry, downloads off, one static watermark |
 | Team | 25 USD | Up to 15 | 3 TB plus 2 TB per additional member | 500 GB | As Pro, plus restricted projects and internal comments |
-| Enterprise | On request | Custom | Custom | 2 TB | Unlimited watermark templates; session-based and forensic watermarking, DRM and Secure Sharing in the Prime tier |
+| Enterprise | On request | Custom | Custom | 2 TB | Unlimited watermarks; session-based and forensic watermarking, DRM and Secure Sharing in the Prime tier |
 
 Vimeo Review is the alternative for clients who already live in Vimeo. Blackmagic Cloud Presentations covers Resolve-native pipelines with shared review links and comments inside the Resolve project.
 
@@ -320,7 +320,7 @@ AI tools, with the version they arrived in:
 | Multicam SmartSwitch | 20 | Switches angles to the active speaker by audio and lip movement | Panels with crosstalk; it is a first pass only |
 | Audio Assistant | 20 | Produces a balanced mix from an unbalanced timeline | Music-led films where the mix is the idea |
 | Dialogue Matcher | 20 | Matches tone, level and room between dialogue clips | Clips recorded with different microphones at wildly different distances |
-| Set Extender | 20 | Generates scene extensions from a text prompt (ResolveFX) | Any area the eye rests on; backgrounds only, and never in a hero shot |
+| Set Extender | 20 | Generates scene extensions from a text prompt (ResolveFX) | Any area the eye rests on, hero shots included; use it on backgrounds only |
 | Chroma Warp | 20 | Adjusts colour and saturation by dragging in the viewer | Precision work; use for a quick exploratory move, then rebuild with curves |
 | IntelliSearch | 21 (2026) | Search media by face, object or spoken word | Finds what is there; does not rate it |
 | CineFocus | 21 | Adjustable focus and depth of field after the fact with keyframeable rack focus | Depth estimation errors on glass, jewellery and reflective surfaces |
@@ -331,7 +331,7 @@ AI tools, with the version they arrived in:
 
 Also in 21 (verified on the What's New page): Magic Mask Render in Place (caches a tracked mask as a travelling matte node), over 70 Krokodove graphics in Fusion, Fairlight track folders and a 6 band clip EQ, expanded immersive and VR support, and tethered camera capture on the Photo page. Film Look Creator arrived in 19 (2024).
 
-Resolve 21.1 (early September 2026; details from RedShark News' reading of the release notes, 8 September 2026): a native MCP server in Studio (Model Context Protocol, the open standard through which an AI assistant such as Claude operates an application), so an assistant can organise media, change settings and queue renders by conversation; advanced Python scripting moved to Studio, Python 2 dropped, and about 20 new scripting APIs (multicam creation, transcriptions with speaker and timing data, render presets); individual MultiMaster trims for Dolby Vision, HDR10+ and HDR Vivid (Studio); new camera log support (DJI D-Log2 and D-Gamut2, GoPro Log, Leica L-Log); a LUT Manager that relinks missing LUTs and DCTLs; subtitle support and comment replies in Blackmagic Cloud Presentations; OCIO 2.5 with ACES 2.0 workflows in Fusion Studio. For Mask360 the MCP server matters: Claude can act as the assistant editor inside a Resolve project (stringouts, clip naming, render queues for the delivery matrix of section 13), which is production labour; every creative cut stays with the editor.
+Resolve 21.1 (early September 2026; details from RedShark News' reading of the release notes, 8 September 2026): a native MCP server in Studio (Model Context Protocol, the open standard through which an AI assistant such as Claude operates an application), so an assistant can organise media, change settings and queue renders by conversation; advanced Python scripting moved to Studio, Python 2 dropped, and about 20 new scripting APIs (multicam creation, transcriptions with speaker and timing data, render presets); individual MultiMaster trims for Dolby Vision, HDR10+ and HDR Vivid (Studio); new camera log support (DJI D-Log2 and D-Gamut2, GoPro Log, Leica L-Log); a LUT Manager that relinks missing LUTs and DCTLs (DaVinci CTL, Resolve's language for scripted colour transforms); subtitle support and comment replies in Blackmagic Cloud Presentations; OCIO 2.5 with ACES 2.0 workflows in Fusion Studio. For Mask360 the MCP server matters: Claude can act as the assistant editor inside a Resolve project (stringouts, clip naming, render queues for the delivery matrix of section 13), which is production labour; every creative cut stays with the editor.
 
 ### 6.3 Final Cut Pro
 
@@ -427,7 +427,7 @@ The Academy Color Encoding System, from the Academy of Motion Picture Arts and S
 - Output Device Transform (ODT): the RRT output mapped to a specific display (Rec.709; P3-DCI, the digital cinema gamut, wider than Rec.709 in reds and greens; Rec.2100 PQ).
 - Look Modification Transform (LMT): a systematic look applied before the RRT, the ACES equivalent of a creative LUT, placed correctly in the pipeline.
 
-ACES 2.0 was released in 2025 (the April 2025 date given in earlier reporting was not re-read at a primary source for this file). Its output transform (the RRT plus ODT combination) was rewritten on a CIECAM16 colour appearance model with Hellwig 2022 modifications, with a less aggressive tone scale, reduced mid-tone contrast and a gentler highlight roll-off than ACES 1.x, and new presets including Rec.2020 (ITU-R BT.2020, the ultra-high-definition gamut, wider than P3) ST 2084 variants and sRGB gamma 2.2. The same scene-linear EXR looks different through 1.x and 2.0 outputs, so a project must declare which it uses and never mix them. Fusion Studio gained OCIO 2.5 with ACES 2.0 workflows in Resolve 21.1; confirm which ACES output transform version the Color page applies before a job shared with a VFX vendor. The house uses ACEScct when the project involves VFX vendors or a feature-style pipeline, and DWG and DI for everything else, because DWG and DI need fewer settings to get right and the output looks the same when the colourist does the work.
+ACES 2.0 was released in 2025 (the exact date was not confirmed at a primary source for this file; the release notes are on docs.acescentral.com). Its output transform (the RRT plus ODT combination) was rewritten on a CIECAM16 colour appearance model with Hellwig 2022 modifications, with a less aggressive tone scale, reduced mid-tone contrast and a gentler highlight roll-off than ACES 1.x, and new presets including Rec.2020 ST 2084 variants (Rec.2020 being ITU-R BT.2020, the ultra-high-definition gamut, wider than P3) and sRGB gamma 2.2. The same scene-linear EXR looks different through 1.x and 2.0 outputs, so a project must declare which it uses and never mix them. Fusion Studio gained OCIO 2.5 with ACES 2.0 workflows in Resolve 21.1; confirm which ACES output transform version the Color page applies before a job shared with a VFX vendor. The house uses ACEScct when the project involves VFX vendors or a feature-style pipeline, and DWG and DI for everything else, because DWG and DI need fewer settings to get right and the output looks the same when the colourist does the work.
 
 ### 7.4 Rec.709 and gamma 2.4 as the SDR delivery standard
 
@@ -533,7 +533,7 @@ Grain and the platform encode: platforms re-encode uploads at a fraction of the 
 The house grade, defined in scope targets (read on scopes with the output transform applied):
 
 - Saturation lowered: global saturation about 80 to 90 percent of the balanced image, then colour boost if faces go grey. The most saturated object in frame is the product or a single accent.
-- Blacks lifted with care: the deepest black between 2 and 5 IRE on the waveform (64 to about 90 in 10 bit code values), never crushed to 0 and never lifted into milk above 6. A true black exists somewhere in frame (a shadow, a lash) so the image has an anchor.
+- Blacks lifted with care: the deepest black between 2 and 5 IRE on the waveform (64 to about 90 in 10 bit code values), floored above 0 and capped at 6, above which blacks turn milky. A true black exists somewhere in frame (a shadow, a lash) so the image has an anchor.
 - Warm skin, cool shadows: log wheels push shadows a few degrees toward blue-cyan and highlights toward warm; skin stays on the line. The split is small enough that a neutral grey wall still reads grey.
 - True whites: a white object reads neutral on the parade (equal RGB) at 90 to 100 IRE; no cream cast on linen, no cyan cast on marble.
 - Contrast: moderate, with a soft shoulder (the highlight roll-off) and no hard clip; the window in a hotel room is bright and still has texture.
@@ -547,11 +547,11 @@ PQ (the Perceptual Quantizer, SMPTE ST 2084's own name for it; standardised 2014
 
 Mastering: a 1,000 nit grade on a 1,000 nit reference display is the practical standard. Dolby's published Tier 1 reference display requirement (professional.dolby.com, read October 2026) is peak luminance of at least 1,000 nits, black level at or below 0.001 nits and intra-frame contrast of at least 1,000,000:1; 4,000 nit monitors exist for feature work. Dolby's named targets are Rec.709 SDR at 100 nits, HDR PQ in P3 or Rec.2020 at 600 nits, cinema SDR P3 at 48 nits and Dolby Cinema PQ P3 at 108 nits; the full artistic trim controls need the Dolby Vision trims licence, a one-time 1,000 USD purchase usable on several machines in one facility (same page). Diffuse white (a white card) sits at about 203 nits per ITU-R BT.2408, and skin around 100 to 200 nits; the headroom above is reserved for speculars and light sources, and the picture as a whole stays near its SDR brightness. Dolby Vision analysis generates L1 metadata (per-shot minimum, average and maximum luminance) automatically; L2 and L8 trims are manual per-scene adjustments that control how the content maps to 100 nit, 600 nit and other targets. Resolve's MultiMaster Trim Manager (21) produces the SDR and HDR trim deliverables from one timeline. The HDR versus SDR trim: the SDR derivative from an HDR grade needs its own pass (highlights compressed, saturation checked) and the house delivers SDR as the primary and HDR only when the platform and the client's displays justify it (YouTube, Apple TV, in-store screens that are actually HDR).
 
-iPhone HDR footage arrives every week from clients, creators and founders: iPhone 12 and later record video in HDR by default as HLG with Dolby Vision Profile 8.4 metadata. In a Rec.709 project each such clip gets a CST from Rec.2100 HLG to Rec.709 gamma 2.4 with tone mapping, or the contributor is asked to switch HDR Video off in the camera settings before shooting. Untransformed HLG clips in an SDR timeline give blown highlights and shots that do not match. On Instagram, YouTube and TikTok, HDR uploads play brighter than SDR posts on HDR phones, so a muted SDR grade can look dim beside creator HDR content in the same feed. Matching that brightness is a contested choice; the house delivers SDR tagged 1-1-1 unless the campaign was graded HDR, because a bright HDR social file loses the muted grade on every SDR screen, and checks it in feed on an HDR iPhone during the device test (13.2, line 20).
+iPhone HDR footage arrives every week from clients, creators and founders: iPhone 12 and later record video in HDR by default as HLG with Dolby Vision Profile 8.4 metadata. In a Rec.709 project each such clip gets a CST from Rec.2100 HLG to Rec.709 gamma 2.4 with tone mapping, or the contributor is asked to switch HDR Video off in the camera settings before shooting. Untransformed HLG clips in an SDR timeline give blown highlights and shots that do not match. On Instagram, YouTube and TikTok, HDR uploads play brighter than SDR posts on HDR phones, so a muted SDR grade can look dim beside creator HDR content in the same feed. Matching that brightness is contested: creators upload HDR to stand out in the feed, while brands that need one grade on every screen deliver SDR. The house delivers SDR tagged 1-1-1 unless the campaign was graded HDR, because a bright HDR social file loses the muted grade on every SDR screen, and checks it in feed on an HDR iPhone during the device test (13.2, line 20).
 
 ### 8.12 Monitoring
 
-- Reference monitor: a calibrated display (Flanders Scientific, Sony BVM or PVM, Eizo ColorEdge CG, or a consumer OLED calibrated with a probe and a LUT box as a budget option) fed by a video output card (Blackmagic DeckLink or UltraStudio), never the GUI display, because the GUI path is colour managed by the operating system and the video path is not.
+- Reference monitor: a calibrated display (Flanders Scientific, Sony BVM or PVM, Eizo ColorEdge CG, or a consumer OLED calibrated with a probe and a LUT box as a budget option) fed by a video output card (Blackmagic DeckLink or UltraStudio), because the GUI display is colour managed by the operating system while the video output path carries the signal untouched to the calibrated monitor.
 - SDR targets: 100 nits peak white, D65 white point, gamma 2.4 (BT.1886), in a dim room with a neutral grey surround per ITU-R BT.2035; a bias light at D65 behind the monitor at a low level (house: about 10 percent of peak white, so about 10 nits for SDR; the standard's exact surround value is read in BT.2035 before a room is built).
 - Calibration: a probe (Klein K10-A colorimeter, profiled against a Colorimetry Research spectroradiometer where the facility has one) with Portrait Displays Calman or Light Illusion ColourSpace, writing a 3D LUT into the monitor or a LUT box. Cadence: monthly, and before every HDR job, because OLED panels drift. Verification after calibration with a patch set, aiming for an average Delta E 2000 (the CIE colour difference formula, where 1 is about the smallest visible difference) under 1 (house target). The calibration report is kept with the project.
 - The Mac display caveat: Apple displays default to a P3 gamut and a colour managed pipeline with a 1.96 to 2.2 interpretation of 709 material (section 12.5). The HDTV Video (BT.709, BT.1886) reference mode on Pro Display XDR and MacBook Pro XDR panels approximates the standard and is acceptable for review; it is still a GUI path and still not a reference monitor. Resolve's colour managed viewer (Use Mac Display Color Profiles for Viewers) reduces the mismatch for the operator.
@@ -653,7 +653,7 @@ Black and white conversion craft: never a desaturate, which maps every colour to
 
 ### 9.7 Real estate
 
-Truthful colour is a legal matter as well as a taste one. In India, section 12 of the Real Estate (Regulation and Development) Act, 2016 makes a promoter liable for loss caused by false or misleading statements in an advertisement or prospectus; in Dubai, the Real Estate Regulatory Agency under the Dubai Land Department requires a permit for every property advertisement and holds advertisers to accuracy. A grade that turns a grey sea blue or a brown lawn green is a misrepresentation that the agency shares in. Rules: sky, sea, grass and facade as shot; twilight blends (an exterior at dusk with the interior lights on, composited from a daylight plate and a dusk plate) are acceptable when every light shown exists; no HDR sheen; no sky replacement without disclosure to the client in the manifest (section 12.11); renders carry an "artist's impression" super for as long as they are on screen. The luxury real estate grade is the hospitality grade (9.4) applied to an empty building.
+Truthful colour is a legal matter as well as a taste one. In India, section 12 of the Real Estate (Regulation and Development) Act, 2016 (RERA) makes a promoter liable for loss caused by false or misleading statements in an advertisement or prospectus; in Dubai, the Real Estate Regulatory Agency under the Dubai Land Department requires a permit for every property advertisement and holds advertisers to accuracy. A grade that turns a grey sea blue or a brown lawn green is a misrepresentation that the agency shares in. Rules: sky, sea, grass and facade as shot; twilight blends (an exterior at dusk with the interior lights on, composited from a daylight plate and a dusk plate) are acceptable when every light shown exists; no HDR sheen; no sky replacement without disclosure to the client in the manifest (section 12.11); renders carry an "artist's impression" super for as long as they are on screen. The luxury real estate grade is the hospitality grade (9.4) applied to an empty building.
 
 The legal supers a property film must carry, whose absence gets a film pulled:
 
@@ -669,13 +669,13 @@ Brighter and punchier within reason, because the display is a phone at 50 to 100
 
 ### 9.9 Gulf and Indian dress and light
 
-- Gulf dress: a white kandura (or dishdasha) and a black abaya in one frame under desert sun are the two ends of the waveform. The white holds at 90 to 100 IRE with the weave visible (a soft shoulder, and a luminance key on the fabric if needed); the abaya's texture holds above 2 to 3 IRE with one true black elsewhere in frame. The red and white check of a ghutra moires after downscaling and 4:2:0 encoding, so it is checked on the delivery file at 100 percent.
-- Indian bridal: lehenga red sits at the edge of Rec.709. The red channel clips first and embroidery detail goes with it, so the CIE plot is read and the red range compressed with sat vs sat. Zari and gold thread follow the metal rules of 9.2: speculars neutral white.
+- Gulf dress: a white kandura (or dishdasha, the man's ankle-length robe) and a black abaya (the woman's over-garment) in one frame under desert sun are the two ends of the waveform. The white holds at 90 to 100 IRE with the weave visible (a soft shoulder, and a luminance key on the fabric if needed); the abaya's texture holds above 2 to 3 IRE with one true black elsewhere in frame. The red and white check of a ghutra (the head cloth) shows moire (a false wavy pattern where fine regular detail beats against the pixel grid) after downscaling and 4:2:0 encoding, so it is checked on the delivery file at 100 percent.
+- Indian bridal: the red of a bridal lehenga (the long embroidered skirt ensemble) sits at the edge of Rec.709. The red channel clips first and embroidery detail goes with it, so the CIE plot is read and the red range compressed with sat vs sat. Zari (metallic thread embroidery) and gold thread follow the metal rules of 9.2: speculars neutral white.
 - Desert exteriors: sand turns orange or pink under a warm balance, so balance to a grey card. Midday haze lowers contrast; restore it with contrast and pivot, because a dehaze or clarity move halos the horizon. Sky saturation stays as shot for real estate (9.7).
 
 ### 9.10 Events
 
-Saturated blue and magenta LED stage light pushes colour outside Rec.709 and sometimes outside the camera's gamut, which gives clipped, posterised skin. Apply gamut compression before the grade: the ACES Reference Gamut Compression (introduced in ACES 1.3, 2021, available in Resolve) or the CST's gamut mapping into DWG. Then key the skin and accept the stage wash as the event's light (lighting side in 14-video-preproduction-and-cinematography.md, section 14.8, and 15-lighting-and-sound.md, section 6.11).
+Saturated blue and magenta LED stage light pushes colour outside Rec.709 and sometimes outside the camera's gamut, which gives clipped, posterised skin (tones collapsed into flat bands). Apply gamut compression before the grade: the ACES Reference Gamut Compression (introduced in ACES 1.3, 2021, available in Resolve) or the CST's gamut mapping into DWG. Then key the skin and accept the stage wash as the event's light (lighting side in 14-video-preproduction-and-cinematography.md, section 14.8, and 15-lighting-and-sound.md, section 6.11).
 
 Same-day edit, house targets:
 
@@ -699,14 +699,14 @@ Law first, because Gulf and Indian luxury clients also advertise in Europe:
 |---|---|---|---|
 | France | Decree no. 2017-738 of 4 May 2017, in force 1 October 2017 | The label "photographie retouchée" on commercial images where a model's body shape has been made thinner or thicker | Fine of up to 37,500 EUR or 30 percent of the advertising spend |
 | Norway | Amendment to the Marketing Control Act, in force 1 July 2022 | A standard label on advertising images and video where a body's shape, size or skin has been altered, including influencer posts | Enforcement by the Consumer Authority |
-| Israel | Law passed in 2012, in force 2013 | Labelling of altered images; a minimum body mass index of 18.5 for models | Enforcement under the law |
+| Israel | Law passed in 2012, in force 2013 | Labelling of altered images; a minimum body mass index of 18.5 for models | Penalties not verified for this file |
 | United Kingdom | No labelling law; the CAP Code, enforced by the Advertising Standards Authority | Retouching must not exaggerate a product's effect | Ads banned: the 2011 rulings against Lancôme's Julia Roberts and Maybelline's Christy Turlington campaigns |
 | India | ASCI Code for Self-Regulation of Advertising Content | Advertisements truthful and not misleading by implication, so a retouched "after" in a skincare ad is a claim | ASCI complaint upheld; ad withdrawn or modified |
 | UAE | Content standards of the National Media Authority (NMA), created by a Federal Decree-Law issued on 18 December 2025 to take over the UAE Media Council, the National Media Office and WAM; Media Regulation Law, Federal Decree-Law No. 55 of 2023 | Honesty in advertising; anyone publishing promotional content on social media, paid or unpaid, needs the Advertiser Permit (launched by the Media Council on 30 July 2025; the NMA set 31 January 2026 as the deadline in place of the expected October 2025 one; free for three years for those registered before the deadline, then an annual renewal fee of AED 1,000) | Posting without the permit reported to carry fines of up to AED 10,000 (Pinsent Masons); breaches of the media content standards carry higher fines under the media law's executive regulations |
 
 The house natural skin standard, written into every beauty and portrait scope:
 
-- Texture retained at 100 percent on the reference monitor: pores, fine lines, vellus hair.
+- Texture retained at 100 percent on the reference monitor: pores, fine lines, vellus hair (the fine, short hair on the face).
 - Removed: temporary marks only (a blemish, a scratch, a bruise, a stray hair across the eye), with the talent's agreement where the mark is on the face.
 - Retained: moles, scars, pigmentation, asymmetry and every permanent feature, unless the talent asks in writing.
 - No reshaping of body or face. Face Reshaper and its equivalents (section 6.2) stay off.
@@ -723,11 +723,11 @@ Resolve Studio's Face Refinement ResolveFX detects and tracks faces and offers s
 
 Static camera: a clean plate (a frame of the set without the object) composited over the object through a mask, or Resolve's Patch Replacer. Moving camera: Resolve Studio's Object Removal ResolveFX (tracks the area and synthesises the background from neighbouring frames), After Effects Content-Aware Fill (since 2019, with a reference frame for hard cases), Runway's inpainting, or a paint node in Fusion for a frame-by-frame job. Adobe previewed object addition and removal for Premiere in 2025; its state in the current build is checked before it is relied on. Rules: check at 400 percent and at speed for shimmer; removing a thing that changes what is being sold (the construction crane beside the hotel, the neighbour's tower from the penthouse window) is a disclosure question for the account lead, and for real estate it falls under section 9.7.
 
-Clearance pass, before picture lock: list every third-party trademark, artwork, identifiable person without a release, vehicle plate, phone or TV screen and sign in frame, then clear, blur or replace each one, and log the list in the manifest (12.11). Tools: Boris FX Mocha Pro (planar tracking, the standard for screen and sign replacement and logo removal; a plugin for Resolve, Premiere and After Effects), Fusion's planar tracker, and After Effects Content-Aware Fill. The law behind it: India's Trade Marks Act, 1999 and Copyright Act, 1957 (artworks and murals in frame); in the UAE, Federal Decree-Law No. 34 of 2021 on combating rumours and cybercrimes makes photographing and publishing people without their consent an offence (article 44, on invasion of privacy, as the house reads it; confirm with counsel), so identifiable faces in a Dubai mall or hotel lobby need a release or a blur.
+Clearance pass, before picture lock: list every third-party trademark, artwork, identifiable person without a release, vehicle plate, phone or TV screen and sign in frame, then clear, blur or replace each one, and log the list in the manifest (12.11). Tools: Boris FX Mocha Pro (planar tracking, which follows a flat surface by its texture so a screen or sign can be replaced; the standard for screen and sign replacement and logo removal; a plugin for Resolve, Premiere and After Effects), Fusion's planar tracker, and After Effects Content-Aware Fill. The law behind it: India's Trade Marks Act, 1999 and Copyright Act, 1957 (artworks and murals in frame); in the UAE, Federal Decree-Law No. 34 of 2021 on combating rumours and cybercrimes makes photographing and publishing people without their consent an offence (article 44, on invasion of privacy, as the house reads it; confirm with counsel), so identifiable faces in a Dubai mall or hotel lobby need a release or a blur.
 
 ### 10.4 Stabilisation
 
-Premiere's Warp Stabilizer (Subspace Warp is its default method) warps the frame to counter motion; its tells are the wobble on verticals (a doorframe that breathes), background elements that move against the foreground, and the crop and scale it applies to hide the edges (often 3 to 10 percent). Resolve's stabiliser offers Perspective, Similarity and Translation modes plus Camera Lock; Similarity and Translation warp nothing, so they are the luxury choice, with the crop accepted. Rules: stabilise only footage with crop to spare (a 4K source for a 1080 delivery); check verticals against a straight edge; never stabilise a shot that was meant to be handheld, because the grammar of the take changes; shoot on a gimbal, a slider or a tripod when stillness is the idea. The best stabilisation is none. When footage carries gyro metadata, Gyroflow (open source, also an OFX plugin for Resolve) stabilises from the camera's own motion record (Sony's recent cinema and mirrorless bodies, GoPro, DJI, RED Komodo and others; the current list is on gyroflow.xyz). With no image analysis there is no wobble on verticals, which makes it the luxury choice whenever the data exists.
+Premiere's Warp Stabilizer (Subspace Warp is its default method) warps the frame to counter motion; its tells are the wobble on verticals (a doorframe that breathes), background elements that move against the foreground, and the crop and scale it applies to hide the edges (often 3 to 10 percent). Resolve's stabiliser offers Perspective, Similarity and Translation modes plus Camera Lock; Similarity and Translation warp nothing, so they are the luxury choice, with the crop accepted. Rules: stabilise only footage with crop to spare (a 4K source for a 1080 delivery); check verticals against a straight edge; never stabilise a shot that was meant to be handheld, because the grammar of the take changes; shoot on a gimbal, a slider or a tripod when stillness is the idea. The best stabilisation is none. When footage carries gyro metadata, Gyroflow (open source; also an OFX plugin for Resolve, OFX being OpenFX, the open plugin standard) stabilises from the camera's own motion record (Sony's recent cinema and mirrorless bodies, GoPro, DJI, RED Komodo and others; the current list is on gyroflow.xyz). With no image analysis there is no wobble on verticals, which makes it the luxury choice whenever the data exists.
 
 ### 10.5 Reframing and auto reframe for vertical
 
@@ -807,7 +807,7 @@ H.264 (AVC, Advanced Video Coding) settings for every platform file:
 - Frame structure: 2 consecutive B-frames (frames predicted from both earlier and later frames); closed GOP (group of pictures: the run of frames from one keyframe to the next; closed means no frame refers outside its group) with a keyframe every half-second to 2 seconds (YouTube asks for a GOP of half the frame rate).
 - Format: 4:2:0 8 bit, MP4 with the moov atom (the index) at the front so playback starts before the download ends.
 - House bitrates, set above each platform's minimum so the file survives the platform's own re-encode: 1080p 10 to 16 Mbps (YouTube's figure is 8 Mbps at 24 to 30 fps and 12 at 48 to 60); UHD 35 to 50 Mbps (YouTube: 35 to 45, and 53 to 68 at high frame rate).
-- H.265 (HEVC, High Efficiency Video Coding) at about 60 percent of the H.264 rate, where the platform accepts it (YouTube, Vimeo, Apple devices). The coding-efficiency comparison by Ohm and others (2012) and the later JCT-VC verification tests (Tan and others, 2016) found about 50 to 60 percent bitrate savings at equal subjective quality; the house keeps 60 percent of the H.264 rate because social encoders are conservative. Meta re-encodes everything, so H.264 is simpler there.
+- H.265 (HEVC, High Efficiency Video Coding) at about 60 percent of the H.264 rate, where the platform accepts it (YouTube, Vimeo, Apple devices). The coding-efficiency comparison by Ohm and others (2012) and the later verification tests of the JCT-VC (the Joint Collaborative Team on Video Coding of ITU-T and ISO/IEC that developed HEVC; Tan and others, 2016) found about 50 to 60 percent bitrate savings at equal subjective quality; the house keeps 60 percent of the H.264 rate because social encoders are conservative. Meta re-encodes everything, so H.264 is simpler there.
 
 Per platform:
 
@@ -861,22 +861,34 @@ Covers and thumbnails are deliverables. Reels and TikTok covers are exported fro
 | YouTube Shorts | 1080 by 1920 | Title, channel and controls at the bottom and right | Not published by YouTube; the house applies the Meta zone | Unverified (U) |
 | Pinterest Idea ad | 1080 by 1920 | Per Pinterest's spec | Top 270, left 65, right 195, bottom 440 | Verified in 26-platform-and-format-specs-2026.md |
 | Snapchat | 1080 by 1920 | Top and bottom | Top 150, bottom 250 | Unverified (U) |
-| Broadcast 16:9 | Any | Action safe and title safe | Action safe 93 percent, title safe 90 percent of width and height (SMPTE ST 2046-1; EBU R95 gives the same 3.5 and 5 percent margins) | Standard |
+| Broadcast 16:9 | Any | Action safe and title safe | Action safe 93 percent, title safe 90 percent of width and height (SMPTE ST 2046-1; EBU R 95 gives the same 3.5 and 5 percent margins) | Standard |
 | DCP | 1998 by 1080 or 3996 by 2160 | No overlay; screen masking may crop the edge | Titles inside 95 percent | House |
 
 The house applies the tightest zone of every placement an asset will run in, because one vertical asset usually runs in all of them.
 
 ### 12.8 DCP for cinema
 
-A Digital Cinema Package is a folder of MXF files (picture, sound, subtitles) with XML metadata (the CPL, or composition playlist; the PKL, or packing list; the ASSETMAP), as specified by Digital Cinema Initiatives in the DCI Digital Cinema System Specification (the 1.4 series; the current point version is checked at dcimovies.com) and the SMPTE ST 429 family. Values: picture as JPEG 2000 at 12 bits per component in X'Y'Z' colour (CIE XYZ encoded with a 2.6 gamma, mastered against DCI-P3 at 48 cd/m2, which is 14 foot-lamberts); containers 2048 by 1080 (2K) and 4096 by 2160 (4K), with Flat at 1998 by 1080 or 3996 by 2160 (1.85:1) and Scope at 2048 by 858 or 4096 by 1716 (2.39:1); maximum picture bitrate 250 Mbit/s (older servers are safer at about 200 to 235, so the house encodes advertisements at 200 to 230); 24 fps as the universal rate, with 25, 30, 48, 50 and 60 at 2K and 25 and 30 at 4K allowed in SMPTE DCPs and accepted by most modern servers, confirmed with the chain before the encode; audio as 24 bit 48 kHz PCM, 5.1 or 7.1 (a stereo mix is placed in left and right with the centre silent, or upmixed by the mixer), at the cinema loudness convention of 85 dB Leq(m) (the trailer level set by TASA, the Trailer Audio Standards Association, which chains commonly apply to advertisements; the chain's own figure governs); SMPTE DCP as the current flavour and Interop as the older one still accepted; no encryption, and therefore no KDM (key delivery message, the per-screen, time-limited key file that decrypts an encrypted DCP), for advertising. Naming follows the ISDCF Digital Cinema Naming Convention field order (title, content type, aspect, language and subtitle, territory, audio, resolution, date, version), for example TITLE_ADV_F_EN-XX_IN_51_2K_20261028_OV. Tools: Resolve Studio (DCP encoding built in) and DCP-o-matic (free, open source). Every DCP is ingested and played on a cinema server before the campaign, because a DCP that fails on the chain's server fails in public. Regulatory: in India every advertisement exhibited in a cinema needs a Central Board of Film Certification certificate, because advertisements are films under the Cinematograph Act, 1952; in the UAE the exhibitor (VOX, Reel, Novo, Roxy) clears content under the National Media Authority's standards. The exhibitors to spec against: PVR INOX and Cinepolis in India; VOX Cinemas, Reel Cinemas and Novo Cinemas in the UAE.
+A Digital Cinema Package is a folder of MXF files (picture, sound, subtitles) with XML metadata (the CPL, or composition playlist; the PKL, or packing list; the ASSETMAP), as specified by Digital Cinema Initiatives in the DCI Digital Cinema System Specification (the 1.4 series; the current point version is checked at dcimovies.com) and the SMPTE ST 429 family.
+
+- Picture: JPEG 2000 at 12 bits per component in X'Y'Z' colour (CIE XYZ encoded with a 2.6 gamma), mastered against DCI-P3 at 48 cd/m2, which is 14 foot-lamberts.
+- Containers: 2048 by 1080 (2K) and 4096 by 2160 (4K), with Flat at 1998 by 1080 or 3996 by 2160 (1.85:1) and Scope at 2048 by 858 or 4096 by 1716 (2.39:1).
+- Bitrate: the DCI maximum picture bitrate is 250 Mbit/s; older servers are safer at about 200 to 235, so the house encodes advertisements at 200 to 230.
+- Frame rate: 24 fps is the universal rate; 25, 30, 48, 50 and 60 at 2K and 25 and 30 at 4K are allowed in SMPTE DCPs and accepted by most modern servers, confirmed with the chain before the encode.
+- Audio: 24 bit 48 kHz PCM, 5.1 or 7.1 (a stereo mix is placed in left and right with the centre silent, or upmixed by the mixer). Level: 85 dB Leq(m) is the trailer level set by TASA, the Trailer Audio Standards Association (Leq(m): equivalent continuous loudness over the whole spot, measured with the M-weighting curve); cinema advertising standards in some markets are set lower than the trailer level, so the chain's or the sales house's own figure governs.
+- Packaging: SMPTE DCP is the current flavour and Interop the older one still accepted; no encryption, and therefore no KDM (key delivery message, the per-screen, time-limited key file that decrypts an encrypted DCP), for advertising.
+- Naming: the ISDCF Digital Cinema Naming Convention field order (title, content type, aspect, language and subtitle, territory, audio, resolution, date, version), for example TITLE_ADV_F_EN-XX_IN_51_2K_20261028_OV.
+- Tools and test: Resolve Studio (DCP encoding built in) and DCP-o-matic (free, open source). Every DCP is ingested and played on a cinema server before the campaign, because a DCP that fails on the chain's server fails in public.
+- Regulation: in India every advertisement exhibited in a cinema needs a Central Board of Film Certification certificate, because advertisements are films under the Cinematograph Act, 1952; the certificate number goes in the manifest (12.11). In the UAE the exhibitor (VOX, Reel, Novo, Roxy) clears content under the National Media Authority's standards.
+
+Routes to the screen. In India much cinema advertising runs through ad networks and sales houses as well as the chains: UFO Moviez runs India's largest in-cinema advertising network, much of it on its own E-cinema (non-DCI digital projection) systems in single screens; Qube Cinema supplies servers and digital delivery (Qube Wire) to many screens; multiplex chains such as PVR INOX and Cinepolis sell their own inventory. Several take a ProRes or high-bitrate master and encode it themselves (26-platform-and-format-specs-2026.md, section 5.8), so before encoding the house asks the sales house on the media plan for its ingest sheet, accepted master format, slot lengths and loudness. In the UAE the exhibitors to spec against are VOX Cinemas, Reel Cinemas and Novo Cinemas.
 
 ### 12.9 Broadcast specifications
 
-India: each channel group (JioStar, Zee, Sony, Sun and the regional networks) publishes its own delivery spec; the common denominator as of October 2026 is 1920 by 1080 at 25 fps, delivered interlaced (1080i50) by many channels and progressive (1080p25) by some, as MXF OP1a with XDCAM HD422 at 50 Mbps or as ProRes 422 HQ MOV, Rec.709 legal range, 48 kHz 24 bit stereo audio, with a 10 second slate (client, product, title, duration, agency, version, date, audio layout, loudness) and 2 seconds of black before and after. Loudness is measured to ITU-R BS.1770; the reason for the limit is that a spot louder than the programme around it draws complaints, and channel specs typically ask for -24 LKFS plus or minus 2 (the ATSC A/85 figure) or -23 LUFS (EBU R128); the number of any Indian standard on this could not be verified for this file, so the channel's spec governs. Content: the Advertising Code under the Cable Television Networks Rules, 1994 (rule 7), the ASCI Code, and category rules (surrogate advertising, disclaimers in the same language and at a legible size). The Bureau of Indian Standards publishes equipment and transmission standards; no BIS document that this file could verify sets an advertisement delivery format.
+India: each channel group (JioStar, Zee, Sony, Sun and the regional networks) publishes its own delivery spec; the common denominator as of October 2026 is 1920 by 1080 at 25 fps, delivered interlaced (1080i50: each frame carried as two fields of alternate lines, 50 fields a second) by many channels and progressive (1080p25) by some, as MXF OP1a (MXF's single-item operational pattern, one clip per file) with XDCAM HD422 (Sony's 50 Mbps MPEG-2 4:2:2 broadcast codec) at 50 Mbps or as ProRes 422 HQ MOV, Rec.709 legal range, 48 kHz 24 bit stereo audio, with a 10 second slate (client, product, title, duration, agency, version, date, audio layout, loudness) and 2 seconds of black before and after. Loudness is measured to ITU-R BS.1770; the reason for the limit is that a spot louder than the programme around it draws complaints, and channel specs typically ask for -24 LKFS (the ATSC name for the same unit as LUFS) plus or minus 2 (the ATSC A/85 figure) or -23 LUFS (EBU R 128); the number of any Indian standard on this could not be verified for this file, so the channel's spec governs. Content: the Advertising Code under the Cable Television Networks Rules, 1994 (rule 7), the ASCI Code, and category rules (surrogate advertising, disclaimers in the same language and at a legible size). The Bureau of Indian Standards publishes equipment and transmission standards; no BIS document that this file could verify sets an advertisement delivery format.
 
-UAE: the broadcasters (MBC Group, Dubai Media Incorporated, Abu Dhabi Media) take 1080i50 or 1080p25 as MXF or ProRes, loudness to EBU R128 (-23 LUFS integrated, -1 dBTP), Arabic subtitles or dubbing where the spot runs on Arabic channels, and content clearance under the Media Regulation Law (Federal Decree-Law No. 55 of 2023) and the advertising standards now administered by the National Media Authority, which took over the UAE Media Council's functions in December 2025. The channel's current spec is confirmed on every job, because a rejected master costs a day.
+UAE: the broadcasters (MBC Group, Dubai Media Incorporated, Abu Dhabi Media) take 1080i50 or 1080p25 as MXF or ProRes, loudness to EBU R 128 (-23 LUFS integrated, -1 dBTP), Arabic subtitles or dubbing where the spot runs on Arabic channels, and content clearance under the Media Regulation Law (Federal Decree-Law No. 55 of 2023) and the advertising standards now administered by the National Media Authority, which took over the UAE Media Council's functions in December 2025. The channel's current spec is confirmed on every job, because a rejected master costs a day.
 
-Common to both: progressive masters are kept and interlacing is done at the encode, never shot; the interlaced file is checked for field order (upper field first for 1080i) on a broadcast monitor; graphics stay inside title safe (section 12.7).
+Common to both: masters are shot and kept progressive, and interlacing happens only at the encode; the interlaced file is checked for field order (upper field first for 1080i) on a broadcast monitor; graphics stay inside title safe (section 12.7).
 
 ### 12.10 DOOH screen specifications
 
@@ -884,7 +896,7 @@ A digital screen's resolution is its physical size divided by its pixel pitch (t
 
 ### 12.11 File naming and the delivery manifest
 
-Name: CLIENT_Project_Asset_Ratio_Duration_Language_Version_Date_Codec.ext, for example CLIENT_WinterFilm_Hero_16x9_60s_EN_v07_20261028_ProRes422HQ.mov, with no spaces, no special characters, the date as YYYYMMDD so files sort, and the version carried from the edit (section 5.8). The manifest is a sheet delivered with every batch: filename, platform or placement, codec and container, resolution and ratio, frame rate, duration to the frame, loudness and true peak, captions (burned, sidecar filename, or none), language, colour tag, checksum (xxHash or MD5, so the client's download can be verified), retouching and generative disclosures (sections 10.1 and 10.9), music licence reference, approved version and approver, delivery date. Delivered by Frame.io or a cloud link with a 30 day expiry and the checksums in the message. The manifest is the document that answers every "which file is the right one" message for the life of the campaign.
+Name: CLIENT_Project_Asset_Ratio_Duration_Language_Version_Date_Codec.ext, for example CLIENT_WinterFilm_Hero_16x9_60s_EN_v07_20261028_ProRes422HQ.mov, with no spaces, no special characters, the date as YYYYMMDD so files sort, and the version carried from the edit (section 5.8). The manifest is a sheet delivered with every batch: filename, platform or placement, codec and container, resolution and ratio, frame rate, duration to the frame, loudness and true peak, captions (burned, sidecar filename, or none), language, colour tag, checksum (xxHash or MD5, so the client's download can be verified), retouching and generative disclosures (sections 10.1 and 10.9), the clearance list (10.3), certificate and permit numbers (CBFC, RERA, Trakheesi), the approved grade stills with their timecodes (8.15), covers (12.6), music licence reference, approved version and approver, delivery date. Delivered by Frame.io or a cloud link with a 30 day expiry and the checksums in the message. The manifest is the document that answers every "which file is the right one" message for the life of the campaign.
 
 ## 13. Delivery spec table and QC checklist
 
@@ -908,7 +920,8 @@ Status key: V means verified against the platform's or standard's own page in Oc
 | Pinterest Idea ad | 1080 by 1920 | MP4 or MOV | Native | 10 to 16 | AAC | Up to 5 min; 2 GB on app, 100 MB on web | Burned in | V |
 | Broadcast, India | 1920 by 1080, 1080i50 or 1080p25 | MXF OP1a XDCAM HD422 at 50 Mbps, or ProRes 422 HQ MOV | 25 | 50 (XDCAM) | 48 kHz 24 bit stereo; -24 LKFS plus or minus 2, or -23 LUFS, per the channel | 10 s slate, 2 s black head and tail | Per channel; disclaimers in the spot's language | T; channel spec governs |
 | Broadcast, UAE | 1920 by 1080, 1080i50 or 1080p25 | MXF or ProRes per the channel | 25 | Per channel | EBU R 128: -23 LUFS, -1 dBTP | Slate per channel | Arabic subtitles or dub on Arabic channels | T; channel spec governs |
-| Cinema DCP | 2K Flat 1998 by 1080, 4K Flat 3996 by 2160; Scope 2048 by 858 or 4096 by 1716 | JPEG 2000, 12 bit X'Y'Z', MXF, SMPTE DCP | 24 (others only when the chain confirms) | 200 to 230 (DCI maximum 250) | 24 bit 48 kHz PCM, 5.1; 85 dB Leq(m), the TASA trailer level, unless the chain states another | Unencrypted, no KDM | Burned in or SMPTE timed text | V (DCI), T (TASA) |
+| Cinema DCP | 2K Flat 1998 by 1080, 4K Flat 3996 by 2160; Scope 2048 by 858 or 4096 by 1716 | JPEG 2000, 12 bit X'Y'Z', MXF, SMPTE DCP | 24 (others only when the chain confirms) | 200 to 230 (DCI maximum 250) | 24 bit 48 kHz PCM, 5.1; 85 dB Leq(m), the TASA trailer level, unless the chain or sales house states a lower advertising level | Unencrypted, no KDM | Burned in or SMPTE timed text | V (DCI), T (TASA) |
+| Covers and thumbnails | Reels and TikTok covers 1080 by 1920 with the subject in the central 1080 by 1440; YouTube thumbnail per 26-platform-and-format-specs-2026.md, section 2.3 | Still exported from the graded master at 100 percent | n/a | n/a | n/a | Per platform | None | H; sizes V in 26 |
 | DOOH LED | The screen's native pixel map | H.264 MP4, 8 bit 4:2:0, or an image sequence | 25 or 30 per operator | 20 to 50 | None | 10 or 15 s slot in a 60 to 120 s loop | Large type, burned in | T; vendor sheet governs |
 
 ### 13.2 The QC checklist
@@ -937,8 +950,11 @@ Quality control (QC) is the check of every delivered file against its specificat
 | 18 | Disclosures | Read the manifest | Retouching and generative uses logged (10.1, 10.9); music licence reference present |
 | 19 | Names and checksums | Compare names to 12.11; compute xxHash or MD5 | Every file named and listed; checksums match after upload |
 | 20 | Device test | Private upload to each platform; play on an iPhone and an Android phone; play DCP and DOOH files on the target system | It plays, it looks like the grade, and it sits at the level of the content around it |
+| 21 | Flashing | Harding FPA (a commercial flash and pattern analyser), or the free PEAT (Photosensitive Epilepsy Analysis Tool) from the Trace Research and Development Center, on the final file | No failure segments against ITU-R BT.1702 and WCAG 2.3.1 (no more than three general or red flashes in any one second); report filed with the master (11-accessibility-and-inclusive-design.md, section 7.3) |
+| 22 | Platform enhancements | Open each ad's creative settings in Ads Manager; compare the ad preview with the approved grade | Advantage+ creative enhancements that alter brightness, contrast, music, crop or text are off for every ad, and the preview matches the approved grade (17-short-form-social-and-platform-craft.md, section 8.1) |
+| 23 | Clearance and legal supers | Read the clearance list and every end frame | Clearance list closed (10.3); RERA number, Authority URL, MahaRERA QR code, Trakheesi number and CCPA disclaimers present and exact against the registration certificate and the copy deck (9.7, 11.6) |
 
-The QC report (pass or fail per line, operator, date, tool versions) goes into the manifest. A failed line returns the file to the stage that caused it: a level fault to the grade, a sync fault to the conform, a typo to the edit, never patched in the encode.
+The QC report (pass or fail per line, operator, date, tool versions) goes into the manifest. A failed line returns the file to the stage that caused it: a level fault to the grade, a sync fault to the conform, a typo to the edit; the fix is made at that stage and the file re-encoded from there.
 
 ## 14. The cheap post tells
 
@@ -951,7 +967,7 @@ The taste layer of cheapness is in design-taste, section 3. This is the post-pro
 | Orange skin | Faces a tan; red far above green and blue on the parade | Warmth from gain or the highlight wheel; teal and orange; global saturation | Warm with offset; skin keyed and its chroma capped (9.1) |
 | Grey skin | Deeper complexions ashen | Global desaturation before skin is protected; the cool shadow split landing on faces | Skin chroma restored on its own key, outside the split (9.1, 8.6) |
 | The HDR look | Flat local contrast, halos at edges, every surface equally lit | Shadows and highlights pulled to the middle, still-photo tone mapping applied to video | Contrast kept; windows controlled with a soft key; light fixed on set (9.4) |
-| Warp stabiliser wobble | Verticals that breathe; background sliding against the foreground | Subspace Warp on a shot with parallax | Similarity or Translation mode, or the shot left handheld (10.4) |
+| Warp Stabilizer wobble | Verticals that breathe; background sliding against the foreground | Subspace Warp on a shot with parallax | Similarity or Translation mode, or the shot left handheld (10.4) |
 | Mismatched shots | The wide warm and the close-up cool; black level jumping at the cut | Look applied before balance and match | Balance, match, then look (8.6) |
 | Dissolve abuse | Soft double images between scenes | A cut that could not be found | The hard cut (section 2) |
 | Music that starts at frame one | A library cue slammed in at full level on the first frame | The track dropped on the timeline at zero | Room tone first, music in at the first cut or faded up over 6 to 12 frames (3.4, 4.5) |
@@ -965,143 +981,263 @@ The taste layer of cheapness is in design-taste, section 3. This is the post-pro
 | Plastic skin | No pores at 100 percent; edges smeared; chatter as the head turns | Smoothing above about 30 percent | 10 to 25 percent with texture restore on (10.2) |
 | Generated frames on texture | Skin, fabric or a logo that changes texture for half a second | Generative Extend or a generated plate on a detail shot | Generated frames only on static, textureless handles (6.1) |
 | Flash frame | One stray frame at a cut | A trim that left a frame of the old clip | The QC pass (13.2, line 3) |
-
+| Grain mush on social | Shadows that shimmer and block after upload | Full-strength master grain sent through the platform's re-encode | A social version with grain at about half strength, checked on two phones (8.8) |
+| Lightened skin | A talent's face paler than in their daylight reference still | A client request to lift skin, or a global brightness move on a two-shot | Each face graded to its own placement against its reference still (9.1) |
 
 ## Terms introduced
 
 - 180 degree rule: keep the camera on one side of the axis of action so screen direction holds across cuts.
+- 2-pass VBR (variable bitrate): an encode whose first pass measures complexity and whose second spends bits where motion and detail need them.
 - 3-2-1 rule: three copies of all media, on two kinds of storage, one of them off site.
 - 30 degree rule: change camera angle by at least 30 degrees between two shots of one subject, or the cut reads as a jump.
+- AAC-LC (Advanced Audio Coding, low complexity): the compressed audio profile every device decodes, used in MP4 deliverables.
 - AAF (Advanced Authoring Format): the interchange file that carries an edit's audio clips, handles, levels and fades to Pro Tools.
+- Abaya: the woman's over-garment worn in the Gulf, usually black.
+- ABCD framework: Google's YouTube creative guidance (Attract, Brand, Connect, Direct), built with Kantar.
 - ACES (Academy Color Encoding System): the Academy's open colour management pipeline from camera to display.
 - ACES2065-1: the linear AP0 archive and interchange encoding of ACES.
 - ACEScc: pure logarithmic ACES grading space on AP1 primaries.
 - ACEScct: logarithmic ACES grading space on AP1 primaries with a toe near black, the ACES grading default.
 - ACEScg: linear ACES space on AP1 primaries for VFX and compositing.
 - Action safe: the inner 93 percent of the frame in which all meaningful action is kept.
+- Advantage+ creative enhancements: Meta's automatic edits to an ad (brightness, contrast, music, crop, text), switched off for graded work.
+- Advertiser Permit: the UAE permit required to publish promotional content on social media, paid or unpaid.
+- Agency cut: the creative director's version of the film, built on the director's cut, before the client sees anything.
+- ALE (Avid Log Exchange): a text file of clip metadata that can carry CDL values per clip.
 - AP0: the ACES primaries that enclose the whole spectral locus, two of them imaginary.
 - AP1: the smaller ACES primaries used by ACEScg, ACEScc and ACEScct.
+- ASC CDL (American Society of Cinematographers Color Decision List): a primary grade written as slope, offset and power per RGB channel plus one saturation value.
 - Assembly: the stringout cut to structure at about 1.5 times the target length.
+- AV1: the royalty-free video codec of the Alliance for Open Media, served by YouTube for high-resolution streams.
 - Average shot length (ASL): running time divided by the number of shots.
 - B-frame: a compressed frame predicted from both earlier and later frames.
 - Banding: visible steps where a smooth gradient has too few code values.
+- Bias light: a dim D65 light behind the reference monitor that steadies the viewer's adaptation.
+- Bins: folders inside an edit project, organised by day, scene and camera.
 - Bleach bypass: skipping the bleach stage in film processing, leaving silver for high contrast and low saturation.
 - Bloom: the soft spread of light around highlights from lens and emulsion scatter.
 - BT.1886: the ITU recommendation setting gamma 2.4 as the reference display curve for HD.
+- Button: a final musical hit that ends a cue on the end frame.
 - CABAC: context-adaptive binary arithmetic coding, the more efficient of H.264's entropy coders.
 - Change list: the numbered record of what changed between versions, with timecodes.
+- Checksum: a value computed from a file's contents (xxHash or MD5) that proves a copy is identical to its source.
 - Chroma subsampling: storing colour at lower resolution than brightness (4:4:4, 4:2:2, 4:2:0).
 - CIE chromaticity diagram: the plot of all visible colours on which display gamuts appear as triangles.
+- Clean plate: a frame of the set without the unwanted object, composited over it to remove it.
+- Clearance pass: the check before picture lock that clears, blurs or replaces third-party marks, artworks, plates, screens and people without releases.
+- Client cut: v01, the first version the client sees and the first that counts against the rounds in scope.
+- Client round: one consolidated set of client comments and one revised version.
 - Closed GOP: a group of pictures in which no frame refers to a frame outside the group.
+- Color Slice: Resolve's six-vector grading palette with a dedicated skin vector and density controls.
+- Color Warper: Resolve's mesh tool for hue-saturation and chroma-luma adjustment on a grid.
 - Colour boost: a saturation control that raises low-saturation areas more than high ones.
 - Colour tags: the primaries, transfer and matrix codes in a file's header (1-1-1 for BT.709).
 - Conform: rebuilding the locked edit from camera originals in the finishing application.
 - Continuity editing: the cutting system that hides the cut through screen direction, eyelines and matched action.
+- Cover frame: the still a platform shows for a video in the profile grid and before playback.
 - CPL (composition playlist): the XML file in a DCP that orders its picture, sound and subtitle tracks.
 - CRI (colour rendering index): a 0 to 100 measure of how faithfully a light renders colour against a reference source.
 - Cross cutting: alternating between two lines of action in different places.
 - CST (Color Space Transform): the Resolve node that converts between colour spaces and gammas with optional tone and gamut mapping.
 - Cut on action: a cut placed within a movement so the movement carries the eye across it.
+- Cutdown: a shorter version derived from the hero cut (60, 30, 15 or 6 seconds).
+- D65: the CIE daylight white point at about 6504 K used by Rec.709 and sRGB.
 - DaVinci Intermediate (DI): Blackmagic's log curve paired with DaVinci Wide Gamut.
 - DaVinci Wide Gamut (DWG): Blackmagic's working gamut, larger than any camera gamut.
 - DCP (Digital Cinema Package): the folder of MXF and XML files a cinema server plays.
+- DCTL (DaVinci CTL): Resolve's language for scripted colour transforms.
+- Delta E 2000: the CIE colour difference formula, on which about 1 is the smallest visible difference.
+- Density: a Color Slice control that darkens a colour as it saturates, as film dyes do.
 - Diegetic sound: sound that belongs to the world of the scene.
+- Diffuse white: the level of a white card in an HDR grade, about 203 nits per ITU-R BT.2408.
+- Director's cut: the director's version of the film, made in a protected period before agency notes.
 - Display referred: values that describe what a display should emit, bounded at its white and black.
+- Dissolve: a transition in which one shot fades into the next over several frames.
+- Distinctive brand assets: the colours, shapes, sounds and characters a brand owns.
+- DIT (digital imaging technician): the crew member who manages, verifies and colour-checks media on set.
 - Dither: low-level noise added before quantising so gradient steps break up.
 - DME stems: separate dialogue, music and effects mixes.
+- DNxHR: Avid's family of intra-frame editing codecs, the counterpart of ProRes.
 - Dolby Vision: Dolby's PQ-based HDR format with dynamic per-shot metadata.
 - DOOH (digital out of home): advertising on networked screens in public places.
+- Dual mono: the same mono signal placed on both stereo channels.
+- E-cinema: non-DCI digital cinema projection, common in Indian single screens.
+- Editor's assembly: the editor's first cut of the material, seen by the director only.
 - EDL (edit decision list): the CMX3600 text list of cuts and dissolves, one video track per file.
+- End frame: the closing frame of a film carrying the mark and name, held 3 seconds or more.
 - EOTF (electro-optical transfer function): the curve by which a display converts code values to light.
 - Eye trace: where the viewer's eye is in the frame at the moment of a cut.
+- Eyeline match: a look off screen followed by a shot of what is looked at.
+- Fade to black: picture fading to black, for an ending or a chapter break.
+- FCPXML: Final Cut Pro's XML timeline interchange format, used for picture turnover to Resolve.
+- Field order: which of an interlaced frame's two fields is displayed first (upper field first for 1080i).
 - Fine cut: every cut placed to the frame, music edited, titles in as cards.
+- Fire: the dispersion of white light into spectral colours by a cut diamond.
 - Fitzpatrick phototype: the I to VI classification of skin by its response to sun.
 - Flash frame: a single stray frame of a trimmed clip left at a cut.
+- Flat and Scope: the 1.85:1 and 2.39:1 DCP picture containers.
+- Freeze frame: a single frame held on screen.
+- Frequency separation: retouching that smooths low-frequency tone while keeping high-frequency texture.
+- Full range: code values 0 to 255 (8 bit) or 0 to 1023 (10 bit).
+- Gamut compression: pulling out-of-gamut colours inside a target gamut before the grade, as the ACES Reference Gamut Compression does.
+- Gamut mapping: the compression of out-of-gamut colours into a display's gamut inside an output transform.
+- Gate weave: the slight frame-to-frame drift of film in a camera or projector gate, or its emulation.
+- Ghutra: the Gulf head cloth, often in a red and white check.
 - GOP (group of pictures): the run of compressed frames from one keyframe to the next.
 - Grain: the visible particle structure of film, or its emulation.
+- Gyro stabilisation: stabilising footage from the camera's recorded gyro data (Gyroflow) with no image analysis.
+- H.264 (AVC): the Advanced Video Coding standard, the universal delivery codec.
+- H.265 (HEVC): High Efficiency Video Coding, the successor to H.264 at about half the bitrate for equal subjective quality.
 - Halation: the red-orange glow around bright highlights from light reflecting back through the film base.
+- Handles: extra frames beyond each cut point, delivered so a clip can be extended.
+- Harding FPA: a commercial flash and pattern analyser used for photosensitive epilepsy testing of broadcast content.
+- HDR palette: Resolve's zone-based exposure and colour wheels with zones defined in stops.
 - HDR sheen: the tone-mapped look of flat local contrast, edge halos and evenly lit surfaces.
-- HDR10+: Samsung's PQ HDR format with dynamic metadata.
 - HDR10: PQ HDR with static metadata.
+- HDR10+: Samsung's PQ HDR format with dynamic metadata.
+- Hero cut: the main film from which every cutdown and ratio derives.
+- Hero-first: cutting the 16:9 or scope hero first and deriving every vertical from it.
+- Histogram: the scope showing the distribution of pixel values from black to white.
 - HLG (hybrid log-gamma): the BBC and NHK relative HDR curve with partial SDR compatibility.
 - Hold: a shot left longer than its information requires.
+- Hue vs hue, hue vs sat, hue vs lum: curves that rotate, saturate or brighten one hue range.
 - HUID (hallmark unique identification): the six-character alphanumeric code on Indian hallmarked gold.
 - IMF (Interoperable Master Format): SMPTE ST 2067 component master with a playlist per version.
 - Input transform (IDT): the conversion from a camera's log and gamut into the working space.
+- Interlacing: carrying each frame as two fields of alternate lines, as in 1080i50.
 - Interop and SMPTE DCP: the older and the current packaging flavours of a Digital Cinema Package.
 - Invisible cut: a join hidden inside a whip, an object crossing the lens or matched movement.
+- IRE: the 0 to 100 scale of video signal level, 0 for black and 100 for reference white.
 - J cut: the next shot's sound starts before its picture.
+- JCT-VC (Joint Collaborative Team on Video Coding): the ITU-T and ISO/IEC group that developed HEVC.
 - Judder: uneven motion from duplicated or dropped frames, most visible on pans.
 - Jump cut: a cut between two shots of the same angle with time removed.
-- KDM (key delivery message): the per-screen, time-limited key file that unlocks an encrypted DCP.
+- Kandura (dishdasha): the man's ankle-length robe worn in the Gulf, usually white.
+- KDM (key delivery message): the per-screen, time-limited key file that decrypts an encrypted DCP.
 - Key: a matte of the pixels selected by a qualifier.
 - Kuleshov effect: the meaning an audience reads into a shot from the shot placed beside it.
 - L cut: the previous shot's sound continues under the next shot's picture.
+- L1 metadata: Dolby Vision's automatically analysed per-shot minimum, average and maximum luminance.
+- L2 and L8 trims: Dolby Vision's manual per-scene adjustments for mapping HDR to lower-luminance targets.
 - Legal range: video code values of 16 to 235 (8 bit) or 64 to 940 (10 bit) for luma.
-- Leq(m): the M-weighted equivalent loudness measure used for cinema trailers and advertisements.
+- Lehenga: the long embroidered skirt ensemble of Indian bridal dress.
+- Leq(m): the M-weighted equivalent continuous loudness used for cinema trailers and advertisements.
 - Level (H.264): the cap a profile places on resolution, frame rate and bitrate.
 - Lift, gamma, gain: the three-way corrector for shadows, midtones and highlights.
+- LKFS: the ATSC name for the loudness unit identical to LUFS.
 - LMT (Look Modification Transform): a systematic look applied before the ACES output rendering.
 - Log encoding: a logarithmic curve that fits a sensor's dynamic range into a 10 or 12 bit file.
 - Log wheels: shadow, midtone and highlight wheels with bounded ranges for log grading.
+- Logging: watching every clip once, rating it and adding keywords.
+- Lower third: a name and role set over the lower part of the frame.
+- LTFS (Linear Tape File System): the format that lets an LTO tape be browsed like a drive.
+- LTO (Linear Tape-Open): the archive data tape format; LTO-9 holds 18 TB native.
 - LUFS: loudness units relative to full scale, measured per ITU-R BS.1770.
+- Lum vs sat, sat vs sat, sat vs lum: curves that set saturation by brightness, compress the most saturated values, or set brightness by saturation.
 - LUT (lookup table): a table mapping input values to output values, 1D per channel or 3D across colour.
+- M&E (music and effects): the mix without dialogue or voice-over, the base for every language version.
+- Manifest: the sheet delivered with every batch listing each file's specs, checksum, disclosures and approvals.
 - Match cut: a cut that rhymes shape, movement or sound across two shots.
+- Match on action: a movement begun in one shot and completed in the next, so the cut rides the movement.
 - MCP (Model Context Protocol): the open standard through which an AI assistant operates an application.
 - Mezzanine: a high-quality intermediate file from which other encodes are made.
+- Moire: a false wavy pattern where fine regular detail beats against the pixel grid.
 - Montage (Eisenstein): metric, rhythmic, tonal, overtonal and intellectual relations between shots.
 - Moov atom: the index of an MP4 file, placed at the front so playback starts before download ends.
+- Mounted Storage: Frame.io's feature that presents a project as a drive on the desktop.
+- MXF (Material Exchange Format): the SMPTE file wrapper used in broadcast and in DCPs.
 - National Media Authority (NMA): the UAE federal media regulator that replaced the UAE Media Council in December 2025.
+- Negative fill: a black surface that absorbs bounce and deepens shadow on one side of a subject.
+- Nit: one candela per square metre, the unit of display luminance.
+- NLE (non-linear editor): an editing application such as Premiere, Resolve, Avid or Final Cut Pro.
 - ODT (Output Device Transform): the ACES mapping from the rendered image to a specific display.
 - OETF (opto-electronic transfer function): the curve by which a camera encodes light as code values.
 - Offset: a control that shifts every code value equally, the digital printer light.
+- OFX (OpenFX): the open plugin standard used by Resolve and other hosts.
 - OMF (Open Media Framework): the older audio interchange format, 2 GB limit per file.
 - One-light: a single base correction applied across all footage so it can be viewed and cut.
 - Online: the finishing stage at full resolution with final effects, titles and grade.
+- OP1a: MXF's single-item operational pattern, one clip per file.
 - Open and closed captions: captions burned into picture, and captions carried in a sidecar the player draws.
+- Open gate: recording the full sensor area without cropping to a delivery ratio.
 - Optical flow: synthesising new frames from estimated motion for slow motion or rate changes.
 - OTIO (OpenTimelineIO): the open timeline interchange format hosted by the Academy Software Foundation.
+- Output transform: the conversion from the working space to the deliverable's display standard, with tone and gamut mapping.
+- P3 (DCI-P3): the digital cinema gamut, wider than Rec.709 in reds and greens.
+- Pacing (Pearlman): the rate and amount of movement and change across a sequence.
 - Parade: three side-by-side waveforms for red, green and blue.
 - Pattern interrupt: a deliberate break in rhythm that resets attention.
+- PEAT (Photosensitive Epilepsy Analysis Tool): the free flash analyser from the Trace Research and Development Center.
 - Picture lock: the point after which picture timing does not change.
 - Pivot: the value around which a contrast change is centred.
 - Pixel pitch: the distance in millimetres between LED centres on a screen.
 - PKL (packing list): the DCP file that lists every asset with its hash.
+- Planar tracking: tracking a flat surface by its texture so it can be replaced or removed.
+- Posterisation: tones collapsed into flat bands, from clipping or too few code values.
 - Power window: a geometric mask that confines a correction.
-- PQ (perceptual quantizer): the SMPTE ST 2084 absolute HDR curve to 10,000 nits.
+- PQ (Perceptual Quantizer, the SMPTE ST 2084 name): the absolute HDR curve to 10,000 nits.
 - Print film emulation: reproducing the response of a projection print stock.
+- Printer light: one step of red, green or blue light used by a film lab to time a print; offset is its digital equivalent.
+- ProRes: Apple's family of intra-frame editing and mastering codecs.
 - Proxy: a lightweight copy of camera media for editing, relinked to the original at conform.
 - QC (quality control): the check of every delivered file against its specification and approved version.
 - Qualifier: a selection of pixels by hue, saturation and luminance.
+- QuickTime gamma shift: the lifted look of a BT.709 file in Apple's colour-managed players, which decode it near gamma 1.96.
+- RCM (DaVinci YRGB Color Managed): Resolve's colour-managed project mode.
+- Rec.2020: ITU-R BT.2020, the ultra-high-definition primaries used for HDR.
 - Rec.709: ITU-R BT.709, the HD primaries, white point and camera curve.
+- Rec.709-A: a Resolve output tag that makes Apple's players show a file as graded.
+- Reference monitor: a calibrated display fed by a video output card, on which grading decisions are made.
+- Reference render: the locked cut as an H.264 with burned-in timecode, sent with every turnover.
 - Relink: matching each proxy to its original by file name, reel name and timecode.
 - Rough cut: structure right, length within 20 percent, temp music, no grade.
 - RRT (Reference Rendering Transform): the ACES scene-to-display rendering shared by every output.
+- Rule of six: Murch's six weighted criteria for a cut: emotion, story, rhythm, eye trace, screen plane, three-dimensional space.
 - Safe zone: the part of a vertical frame that a platform's interface does not cover.
+- Same-day edit: an event film edited on site and released within hours of the moment.
 - Scene referred: values that describe light in the scene, unbounded above white.
 - Secondary correction: a correction confined by a key, a window or both.
 - Selects: the 4 and 5 star clips pulled into a timeline.
+- Shot reverse shot: alternating shots of two people in conversation, usually over the shoulder.
+- Show LUT: the project's agreed viewing transform from camera log to display.
 - Skin tone line: the hue angle on the vectorscope along which healthy skin of every complexion falls.
+- Slate: the identifying card at the head of a broadcast master (client, title, duration, version, audio layout, loudness).
 - Smash cut: an abrupt cut between opposite states, quiet to loud or slow to fast.
+- Sonic mark: a brand's short audio signature.
+- Speculars: the brightest reflections of a light source on a surface.
 - Speed ramp: a change of playback speed within a shot.
 - Split screen: two or more frames shown at once.
 - Split toning: tinting shadows and highlights with different hues.
 - SRT (SubRip): a plain-text caption file of numbered, timed cues.
 - Stringout: every select laid end to end in script or scene order.
+- Supers: text over picture, such as a name, a price or a legal line.
 - TASA (Trailer Audio Standards Association): the body that set 85 dB Leq(m) as the trailer loudness level.
 - Teal and orange: the complementary grade of cyan shadows and orange skin.
+- Temperature and tint: blue to amber and green to magenta balance controls modelled on camera white balance.
 - Text-based editing: cutting picture by editing its transcript.
 - Textless: a master clean of every title and super, the base for localisation.
+- Timing (Pearlman): the choice of the frame to cut on.
 - Title safe: the inner 90 percent of the frame inside which text is kept.
+- TLCI (television lighting consistency index): a measure of how faithfully a light renders colour to a television camera.
 - Tone mapping: compressing scene highlight range into a display's range.
+- Trajectory phrasing (Pearlman): shaping movement energy across cuts to build and release tension.
+- Trakheesi: the Dubai Land Department system that issues property advertising permits.
 - True peak (dBTP): the inter-sample peak level after oversampling.
 - Turnover: hand-off of the locked edit to sound and colour.
+- Twilight blend: a dusk exterior composited from a daylight plate and a dusk plate.
+- Variable frame rate (VFR): a recording rate that varies with processing load, common on phones, converted to constant at ingest.
 - Vectorscope: the scope plotting chroma as hue angle and saturation radius.
+- Vellus hair: the fine, short hair on the face, kept visible in the house retouching standard.
+- Vertical-first: cutting a campaign's hero in 9:16 and deriving the 16:9 from it.
+- VP9: Google's open video codec, used by YouTube for higher-resolution streams.
 - Waveform: the scope plotting brightness per column of pixels.
 - WebVTT: the W3C caption format with positioning and styling.
 - Wipe: a transition in which a line or shape pushes one shot off screen.
 - Working space: the colour space and gamma in which the grade is performed.
 - X'Y'Z': the gamma 2.6 encoded CIE XYZ colour of DCP picture.
+- XDCAM HD422: Sony's 50 Mbps MPEG-2 4:2:2 broadcast codec.
+- xxHash: a fast non-cryptographic checksum for verifying copies.
+- Zari: metallic thread embroidery in Indian textiles.
 
 ## Sources and further reading
 
@@ -1118,36 +1254,49 @@ Books
 - Alexis Van Hurkman, Color Correction Handbook: Professional Techniques for Video and Cinema, second edition, Peachpit, 2014.
 - Steve Hullfish, The Art and Technique of Digital Color Correction, second edition, Focal Press, 2012.
 - Charles Poynton, Digital Video and HD: Algorithms and Interfaces, second edition, Morgan Kaufmann, 2012.
+- Les Binet and Peter Field, The Long and the Short of It: Balancing Short and Long-Term Marketing Strategies, IPA, 2013.
+- Orlando Wood, Lemon: How the Advertising Brain Turned Sour, IPA, 2019.
+- Orlando Wood, Look Out, IPA, 2021.
 
 Articles and papers
 
 - David Bordwell, Intensified Continuity: Visual Style in Contemporary American Film, Film Quarterly 55(3), 2002.
 - James E. Cutting, Jordan E. DeLong and Christine E. Nothelfer, Attention and the Evolution of Hollywood Film, Psychological Science 21(3), 2010.
 - Thomas B. Fitzpatrick, The Validity and Practicality of Sun-Reactive Skin Types I Through VI, Archives of Dermatology 124(6), 1988.
-- Cinemetrics, the shot-length database founded by Yuri Tsivian and Gunars Civjans.
+- Jens-Rainer Ohm, Gary J. Sullivan, Heiko Schwarz, Thiow Keng Tan and Thomas Wiegand, Comparison of the Coding Efficiency of Video Coding Standards: Including High Efficiency Video Coding (HEVC), IEEE Transactions on Circuits and Systems for Video Technology 22(12), 2012, https://ieeexplore.ieee.org
+- Thiow Keng Tan, Rajitha Weerakkody, Marta Mrak, Naeem Ramzan, Vittorio Baroncini, Jens-Rainer Ohm and Gary J. Sullivan, Video Quality Evaluation Methodology and Verification Testing of HEVC Compression Performance, IEEE Transactions on Circuits and Systems for Video Technology 26(1), 2016, https://ieeexplore.ieee.org
+- Digiday, Silent world: 85 percent of Facebook video is watched without sound, May 2016, https://digiday.com/media/silent-world-facebook-video/
+- Facebook IQ, Capturing Attention in Feed: The Science Behind Effective Video Creative, 2016 (the original facebook.com page has moved and was unavailable for this file).
+- Google, the ABCDs of effective video ads, Think with Google (thinkwithgoogle.com now redirects to https://business.google.com/en-all/think/).
+- Advertising Standards Authority, rulings on L'Oréal (UK) Ltd for the Lancôme Teint Miracle and Maybelline The Eraser advertisements, July 2011, https://www.asa.org.uk
+- Cinemetrics, the shot-length database founded by Yuri Tsivian and Gunars Civjans, https://www.cinemetrics.lv
 
 Specifications and standards
 
-- ITU-R BT.709, parameter values for HDTV, https://www.itu.int/rec/R-REC-BT.709
-- ITU-R BT.1886, reference EOTF for flat panel displays in HDTV studio production (2011), https://www.itu.int/rec/R-REC-BT.1886
-- ITU-R BT.2100, image parameter values for HDR television (PQ and HLG), https://www.itu.int/rec/R-REC-BT.2100
-- ITU-R BT.2408, operational practices in HDR television production (203 nit reference white), https://www.itu.int/pub/R-REP-BT.2408
-- ITU-R BT.2035, reference viewing environment for evaluation of HDTV programme material, https://www.itu.int/rec/R-REC-BT.2035
-- ITU-R BS.1770, algorithms to measure programme loudness and true peak, https://www.itu.int/rec/R-REC-BS.1770
-- ITU-R BT.1359, relative timing of sound and vision for broadcasting, https://www.itu.int/rec/R-REC-BT.1359
-- ITU-T H.273, coding-independent code points for video signal type identification (the 1-1-1 colour tags), https://www.itu.int/rec/T-REC-H.273
-- SMPTE ST 2084:2014, high dynamic range EOTF of mastering reference displays (PQ)
-- ARIB STD-B67, essential parameter values for the extended image dynamic range television system (HLG)
-- SMPTE ST 2046-1, safe areas for 16:9 television systems
-- SMPTE ST 2067 (IMF) and the SMPTE ST 429 family (D-Cinema packaging)
-- EBU R 128, loudness normalisation and permitted maximum level of audio signals (2023 revision), https://tech.ebu.ch/publications/r128
-- EBU R 37, the relative timing of the sound and vision components of a television signal
+- ITU-R BT.709-6 (2015), parameter values for HDTV, https://www.itu.int/rec/R-REC-BT.709
+- ITU-R BT.1886 (2011), reference EOTF for flat panel displays in HDTV studio production, https://www.itu.int/rec/R-REC-BT.1886
+- ITU-R BT.2020-2 (2015), parameter values for UHDTV, https://www.itu.int/rec/R-REC-BT.2020
+- ITU-R BT.2100, image parameter values for HDR television (PQ and HLG), latest revision at https://www.itu.int/rec/R-REC-BT.2100
+- ITU-R BT.2408, operational practices in HDR television production (203 nit reference white), latest revision at https://www.itu.int/pub/R-REP-BT.2408
+- ITU-R BT.2035 (2013), reference viewing environment for evaluation of HDTV programme material, https://www.itu.int/rec/R-REC-BT.2035
+- ITU-R BS.1770-5 (2023), algorithms to measure programme loudness and true peak, https://www.itu.int/rec/R-REC-BS.1770
+- ITU-R BT.1359-1 (1998), relative timing of sound and vision for broadcasting, https://www.itu.int/rec/R-REC-BT.1359
+- ITU-R BT.1702, guidance for the reduction of photosensitive epileptic seizures caused by television, latest revision at https://www.itu.int/rec/R-REC-BT.1702
+- ITU-T H.273, coding-independent code points for video signal type identification (the 1-1-1 colour tags), latest edition at https://www.itu.int/rec/T-REC-H.273
+- SMPTE ST 2084:2014, high dynamic range EOTF of mastering reference displays (PQ), https://www.smpte.org
+- ARIB STD-B67, essential parameter values for the extended image dynamic range television system (HLG), current version at https://www.arib.or.jp
+- SMPTE ST 2046-1:2009, safe areas for 16:9 television systems, https://www.smpte.org
+- SMPTE ST 2067 family (IMF) and SMPTE ST 429 family (D-Cinema packaging), https://www.smpte.org
+- EBU R 128 (2023 revision), loudness normalisation and permitted maximum level of audio signals, https://tech.ebu.ch/publications/r128
+- EBU R 37 (2007), the relative timing of the sound and vision components of a television signal, https://tech.ebu.ch/publications/r037
+- EBU R 95, safe areas for 16:9 television production, current version at https://tech.ebu.ch/publications/r095
 - ATSC A/85, techniques for establishing and maintaining audio loudness for digital television, https://www.atsc.org
-- DCI Digital Cinema System Specification, Digital Cinema Initiatives, https://www.dcimovies.com
+- DCI Digital Cinema System Specification, 1.4 series, Digital Cinema Initiatives, https://www.dcimovies.com
 - ISDCF Digital Cinema Naming Convention, https://isdcf.com
-- ACES documentation, Academy Software Foundation, https://docs.acescentral.com
+- ACES documentation (ACES 2, the Reference Gamut Compression), Academy Software Foundation, https://docs.acescentral.com
+- American Society of Cinematographers, ASC Color Decision List (ASC CDL), https://theasc.com
 - WebVTT: The Web Video Text Tracks Format, W3C, https://www.w3.org/TR/webvtt1/
-- Web Content Accessibility Guidelines 2.2, W3C, https://www.w3.org/TR/WCAG22/
+- Web Content Accessibility Guidelines 2.2 (success criteria 1.2.2 and 2.3.1), W3C, https://www.w3.org/TR/WCAG22/
 
 Platform and tool documentation (read October 2026)
 
@@ -1158,29 +1307,49 @@ Platform and tool documentation (read October 2026)
 - Adobe Premiere product page, https://www.adobe.com/products/premiere.html
 - Adobe Blog, Generate and create directly in your timeline with new AI-powered innovations in Premiere and After Effects, 8 September 2026, https://blog.adobe.com/en/publish/2026/09/08/generate-create-directly-in-your-timeline-with-new-ai-powered-innovations-in-premiere-after-effects
 - Blackmagic Design, DaVinci Resolve What's New, https://www.blackmagicdesign.com/products/davinciresolve/whatsnew
+- Blackmagic Design, DaVinci Resolve Studio (price, read 29 October 2026), https://www.blackmagicdesign.com/products/davinciresolve/studio
+- Blackmagic Design, DaVinci Resolve Reference Manual (Log mode defaults, HDR palette, Color Slice, Color Warper), https://www.blackmagicdesign.com/support
 - Blackmagic Design, DaVinci Resolve 21 announcement, Business Wire, 14 April 2026, https://www.businesswire.com/news/home/20260414941745/en/Blackmagic-Design-Announces-DaVinci-Resolve-21
 - RedShark News, DaVinci Resolve 21.1 new features, September 2026, https://www.redsharknews.com/davinci-resolve-21.1-new-features-release
 - Apple, Final Cut Pro release notes, https://support.apple.com/102825
+- Apple, Apple ProRes white paper (April 2022), https://www.apple.com/final-cut-pro/docs/Apple_ProRes.pdf
 - Newsshooter, Avid Media Composer 2026.8, 27 August 2026, https://www.newsshooter.com/2026/08/27/avid-media-composer-2026-8/
 - Digital Production, Premiere drops the "Pro" and picks up some serious AI, 22 January 2026, https://digitalproduction.com/2026/01/22/premiere-drops-the-pro-and-picks-up-some-serious-ai/
-- Android Authority, Adobe Premiere launches on Android, 22 September 2026, https://androidauthority.com/adobe-premiere-android-launch-official-3713985
-- Frame.io pricing, https://frame.io/pricing
+- Android Authority, Adobe Premiere launches on Android, 22 September 2026, https://www.androidauthority.com/adobe-premiere-android-launch-official-3713985/
+- Frame.io pricing (read 29 October 2026), https://frame.io/pricing
+- Descript pricing (read 29 October 2026), https://www.descript.com/pricing
 - Dolby, Dolby Vision for content creators (reference display, targets, trims licence), https://professional.dolby.com/content-creation/dolby-vision-for-content-creators/
-- FilmConvert, purchase page (Nitrate pricing), https://www.filmconvert.com/purchase
+- FilmConvert, purchase page (Nitrate pricing, read 29 October 2026), https://www.filmconvert.com/purchase
+- Gyroflow, https://gyroflow.xyz
+- Boris FX, Mocha Pro, https://borisfx.com/products/mocha-pro/
+- Pomfort, Livegrade, https://pomfort.com/livegrade/
+- LucidLink, https://www.lucidlink.com
+- Trace Research and Development Center, PEAT, https://trace.umd.edu/peat/
 - DCP-o-matic, https://dcpomatic.com
-- Apple ProRes white paper, Apple (data rates by format and frame size)
 - BBC Subtitle Guidelines, https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/
-- Netflix Partner Help Center, English (USA) Timed Text Style Guide
+- Netflix Partner Help Center, English (USA) Timed Text Style Guide, https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide
 
 Law and regulation
 
-- France, décret n° 2017-738 du 4 mai 2017 (retouched photograph labelling), Légifrance
-- India, Real Estate (Regulation and Development) Act, 2016, section 12
-- India, Cable Television Networks Rules, 1994, rule 7 (Advertising Code); ASCI Code for Self-Regulation of Advertising Content, https://www.ascionline.in
-- India, Information Technology Act, 2000, section 69A (the June 2020 app blocks)
-- UAE, Federal Decree-Law No. 55 of 2023 on Media Regulation
+- France, décret n° 2017-738 du 4 mai 2017 (retouched photograph labelling), https://www.legifrance.gouv.fr
+- Norway, Marketing Control Act, amendment on labelling retouched advertising, in force 1 July 2022, https://lovdata.no
+- Israel, Restriction of Weight in the Modelling Industry Law, 2012, https://www.gov.il
+- United Kingdom, the CAP Code (UK Code of Non-broadcast Advertising and Direct and Promotional Marketing), https://www.asa.org.uk
+- India, Real Estate (Regulation and Development) Act, 2016, sections 11(2) and 12, https://www.indiacode.nic.in
+- Maharashtra Real Estate Regulatory Authority (MahaRERA), orders on advertisements and QR codes, https://maharera.maharashtra.gov.in
+- India, Central Consumer Protection Authority, Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022, https://consumeraffairs.nic.in
+- ASCI, Guidelines for Advertising of Skin Lightening or Fairness Improvement Products (2014), and the ASCI Code for Self-Regulation of Advertising Content, https://www.ascionline.in
+- India, Cable Television Networks Rules, 1994, rule 7 (Advertising Code), https://mib.gov.in
+- India, Cinematograph Act, 1952, https://www.indiacode.nic.in
+- India, Information Technology Act, 2000, section 69A (the June 2020 app blocks), https://www.indiacode.nic.in
+- India, Companies Act, 2013, section 128(5), https://www.mca.gov.in
+- India, Trade Marks Act, 1999, and Copyright Act, 1957, https://www.indiacode.nic.in
+- UAE, Federal Decree-Law No. 55 of 2023 on Media Regulation, https://uaelegislation.gov.ae
+- UAE, Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and Businesses (record keeping, article 56), https://tax.gov.ae
+- UAE, Federal Decree-Law No. 34 of 2021 on Combating Rumours and Cybercrimes, https://uaelegislation.gov.ae
+- Dubai Land Department, Trakheesi advertising permits, https://dubailand.gov.ae
 - WAM, UAE Media Council launches Advertiser Permit, July 2025, https://www.wam.ae/en/article/bkxzoe1-uae-media-council-launches-advertiser-permit
 - WAM, UAE Government issues Federal Decree-Law establishing the National Media Authority, December 2025, https://www.wam.ae/en/article/bn9xsue-uae-government-issues-federal-decree-law
-- Pinsent Masons, UAE influencer licence deadline looms, https://www.pinsentmasons.com/out-law/news/uae-influencer-licence-deadline-looms
+- Pinsent Masons, UAE influencer licence deadline looms (fines, fees and the 31 January 2026 deadline), https://www.pinsentmasons.com/out-law/news/uae-influencer-licence-deadline-looms
 
-Sibling files: 03-typography.md (multiscript caption type), 04-colour.md (metal and stone palettes), 11-accessibility-and-inclusive-design.md (captions as access), 14-video-preproduction-and-cinematography.md (log capture, frame rates, coverage), 15-lighting-and-sound.md (loudness, section 13), 17-short-form-social-and-platform-craft.md (hooks, retention, caption cadence), 20-print-packaging-ooh-and-physical-production.md (OOH production), 22-ai-era-craft-and-generative-tools.md (generative disclosure), 26-platform-and-format-specs-2026.md (platform specs and safe zones, section 5.6). Taste: design-taste, SKILL.md sections 2, 3 and 7, and references/canon.md and references/worlds.md.
+Sibling files: 03-typography.md (multiscript type, section 15; licensing, section 16), 04-colour.md (luxury colour codes, section 12.2; food colour, section 12.5), 11-accessibility-and-inclusive-design.md (flashing, section 7.3; captions as access, section 10.2), 13-motion-graphics-and-3d-production.md (review and Camera to Cloud, section 1), 14-video-preproduction-and-cinematography.md (log and LUT workflow, section 6.4; post schedule, section 5.3; framing for several deliverables, section 10.7; events, section 14.8), 15-lighting-and-sound.md (timecode and slate, section 10.5; music, section 12; loudness, section 13), 17-short-form-social-and-platform-craft.md (caption styles, section 2.8; vertical capture, section 6.1; captions as copy, section 6.9; Meta ad enhancements, section 8.1), 20-print-packaging-ooh-and-physical-production.md (OOH production), 22-ai-era-craft-and-generative-tools.md (likeness and voice, section 7.4; disclosure, section 7.6), 26-platform-and-format-specs-2026.md (platform specs, section 2; ProRes rates, section 5.2; safe zones, section 5.6; cinema routes, section 5.8). Taste: design-taste, SKILL.md sections 1, 2, 3 and 7, and references/canon.md and references/worlds.md.
