@@ -135,7 +135,7 @@ Jean-Noël Kapferer and Vincent Bastien, "The Luxury Strategy" (2009; second edi
 21. Do not look for consensus.
 24. Do not sell openly on the internet (written in 2009; by 2026 the maisons sell online and the law is read as "never let the web set the terms").
 
-What this means for identity: a luxury mark works as a seal and the selling happens elsewhere; the identity should age slowly (Hermès has kept the 1945 carriage), raise the perceived price (space, silence, restraint, see design-taste section 2), and address the many while serving the few (the campaign film is watched by millions who will never buy). For Mask360's premium clients (a Goa boutique hotel, a Mumbai beauty brand) the honest call is usually "premium" and the mistake is to dress premium in luxury's refusal to sell.
+What this means for identity: a luxury mark works as a seal and the selling happens elsewhere; the identity should age slowly (Hermès has kept the Duc carriage and groom, drawn from an Alfred de Dreux lithograph, for about seventy years), raise the perceived price (space, silence, restraint, see design-taste section 2), and address the many while serving the few (the campaign film is watched by millions who will never buy). For Mask360's premium clients (a Goa boutique hotel, a Mumbai beauty brand) the honest call is usually "premium" and the mistake is to dress premium in luxury's refusal to sell.
 
 ### 1.11 Distinctiveness versus differentiation, and availability
 
@@ -225,7 +225,7 @@ UAE (as of October 2026; fee figures from law-firm summaries, verify with the Mi
 
 - Governing law: Federal Decree-Law No. 36 of 2021 on Trademarks, in force 2 January 2022, replacing Federal Law No. 37 of 1992. It introduced multi-class applications (the UAE and the GCC were single-class jurisdictions before), recognised non-traditional marks (3D, sound, smell, hologram) and a grievance committee route before court.
 - Prohibited: marks offending public morals or religion, religious symbols, names and flags of states and international organisations, Red Crescent and Red Cross emblems, geographic names that would confuse as to origin, and marks identical or similar to well-known marks.
-- Fees: reported as about AED 750 at filing, AED 750 for publication and AED 5,000 at registration, totalling about AED 6,500 per class (Cabinet Decision No. 20 of 2020 as amended in 2025 per law-firm commentary). Opposition period 30 days from publication. Protection 10 years, renewable.
+- Fees: reported as about AED 750 at filing, AED 750 for publication and AED 5,000 at registration, totalling about AED 6,500 per class, as reported by UAE law firms in 2025; the house could not confirm the current schedule on the Ministry's own pages in October 2026, so it is re-checked on the e-services portal before any proposal. Opposition period 30 days from publication. Protection 10 years, renewable.
 - Madrid: the UAE acceded on 28 September 2021 with effect from 28 December 2021 (Federal Law No. 67 of 2021).
 - Trade name versus trademark: a trade name is licensed by the emirate's economic department (Dubai's DET) or the free zone and must avoid religious terms, names of rulers, and foreign names without justification; it confers no trademark right. Arabic trade names are mandatory on signage with the Latin version, which affects lockup design (section 3.4).
 
@@ -338,6 +338,14 @@ A custom wordmark is the cheapest route to distinctiveness, because nobody else 
 
 The trademark drawing is the version of the mark filed with the registry. Rules: a clean vector in black on white (covers all colours in India and the UAE; a colour filing limits protection), no clear-space marks, no gradient (gradients are described in words if claimed), the wordmark and the device filed as separate applications so each is protected alone, and the exact lockup filed if the lockup is the famous form. Figurative elements are classified under the Vienna Classification (WIPO; tenth edition, VCL10, in force since 1 January 2026); the examiner uses these codes to search for similar devices, which is why the pre-screen in 2.4 includes a Vienna code search. Provide the filing files as PDF and JPG at 300dpi, 8 by 8cm, which both registries accept.
 
+### 3.10 Ownership, copyright assignment and AI-generated marks
+
+A trademark protects the mark in trade; copyright protects the drawing as an artistic work; and by default they can sit with different owners. Under India's Copyright Act 1957, section 17, the author is the first owner of a work unless it was made under a contract of service (employment), so a logo drawn by an outside studio belongs to the studio until it is assigned. The assignment must be in writing and signed (section 19(1)). If the deed is silent on term, the assignment is deemed to run for five years (section 19(5)); if silent on territory, it is deemed to cover India only (section 19(6)); and if the client does not exercise the rights within one year, the assignment is deemed to lapse unless the deed says otherwise (section 19(4)). A Mumbai client with a three-line email as its "assignment" owns a five-year, India-only licence to its own logo. In the UAE, Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights likewise requires a transfer of economic rights to be in writing; counsel drafts the clause for each market.
+
+House contract rule: on full payment the studio assigns all rights in the final mark, the final system and the delivered files, worldwide, for the full term of copyright, waiving the author's right to be named on the mark where the law allows; the studio keeps the rejected routes, its methods, and a portfolio right to show the work. Rejected routes are never offered to a competitor in the same category, because the client has seen them. Typefaces are licensed, never owned: a wordmark built on a commercial font's outlines needs a foundry EULA (end user licence agreement) that permits logo and trademark use, and some foundries sell that as an extended licence, so the licence is read before the route is presented.
+
+AI-generated marks are contested. The US Copyright Office's report "Copyright and Artificial Intelligence, Part 2: Copyrightability" (January 2025) holds that material generated wholly by AI from prompts is not protected, while human selection, arrangement and modification can be. India's Copyright Act names the author of a computer-generated work as "the person who causes the work to be created" (section 2(d)(vi)), which reads as more permissive but is untested for generative models. Two further risks are practical: a model reproduces famous marks from its training data, and a device that resembles one surfaces only at the Vienna code search or at opposition. The house position: generative tools are used for exploration in the territories phase (method in 22-ai-era-craft-and-generative-tools.md); the final mark is drawn by hand in vector by a named designer; the working files are archived as evidence of human authorship; and no unmodified AI output is ever filed as a device mark. Contract and pricing practice is in 24-business-of-creative-and-agency-operations.md.
+
 ## 4. Identity system design
 
 A logo is a signature; a system is the handwriting. The system is what lets a junior designer at the client produce a correct Instagram story at 11pm without calling the studio. Every element below is specified in its own corpus file; this section sets what the identity project must decide about each and how they lock together.
@@ -352,7 +360,7 @@ Decide: the primary face and its licence (desktop, web, app, and the number of p
 
 ### 4.3 Layout and grid system
 
-Decide: the base unit, the margin ratio (luxury margins run at 2 to 3 times what feels safe; see design-taste section 2), the logo position rule (one corner, always), the grid for the three master formats (A4 portrait, 1080 by 1350 feed, 1920 by 1080 screen), and the alignment rule for bilingual pages (mirrored grids for Arabic, where the margin logic flips). Full method in 05-layout-and-grids.md.
+Decide: the base unit, the margin ratio (luxury margins run at 2 to 3 times what feels safe; see design-taste section 2), the logo position rule (one corner, always), the grid for the three master formats (A4 portrait, 1080 by 1350 feed, 1920 by 1080 screen), and the alignment rule for bilingual pages (mirrored grids for Arabic, where the margin logic flips). Full method in 05-layout-grids-and-composition.md.
 
 ### 4.4 Imagery and photography direction
 
@@ -376,7 +384,7 @@ Decide: how the mark animates (one reveal, under 1.5 seconds, with the easing sp
 
 ### 4.9 Sound identity
 
-Decide whether the brand has a sonic logo (a 1 to 3 second audio mark), a music palette and a voice (for IVR, video, apps). A sonic logo in 2026 costs from about USD 15,000 with a specialist studio and is justified for hospitality groups and consumer apps, rarely for a single boutique. Method in 15-sound-and-music.md.
+Decide whether the brand has a sonic logo (a 1 to 3 second audio mark), a music palette and a voice (for IVR, video, apps). A sonic logo in 2026 costs from about USD 15,000 with a specialist studio and is justified for hospitality groups and consumer apps, rarely for a single boutique. Method in 15-lighting-and-sound.md.
 
 ### 4.10 Verbal identity
 
@@ -384,7 +392,7 @@ Decide: the tone (1.4), the naming hierarchy (1.6), the house vocabulary (words 
 
 ### 4.11 Packaging and print
 
-Decide: the substrate family (paper weights, finishes, the one special process such as blind deboss or edge paint), the box architecture (rigid, folding, drawer), the ribbon or closure, the unboxing sequence, and the print colour management. Luxury's box (the Hermès orange box, adopted during the Second World War when the usual cream card ran out; the Tiffany blue box; Cartier's red) is a distinctive asset with a higher fame score than most logos. Method, dielines and press specs in 20-print-and-packaging.md.
+Decide: the substrate family (paper weights, finishes, the one special process such as blind deboss or edge paint), the box architecture (rigid, folding, drawer), the ribbon or closure, the unboxing sequence, and the print colour management. Luxury's box (the Hermès orange box, adopted during the Second World War when the usual cream card ran out; the Tiffany blue box; Cartier's red) is a distinctive asset with a higher fame score than most logos. Method, dielines and press specs in 20-print-packaging-ooh-and-physical-production.md.
 
 ### 4.12 Digital and product
 
@@ -400,7 +408,7 @@ Decide: who wears the mark and where (chest, cuff, collar; embroidered at 25mm m
 
 ### 4.15 The brand world beyond the logo
 
-Brian Collins's studio (Collins, New York and San Francisco) and Koto (founded London 2015, now also New York, Berlin, Los Angeles and Sydney) work from the same premise: the identity is a world with its own physics (what moves, what sounds, what the light is like, what the brand would never do), and the logo is one object in it. Collins's work for Spotify (2015, with Spotify's in-house team; the duotone image treatment), Dropbox (2017), Mailchimp (2018; the Cooper Light wordmark and Freddie's wink), Twitch (2019) and the San Francisco Symphony (2018) each ships a vocabulary of moves before a logo rule. Koto's work for Discord (2021), Zoopla (2021) and Amazon Music (2020) delivers the same way: a brand idea in one line, a visual world built to express it, and the logo as the last decision. The method, which the house follows:
+Brian Collins's studio (Collins, New York and San Francisco) and Koto (founded London 2015, now also New York, Berlin, Los Angeles and Sydney) work from the same premise: the identity is a world with its own physics (what moves, what sounds, what the light is like, what the brand would never do), and the logo is one object in it. Collins's work for Spotify (2015, with Spotify's in-house team; the duotone image treatment), Dropbox (2017), Mailchimp (2018; the Cooper Light wordmark and Freddie's wink), Twitch (2019) and the San Francisco Symphony each ships a vocabulary of moves before a logo rule. Koto's work as listed on its site in October 2026 (Amazon, WhatsApp, Instagram, Coinbase, Tripadvisor, and Rakbank in the UAE) delivers the same way: a brand idea in one line, a visual world built to express it, and the logo as the last decision. The method, which the house follows:
 
 1. Write the brand idea as one sentence of feeling (design-taste section 4 calls this the single idea).
 2. Build the world's physics: light, material, motion, sound, humour, the forbidden list.
@@ -546,19 +554,19 @@ Rebrand: a change to the identity, from a refresh (the same assets redrawn) to a
 - Burberry (2018, then 2023). Riccardo Tisci's 2018 identity (Peter Saville: a sans wordmark and a TB monogram) was replaced in February 2023 under Daniel Lee by a serif wordmark referencing the house's earlier lettering and the Equestrian Knight, which Burberry dates to a public competition circa 1901 and had dropped in 2018. Saville told Dezeen in June 2025 that abandoning continuity at Burberry's scale was "totally and utterly irresponsible". Lesson: the 2018 system threw away assets with high fame; the 2023 system brought them back; the sales decline of 2023 to 2024 traced to product and price, and the identity was the fastest and cheapest thing to fix, which is why it was fixed first.
 - Ferrari (the case for leaving the mark alone). The Cavallino Rampante came from the aviator Francesco Baracca's emblem, offered to Enzo Ferrari by Baracca's mother in 1923, and first appeared on cars in 1932 on the canary yellow of Modena. Two badge formats persist: the shield for Scuderia Ferrari and the rectangle for road cars. Ferrari's Centro Stile has been led by Flavio Manzoni since 2010, and the brand's expansion into fashion (first collection shown at Maranello in June 2021 under Rocco Iannone) left the mark untouched. The house found no verifiable logo redesign through October 2026. Lesson: a brand whose product is the identity extends by category, never by redrawing the mark.
 - Zara (2019). Baron & Baron (Fabien Baron) set the wordmark in a high-contrast Didone with overlapping letters. The design press called it illegible; the fascia and the bag are where a fashion retailer's wordmark lives, and there it worked; it is still in use in 2026. Lesson: the internet's verdict and the shopper's verdict differ; judge a wordmark on the surfaces that carry it.
-- Jaguar (2024 to 2026). On 19 November 2024 Jaguar released a film with no car under the line "Copy nothing", a mixed-case "JaGUar" wordmark, a redrawn leaper, a pastel palette and the phrase "exuberant modernism"; the Type 00 concept was shown on 2 December 2024 at Miami Art Week. The company had already wound down its model line ahead of an all-electric relaunch, so the registration collapse that followed (49 cars in Europe in April 2025 against 1,961 a year earlier; 2,845 from January to October 2025 across the EU, EFTA and the UK, down 86.2%, per ACEA data reported by Motor1) was partly planned and partly the cost of a gap with nothing to sell. The production car, named Type 01, was expected for 2026; a cyberattack on JLR in September 2025 halted production for weeks. Lesson: a rebrand with no product makes the identity the product, and the identity broke every category code at once, so the existing buyer had nothing to hold; the sequence (film, then car, then a two-year wait) was reversed; distinctiveness was bought by discarding every asset with fame.
+- Jaguar (2024 to 2026). On 19 November 2024 Jaguar released a film with no car under the line "Copy nothing", a mixed-case "JaGUar" wordmark, a redrawn leaper, a pastel palette and the phrase "exuberant modernism"; the Type 00 concept was shown on 2 December 2024 at Miami Art Week. The company had already wound down its model line ahead of an all-electric relaunch, so the registration collapse that followed (49 cars in Europe in April 2025 against 1,961 a year earlier; 2,845 from January to October 2025 across the EU, EFTA and the UK, down 86.2%, per ACEA data reported by Motor1) was partly planned and partly the cost of a gap with nothing to sell. A cyberattack on JLR in September 2025 halted production for weeks. Gerry McGovern, the chief creative officer who led the reset, was asked to leave on 1 December 2025 (Dezeen, 4 December 2025), months after PB Balaji became JLR's chief executive; no reason was given. The production four-door GT, the Type 01, was revealed in New York on 6 October 2026, with production at Solihull and market arrival reported for 2027. Lesson: a rebrand with no product makes the identity the product, and the identity broke every category code at once, so the existing buyer had nothing to hold; the sequence (film, then concept, then a near two-year wait for a production car) ran backwards; distinctiveness was bought by discarding every asset with fame.
 
 ### 7.2 Global consumer and technology
 
 - Pepsi (2023). PepsiCo's in-house Design and Innovation team under Mauro Porcini returned the wordmark to the globe, in black and an electric blue, with a custom typeface, rolling out in North America from autumn 2023 and globally through 2024; the first change in 14 years. The black reads as Pepsi Zero Sugar's colour promoted to the master brand. Lesson: the 2008 Arnell identity (the "smile", with its leaked rationale of golden ratios) is the cautionary case; the 2023 mark is the 1970s to 1990s asset redrawn to pulse in motion, so the return was a return of fame.
 - Kia (2021). The new wordmark's joined letterforms read as "KN"; Carthrottle reported about 30,000 US Google searches a month for "KN car" after the launch. Lesson: legibility is tested with people who have never seen the name; a wordmark is read at a glance by a stranger, and elegance that costs a letter costs the brand.
-- Reddit (2023). Pentagram (Natasha Jen's team) rebuilt Snoo as a 3D character with a range of expressions, redrew Reddit Sans so the counters take a speech-bubble shape, and cut the palette from more than 100 colours to 15, ahead of the March 2024 listing. Lesson: a mascot is a distinctive asset that needs a character bible and a 3D model; cutting a palette from 100 to 15 is where the system work is.
-- Johnson & Johnson (2023). Wolff Olins replaced the 136-year-old script signature with a red sans built from single pen strokes on 14 September 2023, after the consumer business was spun off as Kenvue, which kept the old script on products. Lesson: architecture drove identity; the script had high fame and poor screen legibility, and once the consumer products left, the parent needed to look like a healthcare company.
+- Reddit (2023). Pentagram (Natasha Jen's team) rebuilt Snoo as a 3D character with a range of expressions, redrew Reddit Sans so the counters take a speech-bubble shape, drew a companion headline face, Reddit Display, with the same bubble counters, and cut the secondary palette from more than 100 colours to 15 (five hues in three shades each) around OrangeRed, ahead of the March 2024 listing (pentagram.com, read October 2026). Lesson: a mascot is a distinctive asset that needs a character bible and a 3D model; cutting a palette from 100 to 15 is where the system work is.
+- Johnson & Johnson (2023). On 14 September 2023 the company replaced its 136-year-old script signature with a red sans wordmark whose letters are drawn as single pen strokes, keeping the red and the ampersand, after the consumer health business was separated as Kenvue (whose own identity Wolff Olins designed). Lesson: architecture drove identity; the script had high fame and poor screen legibility, and once the consumer products left, the parent needed to look like a healthcare company.
 - Twitter to X (2023). On 23 and 24 July 2023 the bird (its 2012 drawing by Martin Grasser with Todd Waterbury and Angy Che) was replaced with an X glyph taken from a user's post, with no system behind it; the verb "tweet" outlived the logo. Lesson: an asset with near-total fame was discarded for a founder's preference, and the verbal assets (tweet, retweet) were not planned for; the rename without a system is the most expensive kind.
 
 ### 7.3 India
 
-- Air India (2023). FutureBrand's identity, unveiled in New Delhi in August 2023 by Tata Sons chairman N. Chandrasekaran: "The Vista" mark drawn from the peak of the jharokha window frame used on the fleet since 1971, a palette of deep red, aubergine and gold, a chakra-derived pattern, a custom Air India Sans, and the Maharajah mascot (1946) moved to a secondary role on crockery and glassware. The first aircraft in the livery, an Airbus A350, entered service in December 2023. Lesson: a heritage asset was transformed and kept, and the public argument was about the demoted mascot, which proves it was the asset with the most fame; the livery is the largest surface and was designed first.
+- Air India (2023). FutureBrand's identity, unveiled in New Delhi in August 2023 by Tata Sons chairman N. Chandrasekaran: "The Vista" mark drawn from the peak of the jharokha window frame used on the fleet since 1971, a palette of deep red, aubergine and gold, a chakra-derived pattern, a custom Air India Sans, and the Maharajah mascot (1946) kept with a new look in a reduced role. The reveal was on 10 August 2023; the first aircraft in the livery, an Airbus A350-900, was scheduled to join the fleet in December 2023 (AirlineGeeks, 10 August 2023). Lesson: a heritage asset was transformed and kept, and the public argument was about the demoted mascot, which proves it was the asset with the most fame; the livery is the largest surface and was designed first.
 - Zomato to Eternal (2025). The board approved renaming the listed parent Eternal Ltd on 6 February 2025; shareholders approved in March 2025 with over 99% of votes in favour; the ticker moved to ETERNAL and the consumer brand Zomato kept its red wordmark alongside Blinkit, Hyperpure and District. The name had been used internally since the 2022 Blinkit acquisition. Lesson: corporate and consumer names separate when a holding owns more than one consumer brand (1.6); the consumer mark did not move.
 - Cred (2018 onward). Kunal Shah's credit-card payments app took luxury's codes (black, white, restraint, no tagline, slow motion) into fintech and open-sourced its NeoPOP design system in 2021, while its campaigns (Rahul Dravid as the "Indiranagar ka gunda", 2021) did the opposite. Lesson: a quiet identity and loud campaigns are a workable tension when both are deliberate and the identity never flexes to meet the campaign.
 - Tata Neu (2022). The group's superapp launched on 7 April 2022 with a purple identity and NeuCoins rewards, endorsed by the Tata name across groceries, flights, hotels and jewellery. Lesson: an architecture problem (one app for a dozen categories with their own brands) cannot be solved by an identity; the brand first had to mean a reward programme before it could mean anything else.
@@ -571,7 +579,7 @@ Rebrand: a change to the identity, from a refresh (the same assets redrawn) to a
 - Etihad (2014). Landor's identity (Landor was Landor & Fitch from 2021 to 2023 and is Landor again, part of WPP) drew a facet pattern from the UAE's desert and Abu Dhabi's architecture, in sand and gold, with a modern calligraphic Arabic wordmark. Lesson: a national carrier's identity is a nation's; the pattern system did the differentiating that a wordmark could not, because every Gulf carrier has a calligraphic wordmark.
 - Emaar. The master brand sits on every tower it builds (Burj Khalifa, Dubai Mall), and endorses its hotel brands (Address, Vida, Palace, and Armani Hotel Dubai as a co-brand). Lesson: real estate's identity is the skyline; the sign on the building is the logo, and the endorsement system (1.5) lets each hotel keep its own codes.
 - Visit Dubai. The Department of Economy and Tourism (formed by merger in 2021) runs the city brand as a wordmark with its Arabic form and a campaign engine ("Dubai Presents", 2021, with Jessica Alba and Zac Efron). Lesson: a city brand is a wordmark and a release schedule; the city supplies the imagery, so the identity's job is to stay out of the way and be recognisable in the corner of a film.
-- Saudi Vision 2030 brands. Vision 2030 (announced April 2016) sits above a house of brands funded through the Public Investment Fund: NEOM (announced October 2017; the name from neo, new, plus M from the Arabic mustaqbal, future), The Red Sea, Diriyah, Qiddiya and ROSHN, each a place brand built before the place exists; the Saudi Tourism Authority's "Saudi, Welcome to Arabia" (2022); and Riyadh Season, the General Entertainment Authority's annual festival since 2019 with an identity refreshed each year. Lesson: state-funded brand building at a scale no private client reaches; the architecture is a house of brands under a parent most buyers never see; and a place brand with no place yet lives on renders and film, which is the arena Mask360's Gulf clients compete in for attention.
+- Saudi Vision 2030 brands. Vision 2030 (announced April 2016) sits above a house of brands funded through the Public Investment Fund: NEOM (announced October 2017; the name from neo, new, plus M from the Arabic mustaqbal, future), The Red Sea, Diriyah, Qiddiya and ROSHN, each a place brand built before the place exists; the Saudi Tourism Authority's "Saudi, Welcome to Arabia" (2022); and Riyadh Season, the General Entertainment Authority's annual festival since 2019 with an identity refreshed each year. Lesson: state-funded brand building at a scale no private client reaches; the architecture is a house of brands under a parent most buyers never see; and a place brand with no place yet lives on renders and film, which is the arena Mask360's Gulf clients compete in for attention. NEOM is also the warning: CEO Nadhmi Al-Nasr was replaced by Aiman Al-Mudaifer in late 2024; The Line (announced 10 January 2021) was reported by the Financial Times as substantially scaled down in 2025; Trojena lost the 2029 Asian Winter Games; and in April 2026 the PIF governor Yasir Al-Rumayyan said The Line was not vital before 2030. A place brand promises the place, so when the build programme slips the identity carries the credibility gap; write place-brand platforms around what already exists (the coast, the heritage, the people) as well as the renders.
 
 ### 7.5 The blanding era and the reversal
 
@@ -579,7 +587,7 @@ Blanding: the convergence of luxury and technology wordmarks on near-identical g
 
 ### 7.6 The Brand New review lens and how to read a jury
 
-Brand New (underconsideration.com/brandnew) has reviewed identity work daily since 2006; it is run by Bryony Gomez-Palacio and Armin Vit from Bloomington, Indiana, and was publishing daily as of 28 October 2026. The format is fixed and worth copying for internal critique: the before and after side by side, the mark at small size, the wordmark alone, the applications, the designer's own rationale quoted, then a verdict on drawing, spacing, system and story, followed by a reader poll (Great, Fine, Bad). What the lens sees well: craft (a badly drawn join, uneven spacing, a lockup that fails at 24px), the gap between a studio's rationale and its result, and the case study film's tricks. What it cannot see: the strategy, the business reason, the constraints, how the client's staff will use the system, and sales. Jaguar (7.1) and Zara (7.1) were widely panned there and both remained in market; Brand New's "Bad" is a craft verdict with no information about commerce.
+Brand New (underconsideration.com/brandnew) has reviewed identity work daily since 2006; it is run by Bryony Gomez-Palacio and Armin Vit from Bloomington, Indiana, and was publishing daily as of 29 October 2026. The format is fixed and worth copying for internal critique: the before and after side by side, the mark at small size, the wordmark alone, the applications, the designer's own rationale quoted, then a verdict on drawing, spacing, system and story, followed by a reader poll (Great, Fine, Bad). What the lens sees well: craft (a badly drawn join, uneven spacing, a lockup that fails at 24px), the gap between a studio's rationale and its result, and the case study film's tricks. What it cannot see: the strategy, the business reason, the constraints, how the client's staff will use the system, and sales. Jaguar (7.1) and Zara (7.1) were widely panned there and both remained in market; Brand New's "Bad" is a craft verdict with no information about commerce.
 
 Reading any jury (D&AD, Cannes Lions Design, the Transform Awards, Kyoorius in India, Dubai Lynx in the Gulf): entries are judged from a case study film and a board, so the studio's framing is part of the work; juries reward systems, motion and a single idea told in under two minutes; a studio's awards tell a client that its peers rate it, and nothing about whether it will listen. The house uses juries as a currency signal (what the profession rewards this year, cross-referenced with design-taste, references/currency-2026.md); a jury result says nothing about whether an identity worked.
 
@@ -600,7 +608,7 @@ Codes here are the signs the luxury category shares (1.8), listed so that the ho
 | The campaign film | One film a season, a named director (Sofia Coppola for Dior; Wes Anderson for Prada's "Candy", 2013; Jonathan Glazer for various houses) | Closeness to the arts (Kapferer's anti-law 17); the dream (anti-law 9) | A product video with a piano track; see 19-campaigns-and-creative-direction.md |
 | The lookbook | White or grey backdrop paper, one crop, every look at the same scale | The collection as a document; the buyer's tool made public | Lifestyle shots mixed into the lookbook, so neither function works |
 | The boutique | Peter Marino for Chanel, Dior, Louis Vuitton; the facade as the largest ad in the city | The store is the medium where selling happens (anti-law 9) | A boutique designed by the mall's fit-out contractor |
-| The box | Hermès orange, Tiffany blue, Cartier red, Louboutin's red sole (registered as a shape and colour mark in several jurisdictions) | The gift is the brand; the box outlives the purchase on a shelf | A box with a printed logo on a stock carton; see 20-print-and-packaging.md |
+| The box | Hermès orange, Tiffany blue, Cartier red, Louboutin's red sole (registered as a shape and colour mark in several jurisdictions) | The gift is the brand; the box outlives the purchase on a shelf | A box with a printed logo on a stock carton; see 20-print-packaging-ooh-and-physical-production.md |
 
 ### 8.2 India's luxury codes
 
@@ -642,7 +650,7 @@ Romaniuk's method (1.11), run annually for a mature brand: show each asset witho
 |---|---|---|---|
 | YouGov BrandIndex | Daily online panel, metrics such as Buzz, Impression, Consideration, Current Customer | Continuous | Large consumer brands; India and UAE panels exist |
 | Kantar BrandZ | Consumer survey plus financial data; Meaningful, Different, Salient | Annual | Valuation and the Difference metric, which is the nearest industry measure of differentiation |
-| Interbrand Best Global Brands | Financial analysis, role of brand, brand strength; the 2026 edition leads with Apple at USD 514.6 billion | Annual | A valuation lens and a methodology to borrow for a client's own brand strength score (ten factors) |
+| Interbrand Best Global Brands | Financial analysis, role of brand, brand strength; the 2026 edition (released late October 2026) leads with Apple at USD 514.6 billion, Microsoft USD 443.7 billion and Google USD 389.3 billion, with NVIDIA entering the top 10 as the fastest riser (up more than 71%) | Annual | A valuation lens and a methodology to borrow for a client's own brand strength score (ten factors) |
 | Brand Finance Global 500 | Royalty relief valuation | Annual | Valuation for boards |
 | Custom tracker | Studio-written questionnaire, 12 to 20 questions, run through a panel (Kantar, Ipsos, YouGov, or a self-serve panel) | 2 to 4 waves a year | Premium brands with a definable buyer universe; cost in India from a few lakh per wave with a panel, more with recruitment of high-net-worth respondents |
 
@@ -669,7 +677,7 @@ The honest statement in a proposal: the identity will be judged on these proxies
 
 ## 10. Brand experience design
 
-Brand experience: the sum of what a buyer meets, in the order they meet it. The identity system (section 4) is the vocabulary; the experience is the sentence. Method for hospitality in 08-service-design-and-hospitality.md; this section carries the identity director's part of it.
+Brand experience: the sum of what a buyer meets, in the order they meet it. The identity system (section 4) is the vocabulary; the experience is the sentence. Method for hospitality in 08-ux-research-and-strategy.md; this section carries the identity director's part of it.
 
 ### 10.1 Touchpoint mapping
 
@@ -685,12 +693,13 @@ The buyer meets the brand in a sequence, and the weakest link sets the impressio
 4. Arrival: the approach, the door, the greeting within 30 seconds, the smell, the key or the fitting-room; for e-commerce, the confirmation page.
 5. Packaging: the box, the tissue, the card, the sequence of opening; the surface most photographed by the buyer.
 6. Email: the confirmation and the receipt are the most-read brand documents in hospitality and e-commerce and the least designed; they carry the identity on the smallest budget and highest open rate of anything the brand sends.
+7. The AI answer: what ChatGPT, Gemini, Perplexity and Google's AI Overviews say when a buyer asks about the brand by name or by category ("best boutique hotel in North Goa"). It is assembled from the site, the press, the reviews and the Google Business Profile, so links 1 to 3 feed it, and for a growing share of buyers it now comes before link 1. Run the same 10 prompts quarterly and record the answers; method in 21-web-design-and-digital-craft.md.
 
 The chain is walked in the audit (1.7), in phase 7, and quarterly after launch, by someone who did not design it, with a phone camera.
 
 ### 10.3 Service design for hospitality
 
-Service blueprint (G. Lynn Shostack, Harvard Business Review, 1984): a diagram of the service across time with the customer's actions on top, the front-stage staff actions below the line of interaction, the back-stage actions below the line of visibility, and the support processes beneath. The identity director's contributions: the moments that matter (arrival, the first problem, departure), the staff as identity (uniform in 4.14, the greeting script that is forbidden, the vocabulary from 4.10), the printed and digital artefacts at each step, and the rule that brand standards (how it looks and sounds) and service standards (what happens) are written in one document, because a guest meets them as one thing. Full method in 08-service-design-and-hospitality.md.
+Service blueprint (G. Lynn Shostack, Harvard Business Review, 1984): a diagram of the service across time with the customer's actions on top, the front-stage staff actions below the line of interaction, the back-stage actions below the line of visibility, and the support processes beneath. The identity director's contributions: the moments that matter (arrival, the first problem, departure), the staff as identity (uniform in 4.14, the greeting script that is forbidden, the vocabulary from 4.10), the printed and digital artefacts at each step, and the rule that brand standards (how it looks and sounds) and service standards (what happens) are written in one document, because a guest meets them as one thing. Full method in 08-ux-research-and-strategy.md.
 
 ### 10.4 Retail and spatial identity
 
@@ -698,7 +707,7 @@ The store is the medium where luxury sells (anti-law 9); the facade is the bigge
 
 ### 10.5 Scent and sound
 
-Scent branding: a signature fragrance diffused in the brand's spaces, developed with a scent house (12.29 by Dawn and Samantha Goldworm; Air Aroma; ScentAir) and delivered through HVAC or standalone diffusers. Westin's White Tea (2006) is the best-known hotel case; the Edition hotels use Le Labo. Development costs run from about USD 10,000 upward per scent with a specialist house, plus diffusers and refills, by industry quotes; the rules are one scent, low intensity, never in food and beverage spaces, and documented in the guidelines with the supplier and the concentration. Sound: the sonic logo (4.9), the playlist programme (curated by a music agency or in-house, refreshed monthly, with a rule for time of day), the hold music, the notification and the door chime. Method in 15-sound-and-music.md.
+Scent branding: a signature fragrance diffused in the brand's spaces, developed with a scent house (12.29 by Dawn and Samantha Goldworm; Air Aroma; ScentAir) and delivered through HVAC or standalone diffusers. Westin's White Tea (2006) is the best-known hotel case; the Edition hotels use Le Labo. Development costs run from about USD 10,000 upward per scent with a specialist house, plus diffusers and refills, by industry quotes; the rules are one scent, low intensity, never in food and beverage spaces, and documented in the guidelines with the supplier and the concentration. Sound: the sonic logo (4.9), the playlist programme (curated by a music agency or in-house, refreshed monthly, with a rule for time of day), the hold music, the notification and the door chime. Method in 15-lighting-and-sound.md.
 
 ### 10.6 Consistency versus coherence
 
@@ -710,30 +719,30 @@ The canon and what to borrow from each in taste terms is in design-taste, refere
 
 | Studio | Base and founding | Work to study | What it teaches |
 |---|---|---|---|
-| Pentagram | London 1972; 23 partners as of October 2026, all practising designers; offices London, New York, Austin, Berlin | Mastercard (2016, Michael Bierut), Reddit (2023, Natasha Jen), Rolls-Royce (2020, Marina Willer), Windows 8 and Citi (Paula Scher); Samar Maakaroun (partner from 2024) for Arabic and Latin bilingual systems | The partnership model: the owner of the business draws the work; a mark reduced until only the idea is left (Mastercard's two circles) |
-| Collins | New York and San Francisco; Brian Collins | Spotify (2015), Dropbox (2017), Mailchimp (2018), Twitch (2019), San Francisco Symphony (2018) | The brand world before the logo (4.15); a vocabulary of moves shipped as the identity |
-| Koto | London 2015; five studios (Los Angeles, New York, London, Berlin, Sydney) as of October 2026 | Discord (2021), Amazon Music (2020), Zoopla (2021) | Optimism as a method; systems built to be used by in-house teams the day after launch |
-| Porto Rocha | New York; Leo Porto and Felipe Rocha | Work for Nike and Google | Type and image as one system; kinetic typography with an editorial eye |
-| Bureau Borsche | Munich 2007; Mirko Borsche | Zeit Magazin art direction, Balenciaga wordmark (2017), Bavarian State Opera | Editorial typography as identity; the fashion register of a wordmark |
+| Pentagram | London 1972; 23 partners as of October 2026, all practising designers; offices London, New York, Austin, Berlin | Mastercard (2016, Michael Bierut, now listed as consulting partner), Reddit (2023, Natasha Jen), Rolls-Royce (2020, Marina Willer), Windows 8 and Citi (Paula Scher); Samar Maakaroun, a London partner, for Arabic and Latin bilingual systems | The partnership model: the owner of the business draws the work; a mark reduced until only the idea is left (Mastercard's two circles) |
+| Collins | New York and San Francisco; Brian Collins | Spotify (2015), Dropbox (2017), Mailchimp (2018), Twitch (2019), San Francisco Symphony, OYO; Microsoft Copilot listed as forthcoming in October 2026 | The brand world before the logo (4.15); a vocabulary of moves shipped as the identity |
+| Koto | London 2015; five studios (Los Angeles, New York, London, Berlin, Sydney) as of October 2026 | Amazon, WhatsApp, Instagram, Coinbase, Tripadvisor, Rakbank (UAE); acquired Stereo Creative, which brought a Dubai team | Optimism as a method; systems built to be used by in-house teams the day after launch |
+| Porto Rocha | New York and London; Leo Porto and Felipe Rocha | Nike Run, Google Gemini, Twitch, W Hotels, Netflix Tudum, MASP (São Paulo) | Type and image as one system; kinetic typography with an editorial eye |
+| Bureau Borsche | Munich 2007; Mirko Borsche | Zeit Magazin art direction, Balenciaga visual identity (2017), Bavarian State Opera, FC Internazionale Milano, Birkenstock, Rimowa | Editorial typography as identity; the fashion register of a wordmark |
 | Mother Design | London, New York, Los Angeles; the design arm of Mother (founded 1996) | Identity and campaign work for Mother's clients | Identity and advertising conceived in one room; the brand idea as a campaign platform |
-| DixonBaxi | London 2001; Simon Dixon and Aporva Baxi | Premier League (2016), Eurosport (2015), AC Milan (2019) | Motion-first identities for sport and entertainment; the system seen at 25 frames a second before it is seen on paper |
-| Wolff Olins | London 1965; Michael Wolff and Wally Olins; now Omnicom | Orange (1994), Tate (2000), London 2012 (2007), AOL (2009), Unilever (2004), Uber (2018), Johnson & Johnson (2023) | Strategy-led bravery; the dynamic identity (Tate, AOL) as a system of behaviour |
+| DixonBaxi | London 2001; Simon Dixon and Aporva Baxi | Hulu, Roblox, AC Milan, ESPN, Everton, Formula 1, MTV VMAs (as listed on its site, October 2026) | Motion-first identities for sport and entertainment; the system seen at 25 frames a second before it is seen on paper |
+| Wolff Olins | London 1965; Michael Wolff and Wally Olins; now Omnicom | Orange (1994), Tate (2000), London 2012 (2007), AOL (2009), Unilever (2004), Uber (2018), Kenvue (2023) | Strategy-led bravery; the dynamic identity (Tate, AOL) as a system of behaviour |
 | Landor | San Francisco 1941; Walter Landor; WPP; Landor & Fitch 2021 to 2023, Landor again since 2023 | FedEx (1994, Lindon Leader), Etihad (2014), City of Melbourne (2009) | The global network model; a hidden idea (the FedEx arrow) that rewards the second look |
 | Interbrand | London 1974; John Murphy; Omnicom | Best Global Brands annually since 2000 (2026: Apple at USD 514.6 billion); Juventus (2017) | The valuation vocabulary boards understand; brand strength as ten scored factors |
 | Base Design | Brussels 1993; Thierry Brunfaut and Dimitri Jeurissen; New York and Geneva | Cultural institutions including Bozar; Brunfaut's writing on blanding (7.5) | The Belgian typographic school; identities for institutions with many voices |
 | Studio Dumbar | The Hague 1977, now Rotterdam; Gert Dumbar; part of DEPT | Dutch Police (1993), Nederlandse Spoorwegen, Alzheimer Nederland (2018), the DEMO Design in Motion Festival | Performative type; motion as the primary identity carrier (12-motion-principles-and-ui-motion.md) |
 | Commission | London; David McFarline and Christopher Moorby | Zegna, Tiffany & Co. Blue Book (2024, 2026), RIMOWA, Aesop campaigns, Fenty, & Other Stories, Apple Music | Editorial pacing for luxury; typographic restraint with one tension per page |
-| Made Thought | London 2000; Ben Parker and Paul Austin | G.F Smith (2014), Stella McCartney | Paper and material as identity; print craft at the top of the market (20-print-and-packaging.md) |
-| Ragged Edge | London; Max Ottignon | Zopa, Papier | Challenger brands with a sentence-length point of view; the strategy visible in the work |
-| Otherway | London and New York | Strongbow, Lucky Saint, Fortnum & Mason, Cowshed, Rocket | Consumer brand worlds launched with campaign and motion on day one |
+| Made Thought | London and New York; Ben Parker and Paul Austin; part of AKQA | G.F Smith, Mandarin Oriental, Heckfield Place, Chanel, Nothing, Glenfiddich, Design Miami | Paper and material as identity; print craft at the top of the market (20-print-packaging-ooh-and-physical-production.md); hospitality from the material up |
+| Ragged Edge | London; Max Ottignon | Wise (rolled out in 175 countries), Papier, Globe-Trotter, Marshmallow, Granola | Challenger brands with a sentence-length point of view; the strategy visible in the work |
+| Otherway | London | Consumer and challenger brands; the house could not load its case-study pages in October 2026, so read them on its site before citing a project | Consumer brand worlds launched with campaign and motion on day one |
 | Anagrama | Monterrey 2009; Mexico City | Hospitality and packaging identities across Latin America | The Instagram-era case study and its emptiness as a luxury code; the most imitated studio on Behance, which is the warning |
 | Futura | Mexico City 2008; Vicky González and Iván García | Food, drink and hospitality identities | Humour and tactility; the hand-drawn mark as the counter to polish (design-taste section 1, principle 8) |
 | Savvy Studio | Monterrey and New York | Casa Bosques (the studio's own bookshop and chocolate brand), restaurants and hotels | Hospitality designed from the material up; a studio that owns brands and learns from running them |
 | Universal Favourite | Sydney; Dari Israelstam | Beauty, confectionery and packaging identities | Colour and packaging as the identity; the product shot as the brand |
 | Mucho | Barcelona 2003; also Paris, San Francisco, New York | Cultural and hospitality identities | The Spanish typographic school; one family set with conviction |
 | Hey | Barcelona 2007; Verònica Fuerte | Geometric identities and the studio's own shop | Geometry and colour with wit; a studio product line as a laboratory |
-| Studio Feixen | Lucerne; Felix Pfäffli | Südpol posters, work for Nike and Google | The poster as identity; scale contrast and colour as a system |
-| Codesign | Gurugram; Rajesh Dahiya | Royal Enfield, Licious, PhonePe, Tata Motors, Bira 91, Navi, Serendipity Arts Festival (2019) | Indian consumer scale with system rigour; the brand that must work in a kirana and an app |
+| Studio Feixen | Lucerne; Felix Pfäffli | Südpol posters, Studio Feixen Fonts (its own foundry), its poster shop | The poster as identity; scale contrast and colour as a system |
+| Codesign | Gurugram; Rajesh Dahiya | Royal Enfield, Licious, PhonePe, Tata Motors, Bira 91, Navi, TASVA (Tarun Tahiliani with ABFRL), Asian Paints, Serendipity Arts Festival | Indian consumer scale with system rigour; the brand that must work in a kirana and an app |
 | Lopez Design | Gurugram; Anthony Lopez | Large-organisation and public-sector systems | Longevity in Indian identity practice; signage and systems for institutions |
 | Please See | Mumbai | Hospitality and fashion identities | Typographic restraint in Indian retail; the quiet wordmark in a loud market |
 | Ishan Khosla Design | New Delhi 2007; Ishan Khosla | The Typecraft Initiative (from 2011, with craftswomen's drawing traditions as type), exhibitions, publishing | Vernacular India as a source of letterforms and systems, beyond the motif; Devanagari and Latin drawn together |
@@ -804,9 +813,9 @@ Applications and guidelines
 | Grade | CUBE, XMP | 33-point .cube LUT for video and Lightroom .xmp for stills, from the same reference frame | BRAND_Grade_33.cube |
 | Icons | SVG, Figma | 24px grid, 1.5 or 2px stroke, named by function; Figma components published | icon-[function]-24.svg |
 | Motion | Lottie JSON, MOV, MP4 | Logo reveal under 1.5s; Lottie for web and app; ProRes 4444 with alpha at 1920 by 1080 and 1080 by 1920; H.264 MP4 at 1080p for social; easing curve stated in the README | BRAND_LogoReveal_[format].ext |
-| Sonic logo | WAV, MP3 | 48kHz 24-bit WAV master, 1 to 3 seconds; MP3 320kbps for reference; stems where composed (15-sound-and-music.md) | BRAND_Sonic_48k24.wav |
+| Sonic logo | WAV, MP3 | 48kHz 24-bit WAV master, 1 to 3 seconds; MP3 320kbps for reference; stems where composed (15-lighting-and-sound.md) | BRAND_Sonic_48k24.wav |
 | Masters | PPTX or Keynote, DOCX, Figma, Canva, HTML email | Deck at 16:9; document at A4; social formats at 1080 by 1350, 1080 by 1920 and 1080 by 1080; email at 600px wide with a dark-mode test | BRAND_Deck_Master_v1.0.pptx |
-| Applications | PDF/X-4, PNG, Figma | Print-ready with bleed (3mm) and crop marks; dev-ready exports with measurements; packaging dielines as separate layers (20-print-and-packaging.md) | BRAND_[Surface]_[Size]_v1.0.pdf |
+| Applications | PDF/X-4, PNG, Figma | Print-ready with bleed (3mm) and crop marks; dev-ready exports with measurements; packaging dielines as separate layers (20-print-packaging-ooh-and-physical-production.md) | BRAND_[Surface]_[Size]_v1.0.pdf |
 | Trademark drawings | PDF, JPG | Black on white, 8 by 8cm, 300dpi, wordmark and device as separate files | BRAND_TM_Wordmark.pdf, BRAND_TM_Device.pdf |
 | Guidelines | Web and PDF | Structure of 6.1; PDF under 50MB; web guideline with assets downloadable per page | BRAND_Guidelines_v1.0.pdf |
 | Figma library | Figma | Published styles and components; token variables; a cover page with the version | BRAND Library v1.0 |
@@ -815,6 +824,7 @@ Applications and guidelines
 
 ## Terms introduced
 
+- AI answer: what generative assistants and AI search summaries say about a brand, treated as a link in the first impression chain.
 - Aided awareness: recognition of a brand from a prompted list.
 - Anti-laws of marketing: Kapferer and Bastien's rules for luxury that invert mass-marketing practice.
 - Archetypes: twelve recurring character types (Mark and Pearson, 2001) used to describe brand personality.
@@ -835,9 +845,11 @@ Applications and guidelines
 - Clear space (exclusion zone): the margin around a mark that nothing else may enter, defined from an element of the mark.
 - Coherence: the same brand character recognisable everywhere, with behaviour adapted to each medium.
 - Combination mark: a symbol and a wordmark in a fixed lockup.
+- Computer-generated work: under India's Copyright Act 1957, section 2(d)(vi), a work whose author is the person who causes it to be created.
 - Connotation: what a sign suggests beyond what it shows.
 - Consistency: the same assets reproduced the same way on every surface.
 - Construction grid: the geometric scaffold a mark is drawn on.
+- Copyright assignment: the written transfer of copyright from the author; in India deemed to run five years and cover India only if the deed is silent.
 - Core Web Vitals: Google's three page-experience metrics (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) with pass thresholds of 2.5s, 200ms and 0.1.
 - Cultural strategy: Holt's method of building a brand by performing a myth that resolves a tension in the culture.
 - Denotation: what a sign literally shows.
@@ -853,6 +865,7 @@ Applications and guidelines
 - Emblem: type set inside a shape, crest-like.
 - Emergent code: a sign rising at the edge of a category.
 - Endorsed brand: an independent brand carrying a visible parent signature.
+- EULA (end user licence agreement): the foundry's licence that governs where a typeface may be used, including in logos and trademarks.
 - Fame: the share of category buyers who link an asset to the brand.
 - First impression chain: the sequence of surfaces a buyer meets first, from search result to email.
 - Frame of reference: the category the buyer shops a brand against on the day they decide.
@@ -948,7 +961,12 @@ Articles, talks and reference pages
 - Pentagram, Reddit case study, https://www.pentagram.com/work/reddit/story
 - Pentagram, About, https://www.pentagram.com/about (23 partners, read October 2026)
 - Koto, About, https://koto.com/about (five studios, read October 2026)
-- Interbrand, Best Global Brands 2026, https://interbrand.com/best-global-brands/
+- Interbrand, Best Global Brands 2026, https://interbrand.com/best-global-brands/ ; press release, "Brands turning strength into action pull ahead in Interbrand's Best Global Brands 2026", PR Newswire, October 2026, https://www.prnewswire.com/news-releases/brands-turning-strength-into-action-pull-ahead-in-interbrands-best-global-brands-2026-302919588.html
+- Koto, Work, https://koto.com/work (read October 2026)
+- Wolff Olins, Kenvue identity, https://wolffolins.com/news/wolff-olins-designs-new-global-brand-identity-for-johnson-and-johnson
+- Dezeen, "Design chief Gerry McGovern departs Jaguar", 4 December 2025, https://www.dezeen.com/2025/12/04/gerry-mcgovern-jaguar-design-chief-departs/
+- Autocar, "Confirmed: Jaguar to reveal Type 01 in New York in October", 2026, https://autocar.co.uk/car-news/electric-cars/confirmed-jaguar-reveal-type-01-new-york-october
+- Wikipedia, "Neom" (status of NEOM and The Line to October 2026, with links to Financial Times, Reuters and Wall Street Journal reporting), https://en.wikipedia.org/wiki/Neom
 - Brand New, UnderConsideration, https://www.underconsideration.com/brandnew/
 - Design Week, "Burberry reverts to its roots under new creative officer Daniel Lee", February 2023, https://www.designweek.co.uk/issues/6-february-10-february-2023/burberry-new-logo-daniel-lee/
 - Dezeen, "Burberry logo redesign 'irresponsible' says Peter Saville", June 2025, https://www.dezeen.com/2025/06/13/burberry-logo-redesign-irresponsible-peter-saville/
@@ -963,11 +981,14 @@ Articles, talks and reference pages
 
 Specifications, law and registries
 
-- WIPO, Nice Classification, NCL(13-2026), in force 1 January 2026, https://www.wipo.int/en/web/classification-nice
+- WIPO, Nice Classification, NCL(13-2026), in force 1 January 2026, https://www.wipo.int/en/web/classification-nice ; WIPO Madrid news, "Coming on January 1, 2026: Thirteenth Edition of the Nice Classification", https://www.wipo.int/en/web/madrid-system/w/news/2025/coming-on-january-1-2026-thirteenth-edition-of-the-nice-classification
 - WIPO, Vienna Classification, VCL10, in force 1 January 2026, https://www.wipo.int/en/web/classification-vienna
 - WIPO Global Brand Database, https://branddb.wipo.int/
 - Office of the Controller General of Patents, Designs and Trade Marks (IP India), Trade Marks Act 1999 and Trade Marks Rules 2017, public search, https://ipindia.gov.in/ and https://tmrsearch.ipindia.gov.in/
 - Emblems and Names (Prevention of Improper Use) Act 1950, India.
+- Copyright Act 1957, India (sections 2(d), 17, 19), https://copyright.gov.in/
+- UAE Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights.
+- US Copyright Office, Copyright and Artificial Intelligence, Part 2: Copyrightability, January 2025, https://www.copyright.gov/ai/
 - Ministry of Corporate Affairs, India, Companies Act 2013 and Companies (Incorporation) Rules 2014, https://www.mca.gov.in/
 - UAE Federal Decree-Law No. 36 of 2021 on Trademarks; UAE Ministry of Economy trademark services, https://www.moec.gov.ae/
 - Bureau of Indian Standards, hallmarking of gold jewellery and HUID, https://www.bis.gov.in/
@@ -976,5 +997,5 @@ Specifications, law and registries
 - Google, Core Web Vitals thresholds, https://web.dev/articles/vitals
 - Apple Human Interface Guidelines, App icons, https://developer.apple.com/design/human-interface-guidelines/app-icons
 - Android Developers, Adaptive icons, https://developer.android.com/develop/ui/views/launch/icon_design_adaptive
-- Google Play Console Help, app icon specifications, https://support.google.com/googleplay/android-developer/answer/9866151
+- Google Play Console Help, app icon specifications, https://support.google.com/googleplay/android-developer/answer/9866151 ; Google Play icon design specifications (512 by 512px, 30% corner radius applied by Play), https://developer.android.com/distribute/google-play/resources/icon-design-specifications
 - Material Symbols and icon design guidance, https://m3.material.io/styles/icons

@@ -65,7 +65,7 @@ Consequences the rest of this file relies on: a gradient that is numerically eve
 - Chromatic adaptation: the eye normalises the white of a scene within seconds. The Bradford transform is the standard mathematical model and is how ICC profiles move colours between D50 and D65. It is also why a phone screen looks blue when carried into a candle-lit restaurant.
 - Simultaneous contrast (Chevreul, 1839): a colour's appearance shifts toward the complement of its surround. A mid grey looks lighter on black and darker on white; a muted brand colour on a saturated field looks greyer.
 - Helmholtz-Kohlrausch effect: saturated colours look brighter than their luminance predicts. A pure red button reads brighter than a grey of the same Y, and no WCAG number accounts for it.
-- Abney effect and Bezold-Brücke shift: hue appears to change when saturation or luminance changes with the wavelength constant. These two effects are why HSL ramps (section 2.4) drift in hue even though their H value is fixed.
+- Abney effect and Bezold-Brücke shift: hue appears to change when saturation or luminance changes with the wavelength constant. These two effects are why HSL ramps (section 2.3) drift in hue even though their H value is fixed.
 - Colour constancy: the brain assigns a stable colour to an object across lighting, up to a point. The 2015 "dress" image is the public failure case: ambiguous illumination split viewers into white and gold versus blue and black.
 
 ## 2. Colour models and spaces
@@ -82,7 +82,7 @@ A colour model is a way of describing colour with numbers (RGB, HSL, Lab). A col
 | Adobe RGB (1998) | Wider green and cyan than sRGB, D65 | Gamma 2.2 | Photography headed to print, covers more of the CMYK gamut | Viewed through an sRGB-assuming app or browser it looks flat; many clients' phones will show the dull version |
 | ProPhoto RGB (ROMM RGB) | Imaginary primaries, D50 | Gamma 1.8 | Raw editing where nothing should clip | About 13 percent of its volume is colours no human can see; at 8 bit it bands badly, so only use at 16 bit and convert out before delivery |
 | Rec.709 (ITU-R BT.709) | Same primaries as sRGB, D65 | Camera OETF defined by BT.709; display EOTF BT.1886 (gamma 2.4) | HD and most streaming video | Same numbers as sRGB but a different display curve, which is why video and stills of the same subject do not match side by side without management (section 11) |
-| Rec.2020 (ITU-R BT.2020) | Very wide, D65 | 10 or 12 bit; paired with PQ or HLG in BT.2100 | UHD and HDR delivery container | No consumer display covers it in full; the best quantum-dot OLEDs reach around 80 percent, so a Rec.2020 master is a container, and the colours seen depend on the display's mapping |
+| Rec.2020 (ITU-R BT.2020) | Very wide, D65 | 10 or 12 bit; paired with PQ or HLG in BT.2100 | UHD and HDR delivery container | No consumer display covers it in full, with the shortfall largest in the greens, so a Rec.2020 master is a container, and the colours seen depend on the display's mapping |
 | scRGB, linear sRGB | sRGB primaries, D65 | Linear | Compositing, GPU work, CSS srgb-linear | Not a viewing space; values above 1.0 are legal and meaningless on SDR displays |
 
 ### 2.2 CMYK
@@ -101,19 +101,15 @@ Use HSL only to describe a hue angle informally, never to generate ramps, comput
 
 ### 2.4 CIE XYZ, Lab and LCH
 
-CIE XYZ (1931) is the root space: three imaginary primaries chosen so that Y is luminance and all visible colours have positive values. Every conversion between two colour spaces passes through XYZ.
-
-CIELAB (1976) transforms XYZ into L* (lightness, 0 to 100), a* (green to red) and b* (blue to yellow), with a cube root to approximate perception. It is the space of ICC profiles, of spectrophotometers and of delta E (section 9.3). Its known failure is hue: lightening a saturated blue in Lab shifts it toward purple (the blue hue line is curved), and chroma is over-predicted in saturated regions, which is why CIEDE2000 needed five correction terms. LCH is Lab in polar form: L, C (chroma, the distance from the grey axis) and h (hue angle). When a tool says "LCH" without qualification it means CIELAB LCH at D50.
+CIE XYZ (1931) is the root space: three imaginary primaries chosen so that Y is luminance and all visible colours have positive values. Every conversion between two colour spaces passes through XYZ. CIELAB (1976) transforms XYZ into L* (lightness, 0 to 100), a* (green to red) and b* (blue to yellow), with a cube root to approximate perception. It is the space of ICC profiles, of spectrophotometers and of delta E (section 9.3). Its known failure is hue: lightening a saturated blue in Lab shifts it toward purple (the blue hue line is curved), and chroma is over-predicted in saturated regions, which is why CIEDE2000 needed five correction terms. LCH is Lab in polar form: L, C (chroma, the distance from the grey axis) and h (hue angle). When a tool says "LCH" without qualification it means CIELAB LCH at D50.
 
 ### 2.5 CAM16 and HCT
 
-CAM16 (Li et al., 2017) is a colour appearance model: it predicts how a colour looks given the viewing conditions (adapting luminance, surround, background), which Lab ignores. CAM16-UCS is the uniform space derived from it, the most accurate general model available, and heavy to compute.
-
-HCT (hue, chroma, tone) is Google's 2021 space for Material You and Material 3: hue and chroma come from CAM16, tone is CIELAB L*. The point of the construction is that tone maps to L*, so contrast can be guaranteed by tone arithmetic; Material's documentation states that two colours with tones 40 apart meet 3:1 and 50 apart meet 4.5:1 (verify against the current Material 3 colour pages before quoting to a client). Material Color Utilities implements it in C++, Dart, Java, Kotlin, Swift and TypeScript, and the Dart package carries 2021, 2025 and 2026 colour spec variants. HCT is right for Android theming and dynamic colour from a wallpaper; outside Material it is unusual, and OKLCH does the same job with less machinery.
+CAM16 (Li et al., 2017) is a colour appearance model: it predicts how a colour looks given the viewing conditions (adapting luminance, surround, background), which Lab ignores. CAM16-UCS is the uniform space derived from it, the most accurate general model available, and heavy to compute. HCT (hue, chroma, tone) is Google's 2021 space for Material You and Material 3: hue and chroma come from CAM16, tone is CIELAB L*. The point of the construction is that tone maps to L*, so contrast can be guaranteed by tone arithmetic; the HCT source in Material Color Utilities states that a tone difference of 40 guarantees a contrast ratio of at least 3.0 and a difference of 50 guarantees at least 4.5. The library ships in C++, Dart, Java, Kotlin, Swift and TypeScript, and its TypeScript package defines colour spec versions 2021, 2025 and 2026 (Dart package 0.13.1, August 2026). HCT is right for Android theming and dynamic colour from a wallpaper; outside Material it is unusual, and OKLCH does the same job with less machinery.
 
 ### 2.6 OKLab and OKLCH
 
-Björn Ottosson published OKLab on 23 December 2020 as a fix for two specific failures: CIELAB's poor hue prediction (especially blue) and CAM16-UCS's awkward numerics and chroma compression when blending. The construction is XYZ to approximate cone responses (LMS) by a 3 by 3 matrix, a cube root per channel, then a second 3 by 3 matrix to L, a, b; the matrices were fitted to perceptual datasets and the exponent fixed at 1/3. OKLCH is its polar form: L from 0 to 1, C from 0 to about 0.4 (0.37 is the most chromatic sRGB colour), h in degrees. The white point is D65.
+Björn Ottosson published OKLab on 23 December 2020 as a fix for two specific failures: CIELAB's poor hue prediction (especially blue) and CAM16-UCS's awkward numerics and chroma compression when blending. The construction is XYZ to approximate cone responses (LMS) by a 3 by 3 matrix, a cube root per channel, then a second 3 by 3 matrix to L, a, b; the matrices were fitted to perceptual datasets and the exponent fixed at 1/3. OKLCH is its polar form: L from 0 to 1, C from 0 to about 0.45 for anything displayable (the most chromatic sRGB colour, magenta #FF00FF, sits at 0.32; the P3 boundary peaks near 0.36 in the greens and the Rec.2020 boundary near 0.44), h in degrees. The white point is D65.
 
 Why it is the house working space for screens: hue stays constant as lightness changes (a lightened OKLCH blue stays blue), the lightness scale matches perception closely enough that equal L steps look equal, and it is native in CSS (section 5), Tailwind v4, Figma plugins and every modern colour library (culori, colorjs.io). Its limits: it is a uniform space and nothing more (no viewing-condition model), its lightness is slightly off for very dark and very saturated colours, and gamut mapping through it does not reach a perfect sRGB red by chroma reduction alone (a W3C issue thread records this).
 
@@ -169,7 +165,7 @@ Standard dynamic range (SDR) assumes a reference white of 100 cd/m2 (nits). High
 - PQ (perceptual quantizer, SMPTE ST 2084, standardised 2014, developed by Dolby): absolute, mapping code values to 0 to 10,000 nits, with a curve shaped to the eye's contrast sensitivity. HDR10 (PQ plus static metadata, ST 2086, MaxCLL and MaxFALL), HDR10+ and Dolby Vision (dynamic metadata) all sit on PQ.
 - HLG (hybrid log-gamma, BBC and NHK, ARIB STD-B67, 2015): relative, backwards compatible with SDR displays, with a nominal 1000 nit reference display. Broadcast and most phone camera HDR use it.
 
-ITU-R BT.2408 places HDR reference white (graphics white, the white of a caption) at 203 nits, which is 75 percent HLG signal and 58 percent PQ; put titles at 100 percent HDR white and they glare. Phones are now the main HDR surface: the iPhone 17 (2025) is rated 1000 nits typical, 1600 nits HDR peak and 3000 nits outdoor peak with a 2,000,000:1 typical contrast ratio (Apple specification page). On the web, HDR images (gain-map JPEG and HEIC, AVIF) display in Safari and Chrome; the CSS Color HDR module that would let UI colour exceed SDR white is still an editor's draft, so treat HDR as a video and photo capability, and keep UI in SDR until the draft stabilises.
+ITU-R BT.2408 places HDR reference white (graphics white, the white of a caption) at 203 nits, which is 75 percent HLG signal and 58 percent PQ; put titles at 100 percent HDR white and they glare. Phones are now the main HDR surface: the iPhone 17 (2025) is rated 1000 nits typical, 1600 nits HDR peak, 3000 nits outdoor peak and 1 nit minimum, with a 2,000,000:1 typical contrast ratio (Apple specification page). On the web, HDR images (gain-map JPEG and HEIC, AVIF) display in Safari and Chrome; CSS Color HDR Module Level 1 (W3C Working Draft, 26 October 2026; first draft December 2024) defines the dynamic-range-limit property (standard, constrained, no-limit), an HDR colour function and the rec2100-pq, rec2100-hlg and rec2100-linear spaces. Only dynamic-range-limit has shipped: Chrome 136 (April 2025) and Safari 26 for standard and no-limit, Firefox not yet (MDN compatibility data). House use: treat HDR as a photo and video capability, keep UI in SDR, set `dynamic-range-limit: standard` on HDR thumbnails in a grid so they do not glare past the interface, and reserve no-limit for the one hero film.
 
 ## 4. Colour management
 
@@ -221,33 +217,34 @@ Reasons: 120 nits approximates the brightness of a white page in an office; D65 
 
 ### 4.6 Wide gamut on the web
 
-A browser treats an untagged image as sRGB. To show P3 on the web: tag the image with a Display P3 ICC profile (JPEG, PNG) or use a format that carries colour metadata natively (AVIF and HEIC carry CICP codes; WebP can carry an ICC profile), and author CSS colour with color(display-p3 ...) or OKLCH values whose chroma exceeds sRGB. Safari (since 10, 2016) and Chrome (since 62 for tagged images, since 111 for CSS Color 4) honour both. Test on a P3 screen and on an sRGB screen; a hero image with P3 saturation that falls back to clipped sRGB loses detail in the saturated areas, so keep critical detail (skin, product texture) inside sRGB and reserve P3 for backgrounds and accents.
+A browser treats an untagged image as sRGB. To show P3 on the web: tag the image with a Display P3 ICC profile (JPEG, PNG) or use a format that carries colour metadata natively (AVIF and HEIC carry CICP codes; WebP can carry an ICC profile), and author CSS colour with color(display-p3 ...) or OKLCH values whose chroma exceeds sRGB. Safari (since 10, 2016, which also shipped the color-gamut media query) and Chrome (CSS Color 4 functions since 111, March 2023) honour both; Firefox has rendered oklch() since 113. Test on a P3 screen and on an sRGB screen; a hero image with P3 saturation that falls back to clipped sRGB loses detail in the saturated areas, so keep critical detail (skin, product texture) inside sRGB and reserve P3 for backgrounds and accents.
 
 ## 5. CSS colour on the web
 
-CSS Color Module Level 4 is a W3C Candidate Recommendation Draft (edition dated 27 October 2026; editors Tab Atkins Jr., Chris Lilley, Lea Verou). CSS Color Module Level 5 (W3C Working Draft, 26 October 2026) adds relative colour syntax, color-mix(), light-dark() and contrast-color(). Status as of October 2026:
+CSS Color Module Level 4 is a W3C Candidate Recommendation Draft (latest edition 29 October 2026; editors Tab Atkins Jr., Chris Lilley, Lea Verou). CSS Color Module Level 5 (W3C Working Draft, 29 October 2026) adds color-mix(), relative colour syntax, light-dark(), contrast-color(), alpha(), device-cmyk() and custom colour spaces through @color-profile; the spec marks device-cmyk(), @color-profile, custom spaces and relative alpha as at risk, so print work stays in ICC-managed PDF. Status as of October 2026, from MDN's browser compatibility data:
 
 | Feature | Syntax | Baseline status | Notes |
 |---|---|---|---|
 | lab(), lch() | lab(60% 20 -30), lch(60% 36 300) | Widely available | CIELAB at D50; use for print-derived values |
-| oklab(), oklch() | oklch(0.62 0.21 260) | Widely available (MDN: across browsers since May 2023) | The house authoring space; L as 0 to 1 or percent |
+| oklab(), oklch() | oklch(0.62 0.21 260) | Widely available (Chrome 111, Safari 15.4, Firefox 113; all three by May 2023) | The house authoring space; L as 0 to 1 or percent |
 | color() predefined spaces | color(display-p3 1 0.2 0.1), color(srgb-linear ...), color(rec2020 ...), color(xyz-d65 ...) | Widely available | Spec keywords: srgb, srgb-linear, display-p3, display-p3-linear, a98-rgb, prophoto-rgb, rec2020, xyz, xyz-d50, xyz-d65 |
-| color-mix() | color-mix(in oklch, var(--brand) 80%, white) | Widely available (since May 2023) | Default interpolation space is oklab; polar spaces accept shorter, longer, increasing, decreasing hue |
-| Relative colour syntax | oklch(from var(--brand) calc(l + 0.1) c h) | Baseline 2024 (Safari 16.4 first; Chrome and Firefox completed it in 2024) | Safari 16.4 required deg units in hue maths |
+| color-mix() | color-mix(in oklch, var(--brand) 80%, white) | Widely available (since May 2023) | Default interpolation space is oklab; polar spaces accept shorter, longer, increasing, decreasing hue. Level 5 now takes one or more colours (`color-mix(in oklab, teal, olive, blue)`): Firefox 150 and Safari 27 ship it, Chrome does not yet |
+| Relative colour syntax | oklch(from var(--brand) calc(l + 0.1) c h) | Baseline 2024 (Chrome 122, Firefox 128, Safari 18) | Safari 16.4 shipped an earlier partial version; test hue maths there |
 | light-dark() | color: light-dark(#111, #eee) | Baseline 2024 | Needs color-scheme: light dark on the root |
-| contrast-color() | color: contrast-color(var(--bg)) | Baseline newly available April 2026 (MDN). Secondary sources give Safari 26 (September 2025), Firefox 146 (December 2025), Chrome 147 (April 2026) | Returns only black or white; ties return white; MDN warns midtones such as #2277d3 return black, which fails small text. No max keyword has shipped |
+| contrast-color() | color: contrast-color(var(--bg)) | Baseline newly available April 2026: Safari 26 (September 2025), Firefox 146 (December 2025), Chrome 147 (April 2026) | Returns only black or white, ties return white; the algorithm is UA-defined at this level and the spec advises against relying on the WCAG 2.1 ratio alone; MDN warns midtones such as #2277d3 return black, which fails small text. No target-contrast parameter at this level |
+| alpha() | rewrites only the alpha channel of an origin colour | Newly available September 2026: Chrome 152, Firefox 155, Safari 27 | Marked at risk; until it is widely available write `oklch(from var(--x) l c h / 0.4)` |
 | Gamut mapping | (automatic) | Specified in Level 4 | See 5.4 |
 | @media (color-gamut: p3) | @media (color-gamut: p3) { ... } | Widely available | The query for "can this screen show P3" |
 
 ### 5.1 Authoring in OKLCH
 
-Write every token as OKLCH and let the browser produce the hex. The reasons: one hue number per ramp, lightness arithmetic that matches perception, and a chroma value that says how far outside sRGB the colour sits (sRGB tops out between about 0.1 and 0.37 depending on hue; P3 adds about 0.03 to 0.06). Example tokens:
+Write every token as OKLCH and let the browser produce the hex. The reasons: one hue number per ramp, lightness arithmetic that matches perception, and a chroma value that says how far outside sRGB the colour sits (sRGB's maximum chroma runs from about 0.145 for cyan-blues near hue 215 to 0.32 for magenta; P3 adds about 0.03 to 0.09, most in the greens). Example tokens:
 
 ```css
 :root {
   --ink-900: oklch(0.21 0.01 70);        /* warm near-black, hue-cast toward the brand */
   --paper:   oklch(0.985 0.004 80);      /* off-white, never #fff for long reading */
-  --flame:   oklch(0.63 0.24 32);        /* house accent, exceeds sRGB slightly */
+  --flame:   oklch(0.633 0.229 33.8);    /* house flame #F53901, on the sRGB edge */
   --flame-hover: oklch(from var(--flame) calc(l - 0.05) c h);
   --flame-tint:  color-mix(in oklch, var(--flame) 12%, var(--paper));
 }
@@ -259,11 +256,11 @@ color-mix() interpolates two colours in a named space. Use oklch for tints and s
 
 ### 5.3 Gradients and interpolation
 
-Gradients accept an interpolation space: `linear-gradient(in oklch, var(--a), var(--b))`. The default remains the legacy sRGB interpolation for compatibility (the grey dip of section 3.3 lives there); `in oklab` removes the dip, `in oklch longer hue` draws a rainbow around the wheel. The polar hue methods (shorter, longer, increasing, decreasing) decide which way round the hue circle the mix travels.
+Gradients accept an interpolation space: `linear-gradient(in oklch, var(--a), var(--b))`. Without a stated space, a gradient between legacy colours (hex, rgb(), hsl(), named) interpolates in gamma-encoded sRGB for compatibility (the grey dip of section 3.3 lives there), while one involving any modern syntax defaults to oklab; `in oklab` removes the dip, `in oklch longer hue` draws a rainbow around the wheel. The polar hue methods (shorter, longer, increasing, decreasing) decide which way round the hue circle the mix travels.
 
 ### 5.4 Gamut mapping behaviour
 
-CSS Color 4 specifies gamut mapping for colours a display cannot show: work in OKLCH, keep lightness and hue, reduce chroma by binary search until the colour is inside the target, with "local clipping" accepted when a clipped candidate is within a just noticeable difference (deltaE OK of 0.02) of the reduced one. The spec's table of contents also lists clipping, closest colour (MINDE), chroma reduction, EdgeSeeker and ray trace as approaches under discussion. In practice, as of October 2026, browsers have mostly clipped channel values for painted colours rather than running the full algorithm, so an OKLCH accent with chroma beyond the screen's gamut can shift hue and lightness differently in different browsers. Do not rely on the browser to degrade a palette gracefully.
+CSS Color 4 specifies gamut mapping in OKLCH: keep lightness and hue, reduce chroma until the colour fits, and clip locally at the end. The October 2026 draft lets an implementation choose among three algorithms (binary search with local MINDE, EdgeSeeker and Ray Trace), provided it uses its choice wherever CSS mandates gamut mapping; the binary search version takes one just noticeable difference (JND) as an OKLCH difference of 0.02. MINDE (minimum delta E) picks the in-gamut colour closest to the original. Browsers have historically clipped channel values, and implementations still differ, so an OKLCH accent beyond the screen's gamut can land on slightly different colours in different browsers. Hand-author the fallback (5.5) and treat browser mapping as a safety net.
 
 ### 5.5 Designing a palette that degrades from P3 to sRGB
 
@@ -272,10 +269,10 @@ CSS Color 4 specifies gamut mapping for colours a display cannot show: work in O
 3. Ship both:
 
 ```css
-.cta { background: oklch(0.63 0.20 32); }               /* inside sRGB */
+.cta { background: #F53901; }                 /* oklch(0.633 0.229 33.8), sRGB edge */
 @supports (color: color(display-p3 0 0 0)) {
   @media (color-gamut: p3) {
-    .cta { background: oklch(0.63 0.25 32); }            /* P3 version */
+    .cta { background: oklch(0.64 0.25 34); }    /* inside P3, outside sRGB */
   }
 }
 ```
@@ -287,14 +284,15 @@ CSS Color 4 specifies gamut mapping for colours a display cannot show: work in O
 
 ### 6.1 WCAG 2.x: the formula, the thresholds, the flaws
 
-WCAG 2.2 is the current W3C Recommendation (first published 5 October 2023, latest edition 12 December 2024). Its contrast ratio is (L1 + 0.05) / (L2 + 0.05), where L is relative luminance: linearise each sRGB channel (divide by 255; if at or below 0.03928 divide by 12.92, else ((v + 0.055) / 1.055) to the power 2.4), then L = 0.2126 R + 0.7152 G + 0.0722 B. The 0.05 term models flare. Ratios run from 1:1 to 21:1.
+WCAG 2.2 is the current W3C Recommendation (first published 5 October 2023, latest edition 12 December 2024). Its contrast ratio is (L1 + 0.05) / (L2 + 0.05), where L is relative luminance: linearise each sRGB channel (divide by 255; if at or below 0.04045 divide by 12.92, else ((v + 0.055) / 1.055) to the power 2.4; before May 2021 the text said 0.03928, a change with no practical effect), then L = 0.2126 R + 0.7152 G + 0.0722 B. The 0.05 term models flare. Ratios run from 1:1 to 21:1.
 
 | Criterion | Level | Threshold | Applies to |
 |---|---|---|---|
 | 1.4.3 Contrast (Minimum) | AA | 4.5:1 | Text and images of text |
 | 1.4.3, large text | AA | 3:1 | At least 18 point, or 14 point bold (about 24 px, or 18.7 px bold) |
 | 1.4.6 Contrast (Enhanced) | AAA | 7:1, large text 4.5:1 | Text |
-| 1.4.11 Non-text Contrast | AA | 3:1 against adjacent colours | UI component boundaries and states, meaningful graphics |
+| 1.4.11 Non-text Contrast | AA | 3:1 against adjacent colours | UI component boundaries and states, focus indicators, meaningful graphics |
+| 2.4.13 Focus Appearance | AAA | Indicator area at least a 2 CSS px perimeter; 3:1 between the same pixels focused and unfocused | Keyboard focus; 2.4.11 Focus Not Obscured (AA) only requires the focused item not be entirely hidden |
 | 1.4.1 Use of Color | A | n/a | Colour must never be the only carrier of information |
 
 Known flaws, each documented in the W3C's own issue threads and in Andrew Somers' work:
@@ -302,7 +300,7 @@ Known flaws, each documented in the W3C's own issue threads and in Andrew Somers
 - Polarity blind: the ratio is identical for dark-on-light and light-on-dark, yet light text on dark reads worse at the same ratio (halation, thinner apparent strokes).
 - Size and weight are a single cliff at 18 point; a 13 px thin weight and a 17 px bold are treated the same.
 - No spatial frequency model, so it says nothing about hairlines or thin icon strokes.
-- Midtone errors: #777777 on white scores 4.48:1 (fail) and #767676 scores 4.54:1 (pass), with no visible difference. White text on orange #FF8C00 scores 2.1:1 (fail) while black on the same orange scores 9.8:1 (pass), although many readers find the white more legible on a saturated orange because of the Helmholtz-Kohlrausch effect.
+- Midtone errors: #777777 on white scores 4.48:1 (fail) and #767676 scores 4.54:1 (pass), with no visible difference. White text on orange #FF8C00 scores 2.3:1 (fail) while black on the same orange scores 9.0:1 (pass), although many readers find the white more legible on a saturated orange because of the Helmholtz-Kohlrausch effect.
 - It is a luminance ratio, so it ignores hue entirely: red on green at 4.5:1 passes and vibrates.
 
 ### 6.2 APCA
@@ -318,11 +316,11 @@ The Accessible Perceptual Contrast Algorithm (APCA, Andrew Somers, Myndex Resear
 | 30 | Absolute minimum for any text, including placeholders and disabled labels; large solid icons |
 | 15 | Minimum for non-text elements such as dividers and focus outlines; below this is treated as invisible |
 
-The size table assumes Helvetica or Arial with x-height ratio 0.52; other faces are scaled by their x-height. The apca-w3 npm package README reports library version 0.1.9, algorithm 0.0.98G-4g, and calls itself beta.
+The size table assumes Helvetica or Arial with x-height ratio 0.52; other faces are scaled by their x-height. Text larger than 24 px at weight 300 or more has a maximum of Lc 90. The apca-w3 npm package README reports library version 0.1.9, algorithm 0.0.98G-4g with constants fixed since 15 February 2021, and calls itself beta.
 
 ### 6.3 WCAG 3 status
 
-The WCAG 3.0 Working Draft dated 10 September 2026 leaves the contrast algorithm open: the Text contrast requirement reads "@@[contrast measure to be determined]" and an editor's note states "The contrast algorithm used in WCAG 3 is yet to be determined", adding that the requirement assumes a size and weight factor and may need a separate red-green colour vision requirement. The first public draft (January 2021) had used APCA; APCA now describes itself as the candidate method. The draft says the standard "still has several years of work"; secondary sources project a further draft in December 2026 and a Candidate Recommendation no earlier than late 2027. For anything legal, WCAG 2.2 AA is the standard: India's Rights of Persons with Disabilities Act 2016 and the Guidelines for Indian Government Websites reference WCAG 2.x, and the UAE's federal digital accessibility policy references WCAG 2.1 AA (verify the current edition on the TDRA site before citing it in a proposal).
+The WCAG 3.0 Working Draft dated 10 September 2026 leaves the contrast algorithm open: the Text contrast requirement reads "@@[contrast measure to be determined]" and an editor's note states "The contrast algorithm used in WCAG 3 is yet to be determined", adding that the requirement assumes a size and weight factor and may need a separate red-green colour vision requirement. The first public draft (January 2021) had used APCA; the current draft names no algorithm, and APCA's own documentation presents it as the candidate. The draft says the standard "still has several years of work". For anything legal, WCAG 2.2 AA is the working standard: India's Rights of Persons with Disabilities Act 2016 and the Guidelines for Indian Government Websites point to WCAG 2.x, and the European Accessibility Act, enforceable since 28 June 2025, reaches clients selling into the EU through EN 301 549, which incorporates WCAG 2.1 AA. 11-accessibility-and-inclusive-design.md holds the legal detail for India, the UAE and the EU.
 
 ### 6.4 The house approach
 
@@ -333,17 +331,17 @@ Pass WCAG 2.2 AA for every text and component colour pair (the legal floor and w
 - Headlines at 32 px and above, weight 500 and above: WCAG at least 3:1 and APCA at least Lc 45.
 - Placeholder and disabled text: APCA at least Lc 30; WCAG exempts disabled controls; the text should still be readable.
 - Borders, dividers, focus rings, icon strokes: WCAG 3:1 against the adjacent colour; APCA at least Lc 15 for dividers and 30 for icons.
-- Where the two disagree, the stricter one wins for text; for large colour fields, APCA's ceiling of about Lc 90 governs so that pure white on #0A0A0A (21:1, about Lc 105) is softened to an off-white around oklch(0.93 0.005 80) on long pages.
+- Where the two disagree, the stricter one wins for text; for large colour fields, APCA's ceiling of about Lc 90 governs, so pure white on #0A0A0A (19.8:1, Lc about minus 108) is softened on long pages to an off-white around oklch(0.93 0.005 80), which measures about Lc minus 92 on the same ground. The house flame #F53901 measures 3.84:1 and Lc 64 on white: it clears the large-text floors (3:1, Lc 45 at 32 px and above), which is why the italic flame accent (design-taste section 7) lives in headlines and ledes and never in body text, small labels or links.
 
 Reason for the dual rule: a design that only satisfies WCAG can be unreadable (the midtone cases), and a design that only satisfies APCA can fail an audit the client's legal team commissions.
 
 ### 6.5 Non-text and component contrast
 
-Inputs need a 3:1 border or fill against the page; a placeholder is not a label; a disabled state may fall below 3:1 but the component must still be identifiable; focus indicators need 3:1 against adjacent colours (2.4.11 Focus Not Obscured and 2.4.13 Focus Appearance in WCAG 2.2 add size and change-of-contrast rules). Icons that carry meaning need 3:1; decorative icons do not. Charts: each series against the background at 3:1 and adjacent series distinguishable (section 14).
+Inputs need a 3:1 border or fill against the page; a placeholder is not a label; a disabled state may fall below 3:1 but the component must still be identifiable; focus indicators need 3:1 against adjacent colours under 1.4.11 at AA, and the house also adopts the AAA rule of 2.4.13 (a 2 CSS px perimeter and a 3:1 change between focused and unfocused states) as its own floor. Icons that carry meaning need 3:1; decorative icons do not. Charts: each series against the background at 3:1 and adjacent series distinguishable (section 14).
 
 ### 6.6 Contrast in dark mode
 
-Light text on dark halates: strokes look thicker and bleed, so drop the weight one step (400 instead of 500) and reduce the text lightness (OKLCH L 0.90 to 0.93, never 1.0) to cut glare. Keep accents at lower chroma (section 8.5), because saturated colour on dark vibrates and fails APCA more easily than on light. Large light surfaces on a dark page (cards, modals) behave like light mode inside them; measure both. APCA's negative polarity values are the right measure here; WCAG treats the two polarities identically.
+Light text on dark halates: strokes look thicker and bleed, so drop the weight one step (400 instead of 500) and reduce the text lightness (OKLCH L 0.90 to 0.93, never 1.0) to cut glare. Keep accents at lower chroma (section 8.4), because saturated colour on dark vibrates and fails APCA more easily than on light. Large light surfaces on a dark page (cards, modals) behave like light mode inside them; measure both. APCA's negative polarity values are the right measure here; WCAG treats the two polarities identically.
 
 ## 7. Harmony theory and its limits
 
@@ -380,7 +378,7 @@ Two Munsell facts underlie section 8. First, the colour solid is lopsided: the h
 | Triadic | 120 degree spacing | Playfulness, children's and sports categories | Reads cheap in luxury unless two are reduced to near neutral |
 | Tetradic (square or rectangle) | Four hues, 90 degree or two pairs of complements | Data palettes, editorial systems | Unmanageable as a brand palette |
 
-Use the angles in OKLCH, never in HSL. In HSL, 180 degrees is the RGB inverse, so the complement of a navy lands on a yellow that is three times lighter and reads as a different scheme; in OKLCH the complement of oklch(0.3 0.08 265) is oklch(0.3 0.08 85), a dark olive at the same lightness, which is the comparison a designer actually wants.
+Use the angles in OKLCH, never in HSL. In HSL, a 180 degree rotation keeps HSL lightness and ignores perceived lightness: navy #000080 (CIELAB L* about 13) rotates to olive #808000 (L* about 52), which reads as a different scheme; in OKLCH the complement of oklch(0.3 0.08 265) is oklch(0.3 0.08 85), a dark olive at the same lightness, which is the comparison a designer actually wants.
 
 ### 7.5 Temperature
 
@@ -408,11 +406,11 @@ The wheel also assumes flat colour. A photograph, a brass fitting, a linen weave
 
 ### 8.1 Tonal ramps in OKLCH
 
-A tonal ramp (also tint scale, colour scale) is one hue laid out in ordered lightness steps so that components can take any step and keep a predictable relationship to the others. The convention since Tailwind v1 (2019) is 50 to 900 in hundreds, extended to 950 in Tailwind v3.3 (2023), giving 11 steps; Radix Colors uses 12 steps numbered 1 to 12 with a role assigned to each. Build in OKLCH for the reasons in section 2.8, and apply three rules:
+A tonal ramp (also tint scale, colour scale) is one hue laid out in ordered lightness steps so that components can take any step and keep a predictable relationship to the others. The convention set by Tailwind (100 to 900 in v1, 2019; 50 added in v2, 2020; 950 in v3.3, 2023) gives 11 steps; Radix Colors uses 12 steps numbered 1 to 12 with a role assigned to each. Build in OKLCH for the reasons in section 2.8, and apply three rules:
 
 1. Lightness steps follow a fixed table so that every ramp in the system shares the same L at the same step; this is what lets `stone-700` text sit on `flame-100` with a contrast you can predict.
 2. Chroma follows a bell curve that peaks between steps 500 and 600 and falls toward both ends, because the sRGB and P3 gamut boundaries narrow toward white and black (section 7.3's lopsided solid), and because a near-white or near-black with high chroma cannot exist.
-3. Hue drifts by 5 to 15 degrees across the ramp, usually toward yellow in the lights and toward blue in the darks, matching how pigment and light behave (a sunlit wall warms, a shadow cools). Tailwind v4's palette does this; its red-500 is `oklch(63.7% 0.237 25.331)` and the hue angle of the same ramp shifts step by step.
+3. Hue drifts by a few degrees up to about 15 across the ramp, with the direction chosen per hue. Tailwind v4 (4.3.3 as of October 2026) shows both habits: its red runs from hue 17.4 at step 50 through 25.3 at 500 (`oklch(63.7% 0.237 25.331)`) to 26.0 at 950, so the lights lean pink, and its blue runs 254.6, 259.8, 267.9, so the darks lean violet. For warm material palettes the house leans the lights toward yellow and the darks cooler (a sunlit wall warms, a shadow cools), a painterly choice checked by eye.
 
 House lightness table (used for every ramp so the system stays interchangeable):
 
@@ -424,7 +422,7 @@ House lightness table (used for every ramp so the system stays interchangeable):
 | 300 | 0.86 | Border strong, disabled fill | 0.07 |
 | 400 | 0.76 | Placeholder text ceiling, icons on dark | 0.10 |
 | 500 | 0.65 | Solid accent, charts | peak, 0.12 to 0.24 by hue |
-| 600 | 0.56 | Accent hover, text on light at 4.5:1 for most hues | peak |
+| 600 | 0.55 | Accent hover, text on light at 4.5:1 for most hues (green at 0.56 measures 4.39:1, which is why the step sits at 0.55) | peak |
 | 700 | 0.47 | Accent pressed, body text in colour | 0.11 |
 | 800 | 0.38 | Headline in colour, dark surface accent | 0.09 |
 | 900 | 0.30 | Dark surface, text on light at 7:1 | 0.07 |
@@ -433,7 +431,7 @@ House lightness table (used for every ramp so the system stays interchangeable):
 Worked ramp, a bottle green for a hospitality brand (hue 162 at the light end drifting to 155 at the dark end; all values inside sRGB):
 
 ```
-green-50  oklch(0.985 0.010 162)   green-600 oklch(0.56 0.120 158)
+green-50  oklch(0.985 0.010 162)   green-600 oklch(0.55 0.120 158)
 green-100 oklch(0.96  0.022 162)   green-700 oklch(0.47 0.110 157)
 green-200 oklch(0.92  0.040 161)   green-800 oklch(0.38 0.090 156)
 green-300 oklch(0.86  0.070 160)   green-900 oklch(0.30 0.070 155)
@@ -449,10 +447,10 @@ A palette becomes a system when each colour has a role, and a role has a contras
 
 | Role | Light theme (OKLCH L band) | Dark theme (L band) | Obligation |
 |---|---|---|---|
-| Background (page) | 0.97 to 0.99, chroma 0.004 to 0.01 | 0.10 to 0.15 | Nothing is measured against it except surface and borders |
-| Surface (card, panel) | 0.99 to 1.0, or 0.94 to 0.96 on a white page | 0.15 to 0.20 | 1.1:1 to 1.3:1 against background; a hairline border carries the edge |
-| Elevated surface (modal, popover) | 1.0 with shadow | 0.20 to 0.26 | Lightness carries elevation in dark mode, shadow in light |
-| Border | 0.86 to 0.90, or ink at 12 percent alpha | 0.26 to 0.32, or paper at 12 percent alpha | 3:1 only when the border is the sole boundary of a control (WCAG 1.4.11) |
+| Background (page) | 0.97 to 0.99, chroma 0.004 to 0.01 | 0.18 to 0.26 | Nothing is measured against it except surface and borders |
+| Surface (card, panel) | 0.99 to 1.0, or 0.94 to 0.96 on a white page | 0.22 to 0.30 | 1.1:1 to 1.3:1 against background; a hairline border carries the edge |
+| Elevated surface (modal, popover) | 1.0 with shadow | 0.26 to 0.34 | Lightness carries elevation in dark mode, shadow in light |
+| Border | 0.86 to 0.90, or ink at 12 percent alpha | 0.32 to 0.40, or paper at 12 percent alpha | 3:1 only when the border is the sole boundary of a control (WCAG 1.4.11) |
 | Text primary | 0.20 to 0.28 | 0.90 to 0.93 | 4.5:1 and Lc 75 minimum; Lc 90 for long reading |
 | Text secondary | 0.45 to 0.52 | 0.70 to 0.76 | 4.5:1 and Lc 60 |
 | Accent (brand) | 0.55 to 0.65 solid; the hex matched to the brand spec | 0.65 to 0.75, chroma reduced 20 to 30 percent | 3:1 against its surface as a component; its text label measured separately |
@@ -460,7 +458,7 @@ A palette becomes a system when each colour has a role, and a role has a contras
 | Warning | hue about 75, L 0.60 to 0.70 | L 0.80 | Yellow fails against white at any chroma; pair with dark text or a dark fill |
 | Danger | hue about 25, L 0.50 to 0.56 | L 0.70 | Never the brand accent if the brand is red or orange; the house flame at hue 32 forces danger to hue 15 with a different lightness |
 | Info | hue about 240, L 0.50 to 0.58 | L 0.72 | Lower chroma than accent so it never competes |
-| Focus | accent or a dedicated hue at L 0.60, 2 px outline, 2 px offset | same, lighter | 3:1 against every adjacent colour (WCAG 2.4.13) |
+| Focus | accent or a dedicated hue at L 0.60, 2 px outline, 2 px offset | same, lighter | 3:1 against every adjacent colour (WCAG 1.4.11; the 2.4.13 area rule as house floor) |
 
 Reasons: the L bands keep text pairs inside the contrast obligations by arithmetic, so a new client ramp only needs its chroma and hue set; the accent is measured as a component, because its label (usually white or paper) is a separate pair; warning is the role every system gets wrong because saturated yellow has a luminance near 0.9.
 
@@ -470,9 +468,9 @@ Every role above is an alias token resolving to a global ramp step, named for th
 
 ### 8.4 Dark mode strategy
 
-- Lift the black. The page background sits at OKLCH L 0.10 to 0.15 (roughly #121212 to #1C1C1E range in sRGB), never #000000. Two reasons. OLED panels switch pixels fully off at pure black, and the transition from off to a dark grey is the slowest a pixel makes, which produces the trailing smear behind dark grey content scrolling over black ("black smear"); a page at L 0.12 keeps every pixel lit and the response uniform. And at pure black every near-black gradient band shows (section 3.4), while at L 0.12 the first visible step above the background is already lit. Exception: a full-bleed photographic or cinematic page, where the house uses #0A0A0A on decks by design (design-taste section 7) because the content is image, and the OLED behaviour is accepted.
-- Elevation by lightness. In light mode, shadow says "above"; in dark mode shadows vanish against a dark ground, so each level up is lighter. Material Design's dark theme guidance applies a white overlay from about 5 percent at the first elevation step to 16 percent at the highest; in OKLCH terms, steps of about 0.03 to 0.05 L per level from the 0.12 background to about 0.28 for the topmost surface.
-- Desaturate accents. A chroma that reads composed on white vibrates on dark (section 6.6), and a saturated colour on a dark ground triggers the Helmholtz-Kohlrausch effect harder. Reduce chroma 20 to 30 percent and raise L by 0.08 to 0.12 so the accent still passes 3:1 as a component. The house flame at oklch(0.63 0.24 32) becomes about oklch(0.72 0.18 32) on dark.
+- Lift the black. The page background sits at OKLCH L 0.18 to 0.26, which for a neutral runs from #121212 (Material's dark baseline, CIELAB L* about 5.5) to #242424 and spans the 10 to 15 percent lightness that dark-mode guidance usually cites (#1A1A1A to #262626); never #000000. Two reasons. OLED panels switch pixels fully off at pure black, and the transition from off to a dark grey is the slowest a pixel makes, which produces the trailing smear behind dark grey content scrolling over black ("black smear"); a page at L 0.20 keeps every pixel lit and the response uniform. And at pure black every near-black gradient band shows (section 3.4), while at L 0.20 the first visible step above the background is already lit. Exception: a full-bleed photographic or cinematic page, where the house uses #0A0A0A (OKLCH 0.145) on decks by design (design-taste section 7) because the content is image, and the OLED behaviour is accepted.
+- Elevation by lightness. In light mode, shadow says "above"; in dark mode shadows vanish against a dark ground, so each level up is lighter. Material Design's dark theme guidance applies a white overlay from about 5 percent at the first elevation step to 16 percent at the highest; on #121212 the 5 percent overlay gives #1E1E1E and the 16 percent overlay gives #383838, an OKLCH climb from 0.18 to 0.235 to 0.34; the house steps about 0.03 to 0.05 L per level up to that 0.34 ceiling.
+- Desaturate accents. A chroma that reads composed on white vibrates on dark (section 6.6), and a saturated colour on a dark ground triggers the Helmholtz-Kohlrausch effect harder. Reduce chroma 20 to 30 percent and raise L by 0.08 to 0.12 so the accent still passes 3:1 as a component. The house flame, oklch(0.633 0.229 33.8), becomes oklch(0.72 0.16 34) (#F87A5E) on dark: 6.3:1 against #1E1E1E and still inside sRGB.
 - Text at L 0.90 to 0.93 and weight one step lighter (section 6.6).
 - Images: dim by 10 to 15 percent (a `filter: brightness(0.88)` or an overlay) so a white product shot does not glare; this is a content decision, so agree it with the art director before it goes into the theme.
 - Never invert the light palette by arithmetic. Dark mode is a second palette that shares hues and roles.
@@ -483,11 +481,11 @@ Derive states from the base with relative colour syntax (section 5.2) so a clien
 
 | State | Light theme rule | Dark theme rule | Reason |
 |---|---|---|---|
-| Hover | L minus 0.04 to 0.06 | L plus 0.04 to 0.06 | One visible step (about 0.04 L is one JND at mid lightness); hover should be felt without being announced |
+| Hover | L minus 0.04 to 0.06 | L plus 0.04 to 0.06 | About two JNDs (CSS Color 4 takes 0.02 in OKLCH as one); hover should be felt without being announced |
 | Pressed | L minus 0.08 to 0.10 | L plus 0.08 to 0.10 | Two steps; the control must look physically pushed |
 | Focus | Outline, see 8.2 | Same | Separate from hover because keyboard users need it on any state |
 | Selected | Accent at 8 to 12 percent alpha over surface | Accent at 12 to 16 percent alpha | Reads as tinted surface; the text keeps its contrast because the tint is light |
-| Disabled | Text and icon at 38 percent alpha of their enabled colour; fills at the 200 step | Same alpha; fills at the dark 800 equivalent | Alpha keeps the control recognisable on any surface and tells the eye it is the same control, muted; 38 percent is Material's long-standing figure and sits just above APCA Lc 30 for typical pairs |
+| Disabled | Text and icon at 38 percent alpha of their enabled colour; fills at the 200 step | Same alpha; fills at the dark 800 equivalent | Alpha keeps the control recognisable on any surface and tells the eye it is the same control, muted; 38 percent is Material's long-standing figure; near-black ink at 38 percent over white composites to about #A9A9A9, which measures Lc 46 and 2.35:1, legible and clearly inactive |
 | Loading, skeleton | Surface 200 pulsing to 100 | 800 to 700 | Low contrast on purpose; it must never be mistaken for content |
 
 ### 8.6 Alpha versus solid tints
@@ -498,7 +496,7 @@ Alpha tints (a colour with transparency, written `oklch(l c h / 0.12)`) adapt to
 
 | Tool | Maker | What it does well | Limits |
 |---|---|---|---|
-| Leonardo (leonardocolor.io) | Adobe, open source | Generates ramps from target contrast ratios against a background, so steps are defined by the contrast they deliver; adaptive themes; exports CSS custom properties and design tokens | Its site describes contrast-ratio generation without naming the metric; confirm which (WCAG or APCA) in the current build before quoting results to a client |
+| Leonardo (leonardocolor.io) | Adobe, open source | Generates ramps from target contrast ratios against a background, so steps are defined by the contrast they deliver; adaptive themes; exports CSS custom properties and design tokens | The contrast-colors package (v1.1.0) README documents WCAG ratio targets and interpolation in LCH, LAB, CAM02, HSL, HSLuv, HSV or RGB, with no OKLCH; re-check finished ramps in OKLCH and APCA |
 | Huetone (huetone.ardov.me) | Alexey Ardov | Spreadsheet-style palette editor in OKLCH or LCH with a WCAG and APCA contrast readout per cell against chosen backgrounds; the fastest way to tune a full set of ramps | Browser only; no team library |
 | OKLCH.com | Evil Martians (Andrey Sitnik, Roman Shamin) | Picker and converter; pastes HEX, RGB or HSL and returns OKLCH; shows P3 and Rec.2020 boundaries in a 3D model; proposes the closest sRGB fallback by chroma | Single colour at a time |
 | Atmos (atmos.style) | Atmos | Palette and shade generation with contrast checks and export to code | Paid tiers; verify current feature set |
@@ -517,10 +515,10 @@ A colour is owned when the category reads it as one brand's before the logo appe
 |---|---|---|---|
 | Tiffany Blue | Custom Pantone 1837, named for the founding year; the robin's-egg box since the 19th century | One surface (the box) and a refusal to sell the box without a purchase | Registered as a colour trademark in the United States in 1998 (verify the registration details before citing in a proposal) |
 | Hermès orange | The orange box, adopted during the 1940s when the house's pre-war cream boxes became unavailable | Packaging, ribbon, carrier bag; the orange is almost absent from the products themselves | Protected through registrations and use in several jurisdictions; the lesson is the surface discipline rather than the filing |
-| Cadbury purple | Pantone 2685C on milk chocolate wrappers since the early 20th century | A single category (milk chocolate bars), a single wrapper | UK: upheld at first instance in 2012 (Birss J), reversed by the Court of Appeal in 2013 (Société des Produits Nestlé v Cadbury UK, [2013] EWCA Civ 1174) because the wording "predominant colour" did not define a sign; a 2022 High Court decision accepted a narrower mark applied to the whole visible surface of the packaging. Commentary reports an Indian application was refused; treat that as unverified |
+| Cadbury purple | Pantone 2685C on milk chocolate wrappers since the early 20th century | A single category (milk chocolate bars), a single wrapper | UK: upheld at first instance in 2012 (Birss J), reversed by the Court of Appeal in 2013 (Société des Produits Nestlé v Cadbury UK, [2013] EWCA Civ 1174) because the wording "predominant colour" did not define a sign; in Société des Produits Nestlé v Cadbury UK [2022] EWHC 1671 (Ch) (Meade J, 5 July 2022) purple "applied to the whole visible surface of the packaging" stood, "applied to the packaging" failed as unclear, and purple per se was held to be a single sign capable of registration |
 | Louboutin red | Pantone 18-1663 TP applied to the sole of a high-heeled shoe | One position on one product since 1992 | CJEU, Case C-163/16, 12 June 2018: a colour applied to a position is not a shape mark and so escapes the shape exclusion; the mark stands in the Benelux. In India, a 2018 single-judge decision of the Delhi High Court (Christian Louboutin SAS v Abubaker) held that a single colour is not a "mark" under the Trade Marks Act 1999; verify the appellate position before relying on it |
 | Klein blue | International Klein Blue, an ultramarine pigment in a synthetic resin binder that keeps the pigment's dry brilliance | Yves Klein's monochromes from 1957 | Deposited by Soleau envelope at the French INPI on 19 May 1960; a record of priority, which is weaker than a trademark |
-| Bottega green | The "parakeet" green introduced under Daniel Lee in 2021 | Runway, boxes, store interiors and the brand's entire social presence for about two years | Owned by use and by the category's attention, with no reliance on registration; it also shows how fast a colour can be ceded when the house moves on |
+| Bottega green | The "parakeet" green that became the house signature under Daniel Lee in 2020 and 2021 | Runway, boxes, store interiors and the brand's entire social presence for about two years | Owned by use and by the category's attention, with no reliance on registration; Lee left in November 2021, which shows the risk of a colour tied to one designer's tenure |
 
 The legal frame, because clients ask:
 
@@ -567,7 +565,7 @@ The colour chapter of a brand book must contain, in this order: the palette in a
 
 ## 10. Print colour
 
-Cross-reference: 20-print-and-packaging.md carries the production process (stocks, finishes, imposition, press checks); this section carries the colour engineering a designer must settle before the file leaves the studio.
+Cross-reference: 20-print-packaging-ooh-and-physical-production.md carries the production process (stocks, finishes, imposition, press checks); this section carries the colour engineering a designer must settle before the file leaves the studio.
 
 ### 10.1 CMYK gamut against RGB
 
@@ -584,18 +582,18 @@ Black ink alone (K 100) prints as a dark grey with a density around 1.7 to 1.9 o
 | C70 M50 Y30 K100 | 250 | Cool black with a blue cast | Beside cool photography, tech and finance brands |
 | C35 M60 Y60 K100 | 255 | Warm black with a brown cast | Beside skin and wood; hospitality and F&B |
 | C40 M30 Y30 K100 | 200 | Lighter rich black for uncoated stock | Keeps inside lower ink limits (10.3) |
-| C75 M68 Y67 K90 | 300 | What Photoshop produces when RGB black is converted through a SWOP or FOGRA profile | Never set by hand; it sits at the ink limit and shows every registration error |
+| C75 M68 Y67 K90 | 300 | What Photoshop makes of RGB #000000 through its old default U.S. Web Coated (SWOP) v2 profile | Never set by hand; it sits at the ink limit and shows every registration error |
 | C100 M100 Y100 K100 | 400 | Registration | Printer's marks only; applied to artwork it over-inks, offsets and cracks |
 
 Rules: keep one rich black per document so panels match; never put small type or thin rules in a rich black (a 0.1 mm misregistration shows as a coloured fringe); never knock white type under 8 pt out of a rich black for the same reason; on uncoated stock prefer the 200 build; check that any black in a placed image matches the document's rich black or the join between image and panel shows.
 
 ### 10.3 Total ink limit
 
-Total area coverage (TAC, also total ink limit) is the maximum sum of the four ink percentages at any point. Exceeding it causes set-off (wet ink transferring to the sheet above), slow drying, mottling and cracking on folds. Limits are set by the output profile and the printer: PSO Coated v3 (FOGRA51) is built to 300 percent; uncoated profiles commonly run 260 to 300 percent and many uncoated presses specify 260 to 280; newsprint profiles such as ISOnewspaper26v4 run 240 percent. Set the limit by converting through the printer's profile, and check with Acrobat's Output Preview (Total Area Coverage warning) before sending. Ask the printer rather than assuming: Mumbai and Delhi commercial printers vary, and the same file that runs clean on a Heidelberg in Dubai can set off on a cheaper uncoated board in Jaipur.
+Total area coverage (TAC, also total ink limit) is the maximum sum of the four ink percentages at any point. Exceeding it causes set-off (wet ink transferring to the sheet above), slow drying, mottling and cracking on folds. Limits are set by the output profile and the printer: PSO Coated v3 (FOGRA51) is built to 300 percent (the ICC profile registry lists TAC 300 percent, medium GCR, maximum K 96 percent); uncoated profiles commonly run 260 to 300 percent and many uncoated presses specify 260 to 280; newsprint profiles such as ISOnewspaper26v4 run 240 percent. Set the limit by converting through the printer's profile, and check with Acrobat's Output Preview (Total Area Coverage warning) before sending. Ask the printer for the figure: Mumbai and Delhi commercial printers vary, and the same file that runs clean on a Heidelberg in Dubai can set off on a cheaper uncoated board in Jaipur.
 
 ### 10.4 Dot gain and tone value increase
 
-Halftone dots spread as ink hits paper (mechanical gain) and appear larger because light scatters inside the paper (optical gain). The sum is tone value increase (TVI, the ISO term; dot gain in older usage), largest at mid tints. ISO 12647-2:2013 defines target TVI curves (A to E); coated sheetfed sits around 14 to 16 percent at the 40 to 50 percent tint, uncoated higher, and newsprint around 26 percent (the figure embedded in the ISOnewspaper26 profile name). Consequences: a 10 percent tint of a brand colour prints closer to 20 percent on uncoated; skin in a photograph goes muddy on uncoated unless the separation compensates; a 50 percent grey panel designed on screen prints visibly darker. The output profile carries the compensation, which is the practical reason to convert through the right profile and to soft proof.
+Halftone dots spread as ink hits paper (mechanical gain) and appear larger because light scatters inside the paper (optical gain). The sum is tone value increase (TVI, the ISO term; dot gain in older usage), largest at mid tints. ISO 12647-2 defines target TVI curves (A to E); the ICC profile registry lists FOGRA39 at about 13 percent and FOGRA51 at about 16 percent (rounded, curve A for the chromatic inks in both), uncoated conditions run higher, and newsprint around 26 percent (the figure embedded in the ISOnewspaper26 profile name). Consequences: a 10 percent tint of a brand colour prints closer to 20 percent on uncoated; skin in a photograph goes muddy on uncoated unless the separation compensates; a 50 percent grey panel designed on screen prints visibly darker. The output profile carries the compensation, which is the practical reason to convert through the right profile and to soft proof.
 
 ### 10.5 Spot colours
 
@@ -616,7 +614,7 @@ Extended colour gamut (ECG) printing adds orange, green and violet (OGV) to CMYK
 | Characterisation | Profile | Standard | Measurement | Paper white (approximate Lab) | Where it runs |
 |---|---|---|---|---|---|
 | FOGRA39 | ISO Coated v2 (ECI) | ISO 12647-2:2004, PT1 and PT2 | M0, no optical brightener allowance | 95, 0, minus 2 | The default at most Indian and Gulf commercial printers as of 2026 |
-| FOGRA51 | PSO Coated v3 (ECI, 2015) | ISO 12647-2:2013, printing condition 1, premium coated | M1 (UV included), paper with optical brighteners | 95, 1.5, minus 6 | European standard; the house default for anything printed in Europe or on modern bright stock |
+| FOGRA51 | PSO Coated v3 (ECI, 2015) | ISO 12647-2:2013, printing condition 1, premium coated, 115 g/m2, fluorescence moderate (8 to 14 delta B, ISO 15397) | M1 (UV included), paper with optical brighteners | 95, 1.5, minus 6 | European standard; the house default for anything printed in Europe or on modern bright stock |
 | FOGRA52 | PSO Uncoated v3 (ECI, 2015) | ISO 12647-2:2013, printing condition 5, wood-free uncoated | M1 | Bluer and darker than coated | Uncoated brochures, stationery, menus |
 | GRACoL 2013 | CRPC6 | ISO 15339 characterised reference printing conditions; G7 calibration | M1 | similar to FOGRA51 | United States sheetfed |
 | SWOP 2013 | CRPC5 | as above | M1 | | United States web offset, magazines |
@@ -709,7 +707,7 @@ The codes design-taste names (black, white, cream, bottle green, oxblood, navy, 
 | Bottle green | oklch(0.35 0.07 160) | Glass, cypress | In CMYK gamut; a spot is unnecessary |
 | Oxblood | oklch(0.32 0.10 20) | Cordovan leather | Near the CMYK edge; proof it |
 | Navy | oklch(0.28 0.06 265) | Indigo-dyed wool | CMYK navies go purple; add K, reduce M |
-| Brass | oklch(0.72 0.10 85) | Polished brass, champagne gold | A flat gold always disappoints; use Pantone 871 C or a foil (20-print-and-packaging.md) |
+| Brass | oklch(0.72 0.10 85) | Polished brass, champagne gold | A flat gold always disappoints; use Pantone 871 C or a foil (20-print-packaging-ooh-and-physical-production.md) |
 
 ### 12.3 India
 
@@ -726,7 +724,7 @@ The codes design-taste names (black, white, cream, bottle green, oxblood, navy, 
 - Green: the colour of Islam and the Saudi flag (green field, the shahada and a sword). The Saudi flag is never flown at half mast and must not appear on disposable or commercial items; do not place the shahada on merchandise, packaging or anything that can be discarded. Saudi National Day (23 September) campaigns use the flag green and white.
 - The UAE flag: red, green, white and black, the Pan-Arab colours, adopted on 2 December 1971 (the design is credited to Abdullah Mohammed Al Maainah). UAE National Day campaigns use the four; the flag itself is governed by federal law on its use, and the official colour codes could not be verified on the government portal at the time of writing, so obtain them from the Ministry's brand guidance before producing anything with the flag. Qatar's maroon and Kuwait's and Jordan's Pan-Arab sets follow the same rule: obtain the state specification.
 - White: the kandura, purity, Eid; luxury in the Gulf is frequently white and gold on white, and the Dubai market reads cream as warmth rather than as age.
-- Gold: the metal itself (Dubai's Gold Souk, the 22 and 24 carat culture) rather than a colour; a CMYK gold reads cheap here faster than anywhere, so the same rule as 12.3 applies.
+- Gold: read as the metal itself (Dubai's Gold Souk, the 22 and 24 carat culture); a CMYK gold reads cheap here faster than anywhere, so the same rule as 12.3 applies.
 - Ramadan: deep blue, gold, amber lantern light and crescent iconography are the default of every brand in the region; a Mask360 Ramadan campaign keeps the quiet (the hour before iftar, the table, the hands) and lets a single warm light carry the colour.
 - Palette temperature: the region's light is high Kelvin and harsh at noon, low and warm at the two golden hours; the hospitality and real estate reference imagery is almost always shot in the latter, which is the trope design-taste names; the counter-move is the blue hour and the overcast winter day.
 
@@ -743,7 +741,7 @@ Pink for girls and blue for boys is a mid 20th century retail convention; Jo B. 
 
 ### 12.7 The 2026 palettes, technically
 
-design-taste, references/currency-2026.md reads the wave (muted, nature-grounded palettes rising; dark mode with one acid accent peaking; cream, serif and terracotta dead). The technical consequence belongs here: a muted palette has OKLCH chroma of 0.02 to 0.08, which makes it fragile. A Samsung Vivid mode (section 4.5) adds 10 to 20 percent chroma and turns a stone grey into a lilac; a 4:2:0 encode at a low bitrate smears a sage green into the adjacent neutral; a FOGRA39 to FOGRA51 switch shifts a cream visibly. Test muted palettes on the worst screen in the office and on uncoated stock before the client sees them on a calibrated monitor.
+design-taste, references/currency-2026.md reads the wave (muted, nature-grounded palettes rising; dark mode with one acid accent peaking; cream, serif and terracotta dead). The technical consequence belongs here: a muted palette has OKLCH chroma of 0.02 to 0.08, which makes it fragile. A Samsung Vivid mode (section 4.5) adds 10 to 20 percent chroma and turns a stone grey into a lilac; a 4:2:0 encode at a low bitrate smears a sage green into the adjacent neutral; a FOGRA39 to FOGRA51 switch shifts a cream visibly. Test muted palettes on the worst screen in the office and on uncoated stock before the client sees them on a calibrated monitor. Pantone's Colour of the Year 2026 is PANTONE 11-4201 Cloud Dancer, a white, which confirms the current; technically a white is the hardest brand colour to hold, because the paper's optical brighteners (M0 against M1, section 10.7), the screen's white point and the surrounding greys decide it. 11-4201 is a Fashion, Home + Interiors number, so print and screen use needs a measured Lab and a nearest Formula Guide or Bridge match.
 
 ## 13. Colour vision deficiency
 
@@ -782,7 +780,7 @@ Test: render the screen in greyscale (Figma's plugin or the OS filter); if the i
 - Okabe and Ito (2008, "Color Universal Design"): eight colours distinguishable under protan and deutan vision. Hex values as published and reproduced by Bang Wong (Nature Methods, 2011): black #000000, orange #E69F00, sky blue #56B4E9, bluish green #009E73, yellow #F0E442, blue #0072B2, vermilion #D55E00, reddish purple #CC79A7. Use it as the categorical set for any chart with up to seven series; re-order it so the first two series are blue and orange.
 - Viridis family (Stéfan van der Walt and Nathaniel Smith, 2015, the matplotlib 2.0 default): viridis, magma, plasma and inferno are sequential maps with monotonic lightness, uniform in CAM02-UCS, readable in greyscale and under CVD; cividis (Nuñez, Anderton and Renslow, 2018) is optimised for deuteranopia. Use for any heat map, density or continuous data.
 - Paul Tol's qualitative schemes (bright, vibrant, muted, light) are CVD-tested alternatives with a more editorial tone than Okabe-Ito.
-- IBM Design's colour-blind-safe set (#648FFF, #785EF0, #DC267F, #FE6100, #FFB000) is a five-colour categorical palette used in Carbon.
+- IBM Design's colour-blind-safe set (#648FFF, #785EF0, #DC267F, #FE6100, #FFB000) is a five-colour categorical palette published by the IBM Design Library.
 - ColorBrewer's "colorblind safe" filter (section 14.2).
 
 ### 13.4 Simulation tools
@@ -837,10 +835,10 @@ A colour token in the DTCG format (07-design-systems-and-tokens.md section 4.2) 
 ```json
 {
   "flame": {
-    "600": {
+    "500": {
       "$type": "color",
-      "$value": { "colorSpace": "oklch", "components": [0.63, 0.24, 32], "alpha": 1, "hex": "#F53901" },
-      "$description": "House accent. Master Lab D50/2 on file; dE00 tolerance 2.0 print, see brand book 4.2."
+      "$value": { "colorSpace": "oklch", "components": [0.633, 0.229, 33.8], "alpha": 1, "hex": "#F53901" },
+      "$description": "House flame. Master Lab D50/2 on file; dE00 tolerance 2.0 on contract proofs (section 9.3)."
     }
   }
 }
@@ -865,7 +863,7 @@ The colour specification sheet, one page per owned colour: the name; the master 
 | Profile and tagging | Every raster carries an embedded ICC profile; CSS colours in OKLCH with sRGB fallbacks; images P3 only where intended | PDF/X-4 with the output intent of the printer's profile; no RGB images left untagged; spot colours named exactly as the Pantone library names them, no duplicates | Colour tags written (Rec.709, BT.1886, limited range for broadcast and social); HDR masters carry PQ or HLG tags and ST 2086 metadata |
 | Gamut | Text, icons and borders inside sRGB; accents exceeding sRGB have a hand-authored fallback | Soft proof reviewed with paper and ink simulation; out-of-gamut warning checked in Photoshop and Acrobat | Gamut warning on the scope clean; saturated graphics kept inside Rec.709 unless an HDR deliverable exists |
 | Contrast | Every text pair passes WCAG 2.2 AA and the APCA floor of section 6.4; components 3:1; focus 3:1; measured on composited colours | Type on tints checked against 10.4 dot gain; reversed type above the minimum size for the black build | Captions at 203 nits HDR white or 90 percent SDR white on a 40 to 60 percent dark band; never pure white at 100 percent |
-| Black | Dark theme background L 0.10 to 0.15; no #000 behind scrolling content | One rich black build per document; text K only; registration swatch nowhere in the art | Black level at 0 IRE with nothing crushed below 16 on limited range; no lifted milky blacks on the 2.2 phone check |
+| Black | Dark theme background OKLCH L 0.18 to 0.26; no #000 behind scrolling content | One rich black build per document; text K only; registration swatch nowhere in the art | Black level at 0 IRE with nothing crushed below 16 on limited range; no lifted milky blacks on the 2.2 phone check |
 | Ink and bit depth | Gradients dithered or noised; no 8 bit banding in dark hero gradients | TAC within the printer's limit at every point; no ink above the limit in shadows of images | 10 bit intermediate; gradients and smoke dithered; final encode checked for banding at the platform's bitrate |
 | Brand colour | Accent hex matches the derived sRGB value; dark variant matches the spec | Spot or build matches the master within tolerance on the contract proof; paper white within tolerance | Product and logo on the vectorscope at the Rec.709 value; graphic overlays for saturated brand colour |
 | CVD | Protanopia and deuteranopia simulated; second channel present for every colour-coded state | Same, on the proof | Same, on the final encode; charts and lower thirds checked |
@@ -895,7 +893,7 @@ The colour specification sheet, one page per owned colour: the name; the master 
 | Space | White point | Transfer function | Gamut, approximate | Primary use |
 |---|---|---|---|---|
 | sRGB | D65 | sRGB piecewise, about gamma 2.2 | 100 percent (reference) | Web, product UI, stills delivery |
-| Display P3 | D65 | sRGB piecewise | About 125 percent of sRGB in area; Figma states 49 percent more distinct colours | Apple displays, modern Android, wide-gamut web |
+| Display P3 | D65 | sRGB piecewise | About 136 percent of sRGB's area on the 1931 xy diagram, 126 percent on the 1976 u'v' diagram; Figma states 49 percent more distinct colours | Apple displays, modern Android, wide-gamut web |
 | DCI-P3 | About 6,300 K, greenish (x 0.314, y 0.351) | Gamma 2.6 | Same primaries as Display P3 | Cinema projection |
 | Adobe RGB (1998) | D65 | Gamma 2.2 | Wider green and cyan than sRGB | Photography to print |
 | ProPhoto RGB | D50 | Gamma 1.8 | Larger than the visible gamut in part | Raw editing at 16 bit |
@@ -914,7 +912,7 @@ The colour specification sheet, one page per owned colour: the name; the master 
 | Cool rich | 70 | 50 | 30 | 100 | 250 | Beside cool photography |
 | Warm rich | 35 | 60 | 60 | 100 | 255 | Beside skin, wood, hospitality |
 | Uncoated rich | 40 | 30 | 30 | 100 | 200 | Uncoated stock, lower ink limits |
-| Converted RGB black | 75 | 68 | 67 | 90 | 300 | Avoid; what a profile conversion of #000000 produces |
+| Converted RGB black | 75 | 68 | 67 | 90 | 300 | Avoid; what U.S. Web Coated (SWOP) v2 makes of #000000 |
 | Registration | 100 | 100 | 100 | 100 | 400 | Printer's marks only |
 
 ### 16.4 Contrast thresholds by text size
@@ -929,25 +927,25 @@ The colour specification sheet, one page per owned colour: the name; the master 
 | Placeholder and disabled text | exempt | exempt | 30 | 45 |
 | UI component boundaries, icons with meaning | 3:1 (1.4.11) | 3:1 | 30 for icons | 45 |
 | Dividers, decorative hairlines | none | none | 15 | 15 to 30 |
-| Focus indicator against adjacent colours | 3:1 (2.4.13) | 3:1 | 45 | 60 |
+| Focus indicator against adjacent colours | 3:1 (1.4.11) | 3:1 change between states, 2 px perimeter (2.4.13) | 45 | 60 |
 
-APCA values from the APCA guidance levels; the font size and weight lookup in the apca-w3 documentation refines these per weight and the house floors are the conservative reading of it.
+APCA values from the APCA guidance levels (text above 24 px at weight 300 or more is capped at Lc 90); the font size and weight lookup in the apca-w3 documentation refines these per weight and the house floors are the conservative reading of it.
 
 ### 16.5 OKLCH lightness bands for light and dark themes
 
 | Role | Light theme L | Dark theme L | Chroma guidance |
 |---|---|---|---|
-| Page background | 0.97 to 0.99 | 0.10 to 0.15 | 0.004 to 0.012, hue of the brand |
-| Surface | 0.99 to 1.0 (or 0.94 to 0.96 on white) | 0.15 to 0.20 | as background |
-| Elevated surface | 1.0 plus shadow | 0.20 to 0.28 | as background |
-| Border subtle | 0.90 to 0.93 | 0.22 to 0.26 | 0.01 |
-| Border strong | 0.80 to 0.86 | 0.30 to 0.36 | 0.02 |
+| Page background | 0.97 to 0.99 | 0.18 to 0.26 (#121212 to #242424 neutral) | 0.004 to 0.012, hue of the brand |
+| Surface | 0.99 to 1.0 (or 0.94 to 0.96 on white) | 0.22 to 0.30 | as background |
+| Elevated surface | 1.0 plus shadow | 0.26 to 0.34 | as background |
+| Border subtle | 0.90 to 0.93 | 0.30 to 0.34 | 0.01 |
+| Border strong | 0.80 to 0.86 | 0.38 to 0.44 | 0.02 |
 | Text primary | 0.20 to 0.28 | 0.90 to 0.93 | up to 0.02 |
 | Text secondary | 0.45 to 0.52 | 0.70 to 0.76 | up to 0.02 |
 | Text disabled | 0.65 to 0.70 (or 38 percent alpha) | 0.50 to 0.55 (or 38 percent alpha) | |
 | Accent solid | 0.55 to 0.65 | 0.65 to 0.75 | brand chroma; reduce 20 to 30 percent on dark |
 | Accent text on light surface | 0.40 to 0.50 | 0.75 to 0.82 | so that 4.5:1 holds |
-| Accent tint surface | 0.93 to 0.96 | 0.20 to 0.26 | 0.03 to 0.05 |
+| Accent tint surface | 0.93 to 0.96 | 0.28 to 0.34 | 0.03 to 0.05 |
 | Status fills (positive, warning, danger, info) | 0.50 to 0.62 by hue | 0.70 to 0.80 | lower than accent |
 | Focus ring | 0.55 to 0.62 | 0.70 to 0.78 | brand or dedicated hue |
 
@@ -959,6 +957,7 @@ Reason for the bands: with L fixed per role, the WCAG and APCA obligations of se
 - Achromatopsia: rod monochromacy; the absence of functioning cones, so no hue is perceived.
 - Acquired distinctiveness: the legal status of a sign that has come to identify one trader through use, the route by which single colours are registered.
 - Alpha tint: a colour with transparency, written with a slash alpha in CSS, that composites over whatever lies beneath it.
+- alpha(): the CSS Color 5 function that rewrites only the alpha channel of an origin colour.
 - Anomalous trichromacy: colour vision with one cone type shifted in sensitivity; the milder and more common form of CVD.
 - APCA and Lc: the Accessible Perceptual Contrast Algorithm, a polarity-aware contrast method, and its signed lightness contrast value from about minus 108 to 106; the candidate for WCAG 3.
 - Banding: visible steps in a gradient caused by too few code values across the tonal distance.
@@ -978,7 +977,7 @@ Reason for the bands: with L fixed per role, the WCAG and APCA obligations of se
 - CIELAB: the CIE 1976 space of L*, a*, b*, perceptually spaced by a cube root; the space of ICC profiles and spectrophotometers.
 - CMYK: the four-ink subtractive process model; meaningless as a colour until an output profile is attached.
 - Colorimeter and spectrophotometer: a filter-based display measuring device, and a device measuring reflectance or emission per wavelength, usable for print.
-- color-mix(), contrast-color(), light-dark(), relative colour syntax: the CSS Color 5 forms that interpolate two colours in a named space; return black or white, whichever contrasts more; return one of two values by colour scheme; and derive a colour from an origin colour's channels, as in oklch(from var(--x) calc(l + 0.1) c h).
+- color-mix(), contrast-color(), light-dark(), relative colour syntax: the CSS Color 5 forms that interpolate one or more colours in a named space; return black or white, whichever contrasts more; return one of two values by colour scheme; and derive a colour from an origin colour's channels, as in oklch(from var(--x) calc(l + 0.1) c h).
 - Colour constancy: the perception of stable object colour across changes in illumination.
 - Colour model and colour space: a numeric description scheme (RGB, HSL), and a model fixed to primaries, white point and transfer function (sRGB, Display P3).
 - Colour temperature: the kelvin temperature of the black body whose light matches a source; lower is redder.
@@ -991,11 +990,12 @@ Reason for the bands: with L fixed per role, the WCAG and APCA obligations of se
 - Delta E: the distance between two colours in CIELAB under a stated formula (CIE76, CIE94, CIEDE2000).
 - Dither: deliberate noise that converts banding into a fine texture the eye reads as smooth.
 - Dot gain and tone value increase (TVI): the growth of halftone dots on paper by ink spread and light scatter; TVI is the ISO term.
+- dynamic-range-limit: the CSS property that caps how much HDR headroom an element may use (standard, constrained, no-limit).
 - Elevation (dark mode): the convention of making higher surfaces lighter in a dark theme, since shadows cannot show depth on a dark ground.
 - Extended colour gamut (ECG): seven-ink process printing (CMYK plus orange, green, violet) that reaches most spot colours; Hexachrome was Pantone's six-ink predecessor.
 - FOGRA39, FOGRA51, FOGRA52, GRACoL, G7: characterisation datasets for coated offset (ISO 12647-2:2004), premium coated to the 2013 revision (M1, optical brighteners) and uncoated to the 2013 revision; the United States sheetfed reference (GRACoL 2013, CRPC6); and Idealliance's grey-balance calibration method.
 - Gamma and transfer function: the curve relating code values to linear light; gamma 2.2 for design displays, 2.4 (BT.1886) for video, 2.6 for cinema.
-- Gamut and gamut mapping: the range of colours a space or device can show, and the method for bringing out-of-range colours inside it (clipping, chroma reduction, perceptual compression).
+- Gamut and gamut mapping: the range of colours a space or device can show, and the method for bringing out-of-range colours inside it (clipping, chroma reduction, perceptual compression; in CSS, binary search with local MINDE, EdgeSeeker or Ray Trace).
 - HCT: Google's hue, chroma, tone space (CAM16 hue and chroma, CIELAB tone) used by Material 3.
 - HDR, SDR, PQ, HLG: high and standard dynamic range; the perceptual quantizer (SMPTE ST 2084, absolute, to 10,000 nits) and hybrid log-gamma (ARIB STD-B67, relative, backwards compatible).
 - Helmholtz-Kohlrausch effect: saturated colours appearing brighter than their luminance predicts.
@@ -1010,6 +1010,7 @@ Reason for the bands: with L fixed per role, the WCAG and APCA obligations of se
 - Log encoding: a camera curve storing wide dynamic range by compressing highlights and lifting shadows; a storage format that needs a display transform.
 - LUT and show LUT: a lookup table mapping input to output colour; the show LUT is the agreed look exported from the grade for every department.
 - Metamerism: two different spectral distributions matching under one illuminant and differing under another.
+- MINDE: minimum delta E, the gamut-mapping choice of the in-gamut colour closest to the original.
 - Munsell system: hue, value and chroma on experimentally spaced scales, notated as hue value/chroma.
 - NCS and RAL: the Natural Colour System used by architects and interior designers, and the RAL Classic and Design collections used for paint, powder coat and signage.
 - Okabe-Ito palette: eight colours chosen in 2008 to remain distinguishable under protan and deutan vision.
@@ -1062,24 +1063,24 @@ Specifications and standards
 - ISO 12647-2:2013, ISO 12647-7:2016, ISO 3664:2009, ISO 13655:2017. https://www.iso.org/
 - ICC.1:2022 (ICC profile specification v4). https://www.color.org/specification/ICC.1-2022-05.pdf
 - CIE 015:2018, Colorimetry, fourth edition. https://cie.co.at/
-- CSS Color Module Level 4, W3C Candidate Recommendation Draft, 27 October 2026. https://www.w3.org/TR/css-color-4/
-- CSS Color Module Level 5, W3C Working Draft, 26 October 2026. https://www.w3.org/TR/css-color-5/
+- CSS Color Module Level 4, W3C Candidate Recommendation Draft, 29 October 2026. https://www.w3.org/TR/css-color-4/
+- CSS Color Module Level 5, W3C Working Draft, 29 October 2026. https://www.w3.org/TR/css-color-5/ ; CSS Color HDR Module Level 1, W3C Working Draft, 26 October 2026. https://www.w3.org/TR/css-color-hdr-1/
 - WCAG 2.2, W3C Recommendation, 5 October 2023 (edition 12 December 2024). https://www.w3.org/TR/WCAG22/
 - WCAG 3.0, W3C Working Draft, 10 September 2026. https://www.w3.org/TR/wcag-3.0/
 - APCA, Andrew Somers, Myndex Research; apca-w3 package. https://github.com/Myndex/apca-w3
-- ECI characterisation data and profiles (FOGRA39, FOGRA51, FOGRA52). https://www.eci.org/en/downloads
+- ECI characterisation data and profiles (FOGRA39, FOGRA51, FOGRA52). https://www.eci.org/en/downloads ; ICC profile registry and characterisation data. https://registry.color.org/profile-registry/
 - Design Tokens Community Group format and Color Module. https://www.designtokens.org/
 - Trade Marks Act, 1999 (India). https://www.indiacode.nic.in/
 - Regulation (EU) 2017/1001 on the European Union trade mark. https://eur-lex.europa.eu/
 - CJEU, Libertel, C-104/01 (2003); Sieckmann, C-273/00 (2002); Christian Louboutin v Van Haren, C-163/16 (2018). https://curia.europa.eu/
-- Société des Produits Nestlé v Cadbury UK, [2013] EWCA Civ 1174. https://www.bailii.org/
+- Société des Produits Nestlé v Cadbury UK, [2013] EWCA Civ 1174, https://www.bailii.org/ ; Société des Produits Nestlé v Cadbury UK, [2022] EWHC 1671 (Ch), https://caselaw.nationalarchives.gov.uk/ewhc/ch/2022/1671
 
 Articles, talks and tool documentation
 
 - Björn Ottosson, A perceptual color space for image processing, 2020. https://bottosson.github.io/posts/oklab/
 - Lea Verou, LCH colors in CSS: what, why, and how?, 2020. https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/
 - Andrey Sitnik and Travis Turner, OKLCH in CSS: why we moved from RGB and HSL, Evil Martians, 2022. https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
-- MDN, contrast-color(), https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/contrast-color ; web.dev, New to the web platform in April (2026), https://web.dev/blog/web-platform-04-2026
+- MDN, contrast-color(), https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/contrast-color ; MDN browser-compat-data, https://github.com/mdn/browser-compat-data ; web.dev, New to the web platform in April (2026), https://web.dev/blog/web-platform-04-2026
 - Adrian Roselli, WCAG3 Contrast as of April 2026. https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
 - Andrew J. Elliot and Markus A. Maier, Color psychology: effects of perceiving color on psychological functioning in humans, Annual Review of Psychology 65, 2014.
 - Lauren I. Labrecque and George R. Milne, Exciting red and competent blue: the importance of color in marketing, Journal of the Academy of Marketing Science 40, 2012.
@@ -1088,9 +1089,9 @@ Articles, talks and tool documentation
 - Masataka Okabe and Kei Ito, Color Universal Design (CUD): How to make figures and presentations that are friendly to colorblind people, 2008. https://jfly.uni-koeln.de/color/
 - Colour Blind Awareness, About colour blindness. https://www.colourblindawareness.org/colour-blindness/
 - Todd Miro, Teal and Orange: Hollywood, Please Stop the Madness, 2010.
-- Material Foundation, material-color-utilities (HCT source and documentation). https://github.com/material-foundation/material-color-utilities
+- Material Foundation, material-color-utilities (HCT source and documentation). https://github.com/material-foundation/material-color-utilities ; Adobe, Leonardo contrast-colors package. https://github.com/adobe/leonardo
 - Figma, Color management in Figma. https://help.figma.com/hc/en-us/articles/360039825114
-- Tailwind CSS, Colors, https://tailwindcss.com/docs/colors ; Radix Colors, Understanding the scale, https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale
+- Tailwind CSS, Colors, https://tailwindcss.com/docs/colors ; Apple, iPhone 17 technical specifications, https://www.apple.com/iphone-17/specs/ ; Pantone, Colour of the Year 2026, https://www.pantone.com/color-of-the-year/2026 ; Radix Colors, Understanding the scale, https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale
 - Chrome DevTools, Emulate CSS media features and vision deficiencies. https://developer.chrome.com/docs/devtools/rendering/apply-effects
 - ColorBrewer 2.0, Cynthia Brewer and Mark Harrower. https://colorbrewer2.org/
 - Leonardo, Adobe, https://leonardocolor.io/ ; Huetone, Alexey Ardov, https://huetone.ardov.me/ ; OKLCH Color Picker and Converter, Evil Martians, https://oklch.com/

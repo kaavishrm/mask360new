@@ -12,11 +12,11 @@ What this file is for: the web as a design medium at Awwwards standard, from the
 - [6. Motion on the web](#6-motion-on-the-web)
 - [7. Frameworks and platforms](#7-frameworks-and-platforms)
 - [8. Ecommerce craft](#8-ecommerce-craft)
-- [9. SEO and discoverability](#9-seo-and-discoverability)
+- [9. SEO and discoverability as craft](#9-seo-and-discoverability-as-craft)
 - [10. Email design](#10-email-design)
 - [11. Microsites and campaign pages](#11-microsites-and-campaign-pages)
 - [12. Experimentation and analytics literacy](#12-experimentation-and-analytics-literacy)
-- [13. Design engineering](#13-design-engineering)
+- [13. Design engineering as of October 2026](#13-design-engineering-as-of-october-2026)
 - [14. Cross browser and device reality](#14-cross-browser-and-device-reality)
 - [15. Launch QA checklist and maintenance plan](#15-launch-qa-checklist-and-maintenance-plan)
 - [Terms introduced](#terms-introduced)
@@ -26,7 +26,7 @@ What this file is for: the web as a design medium at Awwwards standard, from the
 
 ### 1.1 The viewport is unknown
 
-A web page is rendered by a device the designer has never seen, at a width that can be anything from 320px (an older iPhone SE in portrait) to 5120px (an ultrawide monitor), with a user zoom level, a system font size and a colour scheme preference the designer does not control. John Allsopp's "A Dao of Web Design" (A List Apart, 2000) set the founding attitude: accept the ebb and flow of things, design for flexibility instead of fighting it. Every rule in this file descends from that.
+A web page is rendered by a device the designer has never seen, at a width that can be anything from 320px (an older iPhone SE in portrait) to 5120px (an ultrawide monitor), with a user zoom level, a system font size and a colour scheme preference the designer does not control. John Allsopp's "A Dao of Web Design" (A List Apart, 2000) set the founding attitude: accept the ebb and flow of things and design for flexibility. Every rule in this file descends from that.
 
 Three working consequences:
 
@@ -48,7 +48,7 @@ Three working consequences:
 | 2025 | Safari 26.0 (15 September 2025) ships anchor positioning, scroll-driven animations, text-wrap: pretty, WebGPU | The last holdout engine for the scroll narrative stack |
 | 2026 | Interop 2026 (announced 12 February 2026) names anchor positioning, container style queries, dialogs and popovers, scroll-driven animations, view transitions, scroll snap, contrast-color() among its focus areas | Expect convergence by end of 2026 |
 
-Intrinsic web design (Simmons, 2018) is the current frame. The six ingredients she lists: fluid and fixed combined, stages of squishiness (fixed, fr, minmax, auto), truly two-dimensional layout, nested contexts, expanding and contracting content, and media queries only when needed. The practical rule for a creative director: specify a layout as a set of behaviours (this column never narrower than 40ch, this image never wider than 60vw, this gap fluid between 24px and 96px) instead of three fixed artboards.
+Intrinsic web design (Simmons, 2018) is the current frame. The six ingredients she lists: fluid and fixed combined, stages of squishiness (fixed, fr, minmax, auto), truly two-dimensional layout, nested contexts, expanding and contracting content, and media queries only when needed. The practical rule for a creative director: specify a layout as a set of behaviours (this column never narrower than 40ch, this image never wider than 60vw, this gap fluid between 24px and 96px), because a developer builds behaviours and the device decides the width.
 
 ### 1.3 What the web does that print and apps do not
 
@@ -144,7 +144,7 @@ The derivation, for a creative director who wants to check a developer's numbers
 | Scroll-driven animations (animation-timeline: scroll() and view(), animation-range) | Binds a CSS animation's progress to scroll position or an element's progress through the viewport | Chrome 115 (July 2023), Safari 26 (September 2025); Firefox had it behind a flag at the time of writing and it is an Interop 2026 focus area, so verify Firefox before relying on it without a fallback | The scroll narrative without a JavaScript scroll loop, off the main thread |
 | View Transitions (document.startViewTransition and @view-transition) | Animates between two DOM states or two pages with a crossfade or a shared-element move | Same-document transitions in Chrome 111, Safari 18, Firefox 144 (Baseline newly available around October 2025, verify); cross-document in Chrome 126 and Safari 18.2, Firefox pending; Interop 2026 focus area | Product grid to product page morph on a multi-page Shopify store, with no framework |
 | @scope | Limits a rule to a subtree, with an optional lower boundary | Baseline newly available since March 2026 (MDN) | Scoped styles for a CMS rich text block without a build step |
-| Anchor positioning (anchor-name, position-anchor, anchor(), position-area, @position-try) | Positions an element relative to another element | Baseline newly available since January 2026 when Firefox 147 shipped it; @position-try fallbacks need Safari 18.4 or newer (secondary sources; verify on MDN) | Tooltips, size guides and menus without Popper or Floating UI |
+| Anchor positioning (anchor-name, position-anchor, anchor(), position-area, @position-try) | Positions an element relative to another element | Baseline newly available since January 2026, when Firefox 147 shipped it (MDN) | Tooltips, size guides and menus without Popper or Floating UI |
 | popover attribute | Native top-layer popover with light dismiss | Baseline January 2025 (Chrome 114, Safari 17, Firefox 125) | Menus and filters that always sit above everything, no z-index wars |
 | dialog element | Native modal with focus trap, inert background and Escape to close | Baseline widely available (Safari 15.4, March 2022); Safari 26 added the toggle event | Newsletter capture, size chart, video lightbox: accessible for free |
 | details and summary | Native disclosure | Baseline widely available | FAQ and product specifications without JavaScript; the house styles the marker |
@@ -246,9 +246,9 @@ The 2x rule: cap device pixel ratio at 2. A 3x file for an iPhone Pro is 2.25 ti
 
 | Format | Use | Savings | Support | Notes |
 |---|---|---|---|---|
-| AVIF | Photography, the hero | About 30 to 50 percent smaller than JPEG at matched quality | All engines since Edge 121 (January 2024) | Slow to encode; encode once in the pipeline, not on the fly; quality 50 to 65 in most encoders is the luxury sweet spot |
+| AVIF | Photography, the hero | About 30 to 50 percent smaller than JPEG at matched quality | All engines since Edge 121 (January 2024) | Slow to encode; encode once in the build pipeline, because on-the-fly encoding is too slow; quality 50 to 65 in most encoders is the luxury sweet spot |
 | WebP | Photography fallback, UI imagery | 25 to 34 percent smaller than JPEG (Google's own figure) | Everywhere since Safari 14 (2020) | The house default today because the toolchain is mature; quality 75 to 82 |
-| JPEG XL (.jxl) | Future photography format; lossless JPEG recompression saves about 20 percent | Comparable to AVIF for photos, better for lossless and progressive | Safari 17 (September 2023, no animation or progressive); Chromium reversed its 2022 removal in November 2025 and Chrome 155 shipped it in October 2026 with the Rust decoder jxl-rs; Mozilla announced adoption in August 2026 and the shipping version was unsettled at the time of writing | Serve through picture with AVIF and WebP fallbacks; do not make it the only source until a year of all-engine support has passed |
+| JPEG XL (.jxl) | Future photography format; lossless JPEG recompression saves about 20 percent | Comparable to AVIF for photos, better for lossless and progressive | Safari 17 (September 2023, no animation or progressive); Chromium reversed its 2022 removal in November 2025, put it behind a flag in Chrome 145 (February 2026) and enabled it by default in Chrome 155 (stable 6 October 2026) with the Rust decoder jxl-rs; Interop 2026 lists it as an investigation area; Mozilla announced adoption in August 2026 and the shipping version was unsettled at the time of writing | Serve through picture with AVIF and WebP fallbacks; do not make it the only source until a year of all-engine support has passed |
 | JPEG (mozjpeg, progressive) | Universal fallback, email | Baseline | Everything | Quality 75 to 85; progressive so the hero paints in passes |
 | PNG | Only for true lossless needs: screenshots with text, flat UI with transparency where SVG is impossible | None for photos (10 times a JPEG) | Everything | A PNG photograph on a luxury site is the single most common weight defect |
 | SVG | Logos, icons, line art, type set as outlines for a mark | Tiny | Everything | Hygiene below |
@@ -278,7 +278,7 @@ The house default for a static microsite is none of these: pre-render the WebP s
 
 ### 4.5 Video on the web
 
-Autoplay rules: a video autoplays only when it is muted (the muted attribute, and on iOS the attribute must be present in the HTML, not set later by script in some cases), has playsinline so iOS does not force fullscreen, and ideally loop for an ambient hero. WebKit set this policy for iOS 10 in 2016 and for macOS Safari 11 in 2017; Chrome 66 (April 2018) adopted the same muted-autoplay rule. Low Power Mode on iOS blocks autoplay entirely, so the poster attribute must be a frame that stands alone as the hero image, and the poster must be the LCP-grade image (section 4.3), encoded as WebP, never the default black frame.
+Autoplay rules: a video autoplays only when it is muted (the muted attribute, and on iOS the attribute must be present in the HTML markup, because setting it later by script fails in some cases), has playsinline so iOS does not force fullscreen, and ideally loop for an ambient hero. WebKit set this policy for iOS 10 in 2016 and for macOS Safari 11 in 2017; Chrome 66 (April 2018) adopted the same muted-autoplay rule. Low Power Mode on iOS blocks autoplay entirely, so the poster attribute must be a frame that stands alone as the hero image, and the poster must be the LCP-grade image (section 4.3), encoded as WebP, never the default black frame.
 
 Formats and codecs:
 
@@ -382,7 +382,7 @@ Principles, easing curves, durations and choreography are in 12-motion-principle
 | Web Animations API | The same animations driven from JavaScript, with play, pause, reverse and timeline control | 0KB | Interruptible UI motion without a library |
 | Scroll-driven animations (CSS) | Animation progress bound to scroll or to an element's passage through the viewport, off the main thread | 0KB | Reveals, progress bars, parallax under 0.2 ratio, the sticky chapter header (section 2.9 for support) |
 | View Transitions | Crossfade or shared-element morph between DOM states or pages | 0KB | Grid to detail morph, page transitions on a multi-page site |
-| Lenis (darkroom.engineering, 1.3.26 at the time of writing) | Smooth scroll that interpolates the native scroll position with a lerp (linear interpolation) factor each frame, keeping position: sticky, anchors and accessibility intact | Under 10KB gzipped (verify the current build) | The weighted scroll feel of the Awwwards genre |
+| Lenis (darkroom.engineering, 1.3.27 on npm, 15 October 2026) | Smooth scroll that interpolates the native scroll position with a lerp (linear interpolation) factor each frame, keeping position: sticky, anchors and accessibility intact | Under 10KB gzipped (verify the current build) | The weighted scroll feel of the Awwwards genre |
 | GSAP 3.15 and ScrollTrigger (GreenSock, owned by Webflow since autumn 2024; every plugin free for commercial use since 2025 per Webflow's announcement) | Timeline animation with scrubbing, pinning, snapping, SplitText line reveals | Core about 25KB gzipped, ScrollTrigger about 13KB, SplitText about 6KB (approximate; check bundlephobia) | The one peak sequence, pinned chapters, line-by-line type reveals |
 | Motion (motion.dev, Matt Perry; the library formerly named Framer Motion) | Declarative React animation with springs, layout animation and gestures | A few KB for the vanilla animate function; several times that for the full React package (check the published sizes) | React sites that need spring physics and layout animations |
 | three.js r186 (releases page, September 2026) with React Three Fiber | WebGL and WebGPU scenes, shader transitions | 150KB and up gzipped before the scene | Section 4.6; one peak, budgeted |
@@ -490,7 +490,7 @@ Hover effects on cards, fade-up on every section, parallax on everything and aut
 
 ### 7.3 Webflow
 
-Webflow is a visual designer that writes real HTML and CSS classes, a CMS, and hosting, with GSAP integrated since Webflow bought GreenSock in autumn 2024. Strengths for agency work: the Designer produces clean markup when the designer names classes with discipline; the CMS handles collections and references; the hosting includes a CDN and SSL; the client can edit copy in the Editor without breaking layout; code export exists for static pages. Limits: no server-side logic (forms post to Webflow or a third party), custom code is pasted rather than built, interactions are keyframe based and heavy when stacked, ecommerce is weak for luxury (use Shopify), and third-party reports of a May 2026 pricing restructure describe a single Premium site plan (about $25 a month billed yearly, 50GB bandwidth, 20,000 CMS items across 40 collections) replacing the old CMS and Business plans, with Basic (about $15, no CMS) below it; Webflow's own pricing page could not be read at the time of writing, so verify there before quoting a client.
+Webflow is a visual designer that writes real HTML and CSS classes, a CMS, and hosting, with GSAP integrated since Webflow bought GreenSock in autumn 2024. Strengths for agency work: the Designer produces clean markup when the designer names classes with discipline; the CMS handles collections and references; the hosting includes a CDN and SSL; the client can edit copy in the Editor without breaking layout; code export exists for static pages. Limits: no server-side logic (forms post to Webflow or a third party), custom code is pasted rather than built, interactions are keyframe based and heavy when stacked, ecommerce is weak for luxury (use Shopify), and the site plans on webflow.com/pricing in October 2026 are Basic at $15 a month billed yearly (no CMS, 300 static pages, 10GB bandwidth) and Premium at $25 billed yearly (the CMS with up to 20,000 items across 40 collections, 50GB bandwidth scalable in steps to 2.5TB, code components, site search), with a Team platform plan from $2,500 a month on an annual contract.
 
 ### 7.4 Framer
 
@@ -545,7 +545,7 @@ A registrar sells the name; a DNS host answers queries about it; they can be dif
 |---|---|---|
 | GA4 | Event based, free, 14 months maximum data retention on the free tier (2 months by default), BigQuery export free | Consent Mode v2 is required for EEA visitors since March 2024; needs a consent banner wherever consent law applies; the client's media team expects it |
 | Plausible | Cookieless, EU hosted, one script of under 1KB; Starter $9, Growth $14, Business $19 a month at the 10,000 pageview tier, 2 months free yearly | The house default for microsites: no banner needed by its own compliance statement, no identifiers |
-| PostHog | Product analytics, session replay, feature flags, surveys and experiments in one; a generous free tier (1M events a month on the 2025 pricing page; verify current limits, the October 2026 page could not be read) | Commerce funnels and apps |
+| PostHog | Product analytics, session replay, feature flags, surveys and experiments in one; a free tier of 1M product analytics events a month (PostHog docs, October 2026) | Commerce funnels and apps |
 | Vercel Web Analytics and Speed Insights | Privacy-first pageviews and field Core Web Vitals per route | Any site on Vercel; the quickest honest field data for a microsite |
 
 The rule: analytics the client will read, and nothing else. A microsite with a pixel, GA4, Hotjar and a chat widget spends 300KB and a consent banner on data nobody opens.
@@ -772,7 +772,7 @@ GA4 is event based: every hit is an event with parameters. Enhanced measurement 
 
 ### 12.2 PostHog, heatmaps and session replay
 
-PostHog bundles product analytics, session replay, feature flags, surveys and experiments, with autocapture of clicks and form submissions and a free tier that was 1M events a month on its 2025 pricing page (verify). Heatmaps and replay: Hotjar, now sold under Contentsquare (free plan up to 200,000 monthly sessions with one month of data and replays on 5 percent of sessions capped at 10,000; Growth from $39 a month billed yearly); Microsoft Clarity (free, heatmaps, replays, rage-click and dead-click detection, input masking by default). What to look for on a luxury page: the scroll map's drop before the peak (section 11.7), rage clicks on images that are not links (the "nothing clickable" rule needs an affordance or the image needs to be a link), dead zones below the fold on phones, and the size filter that separates desktop behaviour from phone behaviour. Replay must mask inputs and sits behind the consent banner where one is required.
+PostHog bundles product analytics, session replay, feature flags, surveys and experiments, with autocapture of clicks and form submissions and a free tier of 1M product analytics events a month (October 2026). Heatmaps and replay: Hotjar, now sold under Contentsquare (free plan up to 200,000 monthly sessions with one month of data and replays on 5 percent of sessions capped at 10,000; Growth from $39 a month billed yearly); Microsoft Clarity (free, heatmaps, replays, rage-click and dead-click detection, input masking by default). What to look for on a luxury page: the scroll map's drop before the peak (section 11.7), rage clicks on images that are not links (the "nothing clickable" rule needs an affordance or the image needs to be a link), dead zones below the fold on phones, and the size filter that separates desktop behaviour from phone behaviour. Replay must mask inputs and sits behind the consent banner where one is required.
 
 ### 12.3 A/B testing and the sample size reality
 
@@ -865,7 +865,7 @@ Print, for deal sheets and pitch pages: @page { size: A4; margin: 15mm } (Letter
 
 ### 14.7 Testing tools
 
-BrowserStack and LambdaTest for real devices in the cloud; Playwright for scripted screenshots across engines in CI; DevTools device mode for layout only (it emulates size, not the engine); and the physical drawer: an iPhone from 2020 or later, the India Android from 14.4, an iPad, and a Windows laptop with Edge. The two-minute check per device: load from WhatsApp, scroll to the end, tap the call to action, rotate, go back.
+BrowserStack and LambdaTest for real devices in the cloud; Playwright for scripted screenshots across engines in CI; DevTools device mode for layout only (it emulates size only; the rendering engine is still desktop Chrome); and the physical drawer: an iPhone from 2020 or later, the India Android from 14.4, an iPad, and a Windows laptop with Edge. The two-minute check per device: load from WhatsApp, scroll to the end, tap the call to action, rotate, go back.
 
 ## 15. Launch QA checklist and maintenance plan
 
@@ -883,7 +883,7 @@ Cross browser: Safari on the iPhone, Chrome on the India Android, Samsung Intern
 
 SEO: unique titles, canonicals, hreflang validated, structured data passing the Rich Results Test, noindex removed from production, 301s from every old URL, www and apex resolved to one host, HTTPS everywhere with HSTS, no mixed content.
 
-Infrastructure: DNS TTL raised after the cutover, SSL auto-renewing, the domain and the registrar account in the client's name, MX and mail records untouched and tested by sending and receiving one email, an uptime monitor, backups where a CMS exists, repository access handed over.
+Infrastructure: DNS TTL raised after the cutover, SSL auto-renewing, the domain and the registrar account in the client's name, MX and mail records untouched and tested by sending and receiving one email, an uptime monitor, backups where a CMS exists, repository access handed over; security headers set in vercel.json or netlify.toml (Content-Security-Policy with frame-ancestors against clickjacking, Strict-Transport-Security, X-Content-Type-Options: nosniff, Referrer-Policy: strict-origin-when-cross-origin) and checked at securityheaders.com, because a CMS or form with no CSP is the usual way a client site gets defaced.
 
 Legal: a privacy policy covering DPDP, PDPL and GDPR as the audience requires; terms; a cookie policy if any cookie is set; shipping and returns on a store; photographer, model and location usage rights confirmed for the term; typeface licences for web use at the correct pageview tier; trademark symbols as the client's legal team wants them.
 
@@ -916,7 +916,6 @@ The retainer that pays for this is scoped in 24-business-of-creative-and-agency-
 - Baseline: the shared browser-support vocabulary; newly available means all four engines, widely available means for 30 months.
 - Bulletproof button: an email button built from a table cell with padding and a background colour so it renders with images off.
 - CAA record: a DNS record naming which certificate authorities may issue for a domain.
-- Cache layers, see cascade layers.
 - Canonical link: the link element that names the preferred URL of a page among its variants.
 - Cascade: the algorithm that decides which competing CSS declaration wins, by origin, layer, specificity and order.
 - Cascade layers (@layer): named priority tiers in a stylesheet that beat specificity.
@@ -967,7 +966,7 @@ The retainer that pays for this is scoped in 24-business-of-creative-and-agency-
 - Intrinsic web design: Jen Simmons's 2018 frame for layouts that respond to content and container.
 - :is() and :where(): selector grouping functions with, respectively, the highest and zero specificity.
 - Islands architecture: a static page where only the interactive components ship JavaScript.
-- JPEG XL: a photography format with lossless JPEG recompression, universal only since late 2026.
+- JPEG XL: a photography format with lossless JPEG recompression, in Safari since 2023 and Chrome since October 2026, Firefox pending.
 - JSON-LD: the script-based format for structured data that Google prefers.
 - Key events: GA4's name for conversions since March 2024.
 - Lazy loading: deferring an off-screen image or iframe request with loading="lazy".
@@ -1036,19 +1035,16 @@ Books
 - Heydon Pickering and Andy Bell, Every Layout, 2019. https://every-layout.dev/
 - Addy Osmani, Image Optimization, Smashing Magazine, 2021.
 - Robert Bringhurst, The Elements of Typographic Style, Hartley and Marks, 1992 (fourth edition 2012).
-- Steve Krug, Don't Make Me Think, Revisited, New Riders, 2014.
 
 Specifications, standards and platform documentation
 
 - Web Vitals, web.dev, updated 31 October 2024. https://web.dev/articles/vitals
+- Chrome for Developers, "JPEG XL in Chrome", 6 October 2026. https://developer.chrome.com/blog/jpeg-xl-in-chrome
+- web.dev, "Interop 2026: Continuing to improve the web for developers", 12 February 2026. https://web.dev/blog/interop-2026
 - Lighthouse performance scoring, Chrome for Developers. https://developer.chrome.com/docs/lighthouse/performance/performance-scoring
 - Baseline, web-platform-dx and MDN. https://web.dev/baseline
-- Interop 2026, web-platform-tests. https://wpt.fyi/interop-2026
 - WebKit in Safari 26.0, 15 September 2025. https://webkit.org/blog/17333/webkit-in-safari-26-0/
-- CSS Scroll-driven Animations Module Level 1, W3C. https://www.w3.org/TR/scroll-animations-1/
-- CSS View Transitions Module Level 1 and Level 2, W3C. https://www.w3.org/TR/css-view-transitions-1/
-- CSS Anchor Positioning Module Level 1, W3C. https://www.w3.org/TR/css-anchor-position-1/
-- CSS Containment Module Level 3 (container queries), W3C. https://www.w3.org/TR/css-contain-3/
+- W3C CSS modules: Scroll-driven Animations Level 1 (https://www.w3.org/TR/scroll-animations-1/); View Transitions Level 1 and 2 (https://www.w3.org/TR/css-view-transitions-1/); Anchor Positioning Level 1 (https://www.w3.org/TR/css-anchor-position-1/); Containment Level 3, container queries (https://www.w3.org/TR/css-contain-3/).
 - HTML Living Standard, WHATWG (dialog, popover, details). https://html.spec.whatwg.org/
 - WCAG 2.2, W3C Recommendation, 5 October 2023. https://www.w3.org/TR/WCAG22/
 - Utopia fluid type and space calculators. https://utopia.fyi/
@@ -1062,20 +1058,13 @@ Specifications, standards and platform documentation
 - Meta for Developers, sharing images for webmasters (og:image sizes). https://developers.facebook.com/docs/sharing/webmasters/images/
 - The Open Graph protocol. https://ogp.me/
 - schema.org (Product, Hotel, LodgingBusiness, Event, Article, VideoObject). https://schema.org/
-- Shopify.dev, theme architecture. https://shopify.dev/docs/storefronts/themes/architecture
-- Shopify.dev, Hydrogen (version 2026-10). https://shopify.dev/docs/storefronts/headless/hydrogen
+- Shopify.dev, theme architecture (https://shopify.dev/docs/storefronts/themes/architecture) and Hydrogen, version 2026-10 (https://shopify.dev/docs/storefronts/headless/hydrogen).
 - Shopify Help Center, Shopify Payments supported countries. https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries
 - Shopify Theme Store, Horizon (version 4.3.0, 9 October 2026). https://themes.shopify.com/themes/horizon/styles/horizon
-- The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), India Code. https://www.indiacode.nic.in/
-- Ministry of Electronics and Information Technology, Data Protection Framework. https://www.meity.gov.in/data-protection-framework
+- The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), India Code (https://www.indiacode.nic.in/), and the DPDP Rules, 2025, MeitY Data Protection Framework (https://www.meity.gov.in/data-protection-framework).
 - UAE Government portal, data protection laws (Federal Decree-Law No. 45 of 2021). https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws
-- Razorpay pricing. https://razorpay.com/pricing/
-- Vercel limits, updated 16 September 2026. https://vercel.com/docs/limits
-- Vercel Image Optimization limits and pricing. https://vercel.com/docs/image-optimization/limits-and-pricing
-- Cloudflare Pages limits. https://developers.cloudflare.com/pages/platform/limits/
-- Netlify pricing. https://www.netlify.com/pricing/
-- GitHub Pages usage limits. https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
-- Framer pricing. https://www.framer.com/pricing/
+- Hosting limits: Vercel, updated 16 September 2026 (https://vercel.com/docs/limits) and Image Optimization (https://vercel.com/docs/image-optimization/limits-and-pricing); Cloudflare Pages (https://developers.cloudflare.com/pages/platform/limits/); GitHub Pages (https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
+- Vendor pricing pages, read October 2026: Framer (https://www.framer.com/pricing/), Webflow (https://webflow.com/pricing), Netlify (https://www.netlify.com/pricing/), Sanity (https://www.sanity.io/pricing), Plausible (https://plausible.io/#pricing), PostHog (https://posthog.com/docs/product-analytics/pricing), Contentsquare for Hotjar (https://contentsquare.com/pricing/), Formspree (https://formspree.io/plans), Klaviyo (https://www.klaviyo.com/pricing), Razorpay (https://razorpay.com/pricing/), Cursor (https://cursor.com/pricing), v0 (https://v0.app/pricing), Lovable (https://lovable.dev/pricing).
 - Webflow, "Webflow makes GSAP 100% free". https://webflow.com/blog/gsap-becomes-free
 - GSAP documentation (ScrollTrigger, SplitText). https://gsap.com/docs/v3/
 - Lenis, darkroom.engineering. https://github.com/darkroomengineering/lenis
@@ -1086,12 +1075,6 @@ Specifications, standards and platform documentation
 - WordPress release archive. https://wordpress.org/news/category/releases/
 - shadcn/ui changelog. https://ui.shadcn.com/docs/changelog
 - Figma Help Center, Code Connect. https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect
-- Plausible pricing. https://plausible.io/#pricing
-- PostHog pricing. https://posthog.com/pricing
-- Contentsquare (Hotjar) pricing. https://contentsquare.com/pricing/
-- Formspree plans. https://formspree.io/plans
-- Klaviyo pricing. https://www.klaviyo.com/pricing
-- Sanity pricing. https://www.sanity.io/pricing
 - Litmus, email client market share, September 2026. https://www.litmus.com/email-client-market-share
 - Can I Email. https://www.caniemail.com/
 - MJML. https://mjml.io/

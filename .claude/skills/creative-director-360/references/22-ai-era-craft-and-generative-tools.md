@@ -36,7 +36,7 @@ Prices are list prices in US dollars at the time of writing; plans change monthl
 
 | Tool | Maker and version as of October 2026 | What it is good for | What it ruins | Commercial terms and price |
 |---|---|---|---|---|
-| Midjourney | V7 default since April 2025; Video V1 (June 2025) animates a still into 5-second clips extendable in 4-second steps to about 21 seconds (reported); a V8 alpha was reported live in preview in March 2026 (reported, unverified) | Mood, light, atmosphere, styleframes, moodboards, fashion and interiors exploration; the strongest aesthetic prior in the field | Anything requiring a specific product, exact text, exact architecture; produces the "Midjourney look" (section 5) unless fought | Basic $10, Standard $30, Pro $60, Mega $120 a month; about 20 percent off annually. Companies with more than $1 million annual gross revenue must be on Pro or Mega for commercial use. No permanent free tier. Pro and Mega add Stealth mode (private generations), which the house requires for client work |
+| Midjourney | V7 (April 2025, default from June 2025 to June 2026); V8 alpha on alpha.midjourney.com from 17 March 2026; V8.1 released on midjourney.com on 30 April 2026 (Midjourney docs); V8.2 the default since 24 July 2026 (reported). V8.x renders standard images about four to five times faster than V7 and adds an HD mode (--hd) that outputs 2K without a separate upscale. Omni Reference (--oref) and --q are V7-only; V8.x replaces --oref with the Edit Model (--edit, written instructions plus up to four reference images). Video V1 (June 2025) animates a still into 5-second clips extendable in 4-second steps to about 21 seconds | Mood, light, atmosphere, styleframes, moodboards, fashion and interiors exploration; the strongest aesthetic prior in the field | Anything requiring a specific product, exact text, exact architecture; produces the "Midjourney look" (section 5) unless fought | Basic $10, Standard $30, Pro $60, Mega $120 a month; about 20 percent off annually. Companies with more than $1 million annual gross revenue must be on Pro or Mega for commercial use. No permanent free tier. Pro and Mega add Stealth mode (private generations), which the house requires for client work |
 | Flux (Black Forest Labs) | FLUX.2 family released November 2025: pro, flex and open-weight dev variants, up to 4 megapixels, multi-reference conditioning (several reference images in one prompt); FLUX.2 klein (4 billion parameters, sub-second); FLUX.1 Kontext (May 2025) for instruction-based editing of an existing image. A Flux.3 release in July 2026 is listed by one source (unverified) | Photoreal product-in-environment composites, instruction edits ("replace the sky", "change the sofa to linen"), self-hosted pipelines where the client's assets never leave the agency machine, LoRA training (section 6) | Text in images is weaker than Ideogram; the dev weights are non-commercial without a licence | FLUX dev weights carry a non-commercial licence; commercial use needs a BFL licence or an API partner (fal, Replicate, Krea). Pro and flex are API-only, priced per image |
 | Ideogram | 3.0 (March 2025) with style references; a version 4 is cited by some 2026 sources (unverified) | Text inside the image: posters, wordmarks, packaging mockups, menu boards, signage; it reads and sets Latin text reliably | Photographic skin and luxury light; Devanagari and Arabic shaping (section 5.1) | Free tier exists; paid plans from about $8 a month (reported); check ideogram.ai/pricing |
 | GPT Image (OpenAI) | gpt-image-1 (April 2025), gpt-image-1.5 (December 2025); a GPT Image 2 leading blind-vote arenas in 2026 is reported by several secondary sources | Instruction following, legible text, layout-aware graphics, quick edits in conversation, infographics; strong world knowledge (it knows what a Jaipur jharokha is) | A flat, slightly yellow default cast and smooth skin; weak at the specific photographic look a fashion editorial needs | Included in ChatGPT Plus ($20) and Pro ($200); API priced per image at tiers of quality |
@@ -53,10 +53,10 @@ Capabilities compared on the axes that matter for a brand film: duration per gen
 
 | Tool | Version as of October 2026 | Duration and resolution | Audio | Camera and references | Notes |
 |---|---|---|---|---|---|
-| Google Veo | Veo 3.1 (October 2025) | 4, 6 or 8 seconds; 720p, 1080p, 4K; extension to longer sequences | Native audio with dialogue, effects and ambience | Up to 3 reference images, first and last frame, prompt-driven camera | The Gemini API preview endpoints for Veo 3.1 were shut down on 22 October 2026; Google now routes developers to Gemini Omni Flash (model id gemini-omni-1.1-flash) or to GA Veo models on the Gemini Enterprise Agent Platform (verified at ai.google.dev, October 2026). Veo remains available in Flow, Gemini and Vertex |
+| Google Veo | Veo 3.1 (October 2025) | 4, 6 or 8 seconds; 720p, 1080p, 4K; extension to longer sequences | Native audio with dialogue, effects and ambience | Up to 3 reference images, first and last frame, prompt-driven camera | The Gemini API preview endpoints for Veo 3.1 (generate, fast and lite) were shut down on 22 October 2026 and the Veo 3.0 and Veo 2.0 GA endpoints on 30 June 2026; Google's deprecations table names gemini-omni-1.1-flash as the replacement, with the GA models on the Gemini Enterprise Agent Platform as the alternative for the older endpoints (verified at ai.google.dev/gemini-api/docs/deprecations, October 2026). Veo remains available in Flow, Gemini and Vertex |
 | Google Gemini Omni Flash | gemini-omni-1.1-flash (2026) | 360p, 720p default, 1080p and 4K upscaled; 16:9 and 9:16; extension of 3 to 10 seconds per continuation, up to 40 seconds total | Native audio; no voice editing or audio reference upload | Reference images, first and last frame, subject reference, up to 3 reference clips of 3 seconds, multi-turn conversational editing of generated or uploaded (10 second max) video | SynthID on every output; uploaded video editing unavailable in the EEA, Switzerland and the UK; no negative prompt field (verified at ai.google.dev, October 2026) |
-| OpenAI Sora 2 | Sora 2 and Sora 2 Pro (30 September 2025) with the Sora app and "cameos" (consented likeness insertion). Shut down: OpenAI's model page states that the Sora 2 models and the Videos API were shut down on 24 September 2026 with no one-to-one replacement (verified at developers.openai.com, October 2026); secondary sources report the consumer app closed on 26 April 2026 | Was 4 to 20 seconds (reported); 1280 by 720 on Sora 2, up to 1920 by 1080 on Sora 2 Pro; the API was $0.10 per second for Sora 2 and $0.30 to $0.70 per second for Pro by resolution (verified on the archived model page) | Native audio including dialogue | Image references; cameo for consented people | Unavailable. Kept in the table because client decks and the higgsfield-prompting skill still name it, and because its shutdown is the clearest lesson in section 7.2: a pipeline built on one vendor's model has a life of about a year |
-| Kling (Kuaishou) | 2.1 (May 2025), 2.5 Turbo (September 2025), 2.6 (December 2025, native audio), O1 (unified multimodal), 3.0 (released February 2026, reported as 4 February; Kling's own guide of June 2026 confirms video and audio generated in one pass, lip sync in English, Chinese, Japanese, Korean and Spanish, and up to six camera cuts in one request) | 3 to 15 seconds on 3.0, up to 10 seconds on 2.6; 720p and 1080p on 2.x; secondary sources claim native 4K at up to 60 fps on 3.0, which Kling's guide does not state, so treat as unverified | Optional native audio from 2.6, single-pass audio on 3.0 | Elements (up to 4 reference images for subject consistency), start and end frame, motion control from a reference performance, 50 or more camera presets inside Higgsfield | The workhorse for image-to-video of real plates; see the higgsfield-prompting skill for the three-layer prompt system and the start and end frame technique |
+| OpenAI Sora 2 | Sora 2 and Sora 2 Pro (30 September 2025) with the Sora app and "cameos" (consented likeness insertion). Shut down: OpenAI announced the discontinuation on 24 March 2026 (reported); the consumer app and sora.com closed on 26 April 2026 (reported); OpenAI's model page states that the Sora 2 models and the Videos API were shut down on 24 September 2026 and that "there is no one-to-one replacement API" (verified at developers.openai.com, October 2026) | Was 4 to 20 seconds (reported); 1280 by 720 on Sora 2, up to 1920 by 1080 on Sora 2 Pro; the API was $0.10 per second for Sora 2 and $0.30 to $0.70 per second for Pro by resolution (verified on the archived model page) | Native audio including dialogue | Image references; cameo for consented people | Unavailable. Kept in the table because client decks and the higgsfield-prompting skill still name it, and because its shutdown is the clearest lesson in section 7.2: a pipeline built on one vendor's model has a life of about a year |
+| Kling (Kuaishou) | 2.1 (May 2025), 2.5 Turbo (September 2025), 2.6 (December 2025, native audio), O1 (unified multimodal), 3.0 family launched 4 February 2026 (Video 3.0, Video 3.0 Omni with reference control and a multi-shot storyboard, Image 3.0 Omni; reported). Kling's own guide of June 2026 confirms video and audio generated in one pass, lip sync in English, Chinese, Japanese, Korean and Spanish, and up to six camera cuts in one request | 3 to 15 seconds on 3.0 (up from a 10-second maximum on 2.6); 720p and 1080p on 2.x; hosts such as RunComfy list a native 3840 by 2160 tier for 3.0 and one review cites 60 fps on the top tier, which Kling's guide does not state, so treat 4K and 60 fps as host-specific | Optional native audio from 2.6, single-pass audio on 3.0 | Elements (up to 4 reference images for subject consistency), start and end frame, motion control from a reference performance, 50 or more camera presets inside Higgsfield | The workhorse for image-to-video of real plates; see the higgsfield-prompting skill for the three-layer prompt system and the start and end frame technique |
 | Runway | Gen-4 (March 2025), Gen-4 Turbo, Aleph (25 July 2025), Gen-4.5 (December 2025), Aleph 2.0 (2026; one vendor source dates it 21 May 2026 with Edit Studio, another 29 July 2026; unverified against Runway); Act-Two for performance capture | 2 to 10 seconds; 720p native, upscale to 1080p and 4K; Aleph 2.0 edits inputs up to 30 seconds at up to 1080p (reported) | Added separately (no native audio on Gen-4; Gen-4.5 audio status unclear across sources) | Gen-4 References for consistent characters and objects; Aleph edits an existing shot: add, remove or transform objects, generate any angle of the scene, modify style and lighting (verified at runway.com/research) | Plans verified at runway.com/pricing, October 2026: Free with 125 one-time credits, Standard $15 (625 credits a month), Pro $35 (2,250), Max $95 (9,500); annual $12, $28 and $76. Gen-4.5 costs 12 credits a second; Aleph 2.0 costs 140 credits per 5 seconds, so Standard buys about four Aleph edits a month and a film needs Pro or Max. Aleph is the house tool for set extension and relighting on real footage |
 | Higgsfield | Aggregator: Kling 3.0, Veo 3.1, WAN 2.6, Sora 2 (withdrawn upstream on 24 September 2026; confirm the live engine list in the app before quoting a client) and others, plus its own Soul (image) and Popcorn (storyboard) models, camera presets and Ads Studio | Inherits the underlying model | Inherits | 50 or more camera presets stackable up to 3; Soul ID for identity; start and end frame | Pricing page could not be read at the time of writing; the house account is on an Ultimate-class plan with commercial rights. Cross-reference the higgsfield-prompting skill before writing any Higgsfield prompt |
 | Luma | Ray3 (September 2025), Ray3.2 current (verified at lumalabs.ai, October 2026) | 5 or 10 seconds native; 360p to 1080p; Modify Video to 20 seconds at 24 fps; Reframe to 12 or 16 seconds | No native audio on text or image to video; Modify and Reframe keep the source audio | Native 16-bit colour, HDR at 2x credits, EXR export in ACES2065-1 (AP0) at 3x; Modify Video for restyling real footage | The only model exporting a grade-ready EXR, which matters when the film is finished in DaVinci Resolve |
@@ -97,8 +97,8 @@ None of these produce a jewellery-grade or furniture-grade model. The reason: ge
 | Canva AI (Magic Studio, Canva Code) | Generates full layouts, images and small apps | The house avoids the Canva look: rounded bento cards, pastel gradients, stock illustration people, Canva Sans and its clones, uniform radius. It is the most recognisable "made in minutes" signal in the Indian and Gulf market because it is what every small competitor uses |
 | Adobe Sensei features | Content-aware fill, auto-select subject, neural filters, Enhance Speech, auto-reframe in Premiere | Safe; they retouch and edit and leave the taste decisions untouched |
 | Relume | AI sitemap and wireframe generator with a component library; exports to Webflow, Figma and Framer | Good for structure and IA on a 12-page hotel site; the wireframes are a structural draft and every page is redesigned from the house tokens before any skin is applied |
-| Galileo AI | Text-to-UI generator; acquired by Google in 2025 and wound down as a standalone product | Historical |
-| Uizard | Wireframe and mockup generator; acquired by Miro in late 2024 | Workshop sketching only |
+| Galileo AI | Text-to-UI generator; acquired by Google in 2025, its product continuing as Google Stitch (launched at Google I/O, May 2025; reported) | Historical as a brand; Stitch carries the same generic output problem (section 9.2) |
+| Uizard | Wireframe and mockup generator; acquired by Miro in 2024 | Workshop sketching only |
 
 ### 2.6 Code and product tools
 
@@ -140,7 +140,7 @@ A prompt is a brief to a photographer who has read every photograph ever posted 
 
 Each term below maps to something the model has seen labelled thousands of times. Vague words (beautiful, luxury, premium, stunning) map to the median and pull toward the default look. Craft words map to specific distributions.
 
-Camera and lens (cross-reference file 15 on lighting and photography for the real-world physics):
+Camera and lens (cross-reference 14-video-preproduction-and-cinematography.md and 15-lighting-and-sound.md for the real-world optics):
 
 | Craft term | What it does to the image | Prompt phrase |
 |---|---|---|
@@ -156,7 +156,7 @@ Camera and lens (cross-reference file 15 on lighting and photography for the rea
 | Film stock | A specific colour science and grain | "Kodak Portra 400" (warm skin, soft contrast), "Kodak Ektachrome E100" (cool clean slide), "Fujifilm Pro 400H" (minty greens, pastel), "CineStill 800T" (tungsten, red halation), "Ilford HP5" (grey monochrome, visible grain), "Kodak Vision3 500T" (cinema tungsten) |
 | Medium format | Larger negative look: smooth tonality, shallow depth even at f/4 | "medium format, Hasselblad look, 80mm" |
 
-Lighting (the setups a gaffer would name; file 15 has the diagrams):
+Lighting (the setups a gaffer would name; 15-lighting-and-sound.md has the diagrams):
 
 | Setup | Effect | Prompt phrase |
 |---|---|---|
@@ -170,12 +170,12 @@ Lighting (the setups a gaffer would name; file 15 has the diagrams):
 | Blue hour | Cool ambient, warm practicals | "blue hour, interior lamps warm against cool sky" |
 | Practicals | Lamps in frame as sources | "lit by practical lamps in frame, no fill" |
 | Softbox or octabox | Even soft studio light with a round catchlight | "large octabox camera left, soft wrap" |
-| Hard flash, direct | The Terry Richardson and Juergen Teller flatness, now a fashion signal | "direct on-camera flash, hard shadow on the wall behind" |
+| Hard flash, direct | The flat, frontal, unflattering flash of 1990s and 2000s fashion editorial (Juergen Teller's Marc Jacobs campaigns are the canonical case), now a fashion signal | "direct on-camera flash, hard shadow on the wall behind" |
 | Gobo or cucoloris | Patterned shadow (blinds, leaves, jali) | "dappled light through a carved jali screen" |
 
-Composition (cross-reference file 05 on composition): rule of thirds, centred symmetry when it is the idea, negative space on the side the type will sit, leading lines, frame within a frame (a doorway, an arch), low horizon for sky, high horizon for ground, Dutch angle (tilted camera) almost never, the one-third headroom rule. Phrases: "subject lower third, empty upper two thirds for headline", "framed through the arch", "symmetrical one-point perspective".
+Composition (cross-reference 05-layout-grids-and-composition.md): rule of thirds, centred symmetry when it is the idea, negative space on the side the type will sit, leading lines, frame within a frame (a doorway, an arch), low horizon for sky, high horizon for ground, Dutch angle (tilted camera) almost never, the one-third headroom rule. Phrases: "subject lower third, empty upper two thirds for headline", "framed through the arch", "symmetrical one-point perspective".
 
-Colour and grade (cross-reference file 04 on colour): "muted palette, desaturated greens", "two-colour palette: bone and ink", "teal shadows, warm highlights" (the Hollywood default, avoid), "matte blacks, lifted shadows", "no HDR, natural contrast", "film grain visible at 100 percent".
+Colour and grade (cross-reference 04-colour.md and 16-editing-colour-grading-and-delivery.md): "muted palette, desaturated greens", "two-colour palette: bone and ink", "teal shadows, warm highlights" (the Hollywood default, avoid), "matte blacks, lifted shadows", "no HDR, natural contrast", "film grain visible at 100 percent".
 
 Material: name the material and its finish because the model renders finish before form: "honed travertine" against "polished travertine", "raw linen", "brushed brass", "unlacquered bronze with patina", "hand-knotted wool", "lime-washed wall", "Jaisalmer yellow sandstone", "Makrana marble", "terrazzo", "crushed velvet". The finish words (honed, brushed, matte, raw, hand-knotted) are what read as expensive, because luxury materials are rarely glossy (design-taste, section 2).
 
@@ -216,14 +216,15 @@ Definitions, with the October 2026 state:
 
 - Image prompt: an image URL placed at the start of a Midjourney prompt; it conditions the composition and content. Weight with --iw (0 to 3, default 1).
 - Style reference (--sref): one or more image URLs or an sref code; it transfers palette, grain, light and finish and ignores content. Weight with --sw (0 to 1000, default 100). The --sv parameter selects the style-reference algorithm version. Random exploration: --sref random. The house keeps a library of sref codes per client world, built from the agency's own photographs, so that the style is the brand's and not a stranger's.
-- Omni reference (--oref): introduced with V7 in May 2025; places a specific object, character, vehicle or garment from a reference image into the generation, replacing the V6 character reference (--cref, which still works only on V6 and Niji 6). Weight with --ow (0 to 1000, default 100; use 25 to 50 for style transfer of the object, 300 to 400 for strict identity). Omni reference costs about double the GPU time of a plain prompt. One oref image per prompt.
+- Omni reference (--oref): introduced with V7 in May 2025; places a specific object, character, vehicle or garment from a reference image into the generation, replacing the V6 character reference (--cref, which still works only on V6 and Niji 6). Weight with --ow (1 to 1000, default 100; use 25 to 50 for style transfer of the object, 300 to 400 for strict identity). Omni reference costs about double the GPU time of a plain prompt. One oref image per prompt. It is a V7 feature: a prompt that needs it carries --v 7.
+- Edit Model (--edit): the V8.1 and V8.2 replacement for --oref; a written instruction plus up to four reference images given as URLs, the output taking the first image's aspect ratio unless --ar is set (reported from guides to the Midjourney parameter list, October 2026). For product work it behaves like the instruction editors below, and the same rule applies: the real product shot is the first reference and the instruction protects it.
 - Multi-reference in other models: Nano Banana Pro accepts up to 14 reference images and keeps up to 5 subjects consistent; FLUX.2 accepts multiple reference images for subject and style; Kling Elements takes up to 4 subject references for video; Runway Gen-4 References keeps a character or object across shots; Veo 3.1 and Omni Flash take up to 3 reference images.
 
 The rule for product work: the reference image is the real product shot, lit by the agency, and the generation is asked to change everything except it. Never the reverse.
 
 ### 3.5 Seeds and variation discipline
 
-A seed is the integer that initialises the noise from which a diffusion model denoises an image; the same seed, prompt, model version and settings reproduce the same image. Use --seed in Midjourney (0 to 4294967295), the seed field in ComfyUI, Kling, Runway and Veo. Discipline:
+A seed is the integer that initialises the noise from which a diffusion model denoises an image; the same seed, prompt, model version and settings reproduce the same image. Use --seed in Midjourney (0 to 4294967295; on V8.x a repeated seed is reported to give a near-identical image rather than an exact one), the seed field in ComfyUI, Kling, Runway and Veo. Discipline:
 
 - Lock the seed when iterating on wording so that the only variable is the prompt.
 - Change only the seed when hunting for a composition so that the only variable is chance.
@@ -244,15 +245,15 @@ Total: about 90 minutes to two finished styleframes. Anything shorter has skippe
 
 ### 3.7 Model-specific syntax
 
-| Need | Midjourney V7 | Flux 2 and Kontext | GPT Image | Nano Banana Pro | Stable Diffusion (ComfyUI) | Kling via Higgsfield | Veo 3.1 and Omni Flash | Runway Gen-4 and Aleph |
+| Need | Midjourney V7 and V8.x | Flux 2 and Kontext | GPT Image | Nano Banana Pro | Stable Diffusion (ComfyUI) | Kling via Higgsfield | Veo 3.1 and Omni Flash | Runway Gen-4 and Aleph |
 |---|---|---|---|---|---|---|---|---|
 | Aspect ratio | --ar 4:5 | width and height in pixels, up to 4 MP | size parameter (1024x1024, 1536x1024, 1024x1536) | aspect ratio setting, up to 4K | latent size | 9:16, 16:9, 1:1 | 16:9 or 9:16 | 16:9, 9:16, 1:1, 4:3 |
 | Style strength | --s 0 to 1000 (default 100; house uses 20 to 80), --raw | none; describe | none; describe | none; describe | CFG scale 4 to 8 | CFG or creativity slider | none | none |
 | Negatives | --no text, --no people | describe the absence in the sentence | describe | describe | negative prompt field | negative prompt field | negative prompt field on Veo 3.1 (none on Omni Flash) | none; use Aleph instruction |
-| Reference image | image URL, --sref, --oref, --cref (V6) | reference images, Kontext instruction | attached image, instruction | up to 14 references | IP-Adapter, ControlNet | Elements, start and end frame | up to 3 references, first and last frame | References, Aleph source clip |
-| Weights | --iw, --sw, --ow | none | none | none | (word:1.3) syntax, LoRA weights | none | none | none |
+| Reference image | image URL, --sref; --oref on V7, --edit with up to 4 images on V8.x; --cref on V6 | reference images, Kontext instruction | attached image, instruction | up to 14 references | IP-Adapter, ControlNet | Elements, start and end frame | up to 3 references, first and last frame | References, Aleph source clip |
+| Weights | --iw, --sw; --ow on V7 only | none | none | none | (word:1.3) syntax, LoRA weights | none | none | none |
 | Seed | --seed | seed | none exposed in ChatGPT | none exposed | seed | seed | seed | seed |
-| Quality tiers | Draft mode, --q | pro, flex, dev, klein | low, medium, high | Flash and Pro | steps and sampler | Standard, Pro, Turbo | Fast, Lite, Standard; 720p to 4K | Turbo and standard |
+| Quality tiers | Draft mode; --q on V7; --hd (2K) on V8.x | pro, flex, dev, klein | low, medium, high | Flash and Pro | steps and sampler | Standard, Pro, Turbo | Fast, Lite, Standard; 720p to 4K | Turbo and standard |
 | Text rendering | poor | fair | good | good | poor | n/a | n/a | n/a |
 | Personalisation | --p (trained on your rating history) | LoRA | none | none | LoRA, textual inversion | none | none | none |
 | Experimental | --exp (aesthetics, V7), --w weird, --c chaos | none | none | none | samplers | none | none | none |
@@ -277,7 +278,7 @@ Taste (the house list): cream background, terracotta, beige minimalism, serif ov
 
 ## 4. Prompt library by Mask360 category
 
-Worked prompts in the house structure. Each names the model it is written for; the Midjourney ones assume --v 7 --raw --s 50 and an sref from the client's own photography. Replace the bracketed items. Every prompt here produces an environment, a plate or a styleframe; the hero (the piece, the dish, the suite, the face) is composited from real photography afterwards (section 6).
+Worked prompts in the house structure. Each names the model it is written for; the Midjourney ones assume the current default model (V8.2 as of October 2026, reported) with --raw --s 50 and an sref from the client's own photography; any prompt that adds --oref also adds --v 7. Replace the bracketed items. Every prompt here produces an environment, a plate or a styleframe; the hero (the piece, the dish, the suite, the face) is composited from real photography afterwards (section 6).
 
 ### 4.1 Hospitality interiors and exteriors
 
@@ -361,15 +362,15 @@ A tell is a defect that identifies an image or clip as generated to a trained ey
 
 ### 5.2 Video tells
 
-| Tell | Why | Fix |
-|---|---|---|
-| Flicker and texture crawl | Each frame denoised with imperfect temporal consistency | Shorter clips (5 seconds beat 10 in every model), image-to-video from a real still, less motion in the prompt, Topaz Video Starlight or temporal denoise, cut before the crawl begins |
+| Tell | What it looks like | Why | Fix |
+|---|---|---|---|
+| Flicker and texture crawl | Fine texture (foliage, fabric, stone, skin) boils or shimmers while the frame is otherwise still | Each frame denoised with imperfect temporal consistency | Shorter clips (5 seconds beat 10 in every model), image-to-video from a real still, less motion in the prompt, Topaz Video Starlight or temporal denoise, cut before the crawl begins |
 | Morphing | An object becomes another object; a face becomes another face | The model loses identity over frames | Start and end frame, Elements or References for identity, cut at 3 to 5 seconds, never let a face hold for more than 4 seconds in a wide |
 | Dead eyes | Eyes that do not converge, no catchlight, no micro-saccades | Eye motion is sub-pixel in training video | Real eyes; or cut away before the eyes read; prompt "eyes on camera, catchlight" and still check |
 | The uncanny walk | Feet slide, gait has no weight, arms swing out of phase | Human locomotion is the hardest physics | Avoid full-body walking in generated shots; shoot the walk; or drive the generation from a real performance (Runway Act-Two, Kling motion control) |
-| Objects popping | A glass appears or vanishes | Same as morphing | Keep props in the start frame; fewer objects |
-| Simultaneous zoom and dolly | The frame breathes in both directions | Conflicting motion words | One camera verb per prompt (higgsfield-prompting skill) |
-| Speed ramps and slow motion by default | Everything floats | Video models default to a dreamy 0.5x | Prompt "real-time speed, 24 fps, no slow motion"; retime in the edit |
+| Objects popping | A glass appears or vanishes between frames | Same cause as morphing | Keep props in the start frame; fewer objects |
+| Simultaneous zoom and dolly | The frame breathes in both directions | Conflicting motion words in one prompt | One camera verb per prompt (higgsfield-prompting skill) |
+| Speed ramps and slow motion by default | Everything floats | Video models drift toward slow, dreamy motion when speed is not stated | Prompt "real-time speed, 24 fps, no slow motion"; retime in the edit |
 
 ### 5.3 Counter techniques
 
@@ -385,7 +386,7 @@ The craft moves that take a generation from "AI" to "photograph":
 
 ### 5.4 The human eye on every frame rule
 
-Every delivered still is reviewed at 200 percent by a person other than the operator, with a checklist (section 8.1). Every delivered generated clip is scrubbed frame by frame at the cut points and watched at 100 percent in full; for a 15-second clip at 24 fps that is 360 frames, about 20 minutes. The reason: the tells above occur at a known rate per generation, the client's audience includes the two percent who will see them, and on a luxury account the two percent are the buyers.
+Every delivered still is reviewed at 200 percent by a person other than the operator, with a checklist (section 8.1). Every delivered generated clip is scrubbed frame by frame at the cut points and watched at 100 percent in full; for a 15-second clip at 24 fps that is 360 frames, about 20 minutes. The reason: the tells above recur in every model and every batch, a share of any audience will see them, and on a luxury account the people who look closest (collectors, buyers, the trade press) are the ones the campaign is for.
 
 ## 6. Hybrid workflows that hold a luxury standard
 
@@ -397,7 +398,7 @@ A storyboard is a sequence of drawn or generated frames describing each shot (fr
 
 The house pipeline for a 60-second brand film of about 18 shots:
 
-1. Shot list from the treatment (see 19-campaigns-and-creative-direction.md) with lens, movement and duration per shot.
+1. Shot list from the treatment (see 19-campaigns-and-creative-direction.md for the treatment and 14-video-preproduction-and-cinematography.md for the shot-list format) with lens, movement and duration per shot.
 2. One keyframe per shot, generated in Nano Banana Pro from the recce plates (photographs taken on the location visit) where they exist, or in Midjourney with the client's sref where they do not. Burn a "PREVIS, GENERATED" watermark into every frame at export, because clients mistake previs for the look and then ask why the film looks different.
 3. Kling 2.6 image-to-video at draft settings, 3 to 5 seconds per shot, one camera verb each (higgsfield-prompting skill, section on camera movement keywords).
 4. Cut in Premiere or Resolve against the temp track (see 16-editing-colour-grading-and-delivery.md, section 1 on editing theory). That cut is the animatic.
@@ -428,7 +429,7 @@ Hospitality and real estate limit: a real property's architecture is never exten
 Three methods, ranked by fidelity:
 
 1. Composite the real product shot. Default for every hero and for any frame where the product is larger than about one tenth of the frame.
-2. Multi-reference editing. Nano Banana Pro with the product photographed from three angles among its 14 reference slots; FLUX.2 multi-reference; Midjourney --oref with --ow at 300 to 400 for strict identity. Acceptable for variants where the product is small or secondary (a bottle on a far shelf); the hero stays with method 1, because the model reproduces the look of the product and improvises its geometry.
+2. Multi-reference editing. Nano Banana Pro with the product photographed from three angles among its 14 reference slots; FLUX.2 multi-reference; Midjourney --oref with --ow at 300 to 400 for strict identity on V7, or --edit with the product as the first reference on V8.x. Acceptable for variants where the product is small or secondary (a bottle on a far shelf); the hero stays with method 1, because the model reproduces the look of the product and improvises its geometry.
 3. A LoRA (Low-Rank Adaptation): a small set of trained weights, from a few megabytes to a few hundred, that adapts a base model to a subject or style without retraining it. Trained on about 15 to 40 photographs of the product from varied angles on plain backgrounds, each captioned with a unique trigger word (a made-up token such as "m360ringA" that calls the subject in a prompt). Rank, the dimensionality of the adaptation, is commonly set between 8 and 32; higher rank captures more detail and overfits sooner. Training of 1,000 to 3,000 steps on fal or Replicate takes minutes and costs a few dollars (reported ranges, October 2026). Base models: FLUX.1 dev or FLUX.2 dev (non-commercial weights, so commercial use goes through a BFL licence or a licensed host) or SDXL and SD 3.5 under the Stability Community License (section 2.1).
 
 LoRA rules: train only on photography the agency or the client owns; the weights are a derivative of the client's product data, so they are stored privately, named in the contract and deleted at project end when the contract requires it; a LoRA reproduces finish and proportion and still invents hallmarks, clasps and facets, so method 1 remains the hero rule.
@@ -581,15 +582,15 @@ The release for synthetic use, which is a separate document from the standard mo
 
 Generated outputs reproduce marks and trade dress (the protected overall look of a product or packaging: Tiffany's blue, Hermès's orange box, Louboutin's red sole, Bottega Veneta's green) because the training data is full of them, and the Getty judgment's trade mark findings show it happens without anyone asking. Three rules: never put a brand, product or designer name in a prompt for client work (section 3.2); inspect every generated frame for incidental marks (a bottle on a generated vanity, a logo on a generated chair, a car badge) and remove them; treat trade dress as a mark. The statutes: Trade Marks Act 1999, section 29, in India; Federal Decree-Law No. 36 of 2021 on Trademarks in the UAE; the Lanham Act in the US.
 
-Brand safety beyond marks: a generated face that resembles a real person (the "Sky" voice dispute between Scarlett Johansson and OpenAI in May 2024 is the reference case, settled without litigation); religious iconography and dress generated wrongly (a model's "Indian bride" that mixes a Kanjeevaram border with a Rajasthani odhni and a Bengali shakha reads as foreign to every Indian viewer); Arabic and Devanagari script that is almost right; skin tone drift toward lighter in beauty prompts (a documented bias in image models), which the house counters by naming the skin in the prompt and checking against the real talent. The control: a native reviewer for each market signs off every generated frame with people, dress, script or architecture in it.
+Brand safety beyond marks: a generated face that resembles a real person (the "Sky" voice dispute between Scarlett Johansson and OpenAI in May 2024 is the reference case: OpenAI paused the voice within days and no suit was filed); religious iconography and dress generated wrongly (a model's "Indian bride" that mixes a Kanjeevaram border with a Rajasthani odhni and a Bengali shakha reads as foreign to every Indian viewer); Arabic and Devanagari script that is almost right; skin tone drift toward lighter in beauty prompts (a documented bias in image models), which the house counters by naming the skin in the prompt and checking against the real talent. The control: a native reviewer for each market signs off every generated frame with people, dress, script or architecture in it.
 
 ### 7.6 Disclosure obligations
 
 | Regime | Rule | Dates | House practice |
 |---|---|---|---|
-| EU AI Act, Regulation (EU) 2024/1689, Article 50 | Providers must mark generated content in a machine-readable way (Article 50(2)); deployers must visibly disclose deepfakes (generated or manipulated content resembling real persons, places or events) and AI-generated text published on matters of public interest (Article 50(4)); fines under Article 99(4) of up to EUR 15 million or 3 percent of worldwide turnover | Applies from 2 August 2026; the Commission's Code of Practice on transparency of AI-generated content was published on 10 June 2026 (reported) and is voluntary; the Digital Omnibus deferred the provider marking duty for systems already on the market to 2 December 2026 (reported); content made before 2 August 2026 need not be labelled retroactively (reported) | Any campaign that targets EU audiences (a Dubai hotel selling to Germany, a Jaipur jeweller shipping to France) is labelled as if the house were the deployer |
-| India, IT (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021 as amended by G.S.R. 120(E) | Synthetically generated information (SGI: audio, visual or audio-visual content created or altered algorithmically so that it appears real and depicts a person or event; colour correction, compression and accessibility edits are excluded) must be prominently labelled and carry permanent metadata or provenance markers; users self-declare SGI on upload and false declarations attract penalties; platforms must deploy detection and must not allow labels or markers to be removed; takedown of flagged unlawful content on government order within 2 to 3 hours (sources differ) and general grievances within 7 days rather than 15 | Notified 10 February 2026, effective immediately with a 10-day deployment window (verified at the Legal 500 summary citing the gazette); preceded by MeitY's deepfake advisories of March 2024 and the draft of 22 October 2025 | Every generated or hybrid asset published in India carries the visible label and the metadata; the agency's own accounts self-declare; the client's social team is briefed in writing |
-| India, ASCI | The Advertising Standards Council of India's code treats a misleading depiction as a breach regardless of the tool; its influencer guidelines require disclosure of material connections | Code in force; AI-specific guidance reported in development | Generated guests, results and testimonials are never presented as real |
+| EU AI Act, Regulation (EU) 2024/1689, Article 50 | Providers must mark generated content in a machine-readable way (Article 50(2)); deployers must visibly disclose deepfakes (generated or manipulated content resembling real persons, places or events) and AI-generated text published on matters of public interest (Article 50(4)); fines under Article 99(4) of up to EUR 15 million or 3 percent of worldwide turnover | Applies from 2 August 2026. The Commission's final Code of Practice on marking and labelling AI-generated content was published on 10 June 2026 (Jones Day) and found adequate by the Commission and the AI Board on 8 and 9 July 2026 (Reed Smith); it is voluntary, asks providers for at least two layers of machine-readable marking (metadata plus a watermark, for example) and a public detection tool, and exempts AI-assisted text that has had human review or editorial control from the Article 50(4) text label. The Digital Omnibus on AI (approved by Parliament on 16 June 2026 and the Council on 29 June 2026, in force 27 July 2026, as reported by Usercentrics; confirm against the Official Journal) gives a grace period to 2 December 2026 for the Article 50(2) marking duty; whether it covers only systems on the market before 2 August 2026 or all systems is read differently by Gibson Dunn and Simmons and Simmons. Content made before 2 August 2026 need not be labelled retroactively (reported) | Any campaign that targets EU audiences (a Dubai hotel selling to Germany, a Jaipur jeweller shipping to France) is labelled as if the house were the deployer |
+| India, IT (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021 as amended by the Amendment Rules 2026, G.S.R. 120(E) | Synthetically generated information (SGI, new rule 2(1)(wa): audio, visual or audio-visual content artificially or algorithmically created or altered so that it appears real and depicts a person or event in a way likely to be indistinguishable from a real one). Excluded: good-faith routine editing (formatting, enhancement, colour correction, compression) that does not change substance, context or meaning; routine creation of documents, presentations and educational material that produces no false record; accessibility, translation and description tools. Visual SGI must carry a prominent, easily noticeable label; audio SGI a prominently prefixed audio disclosure; both must embed permanent metadata or provenance markers including a unique identifier of the generating resource, which intermediaries must not let users remove. Significant social media intermediaries (platforms with more than 5 million registered users in India, the threshold notified in February 2021) must ask users to declare SGI before publishing and deploy automated measures to verify the declaration. Takedown on a court order or government direction within 3 hours (previously 36); nudity and sexual content within 2 hours (previously 24); grievances disposed of within 7 days (previously 15) | Notified 10 February 2026, in force 20 February 2026 (verified against the IndiaLaw summary of the gazette text, October 2026); preceded by MeitY's deepfake advisories of March 2024 and the draft of 22 October 2025 | Every generated or hybrid asset published in India carries the visible label and the metadata; the agency's own accounts self-declare; the client's social team is briefed in writing; a hybrid film with a generated sky is SGI if it depicts a real place as real, so the house labels it |
+| India, ASCI | The Advertising Standards Council of India's code treats a misleading depiction as a breach regardless of the tool; its influencer guidelines (May 2021) require disclosure of material connections and require a virtual influencer to tell the audience it is not interacting with a real human being | Code in force; AI-specific guidance reported in development | Generated guests, results and testimonials are never presented as real |
 | UAE | No AI-specific disclosure rule in the advertising regulations was found as of October 2026; the UAE Media Council's advertising permit regime and the consumer protection law apply to misleading content | Reported | Label anyway; the house labels as a matter of standard, above the legal minimum |
 | Meta (Instagram, Facebook, Threads) | The "AI info" label (renamed from "Made with AI" on 1 July 2024) is applied when industry signals in the file indicate AI or when the uploader discloses; "Imagined with AI" marks Meta AI's own photorealistic images; advertisers must disclose digitally created or altered political and social issue ads | Verified at about.fb.com, October 2026 | Disclose on upload; expect Instagram to strip most file metadata, so the visible caption label is the one that survives |
 | YouTube | Creators must disclose realistic altered or synthetic content (a real person appearing to say or do something they did not, a realistic event, AI-generated music); the label appears in the expanded description and, for photorealistic content and AI music, in the player; beauty filters and captions do not require disclosure | Verified at support.google.com, October 2026 | Tick the disclosure on every hybrid film |
@@ -598,7 +599,7 @@ Brand safety beyond marks: a generated face that resembles a real person (the "S
 
 ### 7.7 C2PA and Content Credentials
 
-C2PA is the Coalition for Content Provenance and Authenticity, an open standards body founded in 2021 by Adobe, Arm, BBC, Intel, Microsoft and Truepic, whose specification defines a manifest (a cryptographically signed record of an asset's origin and every edit) bound to the file. Content Credentials is the consumer-facing name and the "cr" icon. The current specification is version 2.2 (verified at spec.c2pa.org, October 2026). SynthID is Google's separate, invisible watermark embedded in Imagen, Nano Banana, Veo and Omni Flash outputs, detectable with Google's tools and independent of file metadata; it survives crops and re-encoding better than a manifest and tells the viewer less. IPTC's photo metadata standard adds a Digital Source Type field whose value "trainedAlgorithmicMedia" is what Meta's and others' detectors read.
+C2PA is the Coalition for Content Provenance and Authenticity, an open standards body founded in 2021 by Adobe, Arm, BBC, Intel, Microsoft and Truepic, whose specification defines a manifest (a cryptographically signed record of an asset's origin and every edit) bound to the file. Content Credentials is the consumer-facing name and the "cr" icon. The specification moves fast: the version menu at spec.c2pa.org lists 2.3, 2.4 and 2.5 after 2.2, with 2.5 the latest as of October 2026 (the page gives no release dates), so the house checks which version a tool writes before promising a client that a credential will validate. SynthID is Google's separate, invisible watermark embedded in Imagen, Nano Banana, Veo and Omni Flash outputs, detectable with Google's tools and independent of file metadata; it survives crops and re-encoding better than a manifest and tells the viewer less. IPTC's photo metadata standard adds a Digital Source Type field whose value "trainedAlgorithmicMedia" is what Meta's and others' detectors read.
 
 Where credentials come from: Photoshop, Lightroom and Firefly attach them; GPT Image outputs carry them; cameras from Leica (M11-P, October 2023), Nikon and Sony sign in camera; Google's Pixel 10 (2025) signs every photograph (reported). Where they die: most social platforms strip or partly strip metadata on upload, which is why the visible label (section 7.6) is required alongside.
 
@@ -633,11 +634,11 @@ Run on every generated or hybrid still at 200 percent and on every clip frame by
 2. Light: one key with a direction that can be named; every shadow vector agrees with it; specular highlights sit on the same side of every object; every object that touches a surface has a contact shadow; the shadow side receives bounce of the environment's colour.
 3. Text and script: every glyph read by a person; Devanagari matras and conjuncts, Arabic joining and direction checked by a native reader; signage, labels, menus and place cards composited from real type (see 03-typography.md for the multiscript setting).
 4. Continuity: across a set, the same room has the same windows, the same floor, the same furniture count; the product keeps its orientation and clasp position; in video, props and faces hold identity through the clip; the motion verb is one.
-5. Brand colour: after the grade, the brand's hex sampled on a neutral patch is within delta E 2000 of 2.0 (the perceptual colour-difference metric where 1.0 is just noticeable; see 04-colour.md, section 6) of the token.
+5. Brand colour: after the grade, the brand's hex sampled on a neutral patch is within 2.0 dE00 of the token (CIEDE2000, the perceptual colour-difference metric where 1.0 is about one just noticeable difference side by side; see 04-colour.md, section 9.3). The reason for checking after the grade: a LUT built for skin and stone will drift a brand's flame or green, and the drift is invisible until the asset sits beside the client's packaging.
 6. Resolution and format: pixel dimensions meet the destination in 26-platform-and-format-specs-2026.md; print at 300 ppi at size; no upscale above 2x on a generated source.
 7. Artefacts: halos at edges, invented weave or pores from an upscaler, banding in gradients (check at 8 bit after export), JPEG blocking in shadows, texture crawl in video, breathing of the frame edge.
 8. Geometry: verticals plumb where the lens says they should be, one horizon, stairs that arrive, windows that match inside and out, furniture with the right number of legs.
-9. Marks and likeness: no logos, labels, trade dress, recognisable faces, recognisable buildings (the Burj Khalifa, the Taj Mahal Palace facade and the Hawa Mahal are all trademarks or protected images in some uses) unless cleared.
+9. Marks and likeness: no logos, labels, trade dress, recognisable faces or recognisable buildings unless cleared. The Taj Mahal Palace facade in Mumbai was registered as a trade mark by the Indian Hotels Company in 2017, the Burj Khalifa name and marks belong to Emaar, and commercial filming at a monument protected by the Archaeological Survey of India needs the ASI's permission; a generated building that reads as any of these carries the same clearance question as a photograph of it.
 10. Cultural review: dress, jewellery, script, architecture and ritual objects checked by a reviewer from the market.
 11. Metadata and record: C2PA manifest attached; sidecar complete (section 6.11); operator's personal EXIF data stripped; the visible label prepared for each platform.
 12. Taste: the design-taste tests (cover the logo, four hundred hours, one thing to remember); the tells in section 5 and the taste negatives in section 3.8.
@@ -664,7 +665,7 @@ The house attaches a standard note to every proposal that involves generation. I
 
 ### 8.5 The sustainability note
 
-Generation has a measurable energy cost. Luccioni, Jernite and Strubell (FAccT 2024) measured image generation at up to about 2.9 kWh per 1,000 images for the most energy-intensive model they tested, which the authors compared to charging a smartphone once per image; text generation was hundreds of times cheaper per task. Video is heavier again: MIT Technology Review's May 2025 analysis measured a single 5-second clip from an open video model at about 3.4 megajoules (about 0.94 kWh), more than 700 times the cost of an image. The house practice that follows: explore in draft modes (Midjourney Draft, Omni Flash at 360p, Flux klein) and generate at full quality only after selection; batch rather than regenerate; edit an approved image rather than generate a new one; run upscaling and cleanup locally (Topaz, Photoshop) where the model is small; and record generation counts per project in the sidecar totals so a client who asks for the footprint can be answered with a number.
+Generation has a measurable energy cost. Luccioni, Jernite and Strubell ("Power Hungry Processing", FAccT 2024) measured image generation at a mean of 2.9 kWh per 1,000 images across the models they tested, over 60 times the mean for text generation (0.047 kWh per 1,000), and the least efficient image model at 11.49 kWh per 1,000, which they equate to about half a smartphone charge per image. Video is heavier again: MIT Technology Review's May 2025 analysis measured a single 5-second clip from an open video model at about 3.4 megajoules (about 0.94 kWh), more than 700 times the cost of an image. The house practice that follows: explore in draft modes (Midjourney Draft, Omni Flash at 360p, Flux klein) and generate at full quality only after selection; batch rather than regenerate; edit an approved image rather than generate a new one; run upscaling and cleanup locally (Topaz, Photoshop) where the model is small; and record generation counts per project in the sidecar totals so a client who asks for the footprint can be answered with a number.
 
 ## 9. AI in UX and UI design
 
@@ -687,24 +688,24 @@ The generic output problem: Figma Make's first draft, Framer's Wireframer, Relum
 
 What the features are good for: renaming layers; filling content with realistic data (names, prices in rupees and dirhams, dates) so layouts are tested against real lengths; first-pass translation of UI strings for a native reviewer; placeholder imagery during wireframing only; prototype logic in Make for a usability test; Adobe's selection, content-aware and Enhance Speech tools, which edit rather than design.
 
-Craft risks beyond the look: generated layouts ship with contrast failures and missing focus states (test against WCAG 2.2 AA, the Web Content Accessibility Guidelines level the house requires; see 06-ui-design-craft.md); tokens are inconsistent (three greys, two radii) and must be replaced by the house tokens (see 07-design-systems-and-tokens.md); generated copy is never shipped (the mask360-copywriting skill's rules apply to every string); auto layout from a generated frame hides broken constraints that appear at 320px.
+Craft risks beyond the look: generated layouts ship with contrast failures and missing focus states (test against WCAG 2.2 AA, the Web Content Accessibility Guidelines level the house requires; see 11-accessibility-and-inclusive-design.md and 06-ui-design-craft.md); tokens are inconsistent (three greys, two radii) and must be replaced by the house tokens (see 07-design-systems-and-tokens.md); generated copy is never shipped (the mask360-copywriting skill's rules apply to every string); auto layout from a generated frame hides broken constraints that appear at 320px.
 
-Research synthesis with AI, with verification: transcription with Whisper or a transcription service (Hindi and Gulf Arabic accuracy is lower than English, so a human corrects before analysis); clustering drafts in Dovetail or a model, then every theme is traced to at least three timestamped quotes the researcher has heard; the model never counts sentiment unaided, because a sample check of 20 codes against a person's coding is required before any number goes in a deck; the model invents plausible quotes, so no quotation enters a deliverable without its timestamp; participants' personal data is handled under DPDP and PDPL consent, and transcripts are never uploaded to a tool whose terms allow training on inputs. See 09-interaction-design-and-ux-patterns.md for the research methods themselves.
+Research synthesis with AI, with verification: transcription with Whisper or a transcription service (Hindi and Gulf Arabic accuracy is lower than English, so a human corrects before analysis); clustering drafts in Dovetail or a model, then every theme is traced to at least three timestamped quotes the researcher has heard; the model never counts sentiment unaided, because a sample check of 20 codes against a person's coding is required before any number goes in a deck; the model invents plausible quotes, so no quotation enters a deliverable without its timestamp; participants' personal data is handled under DPDP and PDPL consent, and transcripts are never uploaded to a tool whose terms allow training on inputs. See 08-ux-research-and-strategy.md for the research methods themselves.
 
 ### 9.3 AI generated UI and the house standard for finishing it
 
 v0, Figma Make, Lovable and Bolt produce a skeleton. The house finishing list, run in order, before any generated interface is shown to a client:
 
-1. Typeface to Space Grotesk at the house weights (300 body, 500 bold, 600 h2, 700 h1) and the tracking in design-taste, section 7; Departure Mono where the pixel voice is wanted.
-2. Tokens replaced by the house set (colour, radius, spacing, hairlines) from 07-design-systems-and-tokens.md; white ground, cards white with a hairline, flame #F53901 as the only accent.
-3. Layout: the three-card row, the icon circles, the logo wall and the gradient hero removed; one idea per screen; scale contrast restored (a 160px headline against an 11px caption).
+1. Typeface, weights and tracking replaced by the house layer (design-taste, section 7). Generators default to Inter or the platform's system font, so this step is never skipped even when the draft "looks close".
+2. Tokens replaced by the house set (colour, radius, spacing, hairlines) as built in 07-design-systems-and-tokens.md. A generated file typically carries several near-identical greys and two or three radii; each is mapped to one token or deleted, and an audit of the styles panel confirms none survives.
+3. Layout: the three-card row, the icon circles, the logo wall and the gradient hero removed; one idea per screen; scale contrast restored (design-taste, section 2).
 4. Copy rewritten to the 15 copy rules; no "Learn more", no arrows, sentence case.
 5. Motion reduced to one considered move; everything else still; prefers-reduced-motion honoured (see 12-motion-principles-and-ui-motion.md).
 6. Images replaced with the client's real photography or removed; no generated placeholder survives to the client review.
 7. Accessibility: WCAG 2.2 AA contrast, focus states, keyboard order, labels, Arabic right-to-left mirrored layout.
 8. Performance: Largest Contentful Paint (the time until the largest visible element renders) under 2.5 seconds on a mid-range Android on 4G, which rules out a 2 MB hero (see 21-web-design-and-digital-craft.md).
 9. Code review: dead CSS, inline styles, duplicated components, missing alt text, the generated component library's unused imports; house microsites are rebuilt in Claude Code with the tokens rather than patched in the generator.
-10. The tests: cover the logo; would Ssense run it; four hundred hours; one thing to remember.
+10. The design-taste tests (design-taste, section 4, step 7), run by someone who did not prompt the generator.
 
 ## 10. AI and taste
 
@@ -724,7 +725,7 @@ Design-taste, section 6, names the result: cream, serif and terracotta was risin
 - Constraints: one light, one lens, one material, one era, the negative lists (section 3.8). A constraint is a choice, and a choice is what the median lacks.
 - The hand-made element: a scanned texture, a hand-drawn mark, a real signature, a misregistered print; design-taste, section 6, lists tactile and imperfect as the rising counter-signal to AI polish, and it is also the cheapest provenance signal a brand has.
 - The real photograph as anchor: every composite starts from a plate, and the plate's light, grain and colour science are what the generation must match (section 6.4).
-- The house tokens: Space Grotesk, flame, white ground, hairlines, 70 visual to 30 text; the generation is graded and cropped into them, and the tokens stay fixed.
+- The house tokens (design-taste, section 7): the generation is graded and cropped into them, and the tokens stay fixed; a token is never adjusted to suit a generation.
 - Personalisation trained on house ratings (Midjourney --p, section 3.7) so the model's bias is the agency's.
 - The edit: remove until it breaks, put one thing back (design-taste, section 4). A generation arrives over-full; the specific is what remains after subtraction.
 
@@ -752,7 +753,7 @@ Two consequences. A client is paying for the choice, and a choice is defensible 
 
 Image-layer terms go to the image model; motion-layer terms go to the video model only (higgsfield-prompting skill, the three-layer system). "n/a" means the term belongs in the other layer.
 
-| Craft term | Midjourney V7 | FLUX.2 and Kontext | GPT Image and Nano Banana Pro | Kling via Higgsfield (motion layer) | Veo 3.1 and Omni Flash |
+| Craft term | Midjourney V7 and V8.x | FLUX.2 and Kontext | GPT Image and Nano Banana Pro | Kling via Higgsfield (motion layer) | Veo 3.1 and Omni Flash |
 |---|---|---|---|---|---|
 | Shallow depth of field | "85mm, f/1.8, shallow depth of field" with --s 50 | "shot on an 85mm lens at f/1.8, background softly out of focus" | Same sentence; for an edit, "keep the subject, soften the background as an 85mm at f/1.8 would" | n/a | "85mm, shallow depth of field" (no aperture control) |
 | Deep focus | "f/11, deep focus, edge to edge sharp" | "everything sharp from front to back, f/11" | Same | n/a | "deep focus, everything sharp" |
@@ -824,7 +825,7 @@ Image-layer terms go to the image model; motion-layer terms go to the video mode
 
 | Tool | Category | Version | Commercial use | Indemnity | Provenance | Status or risk | House use |
 |---|---|---|---|---|---|---|---|
-| Midjourney | Image, video | V7; Video V1; V8 alpha reported | Paid plans; Pro or Mega above $1 million revenue and for Stealth | None | None native | Public by default; strong aesthetic prior | Moodboards, styleframes, exploration with sref |
+| Midjourney | Image, video | V8.2 default (reported), V8.1, V7 for --oref; Video V1 | Paid plans; Pro or Mega above $1 million revenue and for Stealth | None | None native | Public by default; strong aesthetic prior | Moodboards, styleframes, exploration with sref |
 | FLUX.2 (BFL) | Image, editing | FLUX.2 pro, flex, dev, klein; Kontext | API or licence; dev weights non-commercial | None | None native | Weights licence trap | Product-in-environment, instruction edits, LoRA |
 | Ideogram | Image with text | 3.0; a version 4 reported | Paid | None | None stated | Weak skin and light | Latin text comps only |
 | GPT Image | Image | gpt-image-1.5; GPT Image 2 reported | Paid ChatGPT or API | Copyright Shield for API and enterprise (reported) | C2PA | Yellow cast, smooth skin | Layout-aware graphics, quick edits |
@@ -860,7 +861,7 @@ Image-layer terms go to the image model; motion-layer terms go to the video mode
 - Aesthetic fine-tuning: tuning a model on human preference scores so that its default output matches crowd taste.
 - Animatic: a storyboard cut to time against a temp soundtrack.
 - AR try-on: an augmented reality overlay of a true-scale 3D product on a tracked hand, ear or neck in a live camera feed.
-- C2PA: the Coalition for Content Provenance and Authenticity, whose specification (version 2.2) defines signed provenance manifests bound to a file.
+- C2PA: the Coalition for Content Provenance and Authenticity, whose specification (version 2.5 as of October 2026) defines signed provenance manifests bound to a file.
 - Cameo: Sora's consented insertion of a real person's likeness, withdrawn with the service.
 - CFG scale: classifier-free guidance scale; how strongly a diffusion model follows the prompt, typically 4 to 8 in Stable Diffusion.
 - Character reference (--cref): the Midjourney V6 parameter carrying a character's identity from a reference image, replaced by --oref in V7.
@@ -871,10 +872,11 @@ Image-layer terms go to the image model; motion-layer terms go to the video mode
 - ControlNet: a conditioning network that constrains a diffusion model to edges, depth or pose taken from a reference image.
 - DAM: digital asset management system, the library in which masters and sidecars are stored.
 - Deepfake: generated or manipulated content resembling real persons, places or events, in the EU AI Act's usage.
-- Delta E 2000: the perceptual colour-difference metric in which 1.0 is a just-noticeable difference.
+- Delta E 2000 (dE00): the CIEDE2000 perceptual colour-difference metric, in which 1.0 is about one just noticeable difference.
 - Digital replica: a synthetic reproduction of a performer's voice or likeness, in SAG-AFTRA and Copyright Office usage.
 - Draft mode: Midjourney's faster, cheaper preview generation, about ten times faster at half the GPU cost.
 - Dynamic injunction: an Indian court order that extends to infringers and platforms identified after it is granted; also called a John Doe order.
+- Edit Model (--edit): the Midjourney V8.1 and V8.2 instruction editor, taking a written instruction and up to four reference images; it replaces --oref on V8.x.
 - Elements: Kling's feature taking up to four reference images to hold a subject consistent across a clip.
 - Fair use: the US copyright defence for unlicensed use that is transformative and does not harm the market for the work.
 - Frequency separation: a retouching technique that splits an image into a texture layer and a tone layer so each can be edited alone.
@@ -909,6 +911,7 @@ Image-layer terms go to the image model; motion-layer terms go to the video mode
 - Set extension: enlargement of a real shot beyond the built set or location.
 - Shaping: the contextual joining and reordering of letters in Arabic and Indic scripts.
 - Sidecar: a small text file stored beside a master, with the same base name, holding its generation record.
+- Significant social media intermediary: under India's IT Rules, a platform with more than 5 million registered users in India, carrying extra due-diligence duties.
 - Start and end frame: two images between which a video model generates continuous motion.
 - Stealth mode: Midjourney's private generation mode, available on Pro and Mega plans.
 - Storyboard: a sequence of frames describing each shot's framing, lens and movement before the shoot.
@@ -918,8 +921,8 @@ Image-layer terms go to the image model; motion-layer terms go to the video mode
 - Stylize (--s): the Midjourney parameter controlling how strongly its aesthetic prior applies.
 - Substantial similarity: the copyright test for whether an output copies a specific protected work.
 - Sweep: a seamless curved backdrop used for product photography.
-- SynthID: Google's invisible watermark embedded in its generated images and video.
 - Synthetically generated information (SGI): the Indian IT Rules' term for algorithmically created or altered content that appears real and depicts a person or event.
+- SynthID: Google's invisible watermark embedded in its generated images and video.
 - Tell: a defect that identifies an image or clip as generated to a trained eye within two seconds.
 - Temporal consistency: a video model's ability to hold textures and identities stable across frames.
 - Three-layer system: the Higgsfield prompting rule that image, identity and motion prompts are written separately.
@@ -942,7 +945,7 @@ Books
 
 Specifications, standards and law
 
-- C2PA Technical Specification 2.2, Coalition for Content Provenance and Authenticity, https://spec.c2pa.org/specifications/specifications/2.2/index.html
+- C2PA Technical Specification, versions 2.2 to 2.5, Coalition for Content Provenance and Authenticity, https://spec.c2pa.org
 - IPTC Photo Metadata Standard (Digital Source Type), https://iptc.org/standards/photo-metadata/
 - Regulation (EU) 2024/1689 (the AI Act), Article 50 and Article 99, https://eur-lex.europa.eu/eli/reg/2024/1689/oj
 - European Commission, Code of Practice on Transparency of AI-generated Content, https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content
@@ -972,9 +975,11 @@ Articles, papers and documentation
 - Runway, "Introducing Runway Aleph", 25 July 2025, https://runway.com/research/introducing-runway-aleph
 - Runway, Pricing, https://runway.com/pricing
 - Google, Gemini API video generation documentation, https://ai.google.dev/gemini-api/docs/video
+- Google, Gemini API deprecations, https://ai.google.dev/gemini-api/docs/deprecations
 - OpenAI, Sora 2 model page, https://developers.openai.com/api/docs/models/sora-2
 - Kling, "Kling Video 3.0 Omni: multi-shot and native audio guide", https://kling.ai/blog/kling-video-3-omni-multi-shot-native-audio-guide
-- Midjourney documentation, https://docs.midjourney.com
+- Midjourney documentation, Version and Parameter List articles, https://docs.midjourney.com
+- Midjourney, "Omni-Reference --oref", https://updates.midjourney.com/omni-reference-oref/
 - ElevenLabs, Pricing, https://elevenlabs.io/pricing
 - Topaz Labs, https://www.topazlabs.com
 - Lovable, Pricing, https://lovable.dev/pricing
@@ -986,6 +991,12 @@ Articles, papers and documentation
 - TikTok Newsroom, "Partnering with our industry to advance AI transparency and literacy", 9 May 2024, https://newsroom.tiktok.com/en-us/partnering-with-our-industry-to-advance-ai-transparency-and-literacy
 - Office of the Governor of Tennessee, "Gov. Lee signs ELVIS Act into law", 21 March 2024, https://www.tn.gov/governor/news/2024/3/21/photos--gov--lee-signs-elvis-act-into-law.html
 - Legal 500, "2026 IT Rules amendments: AI content labelling and intermediary obligations", https://www.legal500.com/intelligence/india/media-telecoms-it-entertainment/2026-it-rules-amendments-ai-content-labelling-and-intermediary-obligations
+- IndiaLaw LLP, "IT Rules 2026 corporate playbook: practical roadmap for synthetic information regulation", https://www.indialaw.in/blog/it-rules-2026-synthetic-media/
+- Jones Day, "European Commission publishes final Code of Practice on marking and labelling AI-generated content", June 2026, https://www.jonesday.com/en/insights/2026/06/european-commission-publishes-final-code-of-practice-on-marking-and-labelling-aigenerated-content
+- Reed Smith, "Transparency obligations for AI-generated content: the Code of Practice adequacy", https://www.reedsmith.com/our-insights/blogs/viewpoints/102nbz0/transparency-obligations-for-ai-generated-content-the-code-of-practice-adequacy/
+- Gibson Dunn, "EU AI Act Omnibus agreement: postponed high-risk deadlines and other key changes", https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/
+- Simmons and Simmons, "Provisional agreement reached on AI Omnibus package to amend EU AI Act", https://www.simmons-simmons.com/en/publications/cmoveo6ke00icuxskpgueb0od/ai-omnibus-update
+- Usercentrics, "EU AI Act high-risk delay and Article 50 transparency", https://usercentrics.com/knowledge-hub/eu-ai-act-high-risk-delay-article-50-transparency-consent/
 - Mishcon de Reya, "Getty Images v Stability AI: unpacking the High Court's judgment", https://www.mishcon.com/news/getty-images-v-stability-ai-unpacking-the-high-courts-judgment
 - SpicyIP, posts on the DPIIT working paper on generative AI and copyright (December 2025 to February 2026) and on personality rights, https://spicyip.com
 - Mask360 skills cross-referenced in this file: design-taste (SKILL.md and references/currency-2026.md, references/worlds.md), higgsfield-prompting (SKILL.md and references/model-examples.md), mask360-copywriting.

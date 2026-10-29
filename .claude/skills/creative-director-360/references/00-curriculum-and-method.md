@@ -117,7 +117,7 @@ The CD does not need master level in every row. The working target for a 360 CD 
 |---|---|
 | Novice | Centres everything; margins vary by page; uses a 12-column grid because the framework shipped it |
 | Competent | Chooses columns, gutters, margins and baseline for the format and the content; aligns to the baseline grid; builds hierarchy from space and weight before size; breaks the grid once with a reason |
-| Expert | Reads a Gentlewoman or Apartamento spread and reconstructs its grid, measure and rhythm in ten minutes; designs the page as a sequence (pacing across spreads or scroll) rather than a set of single pages; uses modular grids (Müller-Brockmann) and the van de Graaf canon where they serve |
+| Expert | Reads a Gentlewoman or Apartamento spread and reconstructs its grid, measure and rhythm in ten minutes; designs the page as a sequence, paced across spreads or across the scroll; uses modular grids (Müller-Brockmann) and the van de Graaf canon where they serve |
 | Master | Invents a grid logic that becomes the brand's recognisable structure (Vignelli's Unigrid for the US National Park Service is the reference case); the grid carries the identity when type and colour are absent |
 
 ### 2.7 UI design
@@ -183,7 +183,7 @@ Video is seven competencies, because a CD who can direct a shoot and cannot read
 | Pre-production | Shoots from a mood board | Treatment, script, storyboard, shot list, schedule, call sheet, budget, crew list, location release, talent release | Treatment sells the idea in two pages; shot list is designed for the edit (coverage planned cut by cut); contingency for weather and Gulf heat built in | Pre-production is so complete the shoot is boring; the director can be replaced and the film survives |
 | Cinematography | Does not know focal length from f-stop | Chooses lens (focal length, aperture), sensor and frame rate for the look; reads a histogram; knows the exposure triangle; can brief a DP in shot sizes and movements (Mascelli's five Cs: camera angles, continuity, cutting, close-ups, composition) | Reads a Deakins or Lubezki frame and names the light source, ratio, lens and why; chooses a camera (ARRI Alexa 35, Sony Venice 2, RED V-Raptor) from the delivery spec; specifies LUTs and monitoring on set | Directs the DP through intent and reference, and leaves the DP's hands their own; the frames would be recognised as the brand's without a logo |
 | Lighting | "Natural light" as a plan | Three-point setup, motivated light, key-to-fill ratios (2:1 soft, 8:1 dramatic), colour temperature in kelvin (3200K tungsten, 5600K daylight), diffusion and negative fill | Lights for the grade (protects highlights, keeps shadow detail at the sensor's floor); designs the light of a hotel film so the architecture appears to light the room and no lamp reads as a source; works with mixed sources without colour casts | Light is the signature; the look is taught to other DPs by name |
-| Sound | Camera audio | Lavalier and boom, 48kHz 24-bit, room tone, wild lines, sync (timecode or slate), levels at minus 12 to minus 18 dBFS for dialogue | Sound design (Sonnenschein's layers: dialogue, ambience, effects, music), loudness delivery (minus 14 LUFS integrated for streaming platforms, minus 23 LUFS for EBU R128 broadcast), music licensing and composer briefing | Sound carries the brand; silence is used; the mix is referenced by other agencies |
+| Sound | Camera audio | Lavalier and boom, 48kHz 24-bit, room tone, wild lines, sync (timecode or slate), levels at minus 12 to minus 18 dBFS for dialogue | Sound design (Sonnenschein's layers: dialogue, ambience, effects, music), loudness delivery (about minus 14 LUFS integrated for most streaming and social normalisation, with per-platform targets in 15-lighting-and-sound.md; minus 23 LUFS for EBU R 128 broadcast), music licensing and composer briefing | Sound carries the brand; silence is used; the mix is referenced by other agencies |
 | Editing | Cuts to music | Assembly, rough cut, fine cut, picture lock; cuts on action; the J-cut and L-cut; Murch's rule of six (emotion 51 percent, story 23, rhythm 10, eye-trace 7, two-dimensional plane 5, three-dimensional space 4); knows the NLE (Premiere Pro, DaVinci Resolve, Final Cut Pro, Avid Media Composer) | Edits for the platform (hook inside 1 second for feed, 3 seconds for pre-roll); shapes rhythm with pauses; a one-minute edit from stock each week that passes crit | The edit is invisible; pacing is a signature; can save a badly shot film in the cut and knows when it cannot be saved |
 | Grading | Applies a LUT | Primary correction (exposure, white balance, contrast) then secondary (qualifiers, power windows); reads waveform, vectorscope and parade; works in a colour-managed pipeline (ACES or DaVinci Wide Gamut); knows Rec. 709 from Rec. 2020 and SDR from HDR (PQ, HLG) | Matches a reference grade shot for shot; builds a show LUT for the brand; grades for the delivery display (phone in sunlight in Dubai, OLED in a boardroom) | The grade is the look of the brand across years and DPs; colourists reference it |
 | Delivery | Exports "high quality" | Codec and container per platform (H.264 or H.265 in MP4 for social, ProRes 422 HQ for masters, ProRes 4444 for alpha); bitrate, frame rate, resolution and aspect ratio per spec; safe areas for 9:16 (UI overlays at top and bottom); captions burned or sidecar; archive with checksums | Delivery matrix for a campaign of 40 assets in 6 ratios and 4 languages built in an afternoon; QC pass (black frames, audio peaks, caption sync) before the client sees it | Delivery is a system the whole agency uses; nothing is re-exported twice |
@@ -212,14 +212,14 @@ Video is seven competencies, because a CD who can direct a shoot and cannot read
 |---|---|
 | Novice | Types a sentence into an image model and ships the first result; cannot tell a generated image from a photograph and does not check |
 | Competent | Uses the three-layer prompt system (see higgsfield-prompting); keeps a prompt library with seeds and settings; discloses AI use to clients; checks hands, text, reflections, physics; knows the current model roster (as of October 2026: Kling 3.0, Veo 3.1, Sora 2, WAN 2.6 on Higgsfield, per the higgsfield-prompting skill) |
-| Expert | Builds pipelines (keyframe to video to upscale to grade) with consistent identity across shots; uses AI for the parts a client cannot see (previs, boards, alt text, transcripts, first drafts) and real craft for the parts they can; tracks platform and regulatory rules (ASCI's guidelines on advertising in India, MeitY's proposed amendments to the IT Rules on labelling synthetically generated information, issued for consultation in October 2025, whose notification status must be verified before relying on them) |
+| Expert | Builds pipelines (keyframe to video to upscale to grade) with consistent identity across shots; uses AI for the parts a client cannot see (previs, boards, alt text, transcripts, first drafts) and real craft for the parts they can; tracks platform and regulatory rules: ASCI's code for advertising in India, and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026, notified by MeitY on 10 February 2026 and in force from 20 February 2026, which bring synthetically generated information (audio, visual or audio-visual content artificially or algorithmically created or altered so that it appears authentic) under the IT Rules with prominent labels and provenance metadata; a further draft amendment opened for comment in April 2026 and its status is unconfirmed as of October 2026 (see 22-ai-era-craft-and-generative-tools.md) |
 | Master | Decides where AI is forbidden in the agency's work and why; the house look survives the model's defaults; publishes the agency's AI policy clients cite |
 
 ### 2.17 Critique
 
 | Level | Observable behaviours |
 |---|---|
-| Novice | "I like it" or "make it pop"; lists 20 nitpicks; aims the critique at the maker instead of the work |
+| Novice | "I like it" or "make it pop"; lists 20 nitpicks; aims the critique at the maker |
 | Competent | Uses the design-taste critique format (verdict, what works, what does not and why, the fix with a reference); separates idea problems from craft problems; asks what the brief was before judging |
 | Expert | Finds the one problem that explains the other eleven; critiques with a reference the maker can open; knows when to stop a crit because the work is done; runs a crit that a room of ten leaves energised |
 | Master | The crit teaches a principle the maker applies for a decade; the room's taste rises measurably over a year; alumni cite the crits |
@@ -250,7 +250,7 @@ Taste, as design-taste defines it, is a trained prediction of what a sophisticat
 
 The visual memory a CD draws on is built by volume, and the volume is larger than most designers believe. A working rule for this corpus: 10,000 references seen with attention, filed and tagged, before judgement becomes reliable; about 200 a week sustained for a year. "With attention" means each reference is looked at for at least 30 seconds and one thing is named about it (the margin, the light, the pairing). Scrolling Pinterest at two images per second is exposure without encoding and builds nothing.
 
-Where the 10,000 comes from: Fonts In Use (launched December 2010 as a blog, full site July 2012) indexes thousands of real-world typographic uses; Brand New (a division of UnderConsideration, run by Bryony Gomez-Palacio and Armin Vit) reviews identities in its Reviewed, Noted, Spotted, Linked, Announced, Revisited and Collected categories, several entries a week, and has done so since 2006 (founding year from the site's history, verify); Siteinspire curates sites (Godly, the other long-running web gallery, redirected to recent.design when checked in October 2026); Mobbin states 621,500 screens on mobbin.com (read October 2026), with new content added weekly; a single issue of The Gentlewoman carries about 40 spreads worth measuring. A year of these at 200 a week is 10,400.
+Where the 10,000 comes from: Fonts In Use (launched December 2010 as a blog, full site July 2012) indexes thousands of real-world typographic uses; Brand New (a division of UnderConsideration, run by Bryony Gomez-Palacio and Armin Vit) reviews identities in its Reviewed, Noted, Spotted, Linked, Announced, Revisited and Collected categories, several entries a week, and has done so since 2006 (UnderConsideration's about page, read October 2026); Siteinspire curates sites (Godly, the other long-running web gallery, redirected to recent.design when checked in October 2026); Mobbin states 621,500 screens on mobbin.com (read October 2026), with new content added weekly; a single issue of The Gentlewoman carries about 40 spreads worth measuring. A year of these at 200 a week is 10,400.
 
 Exposure must be curated against the trash lists in design-taste references/worlds.md. A thousand Dribbble shots teach the Dribbble look; the cure is to weight the diet towards the canon (Pentagram, Studio Dumbar, Bureau Borsche, the fashion houses, the foundries) and towards primary artefacts (a printed Gentlewoman, a real Aesop bottle) over screenshots of them.
 
@@ -293,7 +293,7 @@ A reference library is a filed, tagged, retrievable collection of references; th
 
 | Tool | What it is | Use it for | Cost model (as of October 2026) |
 |---|---|---|---|
-| Are.na | Channel-based collecting; a block (one piece of content: image, link, text, file) can sit in many channels, and channels connect to channels; member-funded, no advertising | The thinking library: references grouped by idea, with connections across channels (a "brass" channel linked to "Jaipur light" and "hotel wayfinding") | Guest plan free with up to 200 total blocks; Premium USD 7 a month or USD 70 a year (are.na/about, read October 2026) |
+| Are.na | Channel-based collecting; a block (one piece of content: image, link, text, file) can sit in many channels, and channels connect to channels; member-funded, no advertising | The thinking library: references grouped by idea, with connections across channels (a "brass" channel linked to "Jaipur light" and "hotel wayfinding") | Guest plan free with up to 200 total connections (a connection is one block or channel added to a channel, so one block in three channels counts three); Premium USD 7 a month or USD 70 a year; Supporter USD 120 a year (are.na/about, read October 2026) |
 | Savee | Visual grid bookmarking with colour and tag filters, private boards and collaborative boards | The fast visual board: mood references by colour and texture; export a board to a shoot brief | Pro USD 9 a month, Portfolio USD 15 a month (adds a site on your own domain), Team USD 12 a seat a month from 2 seats; all billed yearly with a 25 percent yearly saving (savee.com/pricing, read October 2026; the domain moved from savee.it) |
 | Cosmos | Visual collecting with search by colour, "find similar" from one image, collections, collaboration, and a filter that shows, blurs or hides images flagged as AI-generated | Discovery when Savee runs dry; the AI filter is the reason to keep it, because a reference library polluted with generated images trains the eye on the AI default | Free to join; no prices shown on cosmos.so (read October 2026) |
 
@@ -326,7 +326,7 @@ The single habit that distinguishes experts from competents in the competency ma
 
 ## 4. The reading list by discipline
 
-One line each on why the book matters to the work. Years are first editions unless an edition is named; where an edition was verified for this file, it says so. The list is ordered as a syllabus: read down each discipline's table in order. An expert in a discipline has read all of its table; a master has read the adjacent tables too.
+One line each on why the book matters to the work. Years are first editions unless an edition is named; where an edition was verified for this file, it says so. The list is ordered as a syllabus: read down each discipline's table in order. An expert in a discipline has read all of its table; a master has read the adjacent tables too. Gary Hustwit's design documentaries (Helvetica, Objectified, Urbanized, Rams) belong on this syllabus and sit in section 5.7, because they are watched with the log.
 
 ### 4.1 Typography
 
@@ -341,10 +341,10 @@ One line each on why the book matters to the work. Years are first editions unle
 | Erik Spiekermann and E. M. Ginger | Stop Stealing Sheep and Find Out How Type Works | 1993; 3rd edition 2014 | Type as voice; why a face suits a brand; readable in an evening and quoted for a career |
 | Massimo Vignelli | The Vignelli Canon | 2010 | Vignelli's working rules in 100 pages: semantics, syntax, pragmatics; six typefaces are enough |
 | Emil Ruder | Typographie | 1967 | The Basel method: contrast, rhythm and the typographic exercise as training; the original copywork curriculum |
-| Karl Gerstner | Designing Programmes | 1964 (Lars Müller reissue 2007) | Design as a programme of parameters rather than a single solution; the ancestor of design systems and generative identity |
+| Karl Gerstner | Designing Programmes | 1964 (Lars Müller reissue 2007) | Design as a programme of parameters that generates a family of solutions; the ancestor of design systems and generative identity |
 | Kimberly Elam | Geometry of Design | 2001 | Proportion (golden section, root rectangles) measured on real posters and objects; teaches the eye to see the armature |
 | Kimberly Elam | Typographic Systems | 2007 | Eight systems (axial, radial, dilatational, random, grid, modular, transitional, bilateral) as a structured exercise set |
-| Cyrus Highsmith | Inside Paragraphs | 2012 | Typographic space (letterspace, wordspace, linespace, paragraph space) drawn rather than described; the fastest route to seeing spacing |
+| Cyrus Highsmith | Inside Paragraphs | 2012 | Typographic space (letterspace, wordspace, linespace, paragraph space) taught almost entirely in drawings; the fastest route to seeing spacing |
 | Fiona Ross | The Printed Bengali Character and Its Evolution | 1999 | Indic type history from a practitioner who designed it; the grounding for any Devanagari or Bengali typesetting decision |
 | Huda Smitshuijzen AbiFarès | Arabic Typography: A Comprehensive Sourcebook | 2001 | Arabic letterforms, calligraphic styles and typesetting conventions; required before setting a Gulf brand's Arabic |
 
@@ -353,7 +353,7 @@ One line each on why the book matters to the work. Years are first editions unle
 | Author | Title | Year | Why it matters |
 |---|---|---|---|
 | Paul Rand | Thoughts on Design | 1947 | The argument that form and function are one argument; the humour and economy of the IBM and ABC marks explained by their maker |
-| Paul Rand | Design, Form, and Chaos | 1993 | Rand's late defence of the logo as a flag rather than an illustration; includes his presentation booklets, the model for every identity pitch since |
+| Paul Rand | Design, Form, and Chaos | 1993 | Rand's late defence of the logo as a flag, a sign of identity that need not depict the business; includes his presentation booklets, the model for every identity pitch since |
 | Dieter Rams | Less but Better (Weniger, aber besser) | 1995 | The ten principles of good design in Rams's own words and products; the discipline of leaving out |
 | Josef Albers | Interaction of Color | 1963 | Colour is relative: the same hue reads differently against every ground; the exercises are still the best colour training there is |
 | Johannes Itten | The Art of Color | 1961 | The seven colour contrasts (hue, light-dark, cold-warm, complementary, simultaneous, saturation, extension) as a working vocabulary |
@@ -400,7 +400,7 @@ One line each on why the book matters to the work. Years are first editions unle
 | Val Head | Designing Interface Animation | 2016 | Motion for product: principles, easing, duration, choreography, and the brand's motion voice |
 | Steve Portigal | Interviewing Users | 2013; 2nd edition 2023 | How to run a research interview that yields something; the discussion guide, the silence, the follow-up |
 | Erika Hall | Just Enough Research | 2013; 2nd edition 2019 | Research scoped to the decision; the antidote to both no research and research theatre |
-| Teresa Torres | Continuous Discovery Habits | 2021 | Weekly customer touchpoints, opportunity solution trees, assumption testing; discovery as a habit rather than a phase |
+| Teresa Torres | Continuous Discovery Habits | 2021 | Weekly customer touchpoints, opportunity solution trees, assumption testing; discovery as a weekly habit that runs alongside delivery |
 | Jake Knapp | Sprint | 2016 | The five-day sprint (map, sketch, decide, prototype, test); a structure for a client workshop that ends in evidence |
 | Jeff Gothelf and Josh Seiden | Lean UX | 2013; 3rd edition 2021 | Outcomes over outputs; hypotheses, MVPs and the collaborative design process for product teams |
 | Brad Frost | Atomic Design | 2016 | Atoms, molecules, organisms, templates and pages (Frost's own term for the fourth level); the mental model behind component systems |
@@ -425,6 +425,8 @@ One line each on why the book matters to the work. Years are first editions unle
 |---|---|---|---|
 | Frank Thomas and Ollie Johnston | The Illusion of Life: Disney Animation | 1981 | The 12 principles of animation (squash and stretch, anticipation, staging, follow-through, slow in and slow out, arcs, secondary action, timing, exaggeration, solid drawing, appeal, straight-ahead and pose-to-pose); every interface easing descends from these |
 | Richard Williams | The Animator's Survival Kit | 2001 | Timing and spacing drawn frame by frame; the practical manual for anyone who animates anything |
+| Harold Whitaker and John Halas | Timing for Animation | 1981; 2nd edition 2009, revised by Tom Sito | Timing as the carrier of weight and meaning, counted in frames; the book that makes "duration chosen by feel" (section 2.12, novice) impossible |
+| Rachel Nabors | Animation at Work | 2017 | Interface animation as communication: what each motion tells the user, and how to argue for it with a product team |
 
 ### 4.7 Film: directing, cinematography, editing, sound, grading
 
@@ -434,7 +436,7 @@ One line each on why the book matters to the work. Years are first editions unle
 | Steven D. Katz | Film Directing Shot by Shot | 1991; 2nd edition 2019 | Storyboarding, staging, coverage, camera movement; the visualisation manual |
 | Joseph V. Mascelli | The Five C's of Cinematography | 1965 | Camera angles, continuity, cutting, close-ups, composition; the grammar of the shot |
 | Blain Brown | Cinematography: Theory and Practice | 2002; 4th edition 2022, 528 pages (verified) | Lenses, exposure, lighting, colour, camera systems, data workflow; the complete DP textbook |
-| Gustavo Mercado | The Filmmaker's Eye | 2010; 2nd edition 2022 | Every shot type with a worked example and the rule it breaks; the fastest shot-vocabulary builder |
+| Gustavo Mercado | The Filmmaker's Eye | 2010 | Every shot type with a worked example and the rule it breaks; the fastest shot-vocabulary builder |
 | Steve Hullfish and Jaime Fowler | Color Correction for Video | 2003; 2nd edition 2008 | The scopes-first method (waveform, vectorscope) for correction; the book that taught editors to grade |
 | Alexis Van Hurkman | Color Correction Handbook: Professional Techniques for Video and Cinema | 2010; 2nd edition November 2013, 672 pages (verified) | Primary and secondary correction, scene matching, looks, HDR; the grading reference used with DaVinci Resolve |
 | Steve Hullfish | Art of the Cut | 2017 | Interviews with working feature editors on method; the companion to Murch |
@@ -463,7 +465,7 @@ One line each on why the book matters to the work. Years are first editions unle
 | Author | Title | Year | Why it matters |
 |---|---|---|---|
 | James Webb Young | A Technique for Producing Ideas | 1940 | Gather, digest, incubate, illuminate, verify; the five steps in 48 pages, still the method |
-| Luke Sullivan | Hey Whipple, Squeeze This | 1998; 6th edition (year unverified for this file) | How to write and art-direct an ad that is an idea; the funniest serious book in the field |
+| Luke Sullivan | Hey Whipple, Squeeze This | 1998; revised in several later editions (check the current edition before buying) | How to write and art-direct an ad that is an idea; the funniest serious book in the field |
 | Jon Steel | Truth, Lies and Advertising | 1998 | Account planning from Goodby Silverstein: the brief as the creative's best tool, with the Got Milk case |
 | John Hegarty | Hegarty on Advertising | 2011 | BBH's founder on the idea, the brand, the agency; "when the world zigs, zag" in its original form |
 | David Ogilvy | Ogilvy on Advertising | 1983 | The research-driven craft of the long-copy ad and the brand image; the headline rules still hold |
@@ -502,7 +504,7 @@ The log format, one line per item: date, source, title, the three things, the re
 | WWDC design talks | Apple's annual developer conference, held each June; design sessions and the Apple Design Awards sit under the Design topic on developer.apple.com/videos | How Apple argues a design decision with motion, typography and a single demo; the Human Interface Guidelines applied by the people who wrote them; the Design Awards as the interface canon for the year | WWDC26 sessions are online; the WWDC26 page lists the Apple Design Awards and an Icon Composer group lab among the design-adjacent items; dates for 2027 were not posted when read |
 | Config | Figma's conference on product design, design systems and tooling | Design systems talks from the teams that run them (Linear, Stripe, Shopify, Airbnb among past speakers); the state of design-to-code | Config 2027 is scheduled for 25 to 27 May 2027 at Pier 80, San Francisco (config.figma.com); past years' talks are on Figma's YouTube channel |
 | Awwwards conference | The conference arm of the web awards; irregular | WebGL, scroll narrative and agency process talks from the studios in design-taste references/currency-2026.md section 6 (Locomotive, Resn, Immersive Garden) | The conferences page, read October 2026, lists Amsterdam (15 to 16 September 2022) and a cancelled Toronto 2023 edition with nothing later; the talk archive is on Awwwards' YouTube channel |
-| OFFF Barcelona | Annual festival of creativity and design in Barcelona since 2001 | Motion and illustration studios presenting process rather than reels; the European motion scene in one room | offf.barcelona; dates for the next edition were not readable when checked |
+| OFFF Barcelona | Annual festival of creativity and design in Barcelona since 2001 | Motion and illustration studios showing their process from first sketch to final frame; the European motion scene in one room | offf.barcelona; dates for the next edition were not readable when checked |
 | Semi Permanent | Creative festival founded in Sydney in 2003; editions in Australia, New Zealand and elsewhere | Brand and studio talks with the work shown large; Asia-Pacific creative direction | The 2026 edition is Tokyo Salone, 13 to 17 November 2026, with Teenage Engineering and yes (semipermanent.com) |
 | D&AD masterclasses | D&AD's paid short courses for working creatives, taught by practitioners | The D&AD Annual (Pencils) as the advertising canon; the courses on creative direction and art direction | dandad.org; the training pages were not readable at verification time, so check the current listing and price before booking |
 | Cannes Lions archive | The advertising festival's winners archive (Love the Work) | The last 20 years of Grand Prix work by category; what a jury of CDs rewards | lovethework.com, subscription; the festival runs each June in Cannes |
@@ -535,10 +537,10 @@ How to study one: watch once straight through; watch again with the sound off an
 
 | Studio | Where and since | Study it for |
 |---|---|---|
-| Buck | Founded 2004 by Ryan Honey and Orion Tait; Los Angeles, New York, Sydney and Amsterdam; buck.co | Styleframes before animation; character and typographic motion with weight; the reel as proof that a design studio can own motion end to end |
+| Buck | Founded 2004 (co-founders include Ryan Honey and Orion Tait); studios in Los Angeles, New York, Sydney, Amsterdam and London (buck.co/about, read October 2026) | Styleframes before animation; character and typographic motion with weight; the reel as proof that a design studio can own motion end to end |
 | ManvsMachine | Founded 2007 by Mike Alderson and Tim Swift; London and Los Angeles; mvsm.com | Abstraction and material in 3D for Apple, Nike and others; how a product becomes a motion idea without a narrative |
 | Ordinary Folk | Vancouver motion studio led by Jorge R. Canedo E.; ordinaryfolk.co | Product and brand motion with precise easing; the shot-by-shot clarity that makes its work the standard reproduction set in section 6.6 |
-| Studio Dumbar | Rotterdam, founded 1977 by Gert Dumbar, part of Dept since 2016; creative director Liza Enebeis; studiodumbar.com | Living identities where the motion is the identity (OutSystems is the cited case in design-taste references/currency-2026.md); case films that show the system across print, screen and environment |
+| Studio Dumbar | Rotterdam, founded 1977 by Gert Dumbar, now part of DEPT; creative director Liza Enebeis (studiodumbar.com/about, read October 2026) | Living identities where the motion is the identity (OutSystems is the cited case in design-taste references/currency-2026.md); case films that show the system across print, screen and environment |
 | Pentagram | Founded 1972 in London; partner-owned; pentagram.com/work | Case studies written as arguments: problem, idea, system, evidence; the format every Mask360 case study copies |
 
 ### 5.6 Daily feeds for the eye
@@ -549,10 +551,26 @@ How to study one: watch once straight through; watch again with the sound off an
 | Fonts In Use | Archive of real-world typography, launched as a blog in December 2010 and as the full site in July 2012; indexed by typeface, format and industry | The source for "who has set this face, where, and did it work"; check before any typeface is proposed |
 | Typewolf | Jeremiah Shoaf's side project since June 2013: one site of the day, a Tuesday email, font recommendation lists and guides | Live type pairings in context; the free-font guide for client budgets that cannot license |
 | Mobbin | Library of product screens and flows; 621,500 screens stated on mobbin.com, new content weekly; paid | Flow references for app work; the reproduction source for section 6.5 |
-| Siteinspire | Curated web design gallery run by Howells Studio since 2008 (the about page was rate-limited at verification; verify) | Editorial and brand sites; filter by style and type for reference boards |
-| recent.design (formerly Godly) | godly.website redirected to recent.design when checked in October 2026; "The best design inspiration on the Internet" | Web gallery for the rising layer of the wave; cross-check with the Awwwards nominees |
+| Siteinspire | Curated web design gallery, filterable by style, type and subject (founder and launch year not confirmed: the about page returned a rate-limit error on 29 October 2026) | Editorial and brand sites; filter by style and type for reference boards |
+| recent.design (formerly Godly) | godly.website returned a permanent (301) redirect to recent.design when checked on 29 October 2026; "The best design inspiration on the Internet" | Web gallery for the rising layer of the wave; cross-check with the Awwwards nominees |
 | It's Nice That, Creative Boom | Design journalism; the two trend sources named in design-taste's quarterly refresh | The quarterly read (section 8); daily for exposure volume |
 | The Brand Identity, Dieline | Identity case studies (thebrandidentity.com) and packaging (thedieline.com) | Identity and packaging references that show the whole system beyond the hero image |
+
+### 5.7 Design documentaries and series
+
+Documentaries are the one place where the masters in section 4 can be watched deciding. Watch each with the log (section 5.1), and file the work of every designer interviewed into the reference library (section 3.7) with an articulation line.
+
+| Film or series | Year and maker | Study it for |
+|---|---|---|
+| Helvetica | 2007, Gary Hustwit (his directing debut) | One typeface as the lens on modernism and its critics; Massimo Vignelli, Wim Crouwel, Erik Spiekermann, Paula Scher, David Carson and Michael Bierut arguing on camera, which is the fastest way to hear the positions behind 03-typography.md |
+| Objectified | 2009, Gary Hustwit | Industrial design and the objects we live with; Dieter Rams, Jonathan Ive, Marc Newson and Hella Jongerius explaining how a product earns its form; the reference for packaging and product work in 20-print-packaging-ooh-and-physical-production.md |
+| Urbanized | 2011, Gary Hustwit (the third film of his design trilogy) | The design of cities by architects, planners and policymakers; the scale at which wayfinding, real estate and hospitality clients think |
+| Rams | 2018, Gary Hustwit, original music by Brian Eno | A portrait of Dieter Rams at home and at work; the ten principles of Less but Better (section 4.2) seen as a life's practice |
+| Eno | 2024, Gary Hustwit; premiered at the Sundance Film Festival in 2024 | A documentary assembled by generative software so that each screening is a different cut; the clearest working example of a generative system with an authored voice, which is the question 22-ai-era-craft-and-generative-tools.md asks of every AI pipeline |
+| Abstract: The Art of Design | Netflix, season 1 2017, season 2 2019 | One designer per episode (Paula Scher, Es Devlin, Christoph Niemann, Ilse Crawford, Bjarke Ingels, Olafur Eliasson, Jonathan Hoefler and others); the working process behind a finished body of work, used for the "how the best designers think" material in 27-how-the-best-designers-think.md |
+| Ways of Seeing | BBC, 1972, John Berger; four episodes | The television series the book came from; episode four, on publicity, is the critique every luxury campaign must survive |
+| Dior and I | 2014, Frédéric Tcheng | Raf Simons's first haute couture collection for Dior, made in eight weeks; a creative director, an atelier and a deadline, which is the Mask360 fashion and beauty client's world from the inside |
+| Jiro Dreams of Sushi | 2011, David Gelb | Deliberate practice (section 3.5) made visible: apprentices repeating one task for years until the master accepts it; show it to a junior before the exercise ladder starts |
 
 ## 6. The exercise ladder per discipline
 
@@ -624,7 +642,7 @@ Stock is used because the exercise isolates editing from shooting. Method: pick 
 
 ### 6.9 The weekly grade match
 
-A grade match is the reproduction of a reference frame's colour and tone on different footage. Method: choose a reference frame (a Deakins or Lubezki frame from section 5.4, or a frame from a fashion film in 6.7); grade one of the week's stock clips to match using primaries first (exposure, white balance, contrast) then secondaries (qualifiers, power windows), reading the waveform, vectorscope and RGB parade rather than the picture alone; export a side-by-side. Pass: a colleague shown the two frames blind cannot say which is the reference in two seconds, and the scopes match within tolerance. Outcome by 52: the expert behaviour in section 2.13 under grading, and a show LUT (a look-up table that carries a show's look across shots) for the house's own films.
+A grade match is the reproduction of a reference frame's colour and tone on different footage. Method: choose a reference frame (a Deakins or Lubezki frame from section 5.4, or a frame from a fashion film in 6.7); grade one of the week's stock clips to match using primaries first (exposure, white balance, contrast) then secondaries (qualifiers, power windows), reading the waveform, vectorscope and RGB parade alongside the picture; export a side-by-side. Pass: a colleague shown the two frames blind cannot say which is the reference in two seconds, and the scopes match within tolerance. Outcome by 52: the expert behaviour in section 2.13 under grading, and a show LUT (a look-up table that carries a show's look across shots) for the house's own films.
 
 ### 6.10 The 20 briefs
 
@@ -632,7 +650,7 @@ Write 20 one-page briefs, one a fortnight, for real or plausible house clients. 
 
 ### 6.11 The 10 crits
 
-Run ten Friday crits over the year using the format in section 3.8 and design-taste section 8. The leader's job is distinct from the attendee's: hold the room to the idea problem first, protect the maker from a pile-on, limit each fix to one reference opened on screen, and end with a decision recorded. Pass: the room rates the crit afterwards (anonymous, 1 to 5) on "I know what to do next" and the median is 4 or above; the verdict for each piece is recorded and the trend across rounds is tracked. Outcome by 10: the expert behaviour in section 2.17 and the habit of ending a crit with a decision rather than a list.
+Run ten Friday crits over the year using the format in section 3.8 and design-taste section 8. The leader's job is distinct from the attendee's: hold the room to the idea problem first, protect the maker from a pile-on, limit each fix to one reference opened on screen, and end with a decision recorded. Pass: the room rates the crit afterwards (anonymous, 1 to 5) on "I know what to do next" and the median is 4 or above; the verdict for each piece is recorded and the trend across rounds is tracked. Outcome by 10: the expert behaviour in section 2.17 and the habit of ending every crit with one recorded decision.
 
 ## 7. The 12-month programme
 
@@ -710,7 +728,7 @@ Three levels, each with a format, so a reader can tell at a glance how old a cla
 A section is retired when its subject is discontinued (a tool withdrawn, a model removed from the roster), superseded (a standard replaced, a spec changed), or overruled (a house decision changes, in which case the design-taste house layer is updated first). The procedure:
 
 1. Replace the section body with a retirement notice in this format: "Retired <month year>: <reason in one sentence>. Replaced by <file, section>." Keep the heading and its number.
-2. Leave the notice in place for one quarter, so a session that cached the old rule finds the pointer instead of a missing section.
+2. Leave the notice in place for one quarter, so a session that cached the old rule finds a pointer where the section was.
 3. Delete the section at the following refresh and record the deletion in the refresh log.
 4. Never renumber H2 sections inside a quarter: sibling files cross-reference by section number ("see 04-colour.md, section 6"), and renumbering breaks them silently. Renumber only at the annual rebuild, with every cross-reference in the corpus grepped and corrected in the same pass.
 
@@ -723,6 +741,7 @@ A refresh of the affected file is run within two weeks, outside the quarterly cy
 | Date | Files touched | What moved | Trigger |
 |---|---|---|---|
 | October 2026 | All 29 files | Initial write; every time-sensitive claim dated October 2026; this file's verification run on 28 October 2026 | Corpus creation |
+| 29 October 2026 | 00 | MeitY synthetic-media rules moved from proposed to notified (in force 20 February 2026); Are.na free-tier cap corrected from blocks to connections; WCAG 3.0 Working Draft date, Config 2027 dates, Tokyo Salone dates, Savee prices, the Mobbin screen count and the Godly redirect re-confirmed; edition years that could not be confirmed removed; design documentaries added (section 5.7) | Out-of-cycle refresh: a rule notified in India (section 8.4) |
 
 Each quarterly pass adds one row per file touched. The log is the corpus's memory of its own ageing; a file with no row for four quarters is overdue by definition.
 
@@ -829,6 +848,7 @@ Build the profile from the evidence set (three pieces, one crit, one brief) by s
 - Blind reconstruction: a drill in which a reference is viewed for 10 seconds, closed, redrawn from memory as a wireframe and compared with the original.
 - Block (Are.na): one piece of content (image, link, text, file) that can sit in many channels.
 - Competency map: the table of disciplines by level (novice, competent, expert, master) with observable behaviours for each.
+- Connection (Are.na): one block or channel added to a channel; the unit the free Guest plan caps at 200.
 - Copywork: reproduction of a master's work by hand, measured against the original, to learn its decisions from the inside.
 - Core Web Vitals: Google's three field metrics for page experience: Largest Contentful Paint, Interaction to Next Paint and Cumulative Layout Shift, judged at the 75th percentile.
 - Crit: a critique session in which finished or in-progress work is judged against the brief with a verdict, what works, what does not and the fix with a reference.
@@ -877,6 +897,7 @@ Build the profile from the evidence set (three pieces, one crit, one brief) by s
 - Shot-for-shot analysis: a written list of every cut in a film with size, movement, lens estimate, light, duration and cut type, plus a rhythm graph.
 - Show LUT: a look-up table that carries one production's look across shots and days.
 - Stock edit: a timed edit cut entirely from licensed stock footage to isolate editing skill from shooting.
+- Synthetically generated information: the term in India's IT Rules, as amended in 2026, for audio, visual or audio-visual content artificially or algorithmically created or altered so that it appears authentic; it must carry a prominent label and provenance metadata.
 - System 1: Kahneman's fast, intuitive mode of thought, the mode in which taste judgements form.
 - Total ink coverage: the sum of the four CMYK percentages at a point, capped by the stock (about 300 percent on coated paper).
 - Tracking and kerning: the uniform adjustment of spacing across a run of letters (tracking) and the adjustment between one specific pair (kerning).
@@ -898,10 +919,19 @@ Books (author, title, year): every title in section 4 is a source for this file,
 Specifications and standards:
 
 - W3C, Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation, published 5 October 2023, updated 12 December 2024. https://www.w3.org/TR/WCAG22/ and the overview at https://www.w3.org/WAI/standards-guidelines/wcag/
-- W3C, W3C Accessibility Guidelines (WCAG) 3.0, Working Draft, 10 September 2026. https://www.w3.org/TR/wcag-3.0/
+- W3C, W3C Accessibility Guidelines (WCAG) 3.0, Working Draft, 10 September 2026. https://www.w3.org/TR/wcag-3.0/ and the publication history at https://www.w3.org/standards/history/wcag-3.0/
+- Ministry of Electronics and Information Technology (MeitY), Government of India, Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026, notified 10 February 2026, in force 20 February 2026. https://www.meity.gov.in/
 - EBU, R 128-2023, Loudness normalisation and permitted maximum level of audio signals, version 5, November 2023. https://tech.ebu.ch/publications/r128
 - Google, Web Vitals (Core Web Vitals thresholds and the 75th percentile rule), last updated 31 October 2024. https://web.dev/articles/vitals
 - European Union, Directive (EU) 2019/882 on the accessibility requirements for products and services (the European Accessibility Act), applying from 28 June 2025. https://eur-lex.europa.eu/eli/dir/2019/882/oj
+
+Films and series:
+
+- Gary Hustwit (director), Helvetica, 2007; Objectified, 2009; Urbanized, 2011; Rams, 2018; Eno, 2024.
+- Abstract: The Art of Design, Netflix, 2017 and 2019.
+- John Berger, Ways of Seeing, BBC, 1972, four episodes.
+- Frédéric Tcheng (director), Dior and I, 2014.
+- David Gelb (director), Jiro Dreams of Sushi, 2011.
 
 Articles, papers and talks:
 
@@ -910,7 +940,12 @@ Articles, papers and talks:
 - Jakob Nielsen, "Why You Only Need to Test with 5 Users", Nielsen Norman Group, 2000. https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/
 - Ira Glass, "Ira Glass on Storytelling", four-part video series, Current TV, 2009 (part 3 on the gap between taste and ability).
 - Fonts In Use, About page (launch history). https://fontsinuse.com/about
-- Brand New, UnderConsideration. https://www.underconsideration.com/brandnew/
+- Brand New, UnderConsideration. https://www.underconsideration.com/brandnew/ and UnderConsideration, About (Brand New launched 2006). https://www.underconsideration.com/about/
+- Hogan Lovells, "India introduces mandatory labelling for AI and 3-hour takedown for illegal content", 2026. https://www.hoganlovells.com/en/publications/india-introduces-mandatory-labelling-for-ai-and-3hour-takedown-for-illegal-content
+- Buck, About. https://buck.co/about
+- Studio Dumbar, About. https://www.studiodumbar.com/about
+- recent.design (formerly Godly). https://recent.design/
+- Gary Hustwit, About. https://hustwit.com/about
 - Typewolf, About page (Jeremiah Shoaf, launched June 2013). https://www.typewolf.com/about
 - Mobbin (library size as stated on the home page). https://mobbin.com/
 - Are.na, About page (Guest and Premium plans). https://www.are.na/about

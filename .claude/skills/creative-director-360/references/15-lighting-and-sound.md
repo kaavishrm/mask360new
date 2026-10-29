@@ -21,8 +21,10 @@ The two crafts that separate professional moving image from everything else, wri
 15. [Sonic branding](#15-sonic-branding)
 16. [Tools as of October 2026](#16-tools-as-of-october-2026)
 17. [Reference tables](#17-reference-tables)
-18. [Terms introduced](#terms-introduced)
-19. [Sources and further reading](#sources-and-further-reading)
+18. [Checklists for the creative director](#18-checklists-for-the-creative-director)
+
+- [Terms introduced](#terms-introduced)
+- [Sources and further reading](#sources-and-further-reading)
 
 ## 1. Light physics for designers
 
@@ -96,7 +98,7 @@ Each setup below is given as a diagram in words, with a starting fixture and dis
 - Fill: opposite side, lower intensity, at or near camera height. Start: 120 by 120 cm white bounce at 1.5 m catching key spill, or a 1 by 1 panel through half-grid at a quarter of the key's level. Ratio set here (see 1.5).
 - Back (hair or rim): behind the subject, high, opposite the key, aimed at hair and shoulders to separate them from the background. Start: Aputure 300d II with a 15 degree reflector plus quarter-grid, 2 m behind, flagged off the lens.
 
-Three point is the grammar, not the look. Corporate video is three point at 2:1 with all three visible; the luxury version removes the fill, replaces the back light with a window, and lets the key fall off.
+Three point is the grammar; the look is built on top of it. Corporate video is three point at 2:1 with all three visible; the luxury version removes the fill, replaces the back light with a window, and lets the key fall off.
 
 ### 2.2 Rim and kicker
 
@@ -155,7 +157,7 @@ Light continuity is the reason a brand film from one DP cuts together and one fr
 
 ### 2.13 The Deakins single source philosophy
 
-Roger Deakins (Oscars for Blade Runner 2049 and 1917; the Team Deakins podcast since April 2020; Reflections: On Cinematography, 2025) has argued on his forum and podcast for years for lighting from one big soft source, placed where the real light in the scene would come from, with everything else either bounce from that source or negative fill. His reasons: one source gives one set of shadows, which the eye reads as true; it keeps the crew fast; and it forces the director to block for light rather than light for blocking. For Mask360 this is the default for hospitality and founder films: one large source (a 2.4 by 2.4 m book light or a window), a black side, and practicals for colour. Add a second source only when the frame has a visible reason for it.
+Roger Deakins (Oscars for Blade Runner 2049 and 1917; the Team Deakins podcast since April 2020; Reflections: On Cinematography, 2025) has argued on his forum and podcast for years for lighting from one big soft source, placed where the real light in the scene would come from, with everything else either bounce from that source or negative fill. His reasons: one source gives one set of shadows, which the eye reads as true; it keeps the crew fast; and it makes the director stage the action around the light. For Mask360 this is the default for hospitality and founder films: one large source (a 2.4 by 2.4 m book light or a window), a black side, and practicals for colour. Add a second source only when the frame has a visible reason for it.
 
 The contested position: commercials DPs working with beauty and product often prefer multiple small controlled sources, because the client needs a specific highlight on a specific surface and a single source cannot be shaped that finely. Both are right in their field. The house follows Deakins for people and spaces and the multi-source school for product under 30 cm.
 
@@ -175,7 +177,7 @@ Harsh noon is a hard source from directly above: panda eyes, hot foreheads, blac
 
 ### 3.3 Shade and open shade; window direction
 
-Open shade (the subject in shadow, lit by the open sky) is the location portrait default: soft, directional from the sky side, cool. Correct the blue in camera (white balance 7,000 to 8,000 K) or let it sit against a warm background for contrast. Window direction for interiors: east windows give hard morning light and soft afternoons, west the reverse, north (in the northern hemisphere) soft all day, south hard most of the day. Recce with a compass app and the sun path tool, then write the room schedule from the windows, not from the call sheet.
+Open shade (the subject in shadow, lit by the open sky) is the location portrait default: soft, directional from the sky side, cool. Correct the blue in camera (white balance 7,000 to 8,000 K) or let it sit against a warm background for contrast. Window direction for interiors: east windows give hard morning light and soft afternoons, west the reverse, north (in the northern hemisphere) soft all day, south hard most of the day. Recce with a compass app and the sun path tool, then write the room schedule from the windows and fit the call sheet to it.
 
 ### 3.4 Mixing natural and artificial
 
@@ -217,7 +219,7 @@ Values below are published transmission figures where the maker states them and 
 | Bleached muslin | Soft, neutral | about 1 to 1.5 stops |
 | Magic cloth (Rosco 3090 Soft Frost class) | Smoother than 216 with less loss, no hot spot | about 1 stop |
 
-Reason to care about the stop values: a 600 W COB through full grid cloth on a 2.4 m frame at 3 m delivers roughly the light of a 150 W bare lamp, which is below what a Sony Venice 2 at ISO 800 and T4 needs for a bright interior. Plan the fixture from the loss, not from the brochure.
+Reason to care about the stop values: a 600 W COB through full grid cloth on a 2.4 m frame at 3 m delivers roughly the light of a 150 W bare lamp, which is below what a Sony Venice 2 at ISO 800 and T4 needs for a bright interior. Plan the fixture from the metered loss through the frame, because brochure figures are measured bare.
 
 ### 4.3 Flags, cutters, floppies, nets, grids, snoots, barn doors
 
@@ -257,15 +259,15 @@ A hazer puts a fine, long-hanging mist (water-based glycol or glycerine fluid, o
 | Fixture | Power | Type | Published figures | Notes |
 |---|---|---|---|---|
 | Aputure LS 600d Pro | 600 W, 720 W max draw | Daylight 5,600 K | about 8,500 lux at 3 m with the Hyper Reflector; the LS 600d reaches 29,300 lux at 3 m with the F10 Fresnel | The workhorse of Indian and Gulf commercials rental; Bowens mount; weather resistant |
-| Aputure LS 600c Pro II | 600 W | Tunable colour (RGBWW) | listed at $1,490 on aputure.com in October 2026 | Replaces the 600c Pro; use it where one lamp must be key and coloured accent across a day |
+| Aputure LS 600c Pro II | 600 W | Tunable colour (RGBWW), 2,300 to 10,000 K | 91,500 lux at 1 m with the Hyper Reflector, about 82 percent above the first generation; IP54; launched 2024 (Cine Gear Expo); listed at $1,490 on aputure.com in October 2026 | Replaces the 600c Pro; use it where one lamp must be key and coloured accent across a day |
 | Aputure LS 600x Pro | 600 W | Bi-colour 2,700 to 6,500 K | listed $1,393 | |
 | Aputure LS 1200d Pro | 1,200 W COB, 1,440 W max draw | Daylight | 83,100 lux at 3 m with the narrow 15 degree Hyper Reflector, 22,400 at 30 degrees, 9,610 at 55 degrees; 8.94 kg; $3,390 | The window-through-diffusion lamp; approaches a 1,200 W HMI in a Fresnel and needs no ballast |
 | Aputure STORM CS32 | 3,200 W | Tunable colour | listed $7,590 (Cine Kit with CF16 Fresnel $10,499) | The large tunable source for stages and day exteriors |
 | Aputure LS 300d II, LS 300x | 300 W | Daylight and bi-colour | LS 300d II listed $759 | Kickers, backlights, small interiors |
 | Nanlux Evoke 2400B | 2,400 W | Bi-colour 2,700 to 6,500 K with green and magenta plus or minus 80 | CRI 96, TLCI 97; over 300,000 lux at 1 m; IP55; AC 100 to 240 V at 26 A max | The HMI replacement for sunlight through a window |
-| Nanlux Evoke 5000B | 5,000 W | Bi-colour 2,700 to 6,500 K | CRI 97, TLCI 98, TM-30 Rf 96 and Rg 102, SSI 85 at 3,200 K and 74 at 5,600 K; 95 degree beam; IP66; about 46 kg; 44 dB(A) in smart fan mode; $14,800 to $15,500 | Nanlux states its output approaches a 9 kW HMI; needs a 52 A circuit, so a generator or a venue's three-phase feed |
+| Nanlux Evoke 5000B | 5,000 W | Bi-colour 2,700 to 6,500 K | CRI 97, TLCI 98, TM-30 Rf 96 and Rg 102, SSI 85 at 3,200 K and 74 at 5,600 K; about 555,250 lux at 1 m at 5,600 K with the reflector at 45 degrees; IP66; 46 kg with yoke; 44 dB(A) in smart fan mode; US list $14,800 to $15,500 (American Cinematographer); about 19.8 lakh rupees in India including GST and duty on a 2025 retailer listing | Nanlux states its output approaches a 9 kW HMI; maximum draw 5,200 W, about 23 A at 230 V, beyond any 16 A Indian socket, so a generator or a venue's three-phase feed |
 
-The LS 600d Pro II and LS 1200d Pro II were not listed on aputure.com in October 2026; if a rental house offers a "Pro II" daylight COB, verify the model on the lamp head. The AI image-prompt vocabulary of "an Aputure 600d through a book light" refers to this class of lamp (section 7).
+The 2024 "Pro II" generation applied to the 600c only; no daylight LS 600d Pro II or LS 1200d Pro II had been announced as of October 2026, so if a rental house lists one, verify the model on the lamp head. The AI image-prompt vocabulary of "an Aputure 600d through a book light" refers to this class of lamp (section 7).
 
 ### 5.2 Panels and soft sources
 
@@ -273,7 +275,7 @@ Aputure NOVA II 1x1 (500 W, tunable colour, $1,899) and NOVA 9 degree 2x1 (650 W
 
 ### 5.3 Tubes and pixel sources
 
-- Astera Titan Tube: 72 W total LED power, 48 W max draw, 2,900 lm, 1,750 to 20,000 K, CRI and TLCI above 96, 16 individually controllable pixels, 120 degree beam, battery powered, CRMX and app control. A photobiological test report dated 29 May 2026 covers the Titan Tube BTB (model FP1-BTB, 24 V DC 48 W), so expect the BTB variant on rental lists.
+- Astera Titan Tube: 72 W total LED power, 48 W max draw, 2,900 lm, 1,750 to 20,000 K, CRI and TLCI above 96, 16 individually controllable pixels, 120 degree beam, battery powered, CRMX and app control.
 - Quasar Science Rainbow 2: 2 ft (25 W, 10 pixels), 4 ft (50 W, 24 pixels) and 8 ft; 1,750 to 10,000 K; CRI up to 95, SSI up to 91, TM-30 up to 94; DMX, sACN, Art-Net, CRMX, W-DMX and Bluetooth.
 - Use: hidden in architecture (under a bar counter, behind a headboard, inside a car), as practicals that look like neon, as a moving pixel effect (a passing car's lights) and as a soft wrap on skin at close range. Tubes are what made the 2020s hotel-room look possible with a two-person crew.
 
@@ -307,7 +309,7 @@ Bi-colour lamps (two white emitter sets) give more output and better skin at any
 
 The physics: darker skin reflects less light and has more specular sheen relative to its diffuse return, so an exposure that is right for a light-skinned subject underexposes a dark-skinned one, and a flat front light makes dark skin look grey and dull because it suppresses the sheen that gives it form. The craft answers, associated with Bradford Young (Pariah 2011, Selma 2014, A Most Violent Year 2014, Arrival 2016 for which he was the first African American nominee for the cinematography Oscar; he favours raw light and shooting into it, and lit a Pariah bedroom with Christmas lights and an IKEA lamp), with James Laxton on Moonlight (2016), and set out plainly by Ava Berkofsky (cinematographer of HBO's Insecure) in a 2017 interview with Mic:
 
-- Expose for the skin, not the room: let a white wall go bright rather than drop the face. Set the key by an incident reading at the face and ignore the camera's auto exposure.
+- Expose for the skin and let the room fall where it falls: a white wall going bright is acceptable, because an underexposed dark face cannot be rescued in the grade without noise and a grey cast. Set the key by an incident reading at the face and ignore the camera's auto exposure.
 - Use harder, more directional light with a specular component (a 90 cm octa close, or a silver bounce) so the skin's sheen draws the bone structure; a huge flat source is the grey-skin mistake.
 - Warm fill, never grey: fill with a warm bounce or a lamp at 3,200 to 4,000 K; cool fill reads ashen.
 - Separate from the background with a kicker or a rim; dark skin on a dark ground with no edge disappears on a phone.
@@ -322,7 +324,7 @@ Soft, frontal, large, close: clamshell (2.6) or a 150 cm octa on axis above the 
 
 ### 6.3 Jewellery
 
-Jewellery is specular surfaces at every angle. The light source becomes the image: a large diffusion (a 1.2 by 1.2 m frame of 216 or a tent) gives a smooth gradient on polished metal; small white and black cards placed at the edges of the diffusion draw bright and dark lines along facets and edges so the form reads (a polished ring with a single white gradient looks like a blob; the same ring with a black card reflected along its top edge looks like a ring). Diamonds: the sparkle problem is that a stone lit by one big source shows one grey window, with no fire; fire comes from many small hard sources at different angles, so add two or three pin lights (a 60 W focusing COB with a snoot, or an LED torch) aimed into the stone from outside the diffusion, and in motion, move one of them slowly on a slider so the facets flash. Polarisers kill the metal's life; use them only on the lens to cut a reflection of the camera. Gold reads as gold only against a warm reference: a white card reflected in gold looks yellow-white, so let a warm-toned card or a warmer gel sit in the reflection. Keep the camera and crew out of the reflections with a black tent and a hole for the lens. Macro depth of field is paper thin; focus stack for stills, and for motion shoot at T8 to T11 with a lot of light, which is where 1,200 W COBs through diffusion earn their rental.
+Jewellery is specular surfaces at every angle. The light source becomes the image: a large diffusion (a 1.2 by 1.2 m frame of 216 or a tent) gives a smooth gradient on polished metal; small white and black cards placed at the edges of the diffusion draw bright and dark lines along facets and edges so the form reads (a polished ring with a single white gradient looks like a blob; the same ring with a black card reflected along its top edge looks like a ring). Diamonds: the sparkle problem is that a stone lit by one big source shows one grey window, with no fire; fire comes from many small hard sources at different angles, so add two or three pin lights (a 60 W focusing COB with a snoot, or an LED torch) aimed into the stone from outside the diffusion, and in motion, move one of them slowly on a slider so the facets flash. Polarisers kill the metal's life; use them only on the lens to cut a reflection of the camera. Gold reads as gold only against a warm reference: a white card reflected in gold looks yellow-white, so let a warm-toned card or a warmer gel sit in the reflection. Keep the camera and crew out of the reflections with a black tent and a hole for the lens. Macro depth of field is paper thin; focus stack for stills (merge several frames focused at different depths), and for motion shoot at T8 to T11 with a lot of light, which is where 1,200 W COBs through diffusion earn their rental.
 
 ### 6.4 Watches
 
@@ -353,7 +355,7 @@ Available light first: a well-designed hotel was lit by a lighting designer, and
 
 ### 6.9 Fashion
 
-Three looks worth naming because clients ask for them by reference: hard sun or a bare bulb (a single hard source, crisp shadows, the Jacquemus noon and the 1990s Helmut Newton pool); the Avedon white (Richard Avedon moved to studio strobe by the late 1950s and stripped out soft lights and props so that the subject against a plain white seamless was the whole picture; In the American West, shot 1979 to 1984 on 8 by 10 film and published 1985, is the reference; technically a white background lit two stops over the subject, a large soft key on axis, and nothing else); and the Juergen Teller flash (on-camera flash, snapshot aesthetic, imperfection on purpose; Marc Jacobs campaigns from the Spring/Summer 1998 season to Spring/Summer 2014, Céline Fall/Winter 2010, Vivienne Westwood 2008 to 2010, Louis Vuitton 2014 to 2015, the Grand Palais Éphémère exhibition "i need to live" in 2023). Each is a complete idea; the mistake is mixing them in one campaign. Movement needs light that holds across the frame (a 2.4 m book light or sun) rather than a tight octa that the model walks out of.
+Three looks worth naming because clients ask for them by reference: hard sun or a bare bulb (a single hard source, crisp shadows, the Jacquemus noon and the 1990s Helmut Newton pool); the Avedon white (Richard Avedon moved to studio strobe by the late 1950s and stripped out soft lights and props so that the subject against a plain white paper sweep was the whole picture; In the American West, shot 1979 to 1984 on 8 by 10 film and published 1985, is the reference; technically a white background lit two stops over the subject, a large soft key on axis, and nothing else); and the Juergen Teller flash (on-camera flash, snapshot aesthetic, imperfection on purpose; Marc Jacobs campaigns from the Spring/Summer 1998 season to Spring/Summer 2014, Céline Fall/Winter 2010, Vivienne Westwood 2008 to 2010, Louis Vuitton 2014 to 2015, the Grand Palais Éphémère exhibition "i need to live" in 2023). Each is a complete idea; the mistake is mixing them in one campaign. Movement needs light that holds across the frame (a 2.4 m book light or sun) rather than a tight octa that the model walks out of.
 
 ### 6.10 Cars
 
@@ -376,7 +378,7 @@ Generative image and video models (Midjourney, Imagen, Flux, Kling, Veo, Runway,
 | window light, north light, side light from a window | one large source from one side | Add "single light source" to prevent extra shadows |
 | practical lamp, warm lamp light, candlelight | low-key with warm pools | Models over-warm; specify kelvin in words ("warm 3,000 K lamp") |
 | chiaroscuro, low key, 8:1 contrast | hard key, no fill | Combine with "deep shadow detail" to avoid crushed blacks |
-| studio strobe, white seamless, beauty dish | Avedon white | Say "even white background, no vignette" |
+| studio strobe, white paper backdrop, beauty dish | Avedon white | Say "even white background, no vignette" |
 | clamshell beauty lighting, catchlights | 2.6 | Works in most 2025 to 2026 models |
 | large softbox reflection on the bottle, gradient highlight | product gloss control | Specify "one highlight" or models add several |
 
@@ -432,7 +434,7 @@ Two microphones picking up the same source at different distances capture it wit
 | Short hypercardioid and cardioid | Schoeps CMC 6 with MK 41, Sennheiser MKH 50, Audio-Technica AT4053b | Tight but without a tube's reflections | Interiors with hard walls (hotel rooms, marble lobbies), where a shotgun sounds phasey |
 | Lavalier, wired | Sanken COS-11D (the industry lav, 4 mm), DPA 4060 (5.4 mm omni, 134 dB max SPL; 4061 is 10 dB less sensitive for loud sources; 4071 adds a 5 dB presence boost at 4 to 6 kHz), DPA 6060 (3 mm) | Omni, close, consistent | Interviews, hidden under clothing |
 | Lavalier, wireless | Sennheiser EW-DP and EW-DX (UHF, broadcast grade), Lectrosonics (the high end), Rode Wireless Pro (2.4 GHz, 260 m line of sight, 32-bit float on-board recording with 32 GB per transmitter, timecode, two Lavalier II mics in the kit), DJI Mic 3 (2.4 GHz, dual-file 32-bit float internal recording, up to four transmitters and eight receivers, timecode) | Convenience and mobility | Walk and talk, run and gun, creator formats |
-| Stereo pairs | ORTF pair of small-diaphragm cardioids (Schoeps or Neumann KM 184 at 17 cm, 110 degrees), Sennheiser MKH 418S or Rode NT-SF1 for mid-side | Width, room | Ambience beds, events, music |
+| Stereo pairs | ORTF pair (the near-coincident method devised at the French broadcaster ORTF: two small-diaphragm cardioids 17 cm apart at 110 degrees, such as Schoeps or Neumann KM 184), Sennheiser MKH 418S or Rode NT-SF1 for mid-side (a forward cardioid plus a sideways figure-of-eight, decoded to a width you choose in post) | Width, room | Ambience beds, events, music |
 | Ambisonic | Sennheiser Ambeo VR, Rode NT-SF1, Zoom H3-VR | Full-sphere first-order recording, decoded to any format | 360 video, VR, future-proof ambience |
 | Handheld and hypercardioid vocal | Shure SM58, SM7B, Electro-Voice RE20 | Robust, proximity bass | VO in the field, podcast, stage |
 
@@ -475,7 +477,7 @@ Timecode is a running clock (hours, minutes, seconds, frames) written into every
 
 ### 11.1 Dialogue editing
 
-The dialogue editor's sequence: choose the best mic per line (boom first, lav where the boom is phasey or distant), conform to picture, split into tracks by character and by mic, fill every gap with room tone, fade every edit (2 to 10 frames), remove clicks and mouth noise, soften breaths rather than remove them (a breathless voice reads as synthetic), match the tonal colour of lav and boom with EQ, and then and only then run noise reduction. Noise reduction tools as of October 2026: iZotope RX 12 (version 12.0.0 released 28 April 2026, 12.1.0 on 15 October 2026; Advanced, Standard and Elements tiers; the rebuilt Dialogue Isolate separates speech from background with a neural network, Spectral De-noise learns a noise profile, De-reverb, Mouth De-click, Breath Control, Ambience Match, Scene Rebalance and the Stems View that splits a mix into dialogue, music and effects) and Adobe Enhance Speech in Premiere Pro and Audition 2026 (one slider in the Essential Sound panel on a Dialogue clip; rebuilds the voice as if recorded in a booth). Their limits: Enhance Speech at full strength produces a dry, processed, slightly synthetic voice with the room removed entirely, which is wrong for any scene where the location is the point (a hotel film) and right for a founder VO recorded in a car; use the mix slider at 30 to 60 percent. Dialogue Isolate at heavy settings leaves "underwater" artefacts on sibilants and in pauses; apply it at 40 to 70 percent, keep a little of the original, and compare with the bypass at mix level, because what sounds clean in solo often sounds dead in context. Neither tool fixes a clipped or wind-destroyed recording.
+The dialogue editor's sequence: choose the best mic per line (boom first, lav where the boom is phasey or distant), conform to picture, split into tracks by character and by mic, fill every gap with room tone, fade every edit (2 to 10 frames), remove clicks and mouth noise, soften breaths rather than remove them (a breathless voice reads as synthetic), match the tonal colour of lav and boom with EQ, and then and only then run noise reduction. Noise reduction tools as of October 2026: iZotope RX 12 (launched 29 April 2026 per Mix magazine's launch report, succeeding RX 11, which many post houses still run; Advanced, Standard and Elements tiers; the rebuilt Dialogue Isolate separates speech from background with a neural network, Spectral De-noise learns a noise profile, De-reverb, Mouth De-click, Breath Control, Ambience Match, Scene Rebalance and the Stems View that splits a mix into dialogue, music and effects) and Adobe Enhance Speech in Premiere Pro and Audition 2026 (one slider in the Essential Sound panel on a Dialogue clip; rebuilds the voice as if recorded in a booth). Their limits: Enhance Speech at full strength produces a dry, processed, slightly synthetic voice with the room removed entirely, which is wrong for any scene where the location is the point (a hotel film) and right for a founder VO recorded in a car; use the mix slider at 30 to 60 percent. Dialogue Isolate at heavy settings leaves "underwater" artefacts on sibilants and in pauses; apply it at 40 to 70 percent, keep a little of the original, and compare with the bypass at mix level, because what sounds clean in solo often sounds dead in context. Neither tool fixes a clipped or wind-destroyed recording.
 
 ### 11.2 ADR
 
@@ -483,7 +485,7 @@ ADR (automated dialogue replacement, originally "looping") re-records lines in a
 
 ### 11.3 Foley
 
-Foley is sound performed to picture in a studio by a foley artist with props: footsteps, cloth, hands on objects. What to foley in a brand film: the sounds that carry the material story of the product and the place, because production sound almost never captures them cleanly. A list for luxury: fabric (silk, cashmere, linen each rustle differently), footsteps on marble and on teak and on gravel, a glass set on stone, a cork or a cap, a clasp or a zip, a page turn, a door that closes with weight (a Bentley thunk and a hotel door are both brand sounds), water on skin, the hiss of an espresso machine, cutlery on porcelain. These are recorded close with a small-diaphragm condenser, layered two or three deep (a step is heel, sole and cloth), and mixed at a level the audience feels rather than notices. Foley studios exist in Mumbai (the film industry keeps several busy) and in Dubai Studio City; a day with an artist and a recordist covers a 90 second brand film with time to spare. Wild sound from the shoot (10.6) is the cheaper half of this; many brand films need no studio foley if the recordist did the list on the day.
+Foley is sound performed to picture in a studio by a foley artist with props: footsteps, cloth, hands on objects. What to foley in a brand film: the sounds that carry the material story of the product and the place, because production sound almost never captures them cleanly. A list for luxury: fabric (silk, cashmere, linen each rustle differently), footsteps on marble and on teak and on gravel, a glass set on stone, a cork or a cap, a clasp or a zip, a page turn, a door that closes with weight (a Bentley thunk and a hotel door are both brand sounds), water on skin, the hiss of an espresso machine, cutlery on porcelain. These are recorded close with a small-diaphragm condenser, layered two or three deep (a step is heel, sole and cloth), and mixed at a level the audience feels without consciously hearing. Foley studios exist in Mumbai (the film industry keeps several busy) and in Dubai Studio City; a day with an artist and a recordist covers a 90 second brand film with time to spare. Wild sound from the shoot (10.6) is the cheaper half of this; many brand films need no studio foley if the recordist did the list on the day.
 
 ### 11.4 Ambience beds
 
@@ -497,7 +499,7 @@ The trailer vocabulary: a whoosh (air moving, used on camera moves and transitio
 - No whoosh on a cut unless something in the frame moves fast; whooshes on static product cuts are the 2015 YouTube tell.
 - Risers only into a real change (a cut to black, a reveal), and never more than once in 30 seconds.
 - Subs only on the cinema or OOH deliverable; on the social cut they are inaudible and steal headroom (9.1).
-- Textures replace music, not accompany it; a room tone with a slight tonal drone under a slow hotel film is more expensive than a piano bed.
+- A texture is a replacement for music and plays alone; a room tone with a slight tonal drone under a slow hotel film is more expensive than a piano bed.
 
 The Ben Burtt principle of grounding: Burtt (sound designer of Star Wars, 1977; E.T., 1982; WALL-E, 2008) built fantastical sounds from recordings of real things (the lightsaber from an idling projector motor and the hum of a broken television, Darth Vader's breath through a scuba regulator), because the ear believes a sound that has a physical origin and rejects a purely synthetic one. He also used absolute silence before the seismic charge in Attack of the Clones (2002) to make the blast feel louder. For brand sound this means: a "luxury" transition sound should be a recorded object (a silk sheet pulled over a table, a cabinet door) processed lightly, never a synthesiser preset; and the loudest moment in the film is made by the silence before it.
 
@@ -515,9 +517,9 @@ The contested position: trailer houses and performance-marketing editors argue t
 
 Every recording carries two copyrights: the composition (melody and lyrics, owned by the songwriter or their publisher) and the master (the specific recording, owned by the label or the artist). A sync licence (synchronisation: the right to set the composition to picture) comes from the publisher; a master use licence comes from the label; both are needed for a needle drop, and Meta's music guidelines state that use of music for commercial or non-personal purposes is prohibited unless appropriate licences are obtained. Library platforms bundle both. A PRO (performing rights organisation) collects royalties for public performance and broadcast of compositions on behalf of writers and publishers; an ISRC (International Standard Recording Code) is the 12-character identifier of a recording used for tracking plays and content ID.
 
-India: the Copyright Act, 1957 (as amended in 2012) governs. IPRS (the Indian Performing Right Society, founded 1969) is the registered copyright society for authors, composers and publishers of musical and literary works and collects performance and communication-to-the-public royalties; sync for a specific film or advert is cleared directly with the publisher or label, not through IPRS. PPL India handles public performance of sound recordings for its member labels. Section 31D statutory licensing covers broadcast, not advertising. Practical reading for Mask360: a Bollywood or regional hit for a campaign is cleared with the label (T-Series, Sony Music India, Saregama, Zee Music, Tips) and the publisher, on a quote; the 2012 amendment gave composers and lyricists an inalienable right to royalties, so the paperwork names them.
+India: the Copyright Act, 1957 (as amended in 2012) governs. IPRS (the Indian Performing Right Society, founded 1969) is the registered copyright society for authors, composers and publishers of musical and literary works and collects performance and communication-to-the-public royalties; sync for a specific film or advert is cleared directly with the publisher or label, and IPRS plays no part in it. PPL India handles public performance of sound recordings for its member labels. Section 31D statutory licensing covers radio and television broadcast of works and never clears an advert. Practical reading for Mask360: a Bollywood or regional hit for a campaign is cleared with the label (T-Series, Sony Music India, Saregama, Zee Music, Tips) and the publisher, on a quote; the 2012 amendment gave composers and lyricists an inalienable right to royalties, so the paperwork names them.
 
-The Gulf: the UAE's Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights governs; collective management has been slower to form than in Europe, and public performance licensing is handled through the body authorised by the Ministry of Economy (ESMAA, the Emirates Music Rights Association, operates in this role as of 2026; verify the current arrangement and its tariff before a venue or event use). Sync for a campaign is cleared with the rights holders directly, as in India. Saudi Arabia's SAIP (Saudi Authority for Intellectual Property) regulates; needle drops for Riyadh campaigns go through the same label and publisher route.
+The Gulf: the UAE's Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights governs. Collective management arrived late: the Ministry of Economy granted the first music collective management licence to the Emirates Music Rights Association (EMRA) in April 2025 and a second to Music Nation (which announced partnerships with BMI and SoundExchange); the Emirati Musicians' Association also holds a ministry licence. Under the ministry's guide, any business that uses music in its operations (hotel lobbies, restaurants, retail, gyms, events) must hold a licence from a ministry-approved CMO (collective management organisation: a body that licenses and collects on behalf of many rights holders) before 1 December 2026, with exemptions for education, government, national occasions and private non-commercial celebrations. For Mask360's hospitality and retail clients this changes the brief for lobby playlists and event sound from December 2026: confirm the venue's CMO licence in writing before a launch event. Sync for a campaign is still cleared with the rights holders directly, as in India. Saudi Arabia's SAIP (Saudi Authority for Intellectual Property) regulates; needle drops for Riyadh campaigns go through the same label and publisher route.
 
 ### 12.3 Library platforms and their licence tiers (as of October 2026)
 
@@ -527,7 +529,7 @@ Verified from each platform's own pages where they load; prices change often and
 |---|---|---|---|
 | Artlist | AI Starter $19.99 monthly or $11.99 on annual; AI Core $39.99 or $23.99; AI Creator $69.99 or $41.67; Max, Max Business, Pro and Enterprise exist with details on request; third-party reviews in 2026 quote the Music and SFX Social plan at about $9.99 a month and Max at about $39.99 on annual billing | Every paid plan states "licence covers commercial use"; the Social tier covers one channel per platform; Pro and Max tiers are the ones that cover client work and paid distribution | Artlist's model licenses each downloaded asset for the content it went into in perpetuity, which is why it is the agency default: a client's film stays cleared after the subscription ends |
 | Epidemic Sound | Creator, Pro, Enterprise (Business plan linked in the footer); prices were not rendered on the pricing page; third-party reviews quote Personal at about $9.99 and Commercial at about $49.99 a month | All plans: unlimited downloads, copyright protection, plugins; ad campaigns require Pro or Enterprise; public bodies and NGOs go to Enterprise; Enterprise has a 12-month minimum; monthly and yearly plans have no prorated refund | Coverage attaches to channels you register (Content ID whitelisting); confirm in writing which plan keeps client content cleared after cancellation, because the public page does not say |
-| Musicbed | Individual (web and podcast, social up to 1 million followers), Business (adds client and brand work, clients up to 250 employees), Enterprise (clients of any size, broadcast, cinema and festival, VOD and OTT and CTV, games, celebrities over 1 million followers); prices behind "view pricing", third-party June 2026 checks quote Solo $16.99, Plus $49, Pro $99 a month | Tier by use, not by downloads | The catalogue is artist-led (real bands and composers) and sits a tier above the others in taste; the Enterprise tier is the only one that covers broadcast |
+| Musicbed | Individual (web and podcast, social up to 1 million followers), Business (adds client and brand work, clients up to 250 employees), Enterprise (clients of any size, broadcast, cinema and festival, VOD and OTT and CTV, games, celebrities over 1 million followers); prices behind "view pricing", third-party June 2026 checks quote Solo $16.99, Plus $49, Pro $99 a month | Tiered by use and by client size | The catalogue is artist-led (real bands and composers) and sits a tier above the others in taste; the Enterprise tier is the only one that covers broadcast |
 | Audio Network | Per-track licences priced by media, territory and term, plus subscriptions; the licensing page did not load in this session | | The broadcast-grade catalogue; licences for TV and cinema in India and the Gulf are quoted by territory |
 | Universal Production Music, Extreme Music, APM | Per-use and blanket deals for broadcasters and large agencies | | For TV spots in India and the Gulf the media agency often already holds a blanket |
 
@@ -538,7 +540,7 @@ Rule: the licence must cover the channel (organic social, paid social, OOH scree
 - Tempo: find the BPM (beats per minute) of the track (Resolve and Premiere show it on analysis; or tap it); a 90 second film at 120 BPM has 180 beats and 45 four-beat bars, so the structure is planned in bars.
 - Cutting on the beat lands the cut with the music and reads as energetic; cutting just off the beat (two to four frames after) reads as natural and human, because the eye and ear want the picture to follow the sound. Luxury cuts off the beat more than on; the hero reveal lands on the downbeat of a phrase.
 - Phrases: popular and library music moves in 2, 4 and 8 bar phrases; a cut to a new scene on the first beat of an 8 bar phrase feels inevitable; a cut in the middle of a phrase feels wrong unless the picture explains it.
-- Stems: request the track as stems (drums, bass, melody, pads, vocals as separate files); the editor can drop the drums for the first 20 seconds, keep a pad under dialogue, and bring the full mix on the reveal, which is editing the music to the film rather than the film to the music. Every library platform above delivers stems on the better tiers; composers deliver them by default.
+- Stems: request the track as stems (drums, bass, melody, pads, vocals as separate files); the editor can drop the drums for the first 20 seconds, keep a pad under dialogue, and bring the full mix on the reveal, which fits the music to the film. Every library platform above delivers stems on the better tiers; composers deliver them by default.
 - The breath before the music starts: open on room tone and a single real sound (a door, a wave, a footstep) for one to three seconds before the first note; the music then arrives as an event. Films that start on music at frame one feel like adverts because every advert does it.
 - Ending: music resolves on or just before the end card, with the last sound in the film a real one (the clasp, the door) rather than a music tail.
 - Edit the music at the sample level with crossfades on zero crossings; a music edit should be inaudible to the composer.
@@ -555,7 +557,7 @@ Mix order: dialogue and VO levelled and cleaned (11.1), then music under it, the
 - EQ: high-pass dialogue at 80 to 100 Hz (male) or 100 to 120 Hz (female); cut boxiness around 300 to 400 Hz by 2 to 4 dB with a medium Q; add presence at 3 to 5 kHz by 1 to 2 dB if a lav is dull; de-ess at 5 to 8 kHz. On music under dialogue, cut 2 to 3 dB around 1 to 4 kHz so the voice sits in the hole.
 - Compression: on dialogue a ratio of 2:1 to 4:1, attack 10 to 30 ms, release 100 to 300 ms, 3 to 6 dB of gain reduction on peaks; two gentle stages beat one hard one. On music, little or none (the master is already compressed).
 - Limiting: a true-peak limiter on the master set to a ceiling of minus 1 dBTP (minus 2 for Netflix-style specs and for anything that will be re-encoded hard), with the input gain set to reach the integrated target (13.4). A limiter working more than 3 to 4 dB on peaks is audible as pumping; fix the balance upstream.
-- Ducking: an automatic level drop on the music keyed from the dialogue (a sidechain compressor or the auto-ducking in Premiere's Essential Sound and Resolve's Fairlight), 6 to 10 dB with a 200 to 500 ms release; then ride the fader by hand across the film because automatic ducking breathes.
+- Ducking: an automatic level drop on the music keyed from the dialogue (a sidechain compressor, which compresses one track when triggered by another, or the auto-ducking in Premiere's Essential Sound and Resolve's Fairlight), 6 to 10 dB with a 200 to 500 ms release; then ride the fader by hand across the film because automatic ducking breathes.
 - Reverb and space: a short room reverb (0.3 to 0.8 s) on ADR and studio VO to match the set; the dry studio voice over a location picture is the cheapest sound in brand film. Never reverb the production dialogue.
 - Panning: dialogue, VO and the lead instrument in the centre; ambience and pads wide; a foley specific where its source is in frame. Check the mono sum.
 
@@ -569,9 +571,9 @@ Loudness is measured by the ITU-R BS.1770 algorithm (K-weighted, gated; current 
 
 | Destination | Integrated target | True peak ceiling | Source and notes |
 |---|---|---|---|
-| EBU R 128 broadcast (Europe, and the reference most Indian and Gulf post houses follow for TV masters) | minus 23.0 LUFS, tolerance plus or minus 1.0 LU where the target is impractical (live), plus or minus 0.2 LU for QC | minus 1 dBTP in production; lower for some distribution codecs (EBU Tech 3344) | EBU R 128-2023 (version 5, November 2023); measurement per BS.1770 with the gate and EBU Tech 3341 |
-| ATSC A/85 (US and ATSC-aligned broadcast) | minus 24 LKFS, plus or minus 2 dB (the historical A/85 value) | minus 2 dBTP in common practice | A/85:2026-07 approved 8 July 2026, with a Loudness and True Peak Quick Reference in Annex M; verify the values in that annex for any US delivery |
-| Netflix | minus 27 LKFS dialogue-gated (measured with dialogue intelligence per BS.1770-1), plus or minus 2 LU, so minus 25 to minus 29 | minus 2 dB true peak for stereo and 5.1; Atmos overs informational | Netflix Sound Mix Specifications and Best Practices; LRA 4 to 18 full mix, dialogue 10 or less |
+| EBU R 128 broadcast (Europe, and the reference most Indian and Gulf post houses follow for TV masters) | minus 23.0 LUFS, tolerance plus or minus 1.0 LU where the target is impractical (live), plus or minus 0.2 LU for QC | minus 1 dBTP in production; lower for some distribution codecs (EBU Tech 3344) | EBU R 128-2023 (version 5, November 2023); measurement per BS.1770 with the gate and EBU Tech 3341; adverts and promos follow supplement R 128 s1, streaming R 128 s2, cinematic content R 128 s4 |
+| ATSC A/85 (US and ATSC-aligned broadcast) | minus 24 LKFS, plus or minus 2 dB (the historical A/85 value) | minus 2 dBTP in common practice | A/85:2026-07 approved 8 July 2026 and announced 15 July 2026 as the first comprehensive revision since 2013; adds a streaming loudness annex (Annex L) and a one-page quick reference (Annex M); verify the values in Annex M for any US delivery |
+| Netflix | minus 27 LKFS dialogue-gated (measured with dialogue intelligence per BS.1770-1), plus or minus 2 LU, so minus 25 to minus 29 | at or below minus 2 dBFS true peak; Netflix recommends true-peak limiters on all beds and objects at minus 2.3 or lower | Netflix Sound Mix Specifications and Best Practices; LRA 4 to 18 full mix, dialogue 10 or less |
 | YouTube | about minus 14 LUFS (the widely reported normalisation point; YouTube's upload help page specifies AAC-LC, 48 kHz, 384 kbps stereo and 512 kbps 5.1 and states no loudness target) | minus 1 dBTP | YouTube turns louder uploads down and does not raise quiet ones above their peak-limited level |
 | Spotify | minus 14 LUFS (Normal); Loud setting minus 11, Quiet minus 19; recommends mastering at about minus 14 | minus 1 dBTP; below minus 2 if the master is louder than minus 14 | Spotify for Artists, loudness normalisation; albums normalised as a whole |
 | Apple Music | about minus 16 LUFS under Sound Check (the figure practitioners use; Apple's Digital Masters document describes Sound Check without stating the number) | minus 1 dBTP | Apple Digital Masters guidance: 24-bit sources at native sample rate |
@@ -593,11 +595,11 @@ A large share of feed video is watched muted, in public, with captions; the exac
 
 ### 14.2 The hook sound in the first second
 
-The first second decides the swipe. A sound hook is a single recognisable real sound (a clasp, a pour, a heel on marble, a door) or a voice saying something specific, placed at frame one, before the music. The trailer alternative (a riser into a hit at one second) works on performance cuts and reads cheap on brand; test both. Keep the first second's audio at the mix's loudest level (short-term loudness near the integrated target plus 2 LU) because the platform's own normalisation acts on the whole file and a quiet start sounds like nothing.
+The first second decides the swipe. A sound hook is a single recognisable real sound (a clasp, a pour, a heel on marble, a door) or a voice saying something specific, placed at frame one, before the music. The trailer alternative (a riser into a hit at one second) works on performance cuts and reads cheap on brand; test both. Keep the first second's audio at the mix's loudest level (short-term loudness near the integrated target plus 2 LU) because the platform's own normalisation acts on the whole file and a quiet start sounds like nothing (short-term loudness is measured over a sliding 3 second window, per EBU Tech 3341).
 
 ### 14.3 Trending audio and licensing risk for brands
 
-Instagram and TikTok license popular music for personal and creator accounts to use in Reels and TikToks; business accounts (Instagram professional accounts set to Business, and TikTok Business accounts) are limited to a commercially cleared library (the Meta Sound Collection and TikTok's Commercial Music Library). A trending track that is greyed out on a business account is greyed out because the licence does not cover commercial use, and posting it another way (a creator account, a screen recording, an edit with the track baked in) breaches the platform's music guidelines and the rights holder's licence. Consequences range from muting and removal to legal claims; German law firms have sent warning letters to commercial users demanding payment for unlicensed Reels music. Paid promotion of a post with unlicensed music is the highest risk, because it is advertising. House rule: brand accounts use the commercial library, licensed library music (12.3), original audio, or a needle drop cleared in writing; influencer partners post trending audio on their own creator accounts under their own agreements, and the brand reposts only with the licence confirmed.
+Instagram and TikTok license popular music for personal and creator accounts to use in Reels and TikToks; business accounts (Instagram professional accounts set to Business, and TikTok Business accounts) are limited to a commercially cleared library (the Meta Sound Collection, which Meta's help centre describes as over 14,000 royalty-free songs and sounds, and TikTok's Commercial Music Library). Meta's help centre states the main licensed library is for personal, non-commercial use, and Sound Collection tracks are cleared only inside Meta's own apps, so the same track on YouTube or the client's website needs its own licence. A trending track that is greyed out on a business account is greyed out because the licence does not cover commercial use, and posting it another way (a creator account, a screen recording, an edit with the track baked in) breaches the platform's music guidelines and the rights holder's licence. Consequences range from muting and removal to legal claims from rights holders, and Meta can mute a post later when a licence lapses or is renegotiated. Paid promotion of a post with unlicensed music is the highest risk, because it is advertising. House rule: brand accounts use the commercial library, licensed library music (12.3), original audio, or a needle drop cleared in writing; influencer partners post trending audio on their own creator accounts under their own agreements, and the brand reposts only with the licence confirmed.
 
 ### 14.4 Original audio, VO styles, the silence move
 
@@ -614,12 +616,13 @@ A sound logo (audio mnemonic, sonic logo) is a 1 to 5 second sound that identifi
 - Intel: the five-note "bong" (D flat, D flat, G flat, D flat, A flat: a perfect octave followed by a four-note sequence) composed by Walter Werzowa of Musikvergnuegen in 1994 for the Pentium launch, modified in 1999, remade in 2004 and again after the 2020 rebrand; heard in 130 countries by its tenth anniversary.
 - McDonald's: the five-note "ba da ba ba ba" of "I'm lovin' it", music by Tom Batoy and Franco Tortora (Mona Davis Music) with vocals by Justin Timberlake, created by Heye & Partner of Unterhaching, launched in Munich on 2 September 2003 as "ich liebe es" and in the United States on 29 September 2003. The longest-running global McDonald's campaign.
 - Netflix: the "ta-dum" introduced in 2015; Todd Yellin (VP of Product) led the process, Lon Bender designed the sound from his wedding ring knocking on a cabinet plus a slowed anvil and muted hits, and Charlie Campagna's reversed guitar recording supplied the tonal "blossom"; Hans Zimmer later composed the extended theatrical version for Netflix films in cinemas.
-- Mastercard: a sonic brand identity launched in 2019 with a core melody adapted across genres and regions (as reported at launch; the primary press page was not reachable in this session, so date and credits are to be verified before quoting to a client).
-- India: Airtel's signature tune by A. R. Rahman, used for the Hello Tunes service launched in July 2004 and re-recorded for the November 2010 rebrand, described in press as among the most downloaded mobile music of its time; Britannia's four-note jingle and Titan's Mozart Symphony No. 25 theme are the other two every Indian consumer can hum. A Tata Group sonic identity was not found on tata.com's newsroom in October 2026; treat any claim of one as unverified.
+- Mastercard: "Sound on: Mastercard debuts sonic brand", 8 February 2019; a single melody built as a full sound architecture (sound logo, acceptance sound at the payment terminal and online checkout, ringtones, hold music, scores) and adapted across genres and cultures; it debuted in Grammy week in a campaign with Camila Cabello, with Mike Shinoda among the musicians involved. The reference for a sonic system, because the acceptance sound is heard millions of times a day at the moment of purchase.
+- India: Airtel's signature tune by A. R. Rahman, composed around 2001 for the 2002 campaign, a simple five-note figure on the Carnatic raga Shankarabharanam, which Storyboard18 in 2025 credits with over 150 million downloads (a 2009 report said 60 million), the most downloaded mobile music of its time; Britannia's four-note jingle and Titan's Mozart Symphony No. 25 theme are the other two every Indian consumer can hum.
+- Tata: there is no group-wide Tata sound logo on record as of October 2026. Tata Realty's Intellion Offices launched a sonic identity in April 2024, built by the Indian sonic branding studio BrandMusiq (a signature sound called MOGO and a long-form MOGOSCAPE scored for saxophone, trumpets and horns), and the Tata Neu super-app uses a calm sound motif in notifications and service calls. The lesson for Indian clients: a sonic identity can start at the business-unit level and earn its way up.
 
 ### 15.2 Sonic identity systems
 
-A system, not a jingle: the sound logo (3 seconds), a brand theme (60 to 90 seconds, with stems), functional sounds (app notification, payment confirmation, lift and lobby loops for hospitality), hold music, a VO voice and reading style, and the rules (where it plays, at what level, what it never does). Document it like a visual identity: a sonic guideline with audio files, a pitch and tempo reference, instrumentation, a prohibited list, and usage per touchpoint. For a hotel group the system includes the arrival sound in the lobby and the spa playlist curation rules; for a jeweller the sound of the box.
+A sonic identity is a system of parts: the sound logo (3 seconds), a brand theme (60 to 90 seconds, with stems), functional sounds (app notification, payment confirmation, lift and lobby loops for hospitality), hold music, a VO voice and reading style, and the rules (where it plays, at what level, what it never does). Document it like a visual identity: a sonic guideline with audio files, a pitch and tempo reference, instrumentation, a prohibited list, and usage per touchpoint. For a hotel group the system includes the arrival sound in the lobby and the spa playlist curation rules; for a jeweller the sound of the box.
 
 ### 15.3 How to brief a composer
 
@@ -633,20 +636,20 @@ The expensive sound is quiet, specific and real: one instrument, one recorded ob
 
 | Tool | Version as of October 2026 | Role in the house | Notes |
 |---|---|---|---|
-| Avid Pro Tools | 2026.4 (released 28 April 2026); Intro is free, Artist about $9.99 a month, Studio and Ultimate above | The post house standard for mixing; what the Mumbai and Dubai mix stages run | Deliver sessions and AAF to the mixer; the house does not need to own it |
-| Apple Logic Pro | 12.4 (29 September 2026) | Composer scratch and music editing on Mac | Stems and tempo maps for the edit |
+| Avid Pro Tools | 2026.4 (released 30 April 2026: Track Pin, MPEG-H immersive broadcast, Dolby Headphone Personalization); 2026.4.1 in July 2026 added Apple M5 support; Intro is free, Artist, Studio and Ultimate are subscriptions | The post house standard for mixing; what the Mumbai and Dubai mix stages run | Deliver sessions and AAF to the mixer; the house does not need to own it |
+| Apple Logic Pro | 12 (released January 2026 with Apple Creator Studio; 12.4 maintenance update current in October 2026); $199.99 standalone or inside Creator Studio at $12.99 a month | Composer scratch and music editing on Mac | Stems and tempo maps for the edit |
 | Reaper | 7.84 (28 October 2026) | The flexible, cheap DAW for sound design and batch processing | Scripting for loudness batch checks |
 | Adobe Audition | 2026 | Dialogue cleanup and VO editing for Premiere-based editors | Enhance Speech, Loudness Radar, spectral display |
-| DaVinci Resolve Fairlight | Resolve 21 | The edit-and-mix in one application; loudness meters per standard, Dolby Atmos in Studio | The house default for social and brand film mixes under 3 minutes |
+| DaVinci Resolve Fairlight | Resolve 21 (21.0.1 on 25 June 2026; Fairlight gained track folders) | The edit-and-mix in one application; loudness meters per standard, Dolby Atmos in Studio | The house default for social and brand film mixes under 3 minutes |
 | Adobe Premiere Pro | 2026 | Editing; Essential Sound panel for auto-ducking, Enhance Speech, loudness match | Export loudness checks via Loudness Radar |
-| iZotope RX | 12 (12.0.0 on 28 April 2026, 12.1.0 on 15 October 2026); Elements, Standard, Advanced | Dialogue repair: Dialogue Isolate, Spectral De-noise, De-reverb, Mouth De-click, Breath Control, Stems View | Advanced for the mixer; Standard is enough for the editor |
+| iZotope RX | 12 (launched 29 April 2026; RX 11 still common on mix stages); Elements, Standard, Advanced | Dialogue repair: Dialogue Isolate, Spectral De-noise, De-reverb, Mouth De-click, Breath Control, Stems View | Advanced for the mixer; Standard is enough for the editor |
 | Waves | Subscription (Essential and Ultimate) and perpetual; WLM Plus for loudness | Meters, compressors, de-essers | |
 | FabFilter | Pro-Q 4, Pro-L 2, Pro-C 2, Pro-DS, Pro-MB | The clean EQ, limiter, compressor and de-esser the house asks mixers to use on the dialogue bus | Pro-L 2 for true-peak limiting with platform presets |
-| ElevenLabs | Free, Starter ($6 a month list; promotional $1), Creator ($22), Pro ($99), Scale ($299), Business ($990), Enterprise; commercial licence from Starter; instant voice cloning from Starter and professional cloning from Creator | Scratch VO for timing and client approval, multilingual drafts, temp reads in Hindi and Arabic | Never a final VO for a client without disclosure and consent (below) |
+| ElevenLabs | Free, Starter (about $5 to $6 a month), Creator ($22), Pro ($99), Scale and Business (third-party October 2026 summaries disagree: $299 or $330, and $990 or $1,320), Enterprise; commercial licence from Starter; instant voice cloning from Starter and professional cloning from Creator; confirm on elevenlabs.io/pricing | Scratch VO for timing and client approval, multilingual drafts, temp reads in Hindi and Arabic | Never a final VO for a client without disclosure and consent (below) |
 | Descript | Free; Hobbyist ($16 on annual or $24 monthly); Creator ($24 or $35); Business ($50 or $65); Studio Sound, filler-word removal, transcription in 25 languages, custom voice clones on paid plans | Text-based editing of interviews and podcasts; fast rough cuts of founder interviews | Studio Sound is Enhance Speech-class processing with the same limits |
 | Sound Devices, Zoom, Tentacle Sync, Deity | 10.4 and 10.5 | Capture | |
 
-The disclosure rule for synthetic voice: a synthetic or cloned voice in client-facing work is disclosed to the client in writing before use, is never used to imitate a real person without that person's written consent, and is labelled where the audience could reasonably believe a human spoke. The legal floor: the EU AI Act's Article 50 transparency obligations (marking of synthetic audio in a machine-readable form by providers; disclosure of deepfakes by deployers, with a lighter duty for evidently artistic or creative work) apply from 2 August 2026, and any campaign that reaches EU audiences falls under them; India's IT Rules and the UAE's 2021 copyright law and personality-rights practice make an unconsented voice clone a liability in both home markets. House practice: synthetic VO for scratch and for internal decks; for final VO, a human voice with a signed release, or a disclosed synthetic voice where the brief explicitly calls for it (an app's functional prompts, a multilingual utility video), labelled in the end card or the caption. See 22-ai-era-craft-and-generative-tools.md for the wider disclosure policy.
+The disclosure rule for synthetic voice: a synthetic or cloned voice in client-facing work is disclosed to the client in writing before use, is never used to imitate a real person without that person's written consent, and is labelled where the audience could reasonably believe a human spoke. The legal floor: the EU AI Act's Article 50 transparency obligations (marking of synthetic audio in a machine-readable form by providers; disclosure of deepfakes by deployers, with a lighter duty for evidently artistic or creative work) apply from 2 August 2026 and were left on that date by the Digital Omnibus (Regulation (EU) 2026/1744, in force late July 2026 per law-firm summaries), which delayed the high-risk rules to December 2027 and gave providers of systems already on the market before 2 August 2026 until 2 December 2026 for the Article 50(2) machine-readable marking; any campaign that reaches EU audiences falls under them. India: the IT Rules amendment notified as G.S.R. 120(E) on 10 February 2026, in force from 20 February 2026, defines "synthetically generated information" (content artificially created or altered so that it appears authentic, excluding routine edits such as colour correction and translation) and requires platforms to label it prominently and embed provenance metadata where feasible; a further MeitY draft of 21 April 2026 proposed a label visible for the whole duration of synthetic visual content, unconfirmed as notified at the time of writing. The UAE's 2021 copyright law and its personality-rights practice make an unconsented voice clone a liability there too. House practice: synthetic VO for scratch and for internal decks; for final VO, a human voice with a signed release, or a disclosed synthetic voice where the brief explicitly calls for it (an app's functional prompts, a multilingual utility video), labelled in the end card or the caption. See 22-ai-era-craft-and-generative-tools.md for the wider disclosure policy.
 
 ## 17. Reference tables
 
@@ -740,71 +743,152 @@ The disclosure rule for synthetic voice: a synthetic or cloned voice in client-f
 | Upper mids and presence | 2,000 to 6,000 | Consonants, intelligibility, harshness; sibilance 5,000 to 8,000 |
 | Brilliance and air | 6,000 to 20,000 | Breath, shimmer, hiss |
 
+## 18. Checklists for the creative director
+
+### 18.1 The light recce
+
+- Sun: azimuth and elevation at call time, at the planned hero shot and at wrap, for the actual shoot date (Sun Seeker or PhotoPills, 3.1); which windows take direct sun and when (3.3).
+- Practicals: every lamp in every room listed with its kelvin and a judgement of its CRI; a spectrometer such as the Sekonic C-800 SpectroMaster reads CCT and CRI on the spot and settles arguments with a hotel's engineering team. Note which practicals have dimmers and who controls them.
+- Power: socket ratings (16 A in India), the venue electrician's name, the generator position agreed with sound (10.7), and the run from genny to set in metres of cable.
+- Flicker: mains is 50 Hz in India and the UAE, so test practicals, signage and LED walls at the planned shutter and frame rate (5.7, 6.11).
+- Permissions: haze (4.6), rigging on heritage walls in Jaipur or Udaipur palaces (usually forbidden, so plan stands and weights), drones, and public-space exteriors (5.8).
+- Reference stills: one wide of each space at the planned hour, with the camera's white balance written on the frame.
+
+### 18.2 The sound recce
+
+- Noise inventory with a timetable: air conditioning (who can switch it off, and for how long a hotel will allow it in May), lifts, kitchens, laundry chutes, pool pumps, traffic peaks, construction hours, flight paths (Mumbai's approach paths cross dense suburbs on both sides of the airport), and the call to prayer, five times daily at times that shift with the date, which governs exterior dialogue scheduling in the Gulf and near mosques in Indian cities.
+- Surfaces: count the hard parallel walls and glass; plan the treatment (10.7) and the blankets.
+- Wild sound and room tone list per location (10.6), agreed with the director before the day so it is called rather than forgotten.
+- Generator and vehicle positions marked on the floor plan, at least 30 m away and behind a building where possible.
+
+### 18.3 Reviewing a cut for light
+
+1. Where is the key in each shot, and does it stay on the same side of the face across the reverse (2.12)?
+2. Is the ratio intended, and does it hold on a phone at half brightness in a lit room, with shadow detail above about 5 percent luminance (1.5)?
+3. Is skin right on every complexion in the frame, with no grey fill and no green edge from a cheap practical (6.1, 5.6)?
+4. Does every source have a motivation the audience could name (2.3)?
+5. In generated frames: one shadow direction, matching catchlights, no unmotivated rim (section 7).
+
+### 18.4 Reviewing a cut for sound
+
+1. Watch it muted on a phone first (14.1); then on the phone speaker; then on headphones; then on monitors.
+2. Read the loudness report: integrated, true peak and LRA against the destination (13.4).
+3. Listen for the cuts: a change of room tone at an edit, a breath clipped, a lav rustle.
+4. The first second: is there a real sound before the music (12.4, 14.2)?
+5. Count the hits, risers and whooshes against the house limits (11.5), and check the silence move is used once at most.
+6. Last sound: a real object or a resolved chord, never a fade-out of a library track.
+
+### 18.5 Brief language: from the feeling to the technical ask
+
+A creative director gets faster and better results by translating a feeling into the parameter a DP, gaffer, editor or mixer can act on.
+
+| What the room says | The technical ask |
+|---|---|
+| "It looks flat" | Raise the ratio to 3:1 or 4:1 with negative fill on the shadow side; add a kicker or a background light for separation (1.5, 2.9, 2.11) |
+| "It looks like a webinar" | One large source from a motivated direction, the fill removed, a practical in the background, haze if the room allows (2.13) |
+| "The skin looks dead" | Smaller, closer, more specular key; warm fill; check R9 and SSI of the fixture (1.3, 6.1) |
+| "The product looks cheap" | Shape the highlight: strip softbox for one clean line, black cards for edges, no hot dots (6.5) |
+| "The gold looks yellow" | Put a warm card in the reflection and check the fixture's SSI against daylight (1.3, 6.3) |
+| "The voice sounds thin" | Use the boom over the lav, add 2 dB around 150 to 200 Hz, less noise reduction (11.1, 13.2) |
+| "It sounds muddy" | Cut 200 to 500 Hz on voice, music and ambience in turn, never all three at once (9.1) |
+| "The music fights the VO" | Duck the music 6 to 10 dB and cut 2 to 3 dB at 1 to 4 kHz on the music bus (13.2) |
+| "It sounds like an advert" | Remove the hit and the riser, open on a real sound, end on a real sound (11.5, 12.4) |
+| "It is quieter than the others on Instagram" | Check the master is at minus 14 LUFS integrated and minus 1 dBTP before raising anything (13.4) |
+
 ## Terms introduced
 
 - 32-bit float: a recording format storing each sample as a floating-point number so that signals above 0 dBFS are retained and can be reduced in post without clipping.
+- 3:1 rule: keep a second microphone at least three times as far from a source as the first to limit comb filtering.
 - ADM BWF: a WAV file carrying Audio Definition Model metadata, the delivery format for Dolby Atmos masters.
 - ADR: automated dialogue replacement; re-recording lines in a studio to picture.
 - Ambience bed: a continuous background sound layer that runs under a scene to unify cuts.
 - Ambisonic: a full-sphere recording format decodable to any speaker layout.
+- Bi-colour: a fixture with warm and cool white emitter sets, tunable between them.
 - Black wrap: matte black aluminium foil moulded over lamps to control spill.
 - Blue hour: the period after sunset and before sunrise when the sun is 4 to 6 degrees below the horizon and the sky is deep blue.
 - Book light: a bounce followed by a diffusion frame in a V shape, giving a very large even soft source.
 - Boom: a pole-mounted microphone held above the frame line.
+- Bracketing: shooting several exposures at different levels of the same frame to merge later.
 - Broad and short lighting: keying the side of the face turned toward (broad) or away from (short) the camera.
 - Butterfly (Paramount) lighting: key on the camera axis, high, producing a symmetrical shadow under the nose.
 - Catchlight: the reflection of the light source in the eye.
 - Chiaroscuro: strong light and dark contrast with much of the frame in shadow.
+- China ball: a paper lantern used as an omnidirectional soft source.
 - Clamshell: two stacked soft sources on axis, one above and one below the lens.
+- CMO: collective management organisation, a body that licenses and collects royalties on behalf of many rights holders.
+- COB: chip on board, an LED fixture with one dense emitter array that behaves as a point source.
 - Colour temperature: the kelvin value of the black body whose colour matches a light source.
 - Comb filtering: the hollow tone caused by summing two recordings of one source with a time offset.
 - CRI: colour rendering index; fidelity of a source against eight test colours, out of 100; R9 is the saturated red sample.
+- Cross-polarisation: polarising filters on both light and lens to remove specular glare.
 - CTB and CTO: colour temperature blue and orange correction gels.
-- dBFS: decibels relative to digital full scale; 0 is the maximum.
 - dB SPL: sound pressure level in decibels against the threshold of hearing.
-| dBTP: decibels true peak, the inter-sample peak after oversampling.
+- dBFS: decibels relative to digital full scale; 0 is the maximum.
+- dBTP: decibels true peak, the inter-sample peak after oversampling.
 - dBu: analogue level in decibels against 0.775 V.
 - Diffuse reflection: scattered return of light from a matte surface.
 - Ducking: an automatic level reduction of music keyed from dialogue.
 - Dulling spray: a matte aerosol applied to shiny surfaces to kill reflections.
 - Dynamic range: the span between noise floor and the loudest clean level.
+- Equivalent input noise (EIN): a preamp's self-noise referred to its input, in dBu; more negative is quieter.
 - Falloff: the rate at which illuminance drops with distance from a source.
 - Flag, cutter, floppy: black panels that block light; a cutter is long and narrow; a floppy is a hinged double panel.
+- Flash blend: compositing one ambient exposure with several flash-lit exposures by hand.
+- Focus stacking: merging several frames focused at different depths into one sharp image.
+- Fogger: a machine that produces dense, local, short-lived cloud.
 - Foley: sound performed to picture in a studio with props.
+- Fresnel: a lamp with a stepped lens that focuses from spot to flood.
+- Gain staging: setting levels at each stage of the chain so processors work in range and the bus keeps headroom.
 - Golden hour: the period when the sun is below about 6 degrees elevation, warm and low.
 - Grid (egg crate): a fabric honeycomb on a soft source that limits spread.
+- Grid cloth: woven diffusion fabric, tough enough for large outdoor frames.
 - Hazer: a machine that produces a fine long-hanging mist to make light beams and depth visible.
 - High key and low key: lighting with small shadow areas and bright grounds (high) or large shadow areas and dark grounds (low).
 - HMI: a metal halide arc lamp with ballast, the brightest daylight source per watt.
 - HSS: high-speed sync; pulsed flash that allows shutter speeds above the sync speed.
 - Illuminance: light arriving on a surface, measured in lux.
+- Integrated loudness: the gated average loudness of a whole programme, in LUFS.
 - Inverse square law: illuminance falls with the square of distance from a point source.
 - IPRS: the Indian Performing Right Society, India's registered copyright society for composers, authors and publishers of musical and literary works.
 - ISRC: International Standard Recording Code, the 12-character identifier of a recording.
 - Jam sync: copying timecode from a master clock into a device that then free-runs.
 - Kicker: a light from behind at 45 degrees on the fill side that lands on cheek and jaw.
 - Lavalier: a miniature microphone clipped or hidden on the body.
+- Leaf shutter: a shutter in the lens that syncs with flash at any speed.
+- LFE: the low-frequency effects channel, the .1 of 5.1.
+- Light painting: moving a source during a long exposure to build a reflection or a lit area.
 - Lighting ratio: key plus fill against fill, in the ASC definition.
+- Lightmen: the Indian industry term for lighting technicians supplied by the rental vendor.
 - Loop lighting: key placed so the nose shadow forms a small loop on the cheek.
 - LRA: loudness range, the spread of short-term loudness across a programme, in LU.
 - LUFS and LKFS: loudness units relative to full scale, the ITU-R BS.1770 measure.
+- Magic hour: golden hour and blue hour taken together.
 - Master use licence: permission from the owner of a recording to use that recording.
+- Mid-side: a stereo method pairing a forward cardioid with a sideways figure-of-eight, decoded to adjustable width.
 - Mired: micro reciprocal degrees, one million divided by kelvin; the unit of gel shift.
+- Modelling lamp: the continuous lamp inside a strobe head that previews where the flash will fall.
 - Motivated light: light attributable to a visible or plausible source in the frame.
 - Needle drop: use of an existing commercial recording.
 - Negative fill: a black surface on the shadow side that absorbs ambient bounce.
 - Net (scrim): a mesh that reduces light by one (single) or two (double) stops without changing quality.
 - Nyquist: the rule that a sample rate captures frequencies up to half its value.
+- Open shade: a subject in shadow lit only by open sky.
 - Original audio: a brand's own sound that other accounts can reuse on a platform.
+- ORTF: a near-coincident stereo pair of cardioids 17 cm apart at 110 degrees.
+- Parabolic reflector: a deep, focusable reflector giving a specular centre with soft edges.
 - Phase and polarity: the time relationship between two signals, and the sign of a waveform.
 - Practical: a visible light source in the frame.
 - PRO: performing rights organisation, which collects performance royalties for compositions.
 - PWM: pulse width modulation, a dimming method that can flicker at high frame rates.
 - Rembrandt lighting: key high and 45 degrees to the side, leaving a lit triangle under the far eye.
+- RGBWW: fixtures that mix red, green, blue, warm white and cool white emitters.
 - Rim light: a source directly behind the subject that outlines it.
 - Riser, hit, whoosh, sub, texture: trailer sound-design elements (a rising build, an impact, a passing air sound, a sub-bass boom, a continuous tonal layer).
 - Room tone: a recording of a location's silence used to fill gaps in dialogue.
 - Sample rate and bit depth: samples per second and bits per sample in digital audio.
+- Short-term loudness: loudness measured over a sliding 3 second window.
+- Shotgun microphone: an interference-tube microphone with a narrow forward pickup.
+- Sidechain: a processor input that lets one signal control the processing of another.
 - Slate: the clapperboard that labels and syncs a take; a smart slate displays timecode.
 - Snoot, barn doors: tube and hinged leaves that shape a hard beam.
 - Sonic logo: a 1 to 5 second sound that identifies a brand.
@@ -812,7 +896,9 @@ The disclosure rule for synthetic voice: a synthetic or cloned voice in client-f
 - Split lighting: key at 90 degrees, lighting half the face.
 - SSI: spectral similarity index, the Academy measure (SMPTE ST 2122) comparing a source's spectrum with a reference.
 - Stems: a mix delivered as separate instrument or element groups.
+- Strobe: studio flash, a short intense burst of light.
 - Sync licence: permission from the publisher to set a composition to picture.
+- Synthetically generated information: India's IT Rules term for content artificially created or altered to appear authentic.
 - T-stop: a measured transmission stop on a cinema lens.
 - Tenting: enclosing a product in white fabric with lamps outside for shadowless gradients.
 - Timecode: the running clock written into recordings for synchronisation.
@@ -833,7 +919,7 @@ Books
 - Ric Viers, The Sound Effects Bible, 2008.
 - Jay Rose, Producing Great Sound for Film and Video, 4th edition, 2014.
 - Bobby Owsinski, The Mixing Engineer's Handbook, 5th edition, 2022.
-- Roger Deakins, Reflections: On Cinematography, 2025.
+- Roger Deakins, Reflections: On Cinematography, Grand Central Publishing, 11 November 2025 (US; UK edition 12 February 2026).
 - Richard Avedon, In the American West, 1985.
 
 Specifications and standards
@@ -851,6 +937,12 @@ Specifications and standards
 - YouTube Help, Recommended upload encoding settings, https://support.google.com/youtube/answer/1722171
 - Meta, Music Guidelines, https://www.facebook.com/legal/music_guidelines
 - EU Artificial Intelligence Act, Article 50, Transparency obligations, https://artificialintelligenceact.eu/article/50/
+- Regulation (EU) 2026/1744 (the Digital Omnibus on AI); summaries: Gibson Dunn, EU AI Act Omnibus agreement: postponed high-risk deadlines and other key changes, https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/ ; Jones Walker, Yes, August 2 still matters, https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html
+- Government of India, Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026, G.S.R. 120(E), 10 February 2026; summary: Hogan Lovells, India introduces mandatory labelling for AI and 3-hour takedown for illegal content, https://www.hoganlovells.com/en/publications/india-introduces-mandatory-labelling-for-ai-and-3hour-takedown-for-illegal-content
+- UAE Ministry of Economy, guide to collective management of music rights; summary: Reed Smith, https://www.reedsmith.com/our-insights/blogs/viewpoints/102nr54/uae-ministry-of-economy-tourism-issues-guide-to-collective-management-of-music/
+- ATSC, A/85:2026-07 (PDF), https://www.atsc.org/wp-content/uploads/2026/07/A85-2026-07.pdf ; press release, 15 July 2026, https://www.atsc.org/news/atsc-modernizes-industry-audio-loudness-guidance-with-revision-to-a-85-recommended-practice/
+- EBU, R 128 publication page, https://tech.ebu.ch/publications/r128
+- Netflix, Sound Mix Specifications and Best Practices v1.5, https://backlothelp.netflix.com/hc/en-us/articles/360001794307-Netflix-Sound-Mix-Specifications-Best-Practices-v1-5
 - Government of India, The Noise Pollution (Regulation and Control) Rules, 2000.
 - Government of India, The Copyright Act, 1957, as amended by the Copyright (Amendment) Act, 2012.
 - UAE Federal Decree-Law No. 38 of 2021 on Copyright and Neighbouring Rights.
@@ -876,10 +968,19 @@ Product and tool documentation
 - ElevenLabs, Pricing, https://elevenlabs.io/pricing
 - Descript, Pricing, https://www.descript.com/pricing
 - Artlist, Pricing, https://artlist.io/pricing ; Epidemic Sound, Pricing, https://www.epidemicsound.com/pricing/ ; Musicbed, Pricing, https://www.musicbed.com/pricing
+- Avid, press release on Pro Tools 2026.4, April 2026, https://www.avid.com/press-room/2026/04/avid-powers-faster-workflows-and-next-generation-immersive-audio-with-latest-pro-tools-release
+- Mix, "iZotope remains in the restoration game with RX 12 launch", 29 April 2026, https://www.mixonline.com/technology/news-products/izotope-remains-in-the-restoration-game-with-rx-12-launch
+- Synthtopia, "Apple Logic Pro 12, MainStage 4 now available", 30 January 2026, https://www.synthtopia.com/content/2026/01/30/apple-logic-pro-12-mainstage-4-now-available-heres-whats-new/
+- ProVideo Coalition, "Aputure Light Storm 600c Pro II: industry workhorse gets upgrade", https://www.provideocoalition.com/aputure-light-storm-600c-pro-ii-industry-workhorse-gets-upgrade/
 - Reaper, https://www.reaper.fm/
 
 Articles, talks and podcasts
 - Twenty Thousand Hertz, "Ta-dum: the sound of Netflix" (Lon Bender, Todd Yellin, Charlie Campagna), https://www.20k.org/episodes/netflix
+- Mastercard, "Sound on: Mastercard debuts sonic brand", February 2019, https://newsroom.mastercard.com/news/press/2019/february/sound-on-mastercard-debuts-sonic-brand/ ; The Drum, 8 February 2019, https://www.thedrum.com/news/2019/02/08/fresh-revamping-its-brand-mastercard-unveils-sonic-logo
+- Storyboard18, "How Airtel's Live Every Moment campaign strengthened top-of-mind recall", 2025, https://www.storyboard18.com/advertising/how-airtels-live-every-moment-campaign-strengthened-top-of-mind-recall-among-consumers-80229.htm
+- Social Samosa, Intellion Offices by Tata Realty debuts sonic identity, April 2024, https://www.socialsamosa.com/industry-updates/intellion-offices-tata-realty-debuts-sonic-identity-brand-4506787
+- Music Business Worldwide, Emirates Music Rights Association (EMRA) granted first collective management licence in the UAE, 2025, https://www.musicbusinessworldwide.com/emirates-music-rights-association-emra-granted-first-collective-management-license-in-the-uae/ ; Finance Middle East, UAE issues second collective music rights licence to Music Nation, https://www.financemiddleeast.com/news/uae-issues-second-collective-music-rights-licence-to-music-nation/
+- Osborne Clarke, Use of music on social media platforms: what businesses and creators need to know, https://www.osborneclarke.com/insights/use-music-social-media-platforms-what-businesses-and-creators-need-know-about-usage
 - Team Deakins podcast (Roger and James Deakins), from April 2020, https://teamdeakins.libsyn.com/
 - Ava Berkofsky, interview on lighting dark skin for Insecure, Mic, 2017.
 - Amanda Petrusich, profile of Bradford Young, The New York Times, 2012.

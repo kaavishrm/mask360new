@@ -59,7 +59,7 @@ Alan Cooper's "About Face" (first edition 1995, fourth edition 2014 with Reimann
 
 ### 1.4 Buxton: sketching
 
-Bill Buxton's "Sketching User Experiences" (2007) separates sketches from prototypes. A sketch is quick, timely, inexpensive, disposable, plentiful, with a clear vocabulary and minimal detail, made to suggest and explore. A prototype is made to test and refine, and it describes where a sketch suggests. His argument with numbers: the cost of a change rises roughly ten times per stage from sketch to spec to build, so the cheapest exploration must happen earliest, and in quantity. Buxton's rule for a design review: five sketches on the wall, never one. One sketch is a proposal; five are a conversation.
+Bill Buxton's "Sketching User Experiences" (2007) separates sketches from prototypes. A sketch is quick, timely, inexpensive, disposable, plentiful, with a clear vocabulary and minimal detail, made to suggest and explore. A prototype is made to test and refine, and it describes where a sketch suggests. His argument, which echoes Barry Boehm's software cost-of-change curve ("Software Engineering Economics", 1981): every change costs more at each stage from sketch to specification to build, so the cheapest exploration must happen earliest and in quantity. Buxton's insistence on plurality is the review rule: several sketches on the wall, never one. One sketch is a proposal; several are a conversation, because the comparison is what produces judgement.
 
 ### 1.5 Saffer: microinteractions
 
@@ -76,7 +76,7 @@ Saffer's other durable idea: "bring the data forward". The microinteraction shou
 
 ### 1.6 Norman's stages and gulfs, Nielsen's heuristics
 
-Don Norman's seven stages of action (goal, plan, specify, perform, perceive, interpret, compare) and the two gulfs (execution: can I work out what to do; evaluation: can I tell what happened) are covered in file 02 of this corpus and are cross-referenced here as the diagnostic for any flow that fails. Jakob Nielsen's ten heuristics (1994) are applied in section 12. Design-taste's critique format (verdict, what works, what does not, the fix) is the house format; this file supplies the vocabulary the fix is written in.
+Don Norman's seven stages of action (goal, plan, specify, perform, perceive, interpret, compare) and the two gulfs (execution: can I work out what to do; evaluation: can I tell what happened) are covered in 02-perception-and-psychology.md and are cross-referenced here as the diagnostic for any flow that fails. Jakob Nielsen's ten heuristics (1994) are applied in section 12. Design-taste's critique format (verdict, what works, what does not, the fix) is the house format; this file supplies the vocabulary the fix is written in.
 
 ## 2. Information architecture
 
@@ -126,7 +126,7 @@ A labelling system is the set of words used for navigation, headings, index term
 - One label, one meaning, across the whole site. "Collections" cannot mean fashion seasons on one page and jewellery lines on another.
 - Prefer nouns for places and verbs for tasks; a navigation bar that mixes "Shop" and "Jewellery" reads as two systems.
 - Avoid clever labels for anything load-bearing. Wit belongs in copy (design-taste, section 1, point 8); the tab bar carries plain nouns.
-- Test with a closed card sort (people place items into your categories) for validation and an open sort (they make their own categories) for discovery. Tullis and Wood (2004) found 20 to 30 participants give results that correlate at about 0.93 with a 168-person sample; 15 is the practical floor.
+- Test with a closed card sort (people place items into your categories) for validation and an open sort (they make their own categories) for discovery. Tullis and Wood (2004) found 20 to 30 participants give results that correlate at about 0.93 with a 168-person sample; 15 is the practical floor (study design and recruiting in 08-ux-research-and-strategy.md).
 - Tree testing (text-only navigation of the proposed tree; Optimal Workshop's Treejack is the common tool) measures findability without visual design noise. A top-level task should reach 70 percent direct success before you build.
 
 ### 2.5 Navigation systems
@@ -145,7 +145,8 @@ Breadcrumbs: location-based (the path in the hierarchy) are the only kind worth 
 
 ### 2.6 Search systems
 
-- Query: a single field, visible at all widths, with autocomplete within 100ms of each keystroke (section 15 on thresholds) showing products, categories and editorial separately. Typo tolerance (one edit for words of 4 to 7 characters, two for 8 or more is the Algolia default) and synonym sets ("kurta" for "tunic", "abaya" variants) are IA work and belong in the design brief.
+- Findability (Peter Morville, "Ambient Findability", 2005) is the degree to which an object is easy to discover or locate; Morville's user experience honeycomb (2004) sets "findable" beside useful, usable, desirable, accessible, credible and valuable. Search is one route to it; labels (2.4) and navigation (2.5) are the others, which is why a search box never rescues a weak structure.
+- Query: a single field, visible at all widths, with autocomplete within 100ms of each keystroke (12.2 on thresholds) showing products, categories and editorial separately. Typo tolerance (one edit for words of 4 to 7 characters, two for 8 or more is the Algolia default) and synonym sets ("kurta" for "tunic", "abaya" variants) are IA work and belong in the design brief.
 - Results: show the count, the query, the sort, the facets, and a result that looks like the thing (image for products, excerpt for articles). Keep the query in the field so it can be edited.
 - Zero results: never a dead end. Show the query, suggest corrections, show popular items, offer contact. A luxury store's zero-results page should be as considered as its home page because the person arrived with intent and money.
 - Facets: attribute filters derived from a controlled vocabulary (see 2.7). Show counts per value so that a dead facet is never selectable; collapse facets with more than about 8 values; let facets combine with OR inside a facet and AND across facets, because that is what people expect when they tick two colours and one size.
@@ -162,20 +163,13 @@ Breadcrumbs: location-based (the path in the hierarchy) are the only kind worth 
 
 Kevin Lynch, "The Image of the City" (1960), found that people build mental maps from five elements: paths, edges, districts, nodes and landmarks. Romedi Passini, "Wayfinding in Architecture" (1984), and Arthur and Passini, "Wayfinding: People, Signs, and Architecture" (1992), turned that into a method: wayfinding is a sequence of decisions, each needing the right information at the decision point, no earlier and no later.
 
-Applied to screens:
+Applied to screens: paths are the main flows, made visibly continuous (a persistent stepper, a sticky header); edges are section boundaries, marked by background and spacing shifts under one rule for the whole site; districts are a visual family per area (editorial pages look different from the store, so the person feels the move); nodes are the hubs where decisions happen (home, category, bag) and get the most care; landmarks are the logo, the bag and the search field, fixed in position on every page.
 
-- Paths: the main flows; make them visibly continuous (a persistent stepper, a sticky header).
-- Edges: section boundaries; use background shifts and spacing changes, with one rule for the whole site.
-- Districts: a visual family per area (editorial pages look different from the store, and the person feels the move).
-- Nodes: hubs where decisions happen (home, category, cart). Give them the most care.
-- Landmarks: the logo, the cart, the search field, in fixed positions on every page.
+Applied to hotels and events (Mask360 does both), where wayfinding is a sequence of decisions:
 
-Applied to hotels and events (Mask360 does both):
-
-- Information at decision points: a sign at every corridor junction, none in the middle of a corridor. At an event, a sign at the registration exit, the stair, the lift lobby.
-- Progressive disclosure of destinations: the lobby sign lists zones; the zone sign lists rooms. Listing every room in the lobby is the physical version of a mega-menu.
-- "You are here" maps must be forward-up (aligned to the direction the viewer faces; Levine, 1982); north-up maps in a corridor double error rates in Levine's studies.
-- Landmarks beat signs: a sculpture, a scent, a colour per floor. Aman properties navigate almost entirely by landmark and sightline, which is why they feel quiet.
+- Information at decision points: a sign at every corridor junction, none in the middle of a corridor; at an event, a sign at the registration exit, the stair and the lift lobby. Disclose destinations progressively: the lobby sign lists zones, the zone sign lists rooms. Listing every room in the lobby is the physical version of a mega-menu.
+- "You are here" maps must be forward-up (aligned so that up on the map is straight ahead for the viewer), because Marvin Levine's experiments (1982, and with Marchon and Hanley, 1984) found that contra-aligned maps (up on the map pointing anywhere but ahead) sent far more people the wrong way than aligned ones.
+- Landmarks beat signs: a sculpture, a scent, a colour per floor. Aman's resorts lean on landmark and sightline far more than on signage, which is part of why they feel quiet.
 - Naming must match across the invitation, the app, the signage and the staff's mouth. One term per place, as in 2.4.
 
 ## 3. Flows and their notation
@@ -195,7 +189,7 @@ Jesse James Garrett's "A visual vocabulary for describing information architectu
 
 - Happy path: the shortest route from entry to goal with all inputs valid. Draw it first and count its steps; every extra step costs completions (Baymard's checkout research in section 6.3 gives the numbers).
 - Edge paths: valid but unusual routes (a guest changes dates after selecting a rate, a card declines, a size is out of stock at checkout). List them before design review, because each one is a screen somebody will otherwise improvise in the build.
-- Error paths: invalid input, failed calls, timeouts, permission denied, offline. Each needs a message (anatomy in file 10 of this corpus) and a recovery route back to the happy path.
+- Error paths: invalid input, failed calls, timeouts, permission denied, offline. Each needs a message (anatomy in 10-ux-writing-and-content-design.md) and a recovery route back to the happy path.
 - Rule of thumb from practice: for a flow with n screens, expect 2n to 3n edge and error states. A seven-screen checkout has 15 to 20 of them. If the design file shows seven frames, the design is one-third done.
 
 ### 3.4 State diagrams and decision tables
@@ -224,19 +218,18 @@ The rule that governs the ladder: prototype for the question being asked, at the
 
 | Tool | Best at | Notes |
 |---|---|---|
-| Figma | Click-through and simple motion prototypes; variables and conditional logic (since 2023) allow state; the shared source of truth | Figma Make (announced 7 May 2025) builds working prototypes from prompts and edits; Figma Sites was still labelled beta in Figma's February 2026 annual report |
-| ProtoPie | High-fidelity interaction prototypes with variables, formulas, device sensors, voice, multi-device and hardware (ProtoPie Connect for cars and kiosks); an MCP integration and AI-generated interactions as of October 2026 | The right tool for a hotel in-room panel, a car HMI, or a kiosk at an event |
-| Origami Studio 3 | Meta's patch-based tool; the deepest control of physics and logic; previews on iOS through the Origami Live viewer | Steep; use when the question is feel at the level of a spring curve |
+| Figma | Click-through and simple motion prototypes; variables and conditional logic (since 2023) allow state; the shared source of truth | Figma Make (announced at Config, 7 May 2025) builds working coded prototypes from prompts; Figma Sites, announced the same day, publishes sites from frames; check current plan limits before briefing either |
+| ProtoPie | High-fidelity interaction prototypes with variables, formulas, native device sensors, voice, multi-device and hardware (ProtoPie Connect for cars and kiosks); ProtoPie MCP and AI-generated interactions are listed on its site as of October 2026 | The right tool for a hotel in-room panel, a car HMI, or a kiosk at an event |
+| Origami Studio | Meta's patch-based tool; the deepest control of physics and logic; previews on iOS through the Origami Live viewer | Steep; use when the question is feel at the level of a spring curve |
 | Framer | A website builder with motion built in; the right tool to prototype and ship a marketing site in one place | Its original code-prototyping product is gone; do not brief it as a Principle replacement |
 | Principle | Legacy timeline-based Mac tool | Still works; not where new skills should go |
-| Code (React with Motion, SwiftUI previews, Expo) | Real latency, real data, real gestures; the only honest test of "feel" | Vercel v0, Lovable and Claude artifacts make a throwaway coded prototype a half-day job |
+| Code (React with Motion, SwiftUI previews, Expo) | Real latency, real data, real gestures; the only honest test of "feel" | Vercel v0, Lovable and Claude Artifacts make a throwaway coded prototype a half-day job |
 | Wizard of Oz | A human plays the system (a concierge answering "the AI") | The right first prototype for any AI or voice feature; cost is one person for a day |
 
 ### 4.3 Prototype hygiene
 
 - Name the question on the first frame of every prototype. If it cannot be named, the prototype is decoration.
-- Use real content. Lorem ipsum hides the two problems that matter most: labels and lengths (Hindi runs about 15 to 30 percent longer than English in most UI strings; Arabic is similar in width and taller in line).
-- Fake only what the question does not need. A booking prototype can fake payment; it cannot fake the calendar.
+- Use real content. Lorem ipsum hides the two problems that matter most: labels and lengths (plan a 30 percent length allowance for Hindi against English, a common localisation rule; Arabic is similar in width and needs taller lines). Fake only what the question does not need: a booking prototype can fake payment; it cannot fake the calendar.
 - Test with five people per round (Nielsen, 2000: five users find about 85 percent of usability problems in a round, assuming a problem probability of 31 percent), then iterate and test again, because the second round finds what the first fixes revealed.
 
 ## 5. Pattern catalogue A: entry, identity and finding
@@ -264,7 +257,7 @@ A pattern is a named, reusable solution to a recurring interaction problem, desc
 |---|---|---|---|
 | Passkeys | FIDO2 and WebAuthn credential bound to the device, unlocked by biometric or device PIN; synced through iCloud Keychain, Google Password Manager or a third-party manager | Default for new consumer products on iOS and Android and the modern web | FIDO Alliance's "State of Passkeys 2026" (7 May 2026, 11,000 consumers in ten countries) estimates about 5 billion passkeys in use, 75 percent of respondents with at least one account on a passkey, 49 percent using them regularly when offered. Keep a fallback (OTP or magic link) for shared devices and for Indian Android devices without a screen lock |
 | Magic link | Email with a one-time signed URL | Low-frequency products, desktop first; hotels and events | Fails on phones where the mail app opens the link in a different browser; pair with a 6-digit code in the same email |
-| SMS OTP in India | 4 to 6 digit code by SMS, auto-read by the Android SMS Retriever API or the WebOTP API, iOS "one-time-code" autofill from Messages | The Indian default for phone-first accounts and for RBI-mandated payment authentication | Design the OTP screen as one field with autofill, a 30 second resend timer, a visible "wrong number" route, and the number shown. RBI published a draft framework for alternative authentication factors in July 2024 and followed with final directions in 2025; verify the current effective date before briefing a bank or wallet client. Delivery delays on DND and roaming numbers are routine, so never block the flow on OTP arrival alone |
+| SMS OTP in India | 4 to 6 digit code by SMS, auto-read by the Android SMS Retriever API or the WebOTP API, iOS "one-time-code" autofill from Messages | The Indian default for phone-first accounts and for RBI-mandated payment authentication | Design the OTP screen as one field with autofill, a 30 second resend timer, a visible "wrong number" route, and the number shown. RBI's Authentication Mechanisms for Digital Payment Transactions Directions, 2025 (issued 25 September 2025, in force from 1 April 2026) keep two factors with at least one dynamic (unique to each transaction) and open the field to biometrics, device-bound tokens and passphrases beside SMS OTP, so a payment screen should expect a fingerprint or an app prompt as often as a code. Delivery delays on DND and roaming numbers are routine, so never block the flow on OTP arrival alone |
 | WhatsApp OTP | Authentication template message through the WhatsApp Business Platform | India and the Gulf, where WhatsApp open rates beat SMS | Charged per delivered message (section 16.5); needs an opt-in |
 | Social login | OAuth with Google, Apple, Facebook | Consumer apps where the person already trusts those providers | Apple's App Store guideline 4.8 requires an equivalent privacy-preserving option (Sign in with Apple qualifies) when any third-party login is offered; Facebook login reads as dated in luxury contexts |
 | Two-factor | Second factor: authenticator app (TOTP), passkey, SMS | Accounts with money, staff tools, admin | SMS is the weakest second factor (SIM swap); offer TOTP or passkey first. Show recovery codes once and make the person confirm they saved them |
@@ -313,7 +306,7 @@ Section 2.6 covers the system; this entry covers the behaviour at the field.
   8. Complete the look or wear it with: contextual navigation (2.5), 3 to 4 items, never a carousel of 20.
   9. Reviews where the category supports them (beauty yes, haute joaillerie no; 6.7).
 - Variants: made-to-order with lead time and deposit; personalisation (engraving, monogram) with live preview; pre-order with ship date; virtual try-on for beauty (ModiFace, part of L'Oréal since 2018, and Perfect Corp's YouCam power most brand try-ons), for eyewear and jewellery (AR through Apple Quick Look with USDZ files or Google's model-viewer with glTF; both are in the platform and cost only the 3D asset).
-- Pitfalls: a gallery that opens a new page; prices in the wrong currency for the detected country; "add to bag" that disappears under the keyboard; size selected by default (removes the decision and causes returns); try-on that fails on first use and never offers again. Reference: Loewe's PDP (gallery first, price plain, craft text as the second half); Cartier's appointment and call routes beside "add to bag"; Sabyasachi's catalogue, which sells by appointment and shows no price, a defensible choice only because the house's customers know the range.
+- Pitfalls: a gallery that opens a new page; prices in the wrong currency for the detected country; "add to bag" that disappears under the keyboard; size selected by default (removes the decision and causes returns); try-on that fails on first use and never offers again. Reference: Loewe's PDP (gallery first, price plain, craft text as the second half); Cartier's appointment and call routes beside "add to bag"; Sabyasachi's bridal couture, sold by appointment without published prices, a defensible choice only because the house's customers know the range.
 
 ### 6.2 Cart (bag)
 
@@ -324,7 +317,7 @@ Section 2.6 covers the system; this entry covers the behaviour at the field.
 
 ### 6.3 Checkout
 
-Baymard Institute's running meta-analysis puts average documented cart abandonment at about 70 percent (70.22 percent across 50 studies in its current published figure), with unexpected extra costs the top stated reason (about 48 percent of abandoners in its survey), forced account creation and a long or complicated process next. Baymard's audits also report that the average checkout flow carries about 11 form fields where 7 to 8 would do (verify the current figure on baymard.com before quoting it to a client). Every rule below exists to remove a reason from that list.
+Baymard Institute's running meta-analysis puts average documented cart abandonment at about 70 percent (70.22 percent across 50 studies in its current published figure), with extra costs (shipping, tax, fees) the top stated reason at 40 percent of abandoners once "just browsing" is excluded, then slow delivery (20 percent), distrust of the site with card details (19 percent), forced account creation (18 percent) and a long or complicated checkout (17 percent); page updated 22 September 2025. Baymard's audits count 23.48 form elements (14.88 form fields) in the average US checkout, where 12 to 14 elements (7 to 8 fields) would do. Every rule below exists to remove a reason from that list.
 
 - When: after the cart, as a sequence (2.2) of at most four stages: contact and delivery, payment, review, confirmation. Single-page checkouts with collapsing sections work for stores with few fields; the stage model is safer for luxury with gifting and appointments.
 - Anatomy:
@@ -361,7 +354,7 @@ Baymard Institute's running meta-analysis puts average documented cart abandonme
 | Cards | Visa and Mastercard dominate; 3-D Secure OTP | Same redirect warning as India |
 | BNPL | Tabby and Tamara (four instalments, no interest to the customer) are common in fashion and beauty | Show the instalment amount on the PDP when the audience is under 35 |
 | Cash on delivery | Still common in the Emirates | Same threshold rules |
-| Aani and Jaywan | Aani, the Central Bank's instant payment platform (about 1.5 million users by February 2025); Jaywan, the domestic card scheme, with bank issuance from July 2026 | Expect both as checkout options to grow; design the method list to take a new logo without a redesign |
+| Aani and Jaywan | Aani, the instant payment platform run by Al Etihad Payments, the Central Bank's subsidiary; Jaywan, the national domestic card scheme, whose nationwide issuance by banks and exchange houses was inaugurated on 20 July 2026, with a co-badged Jaywan Mastercard credit card | Expect both as checkout options to grow; design the method list to take a new logo without a redesign |
 | Dirham | 5 percent VAT; the Central Bank unveiled a dirham symbol in March 2025 | Use "AED" until font support for the new symbol is confirmed in the brand typeface; prices inclusive of VAT |
 
 - Order confirmation anatomy: the order number large, what was bought, where it goes, when it arrives, how to change or cancel, the receipt, "add to calendar" for deliveries with a date, the WhatsApp opt-in, then the account offer. The confirmation page is read more carefully than any other page in the store; it is where trust is banked for the next order.
@@ -452,14 +445,14 @@ Baymard Institute's running meta-analysis puts average documented cart abandonme
 
 - When: there is something the person asked to know. The test for every notification: would the person have set an alarm for it?
 - Anatomy: categories the person can switch independently (orders, bookings, offers, account), frequency caps per category, quiet hours by local time, an in-app inbox that holds what the push summarised, and read states.
-- Platform surfaces, as of October 2026: iOS Live Activities (since iOS 16.1) show a live state on the lock screen and in the Dynamic Island (delivery, table ready, flight); Android 16's Live Updates promote an ongoing notification to a status bar chip and the top of the shade for user-initiated, time-bound activities (navigation, rideshare, delivery tracking) and are explicitly disallowed for promotions, chat messages, and boarding passes before boarding begins (Android developer documentation). Both are right for "your table is ready" and "your driver is 5 minutes away" and wrong for "new arrivals".
-- Legal floor: India's DPDP Act (2023) and Rules (notified 13 November 2025, with notice and consent duties applying from 13 May 2027) require consent that is free, specific, informed and unambiguous with a clear affirmative action, and a withdrawal route as easy as the grant; TRAI's commercial communication rules govern SMS and the DND registry; UAE's PDPL (Federal Decree-Law 45 of 2021) requires consent for direct marketing. The design consequence: a per-channel, per-category consent screen with nothing pre-ticked.
+- Platform surfaces, as of October 2026: iOS Live Activities (since iOS 16.1) show a live state on the lock screen and in the Dynamic Island (delivery, table ready, flight); Android 16's Live Updates promote an ongoing notification to a status bar chip, the lock screen and the top of the shade for activities that are ongoing, user-initiated and time-sensitive (active navigation, calls, rideshare, food delivery); Google's documentation lists ads, promotions, chat messages, alerts, upcoming calendar events and shortcuts to app features as inappropriate, excludes package tracking, and lets a boarding pass become a Live Update only once the person is at the airport or boarding has begun. Both are right for "your table is ready" and "your driver is 5 minutes away" and wrong for "new arrivals".
+- Legal floor: India's DPDP Act (2023) and Rules (notified 13 November 2025; consent manager provisions from November 2026, notice and consent duties from 13 May 2027, with no change to that timeline notified as of October 2026) require consent that is free, specific, informed and unambiguous with a clear affirmative action, and a withdrawal route as easy as the grant; TRAI's commercial communication rules govern SMS and the DND registry; UAE's PDPL (Federal Decree-Law 45 of 2021) requires consent for direct marketing. The design consequence: a per-channel, per-category consent screen with nothing pre-ticked.
 - Pitfalls: one global toggle; marketing in a transactional channel; a push with no deep link to the thing it mentions; sending at 02:00 local time because the server is in another zone.
 
 ### 8.3 Messaging and chat
 
 - When: the person expects a human or an agent to reply (concierge, customer care, sales for high-value items).
-- Anatomy: message list with sender, time, delivery state (sending, sent, delivered, read, failed with retry), composer with attachments, typing indicator, and a clear statement of who is answering (a person, a bot, an AI; section 10.11) and when.
+- Anatomy: message list with sender, time, delivery state (sending, sent, delivered, read, failed with retry), composer with attachments, typing indicator, and a clear statement of who is answering (a person, a bot, an AI; section 10.10) and when.
 - Variants: WhatsApp as the channel (16.5), in-app chat (Intercom, Zendesk, Freshchat), SMS fallback; asynchronous with expected reply time ("usually within 2 hours") versus live with queue position.
 - Pitfalls: read receipts on by default for staff (creates pressure to answer instantly and shows when they do not); a bot that pretends to be human; a chat widget that covers the "add to bag" button on mobile; transcripts that vanish on refresh. Reference: WhatsApp's state model (two ticks, blue ticks) as the vocabulary people already know; Four Seasons's chat, launched in 2017, which runs through WhatsApp, SMS and the app with a human on the other end.
 
@@ -551,14 +544,14 @@ The research position: confirmation dialogs are read less each time they appear,
 ### 9.4 Inline editing
 
 - When: a value that changes often and stands alone (a name, a quantity, a note, a cell).
-- Anatomy: a visible affordance on hover or focus (a pencil, an underline, a field border), click or enter to edit, save on blur or enter, escape to cancel, an optimistic update (the UI shows the new value at once and reverts with a message if the save fails; 15.2), and a saved indicator for a second.
+- Anatomy: a visible affordance on hover or focus (a pencil, an underline, a field border), click or enter to edit, save on blur or enter, escape to cancel, an optimistic update (the UI shows the new value at once and reverts with a message if the save fails; 15.1), and a saved indicator for a second.
 - Pitfalls: no affordance, so nobody knows it is editable; save on blur that fires when the person reaches for a tooltip; losing the edit on a slow network with no retry.
 
 ### 9.5 Drag and drop
 
 - When: ordering (a gallery, a playlist, a priority list), moving between containers (a kanban), placing (a floor plan, a seating chart for a dinner).
 - Anatomy: a handle or a long-press on touch (about 300 to 500ms) to lift, a lift effect (shadow, scale 1.02 to 1.05), a drag threshold of about 8px before the drag starts (so that a tap does not become a drag), a placeholder where the item will land, auto-scroll near edges, a drop animation to the final position, and a keyboard alternative (space to lift, arrows to move, space to drop).
-- The legal floor: WCAG 2.2 (October 2023) success criterion 2.5.7 Dragging Movements (AA) requires a single-pointer alternative for any drag operation; the keyboard alternative satisfies it.
+- The legal floor: WCAG 2.2 (October 2023) success criterion 2.5.7 Dragging Movements (AA) requires a single-pointer alternative for any drag operation (tap to pick up, tap to place); keyboard operation is required separately under 2.1.1 (11-accessibility-and-inclusive-design.md).
 - Pitfalls: drag that conflicts with scroll on touch (the long-press delay is the fix); no placeholder; dropping on the wrong container with no undo; a seating chart that only works with a mouse. Reference: Trello (the kanban baseline); dnd-kit and Atlassian's pragmatic-drag-and-drop as the open-source behaviours.
 
 ### 9.6 Bulk actions
@@ -575,7 +568,7 @@ The research position: confirmation dialogs are read less each time they appear,
 
 ## 10. AI product patterns, October 2026
 
-The pattern vocabulary here follows Emily Campbell's "Shape of AI" library (shapeof.ai, CC BY-NC-SA), which as of October 2026 groups AI interface patterns into six categories: Wayfinders (how people find their way in: example galleries, suggestions, initial calls to action, follow-ups, prompt details), Inputs (open input, auto-fill, chained actions, regenerate, transform, inpainting, madlibs), Tuners (parameters, modes, preset styles, prompt enhancers, attachments, connectors, model management), Governors (action plans, branches, citations, controls, cost estimates, draft mode, memory, stream of thought, variations, verification), Trust builders (caveats, consent, disclosure, data ownership, footprints, incognito mode, watermarks) and Identifiers (avatar, name, personality, iconography). The reason to adopt a shared vocabulary: AI features are being designed faster than the patterns are being tested, and a shared name lets a review say "this needs a governor" instead of "this feels risky". 22-ai-era-craft-and-generative-tools.md covers the tools and the production craft; this section covers the product interaction.
+The pattern vocabulary here follows Emily Campbell's "Shape of AI" library (shapeof.ai, CC BY-NC-SA), which as of October 2026 groups AI interface patterns into six categories, with patterns including: Wayfinders (how people find their way in: example gallery, initial CTA, suggestions, nudges, follow up, prompt details, templates), Inputs (open input, auto-fill, chained action, inline action, regenerate, transform, restyle, inpainting, madlibs), Tuners (parameters, modes, preset styles, prompt enhancer, attachments, connectors, model management, voice and tone), Governors (action plan, branches, citations, controls, cost estimates, draft mode, memory, references, sample response, stream of thought, variations, verification), Trust builders (caveat, consent, disclosure, data ownership, footprints, incognito mode, watermark) and Identifiers (avatar, colour, iconography, name, personality). The reason to adopt a shared vocabulary: AI features are being designed faster than the patterns are being tested, and a shared name lets a review say "this needs a governor" instead of "this feels risky". 22-ai-era-craft-and-generative-tools.md covers the tools and the production craft; this section covers the product interaction.
 
 ### 10.1 Chat interface anatomy
 
@@ -617,32 +610,28 @@ Generative UI is the pattern where the model returns structured data that the pr
 
 ### 10.6 Latency handling
 
-- Thresholds (15.3) apply with one change: first token within 1 second keeps the sense of conversation; a full answer may take 30 seconds if it visibly progresses.
+- Thresholds (12.2) apply with one change: first token within 1 second keeps the sense of conversation; a full answer may take 30 seconds if it visibly progresses.
 - Show stages ("Searching 4 sources", "Reading", "Writing") instead of a spinner; show a skeleton for a generative component; allow the person to leave and return (the answer continues server-side and a notification or badge marks completion).
 - For image and video generation, show the expected duration and a queue position where there is one, and allow a batch to run while the person does something else.
 
 ### 10.7 Feedback loops
 
-- Explicit: thumbs up and down with an optional reason list (wrong, unsafe, unhelpful, too long) and a free-text field; a "report" route for harmful output.
-- Implicit: copy, regenerate, edit, abandonment and follow-up are stronger signals than thumbs; log them with consent.
+- Explicit: thumbs up and down with an optional reason list (wrong, unsafe, unhelpful, too long) and a free-text field; a "report" route for harmful output. Implicit signals (copy, regenerate, edit, abandonment, follow-up) are stronger than thumbs; log them with consent.
 - Memory transparency: show what the product remembers about the person and let them edit and delete it (Shape of AI's Memory and Data ownership patterns; DPDP's data principal rights).
 
 ### 10.8 Guardrails and refusal UX
 
-- A refusal says what cannot be done and offers what can, in one short paragraph, in the product's voice, with no lecture. The reason: a moralising refusal reads as the brand judging its customer.
-- Partial help is the default: answer the part that is safe, name the part that is not.
-- Policy-driven blocks (a luxury brand's concierge will not discuss competitor pricing, a hotel bot will not take a reservation for a minor) are stated as policy in the brand's voice, with the policy named.
-- A route to a person is always present after a refusal.
+- A refusal says what cannot be done and offers what can, in one short paragraph, in the product's voice, with no lecture. The reason: a moralising refusal reads as the brand judging its customer. Partial help is the default: answer the part that is safe, name the part that is not.
+- Policy-driven blocks (a luxury brand's concierge will not discuss competitor pricing, a hotel bot will not take a reservation for a minor) are stated as policy in the brand's voice, with the policy named. A route to a person is always present after a refusal.
 
 ### 10.9 Cost and quota display
 
-- Where the person pays per use (credits, tokens, generations), show the cost before the action (Cost estimates, a Governor), the balance after, and the point at which the plan runs out; batch generations show the total cost of the batch.
-- Where a quota resets, show the reset time in the person's zone.
+- Where the person pays per use (credits, tokens, generations), show the cost before the action (Cost estimates, a Governor), the balance after, and the point at which the plan runs out; batch generations show the total cost of the batch; where a quota resets, show the reset time in the person's zone.
 - Pitfalls: a surprise "you are out of credits" after the prompt is written; credits as a currency that hides the money (Currency confusion in Brignull's taxonomy, section 13.1).
 
 ### 10.10 Disclosure and the law, as of October 2026
 
-- The EU AI Act's transparency obligations (Article 50) require that people are told when they interact with an AI system unless it is obvious, and that synthetic content is marked; these obligations apply from 2 August 2026. Design consequence: a concierge bot states that it is automated in its first message and in its avatar or name (Identifiers), and generated images carry a disclosure where the law or the platform requires.
+- The EU AI Act's transparency obligations (Article 50) require that people are told when they interact with an AI system unless it is obvious, and that synthetic content is marked in a machine-readable way; they apply from 2 August 2026. The AI digital omnibus adopted in mid-2026 moved the Annex III high-risk obligations to 2 December 2027 and left Article 50 in place, giving only systems already on the market before 2 August 2026 until 2 December 2026 to add the machine-readable marking. Design consequence: a concierge bot states that it is automated in its first message and in its avatar or name (Identifiers), and generated images carry a disclosure where the law or the platform requires.
 - India has no AI-specific statute as of October 2026; the DPDP Act governs the personal data an AI feature processes, and the CCPA's dark pattern guidelines apply to any manipulative AI interface.
 - House rule: an AI feature in a Mask360 product is named, disclosed, interruptible, and gated on anything that costs money or sends a message. The brand's voice (10-ux-writing-and-content-design.md) is the bot's voice; a generic assistant persona is a cheap tell.
 
@@ -660,7 +649,7 @@ Generative UI is the pattern where the model returns structured data that the pr
 | Pickers | Wheel or compact date picker; menus from buttons | Material date picker (modal calendar) and dropdown menus | Do not ship a wheel picker on Android or a Material calendar on iOS |
 | Typography and iconography | SF Pro and SF Symbols | Roboto and Material Symbols | A brand typeface may replace both; the system icons should stay (03-typography.md) |
 | Haptics | UIFeedbackGenerator: selection, impact (light, medium, heavy, soft, rigid), notification (success, warning, error) | HapticFeedbackConstants and VibrationEffect; CONFIRM and REJECT since Android 11 | Pair haptics with the visual change at the same frame (11.4) |
-| Widgets and live surfaces | WidgetKit widgets; Live Activities and the Dynamic Island since iOS 16.1; App Clips (a small part of the app launched from a QR code, NFC tag or link without install; the size cap rose from 10MB to 15MB in iOS 16 and to about 50MB for digital invocations in iOS 17, verify against current App Clip documentation) | App widgets; Live Updates in Android 16 (8.2); Google announced the deprecation of Instant Apps, so plan on the web for install-free experiences | A hotel's "your room is ready" and a boutique's "collect at the counter" are Live Activity and Live Update cases; an event's check-in is an App Clip case |
+| Widgets and live surfaces | WidgetKit widgets; Live Activities and the Dynamic Island since iOS 16.1; App Clips (a small part of the app launched from a QR code, NFC tag, App Clip Code or link without install; the uncompressed size cap is 10MB for iOS 15 and earlier, 15MB for iOS 16, and 100MB on iOS 17 and later only for clips invoked digitally, by links or Spotlight, and never physically) | App widgets; Live Updates in Android 16 (8.2); Google Play Instant (Instant Apps) was shut down in December 2025, so install-free experiences on Android run on the web | A hotel's "your room is ready" and a boutique's "collect at the counter" are Live Activity and Live Update cases; an event's check-in is an App Clip case |
 | Deep links | Universal Links (apple-app-site-association file on the domain) | App Links (assetlinks.json on the domain) | Every marketing URL must resolve in the app if installed and on the web if not; deferred deep links (Branch, AppsFlyer) carry the destination through the install |
 
 ### 11.2 Gestures and their conflicts
@@ -675,19 +664,16 @@ Generative UI is the pattern where the model returns structured data that the pr
 
 - Use the input type that summons the right keyboard: tel for phone, email for email, numeric for OTP and PIN, decimal for prices, url for links; on iOS "one-time-code" textContentType enables OTP autofill from Messages; on Android, the SMS Retriever API reads the code without the SMS permission.
 - The keyboard covers about 40 percent of the screen; the field in focus and the primary button must stay visible (keyboard-avoiding layout); place "Done" or "Next" on the keyboard's return key per field.
-- Hindi and Arabic keyboards are taller and switch layouts; test every form with them. Indic transliteration keyboards (Gboard's Hinglish) mean a person types "namaste" and gets "नमस्ते"; search must handle both.
-- Dismiss on scroll or on tap outside; never trap the keyboard behind a modal.
+- Hindi and Arabic keyboards are taller and switch layouts; test every form with them. Indic transliteration keyboards (Gboard's Hinglish) mean a person types "namaste" and gets "नमस्ते"; search must handle both. Dismiss on scroll or on tap outside; never trap the keyboard behind a modal.
 
 ### 11.4 Haptics pairing
 
 - Selection changes get the lightest tick (iOS selection, Android CLOCK_TICK); toggles and confirmations get a light impact; success, warning and error states get the notification types, once; nothing on scroll, nothing on every keystroke.
-- Pair with the visual at the same frame, because a haptic that arrives 50ms after the visual reads as a separate event.
-- Respect system settings; haptics are off for a share of people and for every Android device without a good actuator, so no information may live only in the haptic.
+- Pair with the visual at the same frame, because a haptic that arrives 50ms after the visual reads as a separate event. Respect system settings: haptics are off for a share of people and for every Android device without a good actuator, so no information may live only in the haptic.
 
 ### 11.5 Pull to refresh
 
-- Use it on chronological content that updates (feeds, inbox, orders list) and nowhere else. A checkout or a form must never refresh on an overscroll.
-- Anatomy: a threshold of about 80pt, a visible indicator that follows the finger, a release state, and a completion state; iOS and Android each provide the control.
+- Use it on chronological content that updates (feeds, inbox, orders list) and nowhere else; a checkout or a form must never refresh on an overscroll. Anatomy: a threshold of about 80pt, a visible indicator that follows the finger, a release state, and a completion state; iOS and Android each provide the control.
 
 ## 12. Feedback, system status and error prevention
 
@@ -701,7 +687,7 @@ Jakob Nielsen's ten usability heuristics (1994, revised wording 2020) are the st
 | Match between system and the real world | Does it use the person's words and conventions? | "Bag" in luxury, "check-in" in hotels, PIN code in India, "area" in Dubai |
 | User control and freedom | Can the person back out and undo? | Undo on wishlist removals; modify a booking without cancelling |
 | Consistency and standards | Does it follow platform and internal conventions? | One date format, one price format, platform pickers (11.1) |
-| Error prevention | Does it stop errors before they happen? | Disabled past dates, PIN-driven city, inline validation (12.4) |
+| Error prevention | Does it stop errors before they happen? | Disabled past dates, PIN-driven city, inline validation (12.3) |
 | Recognition over recall | Is what the person needs visible? | Recent searches, saved addresses, the selected room shown in the payment step |
 | Flexibility and efficiency | Are there accelerators for experts? | Saved cards, Apple Pay, command palettes in staff tools |
 | Aesthetic and minimalist design | Is every element earning its place? | Design-taste, section 5, "edit" |
@@ -757,13 +743,13 @@ The seven-category grouping the brief asks for comes from Mathur et al., "Dark P
 - The Digital Services Act (Regulation 2022/2065), Article 25, bans online platforms from designing interfaces that deceive or manipulate recipients or materially distort their decisions, applicable to all platforms from 17 February 2024; it defers to the UCPD and GDPR where they apply, which is why its reach on ordinary e-commerce is contested.
 - The GDPR plus the EDPB's "Guidelines 03/2022 on deceptive design patterns in social media platform interfaces" (version 2.0, February 2023) set the consent standard: no pre-ticked boxes, reject as easy as accept, no nagging.
 - The EU AI Act, Article 5, prohibits AI systems that deploy manipulative or deceptive techniques to distort behaviour, applicable from 2 February 2025.
-- The Digital Fairness Act: the Commission ran a consultation in summer 2025 and positioned a proposal for late 2026; as of October 2026 the proposal text is not published and the scope is reported as contested inside the Commission. Expect a "fairness by design" duty and an expanded blacklist; design for it now.
+- The Digital Fairness Act: the Commission's consultation ran from 17 July to 24 October 2025, its 2026 work programme schedules a proposal for the fourth quarter of 2026, and press reports in September 2026 pointed to November; as of late October 2026 no text is published. The announced scope covers dark patterns, addictive design, influencer marketing and unfair personalisation, with attention to minors; design for it now, because every item on that list already appears in 13.1.
 
 ### 13.3 United States
 
 - The FTC acts under Section 5 of the FTC Act (unfair or deceptive practices) and the Restore Online Shoppers' Confidence Act (ROSCA, 2010) for negative-option subscriptions. Its 2022 staff report "Bringing Dark Patterns to Light" is the reference taxonomy for enforcement.
 - Enforcement that sets the bar: Epic Games, USD 245 million in refunds for Fortnite's confusing purchase flows and dark patterns (December 2022, finalised 2023); Amazon, USD 2.5 billion (25 September 2025) over Prime enrolment and cancellation, under ROSCA, with injunctive terms requiring clear consent before charging and a simple cancellation.
-- The "click to cancel" amendments to the Negative Option Rule (finalised October 2024) were vacated by the Eighth Circuit on 8 July 2025 (Custom Communications v. FTC) on procedural grounds; the FTC began a new rulemaking in 2026 and continues to enforce the same conduct under ROSCA, so the design obligation (cancel as easily as you joined) stands regardless of the rule's status.
+- The "click to cancel" amendments to the Negative Option Rule (finalised October 2024) were vacated by the Eighth Circuit on 8 July 2025 (Custom Communications v. FTC) on procedural grounds; the FTC restarted the process with an advance notice of proposed rulemaking (ANPRM, the first, question-only stage of a US rulemaking) on 11 March 2026, which asks among other things whether to mandate click-to-cancel, and continues to enforce the same conduct under ROSCA, so the design obligation (cancel as easily as you joined) stands regardless of the rule's status.
 - The FTC's Rule on the Use of Consumer Reviews and Testimonials (effective 21 October 2024) covers fake reviews, bought reviews and review suppression (6.7).
 
 ### 13.4 India
@@ -786,7 +772,8 @@ The seven-category grouping the brief asks for comes from Mathur et al., "Dark P
 | 12 | SaaS billing | Collecting recurring payments covertly by exploiting positive acquisition loops | Free trials rolling to paid silently |
 | 13 | Rogue malware | Using ransomware or scareware to mislead | Rare in this sector |
 
-- Enforcement, as of October 2026: the CCPA's advisory of 5 June 2025 told e-commerce platforms to self-audit against the 13 patterns within three months and publish self-declarations; notices went to 11 platforms; penalty orders have followed, and a Joint Working Group monitors platforms. Reports in 2026 describe a move to annual self-audits with a displayed compliance certificate; verify the current rules text before stating a deadline to a client. Under the Consumer Protection Act, misleading advertisements carry penalties of up to INR 10 lakh for a first offence and INR 50 lakh for subsequent ones (section 21), and the Consumer Protection (E-Commerce) Rules, 2020 add duties on marketplaces.
+- Enforcement, as of October 2026: the CCPA's advisory of 5 June 2025 asked e-commerce platforms to self-audit against the 13 patterns within three months and submit self-declarations. Penalty orders have followed: the Zepto order of 4 December 2025 found drip pricing and basket sneaking, and government reporting in August 2026 put total dark-pattern penalties at about INR 20 lakh across platforms including FirstCry, PharmaEasy, Zepto, McAfee and Physics Wallah, with several orders requiring design changes in place of fines. The CCPA judged the effect on users and set the platform's intent aside. Under the Consumer Protection Act, misleading advertisements carry penalties of up to INR 10 lakh for a first offence and INR 50 lakh for subsequent ones (section 21), and the Consumer Protection (E-Commerce) Rules, 2020 add duties on marketplaces.
+- The Consumer Protection (E-Commerce) (Amendment) Rules, 2026 (G.S.R. 789(E), notified 9 September 2026, in force 1 January 2027) make the 2023 guidelines binding on e-commerce entities through a new rule 4(15), require an annual self-audit with a compliance certificate displayed on the platform, measure any advertised discount against the lowest price of the preceding 30 days, and require sponsored listings to be labelled. Design consequence: the strikethrough price, the ranking and every fee line become audited surfaces.
 - The DPDP Act (2023) adds the consent standard (free, specific, informed, unconditional, unambiguous, clear affirmative action, withdrawal as easy as grant) and the Rules (13 November 2025) specify the notice content, with the core duties in force from 13 May 2027.
 
 ### 13.5 United Arab Emirates
@@ -797,7 +784,7 @@ Federal Law No. 15 of 2020 on Consumer Protection and its 2023 executive regulat
 
 - Every pattern in 13.1 and 13.4 is banned in Mask360 work, including the grey ones: no countdown without a real end, no stock count without a real count, no pre-ticked anything, no decline button that shames, no cancellation harder than joining. The reason is commercial as much as legal: luxury's product is trust, and a customer who catches one fake "only 2 left" discounts every future claim the brand makes.
 - Honest persuasion remains available and is more effective with this audience: real scarcity (a numbered edition, a last suite), real deadlines (a season's end, a launch), real social proof (a press quote, a named client with permission), and the quiet confidence of a brand that does not need to push (design-taste, section 2, "copy that does not sell").
-- Review protocol: every checkout, booking and consent flow is audited against the 13 Indian patterns and the 18 Brignull types before launch, with the audit kept as a record, because a self-declaration may be asked for.
+- Review protocol: every checkout, booking and consent flow is audited against the 13 Indian patterns and the 18 Brignull types before launch, with the audit kept as a record, because the 2026 amendment rules make an annual self-audit and a displayed certificate mandatory for e-commerce entities from 1 January 2027.
 
 ## 14. Conversational and voice interfaces
 
@@ -810,13 +797,13 @@ Federal Law No. 15 of 2020 on Consumer Protection and its 2023 executive regulat
 
 ### 14.2 Turn taking and timing
 
-- Voice: an end-of-speech timeout of about 1 to 2 seconds; barge-in (the person may interrupt the system) on by default; a response within about 1 second or a filler sound.
+- Voice: Stivers and colleagues (PNAS, 2009) measured the typical gap between turns across ten languages at about 200ms, so a system silence past about a second reads as failure. Use an end-of-speech timeout of about 1 to 2 seconds, barge-in (the person may interrupt the system) on by default, and a response or an audible acknowledgement within about 1 second.
+- Text chat: one system turn per person turn unless the system is reporting progress; a typing indicator only while a reply is really being composed; long replies split at natural breaks with the question last, because people answer the last thing they read; and the person can always take the turn back (stop, 10.1).
 
 ### 14.3 Error recovery
 
 - No-match (the system did not understand) and no-input (silence) each get a three-level strategy: rephrase briefly, rephrase with examples, then offer an alternative (a menu, a human, a link). Three failures in a row always escalate.
-- Never repeat the same prompt word for word; never say "I didn't understand" without a suggestion.
-- Keep what was understood: a person who gave the date and the party size should not repeat them after a failed time.
+- Never repeat the same prompt word for word; never say "I didn't understand" without a suggestion. Keep what was understood: a person who gave the date and the party size should not repeat them after a failed time.
 
 ### 14.4 India and the Gulf
 
@@ -825,8 +812,7 @@ Federal Law No. 15 of 2020 on Consumer Protection and its 2023 executive regulat
 
 ### 14.5 When voice is wrong
 
-- Private information in public spaces (a hotel lobby, a shop floor); noisy environments (restaurants, events); choices that are visual (a room, a dress, a shade); lists longer than three; anything that needs a record (a confirmation number). Voice suits hands-busy and eyes-busy contexts (driving, cooking, the in-room controls of a hotel) and accessibility.
-- In-room voice (Amazon launched Alexa for Hospitality in 2018 and hotel groups trialled it) is a case where the technology works and the feeling of an always-listening device in a bedroom does not; the house position is that a luxury room has a person on the phone and a quiet tablet, and no always-listening device.
+- Private information in public spaces (a hotel lobby, a shop floor); noisy environments (restaurants, events); choices that are visual (a room, a dress, a shade); lists longer than three; anything that needs a record (a confirmation number). Voice suits hands-busy and eyes-busy contexts (driving, cooking, the in-room controls of a hotel) and accessibility. In-room voice (Amazon launched Alexa for Hospitality in 2018 and hotel groups trialled it) is a case where the technology works and the feeling of an always-listening device in a bedroom does not; the house position is that a luxury room has a person on the phone and a quiet tablet, and no always-listening device.
 
 ## 15. The interaction quality bar
 
@@ -834,7 +820,7 @@ The bar is set by a small number of practitioners whose work most product design
 
 ### 15.1 Rauno Freiberg: invisible details
 
-Freiberg's essay "Invisible Details of Interaction Design" (2023) and his course "Devouring Details" (an interactive reference with about 20 chapters and the React components behind them) name the details that separate polished from adequate:
+Freiberg (Staff Design Engineer at Vercel, previously at The Browser Company on Arc) wrote the essay "Invisible Details of Interaction Design" (2023) and "Devouring Details", an interactive reference manual of 23 chapters, each with its React component, on inferring intent, interaction metaphors, ergonomic interactions, simulating physics, motion choreography and contained gestures. Together they name the details that separate polished from adequate:
 
 - Robustness: the interaction works when the person does something unexpected (double tap, mid-animation tap, slow network, resize), because a detail that breaks under pressure reads as a bug and a detail that holds reads as quality.
 - Hover intent and prediction: a menu that does not close while the pointer travels diagonally to a submenu (the "safe triangle" that Ben Kamens documented in Amazon's mega-menu in 2013, descended from the prediction cone Bruce Tognazzini described in Apple's hierarchical menus of the 1980s), a delay of about 100 to 150ms before a hover state commits, so that passing over does not trigger.
@@ -843,15 +829,15 @@ Freiberg's essay "Invisible Details of Interaction Design" (2023) and his course
 
 ### 15.2 Emil Kowalski and the web's motion craft
 
-Kowalski (Vercel, then Linear, and the author of the Sonner toast and Vaul drawer libraries and the course "Animations on the Web", 2024) states the rules the house follows for UI motion: ease-out for things that enter and ease-in-out for things that move within the screen, durations of about 150 to 300ms for interface transitions, no bounce on productivity surfaces, animate transform and opacity only, respect prefers-reduced-motion, and animate to explain a state change, never to decorate. His test: if removing the animation makes the interface harder to understand, keep it; if it makes it faster, remove it.
+Kowalski (formerly of Vercel and Linear, author of the Sonner toast and Vaul drawer libraries for React and of the course "Animations on the Web" at animations.dev) states the rules the house follows for UI motion: ease-out for things that enter and ease-in-out for things that move within the screen, durations of about 150 to 300ms for interface transitions, no bounce on productivity surfaces, animate transform and opacity only, respect prefers-reduced-motion, and animate to explain a state change, never to decorate. His test: if removing the animation makes the interface harder to understand, keep it; if it makes it faster, remove it.
 
 ### 15.3 Linear's quality bar
 
-Linear (Karri Saarinen and team) made "quality" a product strategy: interactions under 100ms through local-first sync (the client holds the data and writes back), keyboard-first with every action in the command palette, consistent 8px spacing and one type scale, optimistic updates everywhere, and a changelog that reports speed improvements as features. The reason it matters to an agency: Linear showed that speed and restraint are themselves a brand, which is the same proposition luxury makes.
+Linear (Karri Saarinen and team) made "quality" a product strategy: interactions under 100ms through local-first sync (the client holds the data and writes back), keyboard-first with every action in the command palette, optimistic updates everywhere, and a changelog that reports speed improvements as features. The reason it matters to an agency: Linear showed that speed and restraint are themselves a brand, which is the same proposition luxury makes.
 
 ### 15.4 Apple's interaction principles
 
-Apple's Human Interface Guidelines carry the lineage from 1987 (1.1): direct manipulation, immediate feedback, consistency, forgiveness (undo), user control, and since the 2018 WWDC session "Designing Fluid Interfaces" the behaviours of fluid motion: interruptible and redirectable animations, gestures tracked one-to-one with the finger, momentum projected from the gesture's velocity, and responses that begin on touch-down. iOS 26's Liquid Glass (2025) changed the material and kept the behaviours; the design consequence is that every custom control in a Mask360 app is measured against the system's own sheets, tab bars and scroll physics, and a custom control that feels heavier or slower than the system's loses.
+Apple's Human Interface Guidelines carry the lineage from 1987 (1.1): direct manipulation, immediate feedback, consistency, forgiveness (undo), user control, and since the 2018 WWDC session "Designing Fluid Interfaces" the behaviours of fluid motion: interruptible and redirectable animations, gestures tracked one-to-one with the finger, momentum projected from the gesture's velocity, and responses that begin on touch-down. iOS 26's Liquid Glass (2025) changed the material and kept the behaviours; the design consequence is that every custom control in a Mask360 app is measured against the system's own sheets, tab bars and scroll physics, and a custom control that feels heavier or slower than the system's loses. The feeling of weight comes from three values held constant across a product: how far an object travels relative to its size, how quickly its spring settles, and whether it overshoots. A sheet settles slower than a toast, a luxury product does not overshoot, and the values live as motion tokens (12-motion-principles-and-ui-motion.md, 07-design-systems-and-tokens.md).
 
 ### 15.5 The bar, as a checklist
 
@@ -877,9 +863,8 @@ Apple's Human Interface Guidelines carry the lineage from 1987 (1.1): direct man
 
 ### 16.2 Vernacular language switching
 
-- The language selector is reachable on the first screen and in utility navigation, lists each language in its own script and name ("हिन्दी", "العربية", "English", "मराठी"), never as flags (a flag is a country; Hindi has no flag and Arabic has 22), and remembers the choice per device and per account.
-- Switching changes the whole surface, including transactional email, WhatsApp templates and error messages, because a half-translated product reads as a product that does not care.
-- String length and script metrics: Hindi runs about 15 to 30 percent longer than English, Devanagari needs about 1.2 times the line height for its matras, Arabic is similar in width to English and needs taller lines; design every label, button and card for the longest language (03-typography.md).
+- The language selector is reachable on the first screen and in utility navigation, lists each language in its own script and name ("हिन्दी", "العربية", "English", "मराठी"), never as flags (a flag is a country; Hindi has no flag and Arabic has 22), and remembers the choice per device and per account. Switching changes the whole surface, including transactional email, WhatsApp templates and error messages, because a half-translated product reads as a product that does not care.
+- String length and script metrics: plan a 30 percent length allowance for Hindi against English (a common localisation rule, to be checked against the real strings), Devanagari needs about 1.2 times the line height for its matras, Arabic is similar in width to English and needs taller lines; design every label, button and card for the longest language (03-typography.md).
 - Mixed script is normal: product names stay in Latin inside Devanagari or Arabic sentences; numerals may be Western (India, UAE in practice) or Eastern Arabic (common in Saudi Arabia); dates may need the Hijri calendar beside the Gregorian in the Gulf (Ramadan timings, Eid offers).
 
 ### 16.3 Right-to-left layouts for Arabic
@@ -902,7 +887,7 @@ Section 6.3 holds the tables for India and the UAE. The rules that survive any m
 
 WhatsApp is the default personal messaging channel in India and the Gulf, which makes the WhatsApp Business Platform (Meta's API, accessed direct or through solution providers such as Gupshup, Infobip, Wati, AiSensy and Interakt) the agency's most used conversational surface. The mechanics that shape design, as of October 2026:
 
-- Pricing: per delivered template message since 1 July 2025, by template category and the recipient's country code; marketing templates cost the most and carry no volume discount; utility and authentication templates are cheaper; utility templates inside an open customer service window are free; messages inside a 72-hour window opened from a click-to-WhatsApp ad or a Facebook Page call-to-action are free. India billing moved to rupees in 2026 (verify the current rate card on Meta's pricing page before costing a campaign).
+- Pricing: per delivered template message since 1 July 2025, by template category and the recipient's country code; marketing templates cost the most and carry no volume discount; utility and authentication templates are cheaper; utility templates inside an open customer service window are free; messages inside a 72-hour window opened from a click-to-WhatsApp ad or a Facebook Page call-to-action are free. Meta moved India billing to rupees for eligible businesses and raised the India marketing rate on 1 January 2026 (check the current rate card on Meta's pricing page before costing a campaign).
 - Template categories: marketing (offers, launches, event invitations; requires opt-in), utility (order and booking updates, reminders), authentication (OTP), and service (free-form replies inside the 24-hour window after the person's last message).
 - Opt-in: Meta's policy requires a recorded opt-in before any business-initiated message; India's TRAI rules and the DPDP consent standard apply to the data behind it. Design the opt-in as a checkbox at checkout and booking with the exact message types named.
 - Flows: WhatsApp Flows let a business embed structured screens (forms, pickers, lists) inside the chat; the right surface for a reservation, an RSVP or an appointment where the person is already in WhatsApp.
@@ -911,8 +896,7 @@ WhatsApp is the default personal messaging channel in India and the Gulf, which 
 
 ### 16.6 Calendar, culture and context
 
-- The UAE weekend is Saturday and Sunday (since January 2022, with Friday a half day); Saudi Arabia's is Friday and Saturday. Ramadan shifts dining to iftar and suhoor, retail hours into the night, and marketing tone; Eid al-Fitr and Eid al-Adha move on the Hijri calendar each year. Indian retail peaks around Diwali, Dussehra, Akshaya Tritiya (jewellery), the wedding seasons (November to February, April to May) and regional new years; the IA of offers and the booking engine's defaults should follow these calendars.
-- Forms: Indian names may have one word, two or four; titles and honorifics matter in both markets; gender fields need a "prefer not to say"; Emirati addresses need the villa and the area, Indian addresses the landmark (6.3).
+- The UAE weekend is Saturday and Sunday (since January 2022, with Friday a half day); Saudi Arabia's is Friday and Saturday. Ramadan shifts dining to iftar and suhoor, retail hours into the night, and marketing tone; Eid al-Fitr and Eid al-Adha move on the Hijri calendar each year. Indian retail peaks around Diwali, Dussehra, Akshaya Tritiya (jewellery), the wedding seasons (November to February, April to May) and regional new years; the IA of offers and the booking engine's defaults should follow these calendars. Forms: Indian names may have one word, two or four; titles and honorifics matter in both markets; gender fields need a "prefer not to say"; Emirati addresses need the villa and the area, Indian addresses the landmark (6.3).
 
 ## 17. Pattern selection table and IA audit checklist
 
@@ -970,6 +954,7 @@ Run it on any existing site or app before redesign, and on any new IA before bui
 
 ## Terms introduced
 
+- Advance notice of proposed rulemaking (ANPRM): the first, question-only stage of a US federal rulemaking, with no draft rule text.
 - Agent: a model that plans and executes multi-step actions with tools on the person's behalf.
 - App Clip: a small part of an iOS app launched from a QR code, NFC tag or link without installing the app.
 - Approval gate: a pause in an agent's execution that shows the exact action and requires the person's approval before it runs.
@@ -994,6 +979,7 @@ Run it on any existing site or app before redesign, and on any new IA before bui
 - Excise: work the interface makes the person do that serves the system instead of the goal (Cooper).
 - Faceted classification: describing each item by several independent attributes (facets) instead of one tree (Ranganathan).
 - Fidelity: the degree to which a design artefact resembles the finished product in look and behaviour.
+- Findability: the degree to which an object is easy to discover or locate; one face of Morville's user experience honeycomb.
 - Forgiving format: an input that accepts every reasonable way of writing a value and normalises it.
 - Generative UI: a pattern in which a model returns structured data rendered as real interface components.
 - Goal-directed design: Cooper's method of designing for the person's goals through personas and scenarios.
@@ -1011,7 +997,7 @@ Run it on any existing site or app before redesign, and on any new IA before bui
 - Labelling system: the set of words used for navigation, headings and links, chosen so that each term has one sense.
 - Lightbox: a full-screen view of a single image with navigation, zoom and close.
 - Lite pattern: a design choice that reduces payload or dependence on the network for low-bandwidth use.
-- Live Activity, Live Update: iOS (16.1) and Android 16 surfaces that show the state of an ongoing, user-initiated, time-bound activity on the lock screen, Dynamic Island or status bar.
+- Live Activity, Live Update: iOS 16.1 and Android 16 surfaces that show the state of an ongoing, user-initiated, time-bound activity on the lock screen, Dynamic Island or status bar.
 - Local-first: an architecture in which the client holds the data and syncs back, so that interactions do not wait for the server.
 - Magic link: a one-time signed URL sent by email that signs the person in.
 - Makani number: Dubai's 10-digit building identifier.
@@ -1053,6 +1039,7 @@ Books
 
 - Alan Cooper, Robert Reimann, David Cronin, Christopher Noessel, "About Face: The Essentials of Interaction Design", fourth edition, 2014.
 - Bill Buxton, "Sketching User Experiences: Getting the Design Right and the Right Design", 2007.
+- Barry Boehm, "Software Engineering Economics", 1981.
 - Dan Saffer, "Microinteractions: Designing with Details", 2013.
 - Bill Moggridge, "Designing Interactions", 2007.
 - Don Norman, "The Design of Everyday Things", revised edition, 2013.
@@ -1062,6 +1049,7 @@ Books
 - Kevin Lynch, "The Image of the City", 1960.
 - Paul Arthur and Romedi Passini, "Wayfinding: People, Signs, and Architecture", 1992.
 - Harry Brignull, "Deceptive Patterns: Exposing the Tricks Tech Companies Use to Control You", 2023.
+- Peter Morville, "Ambient Findability: What We Find Changes Who We Become", 2005.
 - Cathy Pearl, "Designing Voice User Interfaces", 2016.
 - Apple Computer, "Human Interface Guidelines: The Apple Desktop Interface", 1987.
 - Ben Shneiderman, "Direct Manipulation: A Step Beyond Programming Languages", IEEE Computer, 1983.
@@ -1073,11 +1061,13 @@ Specifications, standards and platform documentation
 - Google, Material Design bidirectionality guidance, https://m2.material.io/design/usability/bidirectionality.html
 - Google, Android Live Updates, https://developer.android.com/develop/ui/views/notifications/live-update
 - Apple, Human Interface Guidelines, https://developer.apple.com/design/human-interface-guidelines/
-- FIDO Alliance, "State of Passkeys 2026", https://fidoalliance.org/
+- FIDO Alliance, "The State of Passkeys 2026: Global Consumer and Workforce Report", 7 May 2026, https://fidoalliance.org/the-state-of-passkeys-2026-global-consumer-and-workforce-report/
+- Reserve Bank of India, Authentication Mechanisms for Digital Payment Transactions Directions, 2025, 25 September 2025, https://www.rbi.org.in/
 - NPCI, UPI product statistics, https://www.npci.org.in/what-we-do/upi/product-statistics
 - Department of Posts, DIGIPIN, https://www.indiapost.gov.in/VAS/Pages/digipin.aspx and https://github.com/INDIAPOST-gov/digipin
 - Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 2023, and the advisory of 5 June 2025, https://consumeraffairs.gov.in/
 - Ministry of Electronics and Information Technology, Digital Personal Data Protection Rules, 2025 (13 November 2025), https://www.meity.gov.in/
+- Department of Consumer Affairs, Consumer Protection (E-Commerce) (Amendment) Rules, 2026, G.S.R. 789(E), 9 September 2026, https://consumeraffairs.gov.in/
 - European Union, Regulation (EU) 2022/2065 (Digital Services Act), Article 25, https://eur-lex.europa.eu/eli/reg/2022/2065/oj
 - European Union, Directive 2005/29/EC (Unfair Commercial Practices Directive) and Directive (EU) 2019/2161, https://eur-lex.europa.eu/
 - European Data Protection Board, Guidelines 03/2022 on deceptive design patterns in social media platform interfaces, version 2.0, 2023, https://www.edpb.europa.eu/
@@ -1097,6 +1087,7 @@ Articles, talks and courses
 - Jakob Nielsen, "Progressive Disclosure", 2006, https://www.nngroup.com/articles/progressive-disclosure/
 - Luke Wroblewski, "Inline Validation in Web Forms", A List Apart, 2009, https://alistapart.com/article/inline-validation-in-web-forms/
 - Aza Raskin, "Never Use a Warning When You Mean Undo", A List Apart, 2007, https://alistapart.com/article/neveruseawarning/
+- Tanya Stivers et al., "Universals and cultural variation in turn-taking in conversation", PNAS 106(26), 2009.
 - Arunesh Mathur et al., "Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites", CSCW 2019, https://arxiv.org/abs/1907.07032
 - Harry Brignull, deceptive.design, types of deceptive pattern, https://www.deceptive.design/types
 - Emily Campbell, Shape of AI, https://www.shapeof.ai/

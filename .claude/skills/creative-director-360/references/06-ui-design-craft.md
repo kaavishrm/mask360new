@@ -65,15 +65,15 @@ Logical widths are what you design to. Physical widths matter for asset export a
 | iPhone Air | 420 x 912 pt | 1260 x 2736 | 3x | 6.5 inch |
 | iPhone 17 Pro Max | 440 x 956 pt | 1320 x 2868 | 3x | 6.9 inch |
 | iPhone 18 Pro and 18 Pro Max | 402 x 874 pt and 440 x 956 pt | 1206 x 2622 and 1320 x 2868 | 3x | released 18 September 2026 at the same logical sizes as the 17 Pro pair (ios-resolution.com listing, October 2026) |
-| iPhone Duo (fold), outer | 466 x 678 pt | 1398 x 2034 | 3x | Figma added iPhone Duo and iPhone 18 frame presets on 23 October 2026 |
-| iPhone Duo (fold), inner | 626 x 890 pt | 1878 x 2670 | 3x | a tablet-class width in the hand; design the inner display with the medium window size class rules of section 16 |
+| iPhone Duo (fold), outer | 466 x 678 pt | 1398 x 2034 | 3x | 5.4 inch, 460 ppi; Apple's first foldable, announced 9 September 2026 and on sale 23 October 2026; Figma added iPhone Duo and iPhone 18 frame presets the same day (Figma release notes) |
+| iPhone Duo (fold), inner | 626 x 890 pt | 1878 x 2670 | 3x | 7.6 inch, 430 ppi; a tablet-class width in the hand; design the inner display with the medium window size class rules of section 16 |
 | iPad mini (7th gen) | 744 x 1133 pt | 1488 x 2266 | 2x | |
 | iPad (11th gen) and iPad Air 11 | 820 x 1180 pt | 1640 x 2360 | 2x | |
 | iPad Pro 11 (M4, M5) | 834 x 1210 pt | 1668 x 2420 | 2x | |
 | iPad Air 13 | 1024 x 1366 pt | 2048 x 2732 | 2x | |
 | iPad Pro 13 (M4, M5) | 1032 x 1376 pt | 2064 x 2752 | 2x | |
-| Pixel 10 | about 412 x 923 dp | 1080 x 2424 | 2.625x (420dpi bucket) | 6.3 inch, 422 ppi; 412dp is the de facto Android design width |
-| Galaxy S25 | about 384 to 412 dp wide | 1080 x 2340 | 2.6x to 2.8x depending on the user's display size setting | 6.2 inch |
+| Pixel 10 and Pixel 11 | about 412 x 923 dp | 1080 x 2424 | 2.625x (420dpi bucket) | 6.3 inch, 422 ppi on both (Google Store spec page for the Pixel 11, which ships with Android 17); 412dp is the de facto Android design width |
+| Galaxy S25 and S26 | about 384 to 412 dp wide | 1080 x 2340 | 2.6x to 2.8x depending on the user's display size setting | 6.2 inch (S25); 6.3 inch (S26, launched 25 February 2026, per retailer and 91mobiles spec listings) |
 | Desktop design artboards | 1440 x 900 and 1920 x 1080 | varies | 1x or 2x | 1440 covers scaled MacBook displays and most laptops; 1920 x 1080 has led StatCounter's desktop resolution share for years; 1536 x 864 and 1366 x 768 follow (Windows laptops at 125 per cent scaling) |
 
 Rules that follow from the table:
@@ -112,7 +112,7 @@ The 100vh problem: a hero set to `height: 100vh` on iOS Safari measures the larg
 
 ### 2.1 Apple Human Interface Guidelines and Liquid Glass
 
-Liquid Glass is Apple's system material introduced at WWDC on 9 June 2025 and shipped in iOS 26, iPadOS 26, macOS 26 and the other 26 releases that September; it is the system material of the current OS generation. From the "Meet Liquid Glass" session (WWDC25 session 219):
+Liquid Glass is Apple's system material introduced at WWDC on 9 June 2025 and shipped in iOS 26, iPadOS 26, macOS 26 and the other 26 releases that September. As of October 2026 the shipping releases are numbered 27 (Apple's SF Symbols page references iOS 27 and macOS 27 for its newest symbols) and Liquid Glass remains the system material; the WWDC25 rules below are still the reference, and any 27-specific adjustment is checked in the HIG change log before a build relies on it. From the "Meet Liquid Glass" session (WWDC25 session 219):
 
 | Aspect | What changed | Rule |
 |---|---|---|
@@ -131,7 +131,7 @@ What it means for a luxury brand app: the glass belongs to the system. Own the c
 
 ### 2.2 Material 3 and Material 3 Expressive
 
-Material 3 (M3) is Google's design system; Material 3 Expressive is its 2025 extension, announced at The Android Show on 13 May 2025, rolled to Pixel with Android 16 QPR1 in September 2025, and stable in Jetpack Compose Material 3 1.4.0 on 24 September 2025. Google's published research base: 46 studies, over 18,000 participants, three years from 2022; key elements spotted up to four times faster in expressive layouts across 10 apps; 87 per cent preference among 18 to 24 year olds; users over 45 spotted key elements as quickly as younger users; a strong minority preferred calmer designs.
+Material 3 (M3) is Google's design system; Material 3 Expressive is its 2025 extension, announced at The Android Show on 13 May 2025 and rolled to Pixel with Android 16 QPR1 in September 2025. In Jetpack Compose the Expressive APIs were removed from the 1.4.0 line at beta01 and continue in the 1.5.0 alphas (ButtonGroup was promoted to stable inside 1.5.0-alpha22); 1.4.0 (24 September 2025) is still the latest stable release as of October 2026, so an Android build that wants Expressive components depends on an alpha library and the estimate must say so. Google's published research base (design.google): 46 studies, over 18,000 participants, work starting in 2022; key elements spotted up to four times faster in expressive layouts; up to 87 per cent preference among 18 to 24 year olds; users over 45 spotted key interactive elements on par with younger users.
 
 | System element | Material 3 | Material 3 Expressive additions |
 |---|---|---|
@@ -204,7 +204,7 @@ State: a named condition of a component that changes its appearance or behaviour
 | success | completed | green accent plus text or check | confirm and get out of the way; no confetti | |
 | read-only | shows a value that cannot be edited here | no border or a dashed one; text at full contrast; copyable | must look different from disabled (full contrast) | |
 | empty | no data | a message and an action (section 10) | | |
-| skeleton | first load | grey blocks in the final layout | NN/g: title the thickest line, thinner for body, big blocks for images; shimmer optional | minimum display 300 to 500ms to avoid a flicker when data arrives fast |
+| skeleton | first load | grey blocks in the final layout | blocks at the final sizes: title the thickest line, thinner for body, image blocks at their aspect token; shimmer optional | minimum display 300 to 500ms to avoid a flicker when data arrives fast |
 | dragged | being moved | lifted shadow and a state layer | state layer at 16 per cent (Material 3), elevation up one level | follows the pointer with no easing |
 
 ### 3.3 State layering
@@ -357,7 +357,7 @@ Offer a density toggle in data-heavy desktop tools (Gmail does this as default, 
 
 ### 7.2 Zebra striping and lines
 
-Jessica Enders' 2008 A List Apart study (244 participants, a 15 by 9 table, matched questions) found no statistically significant difference in accuracy or speed between striped and unstriped tables, and 46 per cent of participants preferred stripes; participants also made their own striping by tracking rows with a finger or cursor. House rule from that evidence: hairline row dividers (1px at 8 to 12 per cent of the text colour) plus a hover row highlight on desktop, stripes only when rows are wide (more than 8 columns) and tall text is absent. Vertical lines never; column alignment does the job.
+Jessica Enders' 2008 A List Apart study (244 participants, a 15 by 9 table, matched questions) found essentially no difference in accuracy (error rates of 12 per cent or less either way), a speed advantage for striping on four of six questions that reached statistical significance on only one, and a preference for stripes among 46 per cent of participants (33 per cent had none); participants also made their own striping by tracking rows with a finger or cursor. House rule from that evidence: hairline row dividers (1px at 8 to 12 per cent of the text colour) plus a hover row highlight on desktop, stripes only when rows are wide (more than 8 columns) and tall text is absent. Vertical lines never; column alignment does the job.
 
 ### 7.3 Alignment and numerals
 
@@ -422,7 +422,7 @@ The house default is white on white with a 1px hairline (design-taste, section 7
 
 ### 9.1 Modal dialogs
 
-Modal: an overlay that blocks interaction with the page beneath until it is dismissed. NN/g (2021, "Modal and nonmodal dialogs") sets the rule: a modal is justified only when the user must act before continuing (confirm a destructive action, supply a value the flow cannot proceed without, read a legal notice); everything else is nonmodal or a page.
+Modal: an overlay that blocks interaction with the page beneath until it is dismissed. NN/g (Therese Fessenden, 2017, "Modal and nonmodal dialogs") sets the rule: a modal is justified only when the user must act before continuing (confirm a destructive action, supply a value the flow cannot proceed without, read a legal notice); everything else is nonmodal or a page.
 
 | Size | Width | Use | Mobile behaviour |
 |---|---|---|---|
@@ -485,7 +485,7 @@ Nielsen's limits (1993, from Robert Miller's 1968 work), confirmed on nngroup.co
 
 ### 10.2 Skeletons, spinners, progress bars
 
-Skeleton screen: a placeholder that draws the layout's blocks in neutral grey before content arrives, named by Luke Wroblewski in 2013. The evidence is contested. Viget's 2017 test ("A bone to pick with skeleton screens") found no perceived-speed advantage over a spinner; Bill Chung's 2018 follow-up (UX Collective) found skeletons perceived as faster when they used a slow left-to-right wave and matched the final layout, and slower when the blocks pulsed. NN/g's "Skeleton screens 101" (2020) settles the practice: use a skeleton when the layout is known and the wait is 1 to 10 seconds; a spinner when the layout is unknown or the element is small; never both. House: skeleton with a 1.5 to 2 second wave, blocks at the exact final size (title block the thickest line), no skeleton for text under 2 lines.
+Skeleton screen: a placeholder that draws the layout's blocks in neutral grey before content arrives, named by Luke Wroblewski in 2013. The evidence is contested. Viget's 2017 test ("A bone to pick with skeleton screens") found no perceived-speed advantage over a spinner; Bill Chung's 2018 follow-up (UX Collective) found skeletons perceived as faster when they used a slow left-to-right wave and matched the final layout, and slower when the blocks pulsed. NN/g's "Skeleton screens 101" (Samhita Tankala, June 2023, reviewed September 2026) settles the practice: no indicator under 1 second; a skeleton for full-page loads under 10 seconds; a spinner for a single module (a video, a dashboard card); a progress bar for processes (upload, conversion) and anything over 10 seconds; never a skeleton and a spinner for the same wait. House: skeleton with a 1.5 to 2 second wave, blocks at the exact final size (title block the thickest line), no skeleton for text under 2 lines.
 
 Determinate progress (the fraction is known) beats indeterminate every time it can be computed. Harrison, Amento, Kuznetsov and Bell ("Rethinking the progress bar", UIST 2007) found bars that accelerate towards the end are perceived as faster than linear ones and that pauses near the end are punished most; the practical rule is to front-load the honest uncertainty (first 10 per cent fast while connecting) and never let the bar stall at 90. Fake determinate bars that bear no relation to the work are a trust defect once a user notices.
 
@@ -574,7 +574,7 @@ Fluent 2's ramp (section 2.3) and Material's six levels (0, 1, 3, 6, 8, 12dp) ar
 
 ### 12.3 Blur, translucency and Liquid Glass
 
-`backdrop-filter: blur()` recomposites everything behind the element on every frame, so its cost scales with the element's area times the blur radius times the number of such elements. Rules: radius 8 to 20px, three or four translucent surfaces per viewport at most, never animate the blur radius (animate opacity instead), add `will-change: transform` on Safari where WebKit falls back to a CPU blur without a compositing hint (WebKit bug 240865), and test on a mid-range Android (the 15,000 to 20,000 rupee Redmi and Realme class that is the Indian median) rather than on a MacBook. Honour `prefers-reduced-transparency` (Chromium since 118; verify Safari and Firefox support before relying on it) by swapping to an opaque surface.
+`backdrop-filter: blur()` recomposites everything behind the element on every frame, so its cost scales with the element's area times the blur radius times the number of such elements. Rules: radius 8 to 20px, three or four translucent surfaces per viewport at most, never animate the blur radius (animate opacity instead), measure frame rate with the blur on and off in the browser's performance panel rather than trusting a desktop preview, and test on a mid-range Android (the 15,000 to 20,000 rupee Redmi and Realme class that is the Indian median) rather than on a MacBook. Honour `prefers-reduced-transparency` (Chromium since 118; verify Safari and Firefox support before relying on it) by swapping to an opaque surface.
 
 Liquid Glass on Apple platforms is a system material (section 2.1): refraction of the content beneath (lensing), specular highlights that follow device motion, automatic light and dark flipping, and the accessibility behaviours arrive from the OS compositor at no cost to the app. The web cannot reproduce lensing cheaply (SVG displacement filters work and are heavy), so a web glass is a blur, a 1px inner highlight at 20 to 30 per cent white, a tint at 60 to 80 per cent of the surface colour, and a hairline. The house uses it on one navigation surface at most and never on content, matching Apple's own layer rule.
 
@@ -700,7 +700,7 @@ Android's window size classes, confirmed on developer.android.com: compact width
 ### 16.3 Tablet, foldables, desktop web and native
 
 - iPad: sidebars plus split view at medium and expanded widths; Stage Manager can shrink a window to about 320pt, so every iPad layout needs a compact fallback.
-- Foldables: Galaxy Z Fold 7 (7.7 inch inner at 2184 x 1968) sits in the medium width class at the default density (about 750 to 830dp across, varying with the user's display size setting) and reaches expanded when the user lowers it; Pixel 10 Pro Fold is similar. Design for posture (tabletop, book) with Jetpack WindowManager, keep primary controls off the hinge line, and test on the Android emulator's foldable and resizable profiles. iPhone Duo's inner display at 626pt wide (section 1.3) makes two-column layouts a phone-class concern for the first time on iOS.
+- Foldables: Galaxy Z Fold 7 (8.0 inch inner at 2184 x 1968, July 2025) sits in the medium width class at the default density (about 750 to 830dp across, varying with orientation and the user's display size setting) and reaches expanded when the user lowers it; the Pixel 10 Pro Fold and Pixel 11 Pro Fold behave similarly. Design for posture (tabletop, book) with Jetpack WindowManager, keep primary controls off the hinge line, and test on the Android emulator's foldable and resizable profiles. iPhone Duo's inner display at 626pt wide (section 1.3) makes two-column layouts a phone-class concern for the first time on iOS.
 - Desktop web: keyboard first, hover present, content max-width 1200 to 1440 at 1920 viewports, reading measure 60 to 75 characters, sticky elements with `scroll-margin-top` on anchor targets.
 - Native desktop: macOS follows the HIG (sidebar, toolbar, menu bar, Liquid Glass in 26); Windows follows Fluent 2 (Mica material, 4px radius controls); web apps run inside both and should borrow only the keyboard conventions.
 
@@ -773,12 +773,12 @@ The design engineer list: the details that separate work that reads as four hund
 ### 19.1 Rendering and typography
 
 - Focus rings that match the brand: `:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px }`; the ring colour is the accent where it holds 3:1 against both the surface and the control, otherwise ink; on dark surfaces a double ring (2px accent outside a 1px ring in the surface colour) so the ring reads on light and dark controls alike; the ring's radius follows the nested rule (control radius plus offset). `outline: none` without a replacement fails WCAG 2.4.7 and the audit.
-- Custom selection colour: `::selection { background: colour-mix(in oklab, var(--accent) 25%, white); color: inherit }` (Firefox 62 and later accept the unprefixed form) with text contrast kept at 4.5:1; the default blue is the loudest unbranded thing on a page of brand type.
+- Custom selection colour: `::selection { background: color-mix(in oklab, var(--accent) 25%, white); color: inherit }` (Firefox 62 and later accept the unprefixed form) with text contrast kept at 4.5:1; the default blue is the loudest unbranded thing on a page of brand type.
 - Scrollbars: `scrollbar-width: thin` and `scrollbar-color: thumb track` (Baseline since December 2024 when Safari 18.2 joined Chrome 121 and Firefox 64); `scrollbar-gutter: stable` on scroll containers so the layout does not jump when a bar appears; never hide the scrollbar on content that scrolls vertically (Windows and Linux users rely on it) and always test on Windows, where the classic 17px bar changes the width of every layout a macOS designer approved with overlay bars.
 - Font smoothing: `-webkit-font-smoothing: antialiased` on macOS disables subpixel rendering and thins the type; use it on dark surfaces where light text otherwise looks too heavy (section 15.2) and leave the default on light surfaces. `font-synthesis: none` stops the browser faking a bold or italic the family lacks; `font-kerning: normal` and `font-feature-settings` for the stylistic sets the brand face uses; `text-rendering: optimizeLegibility` only on headings because it slows long pages.
 - Tabular numerals in data: `font-variant-numeric: tabular-nums` on every table, price, counter and timer; `slashed-zero` on codes, OTPs and references where 0 and O coexist; lining figures in UI, old-style only in editorial text (03-typography.md).
 - Letter-spacing on caps: all-caps labels at 11 to 12px take +0.06 to +0.10em because capitals have no ascenders and descenders and sit too close at small sizes; lowercase body never gets positive tracking; display sizes over 40px take -0.01 to -0.03em; the house micro caps are wide at 400 (design-taste, section 7).
-- Text wrapping: `text-wrap: balance` on headings and `text-wrap: pretty` on paragraphs (Chrome 117 and Safari 17.5 and later) remove orphans and ragged last lines; `-webkit-line-clamp` with a visible ellipsis for clamped titles; `hyphens: auto` with the `lang` attribute set on every Hindi and Arabic fragment so shaping and line breaking are correct, and `dir="auto"` on user-generated text so an Arabic name in an English list aligns correctly.
+- Text wrapping: `text-wrap: balance` on headings (Chrome 114, Firefox 121, Safari 17.5) and `text-wrap: pretty` on paragraphs (Chrome 117 and Safari 26; absent from Firefox in MDN's compatibility data as of October 2026, so a progressive enhancement) remove orphans and ragged last lines; balance acts only on blocks of up to six lines in Chromium and ten in Firefox, which is why it belongs on headings; `-webkit-line-clamp` with a visible ellipsis for clamped titles; `hyphens: auto` with the `lang` attribute set on every Hindi and Arabic fragment so shaping and line breaking are correct, and `dir="auto"` on user-generated text so an Arabic name in an English list aligns correctly.
 - Font loading: `font-display: swap` with `size-adjust`, `ascent-override` and `descent-override` on the fallback face so the swap from system to brand face shifts nothing; preload the two weights above the fold; subset Latin, Devanagari and Arabic into separate files with `unicode-range`.
 
 ### 19.2 Pixels and alignment
@@ -799,10 +799,10 @@ The design engineer list: the details that separate work that reads as four hund
 - Vercel and the Geist design system: black and white, hairlines, a Swiss grid, tabular data done right; Rauno Freiberg and Paco Coursey both built there.
 - Stripe: documentation and dashboard craft (tabular numerals, inline code, considered empty states); the gradient hero is an owned signature rather than a licence for gradients elsewhere.
 - Raycast: a macOS launcher whose list rows, keyboard navigation and dark glass are the reference for desktop command surfaces.
-- Arc (The Browser Company): sidebar tabs and spring motion; the company was acquired by Atlassian in September 2025 for 610 million dollars, Arc entered maintenance mode in 2025 and is to be discontinued on 22 December 2026 in favour of Dia, so study it from archives and treat its patterns as history.
+- Arc (The Browser Company): sidebar tabs and spring motion; Atlassian announced its acquisition of the company in September 2025 for about 610 million dollars; on 22 October 2026 the company announced Arc's shutdown, with Arc Search losing sign-in and sync on 23 November and the desktop apps stopping on 22 December 2026 in favour of Dia, so study it from archives and treat its patterns as history.
 - CRED and NeoPOP (2022): the Indian reference for a premium fintech interface with hard-edged depth, haptics and motion as material.
 - Apple: the HIG and the system apps are the daily reference for native craft, and iOS 26's Liquid Glass is the current material.
-- Rauno Freiberg: design engineer, formerly at Vercel; "Invisible details of interaction design" (July 2023).
+- Rauno Freiberg: Estonian interaction designer whose site (October 2026) lists his work with Vercel and Devouring Details; "Invisible details of interaction design" (July 2023).
 - Emil Kowalski: design engineer, previously at Linear and Vercel; author of Sonner (toast) and Vaul (drawer), the course at animations.dev and the essays "You don't need animations" and "Developing taste"; on a break from employment as of October 2026 per his site.
 - Paco Coursey: at Linear (webmaster), previously built the Vercel design system, website and dashboard; author of cmdk, the command menu component.
 
@@ -812,16 +812,16 @@ The design engineer list: the details that separate work that reads as four hund
 
 - Auto layout on every frame: padding and gaps from the spacing tokens; text hugs, containers fill, icons are fixed; min and max widths on text containers so bilingual labels wrap rather than overflow; wrap for chips and tag rows; Grid (an auto layout option since Config 2025) for two-dimensional layouts; absolute position only for badges and overlays. Constraints (left, right, scale, centre) only on frames outside auto layout.
 - Variables and modes: four types (colour, number, string, boolean) in three collections: primitives (the raw ladder), semantic (roles: `surface`, `text.secondary`, `border.hairline`), and component (per-part aliases). Modes carry light and dark, compact and comfortable, and locale (en, hi, ar) with string variables for the labels; the number of modes per collection is plan-limited, so confirm the plan before designing a four-mode system.
-- Components: one component set per element with properties for variant (size, state), boolean (show icon, show badge), instance swap (icon, avatar), text (label); nested instances exposed so a card's inner button can be set from the card; an explicit `slot` pattern (an instance-swap property pointing at a placeholder component that content components swap into) stands in for any native slot feature, whose shipped availability is unconfirmed in the release notes checked for this file; build every state from section 3.2 as a variant, including empty, loading and error.
+- Components: one component set per element with properties for variant (size, state), boolean (show icon, show badge), instance swap (icon, avatar), text (label); nested instances exposed so a card's inner button can be set from the card; slots (a component property type, generally available since 10 June 2026 per Figma's developer changelog) mark an area inside a component where instance content can be added and arranged without detaching, with optional minimum and maximum child counts and preferred instances, which retires the old workaround of an instance-swap property pointing at a placeholder component; slots for card bodies, dialog content and list items, instance swap for single glyphs such as icons; build every state from section 3.2 as a variant, including empty, loading and error.
 - Prototyping with smart animate: matching layer names across frames; ease-out 200 to 300ms for spatial moves and the spring presets for sheets; interactive components for state changes inside a component; overlays for sheets and dialogs; conditional logic and prototype variables for flows that branch; one prototype per flow rather than one giant canvas.
-- Dev Mode: inspect with token names, `Ready for dev` status on sections, annotations for behaviour a frame cannot show (timing, focus order, keyboard, validation), measure, compare changes between versions; Code Connect maps a component to its real code so the snippet shown is the production component rather than generated CSS; the Figma MCP server hands variables, Code Connect mappings and (from October 2026) Figma Weave image and video models to coding agents; Dev Mode has a read-only motion timeline exportable as CSS, JSON or React since Config 2026. Seat prices on figma.com/pricing as of October 2026 (USD per month): Professional Full 16, Dev 12, Collab 3; Organization Full 55, Dev 25, Collab 5 (billed annually); Enterprise Full 90, Dev 35, Collab 5; viewing and commenting need no seat.
+- Dev Mode: inspect with token names, `Ready for dev` status on sections, annotations for behaviour a frame cannot show (timing, focus order, keyboard, validation), measure, compare changes between versions; Code Connect maps a component to its real code so the snippet shown is the production component rather than generated CSS; the Figma MCP server hands variables and Code Connect mappings to coding agents, and since 26 October 2026 also exposes Figma Weave's image and video models (billed in Weave credits); Figma Motion (marked New in Figma's navigation, October 2026) lets engineers inspect an animation's full timeline in Dev Mode, copy it as CSS, JSON or React, and pass ease and timing values to coding agents through the MCP server. Seat prices on figma.com/pricing as of October 2026 (USD per month): Professional Full 16, Dev 12, Collab 3; Organization Full 55, Dev 25, Collab 5 (billed annually); Enterprise Full 90, Dev 35, Collab 5; viewing and commenting need no seat.
 - Version history and libraries: a named version at every review and release; branching on Organization and Enterprise for system changes; two libraries (foundations: variables, type styles, icons; components), product files subscribe; publish with a change note; prune by library analytics.
 - Naming and file organisation: components `Category / Component`, properties in sentence case with values capitalised (`Size=Medium, State=Default`); layers named by role (`label`, `icon-leading`, `container`), never `Frame 412`; pages in order `Cover, Ready for dev, In progress, Explorations, Archive`; one file per product area; a cover with status and owner.
-- Plugins that matter: Tokens Studio (token JSON in the W3C Design Tokens Community Group format, round-trip to code; see 07-design-systems-and-tokens.md), Stark or Able (contrast and vision simulation), Iconify (every set in section 11.3), Content Reel and realistic data fillers, Rename It and Clean Document, Similayer; the Figma agent (generally available since 6 October 2026) and Figma Make for throwaway explorations; code layers (announced at Config India 2026, 15 October 2026) remain a beta to watch.
+- Plugins that matter: Tokens Studio (token JSON in the W3C Design Tokens Community Group format, round-trip to code; see 07-design-systems-and-tokens.md), Stark or Able (contrast and vision simulation), Iconify (every set in section 11.3), Content Reel and realistic data fillers, Rename It and Clean Document, Similayer; the Figma agent (generally available since 6 October 2026, following design library guidelines) and Figma Make for throwaway explorations; from Config India (Bengaluru, 15 October 2026), code layers (interactive, code-backed prototypes on the canvas; open beta, free on paid plans until 4 November 2026, then billed in AI credits) and Figma Specs (a Markdown specification format that people and agents both read; open beta) are the betas to watch for handoff.
 
 ### 20.2 Penpot and Sketch
 
-- Penpot: open source (MPL 2.0), self-hostable, with a CSS-native layout model (its flex and grid layouts map one to one to CSS). Native design tokens following the DTCG draft; 2.14 opened the plugin API to token values; 2.16 (June 2026) moved tokens into the Design sidebar and added a WebGL canvas in beta; 2.17 (July 2026) added background blur with WebGL. Choose it where the client must keep design data on its own servers (UAE government-linked entities and some Indian public-sector work) or refuses per-seat pricing; expect fewer plugins and no Code Connect equivalent.
+- Penpot: open source (MPL 2.0), self-hostable, with a CSS-native layout model (its flex and grid layouts map one to one to CSS). Native design tokens following the DTCG draft. 2.17 (22 July 2026) moved the prototype viewer to a WebAssembly (Skia) renderer, drew guides in WebGL, added token autocomplete and a composite typography token input in the Design sidebar, and added layer blur; 2.18 (23 September 2026, patched to 2.18.5 on 26 October) added Line and Arrow tools, comments while designing, background blur on text and strokes, and SVG image fills in the WebGL renderer (Penpot GitHub releases). Choose it where the client must keep design data on its own servers (UAE government-linked entities and some Indian public-sector work) or refuses per-seat pricing; expect fewer plugins and no Code Connect equivalent.
 - Sketch: version 2026.3.1 (14 September 2026), a Mac app requiring macOS 15 or later, with a web app for viewing and handoff and an iOS app. Legacy for the house: some Apple-centric clients still deliver `.sketch` files; import into Figma for active work and keep the original for the archive.
 
 ### 20.3 Handoff protocol
@@ -938,7 +938,7 @@ Motion
 49. Blur radius never animated; no more than three or four translucent surfaces per viewport.
 
 Platform and accessibility
-50. iOS 26 and Android 16 chrome left to the system; brand lives in the content layer.
+50. iOS 26 and later and Android 16 and later chrome left to the system; brand lives in the content layer.
 51. Keyboard-only pass of every flow; focus never lost into a closed overlay; focus returns to the trigger.
 52. Screen reader pass of one full flow per release (VoiceOver and TalkBack); every icon button labelled; headings in order.
 53. 200 per cent text size and Dynamic Type at the largest accessibility setting do not break layout or hide actions.
@@ -971,6 +971,7 @@ State audit: a systematic check that every component in a build renders every ap
 - Bottom sheet: a surface that rises from the bottom edge to resting heights (detents) for a choice or short task.
 - Card: a bounded container holding one item's image, title, metadata and action as a single tappable unit.
 - Code Connect and Dev Mode: Figma's mapping of a design component to its production code, and the inspection mode for engineers that shows it with token names, measurements and annotations.
+- Code layer: an interactive, code-backed prototype object on the Figma canvas, in open beta since Config India, October 2026.
 - Container query: a CSS rule conditioned on the size of an ancestor container rather than the viewport.
 - Continuous corner: Apple's term for a squircle corner on layers and icons.
 - Core Web Vitals: Google's three field metrics for page experience: largest contentful paint, interaction to next paint and cumulative layout shift.
@@ -1023,12 +1024,13 @@ State audit: a systematic check that every component in a build renders every ap
 - Scroll chaining: a nested scroll container passing its overscroll to the page, prevented with `overscroll-behavior: contain`.
 - Side sheet: a panel that slides in from a screen edge on desktop for filters or detail while the page stays interactive.
 - Skeleton screen: a placeholder that draws the layout's blocks in neutral grey before content arrives.
+- Slot: a Figma component property marking an area inside a component where instance content can be added and arranged without detaching.
 - Small, large and dynamic viewport height (svh, lvh, dvh): the CSS units for the viewport with mobile toolbars shown, retracted, and as it currently is.
 - Squircle: a corner drawn as a superellipse so curvature eases in from the straight edge.
+- State: a named condition of a component that changes its appearance or behaviour.
 - State audit: a systematic check that every component renders every applicable state in every variant and mode.
 - State layer: a translucent overlay in the content colour that expresses hover, focus, pressed and dragged.
 - State matrix: the table of states against variants used to design and audit a component.
-- State: a named condition of a component that changes its appearance or behaviour.
 - Tabular figures: digits of equal width so columns of numbers align and counters do not jitter.
 - Thumb zone: the region of a phone screen a thumb reaches comfortably in a one-handed grip.
 - ThumbHash: a placeholder hash of about 21 to 25 bytes (Evan Wallace, 2023) encoding a blurred preview, alpha and aspect ratio.
@@ -1061,17 +1063,17 @@ Specifications, standards and platform documentation
 - Apple, SF Symbols: https://developer.apple.com/sf-symbols/
 - Apple, UIFeedbackGenerator documentation: https://developer.apple.com/documentation/uikit/uifeedbackgenerator
 - Google, Material Design 3: https://m3.material.io/
-- Google, Material 3 Expressive announcement, 13 May 2025: https://design.google/library/expressive-material-design-google-research
+- Google Design, the Material 3 Expressive research article: https://design.google/library/expressive-material-design-google-research ; Jetpack Compose Material 3 release notes: https://developer.android.com/jetpack/androidx/releases/compose-material3
 - Google, Material Design 2 dark theme (elevation overlay table): https://m2.material.io/design/color/dark-theme
 - Google, Material Symbols guide: https://developers.google.com/fonts/docs/material_symbols
 - Google, Use window size classes: https://developer.android.com/develop/ui/compose/layouts/adaptive/use-window-size-classes
 - Google, HapticFeedbackConstants: https://developer.android.com/reference/android/view/HapticFeedbackConstants
 - Microsoft, Fluent 2 design system: https://fluent2.microsoft.design/
 - Chrome Developers, New in Chrome 139 (corner-shape), 5 August 2025: https://developer.chrome.com/blog/new-in-chrome-139
-- web.dev, New to the web platform in December 2024 (scrollbar properties Baseline): https://web.dev/blog/web-platform-12-2024
-- ios-resolution.com, iOS device logical resolutions: https://www.ios-resolution.com/
-- Figma, release notes and pricing: https://www.figma.com/release-notes/ and https://www.figma.com/pricing/
-- Penpot community roadmap posts, 2026: https://community.penpot.app/ ; Sketch updates: https://www.sketch.com/updates/
+- web.dev, New to the web platform in December 2024 (scrollbar properties Baseline): https://web.dev/blog/web-platform-12-2024 ; MDN browser-compat-data (text-wrap support): https://github.com/mdn/browser-compat-data
+- ios-resolution.com, iOS device logical resolutions: https://www.ios-resolution.com/ ; Use Your Loaf, iPhone 17 screen sizes (safe area insets): https://useyourloaf.com/blog/iphone-17-screen-sizes/ ; Google Store, Pixel 11 tech specs: https://store.google.com/product/pixel_11_specs
+- Figma, release notes and pricing: https://www.figma.com/release-notes/ and https://www.figma.com/pricing/ ; What's new from Config India 2026: https://help.figma.com/hc/en-us/articles/43663368947863 ; Slots GA plugin API update, 10 June 2026: https://developers.figma.com/docs/plugins/updates/2026/06/10/update/ ; Figma Motion: https://www.figma.com/motion/
+- Penpot releases: https://github.com/penpot/penpot/releases ; Sketch updates: https://www.sketch.com/updates/
 - Evan Wallace, ThumbHash: https://evanw.github.io/thumbhash/
 - Phosphor Icons: https://phosphoricons.com/ ; Lucide: https://lucide.dev/ ; Heroicons: https://heroicons.com/ ; Remix Icon: https://remixicon.com/
 - CRED, NeoPOP web library: https://github.com/CRED-CLUB/neopop-web
@@ -1086,13 +1088,13 @@ Articles, studies and talks
 - Peter Pirolli and Stuart Card, Information Foraging, Psychological Review, 1999.
 - Jared Spool, Christine Perfetti and David Brittan, Designing for the Scent of Information, UIE, 2004.
 - Nielsen Norman Group: Icon Usability, 2014 (nngroup.com/articles/icon-usability/); Placeholders in Form Fields Are Harmful, 2014 (nngroup.com/articles/form-design-placeholders/); Cards: UI-Component Definition, 2016 (nngroup.com/articles/cards-component/)
-- Nielsen Norman Group: Confirmation Dialogs Can Prevent User Errors, If Not Overused, 2018 (nngroup.com/articles/confirmation-dialog/); Skeleton Screens 101, 2020 (nngroup.com/articles/skeleton-screens/); Modal and Nonmodal Dialogs: When (and When Not) to Use Them, 2021 (nngroup.com/articles/modal-nonmodal-dialog/)
+- Nielsen Norman Group: Confirmation Dialogs Can Prevent User Errors, If Not Overused, 2018 (nngroup.com/articles/confirmation-dialog/); Samhita Tankala, Skeleton Screens 101, 2023 (nngroup.com/articles/skeleton-screens/); Therese Fessenden, Modal and Nonmodal Dialogs: When (and When Not) to Use Them, 2017 (nngroup.com/articles/modal-nonmodal-dialog/)
 - Viget, A Bone to Pick with Skeleton Screens, 2017: https://www.viget.com/articles/a-bone-to-pick-with-skeleton-screens/
 - Bill Chung, Everything You Need to Know About Skeleton Screens, UX Collective, 2018.
-- Baymard Institute, Checkout Usability research, 2024 benchmark: https://baymard.com/
+- Baymard Institute, average checkout form fields, 2024 benchmark: https://baymard.com/blog/checkout-flow-average-form-fields
 - Josh W. Comeau, Designing Beautiful Shadows in CSS, 2021: https://www.joshwcomeau.com/css/designing-shadows/
 - Rauno Freiberg, Invisible Details of Interaction Design, July 2023: https://rauno.me/craft/interaction-design
 - Emil Kowalski, writing and the animations.dev course: https://emilkowal.ski/
 - Paco Coursey, cmdk: https://cmdk.paco.me/
-- Smashing Magazine, Beyond border-radius: What the CSS corner-shape Property Unlocks for Everyday UI, March 2026: https://www.smashingmagazine.com/2026/03/beyond-border-radius-css-corner-shape-property-ui/
+- Brecht De Ruyte, Smashing Magazine, Beyond border-radius: What the CSS corner-shape Property Unlocks for Everyday UI, March 2026: https://www.smashingmagazine.com/2026/03/beyond-border-radius-css-corner-shape-property-ui/
 - Wikipedia, Arc (web browser), status as of October 2026: https://en.wikipedia.org/wiki/Arc_(web_browser)

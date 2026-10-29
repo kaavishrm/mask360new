@@ -51,9 +51,9 @@ Each layer depends on the ones above it. Change at the top propagates down, whic
 | Components | Styled, accessible, documented UI parts: button, input, card, dialog | Figma library plus code package | Drift between design and code; duplicated buttons |
 | Patterns | Compositions that solve a task: search and filter, checkout, onboarding, data table with bulk actions | Documentation with examples | Every team invents its own checkout |
 | Templates | Page-level layouts with slots: marketing landing, product detail, dashboard | Figma pages, code layouts | Inconsistent page rhythm; margins vary per page |
-| Content | Voice, terminology, microcopy rules, localisation rules, number and date formats | Content guidelines inside the docs site; see 10 (content) | Buttons say Submit, OK, Confirm and Done in one product |
-| Motion | Durations, easings, choreography rules, reduced-motion behaviour | Motion tokens plus a choreography page; see 12 (motion) | Every transition a different speed |
-| Accessibility | Contrast, focus, keyboard, ARIA, reduced motion, testing | Baked into components plus CI tests; see 11 (accessibility) | Retrofits cost more than the build |
+| Content | Voice, terminology, microcopy rules, localisation rules, number and date formats | Content guidelines inside the docs site; see 10-ux-writing-and-content-design.md | Buttons say Submit, OK, Confirm and Done in one product |
+| Motion | Durations, easings, choreography rules, reduced-motion behaviour | Motion tokens plus a choreography page; see 12-motion-principles-and-ui-motion.md | Every transition a different speed |
+| Accessibility | Contrast, focus, keyboard, ARIA, reduced motion, testing | Baked into components plus CI tests; see 11-accessibility-and-inclusive-design.md | Retrofits cost more than the build |
 | Documentation | The site where all of the above is explained with usage, do and do not, code | Storybook, zeroheight, Supernova, Knapsack, or a custom site | Nobody knows the system exists |
 | Governance | Who decides, how to contribute, how versions ship, how to deprecate | A written process, a backlog, release notes | The system freezes at version 1 |
 
@@ -75,7 +75,7 @@ Brad Frost published "Atomic web design" on 10 June 2013 and the book Atomic Des
 
 ### 2.3 Functional and perceptual patterns (Alla Kholmatova, 2017)
 
-Design Systems (Smashing Magazine, 2017, 288 pages) replaces the chemistry taxonomy with two kinds of pattern. Functional patterns are the concrete, reusable parts of the interface with a purpose (buttons, text fields, a product card). Perceptual patterns are the descriptive qualities that carry brand and feel (iconography style, colour, typography, spacing, tone, motion). The book's second idea is the shared language: a pattern that has no agreed name does not exist in the team. Her two axes for choosing an approach: strict versus loose (how much deviation the system tolerates) and modular versus integrated (whether parts are designed to recombine or pages are designed whole). Case studies: Airbnb, Atlassian, Eurostar, TED and Sipgate. The house follows Kholmatova's framing because an agency serving luxury clients sells perceptual patterns (the feel) as much as functional ones (the parts), and a client's brand lives in the perceptual layer.
+Design Systems (Smashing Magazine, 2017, 288 pages) replaces the chemistry taxonomy with two kinds of pattern. Functional patterns are the concrete, reusable parts of the interface with a purpose (buttons, text fields, a product card). Perceptual patterns are the descriptive qualities that carry brand and feel (iconography style, colour, typography, spacing, tone, motion). The book's second idea is the shared language: a pattern that has no agreed name does not exist in the team. Her two axes for choosing an approach: strict versus loose (how much deviation the system tolerates) and modular versus integrated (whether parts are designed to recombine or pages are designed whole). Case studies include Airbnb, Atlassian, Eurostar, TED and Sipgate. The house follows Kholmatova's framing because an agency serving luxury clients sells perceptual patterns (the feel) as much as functional ones (the parts), and a client's brand lives in the perceptual layer.
 
 ### 2.4 The Carbon model and the Spectrum model
 
@@ -103,7 +103,7 @@ Rules, each with its reason:
 
 - Components never reference globals directly. If a button reads `stone.600`, a dark theme cannot change it, because the theme swaps alias values and leaves globals alone.
 - Semantic names say the role (`text.subtle`), never the value (`text.grey`). A value name lies the moment the theme changes.
-- Keep the component tier small. Material 3 keeps it for cases where a component needs its own override; a system where every component has 40 tokens has a maintenance surface of thousands. Primer, Atlassian and Fluent all document three tiers and all warn against bloating the third.
+- Keep the component tier small. Primer scopes its third tier to component CSS only (`button-primary-bgColor-hover`, `control-danger-borderColor-rest`); a system where each of 40 components carries 40 tokens has 1,600 names that every theme author must understand, and most of them only repeat an alias.
 - Globals are plentiful and boring; aliases are few and argued over. A healthy mid-sized system has about 150 to 400 global colour tokens across its ramps and 40 to 80 semantic colour roles (this is a house heuristic drawn from reading Carbon, Primer and Atlassian token lists; count your own).
 
 ### 3.3 Naming conventions
@@ -120,7 +120,7 @@ The pattern most systems converge on is category, then property, then variant, t
 Verified house of style from the canonical systems, as of October 2026:
 
 - Atlassian: foundation, then property, then modifier, with examples `color.text` (default body text), `color.icon.success`, `opacity.disabled`, `opacity.loading`. "Not every token has a modifier."
-- Primer: three tiers named base (`color-scale-pink-5`), functional (`bgColor-default`) and component or pattern (`focus-outlineColor`); prefixes `bgColor-`, `fgColor-`, `borderColor-`; roles `accent`, `success`, `attention`, `danger`, `open`, `closed`, `done`, `sponsors`.
+- Primer: seven segments in a fixed order (prefix, namespace, pattern, variant, property, variant, scale) with one variant per token; three tiers named base (`base-size-4`, `base-color-green-5`), functional (`bgColor-inset`, `borderColor-default`) and component or pattern (`button-primary-bgColor-hover`); roles `accent`, `success`, `attention`, `danger`, `open`, `closed`, `done`, `sponsors`.
 - Material 3: reference tokens prefixed `md.ref` (palettes), system tokens `md.sys` (roles such as `md.sys.color.primary`), component tokens `md.comp`.
 - Fluent 2: global tokens ("context-agnostic", raw values) and alias tokens (semantic, condensing many values into one for shadows and type).
 
@@ -197,12 +197,12 @@ Under the Resolver Module 2025.10, a resolver document (`.resolver.json`, `appli
 | Tool | What it does | State as of October 2026 | Limits to know |
 |---|---|---|---|
 | Style Dictionary | Open-source transformer: reads token JSON, outputs CSS custom properties, SCSS, JS, iOS, Android, Compose and more | v5.7.1 (24 October 2026). v4.0.0 added DTCG support; v5.0.0 shipped May 2025; v5.3.0 added the 2025.10 structured colour with 14 colour spaces and `color/oklch`, `color/oklab`, `color/p3`, `color/lch` transforms with a hex fallback for out-of-gamut colours; v5.4.0 object-form dimensions; v5.7.0 object-form durations | Transforms are yours to write for anything unusual; it has no UI; a 6-line config is the whole product |
-| Tokens Studio for Figma | Plugin that manages token sets and themes inside Figma, syncs to Git, exports to variables and styles | Free tier plus Pro. Pro features: themes, modified colours, multi-file sync to remote storage, branch switching, non-local variables and styles, export using themes. Sync providers: GitHub, GitLab, Bitbucket, Azure DevOps, JSONBin, Supernova, Tokens Studio Platform, URL, generic versioned server. A settings toggle switches "W3C DTCG" and "Legacy" formats | Pricing (tokens.studio, October 2026): Free (1 editor, 1 project, 1 theme group); Team at 39 euros per extra editor per month billed annually with one editor included and 5 projects; Organization at 499 euros per month plus 49 euros per extra editor with 5 editors included and SSO as an add-on; Enterprise custom. The plugin's legacy format predates the spec, so new projects set DTCG from day one |
-| Specify | Token pipeline platform between Figma and code | Shut down; the DTCG mailing list recorded "Specify is shutting down too" in early 2025 and third-party listings give a sunset of November 2024 (one lists November 2025) | Do not quote it in proposals |
-| Figma variables and modes | Native tokens in Figma with types colour, number, string, boolean; modes per collection for theming | Pricing page (October 2026) lists "10 modes", "20 modes" and "Unlimited modes (via extended collections)" in the Professional, Organization and Enterprise columns, and a Figma staff reply on the community forum (June 2026) confirms 10 modes per collection on Professional and Education. The limits before 2026 were 4 on Professional and Organization and 40 on Enterprise, which is why older articles disagree. Full design seats: Professional $16 per month, Organization $55 and Enterprise $90 per month billed annually. Tokens Studio's documentation cites a Figma limit of 5,000 variables per collection | No composite types (a type style stays a style, so typography tokens need a plugin or a convention); number variables carry no unit; modes cannot nest, so brand times theme times density must be flattened or split across collections |
+| Tokens Studio for Figma | Plugin that manages token sets and themes inside Figma, syncs to Git, exports to variables and styles | Free tier plus Pro. Pro features: themes, modified colours, multi-file sync to remote storage, branch switching, non-local variables and styles, export using themes. Sync providers: GitHub, GitLab, Bitbucket, Azure DevOps, JSONBin, Supernova, Tokens Studio Platform, URL, generic versioned server. A settings toggle switches "W3C DTCG" and "Legacy" formats | Pricing (tokens.studio, October 2026): Free (1 editor, 1 project, 1 theme group with 2 theme options); Team at 39 euros per extra editor per month billed annually with one editor included and 5 projects; Organization at 499 euros per month plus 49 euros per extra editor with 5 editors included and SSO as an add-on; Enterprise custom. The plugin's legacy format predates the spec, so new projects set DTCG from day one |
+| Specify | Token pipeline platform between Figma and code | Closed. Its post "Saying Goodbye: The End of Specify" (25 October 2024) set the sunset for 15 November 2024 | Remove it from proposals and inherited client documentation; move any Specify pipeline to Style Dictionary |
+| Figma variables and modes | Native tokens in Figma with types colour, number, string, boolean; modes per collection for theming | Pricing page (October 2026): 10 modes per collection on Professional, 20 on Organization, "Unlimited modes (via extended collections)" on Enterprise. The limits were 4 on Professional and Organization and 40 on Enterprise until the increase announced on Figma's community forum in late 2025, which is why older articles disagree. Native import and export of modes as DTCG JSON (13.1). Full seats: Professional $16, Organization $55 and Enterprise $90 per month, the latter two billed annually; Dev seats $12, $25 and $35. Tokens Studio's documentation cites a Figma limit of 5,000 variables per collection | No composite types (a type style stays a style, so typography tokens need a plugin or a convention); number variables carry no unit; modes cannot nest, so brand times theme times density must be flattened or split across collections; native DTCG import reads colour in sRGB or HSL only, dimensions in px only and durations in s only, so OKLCH tokens arrive through their hex fallback |
 | Penpot | Open-source design tool with native tokens aligned to the DTCG format | Supports border radius, colour, dimensions, opacity, sizing, spacing, stroke width, rotation, typography, numbers, shadows; gradients "not available yet"; global, alias and semantic tiers; themes; JSON import and export; a Tokens Studio converter | Smaller ecosystem than Figma; relevant for clients who need self-hosting |
 | Supernova | Hosted system platform: Figma import, token themes, docs site, code exporters | Starter free (3 editors, 1 design system, 1 token theme, 1 Storybook source), Pro $399 per month (10 editors, 2 systems, unlimited themes, custom code exporters), Enterprise custom with SAML 2.0 | Lock-in on the docs; export the tokens repo as your own |
-| Knapsack | Enterprise platform: token manager, Figma integration, docs with live code, Git-backed | Contact-sales pricing; Basic 5+ users, Core 10+ (adds custom domain, SSO, "up to 4 modes/collections"), Pro 20+ (3 framework renderers, workspace analytics) | Enterprise only; wrong size for most Mask360 clients |
+| Knapsack | Enterprise platform: token manager, Figma integration, docs with live code, Git-backed | Contact-sales pricing; Basic 5+ users, Core 10+ (adds custom domain, SSO, "up to 4 modes/collections"), Pro 20+ (up to 12 modes or collections, 3 framework renderers, workspace analytics) | Enterprise only; wrong size for most Mask360 clients |
 
 ## 5. Theming and multi-brand strategy
 
@@ -213,9 +213,9 @@ A theme is a complete set of alias values for one context. Axes that commonly ne
 | Axis | Values | Why it is a theme rather than a component variant |
 |---|---|---|
 | Colour scheme | light, dark | Every surface, text and border role changes; the component must not know |
-| Contrast | default, high contrast (Primer offers light and dark high contrast; Atlassian and Fluent name a high-contrast mode; Windows forced-colours mode is a system state) | Contrast is a user need, applied globally |
+| Contrast | default, high contrast (GitHub's Primer ships light and dark high-contrast themes; Fluent UI ships a high-contrast theme; Windows forced-colours mode is a system state the CSS must also respect) | Contrast is a user need, applied globally |
 | Brand | brand A, brand B, sub-brand | An agency's components must serve many clients with one code base |
-| Density | compact, comfortable (Atlassian names cozy, comfortable, compact as "non-colour themes") | Space and size tokens shift together; a data-heavy admin and a luxury storefront differ by density, never by component |
+| Density | compact, comfortable, spacious (Atlassian's spacing documentation names customisable density as a goal of its 8px scale) | Space and size tokens shift together; a data-heavy admin and a luxury storefront differ by density, never by component |
 | Motion | full, reduced | Reduced motion is a user preference (`prefers-reduced-motion`), applied globally |
 | Platform scale | desktop, mobile (Spectrum's model) | Touch targets and type sizes scale together |
 | Script and direction | Latin, Devanagari, Arabic; LTR, RTL | Line heights, font families and logical spacing change together (see 6.2) |
@@ -228,13 +228,13 @@ The structure the house uses for clients:
 2. One global set per client. A client's ramps, type families and radius values live in `brands/<client>/global.tokens.json`. Nothing else in the repository mentions the client.
 3. Themes as resolver modifiers. `brand` (one context per client), `scheme` (light, dark), `density` (default, compact). Resolution order: brand first, then scheme, then density, so a dark override can still be overridden by compact spacing.
 4. Components consume aliases only, so the component package is shared across every client and tested once.
-5. The Figma side mirrors this: one shared component library, one variables collection per axis, brand modes inside the brand collection. Where the plan's mode cap bites (see 4.5), split the brand collection per client file and keep scheme and density in the shared library.
+5. The Figma side mirrors this: one shared component library, one variables collection per axis, brand modes inside the brand collection. Where the plan's mode cap bites (see 4.5), split the brand collection per client file and keep scheme and density in the shared library. On Enterprise, extended collections (named on Figma's pricing page as the route to unlimited modes and multi-brand systems) let a brand file extend a shared collection and override only the values that differ, the Figma equivalent of the resolver's brand modifier.
 
 The reason to invest: the third client costs a fraction of the first, and the agency's craft decisions (focus ring behaviour, dialog motion, form validation timing) stop being re-made per client. The cost: discipline in naming, because a client-specific name anywhere in the semantic layer breaks the model.
 
 ### 5.3 Luxury-specific theme decisions
 
-Luxury clients rarely want a dark mode as a user toggle; they want one considered scheme (see design-taste, section 2). Build the token structure for two schemes anyway, because photography-led pages often invert to a dark editorial section mid-page, and that section is a scoped theme (`data-theme="dark"` on a container) rather than a hand-coloured block. Density for luxury is comfortable or looser; keep compact for the admin side (hotel back office, jeweller inventory) that the same system also serves.
+Luxury clients rarely want a dark mode as a user toggle; they want one considered scheme (see design-taste, section 2, colour discipline). Build the token structure for two schemes anyway, because photography-led pages often invert to a dark editorial section mid-page, and that section is a scoped theme (`data-theme="dark"` on a container) rather than a hand-coloured block. Density for luxury is comfortable or looser; keep compact for the admin side (hotel back office, jeweller inventory) that the same system also serves.
 
 ## 6. Token categories, scales and values
 
@@ -322,7 +322,7 @@ Two rules with reasons. First, define `radius.control` and `radius.surface` as a
 
 ### 6.6 Border width
 
-`border.width.hairline` 1px, `border.width.thin` 1.5px, `border.width.medium` 2px, `border.width.thick` 3px. The focus ring uses `medium` or `thick` with an offset of 2px so it survives WCAG 2.2's 2.4.13 Focus Appearance (AAA) area rule and reads on photography. A true 0.5px hairline renders only on displays at 2x and above and disappears on 1x monitors, so the house keeps 1px as the floor and reduces lightness contrast instead of width when a line looks heavy (design-taste: hairline over shadow).
+`border.width.hairline` 1px, `border.width.thin` 1.5px, `border.width.medium` 2px, `border.width.thick` 3px. The focus ring uses `medium` or `thick` with an offset of 2px so it survives WCAG 2.2's 2.4.13 Focus Appearance (AAA) area rule and reads on photography. A true 0.5px hairline renders only on displays at 2x and above and disappears on 1x monitors, so the house keeps 1px as the floor and reduces lightness contrast instead of width when a line looks heavy (design-taste section 5: hairline over shadow).
 
 ### 6.7 Elevation and shadow
 
@@ -396,9 +396,9 @@ A component's API is the set of props, slots, events and names through which des
 
 ### 7.1 Props, variants and sizes
 
-- Variants name intent, never appearance: `variant="primary | secondary | tertiary | ghost | destructive"`, because an appearance name (`variant="orange"`) lies after a rebrand and means nothing to a screen reader. Sizes use `sm | md | lg`, three stops; Material and Spectrum show that a fourth stop is almost never used and doubles the test matrix.
+- Variants name intent, never appearance: `variant="primary | secondary | tertiary | ghost | destructive"`, because an appearance name (`variant="orange"`) lies after a rebrand and means nothing to a screen reader. Sizes use `sm | md | lg`, three stops, because each extra stop adds a full row to the state matrix and to the visual-regression bill; Spectrum ships four button sizes (S to XL) because it serves desktop and mobile scales, a need most agency clients do not have.
 - Booleans multiply: six boolean props give 64 combinations, most of them meaningless (`isLoading` plus `isDisabled` plus `isActive`). Prefer one enum prop (`state="idle | loading | disabled"`) where states are exclusive.
-- Keep the props list under about 12 for a leaf component. Primer, Polaris and Spectrum's button APIs all sit under that; an API past 20 props is a sign that composition (7.2) was skipped.
+- Keep the props list under about 12 for a leaf component (a house ceiling); an API past 20 props is a sign that composition (7.2) was skipped, and every prop is a public contract that semver (10.3) makes expensive to remove.
 - Tone or status props map directly to the status alias tokens (6.1), so adding a `status.neutral` role is a token change and a one-line variant addition, never a redesign.
 - The `cva` pattern (class-variance-authority, used throughout shadcn/ui) is the house default in Tailwind projects: a variant map in one place, a `cn()` merge, no runtime style objects.
 
@@ -406,7 +406,7 @@ A component's API is the set of props, slots, events and names through which des
 
 Configuration is a single component with many props (`<Dialog title icon footerButtons onClose ...>`); composition is a family of small parts assembled by the consumer (`<Dialog.Root><Dialog.Trigger/><Dialog.Content><Dialog.Title/>...`). Composition wins past about ten props because every new need (an image in the header, two primary buttons, a form inside) becomes a new child instead of a new prop. Radix Primitives, React Aria Components, Base UI and Ark UI all ship this way, which is why shadcn/ui components are small files rather than configuration objects.
 
-Slots are the Figma equivalent: a named region in a component instance that accepts any content (Figma's slot properties, mapped in Code Connect with `figma.slot()` since the 1.4 releases). The reason to mirror slots in both tools is that a designer who swaps a card's media slot for a video and an engineer who passes `children` to `Card.Media` are making the same decision with the same name.
+Slots are the Figma equivalent: a named region in a component instance that accepts any content (Figma's slot property, available on all plans, holds any layers inside a defined area of an instance without detaching it; Code Connect maps it with `figma.slot()`, in open beta as of October 2026). The reason to mirror slots in both tools is that a designer who swaps a card's media slot for a video and an engineer who passes `children` to `Card.Media` are making the same decision with the same name.
 
 `asChild` (Radix) and `render` props (Base UI, React Aria) let a component lend its behaviour to a different element (a `Button` that renders as a Next.js `Link`), which keeps the DOM honest (one element, correct semantics) and avoids nested interactive elements, an accessibility failure.
 
@@ -426,7 +426,7 @@ Headless (unstyled) components implement behaviour, state, keyboard handling and
 | Ark UI | Chakra team (Zag.js state machines) | 5.39.x stable; 6.0.0-next.0 pre-release on 6 October 2026 | React, Vue, Solid, Svelte | The only multi-framework option with one behaviour layer; Chakra UI v3 (3.37.0, 28 August 2026) is built on it |
 | Headless UI | Tailwind Labs | v2 line | React, Vue | Smaller surface (menu, listbox, combobox, dialog, disclosure, tabs, switch); fine for marketing sites |
 
-Rule: never write a dialog, menu, combobox, tooltip or date picker from scratch. Each has 30 to 60 keyboard and focus requirements in the APG, and every one of these libraries has fixed bugs that a bespoke build will reintroduce.
+Rule: never write a dialog, menu, combobox, tooltip or date picker from scratch. Each APG pattern specifies a keyboard table, roles, states and focus management, and every one of these libraries has fixed years of screen-reader and browser bugs that a bespoke build will reintroduce.
 
 ### 7.5 Polymorphic components
 
@@ -446,7 +446,7 @@ Every component documents its contract: role, name, keyboard behaviour, focus ma
 | Combobox | `combobox` with `aria-expanded`, `listbox` popup | Arrows, Enter, Esc, type to filter | Focus stays in input; `aria-activedescendant` | The hardest pattern; use a library |
 | Switch | `switch` with `aria-checked` | Space toggles | Ring | Differs from checkbox in that it takes effect immediately |
 | Tooltip | `tooltip`, referenced by `aria-describedby` | Esc dismisses; shows on focus as well as hover | None | Never put essential content in a tooltip |
-| Toast | `status` or `alert` live region | Not focused on appear | None | A toast with an action needs a timeout of at least 5 seconds and a pause on hover |
+| Toast | `status` or `alert` live region | Not focused on appear | None | A toast with an action needs a long timeout (house minimum 8 seconds) that pauses on hover and focus, because WCAG 2.2 success criterion 2.2.1 Timing Adjustable requires that users can extend a time limit |
 | Table | `table`, `columnheader`, `rowheader` | Native | Native | `grid` only when cells are interactive |
 
 The contract is tested in three places: the headless library's own tests, the Storybook accessibility addon on every story (section 12.4), and a quarterly manual pass with a screen reader (VoiceOver on Safari for Apple audiences, NVDA on Chrome for Windows, TalkBack on Android for India's Android-majority mobile traffic).
@@ -469,7 +469,7 @@ A parity audit (section 10.5) runs twice a year and lists every mismatch; the us
 
 ### 7.8 The internationalisation contract
 
-For Mask360's bilingual clients the contract includes: logical CSS properties only (`margin-inline-start`, never `margin-left`) so RTL mirrors without a second stylesheet; a `dir` attribute set at the root and honoured by every popup's placement logic (React Aria handles this; several others do not); numerals as a locale decision (`Intl.NumberFormat` with `en-IN` grouping 1,00,000 and `ar-AE` with Western or Eastern Arabic digits per client preference); dates through `Intl.DateTimeFormat`; currency tokens as formatting rules (INR with the rupee sign and lakh grouping, AED with "AED" before the amount in Latin text and "د.إ" in Arabic text); and text expansion allowances of 30 percent in every label slot. Mirroring rules for icons (arrows and progress mirror; clocks, logos and media controls do not) are documented per icon.
+For Mask360's bilingual clients the contract includes: logical CSS properties only (`margin-inline-start`, never `margin-left`) so RTL mirrors without a second stylesheet; a `dir` attribute set at the root and honoured by every popup's placement logic (React Aria handles this; several others do not); numerals as a locale decision (`Intl.NumberFormat` with `en-IN` grouping 1,00,000 and `ar-AE` with Western or Eastern Arabic digits per client preference); dates through `Intl.DateTimeFormat`; currency tokens as formatting rules (INR with the rupee sign and lakh grouping, AED with "AED" before the amount in Latin text and "د.إ" in Arabic text; the Central Bank of the UAE's dirham symbol, announced in March 2025 and encoded as U+20C3 in Unicode 18 in September 2026, is missing from most fonts in October 2026, so it ships as an SVG icon token until the client's typefaces carry it); and text expansion allowances of 30 percent in every label slot. Mirroring rules for icons (arrows and progress mirror; clocks, logos and media controls do not) are documented per icon.
 
 ## 8. Canonical systems to study
 
@@ -479,8 +479,8 @@ Study each for the one thing it does best; copy none whole. Versions and dates v
 
 | System | Owner | State, October 2026 | What it does best | Borrow for |
 |---|---|---|---|---|
-| Material 3 and M3 Expressive | Google | M3 Expressive announced 13 May 2025, shipped on Pixel in Android 16 QPR1 (September 2025) and preinstalled on Pixel 10. Google's research article cites 46 studies and more than 18,000 participants, key elements found up to four times faster in eye tracking, 87 percent preference among 18 to 24 year olds | The most complete public token model (`md.ref`, `md.sys`, `md.comp`), dynamic colour from HCT, named motion and elevation scales (6.7, 6.10), window size classes | SaaS and Android-first consumer apps; the token tiers for everyone. Its expressive shapes and bold colour are the opposite of the house luxury register |
-| Apple Human Interface Guidelines and Liquid Glass | Apple | Liquid Glass announced at WWDC on 9 June 2025 for iOS 26 and the 26-series platforms; two variants, regular (adaptive) and clear (for media-rich backgrounds); a control layer that floats above content; the system adapts it for Reduce Transparency and Increase Contrast. Secondary sources describe an iOS 27 refinement in 2026 with a system-wide intensity setting; confirm on developer.apple.com | Platform conventions for iOS and macOS, SF Symbols, Dynamic Type, the discipline of separating navigation chrome from content | Any native iOS work for hospitality and retail clients; the layering idea. Glass as decoration on the web is a peaking trend (design-taste section 6) |
+| Material 3 and M3 Expressive | Google | M3 Expressive announced 13 May 2025, shipped on Pixel in Android 16 QPR1 (September 2025) and preinstalled on Pixel 10. Google's research article cites 46 studies and more than 18,000 participants, key elements found up to four times faster in eye tracking, up to 87 percent preference among 18 to 24 year olds | The most complete public token model (`md.ref`, `md.sys`, `md.comp`), dynamic colour from HCT, named motion and elevation scales (6.7, 6.10), window size classes | SaaS and Android-first consumer apps; the token tiers for everyone. Its expressive shapes and bold colour are the opposite of the house luxury register |
+| Apple Human Interface Guidelines and Liquid Glass | Apple | Liquid Glass announced at WWDC on 9 June 2025 for iOS 26 and the 26-series platforms; two variants, regular (adaptive) and clear (for media-rich backgrounds); a control layer that floats above content; the system adapts it for Reduce Transparency and Increase Contrast. WWDC on 8 June 2026 brought iOS 27, refined Liquid Glass guidance for app icons, Icon Composer 2 and SF Symbols 8 in beta, and reintroduced design principles to the HIG | Platform conventions for iOS and macOS, SF Symbols, Dynamic Type, the discipline of separating navigation chrome from content | Any native iOS work for hospitality and retail clients; the layering idea. Glass as decoration on the web is a peaking trend (design-taste section 6) |
 | Microsoft Fluent 2 | Microsoft | Current; documents global tokens (raw values) and alias tokens (semantic, bundling shadows and type), with light, dark and high-contrast themes | High-contrast theming done properly; Windows forced-colours behaviour | Enterprise and government clients in the Gulf on Windows estates |
 
 ### 8.2 The enterprise and product systems
@@ -488,10 +488,10 @@ Study each for the one thing it does best; copy none whole. Versions and dates v
 | System | Owner | State, October 2026 | What it does best | Borrow for |
 |---|---|---|---|---|
 | Carbon | IBM | v11.119.0 released 21 October 2026 (`@carbon/react` 1.119.0), two-week release cadence with release candidates | Tokens-first architecture, four themes, layering tokens, the 2x grid, a spacing scale in multiples of 2, 4 and 8 (6.3) | Data-heavy admin and back-office products: hotel PMS dashboards, inventory |
-| Polaris | Shopify | polaris.shopify.com now redirects to shopify.dev, which describes Polaris as "Shopify's unified UI framework built on web components"; Polaris React remains published but the documented path for app UI is the web component set | Content guidelines woven into component docs; commerce patterns (index tables, resource lists, bulk actions) | F&B and retail clients on Shopify; the content-in-docs model for 10-ux-writing-and-content-design.md |
-| Atlassian Design System | Atlassian | Current; `space.100` = 8px scale with negatives, colour tokens `color.text`, `color.icon.success`, density themes cozy, comfortable, compact | The clearest token naming documentation; the density model | Any SaaS with tables and forms; the naming grammar in 3.3 |
-| Primer | GitHub | `@primer/react` 38.43.0 on 23 October 2026, with a `@primer/mcp` package (1.1.2) shipped alongside so agents can query the system | Seven-segment token grammar (prefix, namespace, pattern, variant, property, variant, scale), base, functional and component tiers, four colour modes including high contrast | Developer-facing products; the MCP idea for exposing a system to AI tooling (section 13.4) |
-| Spectrum 2 and React Spectrum | Adobe | React Spectrum libraries v1.8.0 on 8 October 2026; S2 reached 1.0.0 as the first stable release of the second-generation system | Behaviour, state and skin separated (React Aria, React Stately, Spectrum); platform scales for desktop and mobile | The architecture of every house code library (2.4, 7.4) |
+| Polaris | Shopify | polaris.shopify.com now redirects to shopify.dev, which describes Polaris as "Shopify's unified UI framework built on web components"; each surface (Admin, Checkout, Customer accounts, Point of Sale extensions) gets its own subset of Polaris web components | Content guidelines woven into component docs; commerce patterns (index tables, resource lists, bulk actions) | F&B and retail clients on Shopify; the content-in-docs model for 10-ux-writing-and-content-design.md |
+| Atlassian Design System | Atlassian | Current; `space.100` = 8px, a scale from `space.0` to `space.1000` (80px) with negatives to -32px; colour tokens `color.text`, `color.icon.success` | The clearest token naming documentation; a spacing scale whose numbers are percentages of the base | Any SaaS with tables and forms; the naming grammar in 3.3 |
+| Primer | GitHub | `@primer/react` 38.43.0 on 23 October 2026, with a `@primer/mcp` package (1.1.2) shipped alongside so agents can query the system | Seven-segment token grammar (3.3); base, functional and component tiers; a nine-theme set, since GitHub offers light and dark, each with high-contrast, protanopia and deuteranopia, and tritanopia variants, plus dark dimmed | Developer-facing products; the MCP idea for exposing a system to AI tooling (section 13.4) |
+| Spectrum 2 and React Spectrum | Adobe | React Spectrum libraries v1.8.0 on 8 October 2026; S2 reached 1.0.0 on 16 December 2025, "the first stable version" of the second-generation system | Behaviour, state and skin separated (React Aria, React Stately, Spectrum); platform scales for desktop and mobile | The architecture of every house code library (2.4, 7.4) |
 | Lightning Design System | Salesforce | Current; the origin of design tokens (Jina Anne, 2014) | The token idea itself; dense enterprise patterns | Historical reference and CRM-adjacent client work |
 | Base (Base Web) | Uber | Open source React library with a theme object (`createTheme`) and Styletron for styling; Uber Move is the brand typeface | A strict theme object every component reads; a good example of one brand, one theme | Logistics and marketplace clients |
 | Airbnb DLS | Airbnb | Private. Karri Saarinen's 2016 essay "Building a Visual Language" described it; Saarinen then co-founded Linear | The idea of a unified language across platforms, and the cultural argument for a system | The essay, for client decks explaining why a system |
@@ -507,14 +507,14 @@ Study each for the one thing it does best; copy none whole. Versions and dates v
 
 | System | State, October 2026 | What it does best | Borrow for |
 |---|---|---|---|
-| Nord (Nordhealth) | Web Components with CSS custom properties as the token surface; the site returned no content on this check, so verify the version there | Framework-agnostic delivery; documented tokens as CSS variables | Clients whose engineering teams span frameworks |
+| Nord (Nordhealth) | Nordhealth's system for veterinary and healthcare software: 57 web components that work in plain HTML, React or Vue, about 300 icons, design tokens with a Tailwind integration, themes and a Figma toolkit | Framework-agnostic delivery through web components, so one system serves teams on different frameworks | Clients whose engineering teams span frameworks |
 | Geist (Vercel) | Current; components ship as `@vercel/geistcn` with assets in `@vercel/geistcn-assets`; typeset in Geist Sans and Geist Mono; a high-contrast colour system | Restraint in a developer product: grid, monochrome, hairlines | The register for Mask360's own agency showcase and for fintech clients; study it as taste, see design-taste references/canon.md |
 | Linear | No public system; the product is the document | Density with calm, keyboard-first, one accent, subtle elevation | Reference for "quiet SaaS" clients |
-| shadcn/ui | Not a dependency: components are copied into the project through the CLI (v4, March 2026). Changelog in 2026: Base UI documentation (January), unified Radix package and blocks for both (February), registry include and validate (May), GitHub registries (June), Base UI as default (July), private GitHub registries and the Questionnaire component (August), a standalone `cn` package (September), Trace and Code Block with 21 AI Elements patterns (October) | The copy-in model (you own the code), registries as distribution, Tailwind v4 tokens as `@theme` | The default starting kit for a client web app; the private-registry feature is how an agency distributes a client system |
+| shadcn/ui | Not a dependency: components are copied into the project through the CLI (v4, March 2026). Changelog in 2026: Base UI documentation and RTL support (January), unified Radix package and blocks for both (February), registry include and validate (May), GitHub registries (June), Base UI as the default on 2 July and a React Aria entry (July), private GitHub registries and the Questionnaire component (August), a standalone `cn` package (September), Trace, Code Block and AI Elements (October) | The copy-in model (you own the code), registries as distribution, Tailwind v4 tokens as `@theme` | The default starting kit for a client web app; the private-registry feature is how an agency distributes a client system |
 | Radix Themes | 3.1.x (3.1.1 in June 2024, 3.1.3 current and undated on the releases page) | Twelve-step colour scales with fixed semantics (6.1), a `Theme` component with accent, grey, radius and scaling props | The colour semantics; quick prototypes |
 | Tailwind CSS v4 | `@theme` directive defines tokens as CSS variables that also generate utilities; namespaces `--color-*`, `--font-*`, `--text-*`, `--font-weight-*`, `--tracking-*`, `--leading-*`, `--breakpoint-*`, `--container-*`, `--spacing-*`, `--radius-*`, `--shadow-*`, `--ease-*`, `--animate-*` and others; `--spacing: 0.25rem` as the base; `@theme inline` for variable references; `--*: initial` to drop the defaults | A token system that engineers already use; the cleanest path from DTCG to utilities (13.2) | Every house web build |
 | Chakra UI | v3.37.0 on 28 August 2026, built on Ark UI 5.39 with a Panda CSS preset | Z-index scale (6.9), semantic tokens with conditions, recipes | Teams who want a styled library with a theme object |
-| Mantine | Version not verified on this check (the changelog page returned 404); the v8 line shipped in 2025 | Breadth: 100 plus components, hooks, form library | Internal tools where speed beats brand |
+| Mantine | v9 line; 9.7.4 released 25 October 2026 | Breadth: 100 plus components, hooks, form library | Internal tools where speed beats brand |
 
 ### 8.5 Luxury versus SaaS: what to borrow
 
@@ -535,7 +535,7 @@ Documentation is the product that the system's users touch. A component with no 
 
 ### 9.1 Storybook
 
-Storybook is the open-source workshop for building and documenting components in isolation. Facts as of October 2026: Storybook 9.0 shipped in June 2025 (a breaking major); the 10.x line followed with 10.2 in January 2026 (new viewport and zoom UI, typesafe CSF factories for Vue, Angular and Web Components in preview, MDX support for Storybook MCP as an experiment) and 10.6 in September 2026 (CLI bindings for agent tools and skills, Angular-Vite and Vue MCP support, no breaking changes). The pieces that matter for a system:
+Storybook is the open-source workshop for building and documenting components in isolation. Facts as of October 2026: Storybook 9.0 shipped in June 2025 (a breaking major); the 10.x line followed with 10.2 in January 2026 (new viewport and zoom UI, typesafe CSF factories for Vue, Angular and Web Components in preview, MDX support for Storybook MCP as an experiment), 10.3 in March 2026 (Storybook MCP for agentic component development, docs and tests, a preview for React) and 10.6 in September 2026 (CLI bindings for agent tools and skills, Angular-Vite and Vue MCP support, no breaking changes). The pieces that matter for a system:
 
 - Stories in Component Story Format (CSF 3): one file per component, one named export per state. A story is the unit that tests, docs, visual regression and the accessibility addon all consume, so write every state the state matrix in 06-ui-design-craft.md section 3 lists.
 - Autodocs generates a docs page from stories and prop types; Controls lets a reviewer change props live, which replaces most "can it do X" questions.
@@ -544,15 +544,15 @@ Storybook is the open-source workshop for building and documenting components in
 
 ### 9.2 Chromatic and visual regression
 
-Chromatic (by Storybook's maintainers) renders every story on every commit, diffs the pixels against the accepted baseline and asks a human to approve changes. Pricing on chromatic.com in October 2026: Free at 5,000 snapshots per month on Chrome only; Starter at $179 per month for 35,000 snapshots across Chrome, Safari, Firefox and Edge; Pro at $399 per month for 85,000; overage at $0.008 per snapshot; Enterprise custom. A cached copy of the same page earlier in 2026 showed four tiers at $149, $349 and $649, so the pricing moved during the year; quote the live page in a proposal. Snapshots multiply: stories times builds times browsers times viewports (two stories, ten builds, two browsers, two viewports is 80 snapshots), and accessibility checks add one more per story. Alternatives with their own published numbers: Argos at $100 per month for 35,000 screenshots and Percy from $599 per month (Argos's comparison, July 2026). Visual regression is the single most effective guard against token drift: a changed alias value shows up as a diff on every affected story within minutes.
+Chromatic (by Storybook's maintainers) renders every story on every commit, diffs the pixels against the accepted baseline and asks a human to approve changes. Pricing on chromatic.com in October 2026: Free at 5,000 snapshots per month on Chrome only; Starter at $179 per month for 35,000 snapshots across Chrome, Safari, Firefox and Edge; Pro at $399 per month for 85,000; overage at $0.008 per snapshot; Enterprise custom. Earlier copies of the page showed a Starter $149, Standard $349 and Pro $649 ladder; the ladder changed during 2026, so quote the live page in a proposal. Snapshots multiply: stories times builds times browsers times viewports (two stories, ten builds, two browsers, two viewports is 80 snapshots), and accessibility checks add one more per story. Alternatives with their own published numbers: Argos at $100 per month for 35,000 screenshots and Percy from $599 per month (Argos's comparison, July 2026). Visual regression is the single most effective guard against token drift: a changed alias value shows up as a diff on every affected story within minutes.
 
 ### 9.3 Hosted documentation platforms
 
 | Platform | What it is | Pricing, October 2026 | When the house uses it |
 |---|---|---|---|
-| zeroheight | Docs site that embeds Figma components, Storybook stories and tokens | Free: 1 editor, 1 styleguide, 1 token set. Starter: $49 per editor per month (the FAQ on the same page quotes $59 monthly or $588 yearly for one editor, so confirm), up to 5 editors, 2 styleguides, 3 token sets. Enterprise: custom, SSO, API, analytics | Client systems where marketing and product both read the docs and nobody will maintain a custom site |
-| Supernova | System platform with Figma import, token themes, docs and code exporters | Values from the earlier check in 4.5 (Starter free, Pro $399 per month, Enterprise custom); the pricing page was rate-limited on this pass, so re-verify | Clients who want tokens, docs and exporters in one tool and accept the lock-in |
-| Knapsack | Enterprise platform with Git-backed docs, live code and a token manager | Contact sales (4.5); the page was rate-limited on this pass | Large enterprise clients only |
+| zeroheight | Docs site that embeds Figma components, Storybook stories and tokens | Free: 1 editor, 1 styleguide, 1 token set. Starter: $49 per editor per month billed yearly ($588 a year) or $59 billed monthly, up to 5 editors, 2 styleguides, 3 token sets. Enterprise: custom, 10 token sets, SSO, API, adoption analytics. Free and Starter include an MCP server at 500 calls a month | Client systems where marketing and product both read the docs and nobody will maintain a custom site |
+| Supernova | System platform with Figma import, token themes, docs and code exporters | Starter free (3 editors, 1 system, 1 token theme), Pro $399 per month (10 editors, 2 systems, unlimited token themes, custom code exporters), Enterprise custom with SAML 2.0 and SCIM | Clients who want tokens, docs and exporters in one tool and accept the lock-in |
+| Knapsack | Enterprise platform with Git-backed docs, live code and a token manager | Contact sales; Basic from 5 users, Core from 10, Pro from 20 (4.5) | Large enterprise clients only |
 | Storybook plus a static docs site | Storybook for engineers, a Next.js or Astro site for everyone else, both fed by the tokens repo | Hosting cost only | Mask360's own system and clients with an engineering team that will own the repo |
 | In-Figma docs | Component descriptions, documentation links on components, Dev Mode annotations, a "How to use" page per library section | Included in the Figma seat | Always, as the first layer; designers never leave Figma to read a rule |
 
@@ -647,7 +647,7 @@ Twice a year, list every component in the Figma library and every component in t
 | Detachment rate | Detaches divided by inserts for a component over 30 days | Figma library analytics | Below 5 percent; a component above 15 percent is either badly designed or missing a variant, and the number tells you which to investigate |
 | Coverage | Share of the audited UI inventory (14.1) that the system now covers | Re-run the inventory each half-year | 90 percent of recurring elements |
 | Parity score | Share of components with zero Figma and code mismatches | The 10.5 audit | 95 percent |
-| Time to build | Hours for a designer and an engineer to produce a defined reference screen with the system, against without | Timed exercise at onboarding, repeated yearly | A 50 percent reduction is typical for a mature system; measure your own |
+| Time to build | Hours for a designer and an engineer to produce a defined reference screen with the system, against without | Timed exercise at onboarding, repeated yearly | Figma's 2019 study found designers with a design system completed the objective 34 percent faster; set the client's target after the first measurement |
 | Accessibility pass rate | Share of stories with zero axe violations | Storybook accessibility addon in CI (12.4) | 100 percent; the gate blocks merges |
 | Contribution throughput | Proposals opened, accepted, shipped per quarter, with median days to ship | The contribution board | Median under 30 working days |
 | Satisfaction | Quarterly survey of designers and engineers | Five questions, same each quarter | Trend only |
@@ -656,7 +656,7 @@ Sparkbox's finding that only 16 percent of teams tracked metrics is the argument
 
 ### 10.8 The business case and the costs
 
-What a system saves: duplicated build (an interface inventory of a mid-sized product typically finds 10 to 30 button variants and 20 to 60 text styles; each is a maintenance cost), onboarding time, accessibility retrofits, and brand drift across agencies. What it costs: the build (14.3), the Figma seats (Organization $55 per full seat per month billed annually), tooling (Chromatic from $179 per month at Starter, zeroheight from $49 per editor per month, Tokens Studio Team from 39 euros per extra editor per month, all October 2026 list prices), and the ongoing team, which the 2025 report's respondents named as the scarcest resource (41 percent of companies under 500 people and 54 percent of larger ones said they lacked people). The honest pitch to a client: a system pays back when at least two products or two teams share it, or one product ships more than monthly; below that, a UI kit plus tokens is the right purchase. Pricing of the build itself follows 24-business-of-creative-and-agency-operations.md section 3.
+What a system saves: duplicated build (every duplicate button and text style the inventory counts in 14.1 is a maintenance cost), design time (34 percent faster in Figma's 2019 study), onboarding time, accessibility retrofits, and brand drift across agencies. What it costs: the build (14.3), the Figma seats (Organization $55 per full seat per month billed annually), tooling (Chromatic from $179 per month at Starter, zeroheight from $49 per editor per month, Tokens Studio Team from 39 euros per extra editor per month, all October 2026 list prices), and the ongoing team, which the 2025 report's respondents named as the scarcest resource (41 percent of companies under 500 people and 54 percent of larger ones said they lacked people). The honest pitch to a client: a system pays back when at least two products or two teams share it, or one product ships more than monthly; below that, a UI kit plus tokens is the right purchase. Pricing of the build itself follows 24-business-of-creative-and-agency-operations.md section 3.
 
 ## 11. Motion, sound and content inside the system
 
@@ -666,7 +666,7 @@ The tokens are in 6.10; the system also needs a choreography page, because token
 
 ### 11.2 Sonic tokens
 
-A sonic token names a sound the product plays (confirmation, error, notification, send) and its properties: file, duration, peak loudness and whether it respects the system's silent setting. Material's sound guidelines and Apple's haptic and sound pairings are the public references; most web systems ship none, which is the right default for luxury hospitality and retail sites, where the house rule is silence. Where a client has a sonic identity (a hotel group's brand audio, a fintech's confirmation tone), the token file stores it under a `sound` group in `$extensions` (the DTCG has no sound type) with the brand's audio files in the assets package, and the component docs say which event fires which token. Cross-reference 14 (sound) for the production of the assets.
+A sonic token names a sound the product plays (confirmation, error, notification, send) and its properties: file, duration, peak loudness and whether it respects the system's silent setting. Material's sound guidelines and Apple's haptic and sound pairings are the public references; most web systems ship none, which is the right default for luxury hospitality and retail sites, where the house rule is silence. Where a client has a sonic identity (a hotel group's brand audio, a fintech's confirmation tone), the token file stores it under a `sound` group in `$extensions` (the DTCG has no sound type) with the brand's audio files in the assets package, and the component docs say which event fires which token. Cross-reference 15-lighting-and-sound.md (sections 9 onward) for producing the assets and 18-brand-strategy-and-identity-design.md section 4.9 for sound identity.
 
 ### 11.3 Content design inside the system
 
@@ -674,7 +674,7 @@ Content guidelines belong inside the component documentation, as Polaris demonst
 
 ## 12. Accessibility inside the system
 
-The system is where accessibility is cheapest: fixed once in a component, correct everywhere. The legal floor for Mask360 clients is WCAG 2.2 AA (04-colour.md section 6.3 for the Indian and UAE references); the detail of testing and law is in 11 (accessibility). What the system itself must build in:
+The system is where accessibility is cheapest: fixed once in a component, correct everywhere. The working floor for Mask360 clients is WCAG 2.2 AA; the Indian and UAE legal references, test method and assistive technology detail are in 11-accessibility-and-inclusive-design.md, and the contrast maths in 04-colour.md section 6. What the system itself must build in:
 
 ### 12.1 Contrast
 
@@ -690,7 +690,7 @@ ARIA comes from the headless layer (7.4), never hand-written in a skin. Reduced 
 
 ### 12.4 Testing in CI
 
-- axe-core (Deque; 4.14.0 released 5 October 2026, with runs 20 to 40 percent faster than 4.13) runs through the Storybook accessibility addon on every story and in the Vitest-based test run, so a violation fails the pull request. Automated rules catch only part of WCAG: Deque's own 2021 analysis put axe-core's automated detection at about 57 percent of issues by volume, which is why the manual pass in 7.6 remains.
+- axe-core (Deque; 4.14.0 released 5 October 2026, whose notes cite runs 20 to 40 percent faster on most pages and up to 15 times faster on very large ones) runs through the Storybook accessibility addon on every story and in the Vitest-based test run, so a violation fails the pull request. Automated rules catch only part of WCAG: Deque's own 2021 analysis (over 2,000 audits, more than 13,000 pages, nearly 300,000 issues) put automated detection at about 57 percent of issues by volume, which is why the manual pass in 7.6 remains.
 - Playwright with `@axe-core/playwright` runs the same engine on assembled pages, catching page-level issues (landmarks, heading order, duplicate IDs) that story-level tests miss.
 - Contrast tests run against the token file directly (a script over the alias layer per theme), so a token change that breaks contrast fails before any component renders.
 - A quarterly manual audit with a screen reader on the three most-used flows, logged as issues with the component name, so the fix lands in the system rather than in one product.
@@ -704,7 +704,8 @@ The pipeline is the set of automated steps that carry a decision from the design
 The house rule: the tokens repository is the source of truth, Figma is a consumer with write access through a plugin, and code is a consumer with no write access. The reason: a Git repository has history, review, branches, tags and CI; Figma variables have none of these in a form a build can read. Two ways to get Figma into the repository, as of October 2026:
 
 - Tokens Studio: designers edit tokens in the plugin, sync to GitHub (or GitLab, Bitbucket, Azure DevOps) as DTCG JSON on a branch, and the pull request is reviewed like any code. This is the default for clients without an Enterprise Figma plan.
-- Figma's REST Variables API: read and write variables programmatically; it requires an Enterprise plan, and it is the route when a client already has one. A third-party report says Figma shipped native DTCG-format import and export for variables after the 2025.10 release; the house could not confirm it on Figma's own pages during this check, so test it in the client's plan before promising it.
+- Figma's REST Variables API: read and write variables programmatically; it requires an Enterprise plan, and it is the route when a client already has one.
+- Figma's native mode import and export (help centre, October 2026): each DTCG JSON file becomes one mode; supported types are colour (sRGB and HSL only), dimension (px only, imported as a number), font family (a single name), duration (s only), number and string; aliases across collections resolve through `com.figma.aliasData` in `$extensions`. It suits a one-off seed of a client file; it has no review, history or branch, so the repository stays the source of truth.
 
 ### 13.2 The transformation chain
 
@@ -724,7 +725,7 @@ Style Dictionary (v5.7.1, 24 October 2026) reads the files per resolver context 
 
 | Target | Output | Transform notes |
 |---|---|---|
-| Web | `tokens.css` with custom properties on `:root` and on `[data-theme="dark"]`, `[data-brand="clientA"]`, `[data-density="compact"]` | `color/css` emits `oklch()` with a hex fallback; dimensions keep `px` or `rem` as authored (v5.5.0 handles object dimensions, v5.7.0 object durations) |
+| Web | `tokens.css` with custom properties on `:root` and on `[data-theme="dark"]`, `[data-brand="clientA"]`, `[data-density="compact"]` | `color/css` emits `oklch()` with a hex fallback; dimensions keep `px` or `rem` as authored (v5.4.0 added object dimensions, v5.7.0 object durations) |
 | Tailwind v4 | A CSS file with `@theme { --color-text-default: var(--sys-color-text-default); ... }` using `@theme inline` so utilities reference the live variable | Maps the alias names onto Tailwind's namespaces (`--color-*`, `--spacing-*`, `--radius-*`, `--shadow-*`, `--ease-*`, `--text-*`) so `bg-text-default` and `rounded-control` exist; `--spacing` is set to the house base so `p-4` equals 16px |
 | iOS | Swift enums or an Xcode asset catalogue of named colours (which gives light and dark for free) | Dimensions as `CGFloat`; fonts as `UIFont` descriptors |
 | Android | Compose `object` with `Color`, `Dp`, `TextStyle` | Density is handled by `dp`; the `compact` theme becomes a `CompositionLocal` |
@@ -732,13 +733,15 @@ Style Dictionary (v5.7.1, 24 October 2026) reads the files per resolver context 
 
 Components consume only the generated CSS variables or Tailwind utilities that reference them. A lint rule (stylelint `declaration-property-value-disallowed-list` for hex and raw px in component files, an ESLint rule against Tailwind arbitrary values such as `bg-[#F53901]` in components) makes the rule enforceable; an unenforced rule holds for about one sprint.
 
+Three CSS features make the web output cleaner, all Baseline across evergreen browsers as of October 2026. Cascade layers (`@layer tokens, base, components, utilities;`) let a consumer's override win predictably without specificity fights. `@property` registers a token with a type (`syntax: '<color>'`), so a theme change can animate and an invalid value is rejected. `light-dark()` writes a two-scheme alias once (`--color-bg-default: light-dark(#FFFFFF, #0A0A0A)`), which suits a small site; the resolver approach stays the house default because it scales to brand and density. Email is the exception: email clients do not reliably support custom properties, so the email target receives resolved literal values, inlined by the build.
+
 ### 13.3 Code Connect
 
 Code Connect links a Figma component to its code implementation so that Dev Mode shows the real snippet and the Figma MCP server gives agents the real component name and props. As of October 2026: template files (framework-agnostic TypeScript that defines how a snippet is generated) are the recommended approach; the legacy framework-specific parsers (React and React Native, HTML for Web Components, Angular and Vue, SwiftUI, Jetpack Compose) were deprecated with the 1.5.0 release and are reported as unmaintained after 17 August 2026, with a migration command and a `--delete` option in `figma connect migrate`. It needs a Dev or Full seat on Professional, Organization or Enterprise; Professional allows one active library and one framework, Organization and Enterprise several frameworks. The Code Connect UI inside Figma maps one design component to many implementations (React, SwiftUI, Compose, Vue). A connected system has a measurable coverage figure (components mapped against components in the library), which belongs on the health dashboard (10.7).
 
 ### 13.4 AI-assisted generation and its guardrails
 
-As of October 2026 the tools that generate UI from a system are: v0 (Vercel; generates Next.js, Tailwind and shadcn/ui code from prompts and screenshots or Figma files, deploys and opens pull requests), Claude Code and similar coding agents reading the repository, the Figma MCP server (design context into the agent), Storybook's MCP and skills support (10.2 and 10.6), and Primer's `@primer/mcp` package as an example of a system exposing itself to agents. Detail on the tools is in 22-ai-era-craft-and-generative-tools.md section 2; the guardrails that make generated code acceptable in a system:
+As of October 2026 the tools that generate UI from a system are: v0 (Vercel; generates Next.js, Tailwind and shadcn/ui code from prompts and screenshots or Figma files, deploys and opens pull requests), Claude Code and similar coding agents reading the repository, the Figma MCP server (design context into the agent), Storybook's MCP and skills support (9.1, from 10.3 onward), and Primer's `@primer/mcp` package as an example of a system exposing itself to agents. Detail on the tools is in 22-ai-era-craft-and-generative-tools.md section 2; the guardrails that make generated code acceptable in a system:
 
 1. The agent is given the system, never a description of it: the tokens package, the component package, the stories and the docs, through MCP or the repository. A prompt that says "use our brand blue" produces a hex; a repository that exposes `color.action.primary` produces a token.
 2. Generated code must pass the same lint rules (13.2), the same accessibility gate (12.4) and the same visual regression (9.2) as human code. Without the gates, agents reintroduce raw values and hand-rolled dialogs at speed.
@@ -770,7 +773,7 @@ The house method, in six phases. Durations are planning heuristics for a client 
 
 ### 14.1 Discovery: audit and inventory
 
-Two to three weeks. An interface inventory (Brad Frost's method, 2013): screenshot every instance of every element type across the client's products and marketing surfaces (buttons, inputs, cards, navigation, type styles, colours, icons, spacing), group them, and count. A typical mid-sized product yields 10 to 30 button variants, 20 to 60 text styles and 50 to 150 distinct colours; the counts are the first slide of the business case (10.8). Add: a brand guideline review (what the identity defines and what it leaves open; 18-brand-strategy-and-identity-design.md section 4), a technical audit (framework, Tailwind or not, existing component library, Figma plan and seat count, CI), an accessibility baseline (axe over the top ten pages), and interviews with three designers, three engineers and the sponsor on what slows them. Deliverable: the inventory, a findings deck, and a recommended scope.
+Two to three weeks. An interface inventory (Brad Frost's method, 2013): screenshot every instance of every element type across the client's products and marketing surfaces (buttons, inputs, cards, navigation, type styles, colours, icons, spacing), group them, and count. A stylesheet analyser (CSS Stats or Project Wallace) counts unique colours, font sizes and declarations from the live CSS in minutes and backs up the screenshots; the counts are the first slide of the business case (10.8). Add: a brand guideline review (what the identity defines and what it leaves open; 18-brand-strategy-and-identity-design.md section 4), a technical audit (framework, Tailwind or not, existing component library, Figma plan and seat count, CI), an accessibility baseline (axe over the top ten pages), and interviews with three designers, three engineers and the sponsor on what slows them. Deliverable: the inventory, a findings deck, and a recommended scope.
 
 ### 14.2 Scoping
 
@@ -927,6 +930,7 @@ The house defaults in one place; each row's reasoning is in section 6.
 - asChild: a prop (Radix) that makes a component render its child element instead of its own, lending behaviour without adding DOM.
 - Atomic design: Brad Frost's 2013 model of atoms, molecules, organisms, templates and pages.
 - Autodocs: Storybook's generated documentation page built from a component's stories and prop types.
+- Cascade layer: a CSS `@layer` that sets precedence between groups of styles independently of selector specificity.
 - Centralised model: a dedicated team builds and serves the system to product teams.
 - Choreography page: documentation of what moves in what order, per transition type, using the motion tokens.
 - Code Connect: Figma's tool for mapping a design component to its code implementation so Dev Mode and the Figma MCP server show real code.
@@ -947,6 +951,7 @@ The house defaults in one place; each row's reasoning is in section 6.
 - Design token: a named, platform-neutral value for a single design decision, stored once and transformed into each platform's format.
 - Detachment rate: detaches divided by inserts for a component over a period, from Figma library analytics.
 - DTCG: the W3C Design Tokens Community Group, author of the Design Tokens Format Module.
+- Extended collection: a Figma Enterprise variables collection that inherits a parent collection and overrides only the values that differ, used for multi-brand systems.
 - Federated model: contributors from several product teams build the system part-time.
 - Fluid type: a size expressed as a CSS clamp() between a minimum and a maximum across a viewport range.
 - Foundations: the layer of principles and brand decisions (colour, type, grid, spacing, iconography, imagery) above tokens.
@@ -964,6 +969,7 @@ The house defaults in one place; each row's reasoning is in section 6.
 - Perceptual pattern: Kholmatova's term for the descriptive qualities that carry brand and feel (colour, type, tone, motion).
 - Polymorphic component: a component that can render as a different element through an as, asChild or render prop.
 - Primitive (layer): an unstyled building block (box, stack, text, visually-hidden, focus ring) beneath components.
+- Registered custom property: a CSS custom property declared with `@property`, giving it a type, an initial value and inheritance behaviour.
 - Registry: a distribution source from which a CLI (shadcn) copies components into a project, including private GitHub registries.
 - Resolver document: the DTCG file that declares sets, modifiers and resolution order for producing token values per context.
 - RFC: request for comments, a short written proposal for an API or alias change opened for review before build.
@@ -1038,6 +1044,15 @@ Tool and system documentation
 - Vercel Geist, Introduction, https://vercel.com/geist/introduction
 - v0 documentation, https://v0.app/docs
 - Shopify Polaris, https://shopify.dev/docs/api/polaris
+- Figma, Modes for variables (DTCG import and export), https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables
+- Figma, Use slots to build flexible components in Figma, https://help.figma.com/hc/en-us/articles/38231200344599
+- Figma, Code Connect templates migration guide, https://developers.figma.com/docs/code-connect/templates-migration-guide/
+- Figma community forum, variable mode count thread, https://forum.figma.com/suggest-a-feature-11/launched-all-plans-should-offer-more-than-4-variable-modes-13979
+- Apple, What's new in design (HIG changelog), https://developer.apple.com/design/whats-new/
+- Supernova, Pricing, https://www.supernova.io/pricing
+- Knapsack, Pricing, https://www.knapsack.cloud/pricing
+- Nord Design System, https://nordhealth.design/
+- Mantine releases, https://github.com/mantinedev/mantine/releases
 
 Articles, reports and talks
 
@@ -1049,4 +1064,7 @@ Articles, reports and talks
 - Google Design, "Expressive Design: Google's UX Research", 2025, https://design.google/library/expressive-material-design-google-research
 - zeroheight, Design Systems Report 2025, https://zeroheight.com/how-we-document/
 - Sparkbox, The 2022 Design Systems Survey, https://designsystemssurvey.sparkbox.com/
+- Figma, "Measuring the value of design systems", 19 December 2019, https://www.figma.com/blog/measuring-the-value-of-design-systems/
+- Deque Systems, "Automated testing study identifies 57 percent of digital accessibility issues", 10 March 2021, https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues/
+- Specify, "Saying Goodbye: The End of Specify", 25 October 2024, https://specifyapp.com/blog/the-end-of-specify
 - Argos, "Visual Testing Pricing in 2026: Percy vs Chromatic vs Argos", 2026, https://argos-ci.com/blog/visual-testing-pricing

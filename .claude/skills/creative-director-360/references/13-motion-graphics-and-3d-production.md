@@ -60,7 +60,7 @@ A styleframe is a single frame rendered to final quality that proves the look ca
 
 Make three to five styleframes per direction. Three is the minimum because a single frame can hide the fact that the look only works for one kind of content: choose the opening frame, the busiest data or product frame and the end frame. Build them at the master resolution (3840 by 2160 for anything that may go to a screen; 1080 by 1920 if the film is vertical only) and at 16 bits per channel so gradients do not band when the frames become the animation.
 
-Present styleframes on a neutral grey, not on the agency deck's house background, because the client must judge the frame's own colour. Show each frame once at full size, then the set at thumbnail size, since the thumbnail row is how the film will look in a feed.
+Present styleframes on a neutral mid grey, because a coloured deck background shifts how every colour in the frame reads and the client must judge the frame's own colour. Show each frame once at full size, then the set at thumbnail size, since the thumbnail row is how the film will look in a feed.
 
 ### Storyboards
 
@@ -81,7 +81,7 @@ The animatic is the boards cut to the scratch VO and temp music at the real fram
 
 ## 3. After Effects in depth
 
-After Effects (AE) is the house 2D animation and compositing application. As of October 2026 the current release is 26.5 (9 September 2026, reported by CG Channel), whose headline is an experimental agentic AI Assistant in beta that drives the application from prompts. The 2026 cycle before it: 26.0 (January 2026) added a parametric mesh tool (spheres, cubes, cones), Substance 3D material (SBSAR) support and multiple shadow-casting Spot, Parallel and Environment lights in the Advanced 3D renderer; 26.3 (18 June 2026) added depth of field in Advanced 3D, a mask tracker Adobe describes as up to five times faster, a Curl Noise effect, SVG paste from Illustrator as editable shape layers, a copy-frame-to-clipboard command (16-bit PNG on macOS) and a variable-font filter in the font list. An earlier draft of this file recorded an AI subject isolator called Object Matte in release 26.2; it could not be confirmed from Adobe's own pages for this revision, so verify it in the installed build before promising it in a schedule. Single-app subscription is listed at US $34.49 per month or $263.88 per year; AE requires Windows 11 or macOS 14 or later.
+After Effects (AE) is the house 2D animation and compositing application. As of October 2026 the current release is 26.5 (9 September 2026, reported by CG Channel), whose headline is an experimental agentic AI Assistant in beta that drives the application from prompts. The 2026 cycle before it: 26.0 (January 2026) added a parametric mesh tool (spheres, cubes, cones), Substance 3D material (SBSAR) support and multiple shadow-casting Spot, Parallel and Environment lights in the Advanced 3D renderer; 26.3 (18 June 2026) added depth of field in Advanced 3D, a mask tracker Adobe describes as up to five times faster, a Curl Noise effect, SVG paste from Illustrator as editable shape layers, a copy-frame-to-clipboard command (16-bit PNG on macOS) and a variable-font filter in the font list. Adobe's AI selection and isolation tools change from release to release, so confirm what the installed build offers before promising it in a schedule. Single-app subscription is listed at US $34.49 per month or $263.88 per year; AE requires Windows 11 or macOS 14 or later.
 
 ### 3.1 Project and composition settings
 
@@ -231,9 +231,9 @@ A precomp (a composition used as a layer in another composition) is AE's groupin
 - Time remapping (Layer, Time, Enable Time Remapping) makes a layer's time a keyframable property; speed ramps, freezes and reverses live here. Frame blending fills the gaps when a clip is slowed: Frame Mix (cross-dissolves adjacent frames, cheap, ghosts) and Pixel Motion (optical flow, estimates motion vectors, slow, artefacts on crossing edges). For slow motion beyond 50 percent, generate frames with Topaz Video (section 11) instead.
 - Posterize Time (3.7) is the deliberate opposite: fewer frames, by choice.
 
-### 3.12 Roto, Object Matte, content aware fill and puppet tools
+### 3.12 Roto Brush, content aware fill and puppet tools
 
-- Roto Brush 3 (2023) isolates a subject from footage with a machine-learning model, propagating a brushed selection across frames. The Object Matte successor recorded in an earlier draft of this file could not be confirmed from Adobe's pages for this revision (section 3 intro). Roto Brush still needs the Refine Edge brush on hair and motion-blurred edges, and it fails on a subject that crosses a similarly coloured background. Plan a day per 10 seconds of difficult roto, or shoot on green. DaVinci Resolve 21's Magic Mask (section 11) is the house alternative when the shot is already in Resolve.
+- Roto Brush 3 (2023) isolates a subject from footage with a machine-learning model, propagating a brushed selection across frames. Roto Brush still needs the Refine Edge brush on hair and motion-blurred edges, and it fails on a subject that crosses a similarly coloured background. Plan a day per 10 seconds of difficult roto, or shoot on green. DaVinci Resolve 21's Magic Mask (section 11) is the house alternative when the shot is already in Resolve.
 - Content-Aware Fill for video (since 16.1, 2019) removes an object by filling from surrounding frames; it works for rigs, logos and small objects on textured backgrounds and fails on large areas with perspective change. Supply a reference frame cleaned in Photoshop to improve it.
 - Puppet tools: Position pins deform a mesh, Advanced pins add rotation and scale, Bend pins bend a limb, Starch pins stiffen an area, Overlap controls which part draws in front. The mesh expansion and triangle count set smoothness. For anything beyond a single waving object, rig with Duik Angela or Rubberhose (section 7) instead.
 
@@ -245,11 +245,11 @@ A text animator applies a transform (position, scale, rotation, opacity, trackin
 - Advanced: Shape (Square, Ramp Up, Ramp Down, Triangle, Round, Smooth) sets the falloff of the effect; Ease High and Ease Low shape the ease per character; Based On (Characters, Characters Excluding Spaces, Words, Lines) chooses the unit; Randomize Order with a Random Seed scrambles the sequence.
 - Per-character 3D (Animate, Enable Per-character 3D) gives each glyph its own z and rotation; a slow x rotation from 90 to 0 degrees with a Ramp Up shape is the classic flip-in.
 - Multiscript: Arabic shaping and right-to-left order require the Adobe World-Ready Composer (Paragraph panel menu, Adobe World-Ready Paragraph Composer) and a font with the Arabic script; per-character animators break the joined forms because each glyph is treated alone, so animate Arabic by word or line, or convert the shaped text to shapes first. Devanagari conjuncts behave the same way. Test with a native reader; the house works in both scripts.
-- Variable fonts: AE exposes variable axes (weight, width, optical size) in the Character panel, animatable with the axis sliders and selectable through the variable-font filter added in 26.3; a weight animation from 300 to 700 on Space Grotesk is a house move that reads as type performing rather than type decorated.
+- Variable fonts: AE exposes variable axes (weight, width, optical size) in the Character panel, animatable with the axis sliders and selectable through the variable-font filter added in 26.3; a weight animation from 300 to 700 on Space Grotesk is a house move that reads as the type itself performing.
 
 ### 3.14 Essential Graphics and MOGRTs
 
-The Essential Graphics panel collects chosen properties (text, colours, sliders, Essential Properties from precomps) into a control surface and exports a .mogrt (Adobe's motion graphics file format for Premiere Pro, the T standing for Adobe's own word for it) that an editor drops into Premiere's Essential Graphics browser and edits without AE. Rules: one MOGRT per lower-third family; fonts must be on Adobe Fonts or installed on the editor's machine; bake the World-Ready Composer and script settings for Devanagari and Arabic into the source; keep expressions simple because Premiere's renderer evaluates them; and test every text field with the longest real name in the client's list.
+The Essential Graphics panel collects chosen properties (text, colours, sliders, Essential Properties from precomps) into a control surface and exports a .mogrt (MOGRT: Adobe's packaged motion graphics format for Premiere Pro) that an editor drops into Premiere's Essential Graphics browser and edits without AE. Rules: one MOGRT per lower-third family; fonts must be on Adobe Fonts or installed on the editor's machine; bake the World-Ready Composer and script settings for Devanagari and Arabic into the source; keep expressions simple because Premiere's renderer evaluates them; and test every text field with the longest real name in the client's list.
 
 ### 3.15 Scripts and plugins worth owning
 
@@ -285,7 +285,7 @@ Kinetic typography is type whose motion carries meaning; the measure of craft is
 - Unit of animation: by letter (dramatic, expensive, slow to read; 30 to 60 ms stagger between glyphs), by word (the default for VO-synced type; each word on its VO beat), by line (editorial, calm; one ease per line, 80 to 120 ms stagger between lines). Choose one unit per piece and keep it; mixing units is the explainer tell.
 - Tracking animation: letter-spacing from wide to normal (plus 200 to 0 in AE tracking units, which are thousandths of an em) over 0.8 to 1.2 seconds with the luxury ease reads as type settling into place; from normal to wide reads as an exhale and suits endings. Never animate tracking on body text.
 - Variable font animation: weight or width axis as the moving property (3.13), one axis at a time, slow, synced to a sound. It is the current (2026) kinetic identity language, visible across the Studio Dumbar and DIA work in section 15, and it reads cheap the moment two axes wobble at once.
-- The Studio Dumbar method, as seen in their kinetic identities (Alzheimer Nederland, 2017; Amsterdam Sinfonietta) and the DEMO Festival they founded in 2019 on the screens of Amsterdam Centraal station: one typeface, one system of motion derived from the identity's own construction (the way the mark is built), performed at scale on large screens, with sound designed as part of the identity. Motion is the identity, so every parameter (speed, ease, direction) is documented in the brand guidelines like a colour.
+- The Studio Dumbar method, as seen in their kinetic identity work and in DEMO (Design in Motion), the festival they founded in 2019 on the screens of Amsterdam Centraal station: one typeface, one system of motion derived from the identity's own construction (the way the mark is built), performed at scale on large screens, with sound designed as part of the identity. Motion is the identity, so every parameter (speed, ease, direction) is documented in the brand guidelines like a colour.
 - Sync to VO: place a marker on every stressed syllable of the VO (Layer, Add Marker while playing, with the asterisk key), and land words 1 to 2 frames before the marker; type that lands after the spoken word reads late, and the ear is a stricter judge than the eye.
 - Cheap text animation tells: typewriter reveal with a cursor, per-letter drop with bounce, 3D extruded text spinning, "Fade and Slide Up" on every line, random-order character scramble, glow, text on a path, text following a wiggle, three typefaces in one piece, the AE text animation presets used as supplied. Each is a tell because it is the preset's rhythm, which every viewer has seen.
 
@@ -297,7 +297,7 @@ Safe areas exist because screens overscan (television sets cut the edge of the p
 
 | Standard | Action safe | Title or graphics safe | Note |
 |---|---|---|---|
-| SMPTE RP 218 (2007) | 93 percent of width and height, centred | 90 percent of width and height | The SMPTE figures for 16:9; the 90 and 80 percent values of the older RP 27.3 for 4:3 are legacy, and they are what AE's default guides still draw |
+| SMPTE ST 2046-1:2009 | 93 percent of width and height, centred | 90 percent of width and height | The current SMPTE figures. RP 218's older 90 and 80 percent areas, drawn for CRT overscan, are deprecated except for CEA-708 caption layout, and they are what AE's default guides still draw; RP 2046-2 covers a 16:9 picture protected for 4:3 displays at 90 percent |
 | EBU R95 v1.1 (June 2017) | 3.5 percent margin top, bottom and sides (93 percent) | 5 percent margin (90 percent) | At 1920 by 1080: action safe 67 px and 38 lines; graphics safe 96 px and 54 lines. At 3840 by 2160 double these |
 | AE guides | Composition Settings default 10 and 20 percent | Change to 7 percent action and 10 percent title in Preferences, Grids and Guides | AE's defaults are the legacy 4:3 values |
 
@@ -306,7 +306,7 @@ Platform safe zones for vertical 1080 by 1920 come from the platforms' advertisi
 | Platform | Guidance (as of October 2026) | At 1080 by 1920 | Working rule |
 |---|---|---|---|
 | Instagram Reels and Stories (Meta ads guide) | Keep 14 percent of the top, 35 percent of the bottom and 6 percent of each side clear; 40 percent of the bottom when the ad carries a disclaimer; the action rail stacks on the right over the bottom 40 percent | Top 269 px, bottom 672 px, sides 65 px; central area about 950 by 980 px | Supers and the logo inside x 65 to 1015 and y 270 to 1250; faces may extend lower on the left |
-| TikTok (ads spec page) | Downloadable safe-zone files rather than fixed pixels, because the overlay depends on caption length | Working default: top about 290 px, bottom about 480 px, right column about 200 px | Same box as Meta, with the right 200 px kept clear of anything the viewer must read |
+| TikTok (ads spec page) | Downloadable safe-zone overlay files with no fixed pixel values, because the overlay depends on caption length | Working default: top about 290 px, bottom about 480 px, right column about 200 px | Same box as Meta, with the right 200 px kept clear of anything the viewer must read |
 | YouTube Shorts | No published pixel figure | Third-party measurements put the bottom clear zone at about 350 px and the right rail at about 120 px | Same box as Meta |
 | Union for one master | | | The Meta box (950 by 980 px, centred, starting 270 px from the top) survives all three; a 3:4 centre crop (1080 by 1440) is what the profile grids show, so keep the subject inside it too |
 
@@ -374,7 +374,7 @@ Import the master logo from Illustrator via Overlord or Create Shapes from Vecto
 ### Data honesty in motion
 
 - Bars grow in the same duration from a zero baseline so their final heights are the comparison; a taller bar that takes longer to grow implies a rate the data does not contain. The y axis of a bar chart starts at zero; a truncated axis in motion is doubly misleading because the growth animation exaggerates the difference.
-- Lines draw left to right at constant speed (Trim Paths, linear interpolation, not eased), because an eased line draw implies acceleration in the data.
+- Lines draw left to right at constant speed (Trim Paths with linear interpolation), because an eased line draw implies acceleration in the data.
 - Counters (a number counting up) use the same ease as the bar they describe and never overshoot; a counter that reads 103 then settles to 100 has lied for 6 frames.
 - Pie charts rarely survive motion; a donut whose segments draw in sequence is readable up to five segments. Beyond that, bars.
 - Every chart carries its source and date as a super for the full duration of the chart. The dataviz skill in this workspace holds the chart form rules; this file only adds the motion constraints.
@@ -431,7 +431,7 @@ Import the master logo from Illustrator via Overlord or Create Shapes from Vecto
 3. Texturing. Substance 3D Painter bakes mesh maps (normal, ambient occlusion, curvature, thickness) and paints with smart materials that respond to them (dust in crevices, wear on edges); Substance 3D Designer for procedural materials; Quixel Megascans (now inside Epic's Fab marketplace) for scanned surfaces. Export the PBR set: base colour, roughness, metallic, normal, height, ambient occlusion; 16-bit for height and normal so smooth surfaces do not step.
 4. Materials. PBR (physically based rendering) describes a surface with measurable properties so it responds correctly to any light: base colour, metallic (0 or 1; in-between values are only for blends), roughness, normal, with an index of refraction (IOR) for dielectrics (water 1.33, skin and plastics about 1.45, glass 1.5, sapphire 1.77, diamond 2.42). OpenPBR, the open surface shading model published by the Academy Software Foundation with Adobe and Autodesk, became the default material in Cinema 4D 2026.2 and Redshift 2026.5, and MaterialX carries materials between applications; USD (Universal Scene Description, from Pixar) carries scenes.
 5. Lighting. Image-based lighting from an HDRI (Poly Haven publishes free 16K HDRIs under CC0): rotate it for key direction, lower its intensity, then add one area light as the key. The three-point scheme (key at about 45 degrees off axis and above, fill opposite at a quarter to a half of the key's intensity for a 2:1 to 4:1 ratio, rim behind to separate subject from ground) is a teaching scheme; luxury product lighting is usually one very large soft source and one black card (negative fill) that puts a dark edge into the reflection. Colour temperature 5,600 K for daylight, 3,200 K for tungsten, one choice per scene. In jewellery and glass the reflections are the product, so the shape of the lights matters more than their number: a long strip light produces the single clean highlight along a gold band.
-6. Cameras. Match a real camera (full-frame 36 by 24 mm sensor): 50 mm neutral, 85 to 100 mm for product, 100 mm macro for jewellery, 24 to 35 mm for interiors. Aperture f/2.8 to f/5.6 for a beauty hero, f/11 to f/16 for a stone that must be sharp throughout; bokeh shape from the blade count (9 blades read round). Render depth of field in the engine rather than in post where edges and transparency matter, because a post blur from a Z-depth pass fails on hair and glass.
+6. Cameras. Match a real camera (full-frame 36 by 24 mm sensor): 50 mm neutral, 85 to 100 mm for product, 100 mm macro for jewellery, 24 to 35 mm for interiors. Aperture f/2.8 to f/5.6 for a beauty hero, f/11 to f/16 for a stone that must be sharp throughout; bokeh shape from the blade count (9 blades read round). Render depth of field in the engine wherever edges and transparency matter, because a post blur from a Z-depth pass fails on hair and glass.
 7. Render passes. AOVs (arbitrary output variables) split the image into components the compositor can grade separately: diffuse (direct and indirect), specular or reflection, refraction, subsurface, emission, ambient occlusion, Z-depth, normals, world position, motion vectors, object and material IDs, and cryptomatte (ID mattes keyed by object or material name, from Psyop, 2015). Write multi-layer OpenEXR at 16-bit half float, PIZ for lossless or DWAA for a smaller lossy file, in ACEScg linear light.
 8. Compositing. In AE at 32 bpc with OCIO set to ACES (3.1): rebuild the beauty from passes (diffuse plus specular plus refraction plus subsurface plus emission equals beauty, in Add mode in linear), grade each pass, add caustics and glow from their own passes, apply grain last. Nuke for deep compositing or more than about ten passes; Fusion in Resolve 21 when the film is already there.
 9. Denoising. Every path tracer ships an AI denoiser (NVIDIA OptiX, Intel Open Image Denoise, Altus in Redshift). A denoiser fed too few samples returns the smooth plastic look that reads "AI render": render to a noise threshold of about 0.01 or 128 to 256 samples minimum, denoise the beauty and the passes with the same settings, and use the temporal denoiser (or Neat Video or Resolve's temporal noise reduction) on animation, because single-frame denoising flickers.
@@ -451,7 +451,7 @@ Import the master logo from Illustrator via Overlord or Create Shapes from Vecto
 - Tools. 3ds Max with Chaos Corona or V-Ray is the archviz standard in India and the Gulf; Cinema 4D with Redshift and Blender with Cycles produce the same result in a motion studio; Unreal (Lumen), Twinmotion and D5 Render for real-time walkthroughs where the client wants to change the sofa live.
 - The clichés, which design-taste, references/worlds.md lists under the real estate trash list: golden hour on every frame, a lens flare, a saturated lawn, a cyan pool, a 14 mm interior that makes a 40 square metre flat look like a lobby, every light switched on at noon, the wet-road night exterior, the drone pull-back, the family on the lawn, chrome and marble on everything. Each is a shortcut to "expensive" that the audience has seen on every hoarding from Lower Parel to Business Bay.
 - The fix is to render like an architectural photographer: 24 to 35 mm on full frame, camera at 1.1 to 1.5 m, verticals corrected with the renderer's lens shift, one time of day chosen for the space (soft overcast or late afternoon from one side; the Mumbai and Dubai midday sun is too hard for interiors), materials at real scale with roughness variation (a floor is never one roughness), staging that implies a person left a minute ago, a film grade (16-editing-colour-grading-and-delivery.md, section 8) and grain. Scale anchors: a door is 2.1 m, a worktop 0.9 m, a dining chair seat 0.45 m.
-- Regulation. Label renders as an artist's impression. In India the Real Estate (Regulation and Development) Act 2016 requires that advertised project details match the RERA registration, and the ASCI Code treats a misleading depiction as actionable; in Dubai every real estate advertisement needs a permit from the Dubai Land Department's Trakheesi system and the permit number on the asset. A render that shows a sea view, a park or a beach that will not exist is a claim, not decoration; check the view against the site plan before rendering it.
+- Regulation. Label renders as an artist's impression. In India the Real Estate (Regulation and Development) Act 2016 requires that advertised project details match the RERA registration, and the ASCI Code treats a misleading depiction as actionable; in Dubai every real estate advertisement needs a permit from the Dubai Land Department's Trakheesi system and the permit number on the asset. A render that shows a sea view, a park or a beach that will not exist is an advertising claim; check the view against the site plan before rendering it.
 
 ### 8.5 Photoreal or stylised
 
@@ -470,11 +470,11 @@ A hybrid is common and expensive-looking: photoreal product in a stylised, typog
 - Local arithmetic. A workstation with one RTX 4090-class GPU renders about 150 to 400 frames overnight at 2 to 4 minutes a frame; a 30 second film at 24 fps is 720 frames, so a single machine needs two to five nights for one pass, and a client change restarts the clock. That is why 3D schedules in section 1 double the animation and render stages.
 - Farm pricing (GarageFarm, October 2026): CPU at US $0.024, $0.036 and $0.072 per GHz-hour at low, medium and high priority; GPU at US $0.004, $0.006 and $0.012 per OB-hour (an OctaneBench-hour, OctaneBench being OTOY's GPU benchmark score); per-node ranges of about US $0.66 to $17.27 an hour for CPU nodes and $1.12 to $25.76 for GPU nodes; US $25 of trial credit; renderers supported include Redshift, Cycles, V-Ray, Corona and Arnold. Other farms (RebusFarm, Fox Renderfarm, Ranch Computing) price in the same way; compare on a test frame, since the quoted unit hides the node's real speed.
 - Worked estimate. 720 frames at 3 minutes each on a GPU scoring about 1,200 on OctaneBench (an RTX 4090-class card, approximate): 36 GPU-hours, or about 43,000 OB-hours, which is about US $260 at medium priority. A fourth client round that re-renders half the film costs the same again, which is the number to quote when a round reopens the design gate.
-- Where the time goes: refraction depth and caustics, volumetrics, motion blur with many samples, subsurface, 4K rather than 2K (four times the pixels). Render at 2K for anything delivered only to phones; render 4K for anything that will be cropped, reframed or shown on a screen.
+- Where the time goes: refraction depth and caustics, volumetrics, motion blur with many samples, subsurface, and 4K output (four times the pixels of 2K). Render at 2K for anything delivered only to phones; render 4K for anything that will be cropped, reframed or shown on a screen.
 
 ## 9. Web motion and real-time
 
-The craft rules for what moves on a page sit in 12-motion-principles-and-ui-motion.md (easing, duration, choreography) and the delivery discipline in 21-web-design-and-digital-craft.md (sections 4 and 5: media weight, performance budgets, Lottie and Rive). This section is the motion designer's technical layer: the libraries, the shaders and the hand-off formats.
+The craft rules for what moves on a page sit in 12-motion-principles-and-ui-motion.md (easing, duration, choreography) and the delivery discipline in 21-web-design-and-digital-craft.md (sections 4 to 6: media weight, performance budgets, motion on the web). This section is the motion designer's technical layer: the libraries, the shaders and the hand-off formats.
 
 ### 9.1 GSAP
 
@@ -535,17 +535,17 @@ Generative motion reads cheap when it has no author. The tells and the fixes:
 | Tell | Why it reads cheap | Fix |
 |---|---|---|
 | Continuous, unbroken motion | Nothing rests, so nothing is composed; it is the screensaver's defining quality | Quantise time (hold frames at 12 or 8 fps steps), build rests of 1 to 3 seconds, give the piece an ending |
-| Hue cycling, rainbow gradients | The palette belongs to the algorithm, not the brand | Two colours plus one accent from the identity (04-colour.md); let value and texture carry the variation |
+| Hue cycling, rainbow gradients | The palette belongs to the algorithm and could belong to any brand | Two colours plus one accent from the identity (04-colour.md); let value and texture carry the variation |
 | Particle trails, Perlin flow fields as decoration | They are the default output of the default tutorial; every viewer has seen them | Derive the rule from the identity's own construction (the grid, the mark's geometry, the type's proportions) |
 | Infinite variation with no edition | Nothing is chosen, so nothing is designed | Seed the randomness, generate 200, choose 5, number them; Tyler Hobbs' Fidenza (2021) is 999 chosen outputs of one algorithm |
 | Smooth everything | Interpolated noise with no hard edges reads as a lava lamp | Thresholds, steps, hard cuts, dithering, print-like marks |
 | Noise-driven when it claims to be data-driven | The viewer senses the data is fake | Real data from the client (occupancy, footfall, the day's temperature in Jaipur), with the source as a super (section 7) |
 
-The print test: render one frame and lay it out as a poster. If it fails as a print, it fails as a loop. Vera Molnár, Georg Nees and Frieder Nake made plotter drawings in the 1960s with less computing power than a watch; Sol LeWitt's wall drawings (from 1968) are instructions executed by others; Studio Dumbar's DEMO festival (section 15) shows what the discipline looks like on 5,000 screens. The rule each demonstrates: one rule, executed with restraint, chosen by a person.
+The print test: render one frame and lay it out as a poster. If it fails as a print, it fails as a loop. Vera Molnár, Georg Nees and Frieder Nake made plotter drawings in the 1960s with less computing power than a watch; Sol LeWitt's wall drawings (from 1968) are instructions executed by others; Studio Dumbar's DEMO festival (section 15) shows what the discipline looks like on the station screens of the Netherlands. The rule each demonstrates: one rule, executed with restraint, chosen by a person.
 
 ## 11. AI in motion as of October 2026
 
-The landscape, the prompting method and the legal position are in 22-ai-era-craft-and-generative-tools.md (sections 2, 3 and 5); the Higgsfield prompt system is in the higgsfield-prompting skill (three layers: image, identity, motion, kept separate because lighting instructions in the motion layer cause flicker). This section is the production use: which model for which job, what AI rotoscoping and interpolation can do, and the hybrid pipeline the house runs.
+The landscape, the prompting method and the legal position are in 22-ai-era-craft-and-generative-tools.md (sections 2, 3 and 7); the Higgsfield prompt system is in the higgsfield-prompting skill (three layers: image, identity, motion, kept separate because lighting instructions in the motion layer cause flicker). This section is the production use: which model for which job, what AI rotoscoping and interpolation can do, and the hybrid pipeline the house runs.
 
 ### 11.1 Video models, verified October 2026
 
@@ -577,10 +577,522 @@ The landscape, the prompting method and the legal position are in 22-ai-era-craf
 
 ### 11.4 The hybrid pipeline
 
-1. Previs with AI: an animatic made of generated stills and draft clips (Luma's 360p draft, Veo in Flow) replaces hand-drawn boards for client sign-off at the animatic gate, at the real duration and ratio. Say so on the slate: previs, not final.
+1. Previs with AI: an animatic made of generated stills and draft clips (Luma's 360p draft, Veo in Flow) replaces hand-drawn boards for client sign-off at the animatic gate, at the real duration and ratio. Say so on the slate: "previs".
 2. Plates and environments: generated or AI-extended backgrounds (Aleph set extension, Veo scene extension), always behind a real or hand-animated foreground.
 3. Hero by hand: the product, the type, the logo and the transitions are animated in AE or rendered in 3D (section 8), because the hero must be exact to the identity and must repeat to the frame across versions, which no generative model does yet.
 4. Unify in post: one grade, one grain, one lens treatment, one loudness (section 14), in Resolve.
-5. Disclose: the house labels generated footage in the credits and the client's usage rights are written into the SOW; 22-ai-era-craft-and-generative-tools.md, section 5 has the position, and 24-business-of-creative-and-agency-operations.md the contract wording.
+5. Disclose: the house labels generated footage in the credits and the client's usage rights are written into the SOW; 22-ai-era-craft-and-generative-tools.md, section 7 has the position, and 24-business-of-creative-and-agency-operations.md the contract wording.
 
 What the models still cannot do in October 2026: hold a logo pixel-exact, keep a hand's finger count under motion, render legible Devanagari or Arabic type, repeat a shot deterministically for a language version, or produce an alpha channel. Each of these is a reason the hybrid pipeline keeps the hero in AE.
+
+## 12. Frame rates, resolutions and formats
+
+The platform tables (every destination's pixels, rates and limits, with verification status) live in 26-platform-and-format-specs-2026.md, section 5; the colour pipeline and tagging live in 16-editing-colour-grading-and-delivery.md, sections 7 and 12. This section is the motion designer's reasoning: why each number exists, what it does to animated work, and how to convert between them without damage.
+
+### 12.1 Frame rates and what each does to motion
+
+| Rate | Exact value | Where it comes from | What it does to motion | House use |
+|---|---|---|---|---|
+| 23.976 | 24000/1001 | 24 fps film slowed by 0.1 percent to fit NTSC colour television | Identical to 24 to the eye | Only to match camera footage shot at 23.976 or a US broadcaster's sheet |
+| 24 | 24 | The sound-film standard since the late 1920s | Visible cadence, slight strobing on fast pans; the look the audience reads as cinema | Brand films, anything filmic |
+| 25 | 25 | PAL and SECAM television, tied to 50 Hz mains | Indistinguishable from 24 in feel | Default for India and the UAE: TV, DOOH, events, social (26-platform-and-format-specs-2026.md, section 5.1) |
+| 29.97 and 30 | 30000/1001 and 30 | NTSC (1953 colour standard), 60 Hz mains | Slightly smoother than 24, still cinematic at 180 degree shutter | US-facing social; screen recordings |
+| 48 | 48 | High frame rate cinema (Peter Jackson's The Hobbit: An Unexpected Journey, 2012) | Smooth and hyper-real; critics called it "video" | Never for luxury narrative |
+| 50 | 50 | PAL progressive or 50 fields interlaced | Smooth, live, sporty | Product spins, sport, LED walls in 50 Hz countries |
+| 59.94 and 60 | 60000/1001 and 60 | NTSC progressive; display refresh | Smooth, digital, the feel of UI | UI motion, screen-based product demos, gaming |
+| 100 and 120 | 100, 120 | Camera slow motion; 120 Hz phone displays | Delivered only after conforming to 24 or 25 (4 or 5 times slower) | Capture only |
+
+Rules that follow:
+
+- Pick the rate at the brief and never change it mid-job. AE stores keyframes in seconds, so a comp switched from 24 to 25 fps keeps its durations, but keyframes then fall between frames, hold keyframes shift and frame-exact cuts drift by a frame; re-check every hold and every sync point after any change.
+- Strobing (the stepped, stuttering look of a fast move at a low frame rate) limits speed at 24 and 25 fps. The cinematographers' rule of thumb, from the panning speed tables in the American Cinematographer Manual, is that an object should take about 5 to 7 seconds to cross the frame at 24 fps with a 180 degree shutter. The same physics governs a 2.5D camera move or a sliding type layer: a move much faster than that strobes on any detailed layer, and motion blur (3.11) only partly hides it.
+- Crawls and rolls (end credits, tickers) move a whole number of pixels per frame (2, 3 or 4 px per frame at 1080), because a fractional speed is resampled differently on every frame and thin strokes shimmer.
+- Mains flicker: India and the UAE run at 50 Hz, so lights flicker at 100 Hz. Live plates shot at 30 fps under non-cinema lighting (mall LEDs, hotel fluorescents) show rolling bands unless the shutter is 1/50 or 1/100 of a second; animate at the plate's rate and do not "fix" a 30 fps plate by conforming it to 25.
+
+### 12.2 Converting between rates, and drop frame in practice
+
+| Conversion | Method | Side effect | House rule |
+|---|---|---|---|
+| 24 to 25 | PAL speed-up: every frame played 4.17 percent faster (25/24) | A 30.0 s film runs 28.8 s; audio rises about 0.7 semitone unless pitch-corrected | Re-render motion graphics natively at 25 from the project; speed-up only for live action |
+| 23.976 to 29.97 | 2:3 pulldown (4 film frames spread across 10 interlaced fields in a 2, 3, 2, 3 pattern) | Judder (an uneven cadence) on every pan | Never on a motion graphics master; render native 29.97 instead |
+| 25 to 30 | Frame repetition (every fifth frame doubled) or optical flow | A hitch every 0.2 s, or warping on crossing edges | Upload 25 as 25; every platform in 26-platform-and-format-specs-2026.md accepts it |
+| 50 or 60 to 25 or 30 | Drop every other frame | Clean, slightly sharper motion | Acceptable |
+| 60 to 24 or 25 | Uneven frame dropping or blending | Stutter or ghosting | Render native; avoid |
+| Any slow motion | Optical flow (AE Pixel Motion, Resolve Optical Flow, Topaz Chronos and Apollo, 11.3) | Artefacts on crossing edges and fine detail | Capture at 100 or 120 instead whenever the shot is planned |
+
+Drop frame (DF) timecode, defined in 3.1, renumbers and never deletes frames: 29.97 DF skips frame numbers 00 and 01 at the start of each minute except minutes 00, 10, 20, 30, 40 and 50, which is 108 numbers an hour; 59.94 DF skips four numbers (00 to 03) on the same pattern. Without it, 29.97 non-drop timecode runs 3.6 seconds slow per hour against the clock, which matters only for programme-length US broadcast. Motion graphics delivered to India and the UAE at 25 fps never meet drop frame.
+
+### 12.3 Resolutions
+
+| Name | Pixels | Ratio | Where it is used |
+|---|---|---|---|
+| SD PAL and NTSC (legacy) | 720 by 576 and 720 by 480 | 4:3 or 16:9 with non-square pixels | Archive only; 12.5 |
+| HD 720 | 1280 by 720 | 16:9 | Legacy web; never a master |
+| Full HD | 1920 by 1080 | 16:9 | Broadcast in India and the UAE; the delivery floor |
+| 2K DCI container, flat, scope | 2048 by 1080; 1998 by 1080; 2048 by 858 | 1.90, 1.85, 2.39 | Cinema DCP (26-platform-and-format-specs-2026.md, section 5.8) |
+| UHD (4K UHD) | 3840 by 2160 | 16:9 | House master for anything that may reach a screen; YouTube; LED |
+| DCI 4K container, flat, scope | 4096 by 2160; 3996 by 2160; 4096 by 1716 | 1.90, 1.85, 2.39 | 4K cinema |
+| 8K UHD | 7680 by 4320 | 16:9 | Very large LED and archive only; four times the render time of UHD |
+| Vertical HD and UHD | 1080 by 1920; 2160 by 3840 | 9:16 | Reels, Shorts, TikTok, portrait DOOH |
+| Feed 4:5 and 1:1 | 1080 by 1350 (1440 by 1800 for Meta ads); 1080 by 1080 | 4:5, 1:1 | Instagram and Meta feeds, LinkedIn |
+| LED wall | The wall's own pixel map (width in mm divided by pitch) | Arbitrary | Event and retail walls; deliver 1:1 (26-platform-and-format-specs-2026.md, section 5.11) |
+
+Design in proportions: text sizes, margins and line weights are specified as a percentage of frame height (section 5's table gives both), so that one design holds at 1080, 2160 and the wall's pixel map. Render at UHD and downscale to 1080 for HD deliverables: the downscale supersamples every edge (four rendered pixels averaged into one), which removes aliasing that a native 1080 render shows on thin strokes and fine type.
+
+### 12.4 Aspect ratios
+
+| Ratio | Decimal | Use | Note |
+|---|---|---|---|
+| 16:9 | 1.78 | TV, YouTube, web, presentation | The default landscape container |
+| 1.85:1 | 1.85 | Cinema flat | Nearly 16:9; a 16:9 film fits with thin bars |
+| 2:1 | 2.00 | Streaming drama; Vittorio Storaro's Univisium proposal | A middle ground that crops well to 16:9 |
+| 2.39:1 | 2.39 | Cinema scope; "2.40" in common usage | In a 1920 by 1080 frame the active picture is 1920 by 804, with 138 px black bars top and bottom |
+| 4:3 | 1.33 | Legacy TV; profile-grid crops are 3:4 | Keep subjects inside the 3:4 centre on vertical work (section 5) |
+| 1:1 | 1.00 | Feed, carousel | Central 56 percent of a 16:9 width |
+| 4:5 | 0.80 | Instagram and Meta feed | The ratio that takes the most feed height |
+| 9:16 | 0.56 | Reels, Shorts, TikTok, Stories, portrait DOOH | Design it first when it is a deliverable (3.9) |
+
+A fake letterbox (black bars added to a 16:9 social video to look "cinematic") wastes picture on a phone and was a 2016 social tell; if the story wants scope, deliver a true scope master for cinema and recompose the social cuts.
+
+### 12.5 Pixel aspect ratio
+
+Pixel aspect ratio (PAR) is the width of one pixel divided by its height. Every modern deliverable uses square pixels (PAR 1.0). Non-square pixels survive in archive footage and anamorphic capture, and a wrong interpretation stretches every circle in a logo into an ellipse, which is the test: check the client's round mark after import.
+
+| Source | PAR (AE's label) | Fix |
+|---|---|---|
+| D1/DV PAL 4:3 and widescreen | 1.09 and 1.46 | Interpret Footage, Main, Pixel Aspect Ratio; conform to square pixels in a 768 by 576 (4:3) or 1024 by 576 (16:9) comp, or scale into 1920 by 1080 |
+| D1/DV NTSC 4:3 and widescreen | 0.91 and 1.21 | As above |
+| HDV and DVCPRO HD 720 (1440 by 1080 stored) | 1.33 | Displays as 1920 by 1080 |
+| DVCPRO HD 1080 (1280 by 1080 stored) | 1.5 | Displays as 1920 by 1080 |
+| Anamorphic lenses | 1.33, 1.5, 1.8 or 2.0 times squeeze | Desqueeze by the lens factor before any graphics are tracked in |
+
+### 12.6 Interlacing, the broadcast legacy
+
+Interlaced video records each frame as two fields (odd lines, then even lines, captured 1/50 s apart), so 1080i50 carries 50 fields and 25 frames a second; field order is upper field first for HD and lower field first for DV PAL. Many Indian channels still take 1080i50 (16-editing-colour-grading-and-delivery.md, section 12), which creates three motion graphics rules:
+
+- Render progressive 25p and let the playout chain carry it as PsF (progressive segmented frame: one progressive frame split into two fields that belong to the same instant), which looks like film; render true interlaced 50i only when the channel asks for sport-like motion.
+- Interline twitter (a flicker on horizontal detail one line thick, because that detail exists in only one field) attacks hairline rules, thin serifs and fine type. Keep horizontal strokes at least 2 px at 1080, and add a 0.5 to 1 px vertical blur to graphics bound for interlaced broadcast.
+- Never deliver interlaced to the web. YouTube's encoding page states that interlaced content should be deinterlaced before upload (1080i60 becomes 1080p30, as of October 2026); the same applies to every social platform.
+
+### 12.7 Bit depth, range and chroma subsampling
+
+- Bit depth per channel: 8-bit is 256 levels, 10-bit 1,024, 12-bit 4,096. Delivery codecs for social are 8-bit 4:2:0; a slow gradient across a 1080 frame has more pixels than levels, so it bands unless the source was rendered at 16 bpc and dithered (3.1, 3.7).
+- Range: legal (video) range codes 8-bit luma as 16 to 235; full range as 0 to 255. A range mismatch is the cause of most "the export looks washed out" and "the blacks are crushed" complaints; 16-editing-colour-grading-and-delivery.md, section 7.4 has the values and the fix. YouTube converts full range to limited and advises against the RGB colour matrix (encoding page, October 2026), so deliver legal range, tagged BT.709.
+- Chroma subsampling stores colour at lower resolution than brightness: 4:4:4 is full colour resolution (ProRes 4444, EXR), 4:2:2 halves it horizontally (ProRes 422, broadcast), 4:2:0 halves it both ways (H.264 and H.265 delivery, YouTube's stated requirement). The consequence for Mask360: thin saturated type, such as a 1 px flame #F53901 hairline on black, smears its colour across neighbouring pixels at 4:2:0. Keep saturated strokes at 2 px or more at delivery size and check the exported H.264 file, because the comp itself always shows full colour resolution.
+- The QuickTime gamma shift (Apple's colour-managed players showing Rec. 709 files lighter than the reference monitor) is explained, with the house handling, in 16-editing-colour-grading-and-delivery.md, section 12.5. For motion graphics the practical rule is the same: judge on the reference monitor and the target phone, and tell the client before the first Mac review.
+
+### 12.8 HDR deliverables
+
+High dynamic range (HDR) video carries brighter highlights and a wider gamut than Rec. 709. The standards: ITU-R BT.2100 defines two transfer functions, PQ (perceptual quantiser, SMPTE ST 2084, absolute: each code value is a fixed luminance up to 10,000 cd/m2) and HLG (hybrid log-gamma, developed by the BBC and NHK, relative and backward compatible with SDR displays), both with BT.2020 primaries. Delivery flavours: HDR10 (PQ with static metadata: the mastering display per SMPTE ST 2086, MaxCLL for the brightest pixel and MaxFALL for the brightest frame average), HDR10+ (dynamic metadata per scene), and Dolby Vision (dynamic metadata in profiles; profile 8.4 is the HLG-based form iPhones record).
+
+The rule that matters for graphics: ITU-R BT.2408 (current version BT.2408-9, March 2026) sets HDR reference white, the level for diffuse white and for graphics white, at 203 cd/m2, which is about 58 percent of the PQ signal and 75 percent of the HLG signal. Titles, supers and logos sit at reference white; only specular highlights (a diamond's glint, a lamp) go above it. A white logo placed at 1,000 nits glares on a phone in a dark room and looks like an error. YouTube's recommended HDR upload bitrates are 10 Mbps at 1080p and 44 to 56 Mbps at 2160p for 24 to 30 fps (encoding page, October 2026). The house finishes HDR in Resolve (16-editing-colour-grading-and-delivery.md, section 8.11), from AE renders made in ACEScg at 32 bpc (3.1), and always delivers an SDR version graded alongside, because most social viewing and every broadcast deliverable in India and the UAE is still SDR.
+
+## 13. Delivery codecs and settings
+
+A codec is the compression scheme (ProRes, H.264); a container is the file wrapper that holds video, audio and metadata streams (MOV, MP4, MXF, WebM). Two families matter. Intra-frame codecs (ProRes, DNxHR, CineForm, JPEG 2000) store every frame complete, so they are large, edit fast and survive re-encoding. Long-GOP codecs (H.264, H.265, AV1, VP9) store a full frame only every so often and predict the frames between from their neighbours (a GOP, group of pictures, is one full frame and its predicted followers), so they are small and suited to delivery only.
+
+### 13.1 Masters and intermediates
+
+| Codec | Bit depth and sampling | Alpha | Data rate | Use |
+|---|---|---|---|---|
+| Apple ProRes 422 HQ | 10-bit 4:2:2 | No | 184 Mbps at 1080p25; 737 Mbps at 2160p25 (Apple ProRes white paper, April 2022) | House master and interchange; decodes everywhere |
+| Apple ProRes 4444 | Up to 12-bit 4:4:4 | Yes, up to 16-bit | 275 Mbps at 1080p25; 1,106 Mbps at 2160p25 | Graphics with alpha; masters with saturated colour edges |
+| Apple ProRes 4444 XQ | Up to 12-bit 4:4:4 | Yes | 413 Mbps at 1080p25; 1,659 Mbps at 2160p25 | HDR masters and grade sources |
+| Avid DNxHR HQ, HQX, 444 | 8-bit 4:2:2; 10 or 12-bit 4:2:2; 10 or 12-bit 4:4:4 | Check the receiving facility | Avid's DNxHR white paper | When the post house runs Avid, in MXF OP1a |
+| GoPro CineForm | 10 or 12-bit, 4:2:2 or 4:4:4 | Yes (RGBA) | Variable | A Windows-friendly intermediate with alpha, exported by Adobe Media Encoder |
+| XDCAM HD422 | 8-bit 4:2:2 long-GOP | No | 50 Mbps | Broadcast in India and the UAE (26-platform-and-format-specs-2026.md, section 5.9) |
+| OpenEXR sequence | 16-bit half or 32-bit float, multi-layer | Yes | Very large | 3D passes and composite sources (3.16, 8.2) |
+| PNG or TIFF sequence | 8 or 16-bit | Yes | Large | Graphics hand-off; frame-accurate repair |
+| HAP, HAP Alpha, HAP Q; NotchLC | GPU-decoded | HAP Alpha yes | Large | Media servers on event walls (Resolume, disguise, TouchDesigner), usually transcoded by the playback operator from a ProRes master |
+
+The full ProRes rate table by resolution and frame rate is in 26-platform-and-format-specs-2026.md, section 5.2. ProRes RAW is a camera recording format and never a motion graphics deliverable.
+
+### 13.2 H.264, H.265, AV1 and VP9 for distribution
+
+H.264 (AVC) remains the house upload codec in October 2026 because every platform, ad server and player accepts it; H.265 (HEVC) gives about the same quality at half the bitrate and is the HDR codec (Main 10 profile), but ad servers still reject it often; AV1 and VP9 are what YouTube transcodes to and what browsers play natively, and rarely what the house uploads.
+
+| Setting | H.264 upload value | Reason |
+|---|---|---|
+| Profile and level | High; Level 4.2 for 1080p50 and 60, 5.1 for 2160p30, 5.2 for 2160p60 | Levels cap the decoder's workload; a wrong level fails on some phones |
+| Rate control | Two-pass VBR (variable bitrate: the first pass measures complexity, the second spends bits where the picture needs them) | Spends bits on grain and gradients, saves them on held frames |
+| Bitrate | House: 20 to 30 Mbps at 1080p25, 15 to 20 Mbps at 1080 by 1920, 50 to 80 Mbps at 2160p25 (26-platform-and-format-specs-2026.md, section 5.2). YouTube's recommended minimums for SDR: 8 Mbps at 1080p and 35 to 45 Mbps at 2160p for 24 to 30 fps; 12 and 53 to 68 Mbps at 48 to 60 fps | Every platform re-encodes, so the upload is the platform encoder's source; give it more than the minimum |
+| GOP | Closed GOP of half the frame rate (12 frames at 25 fps), 2 consecutive B-frames (frames predicted from both earlier and later frames), CABAC (context-adaptive binary arithmetic coding, H.264's more efficient entropy coder) | YouTube's stated requirement (encoding page, October 2026); closed GOPs cut cleanly |
+| Chroma, scan, pixels | 4:2:0, progressive, square | 12.6, 12.7 |
+| Colour | BT.709 primaries, transfer and matrix, tagged; legal range | 12.7; untagged files are guessed |
+| Container | MP4, moov atom at the front (fast start), no edit lists | Playback starts before the download ends (YouTube's stated requirement) |
+| Audio | AAC-LC, 48 kHz; YouTube recommends 384 kbps stereo, the house delivers 320 kbps elsewhere | Section 14; 26-platform-and-format-specs-2026.md, section 5.3 |
+
+Grain and dark gradients are the hardest content an encoder meets: noise is unpredictable, so the encoder starves it and the result is blocking in the shadows, exactly where luxury work lives. Three remedies, in order: more bitrate; a slightly coarser grain at delivery size (fine single-pixel grain is the first thing a platform encoder smears); and a 1 percent dither on gradients under the grain (3.7).
+
+Reference commands for FFmpeg (the open-source command-line encoder), from a ProRes or PNG master:
+
+```bash
+# Social and web H.264 from a ProRes master, 1080p25, quality-based rate control
+ffmpeg -i MASTER_422HQ.mov -c:v libx264 -profile:v high -pix_fmt yuv420p \
+  -crf 16 -preset slow -g 12 -bf 2 -movflags +faststart \
+  -color_primaries bt709 -color_trc bt709 -colorspace bt709 \
+  -c:a aac -b:a 320k -ar 48000 CLIENT_Asset_030s_16x9_EN_25p_v07.mp4
+
+# ProRes 4444 with alpha from a PNG sequence (profile 4 is 4444, 5 is 4444 XQ)
+ffmpeg -framerate 25 -i SC03_%05d.png -c:v prores_ks -profile:v 4 \
+  -pix_fmt yuva444p10le -vendor apl0 SC03_4444.mov
+
+# WebM VP9 with alpha for Chromium browsers and Firefox
+ffmpeg -i LOGO_4444.mov -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 2M \
+  -auto-alt-ref 0 -an LOGO_alpha.webm
+```
+
+### 13.3 Transparent video
+
+| Format | How alpha is carried | Plays in | Weight | House use |
+|---|---|---|---|---|
+| ProRes 4444 or 4444 XQ (MOV) | Straight or premultiplied (3.16) | AE, Premiere, Resolve, Final Cut, Avid | Very large | The alpha master |
+| HEVC with alpha (MOV or MP4, hvc1) | Alpha layer in the HEVC stream | Safari and Apple apps on macOS and iOS | Small | Web overlays for Apple devices; encode with Apple Compressor, Final Cut Pro, the macOS Finder's Encode Selected Video Files with Preserve Transparency, or Resolve Studio |
+| WebM VP9 with alpha | yuva420p | Chrome, Edge, Firefox | Small | Web overlays for everything else |
+| Stacked alpha (H.264 with colour in one half and the matte in the other, recombined in a WebGL or canvas shader) | Simulated | Any browser | Small | One file for every browser, at the cost of a little code |
+| PNG or EXR sequence | Native | Every editing and compositing tool | Very large | Hand-off to another studio |
+| Lottie, dotLottie, Rive | Vector | Their players (9.4, 9.5) | Tiny | Flat vector UI motion |
+
+The browser trap: source order in a video element used to be enough (HEVC alpha first for Safari, WebM second for the rest), but Chrome has decoded HEVC on supported hardware since 2022, without its alpha, and caniuse lists WebM as supported in Safari from 16.0 on macOS and 17.4 on iOS (October 2026) without tracking VP9 alpha. Either file can therefore land in the wrong browser and play on a black box. Choose the file with a short script that tests the browser, or ship stacked alpha, and test on a real iPhone and a real Android phone before launch.
+
+### 13.4 GIF, MP4, WebM, Lottie or Rive for interface motion
+
+| Format | Colour | Transparency | Interactive | Typical weight | Use it for |
+|---|---|---|---|---|---|
+| GIF | 256 colours per frame, dithered | 1-bit (on or off) | No | Several times an equivalent MP4; web.dev's worked example turned a 3.7 MB GIF into a 551 KB MP4 and a 341 KB WebM | Email only, where nothing else animates reliably; Outlook for Windows desktop shows only the first frame, so the first frame must carry the message |
+| MP4 (H.264), muted, looping | Full 8-bit 4:2:0 | No | No | Small | Photographic or 3D loops on the web, autoplay muted with playsinline and a poster |
+| WebM (VP9 or AV1) | Full | VP9 alpha | No | Smallest | The same loop for Chromium and Firefox; alpha overlays (13.3) |
+| Animated WebP, APNG, AVIF | Full | Yes | No | Medium | Short loops where a video element is impractical; support and decode cost vary by browser |
+| Lottie and dotLottie | Vector | Yes | Limited | Tiny for flat vector work | Icons, logo stings, onboarding in apps (9.5) |
+| Rive | Vector, raster images allowed | Yes | Yes, through state machines | Tiny file plus a runtime of about 100 to 150 KB | Anything that reacts to input or data (9.4) |
+
+### 13.5 Captions as deliverables
+
+Deliver burned-in captions on every feed cut (most feed video is watched with the sound off) and a sidecar file (SRT or WebVTT) wherever the platform takes one, because a sidecar is read by screen readers and indexed by search. Formats and character limits are in 26-platform-and-format-specs-2026.md, section 5.10; styling and placement in section 5 here and in 16-editing-colour-grading-and-delivery.md, section 11. For Hindi and Arabic, burn in from a font with full Devanagari and Arabic shaping (the World-Ready Composer setting in 3.13), keep SRT files in UTF-8, and have a native reader sign off the burned frame, because bidirectional Arabic text with English brand names inside it reorders itself in ways a non-reader will not notice.
+
+### 13.6 File naming and versioning
+
+House pattern, one field per decision a recipient needs, joined by underscores:
+
+`CLIENT_Campaign_Asset_Duration_Ratio_Language_Rate_vNN_YYYYMMDD.ext`, for example `CLIENT_Monsoon26_Hero_030s_9x16_HI_25p_v07_20261029.mp4`.
+
+- Duration as three digits (006s, 015s, 030s) so cutdowns sort in order.
+- Ratio as 9x16, because a colon is illegal in Windows file names and breaks some upload tools.
+- Language as the ISO 639-1 code (EN, HI, AR); the ISO date (YYYYMMDD) so files sort chronologically in every operating system.
+- Version as a zero-padded number that increments on every file the client sees (v07 sorts after v06; v7 sorts after v10). The word "final" never appears in a file name, because the next round always comes.
+- The Frame.io version stack (section 1) carries the same numbers, so a client comment on v07 maps to one file.
+- A delivery sheet (one row per file: name, duration, ratio, resolution, frame rate, codec, bitrate, measured loudness, captions, language, approver, date) travels with every delivery and is the checklist for section 16's QC pass.
+
+### 13.7 Archive
+
+- Collect the AE project with File, Dependencies, Collect Files, which copies the project and every footage file into one folder with a report. It does not collect fonts or plugins, so add a text file listing every font (with its licence status) and every plugin and version; a project reopened in three years with a substituted font is a different film.
+- Keep: the collected project, the image-sequence renders of every hero scene, ProRes 422 HQ masters and 4444 alpha masters per version, the music stems and the mix (section 14), the approved styleframes and animatic, the delivery sheet, and the licence PDFs for music, fonts, stock and AI tools (22-ai-era-craft-and-generative-tools.md, section 7).
+- The 3-2-1 rule: three copies, on two kinds of media, one off site. LTO tape (LTO-9 holds 18 TB native per cartridge; LTFS lets a tape mount like a drive) or cloud cold storage (Amazon S3 Glacier Deep Archive, where a standard retrieval takes up to 12 hours) for the off-site copy; a single external drive on a shelf is one copy.
+- Retain for at least the longest usage term in the contract plus two years, because renewals, anniversary cutdowns and language versions need the source project as well as the master (16-editing-colour-grading-and-delivery.md, section 5.11; 24-business-of-creative-and-agency-operations.md for the contract terms).
+
+## 14. Sound for motion
+
+Sound design vocabulary, restraint rules, music licensing, loudness targets and sonic branding are in 15-lighting-and-sound.md (sections 11.5, 12, 13.4 and 15). This section is what changes when the picture is animated: the sound is often there before the picture, and every keyframe can be placed to the frame.
+
+### 14.1 Sync points and tolerance
+
+- A sync point is a frame where picture and sound must coincide: the lock frame of a logo (section 6), each word landing on a VO stress (section 4), each cut, each contact (a ring set down on marble, a bottle cap closing). List them as markers in the animatic, named, and hand the list to the sound designer with the picture, so sound and animation are built to the same frames.
+- Tolerance: ITU-R BT.1359-1 (1998) found that viewers detect sound leading picture by about 45 ms and sound lagging picture by about 125 ms, and find errors unacceptable beyond about 90 ms early and 185 ms late (the lag figure appears as 190 ms in some summaries, and sign conventions differ between sources). The asymmetry matches nature, where light arrives before sound. At 25 fps one frame is 40 ms (24 fps: 41.7 ms; 30 fps: 33.3 ms; 60 fps: 16.7 ms), so the working rule is: sound may never lead picture by more than one frame, and a hit lands on the contact frame or the frame after it.
+- Drift sources: a 29.97 picture against audio timed for 30 fps (0.1 percent, so 60 ms over a minute and 600 ms over ten), and phone screen recordings in variable frame rate (VFR, where the frame interval changes with device load). Conform every VFR clip to a constant rate (Shutter Encoder or HandBrake) before it enters AE or the edit, then check sync on the last frame of the film as well as the first.
+- The 2-pop: a one-frame 1 kHz tone placed exactly 2 seconds before the first frame of action, aligned with a one-frame white flash on the picture; every stem and every picture export carries it until the final master, so any offset is visible and audible in one frame.
+
+### 14.2 Sound design as rhythm
+
+Animation is timed to music more often than music to animation, so the tempo is a design decision. Frames per beat equals frame rate multiplied by 60, divided by BPM (beats per minute):
+
+| BPM | 24 fps | 25 fps | 30 fps |
+|---|---|---|---|
+| 60 | 24 frames | 25 frames | 30 frames |
+| 72 | 20 | 20.83 | 25 |
+| 75 | 19.2 | 20 | 24 |
+| 80 | 18 | 18.75 | 22.5 |
+| 90 | 16 | 16.67 | 20 |
+| 93.75 | 15.36 | 16 | 19.2 |
+| 96 | 15 | 15.63 | 18.75 |
+| 100 | 14.4 | 15 | 18 |
+| 120 | 12 | 12.5 | 15 |
+
+Choose or commission a tempo that gives a whole number of frames per beat at the delivery rate (60, 75, 93.75 or 100 BPM at 25 fps; 60, 72, 80, 90, 96 or 120 at 24), because a fractional beat makes animation on the beat alternate between two frame counts and drift visibly against the music over a 30 second film. The house's slow luxury tempo, under 100 BPM (15-lighting-and-sound.md, section 15.4), means 75 BPM (20 frames) or 93.75 BPM (16 frames) at 25 fps.
+
+- Whooshes start 4 to 8 frames before the fastest frame of the move they accompany and peak on it; a whoosh that peaks after the move reads late. Hits land on contact. Risers end on the cut they lead into, never after it. One hit per film for luxury work (15-lighting-and-sound.md, section 11.5).
+- Sound as material: a recorded object (a clasp, a page, silk drawn across a table, ice in a glass) under a graphic move makes it physical, which is the audio half of design-taste's material honesty; a library whoosh under the same move makes it sound like every stock advert.
+- Silence: drop the bed to nothing for 6 to 12 frames before the lock frame, and the logo arrives on a clean frame of sound. The silence makes the arrival, which is the Ben Burtt principle in 15-lighting-and-sound.md, section 11.5.
+- Motion graphics for UI and product demos get small interface sounds (taps, ticks) placed on the frame the element settles, low in the mix, and only on actions the viewer should notice.
+
+### 14.3 Music editing to picture, the motion-specific rules
+
+- Lock the music edit at the animatic gate (section 1). Animation polish is timed to the cut track; a music change after polish re-times every key and is a new round.
+- Never temp with a commercial song the budget cannot clear. Clients fall in love with the temp track, and the licensed replacement then sounds wrong to them; temp from the library the job will license (15-lighting-and-sound.md, section 12.3).
+- Ask for stems and for the library's alternate versions (many library tracks ship with 60, 30 and 15 second edits and an underscore without the melody), because each cutdown needs its own music edit that ends on a resolved note; a fade-out reads as a cut-down.
+- Cutdowns (60, 30, 15, 6 seconds) are re-animated from the master project with their own beat sheets; trimming a 30 second film to 15 in the edit cuts through moves and through bars of music.
+
+### 14.4 Mix and audio deliverables
+
+- Mix to the destination's loudness target: EBU R 128 (minus 23 LUFS, minus 1 dBTP) for broadcast in India and the UAE, minus 14 LUFS and minus 1 dBTP as the house target for social and web (15-lighting-and-sound.md, section 13.4; 26-platform-and-format-specs-2026.md, section 5.4). One file per target, named with the target.
+- Deliver, all as 48 kHz 24-bit WAV, the same length as the picture: the full stereo mix; M&E (music and effects: the mix without voice), which is what makes Hindi, Arabic and English VO versions possible without remixing; the VO, music and effects stems separately; and a silent picture version for DOOH and feeds.
+- Languages change timing. A Hindi or Arabic VO of the same script runs longer or shorter than the English; record the language VOs before the animation is locked for each version, re-time the supers per language, and budget each language as a version (section 1).
+- Licensing for music and effects: 15-lighting-and-sound.md, section 12.2 (sync and master licences, IPRS and PPL in India, the UAE position) and 12.3 (library tiers). A pitch animatic shown outside the agency needs a licensed track as much as the final film does.
+
+## 15. Studios and work to study
+
+design-taste, references/canon.md names the motion studios worth borrowing from and what their work feels like; 18-brand-strategy-and-identity-design.md, section 11 covers the identity studios. This table is the craft layer: the one production lesson each studio teaches best, so that a reference in a brief names a technique to copy. Locations and credits are from the studios' own sites where they could be read in October 2026; the others are long-standing public credits.
+
+| Studio or teacher | Base and people | The craft it teaches | What to study |
+|---|---|---|---|
+| Buck | Los Angeles, New York, Sydney, Amsterdam, London (buck.co) | One standard of craft across 2D, 3D, cel and live action; a large studio that keeps a single art direction per film | Good Books, "Metamorphosis" (2011), for timing and shape language held by one designer's frames; current campaign films on buck.co |
+| ManvsMachine | London | The product as sculpture: a photoreal hero inside an abstract, graphic world (8.5), with one slow camera move | Their product films for Nike and Apple (named in design-taste's canon) |
+| Ordinary Folk | Vancouver (ordinaryfolk.co) | 2D character animation with appeal: strong poses, clear silhouettes, timing that reads in one viewing | The Google Doodle work and studio reels on its site |
+| Oddfellows | San Francisco | Illustration-led explainers that stay warm; one styleframe extended into a system for a long film | Their explainer work for technology companies |
+| Giant Ant | Vancouver; Jay Grandin and Leah Nelson | Explainers built on an idea before a style; hand-made texture; open sharing of process | Their process talks and breakdowns |
+| Gunner | Detroit | 2D and 3D hybrid with graphic shading; humour in brand work without cheapness | Their brand reels |
+| Tendril | Toronto | Design-led 3D: material studies, abstract product and title work where the render serves a graphic idea | Their 3D design work |
+| Art Camp | New York | Illustrators' worlds animated without losing the drawn hand | Their illustration-to-animation films |
+| Cub Studio | Manchester | A character system that stays consistent across a long-running brand series | Their character-led brand content |
+| Animade | London; makers of the Boords storyboarding app | Character animation, and the discipline of boards and animatics (section 2) | Boords itself as a boarding tool; their character work |
+| Golden Wolf | London; founded by Ingi Erlingsson | Bold graphic 2D: flat colour, energy and timing for entertainment and sport | Their entertainment and sport work |
+| Nexus Studios | London | Film-grade animation alongside interactive and AR work under one roof | Smith and Foulkes' "This Way Up" (2008), nominated for the Academy Award for animated short |
+| Blind | Santa Monica; founded by Chris Do in 1995 | The business of motion: pricing, positioning, pitching (Chris Do went on to found The Futur) | The Futur's material on pricing creative work, read with 24-business-of-creative-and-agency-operations.md |
+| Imaginary Forces | Los Angeles and New York | Title sequences that compress a world into about a minute | Mad Men (2007): a falling silhouette among adverts; Stranger Things (2016): a typeface and light, nothing else |
+| Elastic | Santa Monica | Titles as a system that changes with the content | Game of Thrones (2011, Angus Wall): a clockwork map that rebuilds itself around each episode's locations; True Detective (2014, Patrick Clair): double exposures of character and landscape |
+| Territory Studio | London, San Francisco, Barcelona; co-founders Nick Glover and David Sheldon-Hicks (territorystudio.com) | FUI (fictional user interface: screen graphics designed for film) that must read in two seconds and carry plot | Guardians of the Galaxy (2014), Ex Machina (2014), The Martian (2015), Blade Runner 2049 (2017) |
+| DIA Studio | Founded 2009 in SoHo, New York; now New York and Chamonix; Meg Donohoe and Mitch Paone (dia.studio) | Kinetic identity systems, typographic systems and generative tools; motion parameters written into the identity like colour values | Their kinetic identity case studies and type collaborations (Optimo is listed among their partners) |
+| Studio Dumbar | Rotterdam; founded by Gert Dumbar in 1977; part of DEPT | Motion as the identity carrier; performative type that behaves by rules (12-motion-principles-and-ui-motion.md, section 14) | Alzheimer Nederland and Amsterdam Sinfonietta; the DEMO Design in Motion festival |
+| Bureau Borsche | Munich; Mirko Borsche (bureauborsche.com) | Fashion-world moving image: lo-fi footage with exact type, editorial attitude, nothing polished for its own sake | Telfar TV; the Charlotte de Witte tour visuals; their work for Balenciaga, Rimowa and Zeit Magazin |
+| Vucko | Named in the house reading list; its site did not load when this file was revised (October 2026) | Unknown from a primary source | Watch the current reel and confirm credits before citing it to a client |
+| Hornet | New York | The director-roster model: a production company that represents animation directors, so the brief casts a director for a style | Its roster pages, as a casting reference |
+| Ben Marriott | Australian motion designer and After Effects teacher on YouTube | Shape-layer craft and flat 2D animation explained keyframe by keyframe; the fastest route to After Effects fluency | His tutorials, rebuilt by hand |
+| School of Motion | Online school founded by Joey Korenman; more than 50 courses (schoolofmotion.com) | Structured training: Animation Bootcamp for the graph editor, spacing and the principles applied in AE | The graph editor lessons, then the design courses |
+
+How to study a reference, the house method:
+
+1. Watch at full speed with sound, then at 0.5 times without sound, then frame-step the three best transitions.
+2. Chart one move: count its frames, sketch its speed graph (3.3), note the offsets between elements and the frame the sound lands.
+3. Rebuild 5 seconds of it in AE from scratch, then change the content to a Mask360 client's and keep the timing. Copying the timing teaches; copying the look is theft (design-taste, section 4, rule 1: borrow one named thing).
+4. File the rebuild in the studio's reference library with the borrowed property in its name, so the next brief can cite it.
+
+Further reference sources: Art of the Title (artofthetitle.com) for title sequences with interviews; Motionographer (motionographer.com) for the motion industry; the studios' own case studies for process.
+
+## 16. The craft tells
+
+design-taste, section 3 lists the motion tells at the level of taste (fade-up on everything, looping bounces, parallax everywhere), and 12-motion-principles-and-ui-motion.md, section 16 lists the interface ones. These are the production tells: what a trained eye sees in a frame or a timeline, why it happens, and the fix.
+
+| Tell | Cause | Fix | Where |
+|---|---|---|---|
+| Bounce abuse: everything overshoots and settles | Overshoot expressions and presets applied to every layer | Overshoot on one playful hero moment or none; luxury moves settle without passing the target | 3.3, 3.8 |
+| Over-easing: moves float and nothing lands | Long symmetrical Easy Ease on short distances; both ends heavy | Asymmetric curve: quick departure, long settle; shorter durations for shorter distances | 3.3 |
+| Under-easing: mechanical, robotic movement | Linear keyframes left from blocking | Ease every spatial move; linear only for data lines, crawls and constant rotation | 3.2, 7 |
+| Inconsistent timing across elements | Each layer timed by eye, often by different animators | One timing system: a duration scale (for example 12, 18, 24 and 36 frames at 24 fps) and one curve family saved in Flow, written into the project notes | 3.3, 3.15 |
+| No anticipation: moves start from nowhere | Keys begin at full velocity | A 2 to 4 frame counter-move or a held frame before a large move (anticipation, one of Thomas and Johnston's twelve principles) | 12-motion-principles-and-ui-motion.md, section 2 |
+| Text that moves while being read | Drift or slow scale on supers to "keep it alive" | Arrive, hold still for the reading time, leave | 4, 5 |
+| Glow and lens flares | Native Glow and flare plugins as decoration | Remove; bloom only from a real light source, rendered at 32 bpc | 3.7 |
+| Default plugin looks | Particular, Saber, Element 3D chrome or Animation Composer presets used as supplied | Change every default parameter, or do not use the plugin; the audience has seen the default | 3.15 |
+| Mismatched frame rates | 30 fps footage in a 25 fps comp; a 25 fps film converted to 30 for upload | Conform sources; render natively; upload at the native rate | 3.1, 12.2 |
+| Aliased edges: stair-stepped diagonals, shimmering hairlines | Draft quality renders, 1 px strokes, rasters scaled above 100 percent, Collapse Transformations off on vector precomps | Render at Best quality; continuously rasterise vectors; strokes of 2 px or more at delivery size; render UHD and downscale | 3.9, 12.3 |
+| Wrong colour space exports: milky blacks, crushed shadows, a shifted brand colour | Range mismatch, missing colour tags, the Apple gamma shift misread as a fault | Tag BT.709, legal range; judge on the reference monitor and the target phone | 12.7; 16-editing-colour-grading-and-delivery.md, section 12.5 |
+| Audio out of sync | Variable frame rate sources, 29.97 against 30, sound placed by ear | Conform VFR; 2-pop on every export; check the last frame | 14.1 |
+| Banding in gradients | 8 bpc project, no dither, low delivery bitrate | 16 bpc, 1 percent noise dither, grain, higher bitrate | 3.1, 3.7, 13.2 |
+| Boiling lines | Wiggle Paths or Turbulent Displace at default settings | 0.5 to 1 wiggles per second, or none | 3.5 |
+| Camera shake on graphics | Wiggle on a camera to add "energy" | A motivated camera move or a still frame; shake belongs to handheld live action | 3.10 |
+| Speed ramps on every shot | The 2010s sport-edit habit | One ramp per film, motivated by an impact | 3.11 |
+| Everything moving at once | No hierarchy of motion | One lead element per beat; secondary elements move less and later | 4 |
+| Unmotivated 3D camera orbits | A free camera with nowhere to look | One push or one arc per film (3.10); the orbit only for a product turntable | 3.10, 8.3 |
+| Moiré on fine patterns | Pinstripes, mesh or LED screens finer than the pixel grid | Slight blur or a scale change on the pattern; test the H.264 file | 12.7 |
+| Flash frames | A stray frame at a cut after a trim | Frame-step every cut before export | Checklist below |
+
+### Pre-delivery QC checklist
+
+1. Watch the full export at 1x with sound on the target device (phone for social, reference monitor for broadcast, the venue's wall when possible), then at 0.5x with sound off.
+2. Read the file with MediaInfo (a free tool that reports codec, profile, frame rate, resolution, colour tags and audio format) and compare every value against the delivery sheet (13.6).
+3. Overlay the safe areas (section 5) on the first frame, each super and the end card.
+4. Check spelling in every language with a native reader on the rendered frame, with special care for Devanagari conjuncts and Arabic joining (3.13).
+5. Measure loudness and true peak over the whole file (14.4).
+6. Check sync on the first and the last sync point (14.1).
+7. Frame-step every cut for flash frames and every gradient for banding at 100 percent view.
+8. Check flashing: no more than three flashes in any one-second period (WCAG 2.2 success criterion 2.3.1; ITU-R BT.1702 sets the broadcast guidance on photosensitive epilepsy). Event and nightlife edits with strobing transitions fail this most often.
+9. Confirm the first frame is a readable composition (feeds autoplay muted and loops are caught mid-way) and the end card holds as section 5 specifies.
+10. Confirm licences for music, fonts, stock and AI-generated material are filed with the master (13.7).
+
+## 17. Reference table by destination
+
+House values as of October 2026. Platform minimums, sources and verification status are in 26-platform-and-format-specs-2026.md, section 5; where the two files differ, 26 is the platform record and this table is the motion house's export setting.
+
+| Destination | Resolution | Frame rate | Codec and container | Video bitrate | Audio | Loudness | Notes |
+|---|---|---|---|---|---|---|---|
+| Archive master | UHD 3840 by 2160 (or vertical UHD) | As produced: 24 or 25 | ProRes 422 HQ MOV; 4444 XQ for HDR | 737 Mbps at 2160p25 | 48 kHz 24-bit PCM, stereo | Broadcast and digital mixes as separate files | Source of every version (13.7) |
+| Graphics with alpha to an editor | Master size | Match the edit | ProRes 4444, straight alpha (premultiplied if the editor is unsure) | 1,106 Mbps at 2160p25 | None, or separate WAV | n/a | 3.16 |
+| Broadcast TV, India and UAE | 1920 by 1080 | 25 (1080i50 or 1080p25, per sheet) | ProRes 422 HQ MOV or XDCAM HD422 MXF | 184 Mbps or 50 Mbps | 48 kHz 24-bit, stereo on channels 1 and 2 | EBU R 128: minus 23 LUFS, minus 1 dBTP (or the channel's sheet) | Slate, ad code, 2 s black head and tail; ask the channel for its sheet |
+| Cinema DCP | 1998 by 1080 (2K flat) | 24 | JPEG 2000 in MXF, SMPTE DCP | Up to 250 Mbps | 24-bit 48 kHz PCM, 5.1 or stereo | Mixed to the 85 dB reference in a calibrated room | Made by a DCP house from the ProRes master |
+| YouTube landscape | 3840 by 2160 | Native | H.264 High, MP4, fast start | House 50 to 80 Mbps; YouTube minimum 35 to 45 | AAC-LC 384 kbps, 48 kHz | About minus 14 LUFS, minus 1 dBTP | Closed GOP of half the frame rate; SRT sidecar |
+| YouTube Shorts, Instagram Reels, TikTok | 1080 by 1920 (1440 by 2560 for Meta ads) | Native 25 (24 for brand film) | H.264 High, MP4 | House 15 to 20 Mbps | AAC-LC 320 kbps, 48 kHz | Minus 14 LUFS, minus 1 dBTP | Universal safe box (section 5); burned-in captions |
+| Instagram and Meta feed | 1080 by 1350 (1440 by 1800 for Meta ads) | Native | H.264 High, MP4 | House 15 to 20 Mbps | AAC-LC 320 kbps | Minus 14 LUFS | First frame readable with sound off |
+| LinkedIn | 1920 by 1080 or 1080 by 1350 | Native | H.264 High, MP4 | House 15 to 20 Mbps | AAC-LC 320 kbps | Minus 14 LUFS | SRT sidecar; most viewing is silent |
+| Website hero loop | 1920 by 1080, plus a 1080 by 1350 mobile cut | 24 or 25 | H.264 MP4 plus VP9 or AV1 WebM, no audio track | Under 2.5 MB (H.264) and 1.5 MB (VP9 or AV1) for the file | None | n/a | Poster image as the LCP element; reduced-motion still (9.6; 21-web-design-and-digital-craft.md, section 4) |
+| Web overlay with transparency | As designed | 25 or 30 | HEVC with alpha for Safari, VP9 alpha WebM for the rest, or stacked alpha | As low as holds the edge | None | n/a | Browser selection by script (13.3) |
+| App and UI motion | Vector | 30 or 60 | Lottie JSON or .lottie; Rive .riv for interactive | Under 100 KB JSON, under 30 KB .lottie | None | n/a | 9.4, 9.5 |
+| Email | 600 px display width | 10 to 15 | GIF | About 1 MB as a working ceiling | None | n/a | The first frame carries the message (13.4) |
+| Event LED wall | The wall's pixel map, 1:1 | 25 or 50 | ProRes 422 HQ to the playback operator, who transcodes to HAP, Resolume's DXV or NotchLC for the server | Master rate | Usually the venue mix | About minus 16 LUFS where audio runs | 26-platform-and-format-specs-2026.md, section 5.11 |
+| Portrait DOOH (malls, airports, metro) | 1080 by 1920 | 25 | H.264 MP4 per the media owner's sheet | Per the owner | Usually none | n/a | 10 s and 15 s loops, no fades, the mark in every frame |
+| Presentation embed (Keynote, PowerPoint, Google Slides) | 1920 by 1080 | 25 or 30 | H.264 MP4; HEVC with alpha in Keynote for overlays | 10 to 20 Mbps | AAC-LC | Minus 14 LUFS | Test on the presenting laptop |
+| Client review (Frame.io) | 1920 by 1080 or 1080 by 1920 | Native | H.264 with burnt-in timecode | 10 to 20 Mbps | AAC-LC 320 kbps | As the mix | Version number in the file name and on the slate (13.6) |
+
+## Terms introduced
+
+- 2:3 pulldown: spreading 4 film frames across 10 interlaced fields to carry 23.976 material at 29.97, at the cost of judder.
+- 2-pop: a one-frame 1 kHz tone 2 seconds before the first frame of action, matched by a one-frame flash in picture, used to prove sync.
+- ACES: the Academy Color Encoding System, a scene-referred colour pipeline with defined input and output transforms.
+- ACEScg: the linear ACES working space for rendering and compositing.
+- Action safe: the area inside which important action must sit; 93 percent of width and height under SMPTE ST 2046-1.
+- Advanced 3D: After Effects' renderer with HDRI lighting, model import, physical materials and extrusion.
+- Alpha matte: a track matte that cuts a layer by another layer's transparency.
+- Anchor point: the pivot about which a layer scales and rotates.
+- Animatic: storyboards cut to scratch voice over and temp music at the real frame rate and timing.
+- Anticipation: a small counter-move before a main move, so the move appears to start from a decision.
+- AOV: arbitrary output variable; a render pass holding one component of the image (diffuse, specular, depth).
+- Auto bezier: interpolation that AE smooths automatically through a keyframe.
+- Backing plate: a solid or translucent shape behind type that guarantees legibility over footage.
+- Beat sheet: the film written as a list of timed beats that must sum to the brief's duration.
+- Bezier interpolation: keyframe interpolation shaped by hand-set influence handles.
+- Blocking pass: the first animation pass, with positions and timing and no polish.
+- bpc: bits per channel, the colour precision of a project or file (8, 16 or 32).
+- Burnt-in timecode: a timecode display rendered into a review picture.
+- Caustics: focused patterns of light thrown by refractive or reflective objects onto nearby surfaces.
+- Chroma subsampling: storing colour at lower resolution than brightness, written 4:4:4, 4:2:2 or 4:2:0.
+- Closed GOP: a group of pictures that references no frame outside itself, so it cuts cleanly.
+- Codec: a compression scheme for video or audio.
+- Collapse Transformations: the AE switch that passes vector sharpness and 3D through a precomp boundary.
+- Container: the file wrapper that holds streams and metadata (MOV, MP4, MXF, WebM).
+- Continuous bezier: bezier interpolation with linked handles, smooth through the keyframe.
+- Cryptomatte: automatic ID mattes keyed by object or material name, written into an EXR.
+- Design animatic: the animatic rebuilt with final designed frames before animation starts.
+- Dispersion: the splitting of white light into colours by a refractive material, set by its Abbe number.
+- Domain warping: feeding one noise field into the coordinates of another to produce liquid and marble forms.
+- dotLottie: the compressed .lottie package that bundles Lottie animations, assets, themes and state machines.
+- Drop frame: 29.97 or 59.94 timecode that skips frame numbers so the count keeps pace with the clock.
+- Essential Properties: precomp properties exposed for editing in the parent comp; formerly Master Properties.
+- Expression: a JavaScript snippet attached to an AE property and evaluated every frame.
+- fBm: fractal Brownian motion; octaves of noise summed at doubling frequency and halving amplitude.
+- FK: forward kinematics; posing a limb joint by joint from its root.
+- Frame blending: generating in-between frames when footage is slowed (Frame Mix dissolves, Pixel Motion uses optical flow).
+- FUI: fictional user interface; screen graphics designed for film and television.
+- GOP: group of pictures; one complete frame and the frames predicted from it.
+- Graph editor: AE's view of keyframes as value or speed curves.
+- Handles: extra frames at the head and tail of a shot for the editor.
+- HDR10: PQ high dynamic range video with static metadata (SMPTE ST 2086, MaxCLL, MaxFALL).
+- HDRI: a high dynamic range panoramic image used as a light source.
+- HLG: hybrid log-gamma, the relative, SDR-compatible HDR transfer function from the BBC and NHK.
+- Hold keyframe: a keyframe with no interpolation, so the value jumps at the key.
+- IK: inverse kinematics; posing a limb by moving its end, with the joints solved automatically.
+- Interlacing: recording each frame as two fields of alternate lines captured at different instants.
+- Interline twitter: flicker of horizontal detail one line thick on an interlaced display.
+- Intra-frame codec: a codec that stores every frame complete (ProRes, DNxHR).
+- IOR: index of refraction; how much a material bends light (glass 1.5, diamond 2.42).
+- Judder: an uneven motion cadence produced by pulldown or frame-rate conversion.
+- Legal range: video levels coded 16 to 235 in 8-bit luma; full range uses 0 to 255.
+- Linear interpolation: constant-speed change between keyframes.
+- Lock frame: the frame on which a logo is complete and still, and where the sound hit lands.
+- Long-GOP codec: a codec that predicts most frames from their neighbours (H.264, H.265, AV1).
+- Lottie: a JSON vector animation format exported from AE by Bodymovin.
+- Luma matte: a track matte that cuts a layer by another layer's brightness.
+- Luxury ease: the house asymmetric curve, with a quick departure and a long settle.
+- M&E: the music and effects mix without voice, used to build language versions.
+- MaterialX: an open standard for exchanging material definitions between applications.
+- MOGRT: Adobe's packaged motion graphics format for Premiere Pro.
+- Motion control (AI): transferring a reference performance onto a generated subject.
+- Null object: an invisible AE layer used as a parent or a controller.
+- OCIO: OpenColorIO, the open colour management system used by AE, Blender, Nuke and others.
+- OpenEXR: a high dynamic range, multi-layer image format for renders and composites.
+- OpenPBR: an open, physically based surface shading model from the Academy Software Foundation.
+- PAR: pixel aspect ratio; one pixel's width divided by its height.
+- Parallax: the apparent shift of near objects against far ones as the camera moves.
+- Parenting: making one layer inherit another layer's transform.
+- PBR: physically based rendering; materials described by measurable properties.
+- PQ: perceptual quantiser; the absolute HDR transfer function of SMPTE ST 2084.
+- Precomp: a composition used as a layer inside another composition.
+- Premultiplied alpha: colour already multiplied by the alpha against a background colour.
+- PsF: progressive segmented frame; a progressive frame carried as two fields of the same instant.
+- Range selector: the part of a text animator that sweeps the effect across characters, words or lines.
+- Reference white: the HDR level for diffuse and graphics white, 203 cd/m2 under ITU-R BT.2408.
+- Rove across time: a spatial keyframe that AE places in time to keep speed constant along a path.
+- Scratch VO: a rough voice-over read used only for timing.
+- Shader: a program run on the GPU per vertex or per pixel.
+- Shape layer: AE's native vector layer of paths, fills, strokes and operators.
+- Shutter angle: the share of the frame interval over which motion blur is gathered (180 degrees is half).
+- Speed graph: the graph editor view of speed against time.
+- Stacked alpha: colour and matte stored in one ordinary video and recombined in a shader.
+- Straight alpha: colour stored unmultiplied, with transparency held only in the alpha channel.
+- Strobing: the stepped look of fast motion at a low frame rate.
+- Styleframe: a single frame at final quality that proves a look can exist.
+- Subsurface scattering: light entering a surface, scattering inside and leaving elsewhere (skin, wax, pearl).
+- Sync point: a frame where picture and sound must coincide.
+- Text animator: an AE property group that animates ranges of a text layer.
+- Time remapping: making a layer's time a keyframable property.
+- Title safe: the area inside which text must sit; 90 percent of width and height under SMPTE ST 2046-1.
+- Track matte: one layer used to cut another by its alpha or its luminance.
+- Trim Paths: the shape operator that animates the start, end and offset of a stroke.
+- TSL: Three Shading Language, the node-based shader language of three.js.
+- Two-pass VBR: variable bitrate encoding that measures complexity in one pass and allocates bits in the second.
+- UDIM: numbered UV tiles that let one object carry several texture maps.
+- Uniform: a value sent from JavaScript to a shader (time, mouse, resolution).
+- USD: Universal Scene Description, Pixar's scene interchange format.
+- UV: the 2D coordinates that map a texture onto a surface.
+- Value graph: the graph editor view of value against time.
+- Varying: a value passed from the vertex shader to the fragment shader.
+- VFR: variable frame rate, where the interval between frames changes; it drifts against audio.
+
+## Sources and further reading
+
+### Books
+
+- Frank Thomas and Ollie Johnston, The Illusion of Life: Disney Animation, 1981.
+- Richard Williams, The Animator's Survival Kit, 2001 (expanded edition 2009).
+- Preston Blair, Cartoon Animation, 1994.
+- Chris Meyer and Trish Meyer, Creating Motion Graphics with After Effects, 5th edition, 2010.
+- Mark Christiansen, Adobe After Effects CC Visual Effects and Compositing Studio Techniques, 2013.
+- Austin Shaw, Design for Motion: Fundamentals and Techniques of Motion Design, 2016.
+- Charles Poynton, Digital Video and HD: Algorithms and Interfaces, 2nd edition, 2012.
+- Jeremy Birn, Digital Lighting and Rendering, 3rd edition, 2013.
+- Matt Pharr, Wenzel Jakob and Greg Humphreys, Physically Based Rendering: From Theory to Implementation, 4th edition, 2023, https://pbr-book.org
+- Daniel Shiffman, The Nature of Code, 2nd edition, 2024.
+- Walter Murch, In the Blink of an Eye, 2nd edition, 2001.
+- David Sonnenschein, Sound Design: The Expressive Power of Music, Voice and Sound Effects in Cinema, 2001.
+
+### Standards and specifications
+
+- SMPTE ST 2046-1:2009, Safe Areas for Television Production, https://pub.smpte.org/doc/st2046-1/20091123-pub/st2046-1-2009.pdf; SMPTE RP 218 (deprecated except for CEA-708 caption layout), https://pub.smpte.org/pub/rp218/rp0218-2009.pdf
+- EBU R 95, Safe areas for 16:9 television production, v1.1, 2017, https://tech.ebu.ch/publications/r095
+- EBU R 128, Loudness normalisation and permitted maximum level of audio signals, 2023, https://tech.ebu.ch/publications/r128
+- ITU-R BT.709, BT.2020 and BT.2100 (HDR, PQ and HLG), https://www.itu.int/rec/R-REC-BT.2100
+- ITU-R BT.2408-9 (March 2026), Guidelines for operational practices in high dynamic range television production, https://www.itu.int/pub/R-REP-BT.2408
+- ITU-R BT.1359-1, Relative timing of sound and vision for broadcasting, https://www.itu.int/rec/R-REC-BT.1359
+- ITU-R BT.1702, Guidance for the reduction of photosensitive epileptic seizures caused by television, https://www.itu.int/rec/R-REC-BT.1702
+- SMPTE ST 2084 (PQ) and SMPTE ST 2086 (mastering display colour volume metadata).
+- Apple, Apple ProRes White Paper, April 2022, https://www.apple.com/final-cut-pro/docs/Apple_ProRes_White_Paper.pdf
+- YouTube Help, Recommended upload encoding settings, https://support.google.com/youtube/answer/1722171 (read October 2026)
+- Netflix, English Timed Text Style Guide, https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-Timed-Text-Style-Guide
+- W3C, Web Content Accessibility Guidelines 2.2, https://www.w3.org/TR/WCAG22/; W3C, WebGPU, https://www.w3.org/TR/webgpu/
+- Khronos Group, glTF 2.0 specification, https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html
+- Academy Software Foundation: OpenEXR, https://openexr.com; OpenColorIO, https://opencolorio.org; OpenPBR, https://academysoftwarefoundation.github.io/OpenPBR/; MaterialX, https://materialx.org; OpenUSD, https://openusd.org
+- Lottie specification, https://lottie.github.io; dotLottie, https://dotlottie.io
+- caniuse, WebM video format, https://caniuse.com/webm (read October 2026)
+
+### Documentation, articles and studio sources
+
+- Adobe, After Effects User Guide, https://helpx.adobe.com/after-effects/user-guide.html
+- Dan Ebberts, MotionScript (expressions, including inertial bounce), https://www.motionscript.com
+- CG Channel, release coverage of After Effects, Cinema 4D, Redshift, Houdini and Blender, https://www.cgchannel.com
+- Blender release notes, https://developer.blender.org/docs/release_notes/; Maxon help and release notes, https://help.maxon.net; SideFX, https://www.sidefx.com
+- three.js releases, https://github.com/mrdoob/three.js/releases; GSAP documentation, https://gsap.com/docs/v3/; Rive blog, https://rive.app/blog
+- Frame.io plans, https://frame.io/pricing; GarageFarm, https://garagefarm.net; Topaz Labs, https://www.topazlabs.com
+- Video model pages for section 11: https://deepmind.google/models/veo/, https://runwayml.com, https://lumalabs.ai, https://klingai.com, https://hailuoai.video, https://higgsfield.ai
+- Tool sites for section 8: https://cavalry.studio, https://derivative.ca, https://spline.design, https://www.foundry.com, https://www.unrealengine.com, https://polyhaven.com, https://rxlaboratory.org (Duik Angela)
+- Inigo Quilez, "Domain warping", https://iquilezles.org/articles/warp/; Stefan Gustavson, webgl-noise, https://github.com/stegu/webgl-noise
+- Patricio Gonzalez Vivo and Jen Lowe, The Book of Shaders, https://thebookofshaders.com
+- web.dev, "Replace animated GIFs with video for faster page loads", https://web.dev/articles/replace-gifs-with-videos
+- FFmpeg documentation, https://ffmpeg.org/documentation.html; MediaInfo, https://mediaarea.net/en/MediaInfo
+- Art of the Title, https://www.artofthetitle.com; Motionographer, https://motionographer.com
+- Studio pages read in October 2026: https://buck.co, https://ordinaryfolk.co, https://territorystudio.com/about-us/, https://www.dia.studio/about, https://bureauborsche.com, https://www.schoolofmotion.com/about; Studio Dumbar/DEPT, https://studiodumbar.com/work
