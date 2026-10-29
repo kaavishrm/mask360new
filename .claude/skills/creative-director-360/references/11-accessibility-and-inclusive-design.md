@@ -54,7 +54,7 @@ The social model of disability, a term coined by Mike Oliver in 1983, holds that
 
 ### 1.3 The legal case
 
-One line per market; detail in sections 14.3 to 14.5. United States: 3,117 website accessibility suits in federal courts in 2025 under Title III of the Americans with Disabilities Act (ADA) (Seyfarth Shaw, 25 March 2026). European Union: the European Accessibility Act (EAA) has applied since 28 June 2025 to e-commerce and banking sold to EU consumers, including by Indian and Gulf brands. India: the Supreme Court made accessibility standards mandatory in Rajive Raturi v Union of India (2024) and placed digital access inside the right to life in Amar Jain v Union of India (2025).
+Detail in sections 14.3 to 14.5. United States: 3,117 website accessibility suits in federal courts in 2025 under Title III of the Americans with Disabilities Act (ADA) (Seyfarth Shaw, 25 March 2026). European Union: the European Accessibility Act (EAA) has applied since 28 June 2025 to e-commerce and banking sold to EU consumers, including by Indian and Gulf brands. India: the Supreme Court made accessibility standards mandatory in Rajive Raturi v Union of India (2024) and placed digital access inside the right to life in Amar Jain v Union of India (2025).
 
 ### 1.4 The business case
 
