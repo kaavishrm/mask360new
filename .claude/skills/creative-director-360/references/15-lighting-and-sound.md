@@ -63,7 +63,7 @@ Sources: Wikipedia, Color temperature (table of typical values); Lee Filters pro
 
 Mix colour temperatures on purpose. A 3,200 K practical lamp in a 5,600 K daylight room reads as a warm pool, which is the look of every luxury hotel film shot at dusk. A 5,600 K LED panel keyed on a face in a 3,200 K room reads as a window, which is fine, or as a fluorescent office, which is the mistake. Decide the camera white balance first (the "neutral" of the frame), then place every other source warmer or cooler than it on purpose. See 04-colour.md for the display side of white points and 16-editing-colour-grading-and-delivery.md for white balance in the grade.
 
-Colour has a second axis. A source's colour is its CCT plus an offset above or below the black-body curve, called Duv (positive is green, negative is magenta). ANSI C78.377 tolerates about plus or minus 0.006 for general lighting, which is visible on camera. Cheap LEDs and fluorescents sit green. Fixtures correct with a plus or minus green control (Aputure plus or minus 100 percent, the Nanlux Evoke 2400B plus or minus 80); gels come in eighth, quarter, half and full plus green and minus green (4.5); the camera's tint control corrects the whole frame at once. A spectrometer (Sekonic C-800) reads Duv on the recce, so the gaffer (the chief lighting technician) knows which practicals need minus green before the day.
+Colour has a second axis. A source's colour is its CCT plus an offset above or below the black-body curve, called Duv (positive is green, negative is magenta). ANSI C78.377 tolerates about plus or minus 0.006 for general lighting, which is visible on camera. Cheap LEDs and fluorescents sit green. Fixtures correct with a plus or minus green control (Aputure plus or minus 100 per cent, the Nanlux Evoke 2400B plus or minus 80); gels come in eighth, quarter, half and full plus green and minus green (4.5); the camera's tint control corrects the whole frame at once. A spectrometer (Sekonic C-800) reads Duv on the recce, so the gaffer (the chief lighting technician) knows which practicals need minus green before the day.
 
 ### 1.3 Quality measures: CRI, TLCI, SSI, TM-30
 
@@ -93,15 +93,15 @@ Lighting ratio is key plus fill against fill alone, in the ASC (American Society
 | 8:1 | 3 | Noir, severe | Fashion film, whisky, men's grooming, one hero frame in a campaign |
 | 16:1 and beyond | 4 plus | Silhouette and chiaroscuro | Title cards, fragrance teasers, the single tension frame |
 
-Luxury rarely lives at 1:1 (nothing to discover) or beyond 8:1 for long (the viewer tires, and dark shadow regions block on phones). The house default for faces is 2:1 to 3:1 with a hard edge somewhere in the frame; for product 4:1 with a graduated highlight. The reason behind the rule: a higher ratio adds depth and cost signals, a lower ratio adds clarity, and the phone screen in a bright room (where most of Mask360's work is watched) needs shadow detail held above about 5 percent luminance or it vanishes into the glass reflection.
+Luxury rarely lives at 1:1 (nothing to discover) or beyond 8:1 for long (the viewer tires, and dark shadow regions block on phones). The house default for faces is 2:1 to 3:1 with a hard edge somewhere in the frame; for product 4:1 with a graduated highlight. The reason behind the rule: a higher ratio adds depth and cost signals, a lower ratio adds clarity, and the phone screen in a bright room (where most of Mask360's work is watched) needs shadow detail held above about 5 per cent luminance or it vanishes into the glass reflection.
 
 ### 1.6 Reading exposure on the monitor
 
 The creative director at video village judges light on a monitor, and a "too dark" note is only actionable when it says whether the information is on the sensor. The DIT (digital imaging technician) or the camera assistant sets up three tools (full treatment in 14-video-preproduction-and-cinematography.md, section 9):
 
-- False colour: the monitor paints each brightness band a flat colour. ARRI's Rec 709 (the HD television colour and brightness standard) false colour, per ARRI's camera documentation: purple 0 to 2.5 percent (black clipped), blue 2.5 to 4 percent (just above clipping), green 38 to 42 percent (18 percent grey), pink 52 to 56 percent (one stop over grey, the band where light skin sits), yellow 97 to 99 percent (just below clipping), red 99 to 100 percent (white clipped). Medium and dark complexions sit from green down to about 2 stops under grey; forcing every face into pink is how darker skin gets lifted into grey (6.1).
-- Waveform: a graph of brightness across the frame from 0 to 100 percent. Keep the highlights the client needs (a white shirt, a window, a diamond's table) under 95 to 100 percent, and the shadow detail a phone must show above 5 to 10 percent (1.5).
-- Zebras: stripes over every area above a set level; set them at 95 percent as a clipping warning.
+- False colour: the monitor paints each brightness band a flat colour. ARRI's Rec 709 (the HD television colour and brightness standard) false colour, per ARRI's camera documentation: purple 0 to 2.5 per cent (black clipped), blue 2.5 to 4 per cent (just above clipping), green 38 to 42 per cent (18 per cent grey), pink 52 to 56 per cent (one stop over grey, the band where light skin sits), yellow 97 to 99 per cent (just below clipping), red 99 to 100 per cent (white clipped). Medium and dark complexions sit from green down to about 2 stops under grey; forcing every face into pink is how darker skin gets lifted into grey (6.1).
+- Waveform: a graph of brightness across the frame from 0 to 100 per cent. Keep the highlights the client needs (a white shirt, a window, a diamond's table) under 95 to 100 per cent, and the shadow detail a phone must show above 5 to 10 per cent (1.5).
+- Zebras: stripes over every area above a set level; set them at 95 per cent as a clipping warning.
 
 Ed Lachman's EL Zone System, built into SmallHD monitors, colours each stop above and below grey in its own hue, which is the fastest way to read a lighting ratio in stops off the monitor. The client's iPad and a Frame.io camera-to-cloud stream are uncalibrated and usually bright, so judge on the DIT's calibrated monitor and tell the client so before the first take.
 
@@ -158,7 +158,7 @@ Painters' studios in Europe faced north because north light at those latitudes i
 - Negative fill: a black flag, floppy or black fabric on the shadow side absorbs ambient bounce and deepens the ratio without adding a lamp. The single most used tool on luxury exteriors, where a white Dubai pavement or a Jaipur courtyard fills every shadow to 1.5:1 and flattens everything.
 - Bounce: white gives soft neutral fill; silver gives a harder, brighter, cooler fill with a visible kick; gold warms, and is almost always a mistake on skin because it reads as sunbed (use a half-gold or a warm gel on a white bounce instead).
 - Top light: a source directly above gives deep eye sockets and strong jaw shadows; harsh on faces, superb on product, food and textiles where texture is the point.
-- Under light: a source from below inverts facial shadows and reads as horror or firelight; used deliberately as a candle or screen glow at low level, never as a key.
+- Under light: a source from below inverts facial shadows and reads as horror or firelight; use it only as a candle or screen glow at low level.
 
 ### 2.10 Edge and silhouette
 
@@ -203,7 +203,7 @@ Diwali, wedding jewellery and iftar tables are seasonal staples, and flame light
 
 - Real flames burn at about 1,800 to 1,900 K. Set the camera to about 3,200 to 3,800 K so flames render amber with some colour left in them; at a 5,600 K balance they go orange-red.
 - Support faces with a low, warm soft source (about 2,000 to 2,400 K, or full CTO, the colour temperature orange gel (4.5), on a tungsten lamp) just below frame, from the flame's direction, so the motivation holds (2.3).
-- Animate it: a slow, irregular flicker of 1 to 3 percent in intensity from the fixture's built-in candle or fire effect, or a dimmer worked by hand. A regular, strobe-like flicker reads fake.
+- Animate it: a slow, irregular flicker of 1 to 3 per cent in intensity from the fixture's built-in candle or fire effect, or a dimmer worked by hand. A regular, strobe-like flicker reads fake.
 - Use real diyas (clay oil lamps) and candles at several heights, with a stylist trimming wicks between takes so the flames stay the same size for continuity.
 - Clear naked flame with the venue's fire officer in writing; heritage hotels and palaces often require a fire watch and extinguishers on set.
 - Reference: Sudeep Chatterjee's candle- and diya-lit palace interiors for Sanjay Leela Bhansali's Bajirao Mastani (2015) and Padmaavat (2018), the look Indian clients cite by name.
@@ -228,7 +228,7 @@ Open shade (the subject in shadow, lit by the open sky) is the location portrait
 
 ### 3.4 Mixing natural and artificial
 
-Match the artificial sources to the dominant daylight, or decide the daylight is the accent. A daylight-balanced LED (5,600 K) through a window frame adds to the real window with no colour shift. A tungsten or warm LED practical inside stays warm on purpose. For mixing a 3,200 K source into 5,600 K daylight, gel it with full CTB (colour temperature blue; Lee 201: a shift of minus 137 mired, converting 3,200 K to about 5,700 K; transmission 34 to 35 percent, which is about 1.5 stops lost). For pulling daylight down to tungsten, full CTO (Lee 204: plus 159 mired, 6,500 K to 3,200 K; transmission 55 percent at daylight, about 0.85 of a stop lost). Bi-colour LEDs do the conversion at the dial and at no stop cost, which is why they replaced gels for most work (5.1).
+Match the artificial sources to the dominant daylight, or decide the daylight is the accent. A daylight-balanced LED (5,600 K) through a window frame adds to the real window with no colour shift. A tungsten or warm LED practical inside stays warm on purpose. For mixing a 3,200 K source into 5,600 K daylight, gel it with full CTB (colour temperature blue; Lee 201: a shift of minus 137 mired, converting 3,200 K to about 5,700 K; transmission 34 to 35 per cent, which is about 1.5 stops lost). For pulling daylight down to tungsten, full CTO (Lee 204: plus 159 mired, 6,500 K to 3,200 K; transmission 55 per cent at daylight, about 0.85 of a stop lost). Bi-colour LEDs do the conversion at the dial and at no stop cost, which is why they replaced gels for most work (5.1).
 
 ### 3.5 Shooting interiors by daylight with fill
 
@@ -252,7 +252,7 @@ Hotel façades after blue hour, desert camps, rooftop bars and the pool at night
 |---|---|---|---|
 | Softbox (rectangular) | 60 by 90 cm, 90 by 120 cm, 30 by 120 cm strip | Even, controllable, rectangular catchlight; strips give a long clean highlight | Product gloss, fashion full length, hair light |
 | Octabox | 90, 120, 150 cm; Aputure Light Dome II is 90 cm, Light Dome III 90 cm, Light Dome 150 | Round catchlight that reads as an eye reflection, fast falloff at the edges | Beauty, talking heads, founder portraits |
-| Umbrella (shoot-through or reflective) | 100 to 180 cm | Cheap, broad, spills everywhere | Fill, event and press shoots, never the key on luxury |
+| Umbrella (shoot-through or reflective) | 100 to 180 cm | Cheap, broad, spills everywhere | Fill, event and press shoots; keep it off the key on luxury work |
 | Parabolic (Broncolor Para, Parabolix, Godox Parabolic) | 88 to 222 cm | Focusable: specular centre with soft edges, crisp skin texture | Fashion editorial, the "Para look" of the 2010s campaigns |
 | China ball (paper lantern) | 30 to 90 cm | Omnidirectional soft, warm, cheap, light enough to fly on a boom pole over a table | Dinner scenes, walk-and-talks, F&B (food and beverage) tables |
 | Lantern (Aputure Lantern, Nanlite LT-120) | 60 to 120 cm | China ball with a skirt and speed ring for COBs | Same uses at 600 W |
@@ -265,9 +265,9 @@ Values below are published transmission figures where the maker states them and 
 
 | Material | Character | Approximate loss |
 |---|---|---|
-| Lee 216 White Diffusion (Rosco Tough White Diffusion) | Heavy, milky, very soft | 36 percent transmission on retailer data sheets, about 1.5 stops |
-| Lee 250 Half White Diffusion | Medium | about 60 percent, about 0.75 stop |
-| Lee 251 Quarter White Diffusion | Light | about 80 percent, about 0.3 stop |
+| Lee 216 White Diffusion (Rosco Tough White Diffusion) | Heavy, milky, very soft | 36 per cent transmission on retailer data sheets, about 1.5 stops |
+| Lee 250 Half White Diffusion | Medium | about 60 per cent, about 0.75 stop |
+| Lee 251 Quarter White Diffusion | Light | about 80 per cent, about 0.3 stop |
 | Lee 252 Eighth White, 452 Sixteenth White | Takes the edge off a hard source without visibly softening | less than a quarter stop (value unpublished) |
 | Lee 410 Opal Frost, 420 Light Opal | Very light, keeps a hot centre; the DP's "just to soften the shadow edge" | about half a stop (unpublished; meter it) |
 | Grid cloth (Lee 430 full, 432 light, 434 quarter; Rosco 3030, 3032, 3034) | Woven, tough, outdoor-safe; the standard for 4 by 4 and larger frames | full about 2 stops, light about 1 stop, quarter about half a stop (practitioner values; meter it) |
@@ -295,12 +295,12 @@ White foam board (4 by 4 or 4 by 8 foot) for neutral soft fill; ultrabounce (a w
 
 | Gel | Shift | Converts | Loss |
 |---|---|---|---|
-| Full CTO (Lee 204; Rosco 3407 is the Rosco equivalent) | plus 159 mired | daylight 6,500 K to tungsten 3,200 K | 55 percent transmission at daylight, about 0.85 stop |
-| Half CTO (Lee 205) | plus 109 mired (Rosco 3408 half CTO is about plus 81, rated from 5,500 K) | 6,500 K to 3,800 K | 70.8 percent at daylight, about half a stop |
-| Quarter CTO (Lee 206) | plus 64 mired | 6,500 K to 4,600 K | 79.1 percent at daylight, about a third of a stop |
-| Full CTB (Lee 201, Rosco 3202 class) | minus 137 mired | tungsten 3,200 K to about 5,700 K | 34 to 35 percent transmission, about 1.5 stops |
-| Half CTB (Lee 202) | minus 78 mired | 3,200 K to 4,300 K | 53.2 percent at tungsten, about 0.9 stop |
-| Quarter CTB (Lee 203) | minus 35 mired | 3,200 K to 3,600 K | 70.5 percent at tungsten, about half a stop |
+| Full CTO (Lee 204; Rosco 3407 is the Rosco equivalent) | plus 159 mired | daylight 6,500 K to tungsten 3,200 K | 55 per cent transmission at daylight, about 0.85 stop |
+| Half CTO (Lee 205) | plus 109 mired (Rosco 3408 half CTO is about plus 81, rated from 5,500 K) | 6,500 K to 3,800 K | 70.8 per cent at daylight, about half a stop |
+| Quarter CTO (Lee 206) | plus 64 mired | 6,500 K to 4,600 K | 79.1 per cent at daylight, about a third of a stop |
+| Full CTB (Lee 201, Rosco 3202 class) | minus 137 mired | tungsten 3,200 K to about 5,700 K | 34 to 35 per cent transmission, about 1.5 stops |
+| Half CTB (Lee 202) | minus 78 mired | 3,200 K to 4,300 K | 53.2 per cent at tungsten, about 0.9 stop |
+| Quarter CTB (Lee 203) | minus 35 mired | 3,200 K to 3,600 K | 70.5 per cent at tungsten, about half a stop |
 | Plus green (Lee 244 class) | adds green | matches a tungsten or daylight lamp to fluorescent or sodium | about a third of a stop |
 | Minus green (Lee 247 Minusgreen class) | adds magenta | removes the green of fluorescent and cheap LED practicals | about a third of a stop |
 | Party gels (Lee 181 Congo Blue, 026 Bright Red, 128 Bright Pink) | saturated colour | background accents, club and event looks | one to three stops, deep blues and reds lose most |
@@ -318,14 +318,14 @@ A hazer puts a fine, long-hanging mist (water-based glycol or glycerine fluid, o
 | Fixture | Power | Type | Published figures | Notes |
 |---|---|---|---|---|
 | Aputure LS 600d Pro | 600 W, 720 W max draw | Daylight 5,600 K | about 8,500 lux at 3 m with the Hyper Reflector; the LS 600d reaches 29,300 lux at 3 m with the F10 Fresnel | The workhorse of Indian and Gulf commercials rental; Bowens mount (the bayonet accessory mount most softboxes fit); weather resistant |
-| Aputure LS 600c Pro II | 600 W | Tunable colour (RGBWW), 2,300 to 10,000 K | 91,500 lux at 1 m with the Hyper Reflector, about 82 percent above the first generation; IP54 (IP code: the first digit rates dust protection, where 5 is dust protected and 6 dust tight; the second rates water, where 4 is splashing, 5 jets and 6 powerful jets); launched 2024 (Cine Gear Expo); listed at $1,490 on aputure.com in October 2026 | Replaces the 600c Pro; use it where one lamp must be key and coloured accent across a day |
+| Aputure LS 600c Pro II | 600 W | Tunable colour (RGBWW), 2,300 to 10,000 K | 91,500 lux at 1 m with the Hyper Reflector, about 82 per cent above the first generation; IP54 (IP code: the first digit rates dust protection, where 5 is dust protected and 6 dust tight; the second rates water, where 4 is splashing, 5 jets and 6 powerful jets); launched 2024 (Cine Gear Expo); listed at $1,490 on aputure.com in October 2026 | Replaces the 600c Pro; use it where one lamp must be key and coloured accent across a day |
 | Aputure LS 600x Pro | 600 W | Bi-colour 2,700 to 6,500 K | listed $1,393 | |
 | Aputure LS 1200d Pro | 1,200 W COB, 1,440 W max draw | Daylight | 83,100 lux at 3 m with the narrow 15 degree Hyper Reflector, 22,400 at 30 degrees, 9,610 at 55 degrees; 8.94 kg; $3,390 | The window-through-diffusion lamp; approaches a 1,200 W HMI in a Fresnel and needs no ballast |
 | Aputure STORM CS32 | 3,200 W | Tunable colour | listed $7,590 (Cine Kit with CF16 Fresnel $10,499) | The large tunable source for stages and day exteriors |
 | Aputure LS 300d II, LS 300x | 300 W | Daylight and bi-colour | LS 300d II listed $759 | Kickers, backlights, small interiors |
 | Nanlux Evoke 2400B | 2,400 W | Bi-colour 2,700 to 6,500 K with green and magenta plus or minus 80 | CRI 96, TLCI 97; over 300,000 lux at 1 m; IP55; AC 100 to 240 V at 26 A max | The HMI replacement for sunlight through a window |
 | Nanlux Evoke 5000B | 5,000 W | Bi-colour 2,700 to 6,500 K | CRI 97, TLCI 98, TM-30 Rf 96 and Rg 102, SSI 85 at 3,200 K and 74 at 5,600 K; about 555,250 lux at 1 m at 5,600 K with the reflector at 45 degrees; IP66; 46 kg with yoke; 44 dB(A) in smart fan mode; US list $14,800, or $15,500 with flight case (CineD launch report); about 19.8 lakh rupees in India including GST and duty on a 2025 retailer listing | Nanlux states its output approaches a 9 kW HMI; maximum draw 5,200 W, about 23 A at 230 V, beyond any 16 A Indian socket, so a generator or a venue's three-phase feed |
-| Aputure STORM 1200x | 1,200 W output, 1,550 W maximum draw | Tunable white 2,500 to 10,000 K, plus or minus 100 percent green and magenta, xy colour control | CRI 95 or above, TLCI 95 or above, TM-30 Rf 95, SSI 87 against tungsten and D56; 8,490 lux at 3 m bare and 22,500 lux with the 45 degree reflector at 5,600 K; IP65; head with yoke 9.5 kg; $2,990 | The tunable-white successor to the LS 1200d Pro |
+| Aputure STORM 1200x | 1,200 W output, 1,550 W maximum draw | Tunable white 2,500 to 10,000 K, plus or minus 100 per cent green and magenta, xy colour control (setting colour by CIE chromaticity coordinates) | CRI 95 or above, TLCI 95 or above, TM-30 Rf 95, SSI 87 against tungsten and a 5,600 K daylight reference; 8,490 lux at 3 m bare and 22,500 lux with the 45 degree reflector at 5,600 K; IP65; head with yoke 9.5 kg; $2,990 | The tunable-white successor to the LS 1200d Pro |
 | Aputure STORM 1000c | 1,000 W | Full colour | $2,990 | The coloured 1,000 W key and accent |
 | Aputure STORM 700x and 400x | 700 W and 400 W | Tunable white | $1,690 and $1,059 | Mid-size keys and backlights |
 | Aputure STORM 80c | 80 W | Full colour | $599 | Accent lamp, hidden practical, car interior |
@@ -350,11 +350,11 @@ Control protocols: DMX (DMX512, the wired lighting-control standard of 512 chann
 
 ### 5.4 RGBWW and colour accuracy
 
-RGBWW fixtures mix red, green, blue, warm white and cool white emitters (some add lime, amber or cyan; Aputure calls its mix BLAIR). They can hit any gel colour at the dial and still produce a high-CRI white because the white emitters carry the skin-tone load. Two cautions: saturated colours from LEDs are narrow-band and can clip on camera (a deep blue goes electric and loses all texture; dial it back to 80 percent saturation), and two makers' "Congo Blue" differ, so set colours by gel number or by xy coordinates in the app rather than by eye.
+RGBWW fixtures mix red, green, blue, warm white and cool white emitters (some add lime, amber or cyan; Aputure calls its mix BLAIR). They can hit any gel colour at the dial and still produce a high-CRI white because the white emitters carry the skin-tone load. Two cautions: saturated colours from LEDs are narrow-band and can clip on camera (a deep blue goes electric and loses all texture; dial it back to 80 per cent saturation), and two makers' "Congo Blue" differ, so set colours by gel number or by xy coordinates in the app.
 
 ### 5.5 HMI
 
-HMI (hydrargyrum medium-arc iodide: a metal halide arc lamp with a ballast) is still the brightest daylight per watt and the sun replacement for exteriors. ARRI M18: 1,800 W, lens-less MAX reflector (the technology from the ARRIMAX, which won an Academy Scientific and Engineering Award), beam 20 to 60 degrees, 11.5 kg head, dimmable 50 to 100 percent via the ballast, and ARRI states it is more than 70 percent brighter than a 1,200 W head. K5600 Joker (200, 400, 800 and 1,600 W; Joker-Bug versions fit inside softboxes) are the compact HMIs for travel. Rules: HMIs take two to three minutes to strike and reach colour, cannot be hot-restruck without the right ballast, and flicker on magnetic ballasts at mains frequency, so insist on electronic flicker-free ballasts and shoot at 25 fps with a 180 degree shutter (an exposure of half the frame interval, 1/50 s at 25 fps) in 50 Hz countries (India and the UAE); other frame rates in 17.3. HMIs run hot and need safety glass: a UV-emitting arc with a cracked lens burns skin.
+HMI (hydrargyrum medium-arc iodide: a metal halide arc lamp with a ballast) is still the brightest daylight per watt and the sun replacement for exteriors. ARRI M18: 1,800 W, lens-less MAX reflector (the technology from the ARRIMAX, which won an Academy Scientific and Engineering Award), beam 20 to 60 degrees, 11.5 kg head, dimmable 50 to 100 per cent via the ballast, and ARRI states it is more than 70 per cent brighter than a 1,200 W head. K5600 Joker (200, 400, 800 and 1,600 W; Joker-Bug versions fit inside softboxes) are the compact HMIs for travel. Rules: HMIs take two to three minutes to strike and reach colour, cannot be hot-restruck without the right ballast, and flicker on magnetic ballasts at mains frequency, so insist on electronic flicker-free ballasts and shoot at 25 fps with a 180 degree shutter (an exposure of half the frame interval, 1/50 s at 25 fps) in 50 Hz countries (India and the UAE); other frame rates in 17.3. HMIs run hot and need safety glass: a UV-emitting arc with a cracked lens burns skin.
 
 ### 5.6 Tungsten, fluorescent legacy, practicals
 
@@ -369,10 +369,10 @@ Bi-colour lamps (two white emitter sets) give more output and better skin at any
 - Mains: 230 V at 50 Hz in India and the UAE; a standard domestic 16 A socket in India delivers about 3.5 kW, which is five 600 W COBs or two 1,200 W heads plus monitors, and no more. Big HMIs and the Evoke 5000B need three-phase or a generator.
 - Generators: film shoots in India run on silent diesel gensets (62.5 kVA and 125 kVA are common sizes; kVA, kilovolt-amperes, is the generator's apparent power rating, roughly its kW at a good power factor) that come with an operator, cable, and a distribution box; book through the lighting vendor, specify "silent" and a run time, and park it where the sound recordist agrees (section 10). In Dubai, generators on public land need the Dubai Film and TV Commission permit on the location paperwork, and most hotels require a venue electrician to tie in.
 - Rental norms, Mumbai: equipment is quoted per shift (the 12 hour shift, usually 7 am to 7 pm or 8 to 8, with overtime by the hour after), lights arrive with the vendor's lightmen (the term for lighting technicians) whose wages, conveyance and food are separate lines on the quote, crews are affiliated to FWICE (Federation of Western India Cine Employees) unions and the gaffer runs the lightmen, and a security deposit or a letter from a known production house is standard. Cartage (transport) and a "setting" charge are quoted separately. Rates vary by vendor and are not published; get three quotes and verify the lamp model on arrival.
-- Rental norms, Dubai: quotes per day with weekly rates at four to five days, crew (the gaffer; the best boy, the gaffer's deputy; and sparks, the electricians) quoted per 10 or 12 hour day, VAT at 5 percent added, insurance certificates required by the rental house, and most gear housed in Dubai Studio City or Al Quoz. Permits for exteriors come through the Dubai Film and TV Commission; allow several working days and a location fee for public spaces. Abu Dhabi runs its own commission (Abu Dhabi Film Commission, with the 2023 rebate scheme for qualifying productions).
+- Rental norms, Dubai: quotes per day with weekly rates at four to five days, crew (the gaffer; the best boy, the gaffer's deputy; and sparks, the electricians) quoted per 10 or 12 hour day, VAT at 5 per cent added, insurance certificates required by the rental house, and most gear housed in Dubai Studio City or Al Quoz. Permits for exteriors come through the Dubai Film and TV Commission; allow several working days and a location fee for public spaces. Abu Dhabi runs its own commission (Abu Dhabi Film Commission, with the 2023 rebate scheme for qualifying productions).
 - Voltage and sockets travel: Indian crews bring their own 16 A to 15 A adaptors; UAE uses BS 1363 (UK) sockets, so British-spec distros (power distribution boxes) work.
 - Heat and the midday break: the UAE's Ministry of Human Resources and Emiratisation (MoHRE) bans outdoor work in direct sun from 12:30 to 15:00 between 15 June and 15 September; fines have been AED 5,000 per worker, up to AED 50,000 where several workers are involved (verify the current year's resolution before scheduling). Saudi Arabia runs a similar ban from 12:00 to 15:00 over the same months (verify the current dates). This is crew law as well as light quality, so the summer exterior schedule is dawn, dusk, and interiors in between (6.8). Check each fixture's rated operating temperature: COB heads throttle or shut down in 45 degree sun, so shade heads, ballasts and control boxes.
-- Condensation: lenses, mics and monitors carried from a 20 degree interior into 35 degrees at 70 to 80 percent humidity fog for 30 to 60 minutes. Acclimatise cases unopened for that time and carry silica gel.
+- Condensation: lenses, mics and monitors carried from a 20 degree interior into 35 degrees at 70 to 80 per cent humidity fog for 30 to 60 minutes. Acclimatise cases unopened for that time and carry silica gel.
 - Monsoon Mumbai (June to September) and pool decks: IP-rated heads (the IP65 STORM heads, the IP54 600c Pro II), a 30 mA RCCB (residual current circuit breaker, which cuts the supply on an earth leak) on every distribution box, and an earth check on the venue supply before the first lamp is struck.
 - Dust and smog: Delhi's winter smog and Gulf dust flatten contrast and kill the blue-hour sky; hold a weather day in the schedule.
 - Batteries and air travel: under the passenger rules of IATA (the International Air Transport Association), spare lithium-ion batteries travel in cabin baggage only; up to 100 Wh (watt-hours, a battery's stored energy) needs no approval, over 100 Wh up to 160 Wh needs airline approval with a maximum of two spares per person, and over 160 Wh is forbidden on passenger aircraft. Crews flying between Mumbai and Dubai therefore carry 98 Wh V-mount batteries (the standard camera battery plate) or rent locally. Runtime check: an LS 600d Pro drawing about 720 W empties two 98 Wh batteries in about 15 minutes, so batteries are for tubes, hides and moves, and keys run on mains or a generator.
@@ -421,7 +421,7 @@ Everything in 6.3 plus the crystal (the glass face), which reflects the entire r
 
 ### 6.6 Food
 
-Backlight or side light, never front: light from behind at 30 to 45 degrees above gives sheen on sauces and translucency to greens and glass; a white bounce in front for fill; a small black flag to keep the back edge of the plate dark so the food is the brightest thing. Speed is the constraint, because food dies in minutes (salad wilts, ice cream slides, foam collapses), so light the set with a stand-in plate, lock focus and exposure, and swap the hero in. Warm key (4,000 to 4,500 K) flatters most food; cool key kills it except for seafood and ice. For F&B clients in India and the Gulf, chefs prefer dishes "as served"; the stylist's job is to keep it true and make it hold under lights. Pours, splashes and drops: see section 8 (flash duration and high-speed capture).
+Backlight or side light: light from behind at 30 to 45 degrees above gives sheen on sauces and translucency to greens and glass; a white bounce in front for fill; a small black flag to keep the back edge of the plate dark so the food is the brightest thing. Speed is the constraint, because food dies in minutes (salad wilts, ice cream slides, foam collapses), so light the set with a stand-in plate, lock focus and exposure, and swap the hero in. Warm key (4,000 to 4,500 K) flatters most food; cool key kills it except for seafood and ice. For F&B clients in India and the Gulf, chefs prefer dishes "as served"; the stylist's job is to keep it true and make it hold under lights. Pours, splashes and drops: see section 8 (flash duration and high-speed capture).
 
 ### 6.7 Interiors and architecture
 
@@ -436,7 +436,7 @@ Available light first: a well-designed hotel was lit by a lighting designer, and
 
 ### 6.9 Fashion
 
-Three looks worth naming because clients ask for them by reference: hard sun or a bare bulb (a single hard source, crisp shadows, the Jacquemus noon and the 1990s Helmut Newton pool); the Avedon white (Richard Avedon moved to studio strobe by the late 1950s and stripped out soft lights and props so that the subject against a plain white paper sweep was the whole picture; In the American West, shot 1979 to 1984 on 8 by 10 film and published 1985, is the reference; technically a white background lit two stops over the subject, a large soft key on axis, and nothing else); and the Juergen Teller flash (on-camera flash, snapshot aesthetic, imperfection on purpose; Marc Jacobs campaigns from the Spring/Summer 1998 season to Spring/Summer 2014, Céline Fall/Winter 2010, Vivienne Westwood 2008 to 2010, Louis Vuitton 2014 to 2015, the Grand Palais Éphémère exhibition "i need to live" in 2023). Each is a complete idea; the mistake is mixing them in one campaign. Movement needs light that holds across the frame (a 2.4 m book light or sun) rather than a tight octa that the model walks out of.
+Three looks worth naming because clients ask for them by reference: hard sun or a bare bulb (a single hard source, crisp shadows, the Jacquemus noon and the 1990s Helmut Newton pool); the Avedon white (Richard Avedon moved to studio strobe by the late 1950s and stripped out soft lights and props so that the subject against a plain white paper sweep was the whole picture; In the American West, shot 1979 to 1984 on 8 by 10 film and published 1985, is the reference; technically a white background lit two stops over the subject, a large soft key on axis, and nothing else); and the Juergen Teller flash (on-camera flash, snapshot aesthetic, imperfection on purpose; Marc Jacobs campaigns from the Spring/Summer 1998 season to Spring/Summer 2014, Céline Fall/Winter 2010, Vivienne Westwood 2008 to 2010, Louis Vuitton 2014 to 2015, the Grand Palais Éphémère exhibition "i need to live" in 2023). Each is a complete idea; the mistake is mixing them in one campaign. Movement needs light that holds across the frame (a 2.4 m book light or sun), because a model walks out of a tight octabox in two steps.
 
 ### 6.10 Cars
 
@@ -467,7 +467,7 @@ Generative image and video models (Midjourney, Imagen, Flux, Kling, Veo, Runway,
 | clamshell beauty lighting, catchlights | 2.6 | Works in most 2025 to 2026 models |
 | large softbox reflection on the bottle, gradient highlight | product gloss control | Specify "one highlight" or models add several |
 
-What the models get wrong, and what to check in every generated frame before it goes to a client: impossible sources (a shadow that implies a sun from the left while a window glows on the right), double or triple shadows under one apparent source, catchlights in two different positions in the two eyes, specular highlights on matte fabric, a rim light with no visible or plausible source, light on the face warmer than the light on the hands, and haze or god rays by default. Fix in the prompt by stating one source and its direction and quality in sequence ("a single large soft window light from camera left, no other sources, soft shadows falling to the right"), by naming the ratio in words ("gentle contrast, shadows two stops darker"), and by rejecting frames with mixed shadow directions rather than retouching them. Treat a generated reference as the lighting diagram for the real shoot, and light the physics on the day (design-taste, section 3: AI renders with impossible light are a cheap tell).
+What the models get wrong, and what to check in every generated frame before it goes to a client: impossible sources (a shadow that implies a sun from the left while a window glows on the right), double or triple shadows under one apparent source, catchlights in two different positions in the two eyes, specular highlights on matte fabric, a rim light with no visible or plausible source, light on the face warmer than the light on the hands, and haze or god rays by default. Fix in the prompt by stating one source and its direction and quality in sequence ("a single large soft window light from camera left, no other sources, soft shadows falling to the right"), by naming the ratio in words ("gentle contrast, shadows two stops darker"), and by rejecting frames with mixed shadow directions. Treat a generated reference as the lighting diagram for the real shoot, and light the physics on the day (design-taste, section 3: AI renders with impossible light are a cheap tell).
 
 ### 7.1 CG packshots, LED volumes and AI relighting
 
@@ -481,7 +481,7 @@ What the models get wrong, and what to check in every generated frame before it 
 - Flash sync: a focal-plane shutter syncs with flash up to about 1/200 to 1/250 s; above that, high-speed sync (HSS) pulses the flash through the exposure at a cost of about two stops of power, useful for overpowering sun at f/2 for a fashion portrait. Leaf-shutter cameras (Hasselblad, Phase One, Fuji GFX leaf lenses) sync at any speed and are why medium format still owns high-end fashion in daylight with flash.
 - Modelling lamps (the continuous bulb inside a strobe head, now LED on Profoto and Broncolor) show where the light falls but lie about ratios; meter the flash.
 - Hybrid shoots (a campaign that needs stills and motion from one set in one day, the norm for Mask360 clients): light continuous for motion with COBs through the same modifiers the stills photographer will use, then for stills either accept the continuous light (modern mirrorless at ISO 800 to 1600 handles a 600 W COB through a 120 cm octa at f/4) or swap heads for strobes in the same modifiers. Keep the colour temperature identical (strobes are about 5,500 to 5,600 K; set the COBs to 5,600 K) so the two deliverables grade together. The classic failure is a video crew on 3,200 K practical-led light and a stills crew on strobe, giving two campaigns in two colours.
-- Freezing liquids (pours, serum drops, splashes): stills freeze them with flash duration, so quote the maker's t0.1 figure (the time the flash spends above 10 percent of peak), because the t0.5 figure (above half of peak) flatters by about three times. IGBT strobe heads (which cut the flash tube's discharge electronically) reach under 1/10,000 s at low power, which freezes a splash. In motion, a high-speed camera at 1,000 fps with a 1/2,000 s exposure receives 40 times less light per frame than 25 fps at 1/50 s, about 5.3 stops, so plan large flicker-free sources (DC-driven LED, flicker-free HMI) close and hard, and test at speed (5.7, 17.3).
+- Freezing liquids (pours, serum drops, splashes): stills freeze them with flash duration, so quote the maker's t0.1 figure (the time the flash spends above 10 per cent of peak), because the t0.5 figure (above half of peak) flatters by about three times. IGBT strobe heads (which cut the flash tube's discharge electronically) reach under 1/10,000 s at low power, which freezes a splash. In motion, a high-speed camera at 1,000 fps with a 1/2,000 s exposure receives 40 times less light per frame than 25 fps at 1/50 s, about 5.3 stops, so plan large flicker-free sources (DC-driven LED, flicker-free HMI) close and hard, and test at speed (5.7, 17.3).
 
 ## 9. Sound fundamentals
 
@@ -502,11 +502,11 @@ Reason the map matters to a creative director: an edit that feels "muddy" or "ch
 
 ### 9.2 Decibels: dBFS, dB SPL, dBu, and dynamic range
 
-The decibel is a ratio on a logarithmic scale; it needs a reference to mean anything. dB SPL (sound pressure level) is acoustic loudness against the threshold of hearing: a quiet room about 30 dB SPL, conversation about 60, a cinema reference mix peaks at 105 per channel, pain near 120. dBu is an analogue line level against 0.775 V (professional line level is plus 4 dBu). dBFS (decibels relative to full scale) is digital: 0 dBFS is the largest value the file can hold and everything is negative; clip above 0 and the waveform is flat-topped and unrecoverable (except in 32-bit float, 10.7). A rule set in these units: record dialogue peaking around minus 12 to minus 6 dBFS with an average near minus 18 to minus 20, mix dialogue around minus 23 LUFS for broadcast or minus 14 for streaming (13.4), and never let the true peak pass minus 1 dBTP. Dynamic range is the span between the noise floor and the loudest clean level: 24-bit audio holds about 144 dB in theory, a good preamp and mic chain about 110 to 120, a phone video about 60.
+The decibel is a ratio on a logarithmic scale; it needs a reference to mean anything. dB SPL (sound pressure level) is acoustic loudness against the threshold of hearing: a quiet room about 30 dB SPL, conversation about 60, a cinema reference mix peaks at 105 per channel, pain near 120. dBu is an analogue line level against 0.775 V (professional line level is plus 4 dBu). dBFS (decibels relative to full scale) is digital: 0 dBFS is the largest value the file can hold and everything is negative; clip above 0 and the waveform is flat-topped and unrecoverable (except in 32-bit float, 10.7). A rule set in these units: record dialogue peaking around minus 12 to minus 6 dBFS with an average near minus 18 to minus 20, mix dialogue around minus 23 LUFS (loudness units relative to full scale, 13.4) for broadcast or minus 14 for streaming (13.4), and never let the true peak pass minus 1 dBTP (decibels true peak). Dynamic range is the span between the noise floor and the loudest clean level: 24-bit audio holds about 144 dB in theory, a good preamp and mic chain about 110 to 120, a phone video about 60.
 
 ### 9.3 Sample rate and bit depth
 
-Sample rate is how many times per second the signal is measured; by Nyquist, it captures frequencies up to half the rate. 48 kHz is the video standard (every camera, every broadcaster, every NLE (non-linear editing application) assumes it); 44.1 kHz is the music CD legacy and still the delivery for some music platforms; 96 kHz is for sound design where you will pitch recordings down (a 96 kHz recording of a door creak pitched down an octave still has content to 24 kHz). Bit depth is the resolution of each sample: 16-bit gives about 96 dB of range, 24-bit about 144 dB, so 24-bit lets you record conservatively (peaks at minus 12) with no audible noise penalty. Deliver 48 kHz 24-bit WAV for all video; convert music masters to 48 kHz once, with a quality resampler, never let the NLE do it on the fly.
+Sample rate is how many times per second the signal is measured; by Nyquist, it captures frequencies up to half the rate. 48 kHz is the video standard (every camera, every broadcaster, every NLE (non-linear editing application) assumes it); 44.1 kHz is the music CD legacy and still the delivery for some music platforms; 96 kHz is for sound design where you will pitch recordings down (a 96 kHz recording of a door creak pitched down an octave still has content to 24 kHz). Bit depth is the resolution of each sample: 16-bit gives about 96 dB of range, 24-bit about 144 dB, so 24-bit lets you record conservatively (peaks at minus 12) with no audible noise penalty. Deliver 48 kHz 24-bit WAV for all video; convert music masters to 48 kHz once, with a quality resampler, before they enter the NLE.
 
 ### 9.4 Mono, stereo, surround, Atmos
 
@@ -579,13 +579,13 @@ Timecode is a running clock (hours, minutes, seconds, frames) written into every
 
 ### 10.8 Launch events: press feed, desk split, room mics
 
-For a launch, agree three feeds with the AV (audio-visual) company before the run of show: a press feed (a mult box, which splits one desk output into many XLR line outputs, for TV and creator crews); a multitrack split from the front-of-house desk to the recap recorder (over Dante audio networking or USB), so speeches arrive clean rather than off a camera mic; and two room mics as an ORTF pair (10.1) for applause and atmosphere. Get the venue's dB(A) limit and curfew in writing before the run of show; ballroom limits are set per venue, and India's 10 pm loudspeaker rule (6.11) applies outdoors.
+For a launch, agree three feeds with the AV (audio-visual) company before the run of show: a press feed (a mult box, which splits one desk output into many XLR line outputs, for TV and creator crews); a multitrack split from the front-of-house desk to the recap recorder (over Dante audio networking or USB), so speeches arrive clean from the desk; and two room mics as an ORTF pair (10.1) for applause and atmosphere. Get the venue's dB(A) limit and curfew in writing before the run of show; ballroom limits are set per venue, and India's 10 pm loudspeaker rule (6.11) applies outdoors.
 
 ## 11. Post sound: dialogue, foley, ambience, design
 
 ### 11.1 Dialogue editing
 
-The dialogue editor's sequence: choose the best mic per line (boom first, lav where the boom is phasey or distant), conform (rebuild the edit's audio from the original recordings against the locked picture), split into tracks by character and by mic, fill every gap with room tone, fade every edit (2 to 10 frames), remove clicks and mouth noise, soften breaths rather than remove them (a breathless voice reads as synthetic), match the tonal colour of lav and boom with EQ, and then and only then run noise reduction. Noise reduction tools as of October 2026: iZotope RX 12 (launched 29 April 2026 per Mix magazine's launch report, succeeding RX 11, which many post houses still run; Advanced, Standard and Elements tiers; the rebuilt Dialogue Isolate separates speech from background with a neural network, Spectral De-noise learns a noise profile, De-reverb, Mouth De-click, Breath Control, Ambience Match, Scene Rebalance and the Stems View that splits a mix into dialogue, music and effects) and Adobe Enhance Speech in Premiere Pro and Audition 2026 (one slider in the Essential Sound panel on a Dialogue clip; rebuilds the voice as if recorded in a booth). Their limits: Enhance Speech at full strength produces a dry, processed, slightly synthetic voice with the room removed entirely, which is wrong for any scene where the location is the point (a hotel film) and right for a founder VO recorded in a car; use the mix slider at 30 to 60 percent. Dialogue Isolate at heavy settings leaves "underwater" artefacts on sibilants and in pauses; apply it at 40 to 70 percent, keep a little of the original, and compare with the bypass at mix level, because what sounds clean in solo often sounds dead in context. Neither tool fixes a clipped or wind-destroyed recording.
+The dialogue editor's sequence: choose the best mic per line (boom first, lav where the boom is phasey or distant), conform (rebuild the edit's audio from the original recordings against the locked picture), split into tracks by character and by mic, fill every gap with room tone, fade every edit (2 to 10 frames), remove clicks and mouth noise, soften breaths and keep them (a breathless voice reads as synthetic), match the tonal colour of lav and boom with EQ, and then and only then run noise reduction. Noise reduction tools as of October 2026: iZotope RX 12 (launched 29 April 2026 per Mix magazine's launch report, succeeding RX 11, which many post houses still run; Advanced, Standard and Elements tiers; the rebuilt Dialogue Isolate separates speech from background with a neural network, Spectral De-noise learns a noise profile, De-reverb, Mouth De-click, Breath Control, Ambience Match, Scene Rebalance and the Stems View that splits a mix into dialogue, music and effects) and Adobe Enhance Speech in Premiere Pro and Audition 2026 (one slider in the Essential Sound panel on a Dialogue clip; rebuilds the voice as if recorded in a booth). Their limits: Enhance Speech at full strength produces a dry, processed, slightly synthetic voice with the room removed entirely, which is wrong for any scene where the location is the point (a hotel film) and right for a founder VO recorded in a car; use the mix slider at 30 to 60 per cent. Dialogue Isolate at heavy settings leaves "underwater" artefacts on sibilants and in pauses; apply it at 40 to 70 per cent, keep a little of the original, and compare with the bypass at mix level, because what sounds clean in solo often sounds dead in context. Neither tool fixes a clipped or wind-destroyed recording.
 
 ### 11.2 ADR
 
@@ -683,7 +683,7 @@ Mix order: dialogue and VO levelled and cleaned (11.1), then music under it, the
 
 ### 13.2 Gain staging, EQ, compression, limiting, ducking, reverb, panning
 
-- Gain staging: keep every track's nominal level around minus 18 to minus 20 dBFS so plug-ins operate in their design range and the bus has headroom; raise the whole mix at the end with the limiter, never by pushing faders into the red.
+- Gain staging: keep every track's nominal level around minus 18 to minus 20 dBFS so plug-ins operate in their design range and the bus has headroom; raise the whole mix at the end with the limiter, with every fader kept out of the red.
 - EQ: high-pass dialogue at 80 to 100 Hz (male) or 100 to 120 Hz (female); cut boxiness around 300 to 400 Hz by 2 to 4 dB with a medium Q (the width of the EQ band; a higher Q is narrower); add presence at 3 to 5 kHz by 1 to 2 dB if a lav is dull; de-ess (reduce sibilance with a de-esser, a compressor that acts only on the "s" band) at 5 to 8 kHz. On music under dialogue, cut 2 to 3 dB around 1 to 4 kHz so the voice sits in the hole.
 - Compression: on dialogue a ratio of 2:1 to 4:1, attack 10 to 30 ms, release 100 to 300 ms, 3 to 6 dB of gain reduction on peaks; two gentle stages beat one hard one. On music, little or none (the master is already compressed).
 - Limiting: a true-peak limiter on the master set to a ceiling of minus 1 dBTP (minus 2 for Netflix-style specs and for anything that will be re-encoded hard), with the input gain set to reach the integrated target (13.4). A limiter working more than 3 to 4 dB on peaks is audible as pumping; fix the balance upstream.
@@ -723,7 +723,7 @@ Youlean Loudness Meter 2 (free, with film, TV and gaming presets covering ITU-R 
 
 ### 14.1 Sound off first
 
-A large share of feed video is watched muted, in public, with captions; the exact share is a platform figure that changes by surface and is rarely published, so the house designs every social cut to work twice: once silent (captions, on-screen type, a picture that explains itself; see 26-platform-and-format-specs-2026.md for safe areas and caption specs) and once with sound. The test is to watch the cut muted on a phone before the sound pass begins. Burned-in captions in the brand typeface, sentence case, two lines maximum, placed above the platform UI zone. Sound-on and sound-off behaviour by platform: 17-short-form-social-and-platform-craft.md, section 1.7; captions as access: 11-accessibility-and-inclusive-design.md, section 10.7.
+A large share of feed video is watched muted, in public, with captions; the exact share is a platform figure that changes by surface and is rarely published, so the house designs every social cut to work twice: once silent (captions, on-screen type, a picture that explains itself; see 26-platform-and-format-specs-2026.md for safe areas and caption specs) and once with sound. The test is to watch the cut muted on a phone before the sound pass begins. Burned-in captions in the brand typeface, sentence case, two lines maximum, placed above the platform UI (user interface) zone. Sound-on and sound-off behaviour by platform: 17-short-form-social-and-platform-craft.md, section 1.7; captions as access: 11-accessibility-and-inclusive-design.md, section 10.7.
 
 ### 14.2 The hook sound in the first second
 
@@ -744,7 +744,7 @@ Instagram and TikTok license popular music for personal and creator accounts to 
 A national Indian campaign commonly ships in Hindi and English plus regional versions (Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati); a Gulf campaign ships in Arabic and English. For the Gulf, the Arabic register is a casting decision: Modern Standard Arabic for government and formal voices, Khaleeji (the Gulf dialects, Emirati or Saudi) for local warmth, Egyptian or Levantine for pan-Arab entertainment reach.
 
 - Write every version to the same duration and a similar syllable count, so it lands on the picture's beats.
-- Mix a full stereo master, a dialogue stem and an M&E (music and effects without voice; 13-motion-graphics-and-3d-production.md, section 14.4; DME (dialogue, music and effects stems) delivery in 16-editing-colour-grading-and-delivery.md, section 12.1), so each language is a VO session plus a remix and never a rebuild.
+- Mix a full stereo master, a dialogue stem and an M&E (music and effects without voice; 13-motion-graphics-and-3d-production.md, section 14.4; DME (dialogue, music and effects stems) delivery in 16-editing-colour-grading-and-delivery.md, section 12.1), so each language costs a VO session plus a remix.
 - Cast native speakers per language and have a native reviewer at the session for the brand name and product terms.
 - Version captions and supers with the audio, in the language's own script (Devanagari; Arabic right to left), timed to the new read.
 - AI lip-sync dubbing (ElevenLabs Dubbing, HeyGen) is for social utility versions only, with the disclosure rule in section 16.
@@ -810,9 +810,9 @@ The kelvin, lighting-ratio, frequency-band and loudness tables live where they a
 
 | Material | Approximate loss |
 |---|---|
-| Lee 216 full white diffusion | about 1.5 stops (36 percent transmission) |
-| Lee 250 half white | about 0.75 stop (60 percent) |
-| Lee 251 quarter white | about 0.3 stop (80 percent) |
+| Lee 216 full white diffusion | about 1.5 stops (36 per cent transmission) |
+| Lee 250 half white | about 0.75 stop (60 per cent) |
+| Lee 251 quarter white | about 0.3 stop (80 per cent) |
 | Lee 252 eighth white, 452 sixteenth | under a quarter stop |
 | Opal frost (Lee 410) | about half a stop (meter it) |
 | Full grid cloth | about 2 stops (meter it) |
@@ -820,12 +820,12 @@ The kelvin, lighting-ratio, frequency-band and loudness tables live where they a
 | Quarter grid cloth | about half a stop |
 | Artificial silk | about 1 stop |
 | Unbleached muslin | about 1.5 to 2 stops |
-| Full CTO (Lee 204) | about 0.85 stop (55 percent at daylight; plus 159 mired) |
-| Half CTO (Lee 205) | about half a stop (70.8 percent at daylight; plus 109 mired) |
-| Quarter CTO (Lee 206) | about a third of a stop (79.1 percent; plus 64 mired) |
-| Full CTB (Lee 201) | about 1.5 stops (34 to 35 percent; minus 137 mired) |
-| Half CTB (Lee 202) | about 0.9 stop (53.2 percent at tungsten; minus 78 mired) |
-| Quarter CTB (Lee 203) | about half a stop (70.5 percent at tungsten; minus 35 mired) |
+| Full CTO (Lee 204) | about 0.85 stop (55 per cent at daylight; plus 159 mired) |
+| Half CTO (Lee 205) | about half a stop (70.8 per cent at daylight; plus 109 mired) |
+| Quarter CTO (Lee 206) | about a third of a stop (79.1 per cent; plus 64 mired) |
+| Full CTB (Lee 201) | about 1.5 stops (34 to 35 per cent; minus 137 mired) |
+| Half CTB (Lee 202) | about 0.9 stop (53.2 per cent at tungsten; minus 78 mired) |
+| Quarter CTB (Lee 203) | about half a stop (70.5 per cent at tungsten; minus 35 mired) |
 | Single net | 1 stop |
 | Double net | 2 stops |
 | Lee 209 ND 0.3 | 1 stop |
@@ -896,7 +896,7 @@ Incident illuminance from lux = 340 × T² ÷ (ISO × t) (1.1), at 1/50 s; value
 ### 18.3 Reviewing a cut for light
 
 1. Where is the key in each shot, and does it stay on the same side of the face across the reverse (2.12)?
-2. Is the ratio intended, and does it hold on a phone at half brightness in a lit room, with shadow detail above about 5 percent luminance (1.5)?
+2. Is the ratio intended, and does it hold on a phone at half brightness in a lit room, with shadow detail above about 5 per cent luminance (1.5)?
 3. Is skin right on every complexion in the frame, with no grey fill and no green edge from a cheap practical (6.1, 5.6)?
 4. Does every source have a motivation the audience could name (2.3)?
 5. In generated frames: one shadow direction, matching catchlights, no unmotivated rim (section 7).
@@ -922,7 +922,7 @@ A creative director gets faster and better results by translating a feeling into
 | "The product looks cheap" | Shape the highlight: strip softbox for one clean line, black cards for edges, no hot dots (6.5) |
 | "The gold looks yellow" | Put a warm card in the reflection and check the fixture's SSI against daylight (1.3, 6.3) |
 | "The voice sounds thin" | Use the boom over the lav, add 2 dB around 150 to 200 Hz, less noise reduction (11.1, 13.2) |
-| "It sounds muddy" | Cut 200 to 500 Hz on voice, music and ambience in turn, never all three at once (9.1) |
+| "It sounds muddy" | Cut 200 to 500 Hz on voice, music and ambience one at a time, listening after each (9.1) |
 | "The music fights the VO" | Duck the music 6 to 10 dB and cut 2 to 3 dB at 1 to 4 kHz on the music bus (13.2) |
 | "It sounds like an advert" | Remove the hit and the riser, open on a real sound, end on a real sound (11.5, 12.4) |
 | "It is quieter than the others on Instagram" | Check the master is at minus 14 LUFS integrated and minus 1 dBTP before raising anything (13.4) |

@@ -655,12 +655,12 @@ Storybook is the open-source workshop for building and documenting components in
 
 - Stories in Component Story Format (CSF 3): one file per component, one named export per state. A story is the unit that tests, docs, visual regression and the accessibility addon all consume, so write every state the state matrix in 06-ui-design-craft.md section 3 lists.
 - Autodocs generates a docs page from stories and prop types; Controls lets a reviewer change props live, which replaces most "can it do X" questions.
-- The accessibility addon runs axe-core against each story and reports violations in the panel; with the Vitest-based test addon the same checks run in CI and can fail a build (section 12.4).
+- The accessibility addon runs axe-core (Deque's open-source accessibility rules engine) against each story and reports violations in the panel; with the Vitest-based test addon the same checks run in CI and can fail a build (section 12.4).
 - Visual tests through Chromatic (9.2); interaction tests with the `play` function; MCP (experimental) so coding agents can read stories and docs.
 
 ### 9.2 Chromatic and visual regression
 
-Chromatic (by Storybook's maintainers) renders every story on every commit, diffs the pixels against the accepted baseline and asks a human to approve changes. Pricing on chromatic.com in October 2026: Free at 5,000 snapshots per month on Chrome only; Starter at $179 per month for 35,000 snapshots across Chrome, Safari, Firefox and Edge; Pro at $399 per month for 85,000; overage at $0.008 per snapshot; Enterprise custom. Earlier copies of the page showed a Starter $149, Standard $349 and Pro $649 ladder; the ladder changed during 2026, so quote the live page in a proposal. Snapshots multiply: stories times builds times browsers times viewports (two stories, ten builds, two browsers, two viewports is 80 snapshots), and accessibility checks add one more per story. Alternatives with their own published numbers: Argos at $100 per month for 35,000 screenshots and Percy from $599 per month (Argos's comparison, July 2026). Visual regression is the single most effective guard against token drift: a changed alias value shows up as a diff on every affected story within minutes.
+Chromatic (by Storybook's maintainers) renders every story on every commit, diffs the pixels against the accepted baseline and asks a human to approve changes. Pricing on chromatic.com in October 2026: Free at 5,000 snapshots per month on Chrome only; Starter at $179 per month for 35,000 snapshots across Chrome, Safari, Firefox and Edge; Pro at $399 per month for 85,000; overage at $0.008 per snapshot; Enterprise custom. Earlier versions of the page showed a Starter $149, Standard $349 and Pro $649 ladder, so quote the live page in a proposal. Snapshots multiply: stories times builds times browsers times viewports (two stories, ten builds, two browsers, two viewports is 80 snapshots), and accessibility checks add one more per story. Alternatives: Argos publishes a free Hobby plan (up to 5,000 screenshots) and Pro from $100 per month including 35,000 screenshots, then $0.004 each (argos-ci.com/pricing, October 2026); Percy (BrowserStack) prices by screenshot volume on BrowserStack's pricing page, so quote it live. Visual regression is the single most effective guard against token drift: a changed alias value shows up as a diff on every affected story within minutes.
 
 ### 9.3 Hosted documentation platforms
 
@@ -683,10 +683,10 @@ Chromatic (by Storybook's maintainers) renders every story on every commit, diff
 | Content | Label length, voice, capitalisation, example microcopy, localisation notes (Arabic and Hindi lengths) | Cross-reference 10-ux-writing-and-content-design.md section 4 |
 | Accessibility | Role, keyboard table, focus behaviour, screen reader announcement, reduced-motion behaviour | The contract from 7.6 |
 | Behaviour and motion | What animates, durations and easings by token name | Cross-reference 12-motion-principles-and-ui-motion.md |
-| Code | Install, import, a minimal example, a composed example, props table generated from types | Generated, never hand-copied, so it cannot go stale |
+| Code | Install, import, a minimal example, a composed example, props table generated from types | Generated from types on every build, so it cannot go stale |
 | Tokens | The component tokens and the aliases they resolve to | Lets a theme author see what a brand can change |
 | Figma | Link to the library component, property names, the parity table from 7.7 | One name across tools |
-| Changelog and status | Version, status (experimental, stable, deprecated), owner, last review date | Sparkbox's 2022 survey found 35 percent of subscribers named unclear status of old, broken or coming-soon items as a top challenge |
+| Changelog and status | Version, status (experimental, stable, deprecated), owner, last review date | Sparkbox's 2022 survey found 35 percent of subscribers (its term for teams consuming a system; 31 responses) named unclear status of old, broken or coming-soon items as a top challenge |
 
 ### 9.5 Documentation anti-patterns
 
@@ -697,7 +697,7 @@ Chromatic (by Storybook's maintainers) renders every story on every commit, diff
 
 ## 10. Governance and operations
 
-Governance is the set of decisions about who may change the system, how, and how the change reaches everyone. The zeroheight Design Systems Report 2025 (294 respondents, data collected September to November 2024) found 79 percent of respondents had a dedicated design system team (72 percent the year before) and 84 percent used design tokens (56 percent in 2024); among the most widely adopted systems, 68 percent ran a hybrid team model. Sparkbox's 2022 survey (219 responses) found only 16 percent tracked metrics, and the top maintainer challenges were technical and creative debt (43 percent), design and code parity (37 percent), adoption (36 percent) and staffing (35 percent). Governance exists to move those numbers.
+Governance is the set of decisions about who may change the system, how, and how the change reaches everyone. The zeroheight Design Systems Report 2025 (294 respondents, data collected September to November 2024) found 79 percent of respondents had a dedicated design system team (72 percent the year before) and 84 percent used design tokens (56 percent in 2024); among the most widely adopted systems, 68 percent ran a hybrid team model. Sparkbox's 2022 survey (219 responses) says in its text that only 16 percent tracked metrics (its own chart shows 30 percent for metrics tracking or reporting, so cite the range), and the top maintainer challenges (162 responses) were technical and creative debt (43 percent), design and code parity (37 percent), adoption (36 percent) and staffing (35 percent). Governance exists to move those numbers.
 
 ### 10.1 Team models
 
@@ -735,11 +735,13 @@ Semantic Versioning 2.0.0 (semver.org) applied to a design system, where "breaki
 
 Rules with reasons. Version the tokens package, the code package and the Figma library together with the same number, because a designer on library 3.2 and an engineer on package 3.4 cannot discuss a bug. Keep a changelog in Keep a Changelog format with a section per version and a "Migration" subsection for majors. Ship majors at most twice a year; every major costs each consuming team days of migration, and a system that breaks quarterly is detached.
 
+Release machinery. The tokens, component and docs packages live in one monorepo (one repository holding several packages: pnpm workspaces with Turborepo, as `packages/tokens`, `packages/ui`, `apps/docs`, `apps/storybook`). Changesets records the semver bump with each pull request: the contributor adds a changeset file stating patch, minor or major with a one-line note, and on merge a release pull request bumps versions, writes the CHANGELOG.md entries and publishes. Its `fixed` setting keeps every listed package on one version number, which is how the shared-number rule above holds without manual edits. Conventional Commits prefixes (`feat`, `fix`, `BREAKING CHANGE`) feed the release notes, and the release gate (13.5) fails a pull request that changes a package without a changeset.
+
 ### 10.4 Deprecation policy
 
 1. Mark: set `$deprecated` in the token file (with the replacement named in the string), add a `@deprecated` JSDoc tag in code, add a deprecated badge in Figma's component description and move the component to a "Deprecated" page in the library.
 2. Alias: keep the old name resolving to the new value for at least two minor releases or six months, whichever is longer; a console warning in development builds names the replacement.
-3. Remove in the next major, listed in the migration notes with a codemod where one can be written (shadcn/ui's `migrate` commands and Chakra's `@chakra-ui/codemod` are the models).
+3. Remove in the next major, listed in the migration notes with a codemod (a script that rewrites consuming code automatically) where one can be written (shadcn/ui's `migrate` commands and Chakra's `@chakra-ui/codemod` are the models).
 
 The reason for the long alias window: an agency's client teams work in quarters; a deprecation that lands and is removed inside one quarter is experienced as breakage.
 
@@ -752,14 +754,14 @@ Twice a year, list every component in the Figma library and every component in t
 - Publishing: one person or a rota publishes, on a cadence (weekly for an active build, fortnightly in maintenance), with a publish description that mirrors the changelog entry; never "updates".
 - Branching: every change to a published library happens on a Figma branch, reviewed by a second designer, then merged and published. Branches are available on Organization and Enterprise plans, which is one reason the house recommends Organization ($55 per full seat per month billed annually, October 2026) for any client with a library.
 - Structure: one library per axis of change (foundations and variables; core components; patterns and templates; icons), so that an icon addition does not force a components update.
-- Variables: one collection per theme axis (5.2), aliases only in components, and a locked "Primitives" collection that only the system team edits.
+- Variables: one collection per theme axis (5.2), aliases only in components, and a locked "Primitives" collection that only the system team edits, with scopes, code syntax and hide-from-publishing set as 4.6 describes.
 - Library analytics (Organization, Enterprise, Education K-12 and Government plans; the analytics API on Enterprise only): per component, "Inserts" over 30 days, "Used by" teams, "Used in" files and "Detaches"; per library, "Teams using the library", "Total variables" and "Activity this week"; styles and variables usage tracked since 10 October 2024. These are the raw data for 10.7.
 
 ### 10.7 System health metrics
 
 | Metric | Definition | How to measure | Target the house sets |
 |---|---|---|---|
-| Adoption rate | Share of product screens (or of shipped pages) built from system components | Code: count imports from the package against total components in the app (a lint script); Figma: library analytics "Used in" files against total design files | 80 percent of new screens within two quarters of launch |
+| Adoption rate | Share of product screens (or of shipped pages) built from system components | Code: system component instances divided by all component instances in the app, reported per product (Omlet scans repositories with a CLI and charts adoption over time; the open-source react-scanner gives the same counts for a one-off audit); Figma: library analytics "Used in" files against total design files | 80 percent of new screens within two quarters of launch |
 | Detachment rate | Detaches divided by inserts for a component over 30 days | Figma library analytics | Below 5 percent; a component above 15 percent is either badly designed or missing a variant, and the number tells you which to investigate |
 | Coverage | Share of the audited UI inventory (14.1) that the system now covers | Re-run the inventory each half-year | 90 percent of recurring elements |
 | Parity score | Share of components with zero Figma and code mismatches | The 10.5 audit | 95 percent |
@@ -768,17 +770,17 @@ Twice a year, list every component in the Figma library and every component in t
 | Contribution throughput | Proposals opened, accepted, shipped per quarter, with median days to ship | The contribution board | Median under 30 working days |
 | Satisfaction | Quarterly survey of designers and engineers | Five questions, same each quarter | Trend only |
 
-Sparkbox's finding that only 16 percent of teams tracked metrics is the argument for choosing three, instrumenting them in the first month, and reporting them to the client's sponsor monthly.
+Sparkbox's finding that only 16 to 30 percent of teams tracked metrics is the argument for choosing three, instrumenting them in the first month, and reporting them to the client's sponsor monthly.
 
 ### 10.8 The business case and the costs
 
-What a system saves: duplicated build (every duplicate button and text style the inventory counts in 14.1 is a maintenance cost), design time (34 percent faster in Figma's 2019 study), onboarding time, accessibility retrofits, and brand drift across agencies. What it costs: the build (14.3), the Figma seats (Organization $55 per full seat per month billed annually), tooling (Chromatic from $179 per month at Starter, zeroheight from $49 per editor per month, Tokens Studio Team from 39 euros per extra editor per month, all October 2026 list prices), and the ongoing team, which the 2025 report's respondents named as the scarcest resource (41 percent of companies under 500 people and 54 percent of larger ones said they lacked people). The honest pitch to a client: a system pays back when at least two products or two teams share it, or one product ships more than monthly; below that, a UI kit plus tokens is the right purchase. Pricing of the build itself follows 24-business-of-creative-and-agency-operations.md section 3.
+What a system saves: duplicated build (every duplicate button and text style the inventory counts in 14.1 is a maintenance cost), design time (34 percent faster in Figma's 2019 study), onboarding time, accessibility retrofits, and brand drift across agencies. What it costs: the build (14.3), the Figma seats (Organization $55 per full seat per month billed annually), tooling (Chromatic from $179 per month at Starter, zeroheight from $49 per editor per month, Tokens Studio Team from 39 euros per month billed annually, all October 2026 list prices), and the ongoing team, which the 2025 report's respondents named as the scarcest resource (41 percent of companies under 500 people and 54 percent of larger ones said they lacked people). The honest pitch to a client: a system pays back when at least two products or two teams share it, or one product ships more than monthly; below that, a UI kit plus tokens is the right purchase. Pricing of the build itself follows 24-business-of-creative-and-agency-operations.md section 3.
 
 ## 11. Motion, sound and content inside the system
 
 ### 11.1 Motion tokens and choreography documentation
 
-The tokens are in 6.10; the system also needs a choreography page, because tokens say how long and how curved, and choreography says what moves in what order. The page documents, for each transition type (enter, exit, move, expand, shared element, page), the duration token, the easing token, the stagger interval (the house uses 30 to 50ms between list items, capped at eight items so the total stays under 400ms; 12-motion-principles-and-ui-motion.md section 4) and the reduced-motion fallback. A motion token is only useful when a component references it by name in code (`transition: opacity var(--motion-duration-fast) var(--motion-easing-exit)`), so the lint rule in 13.4 forbids raw millisecond values in component CSS. Figma cannot store a motion token as a variable; Smart Animate settings are documented per component and checked at parity audits.
+The duration, easing and spring tokens are in 6.10; the system also needs a choreography page, because tokens say how long and how curved, and choreography says what moves in what order. The page documents, for each transition type (enter, exit, move, expand, shared element, page), the duration token, the easing token, the stagger interval (the delay between successive items starting; the house uses 30 to 50ms between list items, capped at eight items so the total stays under 400ms; 12-motion-principles-and-ui-motion.md section 4) and the reduced-motion fallback. A motion token is only useful when a component references it by name in code (`transition: opacity var(--motion-duration-fast) var(--motion-easing-exit)`), so the lint rule in 13.4 forbids raw millisecond values in component CSS. Figma cannot store a motion token as a variable; Smart Animate settings are documented per component and checked at parity audits.
 
 ### 11.2 Sonic tokens
 
@@ -786,11 +788,11 @@ A sonic token names a sound the product plays (confirmation, error, notification
 
 ### 11.3 Content design inside the system
 
-Content guidelines belong inside the component documentation, as Polaris demonstrated: a button page that states "use a verb, two words, sentence case, no full stop" removes a review cycle per screen. The system carries: the voice and tone summary (10-ux-writing-and-content-design.md section 2), the terminology list (one word per concept: "booking" never "reservation" in the same product), the microcopy inventory per component (10-ux-writing-and-content-design.md section 4), error message formats, number, date and currency formats per locale (7.8), and the bilingual rules: which script leads on a given surface, how Arabic and English share a line, and the maximum label lengths per component measured in the longest script. Content tokens are not a DTCG type; the house keeps them as a `content.json` beside the tokens with the same versioning, so that a label change ships with the release that needs it.
+Content guidelines belong inside the component documentation, as Polaris demonstrated: a button page that states "use a verb, two words, sentence case, no full stop" removes a review cycle per screen. The system carries: the voice and tone summary (10-ux-writing-and-content-design.md section 2), the terminology list (one word per concept: "booking" never "reservation" in the same product), the microcopy inventory per component (10-ux-writing-and-content-design.md section 4), error message formats, number, date and currency formats per locale (7.8), and the bilingual rules: which script leads on a given surface, how Arabic and English share a line, and the maximum label lengths per component measured in the longest script. Content tokens (named, versioned strings such as labels, error messages and legal lines) have no DTCG type; the house keeps them as a `content.json` beside the tokens with the same versioning, so that a label change ships with the release that needs it.
 
 ## 12. Accessibility inside the system
 
-The system is where accessibility is cheapest: fixed once in a component, correct everywhere. The working floor for Mask360 clients is WCAG 2.2 AA; the Indian and UAE legal references, test method and assistive technology detail are in 11-accessibility-and-inclusive-design.md, and the contrast maths in 04-colour.md section 6. What the system itself must build in:
+The system is where accessibility is cheapest: fixed once in a component, correct everywhere. The working floor for Mask360 clients is WCAG 2.2 AA; the Indian and UAE legal references, test method and assistive technology detail are in 11-accessibility-and-inclusive-design.md sections 4, 5, 14 and 16, and the contrast maths in 04-colour.md section 6. What the system itself must build in:
 
 ### 12.1 Contrast
 
@@ -802,14 +804,14 @@ One focus ring token set (`border.focus` colour at 3:1 against adjacent colours,
 
 ### 12.3 ARIA and reduced motion
 
-ARIA comes from the headless layer (7.4), never hand-written in a skin. Reduced motion is a theme (`motion: reduced`, 6.10) resolved from `prefers-reduced-motion` at runtime and also exposed as a user setting in the product, because the OS setting is unknown to many users; under it, movement becomes opacity, parallax and autoplay stop, and durations fall to 0 or 1ms. Target sizes follow 6.4 (24 by 24 CSS px minimum under 2.5.8, 44 or 48 for touch themes).
+ARIA comes from the headless layer (7.4); skins add no ARIA attributes of their own. Reduced motion is a theme (`motion: reduced`, 6.10) resolved from `prefers-reduced-motion` at runtime and also exposed as a user setting in the product, because the OS setting is unknown to many users; under it, movement becomes opacity, parallax and autoplay stop, and durations fall to 0 or 1ms. Target sizes follow 6.4 (24 by 24 CSS px minimum under 2.5.8, 44 or 48 for touch themes).
 
 ### 12.4 Testing in CI
 
 - axe-core (Deque; 4.14.0 released 5 October 2026, whose notes cite runs 20 to 40 percent faster on most pages and up to 15 times faster on very large ones) runs through the Storybook accessibility addon on every story and in the Vitest-based test run, so a violation fails the pull request. Automated rules catch only part of WCAG: Deque's own 2021 analysis (over 2,000 audits, more than 13,000 pages, nearly 300,000 issues) put automated detection at about 57 percent of issues by volume, which is why the manual pass in 7.6 remains.
 - Playwright with `@axe-core/playwright` runs the same engine on assembled pages, catching page-level issues (landmarks, heading order, duplicate IDs) that story-level tests miss.
 - Contrast tests run against the token file directly (a script over the alias layer per theme), so a token change that breaks contrast fails before any component renders.
-- A quarterly manual audit with a screen reader on the three most-used flows, logged as issues with the component name, so the fix lands in the system rather than in one product.
+- A quarterly manual audit with a screen reader on the three most-used flows, logged as issues with the component name, so the fix lands in the system and reaches every product.
 
 ## 13. The design-to-code pipeline
 

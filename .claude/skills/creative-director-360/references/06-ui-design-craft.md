@@ -282,7 +282,7 @@ Badges and pills everywhere are a cheap tell (design-taste, section 3): one badg
 | destructive | red filled (confirmation step) or red text (in menus) | delete, cancel subscription, remove payment method | one, and never adjacent to primary at equal weight |
 | link | underlined inline text | navigation inside copy; never for actions | any |
 
-The one-primary-per-view rule exists because the primary button's job is to answer "what do I do here"; two answers equal none. One exception: consent UI gives accept and reject equal weight (section 9.3), because a demoted reject is a named dark pattern in India. Dialogs with "Save" and "Discard" give Save the primary and Discard the tertiary.
+The one-primary-per-view rule exists because the primary button's job is to answer "what do I do here"; two answers equal none. One exception: consent UI gives accept and reject equal weight (section 9.3), because a demoted reject is a named dark pattern (an interface built to make people act against their own intent) in India. Dialogs with "Save" and "Discard" give Save the primary and Discard the tertiary.
 
 ### 4.2 Sizes, heights, padding
 
@@ -1090,85 +1090,158 @@ State audit: a systematic check that every component in a build renders every ap
 ## Terms introduced
 
 - Ambient and key shadow: the soft, unoffset, low-alpha shadow that implies distance, and the sharp, offset shadow that defines the edge, in a two-part shadow model.
+- Anchor positioning: CSS (`anchor-name`, `position-anchor`, `anchor()`, `position-area`) that places an element relative to a named anchor element, with fallback positions when it would overflow.
+- APCA (Accessible Perceptual Contrast Algorithm): the contrast model proposed for WCAG 3, used by the house as a second opinion to WCAG 2.2.
+- Art direction: serving a differently cropped or composed image per viewport, beyond resizing one file.
 - Aspect ratio token: a named ratio (square, portrait, wide) that every image box in a product is sized by.
+- Auto layout: Figma's frame setting that sizes and spaces children from direction, padding and gap, mirroring CSS flexbox.
 - Avatar: a small image or initials block representing a person or entity, at fixed sizes with a deterministic fallback.
+- Badge: a small dot or count attached to an icon or tab to signal something new or unread.
+- Banding: visible steps where a smooth gradient runs out of tonal values.
 - Banner: a persistent message strip at the top of content for session-level conditions such as offline or unpaid.
-- Baseline: the web platform's label for a feature supported in the current versions of Chrome, Edge, Firefox and Safari.
+- Baseline: the web platform's label for a feature supported in the current versions of Chrome, Edge, Firefox and Safari; "newly available" marks the date the last of them shipped it.
 - Blur-up: showing a blurred placeholder and cross-fading to the full image when it loads.
 - BlurHash: a 20 to 30 character string (Wolt, 2018) decoded on the client into a blurred preview of an image.
 - Bottom sheet: a surface that rises from the bottom edge to resting heights (detents) for a choice or short task.
+- Breadcrumbs: the trail of parent pages shown above a page title.
 - Card: a bounded container holding one item's image, title, metadata and action as a single tappable unit.
+- Chip: a compact, rounded control that represents a filter, a choice, an entered value or a suggested action.
 - Code Connect and Dev Mode: Figma's mapping of a design component to its production code, and the inspection mode for engineers that shows it with token names, measurements and annotations.
 - Code layer: an interactive, code-backed prototype object on the Figma canvas, in open beta since Config India, October 2026.
+- Combination navigation: a few visible navigation links shown alongside a menu that holds the rest.
+- Combobox: a text field with a filtered popup list of options.
+- Command palette: a searchable list of every action in a product, opened from the keyboard with Cmd or Ctrl plus K.
+- ConcentricRectangle: the SwiftUI shape (iOS 26 and later) that computes each corner's radius to stay concentric with its container or the device's screen corners.
 - Container query: a CSS rule conditioned on the size of an ancestor container rather than the viewport.
 - Continuous corner: Apple's term for a squircle corner on layers and icons.
-- Core Web Vitals: Google's three field metrics for page experience: largest contentful paint, interaction to next paint and cumulative layout shift.
+- Core Web Vitals: Google's three field metrics for page experience: largest contentful paint (LCP), interaction to next paint (INP) and cumulative layout shift (CLS).
 - CSS pixel: the web's reference unit, mapped to physical pixels by the device pixel ratio.
+- Cumulative layout shift (CLS): Google's measure of unexpected movement of visible content during a page's life.
+- Customisable select: a native `<select>` styled with `appearance: base-select` that keeps native keyboard, form and screen reader behaviour.
+- Dark pattern: an interface built to make people act against their own intent; the term Indian law uses for what Harry Brignull now calls a deceptive pattern.
+- Debounce: waiting until input pauses before acting on it, such as sending a search request.
 - Deep link: a URL or universal link that opens a specific screen inside an app.
 - Density bucket: an Android screen density class (mdpi to xxxhdpi) that determines which raster asset is loaded.
 - Density-independent pixel (dp): Android's logical unit, about one physical pixel at 160dpi.
-- Detent: a resting height of a sheet.
+- Design token: a named value for colour, size, radius or timing, stored once and referenced everywhere.
+- Detent: a resting height of a sheet, such as medium or large on iOS.
 - Determinate and indeterminate progress: an indicator that shows a known fraction of the work, and one that shows work in progress without a fraction.
 - Device pixel ratio: physical pixels per CSS pixel.
+- DPDP: India's Digital Personal Data Protection Act 2023 and its Rules (notified 13 November 2025), which set the consent standard.
+- Drawer: a navigation panel that slides in from the side of the screen.
+- Drop target: the state of a valid destination while a dragged item hovers over it.
+- DTCG (Design Tokens Community Group): the W3C community group whose JSON format design token tools exchange.
+- Dynamic colour: the colour scheme Android 12 and later derive from the user's wallpaper.
+- Dynamic Island: the pill-shaped camera cutout on recent iPhones that the system animates as a status surface.
+- Dynamic Type: Apple's user-set system text size that apps scale their type to.
 - E.164: the international phone number format of a plus sign, country code and digits with no separators.
 - Edge swipe: a gesture that starts at a screen edge, reserved by the platform for back, home and system panels.
+- Edge-to-edge: an Android app drawing behind the status and navigation bars and padding its own content by the system insets.
+- Eyebrow: a short category line set above a title.
+- Fitts's law: the time to hit a target rises with its distance and falls with its size.
+- Floating action button (FAB): Material's large button for a screen's main action.
 - Floating label: a field label that starts inside the field and moves above it on focus.
 - Fluent 2: Microsoft's cross-platform design system.
 - Focal point: the stored x and y of an image's subject used to position crops.
 - Focus trap: keeping keyboard focus inside an open dialog until it closes.
+- Focus-visible: focus the browser judges should be shown, as after keyboard navigation, matched by `:focus-visible`.
+- Focus-within: the state of a container that holds the focused element, matched by `:focus-within`.
+- Forced colours: Windows contrast themes that replace author colours with a small system palette, exposed to CSS as `forced-colors: active`.
+- Grade (GRAD): a variable font axis that changes stroke weight without changing glyph width.
 - Hairline: a 1px (or 0.5px on 2x screens) border at low alpha used to define an edge without a shadow.
 - Halation (irradiation): the perceptual effect that makes light text on dark look heavier than the same weight dark on light.
 - Haptic feedback: a short vibration pattern the device plays in response to an interaction.
+- Hidden navigation: primary navigation kept behind a menu icon instead of shown as visible links.
+- Home indicator: the bar at the bottom edge of an iPhone screen that a swipe uses to go home.
+- Hover intent: a short delay before a hover state commits, so a pointer passing over does nothing.
+- Information foraging: Pirolli and Card's theory that people follow cues towards information, weighing expected gain against effort.
 - Information scent: the cues in a label or preview that let a user predict what lies behind a link.
 - Inline alert: a boxed message placed next to the content it concerns, in an info, success, warning or error variant.
 - Inline validation: checking a field's value as the user leaves it, before the form is submitted.
+- Interaction to next paint (INP): Google's measure of the delay between a user's interaction and the next frame painted.
 - Keyline shapes: the square, circle and rectangles inside an icon grid's live area that equalise visual weight across silhouettes.
+- Know your customer (KYC): the identity checks a regulated business runs before serving a client.
+- Largest contentful paint (LCP): Google's measure of when the largest element in the first viewport renders.
 - Lensing: Liquid Glass's refraction of the content beneath a glass surface.
 - Light dismiss: closing an overlay by clicking outside it or pressing Escape.
-- Liquid Glass: Apple's system material introduced with iOS 26 and macOS 26 for the navigation layer.
+- Liquid Glass: Apple's system material for the navigation layer, introduced with iOS 26 and macOS 26 and still the system material in the 27 releases.
 - Live area: the inner region of an icon grid (20dp of a 24dp canvas) within which the glyph is drawn.
 - Logical resolution: the size of a screen in points or dp that layouts are designed to, as distinct from physical pixels.
 - LQIP (low quality image placeholder): a tiny inlined JPEG blurred with CSS while the full image loads.
 - Material 3 and Material 3 Expressive: Google's design system for Android and the web, and its 2025 extension with a shape library, spring motion scheme and new components.
 - Mega menu: a wide navigation panel of grouped links opened from a top-level item on a marketing site.
+- Menu: a temporary list of actions or options opened from a button, a right click or a long press.
+- Mica: Windows 11's opaque material tinted by the desktop wallpaper.
 - Modal: an overlay that blocks interaction with the page beneath until dismissed.
+- Model Context Protocol (MCP): the open standard for connecting AI agents to tools and data, used by Figma's MCP server.
+- Navigation rail: a vertical strip of 3 to 7 destinations on the leading edge of a medium-width window.
 - Nested radius rule: inner radius equals outer radius minus the padding between them, so corners stay concentric.
+- Nielsen Norman Group (NN/g): the usability research and consulting firm founded by Jakob Nielsen and Don Norman.
+- Offline or stale state: cached data shown without a live connection, labelled with the time it was last updated.
+- OLED (organic light-emitting diode): a display whose pixels emit their own light and switch fully off for black.
+- One-time password (OTP): a short code sent by SMS or email to verify identity.
 - Optical alignment: shifting a glyph from its geometric centre so it appears centred to the eye.
 - Optical sizing: changing an icon's or type's stroke and proportions with its rendered size rather than scaling one drawing.
 - Optimistic UI: showing the result of an action before the server confirms it, then reconciling.
+- Overflow menu: the menu behind a More button that holds a toolbar's lower-priority actions.
+- Pending state: a submitted request awaiting a server or human decision, which can persist for days.
+- Permanent Account Number (PAN) and GSTIN: India's 10-character tax identifier and 15-character Goods and Services Tax Identification Number.
 - Physical pixel: one addressable light element on a panel.
 - Pixel snapping: placing element edges on whole device pixels so hairlines and text render crisply.
 - Placeholder text: hint text inside an empty field that disappears on input.
 - Point (pt): Apple's logical unit; three physical pixels on current iPhones, two on iPads.
 - Popover: a small overlay anchored to its trigger that closes on outside click or Escape.
+- Posture: a foldable's hinge state, such as tabletop (half-folded horizontally) or book (half-folded vertically).
 - Predictive back: Android's system back animation that previews the destination while the user swipes.
 - Progressive enhancement: building the baseline rendering for every browser and layering the better one on where supported.
+- Pseudo-locale: a fake locale (Android `ar-XB`, Xcode's right-to-left pseudolanguage) that mirrors or stretches the UI for testing.
 - Pull to refresh: dragging a list down past a threshold to reload it.
+- QPR (quarterly platform release): an Android feature update between major versions.
 - Redlines: annotated measurement overlays drawn on a static design export, replaced by live inspection and tokens.
 - Rem: the CSS unit relative to the root font size, 16px by default.
+- Right-to-left (RTL) mirroring: reflecting a layout and its directional components for Arabic and other right-to-left scripts.
+- Saccade: the rapid eye jump between two fixation points.
 - Safe area: the screen region not covered by status bar, Dynamic Island, home indicator or rounded corners.
+- Safe triangle: the region a pointer may cross towards a submenu without the menu closing.
 - Scalable pixel (sp): Android's text unit, equal to dp until the user raises the system text size.
 - Scrim: the translucent layer behind a modal that dims the page beneath.
 - Scroll chaining: a nested scroll container passing its overscroll to the page, prevented with `overscroll-behavior: contain`.
+- Search landmark: the `<search>` element or `role="search"`, which marks a search region for assistive technology.
+- Segmented control: a row of connected buttons with one selected, for 2 to 5 mutually exclusive options.
+- Shared-element transition: one element morphing from its place on the old screen to its place on the new.
 - Side sheet: a panel that slides in from a screen edge on desktop for filters or detail while the page stays interactive.
 - Skeleton screen: a placeholder that draws the layout's blocks in neutral grey before content arrives.
 - Slot: a Figma component property marking an area inside a component where instance content can be added and arranged without detaching.
 - Small, large and dynamic viewport height (svh, lvh, dvh): the CSS units for the viewport with mobile toolbars shown, retracted, and as it currently is.
+- Smart animate: Figma's prototype transition that interpolates position, size and opacity between same-named layers in two frames.
 - Squircle: a corner drawn as a superellipse so curvature eases in from the straight edge.
 - State: a named condition of a component that changes its appearance or behaviour.
 - State audit: a systematic check that every component renders every applicable state in every variant and mode.
 - State layer: a translucent overlay in the content colour that expresses hover, focus, pressed and dragged.
 - State matrix: the table of states against variants used to design and audit a component.
+- Stepper: a minus, value and plus control for small numeric ranges.
+- Streaming state: AI output arriving in pieces, with Stop replacing Send until it ends.
+- Switch: a sliding on-off toggle that applies its change at once.
 - Tabular figures: digits of equal width so columns of numbers align and counters do not jitter.
+- Text-box trim: CSS (`text-box-trim`, `text-box-edge`, shorthand `text-box`) that trims a text box to cap height and baseline.
 - Thumb zone: the region of a phone screen a thumb reaches comfortably in a one-handed grip.
 - ThumbHash: a placeholder hash of about 21 to 25 bytes (Evan Wallace, 2023) encoding a blurred preview, alpha and aspect ratio.
 - Toast (snackbar): a brief message that appears without interrupting the task and leaves by itself.
 - Tooltip: a short label that appears on hover or keyboard focus and must never carry essential information.
 - Top layer: the browser rendering layer above every z-index used by `<dialog>` and popovers.
+- UIDesignRequiresCompatibility: the temporary Info.plist key that kept an app built with the 26 SDK in its pre-26 appearance; ignored when the app is built for the 27 releases.
+- UPI (Unified Payments Interface): India's real-time bank payment system, opened from checkout through an intent to the user's payment app.
+- Vibrancy: Apple's blending that pulls colour from what sits behind a material so content on it stays legible.
 - Viewport: the visible area of a page; mobile browsers have a large and a small one depending on toolbar state.
 - Virtualisation: rendering only the list rows in and near the viewport.
+- Visited: the state of a link the user has already opened, which browsers limit to colour changes for privacy.
 - Visual regression testing: automated screenshot comparison of a build against approved baselines.
+- WAI-ARIA: the W3C's Accessible Rich Internet Applications specification; its Authoring Practices Guide sets the keyboard model for widgets.
+- Warm window: the period, about a second, after one tooltip closes during which the next one appears with no delay.
+- WCAG: the W3C's Web Content Accessibility Guidelines; version 2.2 (2023) at level AA is the house floor.
+- WebOTP: the browser API that reads a one-time code from an SMS bound to the site's domain.
 - Window size class: Android's breakpoint vocabulary (compact, medium, expanded, large, extra-large) for adaptive layout.
+- Windowed Apps: the iPadOS 26 multitasking mode with freely resizable windows, window controls and a menu bar.
 - Zebra striping: alternating row backgrounds in a table.
 
 ## Sources and further reading
