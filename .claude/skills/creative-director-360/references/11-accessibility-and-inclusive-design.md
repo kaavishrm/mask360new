@@ -1115,7 +1115,7 @@ By 2026 captions, alt text, dubbing and description are drafted by AI as routine
 |---|---|---|
 | Brief and scope | Standard written into the brief and contract: WCAG 2.2 AA plus house defaults and APCA targets; markets and legal exposure (US customers, EU sales under the EAA, Indian government work under GIGW); captions, audio description and transcripts budgeted (scoping and contracts in 24-business-of-creative-and-agency-operations.md, sections 3 and 4) | Account lead, creative director |
 | Research and strategy | Disabled participants in research; COGA personas; situational scenarios from 15.1 | Strategy, UX |
-| Concept | Ideas checked for flashing, autoplay, sound-off reading, motion intensity and gesture-only mechanics before they are sold to the client | CD |
+| Concept | Ideas checked for flashing, autoplay, sound-off reading, motion intensity and gesture-only mechanics before they are sold to the client | Creative director (CD) |
 | Design | Contrast-tested tokens; focus, error, disabled and reduced-motion states designed; type sizes; target sizes; annotations for headings, landmarks, focus order, labels and alt text | Design |
 | Copy and content | Alt text, labels, errors, link text, captions, AD scripts, transcripts | Copy (10-ux-writing-and-content-design.md) |
 | Production | Captions and AD recorded; Harding or PEAT on every film | Producer, editor |
@@ -1135,7 +1135,7 @@ Building in costs design and engineering time spread across the project, most of
 
 Every site ships with a statement page: the standard targeted, the conformance status, known limitations with dates for fixes, a contact route (email, phone, WhatsApp) answered within a stated time, and the date of the last audit. Roles: designers own contrast, focus, sizes, states and annotations; engineers own semantics, keyboard and ARIA; writers own alt text, labels and captions; producers own captions, AD and flash checks; QA owns the audit; the creative director signs off. Professional certification exists through the International Association of Accessibility Professionals (IAAP): CPACC (core competencies), WAS (Web Accessibility Specialist) and CPWA (both together).
 
-Accessibility survives handover only if the CMS (content management system) protects it. ATAG 2.0 (Authoring Tool Accessibility Guidelines, W3C Recommendation, 2015) is the standard for authoring tools: choose CMSs and page builders whose editors are themselves accessible and that prompt for alt text, enforce heading structure and block colour-only formatting. Lock the design system's components so editors cannot set text below the contrast or size floor, and put a half-day editor training session (alt text, headings, link text, captions) into every launch scope, because editors publish more pages after launch than the agency did before it.
+Accessibility survives handover only if the CMS (content management system) protects it. ATAG 2.0 (Authoring Tool Accessibility Guidelines, W3C Recommendation, 2015) is the standard for authoring tools: choose CMSs and page builders whose editors are themselves accessible and that prompt for alt text, enforce heading structure and block colour-only formatting. Lock the design system's components so editors cannot set text below the contrast or size floor, and put a half-day editor training session (alt text, headings, link text, captions) into every launch scope, because every page published after launch is made by the client's editors, outside the agency's QA.
 
 ### 17.5 Accessibility in the identity system
 
