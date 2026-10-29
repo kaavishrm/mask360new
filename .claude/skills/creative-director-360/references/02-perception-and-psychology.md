@@ -2,6 +2,8 @@
 
 The science under every rule of hierarchy, legibility, colour, motion and persuasion in this corpus, with the numbers and the named studies, as of October 2026.
 
+Contested findings give the positions, their proponents and the house position; effect sizes are reported as Cohen's d (the difference between two group means in standard deviation units), and an effect of d = 0.1 is too small to justify a design decision.
+
 ## Contents
 
 1. [The eye and early vision](#1-the-eye-and-early-vision)
@@ -26,15 +28,13 @@ The science under every rule of hierarchy, legibility, colour, motion and persua
 
 Then [Terms introduced](#terms-introduced) and [Sources and further reading](#sources-and-further-reading).
 
-How to use this file: the applied files cite it for the reason behind a rule. Taste judgements (what reads expensive, the cheap tells, the house layer) live in design-taste, SKILL.md sections 2, 3 and 7, and are cross-referenced here by section. Where a finding is contested, the positions are given with their proponents and the house position is stated. Effect sizes are reported where they exist, because a statistically significant effect of d = 0.1 is a reason to ignore a claim in a design review.
-
 ## 1. The eye and early vision
 
 ### 1.1 The optics and the retina
 
 - The retina holds about 6 million cones (colour, daylight, detail) and about 120 million rods (low light, no hue). Their signals converge onto about 1 million retinal ganglion cell axons in the optic nerve, a compression of roughly 125 to 1, so the eye sends the brain an edited summary of the image. Everything downstream (edges, contrast, motion) is computed from that summary, which is why perception is relative: the system codes differences and ratios.
 - The fovea is a pit about 1.5mm across covering roughly 5 degrees of visual field; its centre, the foveola, is rod-free, holds the densest cone packing and covers about 1 to 2 degrees. A thumbnail at arm's length subtends about 1.5 to 2 degrees, a fist about 10 degrees. Only the thumbnail-sized region is seen sharply at any instant.
-- The blind spot, where the optic nerve leaves the eye, sits about 15 degrees to the temporal side of fixation and is filled in by the brain. Filling-in is the first example of a rule that runs through this file: the brain completes what it expects, which is why Gestalt closure (section 3) and change blindness (section 6) exist.
+- The blind spot, where the optic nerve leaves the eye, sits about 15 degrees to the temporal side of fixation and is filled in by the brain. Filling-in, the completion of a missing region from its surround, is the first example of a rule that runs through this file: the brain completes what it expects, which is why Gestalt closure (section 3) and change blindness (section 6) exist.
 - S cones (blue sensitive) are only about 5 to 10 percent of all cones and are absent from the central foveola. Small blue detail on black is therefore hard to resolve and fine blue text is the least legible colour of text. The design rule: use blue for fields and large shapes, and keep hairline type out of blue.
 
 ### 1.2 Foveal and peripheral vision
@@ -45,7 +45,9 @@ How to use this file: the applied files cite it for the reason behind a rule. Ta
 | Parafoveal | to about 5 degrees | Word shape and length, letter identity near fixation | Acuity already falling | Supplies the preview that sets the next saccade (section 4) |
 | Peripheral | beyond 5 degrees to about 100 degrees each side | Motion, flicker, onsets, large shapes, layout gist | Acuity at 10 degrees out is around 20/100; colour and fine detail weak; crowding | Motion in the periphery hijacks attention; a carousel or looping video beside text is read by the periphery as a threat |
 
-Ambient and focal vision: the periphery tells the brain where things are and how the scene is laid out (the gist of a page is extracted in roughly 100ms from low spatial frequencies), and the fovea tells it what things are. A layout whose large shapes are wrong cannot be rescued by its details, because the periphery has already decided where to look.
+Ambient and focal vision: the periphery tells the brain where things are and how the scene is laid out (the gist of a page, its overall layout and meaning, is extracted in roughly 100ms from low spatial frequencies), and the fovea tells it what things are. A layout whose large shapes are wrong cannot be rescued by its details, because the periphery has already decided where to look.
+
+Ruth Rosenholtz ("Capabilities and limitations of peripheral vision", Annual Review of Vision Science, 2016) argues that the periphery encodes summary statistics of local texture, a compressed description in which the exact positions of small parts are lost, and that this one mechanism explains crowding (section 4.3), gist and the difficulty of search. The test of a layout follows: its structure must survive when it is seen as texture, which is what the blur test of section 3.12 checks.
 
 ### 1.3 Acuity and the visual angle
 
@@ -58,15 +60,26 @@ Visual angle is the angle an object subtends at the eye, the only size measure t
 
 ### 1.4 Contrast sensitivity and lateral inhibition
 
-- The eye responds to contrast and discards most information about absolute light level early. Retinal ganglion cells have centre-surround receptive fields: a cell fires to a light centre against a dark ring, which enhances edges. Mach bands (Ernst Mach, 1865: illusory light and dark stripes at the edge of a gradient step) and the Hermann grid (dark spots at grid intersections) are the visible side effects. Banding in a gradient is amplified by this same edge enhancement (see 04-colour.md, section 3).
-- The contrast sensitivity function (CSF) peaks at about 2 to 5 cycles per degree and falls to zero near 50 to 60 cycles per degree. Middle spatial frequencies (the stroke rhythm of body text at reading distance) are where the eye is most sensitive; very fine texture is invisible and very coarse ramps are hard to see.
+- The eye responds to contrast and discards most information about absolute light level early. Retinal ganglion cells have centre-surround receptive fields: a cell fires to a light centre against a dark ring, so each cell's response is suppressed by light falling on its neighbours (lateral inhibition), which enhances edges. Mach bands (Ernst Mach, 1865: illusory light and dark stripes at the edge of a gradient step) and the Hermann grid (dark spots at grid intersections) are the visible side effects. Banding in a gradient is amplified by this same edge enhancement (see 04-colour.md, section 3).
+- The contrast sensitivity function (CSF) peaks at about 2 to 5 cycles per degree (pairs of light and dark bars per degree of visual angle, the unit of spatial frequency) and falls to zero near 50 to 60 cycles per degree. Middle spatial frequencies (the stroke rhythm of body text at reading distance) are where the eye is most sensitive; very fine texture is invisible and very coarse ramps are hard to see.
 - The colour-opponent channels resolve far less fine detail than the luminance channel (Kathy Mullen, Journal of Physiology, 1985). Two consequences: chroma subsampling (4:2:0 video, which stores colour at a quarter of the luminance resolution) is invisible on most footage, and text that differs from its ground only in hue (red on green at equal lightness) is illegible however "high contrast" the colours look.
 - The best observers detect a luminance difference of about 1 percent on a large uniform field (the Weber fraction for luminance across most of the daylight range). That threshold is why an 8-bit gradient across a large dark area bands and why muted palettes need dithering or 10-bit delivery (04-colour.md, section 3).
 
 ### 1.5 Light adaptation and pupils
 
-- The visual system adapts over roughly 10 orders of magnitude of light, from starlight to noon sun, by shifting its operating point. Light adaptation takes seconds; full dark adaptation takes 20 to 30 minutes, which is why a white phone screen in a dim restaurant or a dark cinema hurts and why dark mode exists as an ambient-light option.
+- The visual system adapts over roughly 10 orders of magnitude of light, from starlight to noon sun, by shifting its operating point. Light adaptation takes seconds; full dark adaptation (the recovery of sensitivity in low light) takes 20 to 30 minutes, which is why a white phone screen in a dim restaurant or a dark cinema hurts and why dark mode exists as an ambient-light option.
 - A smaller pupil gives greater depth of field and fewer optical aberrations. Positive polarity (dark text on a light ground) constricts the pupil, and that is one physiological reason the reading research favours it in daylight (section 17.7).
+
+### 1.6 The ageing eye
+
+The buyers of high jewellery, real estate and private banking are mostly 40 to 70, and their eyes differ from a young designer's in four measured ways (colour rules in 04-colour.md, section 13.5; wider practice in 11-accessibility-and-inclusive-design.md, section 15.3):
+
+- Presbyopia, the age-related loss of near focus: the lens stiffens and the amplitude of accommodation (the eye's range of focusing power in dioptres, the reciprocal of the focal distance in metres) falls from about 10 to 14 dioptres in childhood to about 1 dioptre by 60 (Alexander Duane's curves, 1922). Reading at 40cm needs 2.5 dioptres, so near focus fails from the mid-forties, and the phone is held farther away or read through varifocals, which shrinks the visual angle of every glyph (section 1.3).
+- Less light: the pupil narrows with age (senile miosis) and the lens yellows, so a 60-year-old's retina receives about a third of the light a 20-year-old's does (Robert Weale, The Senescence of Human Vision, 1992).
+- Lower contrast sensitivity: Cynthia Owsley, Robert Sekuler and Dennis Siemsen ("Contrast sensitivity throughout adulthood", Vision Research, 1983) found sensitivity at middle and high spatial frequencies declining from middle age, with low frequencies spared, so fine strokes go first.
+- Blue loss and glare: the yellowed lens absorbs short wavelengths, so blues and violets merge with dark neutrals, and lens opacities scatter light, so glare from a bright screen or a backlit sign rises.
+
+Design consequence: hairline weights, light grey text on white and blue-on-navy states fail the luxury buyer first. House floor for audiences over 40: body at 16 to 18px or larger, contrast of at least 4.5:1 and APCA (Accessible Perceptual Contrast Algorithm) Lc 75 or better (04-colour.md, section 6.2), no hairline weights below about 18px, and a check under Chrome DevTools' reduced-contrast and blurred-vision emulation before sign-off.
 
 ## 2. Preattentive processing, saliency and visual search
 
@@ -76,7 +89,7 @@ Preattentive processing is the parallel analysis of simple visual features acros
 
 | Preattentive attribute | Pops out when | Strength and caveats | Design use |
 |---|---|---|---|
-| Colour (hue) | One hue among others, large enough hue difference | Strong; weakens if distractors are heterogeneous in hue; fails under CVD for red and green | The one accent (design-taste, SKILL.md section 2, colour discipline): one saturated element is found first because it is the only one |
+| Colour (hue) | One hue among others, large enough hue difference | Strong; weakens if distractors are heterogeneous in hue; fails under colour vision deficiency (CVD) for red and green | The one accent (design-taste, SKILL.md section 2, colour discipline): one saturated element is found first because it is the only one |
 | Lightness and luminance contrast | One element far lighter or darker | Strong; survives CVD and greyscale | Hierarchy that survives the greyscale test |
 | Size | One element much larger | Strong for large ratios; small size differences need focused comparison | Scale contrast as the primary hierarchy tool |
 | Orientation | One tilted element among vertical ones | Strong when the target differs by tens of degrees from uniform distractors; weak among mixed orientations | An angled element in an orthogonal grid; rarely used in UI |
@@ -84,7 +97,7 @@ Preattentive processing is the parallel analysis of simple visual features acros
 | Spatial position and grouping | One element out of alignment | Moderate | A deliberate break in a grid reads as emphasis; an accidental one reads as an error |
 | Shape (curvature, line ends, closure) | A curved element among straight ones | Moderate and asymmetric: a curved target among straight distractors pops out better than the reverse | Icons must differ in silhouette to be found; a set of same-weight outline icons in circles is unsearchable |
 | Enclosure | One enclosed element | Moderate | A bordered card, a pill, a badge: effective once, noise when everything is enclosed |
-| Depth cues (shading, stereo) | Lit from above among lit from below | Moderate; light-from-above is assumed | Shadows signal elevation; inconsistent light direction reads as wrong |
+| Depth cues (shading, stereo) | Lit from above among lit from below | Moderate; light-from-above is assumed | Shadows signal height above the surface; inconsistent light direction reads as wrong |
 
 ### 2.2 Search efficiency, in numbers
 
@@ -95,17 +108,22 @@ Design rules that follow:
 - Pop-out decays as feature differences are shared. Three accent colours on one screen produce no pop-out at all, which is the perceptual reason behind design-taste's colour cap.
 - Absence is slow to detect. "Is there a vegetarian option on this menu?" takes longer than "find the vegetarian option", so mark the presence of attributes with consistent icons and position, and let filters remove the absent ones.
 
+Three further findings set layout and proofing rules:
+- Contextual cueing: Marvin Chun and Yuhong Jiang (Cognitive Psychology, 1998) found that search through repeated spatial configurations speeds up with repetition, without observers recognising the repeats. A site that keeps one page structure trains the search; redesigning every section resets it.
+- The low-prevalence effect: Jeremy Wolfe, Todd Horowitz and Naomi Kenner ("Rare items often missed in visual searches", Nature, 2005) found miss rates of about 30 percent when targets appeared in 1 percent of displays against about 7 percent at 50 percent prevalence. A wrong price or date in a print run is missed because it is rare, so proofing uses a checklist of fields and a second reader.
+- Visual working memory holds about 3 to 4 objects (Steven Luck and Edward Vogel, Nature, 1997), so comparing variants across a carousel or across tabs fails beyond that; comparisons belong side by side (section 6.3).
+
 ### 2.3 Saliency and its limits
 
 Saliency is the bottom-up conspicuity of a region computed from local contrast in colour, intensity and orientation across scales (Laurent Itti, Christof Koch and Ernst Niebur, IEEE Transactions on Pattern Analysis and Machine Intelligence, 1998). Attention-prediction tools (Attention Insight, Neurons' Predict and similar products) are saliency models trained on eye-tracking data. Use them for one question only: does the first fixation land where intended? They do not model goals. Alfred Yarbus (Eye Movements and Vision, 1967) showed one viewer's scan of Repin's painting "Unexpected Visitors" changing completely with the question asked; top-down task beats bottom-up saliency whenever the viewer has a goal. A booking page is goal-driven; a hoarding is saliency-driven. Design each for its regime.
 
 Two attention captures that override everything:
-- Faces. People fixate faces and eyes early and often, and follow gaze direction (Chris Friesen and Alan Kingstone, Psychonomic Bulletin and Review, 1998, on gaze cueing). A model looking at the product directs attention to it; a model looking at the camera holds attention on the face. The widely shared "baby looks at the headline" heat map (James Breeze, 2009) is a single unpublished study; the gaze-cueing literature underneath it is solid.
+- Faces. People fixate faces and eyes early and often, and shift attention to where another person looks, the gaze-cueing effect (Chris Friesen and Alan Kingstone, Psychonomic Bulletin and Review, 1998). A model looking at the product directs attention to it; a model looking at the camera holds attention on the face. The widely shared "baby looks at the headline" heat map (James Breeze, 2009) is a single unpublished study; the gaze-cueing literature underneath it is solid.
 - Abrupt onsets and looming. A new object appearing captures attention (Steven Yantis and John Jonides, 1984), and an object growing as if approaching captures it more strongly than one receding (Steven Franconeri and Daniel Simons, 2003). This is why a scale-up entrance reads as more urgent than a fade, and why it must be spent on one element.
 
 ## 3. Gestalt principles
 
-The Gestalt school (Max Wertheimer, Kurt Koffka and Wolfgang Köhler, from Wertheimer's 1912 paper on apparent motion and his 1923 paper on grouping) described how the visual system organises parts into wholes. Johan Wagemans and colleagues' two-part review "A century of Gestalt psychology in visual perception" (Psychological Bulletin, 2012) is the modern reference: the principles hold, they compete, and their relative strength is measurable. Composition and grid applications are in 05-layout-grids-and-composition.md; this section gives the mechanism and the numbers.
+The Gestalt school (Max Wertheimer, Kurt Koffka and Wolfgang Köhler, from Wertheimer's 1912 paper on apparent motion and his 1923 paper on grouping) described how the visual system organises parts into wholes. Johan Wagemans and colleagues' two-part review "A century of Gestalt psychology in visual perception" (Psychological Bulletin, 2012) is the modern reference: the principles hold, they compete, and their relative strength is measurable. Composition and grid applications are in 05-layout-grids-and-composition.md.
 
 ### 3.1 Proximity
 
@@ -115,11 +133,11 @@ Design consequence: the internal spacing of a group must be visibly smaller than
 
 ### 3.2 Similarity
 
-Elements sharing colour, size, shape, weight or texture are grouped. Colour similarity usually beats shape similarity. In interfaces, similarity is how a user learns that all underlined text is a link and all filled buttons are primary actions; a style used for two meanings breaks the learned group. Similarity competes with proximity: Stephen Palmer's experiments show that the stronger cue wins, so a coloured element placed in the wrong group is read by its colour.
+Elements sharing colour, size, shape, weight or texture are grouped. Colour similarity usually beats shape similarity. In interfaces, similarity is how a user learns that all underlined text is a link and all filled buttons are primary actions; a style used for two meanings breaks the learned group. Similarity competes with proximity: Michael Kubovy and Martin van den Berg ("The whole is equal to the sum of its parts", Psychological Review, 2008) found that the two cues combine additively in dot lattices, so the stronger cue wins, and a coloured element placed in the wrong group is read by its colour.
 
 ### 3.3 Closure and illusory contours
 
-The visual system completes incomplete figures. The Kanizsa triangle (Gaetano Kanizsa, 1955), three notched discs that produce a bright triangle that is not drawn, shows the system inventing edges. Design consequences: a logo can drop large parts of its outline and remain recognisable (the WWF panda, IBM's striped letters); a card with no border closes on its content's alignment; a progress ring with a gap reads as a ring. The risk: closure also completes what you did not intend, such as two aligned edges in a layout forming an accidental shape.
+The visual system completes incomplete figures. The Kanizsa triangle (Gaetano Kanizsa, 1955), three notched discs that produce a bright triangle that is not drawn, shows the system inventing edges (an illusory contour: an edge seen where no luminance edge exists). Design consequences: a logo can drop large parts of its outline and remain recognisable (the WWF panda, IBM's striped letters, with the trust cost of incomplete marks in section 10.7); a card with no border closes on its content's alignment; a progress ring with a gap reads as a ring. The risk: closure also completes what you did not intend, such as two aligned edges in a layout forming an accidental shape.
 
 ### 3.4 Continuation (good continuation)
 
@@ -156,6 +174,21 @@ Prior knowledge shapes grouping: the same glyph is read as B in A B C and as 13 
 ### 3.12 Ranking the principles
 
 Where cues conflict, the empirical order is roughly: uniform connectedness and common region, then proximity, then similarity (colour, then size, then shape). Common fate overrides all of them while motion lasts. The diagnostic in a crit: blur the screen (a 6 to 10px Gaussian blur, or squint) and name the groups that remain. If the blurred groups are not the content groups, the spacing is wrong, whatever the borders say.
+
+### 3.13 Composition: weight, balance and direction
+
+Rudolf Arnheim (Art and Visual Perception, 1954, revised 1974; The Power of the Center, 1982) described visual weight, the pull an element exerts on the eye and on the balance of a frame: it rises with size, contrast, saturation, isolation and intrinsic interest (a face, a word) and, like a weight on a lever, with distance from the centre. The measured findings since:
+
+| Finding | Evidence | Design use |
+|---|---|---|
+| Centre bias | Stephen Palmer, Jonathan Gardner and Thomas Wickens ("Aesthetic issues in spatial composition: effects of position and direction on framing single objects", Spatial Vision, 2008): a single object is preferred at or near the centre of the frame | A lone bottle, ring or plate sits on the centre axis unless the layout gives a reason to move it |
+| Inward bias | Same study: an off-centre object facing into the frame is preferred to one facing out of it | Models, cars and profiles look into the layout, towards the copy |
+| Representational fit | Jonathan Sammartino and Palmer (Journal of Experimental Psychology: Human Perception and Performance, 2012): objects normally seen from above (a bowl, a ring tray) are preferred low in the frame, objects seen from below (a chandelier, a bird) high | Plated food and jewellery trays sit low; lighting, skylines and towers sit high |
+| Rule of thirds | Seyed Ali Amirshahi, Gregor Hayn-Leichsenring, Joachim Denzler and Christoph Redies ("Evaluating the rule of thirds in photographs and paintings", Art and Perception, 2014): aesthetic ratings correlated weakly with judged thirds placement and not at all with computed placement, and highly rated photographs and paintings followed the rule no more than others | A photographer's starting heuristic; never the reason a crop works |
+| Reading direction | Sylvie Chokron and Maria De Agostini ("Reading habits influence aesthetic preference", Cognitive Brain Research, 2000): French readers preferred pictures with left-to-right directionality, Hebrew readers the reverse; Anne Maass and Aurore Russo (Psychological Science, 2003) found the spatial agency bias (picturing the actor on the left, acting rightwards) reversed for Arabic readers | In Arabic-first Gulf work, mirror subject movement, timelines and gaze along with the text (05-layout-grids-and-composition.md, section 16) |
+| Package weight | Xiaoyan Deng and Barbara Kahn ("Is your product on the right side?", Journal of Marketing Research, 2009): a product image placed low, to the right or bottom right on a pack is judged heavier | Image low for a rich promise (a dessert, a cognac); high and left for lightness (a fragrance, a serum) |
+
+Applied balance, weight and direction are in 05-layout-grids-and-composition.md, sections 6.4, 6.5, 6.12 and 11.
 
 ## 4. Eye movements and reading
 
