@@ -74,7 +74,7 @@ Visual angle is the angle an object subtends at the eye, the only size measure t
 
 The buyers of high jewellery, real estate and private banking are mostly 40 to 70, and their eyes differ from a young designer's in four measured ways (colour rules in 04-colour.md, section 13.5; wider practice in 11-accessibility-and-inclusive-design.md, section 15.3):
 
-- Presbyopia, the age-related loss of near focus: the lens stiffens and the amplitude of accommodation (the eye's range of focusing power in dioptres, the reciprocal of the focal distance in metres) falls from about 10 to 14 dioptres in childhood to about 1 dioptre by 60 (Alexander Duane's curves, 1922). Reading at 40cm needs 2.5 dioptres, so near focus fails from the mid-forties, and the phone is held farther away or read through varifocals, which shrinks the visual angle of every glyph (section 1.3).
+- Presbyopia, the age-related loss of near focus: the lens stiffens and the amplitude of accommodation (the eye's range of focusing power in dioptres, the reciprocal of the focal distance in metres) falls from about 10 to 14 dioptres in childhood to about 1 dioptre by 60 (Alexander Duane's curves, 1922). Reading at 40cm needs 2.5 dioptres, so near focus fails from the mid-forties; the phone is then read through varifocals or held farther away, which shrinks the visual angle of every glyph (section 1.3).
 - Less light: the pupil narrows with age (senile miosis) and the lens yellows, so a 60-year-old's retina receives about a third of the light a 20-year-old's does (Robert Weale, The Senescence of Human Vision, 1992).
 - Lower contrast sensitivity: Cynthia Owsley, Robert Sekuler and Dennis Siemsen ("Contrast sensitivity throughout adulthood", Vision Research, 1983) found sensitivity at middle and high spatial frequencies declining from middle age, with low frequencies spared, so fine strokes go first.
 - Blue loss and glare: the yellowed lens absorbs short wavelengths, so blues and violets merge with dark neutrals, and lens opacities scatter light, so glare from a bright screen or a backlit sign rises.
@@ -256,7 +256,7 @@ Two further patterns from the same research: marking (the eye stays fixed while 
 - The F-pattern is a symptom of poorly structured text; the house removes its causes (section 5.1, table) and designs for the layer-cake.
 - The Z-pattern (top left, top right, diagonal to bottom left, bottom right) is design folklore drawn from the Gutenberg diagram, a model dividing a page into four quadrants read from top left to bottom right (attributed to Edmund Arnold, newspaper design, mid 20th century). It has some support on sparse pages with few elements (a hero with a headline, an image and a call to action) and none on dense content. Nielsen Norman Group's study of zigzag layouts (Kim Flaherty, 26 November 2017; four pages, about 30 to 35 participants per variation) found that alternating image-text rows made decorative images harder to scan past and only worked as well as aligned layouts when the images carried information.
 - Right-to-left languages mirror the F (Pernice, 2019). Arabic pages start at the top right; a bilingual site mirrors its layout, its icons with direction and its reading order (21-web-design-and-digital-craft.md).
-- Horizontal attention leans left. Therese Fessenden ("Horizontal attention leans left", Nielsen Norman Group, 22 October 2017) found 80 percent of fixations on the left half of general web pages, up from 69 percent in the 2010 study, and 94 percent on search results pages. In English layouts the headline, the key value and the labels sit in the left half, and a split hero puts the words left and the image right; Fessenden notes that right-to-left sites mirror the pattern, so Arabic layouts put them in the right half.
+- Horizontal attention leans left. Therese Fessenden ("Horizontal attention leans left", Nielsen Norman Group, 22 October 2017) found 80 percent of fixations on the left half of general web pages, up from 69 percent in the 2010 study, and 94 percent on search results pages. In English layouts the headline, the key value and the labels sit in the left half, and a split hero puts the words left and the image right; Fessenden notes that right-to-left sites mirror Western layouts, so Arabic layouts put them in the right half (an inference from reading direction, consistent with Pernice's mirrored F).
 - Rich results pages are scanned out of order. Kate Moran and Cami Goray ("Complex search-results pages change search behavior: the pinball pattern", Nielsen Norman Group, 17 November 2019; 471 queries) found gaze bouncing between results and page features, with the first result taking 28 percent of clicks against 51 percent in 2006. A hotel or property listing with maps, filters and promoted cards is scanned the same way, so every card carries its key attribute (price, dates, location) where the eye lands.
 
 ### 5.3 Banner blindness
@@ -527,7 +527,7 @@ Don Norman (Emotional Design, 2004) describes three levels of processing:
 - Behavioural: the experience of use: function, understanding, usability, the feel of control. Largely subconscious while it works, conscious when it fails.
 - Reflective: conscious, slow, culturally shaped meaning: self-image, memories, what owning or using it says about the person. Luxury is mostly reflective value delivered through visceral cues.
 
-The house reading: luxury work must win the visceral level in the first second (section 18), never fail the behavioural level (a beautiful site that loses a booking destroys the reflective value it built), and deliver the reflective level through restraint and specificity (section 11; design-taste, SKILL.md, section 1).
+The house reading: luxury work must win the visceral level in the first second (section 18), must also pass the behavioural level (a beautiful site that loses a booking destroys the reflective value it built), and deliver the reflective level through restraint and specificity (section 11; design-taste, SKILL.md, section 1).
 
 ### 10.2 Kansei engineering
 
@@ -614,7 +614,7 @@ Signalling theory explains how one party conveys hidden qualities to another thr
 - Julio Sevilla and Claudia Townsend ("The space-to-product ratio effect", Journal of Marketing Research, 2016) found that more empty space around displayed products raised their perceived aesthetic appeal and the perceived prestige of the store, and shifted preference towards the products displayed with more space.
 - Pracejus, Olsen and O'Guinn ("How nothing became something: white space, rhetoric, history, and meaning", Journal of Consumer Research, 2006) traced white space in advertising as a learned rhetorical sign of prestige, trust, quality and leadership, built up through 20th century luxury print advertising.
 - Hilke Plassmann and colleagues (PNAS, 2008) found that the same wine labelled as more expensive was rated as more pleasant and produced more activity in the medial orbitofrontal cortex: price information changes the experienced quality. Design cues that signal price (space, slowness, material) plausibly work the same way.
-- Jean-Noël Kapferer and Vincent Bastien (The Luxury Strategy, 2009, second edition 2012) codify the "anti-laws of marketing": do not respond to demand, keep non-buyers aware but distant, never sell on price. Restraint in communication is their consequence.
+- Jean-Noël Kapferer and Vincent Bastien (The Luxury Strategy, 2009, second edition 2012) codify the "anti-laws of marketing": do not respond to demand, keep non-buyers aware but distant, and do not sell on price. Restraint in communication is their consequence.
 
 Synthesis: empty space, few words, slow motion and one owned colour are costly signals because they waste the most expensive resource in commercial communication (attention space that could have carried more selling) and because only a confident brand can afford to waste it. They also raise processing fluency (section 10.3), lower perceptual load (section 6.2) so the single element is seen fully, and fit the insider-decoded register of Berger and Ward. Each of design-taste's "physics of expensive" (SKILL.md, section 2) can be traced to one of these mechanisms; this file supplies the mechanism and the taste skill supplies the judgement.
 
@@ -1085,118 +1085,196 @@ On what holds attention, Les Binet and Peter Field (The Long and the Short of It
 ## Terms introduced
 
 - Abney effect: the apparent shift in hue when white is added to a colour at constant wavelength.
+- Abrupt onset and looming: the sudden appearance of an object, and its growth as if approaching, both of which capture attention.
+- Active and passive attention: eyes on an ad, and an ad in view with the eyes elsewhere, measured by camera eye tracking; pixel share, the fraction of the screen an ad covers, predicts both.
 - Aesthetic-usability effect: the tendency to judge attractive designs as easier to use.
 - Affordance: an action possibility arising from the relation between an object's properties and an agent's capabilities (Gibson; Norman).
+- AI hyperrealism: the finding that white AI-generated faces are judged human more often than real human faces.
+- Ambient and focal vision: the periphery's coding of where things are and of a scene's gist (its overall layout and meaning), and the fovea's coding of what things are.
 - Anchoring: the pull of an initial number on later estimates and judgements.
+- Animacy: the perception of an object as alive and acting with intent.
+- APCA (Accessible Perceptual Contrast Algorithm): a polarity-aware contrast method reporting lightness contrast Lc, with levels tied to font size and weight.
 - Apparent motion: the perception of continuous motion from a sequence of still images.
+- Arousal potential (Berlyne's inverted U): a stimulus's complexity, novelty and surprise, with preference highest at moderate levels.
 - Assimilation (Bezold effect): fine patterns taking on the colour of adjacent elements, the opposite of simultaneous contrast.
 - Attentional blink: the failure to report a second target arriving about 200 to 500ms after a first.
 - Attentional synchrony: the convergence of many viewers' gaze on the same point in edited video.
+- Authority: deference to perceived expertise as a cue for compliance.
+- Bandwagon, snob and Veblen effects: demand that rises as more people own a good, falls as more people own it, and rises with its price.
 - Banner blindness: the learned tendency to ignore anything that looks like an advertisement.
 - Bartleson-Breneman effect: the fall in perceived image contrast as the viewing surround darkens.
 - Beta movement: the perception of an object moving between two positions shown in sequence.
 - Bezold-Brücke shift: the apparent change in hue with changing intensity.
 - Biological motion: the immediate perception of a living body from a few moving points of light.
+- Blind spot and filling-in: the receptor-free retinal region where the optic nerve leaves the eye, and the brain's completion of it from the surround.
+- Bouba-kiki effect: the near-universal matching of rounded shapes to "bouba" and spiky shapes to "kiki".
 - Bouma (word shape): the outline of a word formed by ascenders and descenders, once thought to be the unit of recognition.
-- Bouma's law: crowding occurs when flankers are closer than about half the target's eccentricity.
+- Bouma's law: crowding occurs when flankers are closer than about half the target's eccentricity (its distance from the point of fixation).
+- Brand prominence: how conspicuously a brand's mark is displayed on a product, preferred loud by Han, Nunes and Drèze's parvenus and poseurs and quiet by their patricians (proletarians are the fourth class).
+- Central bias: viewers' tendency to fixate the centre of an image or frame first.
+- Centre bias and inward bias: the preference for a single object at the centre of a frame and, when it is off centre, for it to face into the frame.
 - Change blindness: the failure to notice a change between two views separated by a disruption.
+- Choice architecture: the design of the context in which people choose.
 - Choice overload: reduced choosing or satisfaction when options are too many, under specific conditions.
-- Chromatic adaptation: the visual system's normalisation to the prevailing illuminant.
+- Chroma subsampling: storing colour at lower resolution than luminance, as in 4:2:0 video.
+- Chromatic adaptation: the visual system's normalisation to the prevailing illuminant, modelled by von Kries as an independent gain on each cone class.
 - Chunk: a unit of information bound by prior knowledge that occupies one working memory slot.
-- Closure: the completion of incomplete figures by the visual system.
+- CIEDE2000 (delta E 2000): the current colour-difference formula, on which a difference of about 1 is one just noticeable difference side by side.
+- Closure: the completion of incomplete figures by the visual system, including illusory contours (edges seen where no luminance edge exists, as in the Kanizsa triangle).
 - Cognitive load theory: Sweller's account of learning and use as limited by working memory load.
+- Cohen's d: an effect size, the difference between two group means in standard deviation units.
 - Colour constancy: the perception of stable object colour across changes in illumination.
+- Colour vision deficiency (CVD): reduced ability to tell some hues apart, most often red from green, caused by absent or altered cone types.
+- Commitment and consistency: the tendency to act in line with earlier commitments, especially public and written ones.
+- Commitment, marking and bypassing patterns: reading nearly every word, holding the gaze still while the page scrolls, and skipping repeated first words in a list.
 - Common fate: grouping of elements that move or change together.
 - Common region: grouping of elements that share a bounded area.
+- Compromise effect: the gain in share of an option placed between two extremes.
 - Conceptual model: the user's explanation of how a system works, built from the system image.
+- Conspicuous consumption: display whose value lies in its visible cost (Veblen).
 - Constraints: physical, cultural, semantic and logical limits that restrict possible actions.
-- Contrast sensitivity function: the eye's sensitivity to contrast as a function of spatial frequency.
-- Costly signalling: credible communication of a hidden quality through a signal that is expensive to fake.
-- Critical flicker fusion frequency: the rate at which a flickering light appears steady.
+- Contextual cueing: faster search through repeated spatial layouts, learned without awareness.
+- Contrast sensitivity function: the eye's sensitivity to contrast as a function of spatial frequency, measured in cycles per degree (pairs of light and dark bars per degree of visual angle).
+- Costly signalling (handicap principle): credible communication of a hidden quality through a signal that is expensive to fake, such as the peacock's tail.
+- Critical flicker fusion frequency: the rate at which a flickering light appears steady; it rises with log luminance (Ferry-Porter law) and with stimulus area (Granit-Harper law).
 - Critical print size: the smallest print size, about 0.2 degrees of x-height, that still supports maximum reading speed.
-- Crossmodal correspondence: a systematic match between features in different senses shared by most people.
+- Crossmodal correspondence: a systematic match between features in different senses shared by most people; sonic seasoning uses it to change perceived taste with sound.
 - Crowding: impaired recognition of an object in the periphery caused by nearby objects.
 - CSS reference pixel: the visual angle of one pixel at 96 dpi viewed from about 71cm, about 0.0213 degrees.
+- Dark adaptation: the recovery of visual sensitivity in low light, complete after 20 to 30 minutes.
 - Deceptive pattern: an interface designed to make people act against their intent for the business's benefit.
 - Decoy effect (asymmetric dominance): a shift of choice towards an option made to dominate an added inferior option.
 - Default effect: the tendency to stay with a pre-selected option.
-- Distinctive brand asset: a sensory element that triggers the brand without its name.
+- Direct manipulation: interaction in which an on-screen object follows the finger or pointer continuously.
+- Distinctive brand asset: a sensory element that triggers the brand without its name, scored by fame (the share of category buyers who link it to the brand) and uniqueness (the share who link it to no competitor).
 - Doherty threshold: the response time, about 400ms, below which productivity rises sharply.
 - Dual coding theory: Paivio's account of memory in separate verbal and non-verbal codes.
+- Ecological valence theory: colour preference learned from the liked and disliked objects associated with each colour.
 - Element interactivity: the number of elements that must be processed together to understand a task.
 - Endowment effect: valuing something more because one owns it.
 - Expertise reversal effect: guidance that helps novices but burdens experts.
-- Extraneous load: cognitive load imposed by presentation that does not serve the task.
 - F-pattern: a scanning pattern of top lines and left edge, caused by unstructured text.
+- Feature and conjunction search: search for a target differing in one feature, efficient at under about 10ms per item, and for a combination of features, serial at about 20 to 30ms per item.
 - Feature integration theory: Treisman's account of parallel feature maps bound by serial attention.
 - Fechner's law: sensation grows with the logarithm of stimulus intensity.
 - Feedback: immediate, informative communication of the result of an action.
 - Figure and ground: the assignment of a region as the object (figure) against a shapeless background (ground).
-- Fitts's law: movement time grows with log2 of distance over width plus one.
+- Fitts's law, index of difficulty and throughput: movement time grows with the index of difficulty, log2 of distance over width plus one, in bits; throughput is that index divided by movement time, in bits per second.
 - Fixation: a pause between saccades during which visual information is taken in.
+- Flow: full absorption in an activity when challenge matches skill (Csikszentmihalyi).
+- Fogg behaviour model: B = MAP; a behaviour occurs when motivation, ability and a prompt coincide.
 - Fovea and foveola: the central retinal pit of about 5 degrees and its rod-free centre of about 1 to 2 degrees.
+- Fractal dimension: a measure of how a pattern fills space across scales, from 1 for a line to 2 for a filled plane.
 - Framing: the change in choice produced by describing equivalent options differently.
-- Germane load: working memory resources devoted to schema building or to handling intrinsic load.
+- Gaze cueing: the shift of attention to where another person looks.
 - Gestalt: the school of psychology that described how parts are organised into wholes.
+- Glance legibility: how quickly text is read in a brief glance.
 - Goal-gradient effect: effort increasing as a goal approaches.
-- Good continuation: grouping of elements that lie along a smooth line or curve.
+- Golden ratio: the proportion of about 1.618 to 1, with no reliable evidence of a general preference for it.
+- Good continuation: grouping of elements that lie along a smooth line or curve, based on contour integration by an association field of linked detectors.
+- Graphical perception: the accuracy with which chart encodings are read, ranked by Cleveland and McGill from position on a common scale down to colour saturation.
 - Guided search: Wolfe's model in which feature maps guide attention towards likely targets.
 - Gulfs of execution and evaluation: the gaps between intention and available action, and between system state and its interpretation.
-- Habituation: a decreasing response to a repeated stimulus without consequence.
+- Gutenberg diagram: a model dividing a page into four quadrants read from top left to bottom right.
+- Habituation, orienting response and dishabituation: a decreasing response to a repeated stimulus without consequence (in feeds, creative wear-out), the reflexive turn towards a novel stimulus, and the return of the response when the stimulus changes.
 - Halo effect: one positive trait colouring judgements of unrelated traits.
+- Harding test: automated analysis of flashes and patterns in broadcast content for the risk of photosensitive epilepsy (seizures triggered by flashing light or patterns).
+- HDRI: a high dynamic range image of a real environment, used to light 3D scenes.
 - Helmholtz-Kohlrausch effect: saturated colours appearing brighter than their luminance predicts.
 - Hick-Hyman law: choice reaction time grows with log2 of the number of equally likely options plus one.
-- Hold rate: completed or 15-second plays divided by 3-second plays.
+- Hidden and false affordances: action possibilities with no perceptible cue, and cues suggesting an action that does not exist (Gaver).
 - Hunt effect: colourfulness increasing with luminance.
 - IKEA effect: valuing more what one helped to make.
 - Inattentional blindness: failure to see an unexpected object in plain view while attending elsewhere.
-- Index of difficulty: the log2 term of Fitts's law, measured in bits.
-- Intrinsic load: cognitive load set by the inherent complexity of the material for a given user.
+- Information scent: cues in labels and links that predict what lies behind them.
+- Interaction to Next Paint (INP): the delay from a user input to the next frame drawn, a Core Web Vital.
+- Interactive activation model: McClelland and Rumelhart's model of word recognition from letters identified in parallel.
+- Intrinsic, extraneous and germane load: cognitive load set by the material's complexity for the user, load imposed by presentation that does not serve the task, and resources devoted to building schemas or handling intrinsic load.
 - Jakob's law: users expect a site to work like the other sites they use.
-- Just noticeable difference: the smallest detectable change in a stimulus.
+- Just noticeable difference (JND): the smallest detectable change in a stimulus, by Weber's law a constant fraction of its magnitude.
 - Kansei engineering: Nagamachi's method of translating customer feelings into design parameters.
+- Keystroke-Level Model: Card, Moran and Newell's method of predicting expert task time by summing standard operator times.
+- Lateral inhibition, Mach bands and Hermann grid: the suppression of a neuron's response by activity in its neighbours (the basis of centre-surround receptive fields), and its side effects: illusory stripes at the edges of a luminance step and dark spots at the intersections of a white grid.
 - Launching effect: the perception of causality when one object stops on contact and another moves off.
 - Layer-cake pattern: a scanning pattern of headings with selective reading beneath them.
+- Left-digit effect: the outsized influence of a price's leftmost digit, which charm endings (prices ending in 9 or 99) exploit.
 - Legibility: the ease of identifying individual characters and words.
+- Liking: the tendency to say yes to people one likes and resembles.
+- Location effect: a product image placed low or to the right on a pack being judged heavier.
 - Loss aversion: losses weighing more than equal gains, by a factor of about 2.
-- Mach bands: illusory light and dark stripes at the edges of a luminance step.
+- Low-prevalence effect: the higher miss rate for targets that appear rarely.
 - Mapping: the relationship between controls and their effects.
 - MAYA: Loewy's "most advanced, yet acceptable" rule for novelty within typicality.
+- Mayer's multimedia principles: coherence (cut extraneous material), signalling (cue the structure), spatial and temporal contiguity (words near and in time with pictures), segmenting (learner-paced parts), pre-training (key names first), personalisation (conversational style), voice (good-quality narration) and image (a speaker's face adds little).
 - McGurk effect: visible lip movements changing the speech sound heard.
-- Mental availability: the likelihood that a brand comes to mind in buying situations.
+- Memory colour: the remembered, usually more saturated, colour of a familiar object such as skin, sky or grass.
+- Mental availability: the likelihood that a brand comes to mind in buying situations (category entry points).
 - Mental model: a person's simplified internal representation of how something works.
 - Mere exposure effect: increased liking through repeated exposure.
-- Metamerism: different spectra matching under one illuminant or for one observer and differing under another.
+- Metamerism: different spectra matching under one illuminant or for one observer and differing under another (illuminant and observer metamerism).
+- Miller's law: the Laws of UX name for Miller's seven plus or minus two, superseded by Cowan's 4 plus or minus 1.
 - Minimum-jerk trajectory: the smooth, bell-shaped velocity profile of human reaching movements.
 - Modality effect: increased effective capacity when information is split between speech and image.
+- Model Human Processor: Card, Moran and Newell's model of the user as perceptual, cognitive and motor processors with measured cycle times.
+- Motion aftereffect: the illusory drift of still things after watching steady motion (the waterfall illusion).
+- NASA-TLX: a six-scale subjective workload questionnaire.
+- Neuroaesthetics: the study of the brain processes behind aesthetic experience.
 - Nudge: a choice architecture change that alters behaviour without forbidding options or changing incentives significantly.
-- Opponent process: the recoding of cone signals into light-dark, red-green and blue-yellow channels.
+- Occam's razor: prefer the simplest design that does the job.
+- Opponent process: the recoding of cone signals into light-dark, red-green and blue-yellow channels at a stage after the cones (zone theory), which is why afterimages appear in the opponent colour.
 - Ovsiankina effect: the tendency to resume interrupted tasks.
+- Pain of paying: the felt cost of parting with money, lower with cards and one-tap payment than with cash.
+- Paradox of the active user: users start using software without reading instructions.
 - Parafoveal vision: the region from about 1 to 5 degrees around fixation that supplies the reading preview.
+- Pareto principle: a minority of causes produces most of the effects, popularised as 80 to 20.
+- Parkinson's law: work expands to fill the time available.
 - Pattern interrupt: a deliberate break in an expected pattern that triggers an orienting response.
-- Peak-end rule: remembered experience judged mainly by its most intense moment and its end.
+- Peak-end rule: remembered experience judged mainly by its most intense moment and its end, with its length neglected (duration neglect).
+- Perceived affordance: Norman's earlier term for the action possibility a user perceives on screen, later replaced by signifier.
 - Perceptual load theory: Lavie's account in which a demanding task filters out distractors and an easy one admits them.
 - Perceptual span: the region of text used during one fixation.
 - Persistence of vision: a discredited explanation of film motion by retinal afterimages.
 - Phantom array effect: flicker artefacts seen during eye movements across high-frequency flickering light.
 - Phi phenomenon: objectless motion seen between two alternately flashing lights.
+- Phonological loop, visuospatial sketchpad and episodic buffer: the verbal, visual-spatial and integrating stores of Baddeley and Hitch's working memory model.
 - Picture superiority effect: better memory for pictures than for words.
-- Positive and negative polarity: dark text on a light ground, and light text on a dark ground.
+- Pinball pattern: nonlinear scanning of complex search results pages, bouncing between results and page features.
+- Positive and negative polarity: dark text on a light ground, and light text on a dark ground, which causes halation (light text appearing to bleed into the ground) for many readers with astigmatism.
 - Postel's law: be conservative in what you send and liberal in what you accept.
-- Prägnanz: the visual system's preference for the simplest, most regular interpretation.
+- Prägnanz: the visual system's preference for the simplest, most regular interpretation, formalised as the minimum principle (simplest description) and the likelihood principle (most probable cause).
 - Preattentive processing: parallel analysis of simple features across the visual field before attention.
+- Presbyopia and senile miosis: the age-related loss of near focus as the amplitude of accommodation (focusing range in dioptres, the reciprocal of focal distance in metres) falls, and the age-related narrowing of the pupil.
 - Processing fluency: the subjective ease of processing, misattributed to liking and truth.
+- Progressive disclosure: showing what the current step needs and revealing the rest on demand.
+- Prospect-refuge theory: Appleton's account of the preference for an open view from a sheltered position.
 - Prototypicality: how typical an object is of its category.
-- Proximity: grouping of elements that are close together.
+- Proximity: grouping of elements that are close together; by the pure distance law, grouping probability falls exponentially with the ratio of competing spacings.
+- Publication bias: the under-reporting of null results, which inflates published effect sizes.
+- Publicity principle: a policy is acceptable only if its maker would defend it in public.
+- Pulse-width modulation (PWM): dimming an LED by switching it on and off rapidly, a cause of visible flicker.
+- Purkinje shift: the move of peak sensitivity from about 555nm in photopic (daylight) vision through mesopic levels to about 507nm in scotopic (night) vision, which darkens reds first.
+- Rapid serial visual presentation (RSVP): showing words or pictures one at a time at a fixed point.
 - Readability: the ease of reading and understanding continuous text.
+- Reciprocity: the tendency to repay what one receives.
 - Recognition over recall: the advantage of identifying from cues over generating from memory.
 - Redundancy effect: impaired understanding when the same information is presented twice in different forms.
 - Regression: a saccade back to earlier text.
+- Replication crisis: the failure of many published findings to reproduce in larger, preregistered studies.
+- Representational fit: the preference for objects placed where they are normally seen, bowls low and chandeliers high.
+- Representational momentum: the forward displacement of a moving object's remembered final position.
 - Retention curve: the share of viewers still watching plotted against time.
-- Saccade: a rapid ballistic eye movement between fixations.
-- Saccadic suppression: the reduction of vision during a saccade.
+- Rule of thirds: placing a focal point on the lines dividing a frame into thirds, only weakly related to rated quality.
+- Saccade: a rapid ballistic eye movement between fixations, started about 150 to 250ms after a new target appears (saccade latency), during which vision is suppressed (saccadic suppression).
 - Saliency: bottom-up conspicuity of a region computed from local feature contrast.
-- Serial position effect: better memory for the first and last items of a list.
+- Scarcity: the higher value placed on what is rare or running out; supply-led scarcity comes from limited production, demand-led scarcity from other buyers.
+- Schema: an organised knowledge structure that lets many elements be handled as one.
+- Seductive details effect: the harm to learning caused by interesting but irrelevant additions.
+- Selective attention: following one source of information while registering little of others.
+- Semantic differential: a rating scale between two opposite adjectives, such as calm to lively.
+- Sensory conflict theory: motion sickness as a mismatch between visual and vestibular signals.
+- Serial position effect (primacy and recency): better memory for the first and last items of a list.
+- Seven stages of action: Norman's one goal stage, three execution stages and three evaluation stages.
+- Shirorekha, matra and conjunct: the Devanagari headline, a vowel sign, and a consonant cluster written as one combined glyph.
 - Signalling theory: the study of how hidden qualities are conveyed through observable signals.
 - Signifier: a perceivable cue that communicates where and how to act.
 - Similarity: grouping of elements that share colour, size, shape or texture.
@@ -1204,74 +1282,112 @@ On what holds attention, Les Binet and Peter Field (The Long and the Short of It
 - Sludge: friction that makes the beneficial choice harder.
 - Smooth pursuit: eye movement that keeps a moving object on the fovea, accurate up to about 30 degrees per second.
 - Social proof: following what similar others do.
+- Sound-induced flash illusion: one flash seen as two when accompanied by two beeps.
+- Space-to-product ratio effect: more empty space around displayed products raising their perceived appeal and the store's prestige.
+- Spatial agency bias: the tendency to picture the actor on the side where reading starts, acting in the reading direction.
+- Specular highlight: a mirror-like reflection of a light source whose structure, and agreement with the shading, signals gloss; positive skew in the luminance histogram raises perceived gloss.
 - Split-attention effect: added load when related information is separated in space or time.
 - Spotted pattern: a scanning pattern of fixations on scattered salient or sought words.
+- Steering law and menu aim: movement time through a tunnel grows linearly with its length divided by its width, and menu aim keeps a submenu open while the pointer moves diagonally towards it.
 - Stevens effect: perceived contrast increasing with luminance.
 - Stevens's power law: perceived magnitude equals a constant times intensity raised to a continuum-specific exponent.
+- Synthetically generated information: India's IT Rules term for content artificially or algorithmically created or altered so that it appears authentic.
 - System 1 and System 2: Kahneman's fast automatic mode and slow deliberate mode of thinking.
+- System image: everything a user can perceive of a system, from which the user's model is built.
+- Temporal aliasing: false motion produced when the frame rate samples a repeating movement too slowly (the wagon-wheel effect).
 - Temporal binding window: the interval within which sight and sound are fused into one event.
+- Temporal reframing: expressing a cost per day or per month to change how large it feels.
 - Tesler's law: the inherent complexity of a task can only be moved between user and system.
-- Throughput: Fitts's index of difficulty divided by movement time, in bits per second.
-- Thumb-stop ratio: 3-second video plays divided by impressions.
+- Thumb-stop ratio (hook rate) and hold rate: 3-second video plays divided by impressions, and ThruPlays (Meta's plays to completion or to at least 15 seconds) divided by 3-second plays.
+- Tilt-shift effect: a real scene made to look like a miniature by a strong blur gradient.
+- Transient information effect: the overload caused by long spoken or animated segments that disappear as they play.
 - Trichromacy: colour vision based on three cone types.
 - Uncanny valley: the drop in affinity for nearly human figures.
+- Unified Model of Aesthetics: Berghman and Hekkert's account of aesthetic pleasure as a balance of unity and variety (unity in variety), typicality and novelty, and connectedness and autonomy.
 - Uniform connectedness: grouping of elements joined by uniform visual properties.
 - Unity: Cialdini's seventh principle, influence through shared identity.
 - Vection: the illusion of self-motion produced by a moving visual field.
-- Ventriloquism effect: perceived sound location captured by a visible source.
+- Ventriloquism effect: perceived sound location captured by a visible source, the clearest case of visual capture (vision dominating hearing when the two conflict).
+- Visceral, behavioural and reflective levels: Norman's three levels of emotional processing, from fast reaction to conscious meaning.
 - Visual angle: the angle an object subtends at the eye.
+- Visual weight: the pull an element exerts on the eye and on the balance of a frame.
 - Von Restorff effect: better memory for the item that differs from the rest.
-- Weber's law: the just noticeable difference is a constant fraction of stimulus magnitude.
 - Word superiority effect: better identification of a letter inside a word than alone.
-- Working memory: the small store holding information in active use, about 4 chunks.
-- x-height: the height of lowercase letters without ascenders, the main cue to perceived type size.
+- Working memory: the small store holding information in active use, about 4 chunks; its visual part holds about 3 to 4 objects.
+- x-height: the height of lowercase letters without ascenders, the main cue to perceived type size, where point size measures the invisible body of the type.
+- Z-pattern: a claimed top-left to bottom-right scanning path, supported only on sparse pages.
 - Zeigarnik effect: the claimed better memory for interrupted tasks, poorly replicated.
 
 ## Sources and further reading
 
 Books
 
-- Josef Albers, Interaction of Color, 1963; Robert Cialdini, Influence, 1984 (new and expanded edition 2021) and Pre-Suasion, 2016.
-- Anjan Chatterjee, The Aesthetic Brain, 2014; Semir Zeki, Inner Vision, 1999; Daniel Berlyne, Aesthetics and Psychobiology, 1971.
-- James J. Gibson, The Ecological Approach to Visual Perception, 1979; Kurt Koffka, Principles of Gestalt Psychology, 1935.
-- Daniel Kahneman, Thinking, Fast and Slow, 2011; Richard Thaler and Cass Sunstein, Nudge: The Final Edition, 2021.
-- Don Norman, The Design of Everyday Things, revised and expanded edition, 2013; Emotional Design, 2004.
-- Colin Ware, Information Visualization: Perception for Design, fourth edition, 2020; Stephen Palmer, Vision Science: Photons to Phenomenology, 1999.
-- Margaret Livingstone, Vision and Art: The Biology of Seeing, 2002; Mario Livio, The Golden Ratio, 2002.
-- Miles Tinker, Legibility of Print, 1963; Keith Rayner and colleagues, The Psychology of Reading, second edition, 2012.
-- Harry Brignull, Deceptive Patterns, 2023; BJ Fogg, Tiny Habits, 2019; Gloria Mark, Attention Span, 2023.
-- Jean-Noël Kapferer and Vincent Bastien, The Luxury Strategy, second edition, 2012; Byron Sharp, How Brands Grow, 2010; Jenni Romaniuk, Building Distinctive Brand Assets, 2018.
-- Jon Yablonski, Laws of UX, 2020; Raymond Loewy, Never Leave Well Enough Alone, 1951; Charles Spence, Gastrophysics, 2017.
-- Richard Mayer, Multimedia Learning, third edition, 2020; Jakob Nielsen, Usability Engineering, 1993; Thorstein Veblen, The Theory of the Leisure Class, 1899.
+- Josef Albers, Interaction of Color, 1963; Rudolf Arnheim, Art and Visual Perception, 1954 (revised 1974), and The Power of the Center, 1982; Jay Appleton, The Experience of Landscape, 1975; Margaret Livingstone, Vision and Art: The Biology of Seeing, 2002; Mario Livio, The Golden Ratio, 2002.
+- Les Binet and Peter Field, The Long and the Short of It, IPA, 2013; Orlando Wood, Lemon, IPA, 2019, and Look Out, IPA, 2021; Karen Nelson-Field, The Attention Economy and How Media Works, 2020; Byron Sharp, How Brands Grow, 2010; Jenni Romaniuk, Building Distinctive Brand Assets, 2018.
+- Stuart Card, Thomas Moran and Allen Newell, The Psychology of Human-Computer Interaction, 1983; Jakob Nielsen, Usability Engineering, 1993; Don Norman, The Design of Everyday Things, revised and expanded edition, 2013, and Emotional Design, 2004; Jon Yablonski, Laws of UX, 2020, second edition 2024.
+- Anjan Chatterjee, The Aesthetic Brain, 2014; Semir Zeki, Inner Vision, 1999; Daniel Berlyne, Aesthetics and Psychobiology, 1971; Raymond Loewy, Never Leave Well Enough Alone, 1951.
+- John Czepiel, Michael Solomon and Carol Surprenant (eds.), The Service Encounter, 1985, with David Maister's chapter "The psychology of waiting lines"; Robert Cialdini, Influence, 1984 (new and expanded edition 2021) and Pre-Suasion, 2016; BJ Fogg, Tiny Habits, 2019; Harry Brignull, Deceptive Patterns, 2023.
+- James J. Gibson, The Ecological Approach to Visual Perception, 1979; Kurt Koffka, Principles of Gestalt Psychology, 1935; Wolfgang Köhler, Gestalt Psychology, 1929 (second edition 1947); Stephen Palmer, Vision Science: Photons to Phenomenology, 1999; Colin Ware, Information Visualization: Perception for Design, fourth edition, 2020.
+- Robert Hunt, The Reproduction of Colour, sixth edition, 2004; Robert Weale, The Senescence of Human Vision, 1992; Miles Tinker, Legibility of Print, 1963; Keith Rayner and colleagues, The Psychology of Reading, second edition, 2012.
+- Daniel Kahneman, Thinking, Fast and Slow, 2011; Richard Thaler and Cass Sunstein, Nudge: The Final Edition, 2021; Gloria Mark, Attention Span, 2023; Albert Mehrabian, Silent Messages, 1971; Iain McGilchrist, The Master and His Emissary, 2009.
+- Jean-Noël Kapferer and Vincent Bastien, The Luxury Strategy, second edition, 2012; Thorstein Veblen, The Theory of the Leisure Class, 1899; Charles Spence, Gastrophysics, 2017; Richard Mayer, Multimedia Learning, third edition, 2020.
 
 Specifications and standards
 
-- WCAG 2.2, W3C Recommendation, 5 October 2023 (edition 12 December 2024), success criteria 1.4.1, 1.4.3, 1.4.12, 2.3.1, 2.3.3, 2.5.5, 2.5.8. https://www.w3.org/TR/WCAG22/
-- ITU-R BT.1359-1 (11/98), Relative timing of sound and vision for broadcasting. https://www.itu.int/rec/R-REC-BT.1359/en
-- ITU-R BT.1702, Guidance for the reduction of photosensitive epileptic seizures caused by television. https://www.itu.int/rec/R-REC-BT.1702/en
-- EBU Recommendation R37, The relative timing of the sound and vision components of a television signal, 2007. https://tech.ebu.ch/
-- ISO 9241-411:2012, Evaluation methods for the design of physical input devices. https://www.iso.org/
-- CSS Values and Units Module Level 4 (reference pixel). https://www.w3.org/TR/css-values-4/
-- Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 2023 (30 November 2023). https://consumeraffairs.gov.in/
-- Regulation (EU) 2022/2065, Digital Services Act, Article 25; Directive 2005/29/EC, Unfair Commercial Practices Directive. https://eur-lex.europa.eu/
-- Federal Trade Commission, Bringing Dark Patterns to Light, staff report, September 2022. https://www.ftc.gov/
+- WCAG 2.2, W3C Recommendation, 5 October 2023 (edition 12 December 2024), success criteria 1.4.1, 1.4.3, 1.4.12, 2.3.1, 2.3.3, 2.5.5, 2.5.8. https://www.w3.org/TR/WCAG22/ ; CSS Values and Units Module Level 4 (reference pixel). https://www.w3.org/TR/css-values-4/
+- ITU-R BT.1359-1 (11/98), Relative timing of sound and vision for broadcasting. https://www.itu.int/rec/R-REC-BT.1359/en ; ITU-R BT.1702, Guidance for the reduction of photosensitive epileptic seizures caused by television. https://www.itu.int/rec/R-REC-BT.1702/en
+- EBU Recommendation R37, The relative timing of the sound and vision components of a television signal, 2007. https://tech.ebu.ch/publications/r037
+- ISO 9241-411:2012, Ergonomics of human-system interaction, Part 411: Evaluation methods for the design of physical input devices.
+- W3C, Indic Layout Requirements. https://www.w3.org/TR/ilreq/ ; W3C, Arabic and Persian Layout Requirements. https://www.w3.org/TR/alreq/
+- APCA, Andrew Somers, Myndex Research, APCA in a Nutshell, read October 2026. https://git.apcacontrast.com/documentation/APCA_in_a_Nutshell
+- Netflix, English Timed Text Style Guide, read October 2026. https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-Timed-Text-Style-Guide
+- Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 2023, notified 30 November 2023 under the Consumer Protection Act, 2019.
+- Ministry of Electronics and Information Technology, Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026, G.S.R. 120(E), notified 10 February 2026, in force 20 February 2026.
+- Advertising Standards Council of India, Guidelines for Advertising of Skin Lightening or Fairness Improvement Products, August 2014. https://www.ascionline.in
+- Regulation (EU) 2022/2065, Digital Services Act, Article 25. https://eur-lex.europa.eu/eli/reg/2022/2065/oj
+- Directive 2005/29/EC, Unfair Commercial Practices Directive. https://eur-lex.europa.eu/eli/dir/2005/29/oj
+- Regulation (EU) 2024/1689, Artificial Intelligence Act, Article 50, applicable from 2 August 2026. https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+- Federal Trade Commission, Bringing Dark Patterns to Light, staff report, September 2022. https://www.ftc.gov/reports/bringing-dark-patterns-light
 
-Articles and talks
+Articles and talks: web
 
-- Kara Pernice, F-shaped pattern of reading on the web, Nielsen Norman Group, 12 November 2017. https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
-- Kara Pernice, Text scanning patterns: eyetracking evidence, 25 August 2019. https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/ ; Layer-cake pattern, 4 August 2019. https://www.nngroup.com/articles/layer-cake-pattern-scanning/
-- Kara Pernice, Banner blindness revisited, 22 April 2018. https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/
-- Therese Fessenden, Scrolling and attention, 15 April 2018. https://www.nngroup.com/articles/scrolling-and-attention/
-- Kate Moran, Reading content on mobile devices, 11 December 2016. https://www.nngroup.com/articles/mobile-content/ ; Kim Flaherty, Zigzag image-text layouts, 26 November 2017. https://www.nngroup.com/articles/zigzag-page-layout/
-- Steven Hoober, Design for fingers, touch, and people, part 1, UXmatters, 6 March 2017. https://www.uxmatters.com/mt/archives/2017/03/design-for-fingers-touch-and-people-part-1.php
-- Steven Hoober, How do users really hold mobile devices?, UXmatters, 2013. https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php
+- Kara Pernice, F-shaped pattern of reading on the web: misunderstood, but still relevant (even on mobile), Nielsen Norman Group, 12 November 2017. https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/
+- Kara Pernice, Text scanning patterns: eyetracking evidence, Nielsen Norman Group, 25 August 2019. https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/
+- Kara Pernice, The layer-cake pattern of scanning content on the web, Nielsen Norman Group, 4 August 2019. https://www.nngroup.com/articles/layer-cake-pattern-scanning/
+- Kara Pernice, Banner blindness revisited, Nielsen Norman Group, 22 April 2018. https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/
+- Therese Fessenden, Scrolling and attention, Nielsen Norman Group, 15 April 2018. https://www.nngroup.com/articles/scrolling-and-attention/ ; Horizontal attention leans left, Nielsen Norman Group, 22 October 2017. https://www.nngroup.com/articles/horizontal-attention-leans-left/
+- Kate Moran, Reading content on mobile devices, Nielsen Norman Group, 11 December 2016. https://www.nngroup.com/articles/mobile-content/ ; Flat UI elements attract less attention and cause uncertainty, Nielsen Norman Group, 3 September 2017. https://www.nngroup.com/articles/flat-ui-less-attention-cause-uncertainty/
+- Kate Moran and Cami Goray, Complex search-results pages change search behavior: the pinball pattern, Nielsen Norman Group, 17 November 2019. https://www.nngroup.com/articles/pinball-pattern-search-behavior/
+- Kim Flaherty, Zigzag image-text layouts, Nielsen Norman Group, 26 November 2017. https://www.nngroup.com/articles/zigzag-page-layout/ ; Jakob Nielsen, Response times: the 3 important limits, Nielsen Norman Group, 1993. https://www.nngroup.com/articles/response-times-3-important-limits/
+- Steven Hoober, Design for fingers, touch, and people, part 1, UXmatters, 6 March 2017. https://www.uxmatters.com/mt/archives/2017/03/design-for-fingers-touch-and-people-part-1.php ; How do users really hold mobile devices?, UXmatters, 2013. https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php
 - Kevin Larson, The science of word recognition, Microsoft Typography, 2004. https://learn.microsoft.com/en-us/typography/develop/word-recognition
 - Facebook IQ, Capturing attention in feed: the science behind effective video creative, 20 April 2016. https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative
 - Harry Brignull and contributors, Deceptive patterns: types, as of October 2026. https://www.deceptive.design/types ; Jon Yablonski, Laws of UX. https://lawsofux.com/
-- Jakob Nielsen, Response times: the 3 important limits, 1993. https://www.nngroup.com/articles/response-times-3-important-limits/
-- Perception and attention: Treisman and Gelade, Cognitive Psychology, 1980; Itti, Koch and Niebur, IEEE TPAMI, 1998; Simons and Chabris, Perception, 1999; Rensink, O'Regan and Clark, Psychological Science, 1997; Cowan, Behavioral and Brain Sciences, 2001; Wagemans and colleagues, Psychological Bulletin, 2012.
-- Reading and type: McConkie and Rayner, Perception and Psychophysics, 1975; Bouma, Nature, 1970; Pelli and Tillman, Nature Neuroscience, 2008; Brysbaert, Journal of Memory and Language, 2019; Legge and Bigelow, Journal of Vision, 2011; Arditi and Cho, Vision Research, 2005; Dyson and Haselgrove, International Journal of Human-Computer Studies, 2001; Piepenbrock and colleagues, Ergonomics, 2013; Wery and Diliberto, Annals of Dyslexia, 2017; Kuster and colleagues, Annals of Dyslexia, 2018; Zorzi and colleagues, PNAS, 2012.
-- Interaction laws: Fitts, Journal of Experimental Psychology, 1954; MacKenzie, Human-Computer Interaction, 1992; Soukoreff and MacKenzie, International Journal of Human-Computer Studies, 2004; Hick, Quarterly Journal of Experimental Psychology, 1952; Kurosu and Kashimura, CHI 1995; Kivetz, Urminsky and Zheng, Journal of Marketing Research, 2006.
-- Aesthetics and signalling: Reber, Schwarz and Winkielman, Personality and Social Psychology Review, 2004; Hekkert, Snelders and van Wieringen, British Journal of Psychology, 2003; Lindgaard and colleagues, Behaviour and Information Technology, 2006; Tuch and colleagues, International Journal of Human-Computer Studies, 2012; Bar and Neta, Psychological Science, 2006; Green, Perception, 1995; Han, Nunes and Drèze, Journal of Marketing, 2010; Berger and Ward, Journal of Consumer Research, 2010; Sevilla and Townsend, Journal of Marketing Research, 2016; Pracejus, Olsen and O'Guinn, Journal of Consumer Research, 2006.
-- Judgement and persuasion: Tversky and Kahneman, Science, 1974 and 1981; Brown, Imai, Vieider and Camerer, Journal of Economic Literature, 2024 (https://www.aeaweb.org/articles?id=10.1257/jel.20221698); Johnson and Goldstein, Science, 2003; Jachimowicz and colleagues, Behavioural Public Policy, 2019; Goldstein, Cialdini and Griskevicius, Journal of Consumer Research, 2008; Iyengar and Lepper, Journal of Personality and Social Psychology, 2000; Scheibehenne, Greifeneder and Todd, Journal of Consumer Research, 2010; Mertens and colleagues, PNAS, 2022; Maier and colleagues, PNAS, 2022; Susser, Roessler and Nissenbaum, Georgetown Law Technology Review, 2019; Mathur and colleagues, Dark patterns at scale, CSCW 2019.
-- Colour, motion and multisensory: Jonauskaite and colleagues, Psychological Science, 2020; Palmer and Schloss, PNAS, 2010; Steinman, Pizlo and Pizlo, Vision Research, 2000; Anderson and Anderson, Journal of Film and Video, 1993; Davis, Hsieh and Lee, Scientific Reports, 2015; Agrawal and colleagues, Archives of Internal Medicine, 2009; Mori, translated by MacDorman and Kageki, IEEE Robotics and Automation Magazine, 2012; Flash and Hogan, Journal of Neuroscience, 1985; McGurk and MacDonald, Nature, 1976; Shams, Kamitani and Shimojo, Nature, 2000; Storms and Zyda, Presence, 2000; Spence, Attention, Perception, and Psychophysics, 2011; North, Hargreaves and McKendrick, Nature, 1997.
+- Ben Kamens, Breaking down Amazon's mega dropdown, 2013. https://bjk5.com/post/44698559168/breaking-down-amazons-mega-dropdown
+
+Articles: meta-analyses and reviews that carry a house position
+
+- Nelson Cowan, "The magical number 4 in short-term memory: a reconsideration of mental storage capacity", Behavioral and Brain Sciences, 2001. https://doi.org/10.1017/S0140525X01003922
+- Marc Brysbaert, "How many words do we read per minute? A review and meta-analysis of reading rate", Journal of Memory and Language, 2019. https://doi.org/10.1016/j.jml.2019.104047
+- Gordon Legge and Charles Bigelow, "Does print size matter for reading? A review of findings from vision science and typography", Journal of Vision, 2011. https://doi.org/10.1167/11.5.8
+- Alexander Brown, Taisuke Imai, Ferdinand Vieider and Colin Camerer, "Meta-analysis of empirical estimates of loss aversion", Journal of Economic Literature, 2024. https://doi.org/10.1257/jel.20221698
+- Jon Jachimowicz, Shannon Duncan, Elke Weber and Eric Johnson, "When and why defaults influence decisions: a meta-analysis of default effects", Behavioural Public Policy, 2019. https://doi.org/10.1017/bpp.2018.43
+- Benjamin Scheibehenne, Rainer Greifeneder and Peter Todd, "Can there ever be too many options? A meta-analytic review of choice overload", Journal of Consumer Research, 2010. https://doi.org/10.1086/651235 ; Alexander Chernev, Ulf Böckenholt and Joseph Goodman, "Choice overload: a conceptual review and meta-analysis", Journal of Consumer Psychology, 2015. https://doi.org/10.1016/j.jcps.2014.08.002
+- Stephanie Mertens, Mario Herberz, Ulf Hahnel and Tobias Brosch, "The effectiveness of nudging: a meta-analysis of choice architecture interventions across behavioral domains", PNAS, 2022. https://doi.org/10.1073/pnas.2107346118
+- Maximilian Maier and colleagues, "No evidence for nudging after adjusting for publication bias", PNAS, 2022. https://doi.org/10.1073/pnas.2200300119
+
+Articles: by topic
+
+- Perception and search: Treisman and Gelade, "A feature-integration theory of attention", Cognitive Psychology, 1980; Itti, Koch and Niebur, IEEE TPAMI, 1998; Simons and Chabris, "Gorillas in our midst", Perception, 1999; Rensink, O'Regan and Clark, Psychological Science, 1997; Wagemans and colleagues, "A century of Gestalt psychology in visual perception", Psychological Bulletin, 2012; Kubovy, Holcombe and Wagemans, Cognitive Psychology, 1998; Kubovy and van den Berg, https://doi.org/10.1037/0033-295X.115.1.131 ; Field, Hayes and Hess, https://doi.org/10.1016/0042-6989(93)90156-Q ; Rosenholtz, https://doi.org/10.1146/annurev-vision-082114-035733 ; Chun and Jiang, https://doi.org/10.1006/cogp.1998.0681 ; Wolfe, Horowitz and Kenner, https://doi.org/10.1038/435439a ; Luck and Vogel, https://doi.org/10.1038/36846 ; Owsley, Sekuler and Siemsen, https://doi.org/10.1016/0042-6989(83)90210-9 ; Duane, "Studies in monocular and binocular accommodation, with their clinical application", American Journal of Ophthalmology, 1922
+- Composition and aesthetics: Palmer, Gardner and Wickens, https://doi.org/10.1163/156856808784532662 ; Amirshahi and colleagues, https://doi.org/10.1163/22134913-00002024 ; Chokron and De Agostini, https://doi.org/10.1016/S0926-6410(00)00021-5 ; Deng and Kahn, https://doi.org/10.1509/jmkr.46.6.725 ; Spehar and colleagues, https://doi.org/10.1016/S0097-8493(03)00154-7 ; Van Geert and Wagemans, https://doi.org/10.1037/aca0000224 ; Berghman and Hekkert, New Ideas in Psychology, 2017; Post, Blijlevens and Hekkert, Acta Psychologica, 2016; Sammartino and Palmer, Journal of Experimental Psychology: Human Perception and Performance, 2012; Maass and Russo, "Directional bias in the mental representation of spatial events", Psychological Science, 2003; Held and colleagues, https://doi.org/10.1145/1731047.1731057 ; Meyers-Levy and Peracchio, https://doi.org/10.1177/002224379202900406 ; Meyers-Levy and Zhu, https://doi.org/10.1086/519146 ; Ulrich, https://doi.org/10.1126/science.6143402
+- Reading and type: McConkie and Rayner, Perception and Psychophysics, 1975; Bouma, Nature, 1970; Pelli and Tillman, Nature Neuroscience, 2008; Arditi and Cho, "Serifs and font legibility", Vision Research, 2005; Dyson and Haselgrove, International Journal of Human-Computer Studies, 2001; Piepenbrock and colleagues, Ergonomics, 2013; Wery and Diliberto, Annals of Dyslexia, 2017; Kuster and colleagues, Annals of Dyslexia, 2018; Zorzi and colleagues, PNAS, 2012; Bababekova and colleagues, "Font size and viewing distance of handheld smart phones", Optometry and Vision Science, 2011; Song and Schwarz, "If it's hard to read, it's hard to do", https://doi.org/10.1111/j.1467-9280.2008.02189.x ; Wallace and colleagues, https://doi.org/10.1145/3502222 ; Reimer and colleagues, https://doi.org/10.1080/00140139.2014.940000
+- Interaction laws and timing: Fitts, Journal of Experimental Psychology, 1954; MacKenzie, Human-Computer Interaction, 1992; Soukoreff and MacKenzie, International Journal of Human-Computer Studies, 2004; Hick, Quarterly Journal of Experimental Psychology, 1952; Kurosu and Kashimura, CHI 1995; Kivetz, Urminsky and Zheng, Journal of Marketing Research, 2006; Accot and Zhai, "Beyond Fitts' law", CHI 1997; Gaver, "Technology affordances", https://doi.org/10.1145/108844.108856 ; Ng and colleagues, https://doi.org/10.1145/2380116.2380174 ; Jota and colleagues, https://doi.org/10.1145/2470654.2481317 ; Harrison and colleagues, "Rethinking the progress bar", https://doi.org/10.1145/1294211.1294231 ; Harrison, Yeo and Hudson, "Faster progress bars", https://doi.org/10.1145/1753326.1753556
+- Learning, memory and folklore: Rey, https://doi.org/10.1016/j.edurev.2012.05.003 ; Leahy and Sweller, https://doi.org/10.1002/acp.1787 ; Craig and Schroeder, Computers and Education, 2017; Potter and colleagues, https://doi.org/10.3758/s13414-013-0605-z ; Pashler and colleagues, "Learning styles: concepts and evidence", Psychological Science in the Public Interest, 2008; Nielsen and colleagues, https://doi.org/10.1371/journal.pone.0071275 ; Zielske, "The remembering and forgetting of advertising", Journal of Marketing, 1959; Alaybek and colleagues, https://doi.org/10.1016/j.obhdp.2022.104149
+- Aesthetics, credibility and marks: Reber, Schwarz and Winkielman, Personality and Social Psychology Review, 2004; Hekkert, Snelders and van Wieringen, British Journal of Psychology, 2003; Lindgaard and colleagues, Behaviour and Information Technology, 2006; Tuch and colleagues, International Journal of Human-Computer Studies, 2012; Bar and Neta, Psychological Science, 2006; Green, "All that glitters", Perception, 1995; Fogg and colleagues, https://doi.org/10.1145/997078.997097 ; Sillence and colleagues, https://doi.org/10.1145/985692.985776 ; Henderson and Cote, Journal of Marketing, 1998; Henderson, Giese and Cote, https://doi.org/10.1509/jmkg.68.4.60.42736 ; Doyle and Bottomley, https://doi.org/10.1207/s15327663jcp1602_2 ; Hagtvedt, https://doi.org/10.1509/jmkg.75.4.86 ; Jiang and colleagues, https://doi.org/10.1093/jcr/ucv049 ; Cian, Krishna and Elder, https://doi.org/10.1509/jmr.13.0023
+- Luxury signalling and demand: Han, Nunes and Drèze, Journal of Marketing, 2010; Berger and Ward, Journal of Consumer Research, 2010; Sevilla and Townsend, Journal of Marketing Research, 2016; Pracejus, Olsen and O'Guinn, Journal of Consumer Research, 2006; Plassmann and colleagues, https://doi.org/10.1073/pnas.0706929105 ; Leibenstein, https://doi.org/10.2307/1882692 ; Berger and Heath, https://doi.org/10.1086/519142 and https://doi.org/10.1037/0022-3514.95.3.593 ; Amaldoss and Jain, https://doi.org/10.1509/jmkr.42.1.30.56883 ; Gierl and Huettl, https://doi.org/10.1016/j.ijresmar.2010.02.002
+- Price and choice: Thomas and Morwitz, https://doi.org/10.1086/429600 ; Wadhwa and Zhang, Journal of Consumer Research, 2015; Stiving, Management Science, 2000; Yang, Kimes and Sessarego, Cornell Hospitality Report, 2009; Coulter and Coulter, https://doi.org/10.1207/s15327663jcp1501_9 ; Coulter, Choi and Monroe, https://doi.org/10.1016/j.jcps.2011.11.005 ; Prelec and Simester, https://doi.org/10.1023/A:1008196717017 ; Simonson, https://doi.org/10.1086/209205 ; Neumann, Böckenholt and Sinha, https://doi.org/10.1016/j.jcps.2015.05.005 ; Gourville, https://doi.org/10.1086/209517
+- Judgement and persuasion: Tversky and Kahneman, Science, 1974 and 1981; Johnson and Goldstein, Science, 2003; Goldstein, Cialdini and Griskevicius, Journal of Consumer Research, 2008; Iyengar and Lepper, Journal of Personality and Social Psychology, 2000; Susser, Roessler and Nissenbaum, "Online manipulation: hidden influences in a digital world", Georgetown Law Technology Review, 2019; Mathur and colleagues, "Dark patterns at scale", CSCW 2019; Frederick, Lee and Baskin, "The limits of attraction", https://doi.org/10.1509/jmr.12.0061
+- Colour, gloss and charts: Jonauskaite and colleagues, Psychological Science, 2020; Palmer and Schloss, PNAS, 2010; Birch, https://doi.org/10.1364/JOSAA.29.000313 ; Bartleson, https://doi.org/10.1364/JOSA.50.000073 ; Fleming, https://doi.org/10.1146/annurev-vision-102016-061429 ; Fleming, Dror and Adelson, https://doi.org/10.1167/3.5.3 ; Motoyoshi and colleagues, https://doi.org/10.1038/nature05724 ; Anderson and Kim, https://doi.org/10.1167/9.11.10 ; Cleveland and McGill, https://doi.org/10.1080/01621459.1984.10478080 ; Heer and Bostock, https://doi.org/10.1145/1753326.1753357 ; Kosara and Skau, "Judgment error in pie chart variations", EuroVis 2016
+- Motion and faces: Steinman, Pizlo and Pizlo, "Phi is not beta", Vision Research, 2000; Anderson and Anderson, Journal of Film and Video, 1993; Davis, Hsieh and Lee, Scientific Reports, 2015; Agrawal and colleagues, Archives of Internal Medicine, 2009; Mori, translated by MacDorman and Kageki, IEEE Robotics and Automation Magazine, 2012; Flash and Hogan, Journal of Neuroscience, 1985; Kätsyri and colleagues, https://doi.org/10.3389/fpsyg.2015.00390 ; Freyd and Finke, https://doi.org/10.1037/0278-7393.10.1.126 ; Nightingale and Farid, https://doi.org/10.1073/pnas.2120481119 ; Miller and colleagues, https://doi.org/10.1177/09567976231207095
+- Sound and the other senses: McGurk and MacDonald, Nature, 1976; Shams, Kamitani and Shimojo, Nature, 2000; Storms and Zyda, Presence, 2000; Spence, Attention, Perception, and Psychophysics, 2011; North, Hargreaves and McKendrick, Nature, 1997; MacInnis and Park, Journal of Consumer Research, 1991; North and colleagues, https://doi.org/10.1111/j.1559-1816.2004.tb02793.x ; Milliman, https://doi.org/10.1177/002224298204600313 and https://doi.org/10.1086/209068 ; Areni and Kim, Advances in Consumer Research, 1993; Spangenberg, Crowley and Henderson, https://doi.org/10.1177/002224299606000205 ; Mitchell, Kahn and Knasko, Journal of Consumer Research, 1995; Piqueras-Fiszman and Spence, Food Quality and Preference, 2012; Krishna, https://doi.org/10.1016/j.jcps.2011.08.003
+- Feeds: Bakhshi, Shamma and Gilbert, "Faces engage us", https://doi.org/10.1145/2556288.2557403
