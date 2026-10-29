@@ -97,13 +97,11 @@ The second condition is more dangerous in 2026, because generative tools give ev
 | Kenya Hara | Art director of Muji since 2001 (as of October 2026); Designing Design (2007); White (2010); Ex-formation (Lars Müller, 2015) | Emptiness is a receptive state that the viewer fills, distinct from simplicity, which is a reduction | Does the empty space receive the viewer, or is it content that is missing? |
 | John Berger | Ways of Seeing, BBC Two, four 30-minute films, January 1972, produced by Mike Dibb; book, Penguin, 1972 | "Seeing comes before words"; publicity sells the spectator an envied future self; the nude and the gaze | Whom is this image asking the viewer to envy, and is that the brand's register? Who is looking at whom? |
 
-The house reads Graham and Rams for structure, Sagmeister as the counterweight when restraint turns sterile, Hara for the reason empty space reads as luxury, and Berger before every luxury campaign, because the episode on publicity describes the mechanism the campaign uses.
+The house reads Graham and Rams for structure, Sagmeister as the counterweight when restraint turns sterile, Hara for the reason empty space reads as luxury, and Berger before every luxury campaign, because the episode on publicity describes the mechanism the campaign uses. Rams's set and the other durable principle sets, dissected: 28-masters-methods-and-principle-systems.md, section 11. The cognition behind expert judgement: 27-how-the-best-designers-think.md, sections 2 and 11.
 
 Graham's 14 as crit questions: simple (what can go?); timeless (will it hold in 2036?); solves the right problem (is this the brief's problem?); suggestive (does it leave the viewer room to complete it?); often slightly funny (is there wit anywhere?); hard (where did the effort go?); looks easy (is the effort hidden?); uses symmetry (is repetition doing structural work?); resembles nature (does it borrow a model that already works in the world?); is redesign (how many versions came before this one?); can copy (whose solution did it learn from, openly?); often strange (is anything here unexpected?); happens in chunks (which moment or movement does it belong to?); often daring (what risk did it take?).
 
 Hara inherited a Muji whose art direction Ikko Tanaka set at its founding in 1980. Muji aims at the customer's rational "this will do" (kore de ii) over the craving "this is what I want" (kore ga ii); the Horizon campaign (2003, shot at the Salar de Uyuni in Bolivia and on the Mongolian grassland) makes that emptiness an image; his exhibitions RE-DESIGN (2000) and HAPTIC (2004) treat everyday objects as subjects for redesign and touch. Ex-formation (Hara's term for making the familiar unknown again, the reverse of adding information) gives a crit question: does the work make the viewer see a familiar thing as if for the first time?
-
-Rams's set and the other durable principle sets, dissected: 28-masters-methods-and-principle-systems.md, section 11. The cognition behind expert judgement: 27-how-the-best-designers-think.md, sections 2 and 11.
 
 ### 1.7 History as a critique instrument
 
@@ -119,9 +117,7 @@ Copywork method and targets: 00, section 3.6. Its critique use: when a piece fai
 
 ### 1.9 The reference library discipline
 
-Tools (Are.na for connected thinking, Savee for fast visual boards, Cosmos for discovery with an AI-image filter), their plans and the house filing schema are in 00, section 3.7. The annotation rule is what makes a library usable in critique. Every block carries four lines: Reference (source, page, date viewed, device and width); Borrowed (the exact property and its value, for example "outer margin ratio; photographs cropped at the horizon line; small captions set below images"); Not borrowed (what to avoid and why, for example "the palette, too close to the client's competitor"); For (client, project, page).
-
-Folder structure, whatever the tool: `clients/<client>/<project>/` for project boards; `worlds/<category>/` mirroring design-taste references/worlds.md; `craft/<discipline>/<technique>/` (for example `craft/type/hanging-punctuation/`); `dead/` for looks that have peaked; `pairs/` for discrimination drills with the verdict recorded. A reference with no "Borrowed" line is a mood and cannot be briefed; the CD returns it.
+Tools (Are.na for connected thinking, Savee for fast visual boards, Cosmos for discovery with an AI-image filter), their plans and the house filing schema are in 00, section 3.7. The annotation rule is what makes a library usable in critique. Every block carries four lines: Reference (source, page, date viewed, device and width); Borrowed (the exact property and its value, for example "outer margin ratio; photographs cropped at the horizon line; small captions set below images"); Not borrowed (what to avoid and why, for example "the palette, too close to the client's competitor"); For (client, project, page). Folder structure, whatever the tool: `clients/<client>/<project>/` for project boards; `worlds/<category>/` mirroring design-taste references/worlds.md; `craft/<discipline>/<technique>/` (for example `craft/type/hanging-punctuation/`); `dead/` for looks that have peaked; `pairs/` for discrimination drills with the verdict recorded. A reference with no "Borrowed" line is a mood and cannot be briefed; the CD returns it.
 
 ### 1.10 The daily eye practice
 
@@ -169,8 +165,8 @@ Detail in 03-typography.md, sections 4, 5, 6 and 8.
 - Wrong figures: proportional figures in price columns, old-style figures in UI tables, a hyphen where a minus sign belongs, the letter x for a multiplication sign, straight quotes, and inch marks used as apostrophes.
 - Tracking on lowercase: positive letter-spacing on lowercase running text breaks word shapes. Capitals and small caps take positive tracking at small sizes; lowercase display usually wants negative.
 - Runts, widows and orphans (03-typography.md, section 6.4, in Bringhurst's senses): a runt is a single word or part of a word alone on the last line; a widow is a paragraph's last line stranded at the top of a column, page or slide; an orphan is its first line stranded at the bottom.
-- Measure (the length of a line of text, counted in characters): body text outside 45 to 75 characters per line, about 66 being ideal for a single column (Bringhurst, chapter 2), loses the eye at the return or breaks the rhythm. The weekly case is a desktop luxury site running paragraphs 120 to 140 characters wide; the fix is `max-width` in `ch` units, about 60 to 70ch.
-- Size steps too close: two roles 2 to 4px apart (16 and 18px, 28 and 32px) read as a mistake. The house working rule is a ratio of at least 1.25 between adjacent levels, or a difference carried by weight, case or colour instead of size.
+- Measure (the length of a line of text, counted in characters): body text outside 45 to 75 characters per line, about 66 being ideal for a single column (Bringhurst, chapter 2), loses the eye at the return or breaks the rhythm. The weekly case is a desktop luxury site running paragraphs 120 to 140 characters wide; the fix is `max-width` in `ch` units (the width of the 0 character), about 60 to 70ch.
+- Size steps too close: two roles 2 to 4px apart (16 and 18px, 28 and 32px) read as a mistake. The house working rule is a ratio of at least 1.25 between adjacent levels, or a difference carried by weight, case or colour at the same size.
 
 ### 2.2 Colour
 
@@ -268,23 +264,18 @@ Detail in 15-lighting-and-sound.md, sections 10 to 13, and 16-editing-colour-gra
 - Loudness off target: integrated loudness in LUFS (loudness units relative to full scale, measured per ITU-R BS.1770) away from the platform target: EBU R 128 sets minus 23 LUFS for broadcast, and streaming platforms normalise to about minus 14 LUFS (values per platform in 15, section 13.4, and 26). A hot mix is turned down and loses its punch; a quiet one sounds thin beside the ad before it.
 - Sync drift: sound against picture is detectable from about 45ms with sound leading and 125ms with sound lagging (ITU-R BT.1359-1; 02-perception-and-psychology.md, section 16). Check lips and hard sounds (a door, a clasp) in the last minute, where drift accumulates.
 - Music cut mid-phrase: a music edit off a 4- or 8-bar boundary, so the ear hears the join.
-- Dead air: room tone (the location's ambient sound with nobody speaking) missing under cuts, so the background drops to digital silence.
-- Ambience jumping at picture cuts: the background changing exactly on the cut; the fix is a J cut or an L cut (sound leading or trailing the picture across the cut).
+- Dead air: room tone (the location's ambient sound with nobody speaking) missing under cuts, so the background drops to digital silence. Ambience jumping at picture cuts: the background changing exactly on the cut; the fix is a J cut or an L cut (sound leading or trailing the picture across the cut).
 - Breaths and sibilance: voice-over breaths stripped entirely (robotic) or left loud (nervous); harsh s sounds left without a de-esser (a processor that tames sibilance).
-- Recognisable library music: a track the audience has heard under ten other advertisers.
-- No Foley (sound effects performed and recorded to picture) on product handling: without the clasp click, the cork, the fabric and the key card, the product feels weightless.
+- Recognisable library music: a track the audience has heard under ten other advertisers. No Foley (sound effects performed and recorded to picture) on product handling: without the clasp click, the cork, the fabric and the key card, the product feels weightless.
 
 ### 2.13 CGI and archviz
 
-Real estate is a core Mask360 category and renders are critiqued weekly. 2.11 and 22 cover generated material; CGI (computer-generated imagery) and archviz (architectural visualisation) come from a 3D pipeline (13-motion-graphics-and-3d-production.md, section 8).
+Real estate is a core Mask360 category and renders are critiqued weekly. 2.11 and 22 cover generated material; CGI (computer-generated imagery) and archviz (architectural visualisation) come from a 3D pipeline (13-motion-graphics-and-3d-production.md, section 8). References for light and restraint: MIR (Bergen) and Brick Visual (Budapest).
 - Light that contradicts the place: sun direction disagreeing with the shadows, the stated time or the site's latitude (Mumbai about 19°N, Dubai about 25°N; compute the angle with a sun-path tool such as SunCalc); interior lights glowing at noon; a replaced sky that disagrees with the reflections in the glazing.
-- Surfaces too perfect: hard 90-degree edges with no bevel to catch light; uniform roughness with no smudge or wear; repeated plant instances.
-- Missing contact: no contact shadows or ambient occlusion (the soft darkening where surfaces meet), so furniture floats.
+- Surfaces too perfect: hard 90-degree edges with no bevel to catch light; uniform roughness with no smudge or wear; repeated plant instances. Missing contact: no contact shadows or ambient occlusion (the soft darkening where surfaces meet), so furniture floats.
 - Entourage (the people, cars and props added for scale and life) cloned: the same cut-out person on two balconies.
-- Lens: ultra-wide interiors at 14 to 16mm that make a 2BHK read as a ballroom; the house keeps about 24mm full-frame equivalent or longer at about 1.2 to 1.6m eye height.
+- Lens: ultra-wide interiors at 14 to 16mm that make a 2BHK (a flat with two bedrooms, a hall and a kitchen) read as a ballroom; the house keeps about 24mm full-frame equivalent or longer at about 1.2 to 1.6m eye height.
 - Regulation: section 12 of RERA makes the promoter liable to buyers who suffer loss from a false statement in an advertisement or prospectus, so a render shows no amenity absent from the sanctioned plan, and the artist's impression line stays on every render.
-
-References for light and restraint: MIR (Bergen) and Brick Visual (Budapest).
 
 ## 3. The craft tells catalogue
 
@@ -429,7 +420,7 @@ A craft tell is a specific execution defect that a trained eye reads as unattend
 | 135 | Social | Logo in the first frame of a reel | Signals an ad; thumbs scroll | Earn the first second with the picture; brand later | 16, section 4.5 | S2 |
 | 136 | Type | Body measure outside 45 to 75 characters (120 to 140 on desktop luxury sites) | The eye loses the return; long lines read as a document dump | `max-width` of about 60 to 70ch; about 66 characters for a single column | Bringhurst, The Elements of Typographic Style, chapter 2 | S2 |
 | 137 | Type | Apostrophe in a shortened year set as an opening quote ('26) | Smart quotes guessed wrong; typesetters see it at once | U+2019, the closing quote, for the elided digits | Butterick's Practical Typography, "apostrophes" | S2 |
-| 138 | Sound | Mix off the platform loudness target | Normalisation turns it down, or it sounds thin beside the ad before it | Mix to the platform target in LUFS, true peak at or below minus 1 dBTP | 15-lighting-and-sound.md, section 13.4 | S3 |
+| 138 | Sound | Mix off the platform loudness target | Normalisation turns it down, or it sounds thin beside the ad before it | Mix to the platform target in LUFS, true peak (dBTP, decibels true peak) at or below minus 1 dBTP | 15-lighting-and-sound.md, section 13.4 | S3 |
 | 139 | Sound | Lip sync drifting late in the film | Felt before it is named; detectable from about 45ms early or 125ms late | Re-sync at the conform; check the last minute as closely as the first | ITU-R BT.1359-1 (02, section 16) | S3 |
 | 140 | Sound | Music cut mid-phrase | The ear hears the splice | Cut music on 4- or 8-bar boundaries and shape the picture cut around the phrase | 15-lighting-and-sound.md, section 12 | S2 |
 | 141 | Sound | Digital silence under dialogue cuts | The background drops out; the edit sounds pasted together | Room tone laid under every dialogue edit | 15-lighting-and-sound.md, section 10.6 | S2 |
@@ -446,7 +437,7 @@ A craft tell is a specific execution defect that a trained eye reads as unattend
 | 152 | CGI | Ultra-wide interior at 14 to 16mm | A 2BHK reads as a ballroom; buyers feel misled on the site visit | About 24mm full-frame equivalent or longer at 1.2 to 1.6m eye height | Hélène Binet's architectural photography | S3 |
 | 153 | CGI | Over-blue pool water | Resort-brochure cliché | Water tinted by depth, sky and tile; checked against a photograph of real water | MIR (Bergen) archviz portfolio | S2 |
 | 154 | CGI | Amenity rendered that is absent from the sanctioned plan | Promoter liability to buyers under RERA section 12 | Render only the sanctioned plan; artist's impression line on every render | Real Estate (Regulation and Development) Act 2016, section 12 | S4 |
-| 155 | Events | LED wall too coarse for the camera distance | Moiré (interference patterns between the camera sensor and the LED grid) on the livestream | Pixel pitch in millimetres at or below the minimum viewing distance in metres; camera test on the wall before the show | 20-print-packaging-ooh-and-physical-production.md, section 7 | S3 |
+| 155 | Events | LED wall too coarse for the camera distance | Moiré (interference patterns between the camera sensor and the LED grid) on the livestream | Pixel pitch (the distance between LED centres) in millimetres at or below the minimum viewing distance in metres; camera test on the wall before the show | 20-print-packaging-ooh-and-physical-production.md, section 7 | S3 |
 | 156 | Events | Stage key and house lights at mixed colour temperatures | Faces green or orange on camera | One key temperature, gels matched | 15-lighting-and-sound.md, sections 2 to 6 | S2 |
 | 157 | Events | Step-and-repeat logos on every surface | Sponsor clutter replaces the set | Logos on one designated wall | Es Devlin's stage designs | S2 |
 | 158 | Events | Florals taller than the lectern | Faces hidden from the room and the camera | Florals below the speaker's chin line | Checklist 5.14, question 5 | S2 |
@@ -456,7 +447,7 @@ A craft tell is a specific execution defect that a trained eye reads as unattend
 | 162 | Events | Signage below the sightline once the room is full | Nobody finds the bar or the exit | Signage above the heads of a standing crowd | 20, section 8.1 | S2 |
 | 163 | Packaging | Rigid box lid that clacks shut or sticks | The first touch of the brand feels cheap | Tolerance set so the lid settles slowly on its air cushion | Apple iPhone box | S3 |
 | 164 | Packaging | Glue or wrap creasing at the corners; ribbon pulls that fray | Hand-making looks careless | Checked on pre-production samples; ribbon ends heat-sealed or folded | 20-print-packaging-ooh-and-physical-production.md, section 6 | S2 |
-| 165 | Packaging | Black PE foam inserts | Reads as electronics or a toolbox | Moulded pulp, flocked or fabric-wrapped inserts | Aesop packaging | S2 |
+| 165 | Packaging | Black polyethylene foam inserts | Reads as electronics or a toolbox | Moulded pulp, flocked or fabric-wrapped inserts | Aesop packaging | S2 |
 | 166 | Packaging | Barcode on the front face | Retail mechanics on the hero face | Barcode on the base or back panel | Aesop packaging | S2 |
 | 167 | Packaging | Mandatory declarations cramped or below the legal letter height | Fails the Legal Metrology rules in India; looks like an afterthought | A declarations panel designed from the start, with a 1.5mm cap height floor | 20, section 6 | S4 |
 | 168 | Packaging | Unboxing with no sequence | Everything visible at once; no reveal | Order the layers: outer, card, tissue, product, accessories | Apple iPhone box | S2 |
@@ -595,7 +586,7 @@ The reason for the order is cost and sunk cost: polish applied to a dead idea ma
 
 ### 4.10 The review environment
 
-Colour, type and motion verdicts made on an uncalibrated laptop, a projector or an iPhone with True Tone on are a weekly source of wrong notes and disputed sign-offs.
+Colour, type and motion verdicts made on an uncalibrated laptop, a projector or an iPhone with True Tone on are a weekly source of wrong notes and disputed sign-offs. Rule: every sign-off in the log names the device and the viewing condition.
 
 | Medium | Review condition | Reason and standard |
 |---|---|---|
@@ -606,17 +597,15 @@ Colour, type and motion verdicts made on an uncalibrated laptop, a projector or 
 | Social | Posted to a private test account and seen in the real app | The export window has no interface, no compression and no feed |
 | OOH | Composited onto a photograph of the actual site at true scale | 20, section 7 |
 
-Rule: every sign-off in the log names the device and the viewing condition.
-
 ### 4.11 Biases in the room
 
 02-perception-and-psychology.md, sections 8.10 and 12.2, defines these biases from the user's side; in a crit they distort the reviewers.
 
 | Bias | How it shows in a crit | Counter |
 |---|---|---|
-| Halo and the aesthetic-usability effect (Masaaki Kurosu and Kaori Kashimura, CHI 1995) | The most polished route also wins on idea and usability | Show routes at equal fidelity |
+| Halo (one strong quality colouring every other judgement) and the aesthetic-usability effect (attractive designs judged more usable; Masaaki Kurosu and Kaori Kashimura, CHI 1995) | The most polished route also wins on idea and usability | Show routes at equal fidelity |
 | Order effects | The first or last route shown wins | Vary the order between sessions and say why each route sits where it does |
-| Mere exposure and habituation (Robert Zajonc, 1968) | After 12 rounds the team likes what it has lived with and stops seeing defects | A cold reader who has not seen earlier rounds |
+| Mere exposure (liking a thing more for having seen it more; Robert Zajonc, 1968) and habituation | After 12 rounds the team likes what it has lived with and stops seeing defects | A cold reader who has not seen earlier rounds |
 | IKEA effect (Michael Norton, Daniel Mochon and Dan Ariely, 2012) | Makers overvalue what they built | Makers speak last in the evaluate stage (4.1) |
 | Anchoring | The first opinion or number voiced sets the range | Silent look and written verdicts before discussion (4.1, 4.4) |
 | HiPPO (highest paid person's opinion; popularised by Avinash Kaushik) | The room converges on the most senior view | The CD speaks last; the client's senior speaks after the team has presented |
@@ -626,7 +615,7 @@ Rule: every sign-off in the log names the device and the viewing condition.
 ### 4.12 Critique upstream: brief crit, tissue session, pre-mortem
 
 - Brief crit, six questions (the brief's anatomy is in 19-campaigns-and-creative-direction.md, section 2): one audience named as a person; one measurable objective; a single-minded proposition in one sentence; an insight stated as a tension; mandatories listed; budget and dates. A brief that fails two goes back to the client before work starts.
-- Tissue session: rough routes (a scamp, a headline and a reference each) shown to the client before production, at equal fidelity, to kill cheaply.
+- Tissue session: rough routes (a scamp, meaning a quick rough sketch, with a headline and a reference each) shown to the client before production, at equal fidelity, to kill cheaply.
 - Pre-mortem (Gary Klein, "Performing a Project Premortem", Harvard Business Review, September 2007): imagine it is six months after launch and the campaign has failed in public; everyone writes the reasons silently for 3 minutes, then reads them out. Seed the Mask360 failure modes: a festival or religious misread, an ASCI or UAE permit breach, meme risk, an AI disclosure backlash.
 
 ## 5. Self-critique checklists per deliverable
@@ -635,122 +624,75 @@ Run before any piece goes to the CD, and again before it goes to the client. Que
 
 ### 5.1 Identity
 
-- Idea: 1. Can I say the idea behind the mark in one sentence? 2. Does it come from something true about the client (place, founder, material, method)? 3. Does it survive cover-the-name: would a stranger guess the category and the register? 4. Which three references did it borrow from, and what exactly?
-- Mark: 5. Does it hold at 16px, in one colour, reversed, embroidered and etched? 6. Is there a small-size version where detail closes? 7. Are curves drawn, with no leftover nodes or wobble at 1,600 percent? 8. Is it optically centred in its own clear space?
-- Wordmark and type: 9. Is the wordmark kerned by hand? 10. Do symbol and wordmark balance in weight? 11. Is the type family licensed for logo, web, app and broadcast use (03, section 16)? 12. Do the Arabic and Devanagari versions exist, designed together with the Latin?
-- System: 13. Can the system make 20 different applications without new rules? 14. Is the colour specified in hex, RGB, CMYK per stock, Pantone and paint? 15. Is there one owned colour? 16. Is the grid or graphic device generative, or decoration?
-- Applications: 17. Have I shown the worst case (a favicon, a cheque, a WhatsApp avatar, a hoarding at 40m)? 18. Do the mock-ups use real content? 19. Does it work on the client's real channels (Instagram grid, website header, signage)?
-- Time: 20. Will this hold in 2029 (section 9.3)? 21. Is any element a trend that should live in campaigns instead? 22. What did I remove, and should one more thing go?
+- Idea: 1. Can I say the idea behind the mark in one sentence? 2. Does it come from something true about the client (place, founder, material, method)? 3. Does it survive cover-the-name: would a stranger guess the category and the register? 4. Which three references did it borrow from, and what exactly? Mark: 5. Does it hold at 16px, in one colour, reversed, embroidered and etched? 6. Is there a small-size version where detail closes? 7. Are curves drawn, with no leftover nodes or wobble at 1,600 percent? 8. Is it optically centred in its own clear space? Wordmark and type: 9. Is the wordmark kerned by hand? 10. Do symbol and wordmark balance in weight? 11. Is the type family licensed for logo, web, app and broadcast use (03, section 16)? 12. Do the Arabic and Devanagari versions exist, designed together with the Latin?
+- System: 13. Can the system make 20 different applications without new rules? 14. Is the colour specified in hex, RGB, CMYK per stock, Pantone and paint? 15. Is there one owned colour? 16. Is the grid or graphic device generative, or decoration? Applications: 17. Have I shown the worst case (a favicon, a cheque, a WhatsApp avatar, a hoarding at 40m)? 18. Do the mock-ups use real content? 19. Does it work on the client's real channels (Instagram grid, website header, signage)? Time: 20. Will this hold in 2029 (section 9.3)? 21. Is any element a trend that should live in campaigns instead? 22. What did I remove, and should one more thing go?
 
 ### 5.2 Deck
 
-- Story: 1. Can the deck's argument be read from the slide titles alone? 2. Is there one idea per slide? 3. Is the client the hero, with their real hex on a #0A0A0A ground (design-taste, section 7)? 4. Does the first slide earn attention and the last slide ask for the decision?
-- Content: 5. Is every claim backed by a number, a reference or an image? 6. Is the ratio about 70 visual to 30 text? 7. Have I cut every slide that exists to show effort? 8. Does each chart make one point, with the point as its title?
-- Type and layout: 9. Are margins identical on every slide? 10. Are there no more than three type sizes in use? 11. Are there any runts, orphan bullets or text boxes that touch an edge? 12. Do images share one treatment and crop logic?
-- Craft: 13. Do all images hold up at 100 percent on a 4K screen? 14. Are video embeds playing offline? 15. Is the PDF export under the client's email limit (often 10 to 25MB) with fonts embedded? 16. Have I checked spelling of the client's names, products and people?
-- Delivery: 17. Can it be presented in 20 minutes with the remaining slides as appendix? 18. Does it pass the flick test at speed, with nothing jumping? 19. Would the client's CEO forward it without editing? 20. What is the single sentence the client should repeat after the meeting?
+- Story: 1. Can the deck's argument be read from the slide titles alone? 2. Is there one idea per slide? 3. Is the client the hero, with their real hex on a #0A0A0A ground (design-taste, section 7)? 4. Does the first slide earn attention and the last slide ask for the decision? Content: 5. Is every claim backed by a number, a reference or an image? 6. Is the ratio about 70 visual to 30 text? 7. Have I cut every slide that exists to show effort? 8. Does each chart make one point, with the point as its title? Type and layout: 9. Are margins identical on every slide? 10. Are there no more than three type sizes in use? 11. Are there any runts, orphan bullets or text boxes that touch an edge? 12. Do images share one treatment and crop logic?
+- Craft: 13. Do all images hold up at 100 percent on a 4K screen? 14. Are video embeds playing offline? 15. Is the PDF export under the client's email limit (often 10 to 25MB) with fonts embedded? 16. Have I checked spelling of the client's names, products and people? Delivery: 17. Can it be presented in 20 minutes with the remaining slides as appendix? 18. Does it pass the flick test at speed, with nothing jumping? 19. Would the client's CEO forward it without editing? 20. What is the single sentence the client should repeat after the meeting?
 
 ### 5.3 Website or microsite
 
-- Idea and narrative: 1. Is there one idea, stated in the first viewport? 2. Is there one considered motion moment and everything else still? 3. Does the scroll have a beginning, a peak and an ending? 4. Does the page end with the same care as it starts?
-- Performance: 5. LCP 2.5 seconds or less, INP 200ms or less, CLS 0.1 or less at the 75th percentile on a mid-range Android on 4G? 6. Hero media compressed (AVIF or WebP; video with a poster)? 7. Fonts subset and preloaded, with no layout jump on swap?
-- Accessibility: 8. Text contrast 4.5:1, large text and UI 3:1? 9. Keyboard path complete with visible focus? 10. `prefers-reduced-motion` honoured? 11. Alt text written by a person, describing what matters?
-- Craft: 12. Grid holds at 360, 768, 1280, 1440 and 1920px? 13. No near-miss alignments or drifting margins? 14. Real content at real lengths, including the longest Arabic or Hindi string? 15. Hover, focus, active and visited states consistent?
-- Function: 16. Anchor links, back button, find-in-page and right-click work? 17. Forms validate inline and confirm success? 18. Open Graph image, favicon and 404 page designed? 19. Analytics events firing for the one action that matters? 20. Does it work with JavaScript slow or failing?
-- Taste: 21. Cover the logo: whose site is this? 22. Is any word selling? 23. What would Awwwards' usability jurors mark down (12.2)?
+- Idea and narrative: 1. Is there one idea, stated in the first viewport? 2. Is there one considered motion moment and everything else still? 3. Does the scroll have a beginning, a peak and an ending? 4. Does the page end with the same care as it starts? Performance: 5. LCP 2.5 seconds or less, INP 200ms or less, CLS 0.1 or less at the 75th percentile on a mid-range Android on 4G? 6. Hero media compressed (AVIF or WebP; video with a poster)? 7. Fonts subset and preloaded, with no layout jump on swap? Accessibility: 8. Text contrast 4.5:1, large text and UI 3:1? 9. Keyboard path complete with visible focus? 10. `prefers-reduced-motion` honoured? 11. Alt text written by a person, describing what matters?
+- Craft: 12. Grid holds at 360, 768, 1280, 1440 and 1920px? 13. No near-miss alignments or drifting margins? 14. Real content at real lengths, including the longest Arabic or Hindi string? 15. Hover, focus, active and visited states consistent? Function: 16. Anchor links, back button, find-in-page and right-click work? 17. Forms validate inline and confirm success? 18. Open Graph image, favicon and 404 page designed? 19. Analytics events firing for the one action that matters? 20. Does it work with JavaScript slow or failing? Taste: 21. Cover the logo: whose site is this? 22. Is any word selling? 23. What would Awwwards' usability jurors mark down (12.2)?
 
 ### 5.4 App screen
 
-- Purpose: 1. What is the one job of this screen, and is it the most visible thing? 2. Is the primary action reachable by thumb? 3. Can a first-time user explain the screen after five seconds?
-- States: 4. Empty, loading, partial, error, offline, disabled and success all designed? 5. What happens with zero items, one item and 1,000? 6. With a 40 percent longer translated label? 7. At 200 percent text size?
-- System: 8. Every value from a token (colour, type, space, radius, motion)? 9. Radii concentric? 10. One icon family, stroke matched to text? 11. Density consistent with sibling screens?
-- Platform: 12. Respects iOS and Android conventions where users expect them (06, section 2)? 13. Safe areas, notch and home indicator clear? 14. Touch targets at least 24px, primary actions 44pt? 15. Haptics and motion only as feedback?
-- Craft: 16. Pixel-aligned at 1x, 2x and 3x? 17. Dark mode designed in its own right and checked? 18. Copy: verbs on buttons, no jargon, sentence case? 19. Does the screen compare cleanly against the build at 2px tolerance (06, section 20)? 20. What can be removed?
+- Purpose: 1. What is the one job of this screen, and is it the most visible thing? 2. Is the primary action reachable by thumb? 3. Can a first-time user explain the screen after five seconds? States: 4. Empty, loading, partial, error, offline, disabled and success all designed? 5. What happens with zero items, one item and 1,000? 6. With a 40 percent longer translated label? 7. At 200 percent text size? System: 8. Every value from a token (colour, type, space, radius, motion)? 9. Radii concentric? 10. One icon family, stroke matched to text? 11. Density consistent with sibling screens?
+- Platform: 12. Respects iOS and Android conventions where users expect them (06, section 2)? 13. Safe areas, notch and home indicator clear? 14. Touch targets at least 24px, primary actions 44pt? 15. Haptics and motion only as feedback? Craft: 16. Pixel-aligned at 1x, 2x and 3x? 17. Dark mode designed in its own right and checked? 18. Copy: verbs on buttons, no jargon, sentence case? 19. Does the screen compare cleanly against the build at 2px tolerance (06, section 20)? 20. What can be removed?
 
 ### 5.5 Film
 
-- Idea and structure: 1. Is the idea clear with sound off? 2. Does the first second earn the second (16, section 3.4)? 3. Is there one image the audience will remember tomorrow? 4. Does it resolve? 5. Is every shot doing work, and which one would I cut first?
-- Picture: 6. Light direction consistent within scenes? 7. Eyelines and the 180-degree line respected? 8. No cuts between near-identical angles? 9. Skin on the skin tone line; blacks and highlights holding detail? 10. Product in focus wherever it is the subject?
-- Edit: 11. Cuts land on or a frame before the beat where cut to music? 12. Dissolves only where they mean time or connection? 13. Holds long enough for the luxury pace (16, section 3.3)? 14. Cutdowns (30, 15, 6 seconds) each work on their own?
-- Sound: 15. Opening breath before the score? 16. Dialogue clear over music? 17. Loudness on target per platform (15, section 13)? 18. Music licensed for every territory and term (15, section 12)?
-- Delivery: 19. Captions in the brand face, inside safe zones, in every required language? 20. Every aspect ratio reframed by hand? 21. End frame on the master logo artwork, legible on a phone? 22. Generated shots checked frame by frame at the cuts (22, section 5.4)?
+- Idea and structure: 1. Is the idea clear with sound off? 2. Does the first second earn the second (16, section 3.4)? 3. Is there one image the audience will remember tomorrow? 4. Does it resolve? 5. Is every shot doing work, and which one would I cut first? Picture: 6. Light direction consistent within scenes? 7. Eyelines and the 180-degree line respected? 8. No cuts between near-identical angles? 9. Skin on the skin tone line; blacks and highlights holding detail? 10. Product in focus wherever it is the subject? Edit: 11. Cuts land on or a frame before the beat where cut to music? 12. Dissolves only where they mean time or connection? 13. Holds long enough for the luxury pace (16, section 3.3)? 14. Cutdowns (30, 15, 6 seconds) each work on their own?
+- Sound: 15. Opening breath before the score? 16. Dialogue clear over music? 17. Loudness on target per platform (15, section 13)? 18. Music licensed for every territory and term (15, section 12)? Delivery: 19. Captions in the brand face, inside safe zones, in every required language? 20. Every aspect ratio reframed by hand? 21. End frame on the master logo artwork, legible on a phone? 22. Generated shots checked frame by frame at the cuts (22, section 5.4)?
 
 ### 5.6 Social post
 
 Full platform checklist: 17-short-form-social-and-platform-craft.md, section 10.
 
-- Stop: 1. Does it stop a thumb in the first frame without a logo? 2. Does it read as a 120px grid tile? 3. Is the cover frame designed?
-- Read: 4. Key text outside the platform UI zones? 5. Legible on a phone at arm's length? 6. One message only?
-- Brand: 7. Cover the handle: is it ours? 8. Does it belong in the grid beside the last nine posts? 9. Is the caption in the brand voice, without emojis or exclamation marks (house rule)?
-- Craft: 10. Exported at the platform's native size and frame rate (26, section 2)? 11. Carousel margins identical slide to slide? 12. Captions burned in once, with no doubling by auto captions? 13. Alt text written?
-- Compliance: 14. Paid partnership label where required; ASCI influencer guidelines in India; the Advertiser Permit in the UAE, administered by the National Media Authority since it replaced the UAE Media Council in December 2025 (24-business-of-creative-and-agency-operations.md, section 14.7)? 15. Music licensed for commercial use on that platform?
-- Edit: 16. Have I cut the last line of the caption? 17. Would the client's most discerning customer save it? 18. Is it something only this brand could post? 19. Does it advance the campaign idea or just fill the calendar? 20. Would I post it on the agency's own account?
+- Stop: 1. Does it stop a thumb in the first frame without a logo? 2. Does it read as a 120px grid tile? 3. Is the cover frame designed? Read: 4. Key text outside the platform UI zones? 5. Legible on a phone at arm's length? 6. One message only? Brand: 7. Cover the handle: is it ours? 8. Does it belong in the grid beside the last nine posts? 9. Is the caption in the brand voice, without emojis or exclamation marks (house rule)?
+- Craft: 10. Exported at the platform's native size and frame rate (26, section 2)? 11. Carousel margins identical slide to slide? 12. Captions burned in once, with no doubling by auto captions? 13. Alt text written? Compliance: 14. Paid partnership label where required; ASCI influencer guidelines in India; the Advertiser Permit in the UAE, administered by the National Media Authority since it replaced the UAE Media Council in December 2025 (24-business-of-creative-and-agency-operations.md, section 14.7)? 15. Music licensed for commercial use on that platform? Edit: 16. Have I cut the last line of the caption? 17. Would the client's most discerning customer save it? 18. Is it something only this brand could post? 19. Does it advance the campaign idea or just fill the calendar? 20. Would I post it on the agency's own account?
 
 ### 5.7 Print piece
 
-- Object: 1. Is the paper chosen first and proofed (04, section 10; 20, section 2)? 2. Does the finish serve the idea (one foil, one emboss, or none)? 3. Is the format a standard sheet size, or is the waste priced? 4. Grain direction parallel to folds?
-- Colour: 5. Correct output profile for stock (coated or uncoated)? 6. One rich black build? 7. Total ink under the printer's limit? 8. Small type and hairlines in a single ink? 9. Brand colour proofed against the Pantone or the master swatch?
-- Type: 10. Body size readable when printed (print-it-out test)? 11. Kerning, rag, widows and orphans checked on the printed proof? 12. Real small caps and correct figures?
-- Prepress: 13. Bleed (usually 3mm) and safe area set? 14. Images at 300ppi at final size, in CMYK or managed RGB per the printer? 15. Overprint (ink printed over another) and knockout (the ink beneath removed) checked in Acrobat Output Preview? 16. Dielines (the cutting and folding outline) on their own layer, set to overprint?
-- Finish: 17. Contract proof signed? 18. Press check booked for anything with brand colour or skin? 19. Packaging tested in the hand, opened and closed ten times? 20. What does it feel like to hold, and is that the brand?
+- Object: 1. Is the paper chosen first and proofed (04, section 10; 20, section 2)? 2. Does the finish serve the idea (one foil, one emboss, or none)? 3. Is the format a standard sheet size, or is the waste priced? 4. Grain direction parallel to folds? Colour: 5. Correct output profile for stock (coated or uncoated)? 6. One rich black build? 7. Total ink under the printer's limit? 8. Small type and hairlines in a single ink? 9. Brand colour proofed against the Pantone or the master swatch? Type: 10. Body size readable when printed (print-it-out test)? 11. Kerning, rag, widows and orphans checked on the printed proof? 12. Real small caps and correct figures?
+- Prepress: 13. Bleed (usually 3mm) and safe area set? 14. Images at 300ppi at final size, in CMYK or managed RGB per the printer? 15. Overprint (ink printed over another) and knockout (the ink beneath removed) checked in Acrobat Output Preview? 16. Dielines (the cutting and folding outline) on their own layer, set to overprint? Finish: 17. Contract proof signed? 18. Press check booked for anything with brand colour or skin? 19. Packaging tested in the hand, opened and closed ten times? 20. What does it feel like to hold, and is that the brand?
 
 ### 5.8 OOH
 
-- Read: 1. Does the idea read in the time the viewer has? At 60km/h a car covers about 17m a second, and at 100km/h a board legible from 150m is in view for under six seconds, of which the driver spares a fraction; the house works to about 3 seconds of reading on Sheikh Zayed Road, while a signal or Mumbai congestion gives a longer dwell (19, section 6.2; 20, section 7.5; 05, section 13; as of October 2026). 2. Seven words or fewer in the headline? 3. Legible from the real viewing distance (the other-room test at scale)? 4. One image, one line, one mark?
-- Site: 5. Is it designed for this site's real context (a Bandra flyover, Sheikh Zayed Road, an airport walkway)? 6. Does the art survive the site's surround, lighting at night and the sun's glare? 7. For DOOH (digital out-of-home screens), does the motion work in the loop length and without sound (16, section 12.10)?
-- Craft: 8. Artwork at the printer's scale and resolution, with bleed for the frame? 9. Colour proofed on the real substrate (flex, vinyl, backlit)? 10. Small type removed: nothing under the minimum legible cap height of viewing distance divided by 360, with the headline at about distance divided by 120 (at 60m, about 17cm and 50cm; 20, section 7.4)?
-- Compliance: 11. Municipal permissions and content rules for the city? 12. Real estate: RERA number and QR (India) or Trakheesi permit (Dubai) present and legible?
-- Taste: 13. Cover the logo: whose is it? 14. Would it be photographed and shared by passers-by? 15. Is it the brand's single idea, or a cut-down of the film? 16. Would it embarrass the client if it ran for six months? 17. Does it work as a set across sites? 18. What can still be removed? 19. Does it look premium in the photograph the client will post? 20. Has it been seen at real size, on a wall or a projector?
+- Read: 1. Does the idea read in the time the viewer has? At 60km/h a car covers about 17m a second, and at 100km/h a board legible from 150m is in view for under six seconds, of which the driver spares a fraction; the house works to about 3 seconds of reading on Sheikh Zayed Road, while a signal or Mumbai congestion gives a longer dwell (19, section 6.2; 20, section 7.5; 05, section 13; as of October 2026). 2. Seven words or fewer in the headline? 3. Legible from the real viewing distance (the other-room test at scale)? 4. One image, one line, one mark? Site: 5. Is it designed for this site's real context (a Bandra flyover, Sheikh Zayed Road, an airport walkway)? 6. Does the art survive the site's surround, lighting at night and the sun's glare? 7. For DOOH (digital out-of-home screens), does the motion work in the loop length and without sound (16, section 12.10)? Craft: 8. Artwork at the printer's scale and resolution, with bleed for the frame? 9. Colour proofed on the real substrate (flex, vinyl, backlit)? 10. Small type removed: nothing under the minimum legible cap height of viewing distance divided by 360, with the headline at about distance divided by 120 (at 60m, about 17cm and 50cm; 20, section 7.4)?
+- Compliance: 11. Municipal permissions and content rules for the city? 12. Real estate: RERA number and QR (India) or Trakheesi permit (Dubai) present and legible? Taste: 13. Cover the logo: whose is it? 14. Would it be photographed and shared by passers-by? 15. Is it the brand's single idea, or a cut-down of the film? 16. Would it embarrass the client if it ran for six months? 17. Does it work as a set across sites? 18. What can still be removed? 19. Does it look premium in the photograph the client will post? 20. Has it been seen at real size, on a wall or a projector?
 
 ### 5.9 Campaign idea
 
-- Insight and idea: 1. Is there a true insight about the audience, stated in one sentence? 2. Is the idea one sentence, and could only this brand say it? 3. Does it answer the brief's objective, or a more interesting one? 4. Has it been done (archive search, 19, section 4.4)?
-- Reach: 5. Does it work in every channel the brief needs without becoming a different idea (19, section 6)? 6. Does it have a platform for years, or one execution? 7. Can the audience take part or retell it?
-- Culture: 8. How does it read in Mumbai, Delhi, Dubai and Riyadh? 9. Does it respect festivals, religion and family codes in each market? 10. Is anyone in the work a stereotype?
-- Craft promise: 11. Can it be made at the budget and timeline at the house standard? 12. What is the hero execution, and is it the strongest expression? 13. What will make it look expensive, specifically?
-- Proof: 14. What will the client measure, and can this idea move it? 15. What could go wrong in public, and what is the plan? 16. Would a D&AD jury see an idea, craft and impact (12.3)? 17. Would the client's competitor wish they had it? 18. Does the team want to make it? 19. If we kill it, what do we lose? 20. Is there a simpler version of the same idea?
+- Insight and idea: 1. Is there a true insight about the audience, stated in one sentence? 2. Is the idea one sentence, and could only this brand say it? 3. Does it answer the brief's objective, or a more interesting one? 4. Has it been done (archive search, 19, section 4.4)? Reach: 5. Does it work in every channel the brief needs without becoming a different idea (19, section 6)? 6. Does it have a platform for years, or one execution? 7. Can the audience take part or retell it? Culture: 8. How does it read in Mumbai, Delhi, Dubai and Riyadh? 9. Does it respect festivals, religion and family codes in each market? 10. Is anyone in the work a stereotype?
+- Craft promise: 11. Can it be made at the budget and timeline at the house standard? 12. What is the hero execution, and is it the strongest expression? 13. What will make it look expensive, specifically? Proof: 14. What will the client measure, and can this idea move it? 15. What could go wrong in public, and what is the plan? 16. Would a D&AD jury see an idea, craft and impact (12.3)? 17. Would the client's competitor wish they had it? 18. Does the team want to make it? 19. If we kill it, what do we lose? 20. Is there a simpler version of the same idea?
 
 ### 5.10 Photography selects
 
-- Set: 1. One white balance across the set? 2. One grade, one crop logic, one aspect family? 3. Is the hero the strongest frame, or only the most expensive setup? 4. Does the edit run as a sequence (wide, medium, detail, people)? 5. Verticals for 9:16 and 4:5 crops, with the subject safe?
-- Frame: 6. Focus on the subject at 100 percent (eyes, stones, the engraving)? 7. Highlights and shadows holding detail on marble, white linen and black suits? 8. Catchlights from a shaped source? 9. Verticals straight in architecture? 10. Distractions removed in camera or listed for retouch (exit signs, cables, air-conditioning units)?
-- Retouch: 11. Retouch specified per frame in writing? 12. Skin texture kept at 100 percent, with no liquify near straight lines? 13. Beauty-claim retouching checked against the disclosure rules (16, section 10.1)?
-- Rights: 14. Model releases signed for every recognisable person? 15. Property releases for private interiors and recognisable buildings? 16. Usage, territory and term agreed with the photographer in writing (24, section 4)? 17. Artwork, logos and trademarks in frame cleared?
-- Delivery: 18. Masters in the agreed colour space and resolution, with web derivatives? 19. Filenames versioned and credited? 20. Would the client's most discerning customer save this frame? 21. Which frame would I cut?
+- Set: 1. One white balance across the set? 2. One grade, one crop logic, one aspect family? 3. Is the hero the strongest frame, or only the most expensive setup? 4. Does the edit run as a sequence (wide, medium, detail, people)? 5. Verticals for 9:16 and 4:5 crops, with the subject safe? Frame: 6. Focus on the subject at 100 percent (eyes, stones, the engraving)? 7. Highlights and shadows holding detail on marble, white linen and black suits? 8. Catchlights from a shaped source? 9. Verticals straight in architecture? 10. Distractions removed in camera or listed for retouch (exit signs, cables, air-conditioning units)? Retouch: 11. Retouch specified per frame in writing? 12. Skin texture kept at 100 percent, with no liquify near straight lines? 13. Beauty-claim retouching checked against the disclosure rules (16, section 10.1)?
+- Rights: 14. Model releases signed for every recognisable person? 15. Property releases for private interiors and recognisable buildings? 16. Usage, territory and term agreed with the photographer in writing (24, section 4)? 17. Artwork, logos and trademarks in frame cleared? Delivery: 18. Masters in the agreed colour space and resolution, with web derivatives? 19. Filenames versioned and credited? 20. Would the client's most discerning customer save this frame? 21. Which frame would I cut?
 
 ### 5.11 Real estate render set
 
-- Truth: 1. Every amenity shown is in the sanctioned plan, with nothing added (RERA section 12; 2.13)? 2. Artist's impression line on every render? 3. RERA number and QR (India) or Trakheesi permit (Dubai) on every published use? 4. Window views true to the site, or labelled?
-- Light: 5. Sun angle computed for the site's latitude and the stated time? 6. Sky and glazing reflections agree? 7. Interior lights match the time of day? 8. One colour temperature logic per scene?
-- Camera: 9. Lens about 24mm full-frame equivalent or longer at 1.2 to 1.6m eye height? 10. Verticals straight? 11. Rooms read at their true size against a known object (a door, a bed)?
-- Materials: 12. Bevels on hard edges? 13. Roughness varied, with wear where hands touch? 14. Contact shadows and ambient occlusion checked at 100 percent? 15. Plants varied, with no repeated instances?
-- Life and set: 16. Entourage cast for the buyer, varied, none cloned? 17. People dressed for the climate and the market? 18. Cars, furniture and art plausible for the price tier? 19. One grade and one time-of-day logic across the set? 20. Is the hero render the one that carries the idea? 21. Would a buyer walking the show flat feel misled by any frame?
+- Truth: 1. Every amenity shown is in the sanctioned plan, with nothing added (RERA section 12; 2.13)? 2. Artist's impression line on every render? 3. RERA number and QR (India) or Trakheesi permit (Dubai) on every published use? 4. Window views true to the site, or labelled? Light: 5. Sun angle computed for the site's latitude and the stated time? 6. Sky and glazing reflections agree? 7. Interior lights match the time of day? 8. One colour temperature logic per scene? Camera: 9. Lens about 24mm full-frame equivalent or longer at 1.2 to 1.6m eye height? 10. Verticals straight? 11. Rooms read at their true size against a known object (a door, a bed)?
+- Materials: 12. Bevels on hard edges? 13. Roughness varied, with wear where hands touch? 14. Contact shadows and ambient occlusion checked at 100 percent? 15. Plants varied, with no repeated instances? Life and set: 16. Entourage cast for the buyer, varied, none cloned? 17. People dressed for the climate and the market? 18. Cars, furniture and art plausible for the price tier? 19. One grade and one time-of-day logic across the set? 20. Is the hero render the one that carries the idea? 21. Would a buyer walking the show flat feel misled by any frame?
 
 ### 5.12 Packaging
 
-- Shelf: 1. Shelf test passed against the three nearest competitors (4.8)? 2. Read as the right price tier at shopper distance? 3. Brand found in two seconds from any face that faces out?
-- Hand: 4. Lid fit tested ten times, settling slowly with no clack or stick? 5. Corners free of glue and wrap creasing on pre-production samples? 6. Inserts in a material that suits the category (no black PE foam for luxury)? 7. Ribbon ends sealed? 8. Weight and balance right in the hand?
-- Sequence: 9. Unboxing ordered (outer, card, tissue, product, accessories)? 10. Is the first thing seen the right thing? 11. Can the customer repack it?
-- Law: 12. Mandatory declarations legible and complete (Legal Metrology rules in India; 20, section 6)? 13. Barcode on the base or back? 14. Recycling marks and material codes present? 15. Market-specific labelling (Arabic for the Gulf where the category requires it) checked against 20, section 6?
-- Print: 16. Dielines checked against a physical sample? 17. Finishes proofed on the real board? 18. Colour consistent across board, wrap paper and printed insert?
-- Taste: 19. Cover the logo: whose box is this? 20. Would a customer keep the box? 21. What can be removed?
+- Shelf: 1. Shelf test passed against the three nearest competitors (4.8)? 2. Read as the right price tier at shopper distance? 3. Brand found in two seconds from any face that faces out? Hand: 4. Lid fit tested ten times, settling slowly with no clack or stick? 5. Corners free of glue and wrap creasing on pre-production samples? 6. Inserts in a material that suits the category (no black polyethylene foam for luxury)? 7. Ribbon ends sealed? 8. Weight and balance right in the hand? Sequence: 9. Unboxing ordered (outer, card, tissue, product, accessories)? 10. Is the first thing seen the right thing? 11. Can the customer repack it?
+- Law: 12. Mandatory declarations legible and complete (Legal Metrology rules in India; 20, section 6)? 13. Barcode on the base or back? 14. Recycling marks and material codes present? 15. Market-specific labelling (Arabic for the Gulf where the category requires it) checked against 20, section 6? Print: 16. Dielines checked against a physical sample? 17. Finishes proofed on the real board? 18. Colour consistent across board, wrap paper and printed insert? Taste: 19. Cover the logo: whose box is this? 20. Would a customer keep the box? 21. What can be removed?
 
 ### 5.13 Email
 
-- Inbox: 1. Subject names the content honestly, with no fake "Re:"? 2. Preheader written as a second headline? 3. Sender name recognisable?
-- Render: 4. Readable with images off (live-text headline and body)? 5. HTML under Gmail's 102KB clip limit? 6. Images under 150KB each and 600KB in total (21, section 10)? 7. Dark-mode logo swap or keyline supplied? 8. Tested in Apple Mail, the Gmail app on Android and Outlook for Windows? 9. Single column on phones, 600 to 640px wide on desktop?
-- Read: 10. Body at least 14px, 16px on mobile? 11. Tap targets 44px high? 12. One primary call to action that says what happens next? 13. Alt text written for every image that carries meaning?
-- Brand: 14. Brand face loaded with a matched fallback, or headlines set as live text in a system face? 15. Photography at the house standard? 16. Footer, unsubscribe and postal address complete?
-- Taste: 17. Cover the logo: whose email is this? 18. Would the client's best customer open the next one? 19. One idea per email? 20. What can be cut?
+- Inbox: 1. Subject names the content honestly, with no fake "Re:"? 2. Preheader written as a second headline? 3. Sender name recognisable? Render: 4. Readable with images off (live-text headline and body)? 5. HTML under Gmail's 102KB clip limit? 6. Images under 150KB each and 600KB in total (21, section 10)? 7. Dark-mode logo swap or keyline supplied? 8. Tested in Apple Mail, the Gmail app on Android and Outlook for Windows? 9. Single column on phones, 600 to 640px wide on desktop? Read: 10. Body at least 14px, 16px on mobile? 11. Tap targets 44px high? 12. One primary call to action that says what happens next? 13. Alt text written for every image that carries meaning?
+- Brand: 14. Brand face loaded with a matched fallback, or headlines set as live text in a system face? 15. Photography at the house standard? 16. Footer, unsubscribe and postal address complete? Taste: 17. Cover the logo: whose email is this? 18. Would the client's best customer open the next one? 19. One idea per email? 20. What can be cut?
 
 ### 5.14 Event or activation
 
-- Arrival: 1. What does the guest see, hear and smell in the first 10 seconds? 2. Is the way in obvious without signage? 3. Is signage above the sightline once the room is full?
-- Room: 4. Sightline from the worst seat checked in person? 5. Florals and props below the speaker's chin line? 6. One key light temperature, gels matched? 7. Sound checked at full-room level, with the room's absorption? 8. Run of show timed to the minute, transitions rehearsed?
-- Camera: 9. Stage designed for the 16:9 livestream and the 9:16 phone crops? 10. LED pixel pitch fine enough for the camera distance, with no moiré (20, section 7)? 11. A photo moment lit for phones? 12. Projection square or warp-corrected?
-- Brand: 13. Logos confined to one designated wall? 14. Does the set carry the idea on its own? 15. Materials true to the brand at touching distance?
-- Safety and law: 16. Permits, fire exits and capacity cleared? 17. Religious and cultural calendar checked for the date? 18. Photography consent at the door?
-- Close: 19. Does the night end on a designed moment? 20. What does the guest take home? 21. What will the guest post, and does it look premium in that photograph?
+- Arrival: 1. What does the guest see, hear and smell in the first 10 seconds? 2. Is the way in obvious without signage? 3. Is signage above the sightline once the room is full? Room: 4. Sightline from the worst seat checked in person? 5. Florals and props below the speaker's chin line? 6. One key light temperature, gels matched? 7. Sound checked at full-room level, with the room's absorption? 8. Run of show timed to the minute, transitions rehearsed? Camera: 9. Stage designed for the 16:9 livestream and the 9:16 phone crops? 10. LED pixel pitch fine enough for the camera distance, with no moiré (20, section 7)? 11. A photo moment lit for phones? 12. Projection square or warp-corrected?
+- Brand: 13. Logos confined to one designated wall? 14. Does the set carry the idea on its own? 15. Materials true to the brand at touching distance? Safety and law: 16. Permits, fire exits and capacity cleared? 17. Religious and cultural calendar checked for the date? 18. Photography consent at the door? Close: 19. Does the night end on a designed moment? 20. What does the guest take home? 21. What will the guest post, and does it look premium in that photograph?
 
 ## 6. Giving feedback
 
@@ -873,8 +815,7 @@ For web and app work the build is the week's feedback stream; the QA gates are 0
 
 Section 10 covers culture in the work; this covers culture in the room, in a studio that mixes Indian, Emirati, Lebanese, British and Filipino staff and presents to hierarchical clients.
 - Erin Meyer, The Culture Map (2014), places countries on an evaluating scale of how negative feedback is given: American managers wrap it in positives, while French, Dutch, Israeli and German managers state it directly. Upgraders (absolutely, totally) and downgraders (kind of, slightly; British understatement is the classic case) change how strong a note sounds, so "a few small things to look at" from a British reviewer can mean the route is in trouble. The house reads the book for each nationality in the team and calibrates per person.
-- Power distance (Geert Hofstede's measure of how far less powerful people accept unequal power) scores high for India (77), the UAE (74) and Saudi Arabia (72) on The Culture Factor's comparison tool (read October 2026). In the room, juniors rarely contradict the CD, and "yes" can mean "I heard you".
-- Counters: silent written cards before discussion (4.4); the Critical Response Process for juniors (4.3); ask "what would you change?" before giving your note; confirm each action in writing after the crit; correct a senior client person only in a one-to-one, never in front of their juniors.
+- Power distance (Geert Hofstede's measure of how far less powerful people accept unequal power) scores high for India (77), the UAE (74) and Saudi Arabia (72) on The Culture Factor's comparison tool (read October 2026). In the room, juniors rarely contradict the CD, and "yes" can mean "I heard you". Counters: silent written cards before discussion (4.4); the Critical Response Process for juniors (4.3); ask "what would you change?" before giving your note; confirm each action in writing after the crit; correct a senior client person only in a one-to-one, away from their juniors.
 
 ### 6.14 To printers, creators, illustrators and stylists
 
@@ -932,15 +873,11 @@ Hold when the note breaks the idea, damages long-term brand equity, breaches law
 
 ### 7.6 When the data disagrees with the eye
 
-Performance creative makes "the ugly ad won the test" a weekly note. Two bounds. The cautionary case: Doug Bowman left Google in March 2009 ("Goodbye, Google", stopdesign.com), citing a team that could not decide between two blues and tested 41 shades between them. The evidence for brand building: Les Binet and Peter Field, The Long and the Short of It (IPA, 2013), about 60:40 brand to activation as the starting balance (19-campaigns-and-creative-direction.md, section 4.5).
-
-House rule: the CD decides the idea, the distinctive assets and anything that builds memory; data chooses between executions of one idea at the activation end (hook, first frame, offer, call to action, format). A winning "ugly" variant is read for its mechanism (the product clearer, the hook faster, the price visible), and that mechanism is then crafted well; the ugliness is never the lesson. The success metric is written down before launch; tests run at least 7 days to cover weekday cycles; brand metrics are never judged from a 3-day test. Derived metrics: hook rate (3-second video views divided by impressions) and hold rate (ThruPlays, Meta's count of plays to completion or to 15 seconds, divided by 3-second views).
+Performance creative makes "the ugly ad won the test" a weekly note. Two bounds. The cautionary case: Doug Bowman left Google in March 2009 ("Goodbye, Google", stopdesign.com), citing a team that could not decide between two blues and tested 41 shades between them. The evidence for brand building: Les Binet and Peter Field, The Long and the Short of It (IPA, 2013), about 60:40 brand to activation as the starting balance (19-campaigns-and-creative-direction.md, section 4.5). House rule: the CD decides the idea, the distinctive assets and anything that builds memory; data chooses between executions of one idea at the activation end (hook, first frame, offer, call to action, format). A winning "ugly" variant is read for its mechanism (the product clearer, the hook faster, the price visible), and that mechanism is then crafted well; the ugliness is never the lesson. The success metric is written down before launch; tests run at least 7 days to cover weekday cycles; brand metrics are never judged from a 3-day test. Derived metrics: hook rate (3-second video views divided by impressions) and hold rate (ThruPlays, Meta's count of plays to completion or to 15 seconds, divided by 3-second views).
 
 ### 7.7 When the public hates it
 
-Reverted: Gap's new logo (4 October 2010, withdrawn about a week later); Tropicana Pure Premium's redesign by Arnell Group (January 2009, reverted after about two months, with sales reported down about 20 percent because shoppers could not find the product); Cracker Barrel's removal of its Old Timer figure (August 2025, reversed within about a week; 01-history-and-movements.md). Held: the London 2012 logo by Wolff Olins (June 2007), ridiculed at launch and used through the Games; Airbnb's Bélo (July 2014; 12.1), remixed online and kept. Jaguar's November 2024 rebrand is in 18-brand-strategy-and-identity-design.md, section 7.
-
-Rule: separate reaction to change, which decays in weeks, from functional failure (shoppers cannot find the product, as with Tropicana) and from betrayal of core customers (Cracker Barrel). Judge on behaviour (sales, share of search; 18); comment sentiment measures only the reaction to change. A holding window of about 8 to 12 weeks is agreed with the client before launch and broken early only by behaviour data.
+Reverted: Gap's new logo (4 October 2010, withdrawn about a week later); Tropicana Pure Premium's redesign by Arnell Group (January 2009, reverted after about two months, with sales reported down about 20 percent because shoppers could not find the product); Cracker Barrel's removal of its Old Timer figure (August 2025, reversed within about a week; 01-history-and-movements.md). Held: the London 2012 logo by Wolff Olins (June 2007), ridiculed at launch and used through the Games; Airbnb's Bélo (July 2014; 12.1), remixed online and kept. Jaguar's November 2024 rebrand is in 18-brand-strategy-and-identity-design.md, section 7. Rule: separate reaction to change, which decays in weeks, from functional failure (shoppers cannot find the product, as with Tropicana) and from betrayal of core customers (Cracker Barrel). Judge on behaviour (sales, share of search; 18); comment sentiment measures only the reaction to change. A holding window of about 8 to 12 weeks is agreed with the client before launch and broken early only by behaviour data.
 
 ### 7.8 Receiving feedback as the CD
 
@@ -1189,22 +1126,19 @@ Critique 1: hotel microsite, a 22-room heritage hotel in Jaipur.
 - Verdict: not presentable, with an open S4 (no idea yet); rubric 2.25 on the site profile (13.1), cheap, with the idea gate and the function cap both applying. The photography is expensive.
 - What works: the courtyard photographs at first light. Real sandstone, real shadow, nobody in frame; they carry the place better than any line on the page.
 - What does not: (1) Idea, S4: the page lists rooms, spa and dining in three equal cards and the headline "Experience timeless royal luxury" could sit on any palace hotel in Rajasthan; there is no idea yet. (2) S3: the 14MB autoplay hero video puts LCP at about 4 seconds on a mid-range Android; the target is 2.5. (3) S2: eleven sections fade up on scroll. (4) S3: the hotel's Devanagari name is set in a default system font at half the Latin size. (5) S3: image captions in #B5B5B5 on white measure 2.05:1 against the 4.5:1 minimum. (6) S2: the booking widget uses 4px corners inside 24px cards.
-- The fix: Idea first: "the house wakes slowly"; the scroll follows one day from first light to lamps, using the existing photographs in time order. Headline: the one fact only this house has (the year the courtyard was built, the family that still lives on the top floor). Hero: the first-light still as an AVIF poster under 200KB, video loaded after interaction. One motion: the light shifting across the courtyard, scroll-linked; everything else still. Devanagari name drawn with the Latin in one lockup (03, section 15). Captions to #767676 or darker (4.54:1). Widget radius 16px, concentric with the card. References: Aman's property pages for margin and pace; The Postcard for the host's voice; RAAS Jodhpur for heritage without gold.
-- Scores: idea 2, specificity 2, hierarchy 3, craft 3, restraint 2, coherence 3, register 3, currency 3, function and access 1, ending 3; weighted 2.25.
+- The fix: Idea first: "the house wakes slowly"; the scroll follows one day from first light to lamps, using the existing photographs in time order. Headline: the one fact only this house has (the year the courtyard was built, the family that still lives on the top floor). Hero: the first-light still as an AVIF poster under 200KB, video loaded after interaction. One motion: the light shifting across the courtyard, scroll-linked; everything else still. Devanagari name drawn with the Latin in one lockup (03, section 15). Captions to #767676 or darker (4.54:1). Widget radius 16px, concentric with the card. References: Aman's property pages for margin and pace; The Postcard for the host's voice; RAAS Jodhpur for heritage without gold. Scores: idea 2, specificity 2, hierarchy 3, craft 3, restraint 2, coherence 3, register 3, currency 3, function and access 1, ending 3; weighted 2.25.
 
 Critique 2: jewellery reel, 30 seconds, a Mumbai fine jewellery brand's bridal edit.
 - Verdict: not presentable, with an open S4 (no idea); rubric 1.75 on the film profile, cheap.
 - What works: the macro of the clasp mechanism at 0:18; the only shot that shows how the piece is made and handled.
 - What does not: (1) Idea, S4: necklaces rotate on black velvet with a sparkle overlay and the super "Timeless elegance for your special day"; it is a catalogue with music. (2) S3: the logo fills frame one, so the reel announces itself as an ad. (3) S2: the score starts on frame one and cuts land 2 to 4 frames off the beat. (4) S3: the one hand shot has orange skin; blacks are crushed on the velvet so the setting detail is lost. (5) S3: captions are editor-default white with a heavy stroke, in the bottom 15 percent of the 9:16 frame, under the platform interface.
-- The fix: Make the clasp shot the idea: "fastened by family", the moment a mother fastens the necklace on the bride. Worn on skin in low window light, with a hard point source for fire in the stones and soft fill for the gold. Open on room tone and a 1.5-second hold on hands; music enters on the first cut; cut on or a frame before the beat. Grade skin onto the skin tone line before any look (16, section 8.5); lift blacks to hold the setting. Captions in the brand face, above the bottom safe zone (26, section 2). Logo on the end frame only, on the master artwork. Cutdowns at 15 and 6 seconds built from the same idea. References: Cartier's long-form films for pace, Sophie Bille Brahe for jewellery worn on skin, Zoya for Indian restraint (design-taste, references/worlds.md).
-- Scores: idea 1, specificity 1, hierarchy 2, craft 2, restraint 2, coherence 3, register 2, currency 2, function and access 2, ending 2; weighted 1.75.
+- The fix: Make the clasp shot the idea: "fastened by family", the moment a mother fastens the necklace on the bride. Worn on skin in low window light, with a hard point source for fire in the stones and soft fill for the gold. Open on room tone and a 1.5-second hold on hands; music enters on the first cut; cut on or a frame before the beat. Grade skin onto the skin tone line before any look (16, section 8.5); lift blacks to hold the setting. Captions in the brand face, above the bottom safe zone (26, section 2). Logo on the end frame only, on the master artwork. Cutdowns at 15 and 6 seconds built from the same idea. References: Cartier's long-form films for pace, Sophie Bille Brahe for jewellery worn on skin, Zoya for Indian restraint (design-taste, references/worlds.md). Scores: idea 1, specificity 1, hierarchy 2, craft 2, restraint 2, coherence 3, register 2, currency 2, function and access 2, ending 2; weighted 1.75.
 
 Critique 3: agency deck, Mask360 credentials for a Dubai developer's launch pitch.
 - Verdict: competent, at the floor: rubric 3.05 on the default profile, no open S4.
 - What works: the Mumbai launch case study, with the enquiry numbers and the timeline on one slide; proof stated plainly.
 - What does not: (1) Idea, S3: the hero of the deck is Mask360; the client appears on slide 19. House rule: the client is the hero. (2) S2: 41 slides; slide 2 is a logo wall. (3) S2: slides run about 60 percent text against the house 70 visual to 30 text. (4) S2: three headline sizes (28, 32, 36px) that read as one. (5) S3: the client's real colour is absent; the deck uses the Mask360 white ground. (6) S3: the strategy slide has three focal points. (7) S2: it ends on "Thank you".
-- The fix: 16 slides. Open on the client's buyer and the insight, then the idea in one sentence, then the work, then the proof (case studies after the idea), then the decision asked for. Client deck rules from design-taste, section 7: #0A0A0A ground, the client's real hex from their guidelines as the only colour, Space Grotesk at 700 for headlines at about 96px against 300-weight body at 20px. One idea per slide; the logo wall goes to an appendix. Last slide: the decision and the date. References: Apple keynote pacing; Pentagram's case study pages for showing work large and unlabelled.
-- Scores: idea 3, specificity 3, hierarchy 2, craft 3, restraint 3, coherence 4, register 4, currency 3, function and access 4, ending 1; weighted 3.05.
+- The fix: 16 slides. Open on the client's buyer and the insight, then the idea in one sentence, then the work, then the proof (case studies after the idea), then the decision asked for. Client deck rules from design-taste, section 7: #0A0A0A ground, the client's real hex from their guidelines as the only colour, Space Grotesk at 700 for headlines at about 96px against 300-weight body at 20px. One idea per slide; the logo wall goes to an appendix. Last slide: the decision and the date. References: Apple keynote pacing; Pentagram's case study pages for showing work large and unlabelled. Scores: idea 3, specificity 3, hierarchy 2, craft 3, restraint 3, coherence 4, register 4, currency 3, function and access 4, ending 1; weighted 3.05.
 
 ## 13. The critique rubric
 
@@ -1251,89 +1185,183 @@ Scored 1 to 5 per dimension; anchors at 1, 3 and 5, with 2 and 4 between them. W
 ## Terms introduced
 
 - 180-degree line: the imaginary line between two subjects that the camera stays on one side of, keeping screen directions consistent.
+- 2BHK: an Indian flat with two bedrooms, a hall and a kitchen.
 - 30-degree rule: change camera angle by at least about 30 degrees, or shot size clearly, between consecutive shots of one subject, to avoid a jump cut.
-- Articulation: the capacity to name the property, value and reference behind a judgement.
-- Articulation ladder: the four rungs of a note: feeling, location, mechanism, fix with reference.
+- ACD: associate creative director, who holds craft decisions by delegation from the CD (creative director), who decides in the room.
+- Aesthetic-usability effect: the tendency to judge attractive designs as more usable (Kurosu and Kashimura, 1995); a case of the halo effect, one strong quality colouring every other judgement.
+- Ambient occlusion: the soft darkening rendered where surfaces meet; with contact shadows (the dark line where an object meets its surface), it stops CG objects floating.
+- Anchor exemplar: a reference piece scored at 1, 3 or 5 on one rubric dimension, used to calibrate scorers.
+- Anchoring: the first opinion or number voiced setting the range of what follows.
+- Animatic: timed storyboard frames with sound; the playblast, a fast viewport render, follows it.
+- Archviz: architectural visualisation, the CGI (computer-generated imagery) of unbuilt buildings and interiors.
+- Articulation: the capacity to name the property, value and reference behind a judgement; the articulation ladder is its four rungs: feeling, location, mechanism, fix with reference.
+- AVIF: a high-efficiency image format used for compressed hero posters.
 - Banding: visible steps in a smooth gradient from limited bit depth or compression.
 - Braintrust: Pixar's group of experienced filmmakers who give candid notes on work in progress and hold no authority over it.
+- Brief crit: the six-question check of a brief before work starts (4.12).
+- Build defect: a departure of the build from a correct spec; a design defect is a fault in the spec itself.
+- Catchlight: the light source reflected in the eye.
+- CMYK: the four process inks: cyan, magenta, yellow and key (black).
 - Coherence: consistency of one system across touchpoints, formats and scripts.
 - Content Credentials: provenance metadata attached to media under the C2PA standard.
+- Contract proof: a colour proof the printer agrees to match on press.
+- Contrast: difference between elements in size, weight, value, colour or texture.
 - Copywork: rebuilding a master's work to measurement to learn its decisions.
-- Core Web Vitals: Google's loading, responsiveness and stability measures: LCP (good at 2.5 seconds or less), INP (200ms or less; replaced First Input Delay in 2024) and CLS (0.1 or less), at the 75th percentile.
+- Core Web Vitals: Google's loading, responsiveness and stability measures: LCP (Largest Contentful Paint, good at 2.5 seconds or less), INP (Interaction to Next Paint, 200ms or less; replaced First Input Delay in 2024) and CLS (Cumulative Layout Shift, 0.1 or less), at the 75th percentile.
 - Craft tell: a specific execution defect that a trained eye reads as unattended work.
+- Crit formats: desk crit (one to one, mid-process), pin-up (group, work at real size on the wall), jury (final, outside reviewers), gallery walk (silent written notes on many pieces) and remote crit (shared at 100 percent, with a recorded walk-through for async rounds).
 - Critical Response Process: Liz Lerman's four-step feedback method (1990): statements of meaning, artist as questioner, neutral questions, permissioned opinions.
 - Crushed blacks: shadow detail clipped to zero on the waveform.
+- CSMVS: Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, Mumbai's principal museum.
 - Currency: how current a piece reads against the wave of rising, peaking, dead and timeless looks.
+- D50 and D65: standard white points of about 5000K and 6500K, used for print viewing and for screen calibration.
+- De-esser: a processor that tames harsh s sounds.
+- Dev Mode: Figma's developer inspection mode, where behaviour annotations travel with the frame.
+- Dieline: the cutting and folding outline of a printed piece or pack.
 - Discrimination: telling better from worse in a pair, in about two seconds.
+- Distinction: Bourdieu's account of taste as a social signal that classifies the person judging.
+- DP: director of photography.
 - Emptiness: in Kenya Hara's sense, a receptive state the viewer fills, distinct from simplicity.
+- Entourage: the people, cars and props added to a render for scale and life.
+- Evaluating scale: Erin Meyer's scale of how directly a culture gives negative feedback; upgraders (absolutely) and downgraders (kind of) shift how strong a note sounds.
+- Ex-formation: Kenya Hara's term for making the familiar unknown again.
 - Exposure: the stock of filed references the eye compares against.
 - Eyeline: the direction of a character's gaze, which must match across cuts.
 - Faux style: bold, italic or small caps synthesised by software from another style.
 - Feedback sandwich: praise, criticism, praise; replaced in the house by the design-taste critique format.
+- FOGRA and PSO: the German print research body and its ISO 12647-2 based offset standard.
+- Foley: sound effects performed and recorded to picture.
 - Font flash: fallback text visibly replaced by the web font as it loads.
+- GCC: the Gulf Cooperation Council.
+- Girih: interlaced geometric strapwork in Islamic ornament.
 - Grid drift: elements slipping a few pixels off their columns through nudging.
+- Groupthink: a group's drive for agreement suppressing doubt (Irving Janis, 1972).
+- HDR: high dynamic range tone-mapping.
 - Hierarchy: the order in which the eye takes in elements.
+- Hinglish: Hindi and English mixed, written in Latin script.
+- HiPPO: the highest paid person's opinion, on which a room converges.
 - Homage and pastiche: homage borrows one principle of a reference and applies it to new content; pastiche takes the surface without the principle.
+- Hook rate: 3-second video views divided by impressions; hold rate is ThruPlays (Meta's plays to completion or to 15 seconds) divided by 3-second views.
 - I like, I wish, what if: a three-prompt group feedback format (keep, missing, possibility) used in design-thinking teaching.
 - Idea bank: the archive of killed routes, filed with brief, idea, reason and tags.
 - Idea gate: the rubric rule capping the score at 2.5 when Idea scores below 3.
+- IKEA effect: makers overvaluing what they built themselves (Norton, Mochon and Ariely, 2012).
 - Inevitability: the sense that no other solution was possible.
 - Ira Glass gap: the period in which a maker's taste exceeds their ability to execute.
+- ISO 3664: the standard for print and photography viewing conditions; critical comparison at D50 and 2000 lux.
+- J cut and L cut: sound leading or trailing the picture across a cut.
+- Jaali: a pierced ornamental screen.
+- Kashida: the stroke that lengthens Arabic joins for justification.
 - Kerning pair: a spacing adjustment between two specific letters.
+- Kore de ii: "this will do", the rational satisfaction Muji aims for, against kore ga ii, "this is what I want".
+- Kundan: stones set in gold foil.
+- Law of triviality: Parkinson's observation that committees spend longest on the least important items.
+- Lindy effect: for non-perishable things, expected remaining life grows with age.
+- LUFS: loudness units relative to full scale, the unit of integrated loudness; dBTP (decibels true peak) is its peak measure.
+- MAYA: Raymond Loewy's "most advanced, yet acceptable", the dial for how far to push an audience.
+- Measure: the length of a line of text in characters, set on the web in `ch` units.
+- Meenakari: enamel work on metal.
+- Mere exposure effect: liking a thing more for having seen it more (Zajonc, 1968).
 - Misregistration: misalignment between printing plates, seen as coloured fringes.
+- Moiré: interference patterns between a camera sensor and a fine grid such as an LED wall.
 - Muddy mids: midtones gone grey-brown through poor interpolation or black overlays.
+- Murch's Rule of Six: Walter Murch's ranking of what a cut serves: emotion, story, rhythm, eye trace, two-dimensional plane, three-dimensional space.
+- NDA: non-disclosure agreement.
+- Negative fill: a black flag that removes bounce light to deepen shadow.
 - Negative space: the unoccupied area that shapes and isolates elements.
 - Nerve: the willingness to say the verdict aloud and remove what fails.
 - Neutral question: a question with no opinion inside it.
 - OKLCH: a perceptually uniform colour space described by lightness, chroma and hue, used for building neutrals and interpolating gradients.
 - One accessory rule: after the edit, remove one more decorative element.
-- Optical alignment: aligning by perceived edge, so round and pointed forms overshoot the measured line.
-- Optical centre: the point slightly above geometric centre at which content looks centred.
+- OOH: out-of-home advertising; DOOH is its digital screens.
+- Open Graph image: the preview image platforms show for a shared link.
+- Optical alignment: aligning by perceived edge, so round and pointed forms overshoot the measured line; the optical centre is the point slightly above geometric centre at which content looks centred.
+- Order effects: the first or last option shown being favoured.
+- Overprint and knockout: ink printed over another ink, against the ink beneath removed.
 - Pace: the speed of information or cuts over time.
 - Pencil: D&AD's award levels, from Shortlist through Wood, Graphite and Yellow to Black.
-- Perceptual tests: the two-second, squint, cover the logo, flip, grey, print it out, phone at arm's length, thumbnail, mute, overnight and other-room checks (4.8).
+- Perceptual tests: the two-second, squint, cover the logo, flip, grey, print it out, phone at arm's length, thumbnail, mute, overnight, other-room, in-feed, shelf, in-situ, competitor wall and swap checks (4.8).
 - Permissioned opinion: an opinion offered only after the maker agrees to hear it.
+- Phulkari: Punjabi "flower work" embroidery.
+- Pixel pitch: the distance between LED centres, in millimetres.
+- Power distance: Hofstede's measure of how far less powerful people accept unequal power.
+- Pre-mortem: imagining a project has already failed and listing why, before it starts (Gary Klein, 2007).
+- Press check: approving sheets on the press floor as they run.
+- QA: quality assurance, the completeness check before delivery.
+- Radical Candor: Kim Scott's frame of caring personally while challenging directly.
 - Rag: the profile of the ragged edge of unjustified text.
+- Rasa: in the Natya Shastra, an aesthetic emotion the audience tastes; eight classical rasas, with shanta (peace) added later.
+- Rec.709: the HD video colour standard.
 - Register: the formality and cultural tone the work speaks in.
 - Remove until it breaks: hiding elements one at a time until the idea or function fails, then restoring the last.
-- RERA: India's Real Estate (Regulation and Development) Act 2016, whose section 11(2) requires the project registration number in advertising.
+- RERA: India's Real Estate (Regulation and Development) Act 2016, whose section 11(2) requires the project registration number in advertising and whose section 12 makes the promoter liable for false statements in it.
 - Resolution: the sense that a piece arrives and ends.
 - Restraint: choosing fewer elements, effects and words than the maker could.
 - Rhythm: the pattern of repetition and interval across a page, sequence or edit.
 - Rich black: black built from K plus other inks for density.
 - River: a vertical white channel through justified text.
-- Runt: a single word alone on the last line of a paragraph or headline.
+- Room tone: the location's ambient sound with nobody speaking.
+- Runt: a single word or part of a word alone on the last line of a paragraph or headline.
 - Saturation creep: saturation rising by small increments across rounds.
-- Severity rating: the S0 to S4 urgency scale, adapted from Nielsen's 0 to 4 usability scale.
+- Severity rating: the S0 to S4 urgency scale, adapted from Nielsen's 0 to 4 usability scale; a default severity is the rating a craft tell carries before context moves it, and the S4 gate puts "not presentable" at the head of any verdict with an open S4.
+- Shahada: the Muslim declaration of faith, carried on the Saudi flag.
+- Shankha-pola: conch and red coral bangles worn by married Bengali women.
 - Site of the Day: Awwwards' daily award to the highest jury-scored site.
+- Skeleton: grey placeholder shapes in the layout of the coming content.
 - Skin tone line: the vectorscope reference along which healthy skin of every complexion falls.
+- Spec work: creative work done on speculation, without pay.
 - Specificity: the degree to which a choice belongs only to this brand.
+- Spot UV: a gloss varnish printed on selected areas.
+- sRGB: the standard web RGB colour space.
+- Standard of taste: Hume's term for the joint verdict of qualified judges.
+- Stringout: every take of a scene laid end to end.
 - Studio crit: the six-stage critique (present, clarify, observe, interpret, evaluate, suggest) after a silent look.
 - Sunk-cost fallacy: letting unrecoverable past investment drive a future decision.
 - Tabular figures: numerals of equal width, for aligned columns.
 - Tension: a deliberate imbalance that holds attention.
 - Three-year test: asking of each element whether it will embarrass the client in three years.
+- Tissue session: rough routes (scamps, quick rough sketches) shown to the client before production, at equal fidelity, to kill cheaply.
+- Toast: a brief pop-up status message.
+- Toulmin model: the six slots of an argument: claim, grounds, warrant, backing, qualifier, rebuttal.
 - Trakheesi: the Dubai property advertising permit whose number must appear on listings.
 - Transcreation: rewriting copy in another language for meaning and register.
+- True Tone and Night Shift: Apple's display features that shift the white point with ambient light or time of day.
 - Unintended alignment: edges nearly aligned or tangent, read as error.
+- Visual regression testing: automated screenshot comparison against approved baselines.
 - Warp wobble: rubbery distortion from over-applied stabilisation.
+- WCAG: the W3C Web Content Accessibility Guidelines, version 2.2 as of October 2026.
+- WebView: a browser component embedded in an app, such as Instagram's or WhatsApp's in-app browser.
 - Weight: the visual mass of an element.
+- Weight profile: a set of rubric weights for one deliverable type.
+- Widow and orphan: a paragraph's last line stranded at the top of a column, and its first line stranded at the bottom (Bringhurst's senses).
+- Zardozi: metal-thread embroidery.
 
 ## Sources and further reading
 
 Books
 - John Berger, Ways of Seeing, Penguin and BBC, 1972.
 - Michael Bierut, Seventy-Nine Short Essays on Design, Princeton Architectural Press, 2007; How to, 2015.
+- Les Binet and Peter Field, The Long and the Short of It, IPA, 2013.
+- Pierre Bourdieu, Distinction: A Social Critique of the Judgement of Taste, 1979; English translation by Richard Nice, Harvard University Press, 1984.
 - Robert Bringhurst, The Elements of Typographic Style, 1992; version 4.0, 2012.
 - Ed Catmull with Amy Wallace, Creativity, Inc., 2014.
-- Kenya Hara, Designing Design, Lars Müller Publishers, 2007; White, Lars Müller Publishers, 2010.
+- Kenya Hara, Designing Design, Lars Müller Publishers, 2007; White, 2010; Ex-formation, 2015.
 - Jost Hochuli, Detail in Typography, Hyphen Press, 2008.
+- David Hume, "Of the Standard of Taste", in Four Dissertations, 1757.
+- Irving Janis, Victims of Groupthink, Houghton Mifflin, 1972.
 - Liz Lerman and John Borstel, Liz Lerman's Critical Response Process, Dance Exchange, 2003; Critique Is Creative, Wesleyan University Press, 2022.
+- Erin Meyer, The Culture Map, PublicAffairs, 2014.
 - Josef Müller-Brockmann, Grid Systems in Graphic Design, Niggli, 1981.
 - Walter Murch, In the Blink of an Eye, 1995; second edition 2001.
+- C. Northcote Parkinson, Parkinson's Law, 1957.
+- Gary Provost, 100 Ways to Improve Your Writing, Mentor, 1985.
 - Arthur Quiller-Couch, On the Art of Writing, Cambridge University Press, 1916.
 - Dieter Rams, Less but Better, 1995.
 - Stefan Sagmeister and Jessica Walsh, Beauty, Phaidon, 2018.
+- Kim Scott, Radical Candor, St. Martin's Press, 2017.
+- Douglas Stone and Sheila Heen, Thanks for the Feedback, Viking, 2014.
+- Nassim Nicholas Taleb, Antifragile, Random House, 2012.
+- Stephen Toulmin, The Uses of Argument, Cambridge University Press, 1958.
 - Edward Tufte, The Cognitive Style of PowerPoint, Graphics Press, 2003.
 - Massimo Vignelli and Bob Noorda (Unimark International), New York City Transit Authority Graphics Standards Manual, 1970; facsimile, Standards Manual, 2014.
 
@@ -1342,16 +1370,29 @@ Specifications, standards and regulation
 - Google, Web Vitals, https://web.dev/articles/vitals (read October 2026)
 - W3C, CSS Text Module Level 4, https://www.w3.org/TR/css-text-4/ ; CSS Color Module Level 4, https://www.w3.org/TR/css-color-4/
 - C2PA, Content Credentials technical specification, https://c2pa.org/specifications/
-- India, Real Estate (Regulation and Development) Act 2016, section 11(2); ASCI Code for Self-Regulation of Advertising Content, https://www.ascionline.in/
+- ISO 3664:2009, Graphic technology and photography: viewing conditions.
+- ITU-R BT.1359-1, Relative timing of sound and vision for broadcasting, https://www.itu.int/rec/R-REC-BT.1359/en ; EBU R 128, Loudness normalisation and permitted maximum level of audio signals, https://tech.ebu.ch/publications/r128
+- GOV.UK Design System, https://design-system.service.gov.uk/ ; GOV.UK Service Manual, https://www.gov.uk/service-manual
+- Apple Human Interface Guidelines, https://developer.apple.com/design/human-interface-guidelines/ ; Material Design, Dark theme, https://m2.material.io/design/color/dark-theme.html
+- India, Real Estate (Regulation and Development) Act 2016, sections 11(2) and 12, https://www.indiacode.nic.in/ ; ASCI Code for Self-Regulation of Advertising Content, https://www.ascionline.in/
+- Dubai Land Department (Trakheesi permits), https://dubailand.gov.ae/ ; UAE National Media Authority and the Advertiser Permit: sources in 24-business-of-creative-and-agency-operations.md, section 14.7.
 
 Articles, pages and talks
 - Paul Graham, "Taste for Makers", February 2002, https://paulgraham.com/taste.html
 - Vitsoe, "Dieter Rams: ten principles for good design", https://www.vitsoe.com/gb/about/good-design
-- Ed Catmull, "How Pixar Fosters Collective Creativity", Harvard Business Review, September 2008, https://hbr.org/2008/09/how-pixar-fosters-collective-creativity
+- Harvard Business Review: Ed Catmull, "How Pixar Fosters Collective Creativity", September 2008, https://hbr.org/2008/09/how-pixar-fosters-collective-creativity ; Gary Klein, "Performing a Project Premortem", September 2007, https://hbr.org/2007/09/performing-a-project-premortem ; Roger Schwarz, "The 'Sandwich Approach' Undermines Your Feedback", Harvard Business Review, 19 April 2013, https://hbr.org/2013/04/the-sandwich-approach-undermin
+- Daniel Kahneman and Gary Klein, "Conditions for intuitive expertise: a failure to disagree", American Psychologist 64(6), 2009; Calvin Nodine, Paul Locher and Elizabeth Krupinski, "The role of formal art training on perception and aesthetic judgment of art compositions", Leonardo 26(3), 1993.
+- Masaaki Kurosu and Kaori Kashimura, "Apparent usability vs. inherent usability", CHI 1995 conference companion; Robert Zajonc, "Attitudinal effects of mere exposure", Journal of Personality and Social Psychology, 1968; Michael Norton, Daniel Mochon and Dan Ariely, "The IKEA effect", Journal of Consumer Psychology, 2012.
+- Albert Goldman, "Lindy's Law", The New Republic, 1964.
+- Doug Bowman, "Goodbye, Google", stopdesign.com, 20 March 2009, https://stopdesign.com/archive/2009/03/20/goodbye-google.html
 - Liz Lerman, "Critical Response Process", https://lizlerman.com/critical-response-process/ (read October 2026)
-- Jakob Nielsen, "Severity Ratings for Usability Problems", Nielsen Norman Group, 1 November 1994, https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/
+- Jakob Nielsen, "Severity Ratings for Usability Problems", Nielsen Norman Group, 1 November 1994, https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/ ; "Response Times: The 3 Important Limits", 1993, https://www.nngroup.com/articles/response-times-3-important-limits/
 - Awwwards, "About evaluation", https://www.awwwards.com/about-evaluation/ ; "A24 by Ravi Klaassens", https://www.awwwards.com/sites/a24 (read October 2026)
 - D&AD, "Pencils", https://www.dandad.org/awards/pencils ; "Judging", https://www.dandad.org/awards/judging ; "Bottega", https://www.dandad.org/work/d-ad-awards-archive/bottega (read October 2026)
 - Brand New, https://www.underconsideration.com/brandnew/ ; reviews of Airbnb (2014), Mastercard (2016) and White & Case (2026) in its archives (full text for subscribers)
 - Sagmeister Inc., "Beauty", https://sagmeister.com/work/beauty/
 - BBC Two, Ways of Seeing, four episodes, January 1972, written by John Berger, produced by Mike Dibb.
+- Lars Müller Publishers, Ex-formation, https://www.lars-mueller-publishers.com/ex-formation (read October 2026)
+- The Culture Factor (Hofstede), country comparison tool, https://www.theculturefactor.com/country-comparison-tool (read October 2026); Erin Meyer, https://erinmeyer.com/ ; Wikipedia, "Architecture of Saudi Arabia" (the Saudi Architecture Characters Map), https://en.wikipedia.org/wiki/Architecture_of_Saudi_Arabia (read October 2026)
+- Matthew Butterick, Butterick's Practical Typography, https://practicaltypography.com/ ; Radix Colors, https://www.radix-ui.com/colors ; Financial Times, Visual Vocabulary, https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary ; SunCalc, https://www.suncalc.org/
+- Ira Glass, "Ira Glass on Storytelling", part 3, Current TV, 2009 (as cited in 00-curriculum-and-method.md, section 3.4).

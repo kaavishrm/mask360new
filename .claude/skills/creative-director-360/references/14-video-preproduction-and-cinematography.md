@@ -41,7 +41,7 @@ A film set is a chain of command built so that one decision (the director's) rea
 | Camera operator | Camera | Framing and moving the camera during the take (on small shoots the DP operates) | Is the frame right through the whole move? |
 | First assistant camera (1st AC, the focus puller) | Camera | Focus, lens changes, camera build, marks with the actors | Is it sharp where it must be? |
 | Second assistant camera (2nd AC, clapper loader) | Camera | Slate (the clapperboard that marks scene, shot and take for picture and sound sync), media cards, camera reports, marks on the floor | Which take is this, and where is the card? |
-| Digital imaging technician (DIT) | Camera | Offload with checksum verification (a hash comparison proving each copy matches the card), on-set look (a LUT, a lookup table converting one set of colour values to another, or a CDL, the ASC Color Decision List of slope, offset, power and saturation values), exposure and focus QC, dailies (the day's footage, synced and with the look applied, for review) | Is the footage safe, and does it look as intended? |
+| Digital imaging technician (DIT) | Camera | Offload with checksum verification (a hash comparison proving each copy matches the card), on-set look (a LUT, a lookup table converting one set of colour values to another, or a CDL, the ASC (American Society of Cinematographers) Color Decision List of slope, offset, power and saturation values), exposure and focus QC (quality control), dailies (the day's footage, synced and with the look applied, for review) | Is the footage safe, and does it look as intended? |
 | Data wrangler | Camera | Offload and backup only, on smaller sets where no DIT is booked | Are there three copies? |
 | Gaffer (chief lighting technician) | Electric | Executes the DP's lighting plan, runs the electricians ("lightmen" in Mumbai) | Where does the light come from, and is it safe? |
 | Best boy electric | Electric | The gaffer's deputy: crew, power distribution, rental orders, generator | Do we have the power and the people? |
@@ -82,10 +82,10 @@ Mumbai terms a Dubai crew will not know: "spot boys" (crew who provide tea, wate
 
 | Tier | Crew | Kit | Right for | Wrong for |
 |---|---|---|---|---|
-| One person | Director who shoots, edits and records sound | Sony FX3 or iPhone 17 Pro or 18 Pro, a DJI Osmo Pocket 3 as pocket crash and behind-the-scenes camera, a gimbal, two wireless lavalier mics, one or two LED lights, ND | Hotel Reels, event recaps, founder content, social-native series where speed beats polish | Anything with a face lit for a campaign, any product hero shot, any client with an approval chain on set |
+| One person | Director who shoots, edits and records sound | Sony FX3 or iPhone 17 Pro or 18 Pro, a DJI Osmo Pocket 3 as pocket crash and behind-the-scenes camera, a gimbal (a motorised stabiliser), two wireless lavalier mics, one or two LED lights, ND (neutral density) filters | Hotel Reels, event recaps, founder content, social-native series where speed beats polish | Anything with a face lit for a campaign, any product hero shot, any client with an approval chain on set |
 | Three to five | Director, DP who operates, 1st AC who doubles as DIT, gaffer who doubles as grip, sound recordist; HMU when talent is on camera | FX6, Canon C400, or a rented Alexa Mini LF or Alexa 35; a prime set; a small lighting package; a slider or gimbal | Interviews, a short brand film with one or two people, a restaurant film, a real estate walkthrough | Movement-heavy fashion films, multiple locations in one day, any crowd |
 | Ten to fifteen | Director, DP, operator or 1st AC, 2nd AC, DIT, gaffer, two electricians, key grip, sound mixer and boom, producer, production manager, 1st AD, stylist, HMU, art director, stills | Cinema camera, a matched prime set, a dolly or slider, a full lighting truck, a generator | The standard Mask360 hotel or jewellery film; a two-day fashion film with three looks | A television commercial with builds, stunts or crowd |
-| Thirty plus | All of the above with full art department (production designer, art director, set dressers, props, builders), costume team, casting, location managers, a second unit, catering, security, unit drivers | Two cinema bodies, crane or Technocrane, motion control, vehicle rigs, drone unit | A TVC for a national launch, a palace film with cast and horses, a festival campaign with sets | Anything the idea does not need: a large crew in a small hotel suite slows every setup and damages the room |
+| Thirty plus | All of the above with full art department (production designer, art director, set dressers, props, builders), costume team, casting, location managers, a second unit, catering, security, unit drivers | Two cinema bodies, crane or Technocrane (a telescoping crane), motion control (a robotic arm that repeats a move exactly), vehicle rigs, drone unit | A TVC (television commercial) for a national launch, a palace film with cast and horses, a festival campaign with sets | Anything the idea does not need: a large crew in a small hotel suite slows every setup and damages the room |
 
 The house rule: crew to the idea. A crew of 12 in a 40 square metre suite gets less done than a crew of 6, because every setup waits on bodies moving. Size by the hardest shot of the day, then cut one role.
 
@@ -112,14 +112,14 @@ House planning bands, for a 12 hour shift in Mumbai and Delhi and a 10 to 12 hou
 | Casting director | Per project: 25,000 to 1,50,000 | Per project: AED 3,000 to 15,000 | House planning |
 | Drone operator with drone and paperwork | 20,000 to 60,000 | 3,000 to 8,000, permit fees separate | House planning |
 | Stills photographer, fashion and commercial | 25,000 to 1,50,000 | 3,000 to 10,000 | Anchor |
-| Steadicam operator with rig and assistant | By quote | By quote | House planning where vendor history exists |
+| Steadicam (body-worn stabiliser) operator with rig and assistant | By quote | By quote | House planning where vendor history exists |
 | Gimbal technician (Ronin 2 class) with rig | By quote | By quote | House planning where vendor history exists |
 | MRMC Bolt with operator and technician | By quote: rig per day, plus a prep or pre-light day (lighting and rigging the set the day before) | By quote, same basis | Book the operator with the rig (section 11.7) |
 | Technocrane or telescopic crane with its crew | By quote | By quote | Crew comes with the crane |
 | Dolly grip | By quote | By quote | House planning where vendor history exists |
 | 2nd AD, script supervisor, art director, set dresser, location manager, data wrangler, video assist | By quote, per role | By quote, per role | House planning where vendor history exists |
 | Vanity vans, per van per day | By quote | Holding rooms or trailers by quote | Mumbai budget line for talent and celebrities (section 13.9) |
-| Unit base and generator | By quote | By quote | Size the generator from the gaffer's recce list |
+| Unit base and generator | By quote | By quote | Size the generator from the gaffer's list made on the recce (the location visit, section 3.7) |
 
 Tier subtotals, summed from the bands above, per day before director, kit, overtime and GST or VAT. Three to five (DP, 1st AC, gaffer, sound pair): Rs 66,000 to 1,55,000 in Mumbai and AED 7,400 to 16,000 in Dubai. Ten to fifteen (DP, 1st AC, 2nd AC, DIT, gaffer, key grip, sound pair, line producer, 1st AD, stylist, HMU, stills): Rs 1.52 to 4.85 lakh and AED 19,900 to 49,000, with the art department and electricians added on top. Abu Dhabi rates track Dubai, plus travel or accommodation for Dubai-based crew. Riyadh crews are mostly flown in from Dubai, Cairo or Beirut, so price Dubai rates plus flights, Saudi visas, per diems and hotel (house planning).
 
@@ -159,7 +159,7 @@ Example scene outline for a 90 second palace hotel film:
 |---|---|---|---|
 | 1. Before light | 0 to 12 s | Blue hour (the twilight when the sky's brightness matches lit interiors) exterior, the palace in silhouette; one window lit | Peacocks, distant temple bell |
 | 2. The staff wake the house | 12 to 35 s | Hands opening shutters, brass being polished, a gardener's rake, all on 85 mm, static | Shutters, cloth on brass, footsteps on marble |
-| 3. Light enters | 35 to 60 s | Sun across a courtyard, dust in a shaft through a jharokha, a still life of breakfast | Cello enters, room tone under it |
+| 3. Light enters | 35 to 60 s | Sun across a courtyard, dust in a shaft through a jharokha (an enclosed overhanging balcony window of Rajasthani architecture), a still life of breakfast | Cello enters, room tone under it |
 | 4. The guest | 60 to 80 s | One guest, seen from behind, walks through the space the staff prepared | Cello resolves |
 | 5. Ending | 80 to 90 s | The courtyard empty again; logo on black | Silence, then one bell |
 
@@ -190,7 +190,7 @@ The shot list is the DP's and 1st AD's working document: every setup, in shootin
 | 2 | 2C | WS courtyard from upper gallery | Slow tilt down, 4 s | 35 mm | 8 s | 25 fps | Sun must be off the floor; before 08:30 |
 | 3 | 3A | Insert: dust in light shaft | Static | 50 mm | 6 s | 100 fps | Haze, sun through jharokha at 09:10 |
 
-Columns that matter and why: size and lens together define the image; movement with its speed prevents the "gimbal float" being invented on the day; duration tells the editor what was intended and the 1st AD how long to roll; frame rate decides whether lights need a flicker test (15-lighting-and-sound.md, section 5.7); notes carry the light and the time window. StudioBinder, Shot Designer (Hollywood Camera Work, which also draws overhead blocking diagrams) and a spreadsheet all work; the house keeps a Google Sheet shared with the DP and 1st AD.
+Columns that matter and why: size and lens together define the image; movement with its speed prevents the "gimbal float" being invented on the day; duration tells the editor what was intended and the 1st AD how long to roll; frame rate (frames per second, fps) decides whether lights need a flicker test (15-lighting-and-sound.md, section 5.7); notes carry the light and the time window. StudioBinder, Shot Designer (Hollywood Camera Work, which also draws overhead blocking diagrams) and a spreadsheet all work; the house keeps a Google Sheet shared with the DP and 1st AD.
 
 ### 3.4 Storyboard
 
@@ -215,7 +215,7 @@ House planning bands for a 12 hour shift, recalibrated after every job against t
 | Shoot type | Per 12 hour day | Why |
 |---|---|---|
 | Lit performance or dialogue, crew of 10 to 15 | 8 to 12 setups | Each setup takes about 45 to 90 minutes from blocking to the last take |
-| Available-light B-roll, crew of 3 to 5 | 20 to 30 setups | No lighting reset; the limit is moving and composing |
+| Available-light B-roll (supporting footage, section 12.2), crew of 3 to 5 | 20 to 30 setups | No lighting reset; the limit is moving and composing |
 | Tabletop with motion control or high-speed pours | 6 to 10 finished shots | Each pour is a reset of 10 to 20 minutes (clean, refill, dry) |
 | Fashion film | 2 to 3 looks | HMU and wardrobe changes take 45 to 90 minutes per look |
 | Blue hour | 1 setup, or 2 if the second is pre-lit | The window is about 20 to 25 minutes near the tropics (section 14.5) |
@@ -224,7 +224,7 @@ The first-shot target: the 1st AD aims to roll within about 60 to 90 minutes of 
 
 ### 3.6 Call sheet anatomy
 
-The call sheet is the daily schedule sent to every cast and crew member the evening before, usually by the 2nd AD and approved by the 1st AD and producer. Its anatomy, top to bottom: a header (production title, client, director, producer, date, "Day 2 of 3"); the general crew call and shooting call (first shot) with meal times; weather with sunrise, sunset, golden and blue hour times and the rain (monsoon, June to September in Mumbai) or heat forecast; the location (address, map pin, parking, unit base, holding area, nearest hospital and police station with phone numbers); the schedule of setups in order with scene, description, cast and planned time; cast with pick-up, HMU, wardrobe and on-set times; the crew list by department with calls and phones; special instructions (drone windows, haze, children, animals, vehicles, permits in force, dress code for religious or heritage sites); the 1st AD's safety notes and emergency contact; tomorrow's schedule in one paragraph; and the idea sentence printed at the top (19-campaigns-and-creative-direction.md), so every crew member reads why the film exists.
+The call sheet is the daily schedule sent to every cast and crew member the evening before, usually by the 2nd AD and approved by the 1st AD and producer. Its anatomy, top to bottom: a header (production title, client, director, producer, date, "Day 2 of 3"); the general crew call and shooting call (first shot) with meal times; weather with sunrise, sunset, golden and blue hour times and the rain (monsoon, June to September in Mumbai) or heat forecast; the location (address, map pin, parking, unit base (where the trucks, catering and crew base sit), holding area (where cast wait), nearest hospital and police station with phone numbers); the schedule of setups in order with scene, description, cast and planned time; cast with pick-up, HMU, wardrobe and on-set times; the crew list by department with calls and phones; special instructions (drone windows, haze, children, animals, vehicles, permits in force, dress code for religious or heritage sites); the 1st AD's safety notes and emergency contact; tomorrow's schedule in one paragraph; and the idea sentence printed at the top (19-campaigns-and-creative-direction.md), so every crew member reads why the film exists.
 
 ### 3.7 Location recce report
 
@@ -242,13 +242,13 @@ A recce (reconnaissance visit) with the director, DP, gaffer, production designe
 
 ### 3.8 Casting brief
 
-Character in a paragraph (who they are: behaviour, history, what they want), age range, look, skills (horse riding, Kathak, Arabic dialect, Hindi diction), wardrobe sizes, availability dates, fittings, usage (media, territory, term, as in 24-business-of-creative-and-agency-operations.md, section 3.7), exclusivity (no competing jewellery brand for 12 months, for example), nudity or intimacy terms if any, and the AI clause: no synthetic reuse of likeness without separate consent (22-ai-era-craft-and-generative-tools.md, section 7.4). For the Gulf, state modesty expectations and wardrobe constraints in the brief so talent can decline before the callback. Emirati and Saudi national dress (for men the kandura, a full-length robe, with the ghutra headcloth and the black agal cord; for women the abaya, a full-length robe, and the sheila headscarf) is worn correctly and cast with care; casting non-nationals in national dress in a role that implies national identity needs client and permit-authority review (verify per emirate). Physical contact between unrelated male and female talent is kept minimal and agreed in the brief. In Saudi Arabia female talent may bring a chaperone, who is a budget line (section 5.1). The treatment's casting and wardrobe pages go to the production service company before the permit is filed (section 4.4).
+Character in a paragraph (who they are: behaviour, history, what they want), age range, look, skills (horse riding, Kathak (the north Indian classical dance), Arabic dialect, Hindi diction), wardrobe sizes, availability dates, fittings, usage (media, territory, term, as in 24-business-of-creative-and-agency-operations.md, section 3.7), exclusivity (no competing jewellery brand for 12 months, for example), nudity or intimacy terms if any, and the AI clause: no synthetic reuse of likeness without separate consent (22-ai-era-craft-and-generative-tools.md, section 7.4). For the Gulf, state modesty expectations and wardrobe constraints in the brief so talent can decline before the callback. Emirati and Saudi national dress (for men the kandura, a full-length robe, with the ghutra headcloth and the black agal cord; for women the abaya, a full-length robe, and the sheila headscarf) is worn correctly and cast with care; casting non-nationals in national dress in a role that implies national identity needs client and permit-authority review (verify per emirate). Physical contact between unrelated male and female talent is kept minimal and agreed in the brief. In Saudi Arabia female talent may bring a chaperone, who is a budget line (section 5.1). The treatment's casting and wardrobe pages go to the production service company before the permit is filed (section 4.4).
 
 ### 3.9 Wardrobe and props lists
 
 Wardrobe list: character, scene, look number, item, brand, size, source (pull, purchase, rental), cost, return date, continuity photo. Props list: scene, item, hero or background, quantity, source, duplicates. Duplicates rule: three of anything that is consumed, broken, poured or stained on camera (a glass of wine, a cake, a silk scarf for a wind shot), because the third take is usually the one.
 
-High-value product (jewellery, watches, unreleased pieces): a custody log records each piece with serial number, value and photograph, signed out to set and back by the brand's representative at every setup, and licensed security stays with the pieces. Production insurance often excludes client goods above a stated value, so confirm the brand's own all-risk or transit cover in writing (section 4.2). Crew sign an NDA for unreleased pieces, phones stay away from the product table, and behind-the-scenes content is held until the launch date. Blocking and lighting use duplicate or display samples; the hero piece arrives only for takes, which keeps its handling time and its risk to a few minutes a setup.
+High-value product (jewellery, watches, unreleased pieces): a custody log records each piece with serial number, value and photograph, signed out to set and back by the brand's representative at every setup, and licensed security stays with the pieces. Production insurance often excludes client goods above a stated value, so confirm the brand's own all-risk or transit cover in writing (section 4.2). Crew sign an NDA (non-disclosure agreement) for unreleased pieces, phones stay away from the product table, and behind-the-scenes content is held until the launch date. Blocking and lighting use duplicate or display samples; the hero piece arrives only for takes, which keeps its handling time and its risk to a few minutes a setup.
 
 ## 4. Releases, insurance, permits and drones
 
@@ -272,7 +272,7 @@ Cover types, owners and the house position are in 24-business-of-creative-and-ag
 - National: foreign productions apply through the Film Facilitation Office of the National Film Development Corporation under the Ministry of Information and Broadcasting, whose India Cine Hub portal also lists state incentives. The incentive for foreign productions was raised in November 2024 to up to 40 percent of qualifying spend with a cap of Rs 30 crore (reported; verify). Domestic brand shoots deal with states, cities and owners directly.
 - Maharashtra and Mumbai: the Maharashtra Film, Stage and Cultural Development Corporation (which runs Film City, the Dadasaheb Phalke Chitranagari in Goregaon) operates an online single window for shooting permissions in Mumbai, routing municipal (Brihanmumbai Municipal Corporation), police and traffic permissions (verify the current portal). Separate owners grant their own spaces: railways (Western and Central Railway, including Chhatrapati Shivaji Maharaj Terminus), the Mumbai Port Authority, housing society committees (a no-objection certificate, NOC, from the society for any residential building), and the forest department for Sanjay Gandhi National Park.
 - Heritage sites: centrally protected monuments (the Taj Mahal, Qutub Minar, Humayun's Tomb, Elephanta Caves, Ajanta and Ellora) need written permission from the Archaeological Survey of India (ASI), with a per-day fee, a security deposit, fixed hours, and conditions that forbid rigging on the fabric, haze and unapproved lighting; drones are a separate permission and several monuments sit inside no-drone areas. State-protected monuments go through the state department of archaeology: Amer Fort in Jaipur through Rajasthan's Department of Archaeology and Museums and the Amber Development and Management Authority.
-- Rajasthan palaces: most are private or trust property, so permission is a commercial contract with the owner: the City Palace, Jaipur (Sawai Man Singh II Museum Trust); the City Palace, Udaipur (the Maharana of Mewar Charitable Foundation for the museum, the HRH Group of Hotels for its hotels); Mehrangarh, Jodhpur (Mehrangarh Museum Trust); Umaid Bhawan, Jodhpur, and Rambagh, Jaipur (palace hotels operated by Taj, IHCL). Expect location fees by the day, guest-hour restrictions, no fixing to walls (plan stands, weights and floor protection), and approval of the cut where the property is named. Rajasthan's film tourism policy (2022) offers incentives for productions shot in the state (verify the current terms).
+- Rajasthan palaces: most are private or trust property, so permission is a commercial contract with the owner: the City Palace, Jaipur (Sawai Man Singh II Museum Trust); the City Palace, Udaipur (the Maharana of Mewar Charitable Foundation for the museum, the HRH Group of Hotels for its hotels); Mehrangarh, Jodhpur (Mehrangarh Museum Trust); Umaid Bhawan, Jodhpur, and Rambagh, Jaipur (palace hotels operated by Taj, part of IHCL, the Indian Hotels Company Limited). Expect location fees by the day, guest-hour restrictions, no fixing to walls (plan stands, weights and floor protection), and approval of the cut where the property is named. Rajasthan's film tourism policy (2022) offers incentives for productions shot in the state (verify the current terms).
 
 ### 4.4 Permits in the UAE and Saudi Arabia (verify each before quoting)
 
@@ -307,7 +307,7 @@ Federal airspace is regulated by the General Civil Aviation Authority (GCAA); Du
 ### 4.7 Safety and risk assessment
 
 - Midday heat bans: the UAE Ministry of Human Resources and Emiratisation (MoHRE) bans work under direct sun from 12:30 to 15:00 between 15 June and 15 September, with fines of about AED 5,000 per worker up to AED 50,000 where several workers are involved; Saudi Arabia's Ministry of Human Resources and Social Development (HRSD) bans outdoor work in direct sun from 12:00 to 15:00 over the same months (annual ministerial decisions; verify the 2026 announcement and its exemptions). Schedule interiors or a shaded unit base across those hours, because rigging a terrace at 13:00 in July is a legal breach as well as a heat-stroke risk.
-- Written risk assessment: the 1st AD issues one at the PPM and briefs it at call. It covers heat (shade, water and electrolytes, a rest rotation, a named heat-illness responder); work at height (cranes, scaffolds, rooftops); water (a lifeguard for pool shoots, an RCD, a residual current device that cuts power on a leak to earth, on every circuit, and lamps kept back from the edge); monsoon electrics (RCDs, cable ramps, generators on dry ground); vehicles and road work (section 14.11); drones (sections 4.5 and 4.6); animals (section 13.4); haze and fire alarms in heritage buildings; and crowds.
+- Written risk assessment: the 1st AD issues one at the PPM and briefs it at call. It covers heat (shade, water and electrolytes, a rest rotation, a named heat-illness responder); work at height (cranes, scaffolds, rooftops); water (a lifeguard for pool shoots, an RCD on every circuit, the residual current device that cuts power when current leaks to earth, and lamps kept back from the edge); monsoon electrics (RCDs, cable ramps, generators on dry ground); vehicles and road work (section 14.11); drones (sections 4.5 and 4.6); animals (section 13.4); haze and fire alarms in heritage buildings; and crowds.
 - Medical cover: a set medic for crews of 30 or more and for any stunt, water or height work, with the nearest hospital already on the call sheet (section 3.6).
 
 ## 5. Budget and post schedule
@@ -328,7 +328,7 @@ Federal airspace is regulated by the General Civil Aviation Authority (GCAA); Du
 | Travel and accommodation | Flights, hotels, per diems, visas | Gulf visas for Indian crew take lead time |
 | Transport and catering | Unit vehicles, crew meals | Mumbai: meals per head per shift; Dubai: catering per head per day |
 | Insurance | Production package, drone third-party | Section 4.2 |
-| Post | Edit, grade, sound design and mix, music, VFX, titles, deliverables | 16-editing-colour-grading-and-delivery.md |
+| Post | Edit, grade, sound design and mix, music, VFX (visual effects), titles, deliverables | 16-editing-colour-grading-and-delivery.md |
 | Production fee | The production company's mark-up or the agency's production management fee | State it as a line; hidden mark-ups lose clients |
 | Contingency | 10 percent of below-the-line costs | For weather days, overtime and the unforeseen; never used for scope creep |
 
@@ -407,7 +407,7 @@ A log profile encodes scene light on a logarithmic curve so that the sensor's fu
 
 | Log curve | Gamut | Cameras | 18 percent grey on the waveform, about | Note |
 |---|---|---|---|---|
-| ARRI LogC4 | ARRI Wide Gamut 4 (AWG4) | Alexa 35, 35 Xtreme, Alexa 265 | 28 percent (computed from ARRI's published LogC4 formula); LogC3 at EI 800 about 39 | Introduced with the Alexa 35 (2022) to hold its 17 stops; LogC3 remains on older Alexas |
+| ARRI LogC4 | ARRI Wide Gamut 4 (AWG4) | Alexa 35, 35 Xtreme, Alexa 265 | 28 percent (computed from ARRI's published LogC4 formula); LogC3 at exposure index (EI) 800 about 39 | Introduced with the Alexa 35 (2022) to hold its 17 stops; LogC3 remains on older Alexas |
 | Sony S-Log3 | S-Gamut3.Cine or S-Gamut3 | Venice 2, Burano, FX6, FX3, FX2, FX30 | 41 percent; 90 percent white about 61 | Sony's published curve |
 | Canon Log 2 and Canon Log 3 (C-Log2, C-Log3) | Cinema Gamut | C400, C80, C70, C500 Mark II | Unknown here: read Canon's white paper | C-Log2 keeps more shadow range; C-Log3 is easier to expose and grade |
 | Panasonic V-Log | V-Gamut | Lumix GH7, S1 II, S1H, S5 II | 42 percent; 90 percent white about 61 | Panasonic's published curve |
@@ -415,7 +415,7 @@ A log profile encodes scene light on a logarithmic curve so that the sensor's fu
 | Apple Log and Apple Log 2 | Apple Log 2 uses a wider gamut | Apple Log on iPhone 15 Pro and later; Apple Log 2 on iPhone 17 Pro and 18 Pro | Unknown here: read Apple's Apple Log profile document | Apple Log 2 listed on the iPhone 18 Pro spec page (verified); Final Cut Pro 11.2 (19 September 2025) added ProRes RAW controls for iPhone footage and the Apple Log 2 LUT (16-editing-colour-grading-and-delivery.md, section 6.3) |
 | RED Log3G10 | REDWideGamutRGB | V-Raptor [X], Komodo-X | 33 percent | Designed so 18 percent grey maps to one third of the code range, with 10 stops above grey |
 
-These are the references for exposing log without a LUT. On mirrorless log, the ETTR offset of section 9.7 shifts them up by the stops added: an FX3 rated one stop over in S-Log3 puts grey at about 48 percent (from Sony's S-Log3 formula).
+These are the references for exposing log without a LUT. On mirrorless log, the ETTR (expose to the right) offset of section 9.7 shifts them up by the stops added: an FX3 rated one stop over in S-Log3 puts grey at about 48 percent (from Sony's S-Log3 formula).
 
 The LUT workflow on a Mask360 set:
 
@@ -500,7 +500,7 @@ A neutral density (ND) filter cuts light evenly across the spectrum so a scene c
 | 2.4 | 8 | 0.4 percent |
 | 2.7 | 9 | 0.2 percent |
 
-- Worked example, Dubai at noon: the sunny 16 rule (in full sun, correct exposure is f/16 at a shutter of one over the ISO) gives f/16 at 1/800 for ISO 800. At 1/50 and T2.8 the scene is four stops (shutter) plus five stops (aperture) too bright: ND 2.7. The Alexa 35 Xtreme's internal filter offers Clear, 0.6, 1.2 and 1.8 (verified), so add a 0.9 in the matte box.
+- Worked example, Dubai at noon: the sunny 16 rule (in full sun, correct exposure is f/16 at a shutter of one over the ISO) gives f/16 at 1/800 for ISO 800. At 1/50 and T2.8 the scene is four stops (shutter) plus five stops (aperture) too bright: ND 2.7. The Alexa 35 Xtreme's internal filter offers Clear, 0.6, 1.2 and 1.8 (verified), so add a 0.9 in the matte box (the hood in front of the lens that holds filters and flags stray light).
 - Internal ND: motorised filter wheels (ARRI, Sony Venice 2 in 0.3 steps to 2.4 (verify), Blackmagic URSA Cine at 2, 4 and 6 stops, verified) and the Sony FX6's electronic variable ND. Fast, matched to the sensor, the first choice.
 - IR contamination: heavy ND (from about 1.2) passes infrared that the sensor records, turning black fabrics brown or magenta; a black suit or an abaya at ND 1.8 can go maroon. Use IRND filters (ND that also attenuates infrared) from Tiffen, Schneider or Formatt Hitech.
 - Variable ND: two polarisers rotated against each other. Convenient on run-and-gun events; at the strong end it produces a dark X across the frame and colour shifts, so never on the hero camera.
@@ -524,17 +524,17 @@ The camera matters less than the lens, the light and the operator; it matters mo
 | Sony Burano | Full frame 8.6K with in-body stabilisation | 16 stops (Sony) | X-OCN, XAVC | Venice image in a one-operator body | Verify |
 | Sony FX6 | Full frame 4K | 15 or more stops (Sony); dual base 800 and 12,800 | XAVC, ProRes RAW external; electronic variable ND | Documentary, events, interviews, small brand films | Verify |
 | Sony FX3 | Full frame 4K, no internal ND | 15 or more stops (Sony); dual base 800 and 12,800 in S-Log3 | XAVC, ProRes RAW external | One-person crews, gimbals, car rigs, crash cameras | Verify |
-| Sony FX2 | Full frame, 33 MP; tilting EVF | Verify Sony figures | XAVC | A one-operator Cinema Line body for documentary and events; USD 2,699 body at launch (reported) | May 2025; verify |
+| Sony FX2 | Full frame, 33 MP (megapixels); tilting EVF (electronic viewfinder) | Verify Sony figures | XAVC | A one-operator Cinema Line body for documentary and events; USD 2,699 body at launch (reported) | May 2025; verify |
 | Canon EOS C400 and C80 | Full frame 6K | Triple base ISO 800, 3200, 12,800 | Cinema RAW Light, XF-AVC; internal ND | Canon colour on skin, event and documentary; the C80 as compact B camera | Verify; the C50 (2025) adds a 7K open gate compact (verify) |
-| Blackmagic Pyxis 6K | Full frame, 6,048 by 4,032 | 13 stops; dual native ISO 400 and 3200 | 12 bit BRAW, H.264 proxies; open gate 36 fps, DCI 4K 60, HD 120 | Box camera for rigs and gimbals at USD 2,245 (L-mount or EF lens mount) or 2,475 (PL mount; mounts in section 8.3.1) | Verified, blackmagicdesign.com, October 2026 |
+| Blackmagic Pyxis 6K | Full frame, 6,048 by 4,032 | 13 stops; dual native ISO 400 and 3200 | 12 bit BRAW, H.264 proxies; open gate 36 fps, DCI 4K (the 4,096 pixel wide cinema standard) 60, HD 120 | Box camera for rigs and gimbals at USD 2,245 (L-mount or EF lens mount) or 2,475 (PL mount; mounts in section 8.3.1) | Verified, blackmagicdesign.com, October 2026 |
 | Blackmagic Pyxis 12K | Full frame RGBW, up to 12,288 by 8,040 | 16 stops; ISO 200 to 3200, optimised for 800 | 12 bit BRAW; open gate 40 fps; 2.4:1 at 112 fps | 12K reframing in a box body at USD 5,825 to 5,829 | Verified |
 | Blackmagic URSA Cine 12K LF and 17K 65 | Full frame RGBW (12K); 65 mm, 51 by 24 mm (17K) | 16 stops | BRAW, constant bitrate 3:1 to 18:1 or Q0 to Q5; 8 TB media module; internal ND 2, 4, 6 stops (12K); up to 224 fps at 8K 2.4:1 | Large-format and 65 mm at a fraction of ARRI rental; 12K LF at USD 17,435 with kit (body USD 8,435) | Verified |
 | Panasonic Lumix GH7 | Micro Four Thirds | V-Log; dual native ISO | Internal ProRes RAW and ProRes, 32 bit float audio with the XLR module | Cheap high-quality B camera, macro rigs (2x crop helps depth of field) | Verify |
 | Panasonic Lumix S1 II | Full frame | V-Log | Internal ProRes RAW (verify) | Full-frame mirrorless B camera with Panasonic's RAW path | 2025; verify |
-| Nikon ZR | Full frame | Verify Nikon figures | Internal R3D NE (Nikon's 12 bit RAW based on RED's R3D codec) at 6K 59.94p and 4K 119.88p (4K 120 crops to DX); 32 bit float audio from the built-in and external mics | Compact body with RED colour science for gimbals and B camera; about USD 2,199 (reported) | Verified, nikon.com press release, announced 10 September 2025 |
-| DJI Osmo Pocket 3 | 1-inch CMOS | 10 bit D-Log M and HLG (hybrid log-gamma, a broadcast HDR format) | 4K at up to 60 fps, 4K 120 fps slow motion; MP4 in H.264 or HEVC | Stabilised pocket crash and behind-the-scenes camera for the one-person tier; less of the phone's small-sensor look | Verified, dji.com, October 2026 |
+| Nikon ZR | Full frame | Verify Nikon figures | Internal R3D NE (Nikon's 12 bit RAW based on RED's R3D codec) at 6K 59.94p and 4K 119.88p (4K 120 crops to DX, Nikon's APS-C size); 32 bit float audio from the built-in and external mics | Compact body with RED colour science for gimbals and B camera; about USD 2,199 (reported) | Verified, nikon.com press release, announced 10 September 2025 |
+| DJI Osmo Pocket 3 | 1-inch CMOS | 10 bit D-Log M and HLG (hybrid log-gamma, a broadcast high dynamic range, HDR, format) | 4K at up to 60 fps, 4K 120 fps slow motion; MP4 in H.264 or HEVC | Stabilised pocket crash and behind-the-scenes camera for the one-person tier; less of the phone's small-sensor look | Verified, dji.com, October 2026 |
 | Fujifilm GFX Eterna 55 | Large format (GF), open gate | F-Log2 C (verify) | ProRes (verify) | Fujifilm's 2025 cinema body; the largest sensor at its price, with GF lenses | Verify |
-| iPhone 17 Pro and iPhone 18 Pro | Phone sensors, 48 MP main | n/a | See section 15 | Social-native, speed, crash camera, BTS | 18 Pro verified at apple.com, October 2026 |
+| iPhone 17 Pro and iPhone 18 Pro | Phone sensors, 48 MP main | n/a | See section 15 | Social-native, speed, crash camera, behind the scenes | 18 Pro verified at apple.com, October 2026 |
 
 Rental realities: Mumbai rental houses carry Alexa 35, Alexa Mini LF, Venice 2, RED and Sony FX bodies with attendants; Dubai houses (concentrated in Dubai Studio City and Al Quoz) carry the same tier. Confirm the exact body, firmware, licences (an Alexa 35's open gate, high speed and ARRIRAW modes are licences) and media before the day, because a "35" without the right licence cannot shoot the 120 fps pour on the board.
 
@@ -575,7 +575,7 @@ The flange focal distance is the gap between the lens mount and the sensor. A le
 | LPL (ARRI's large-format mount) | 44.00 mm | Alexa Mini LF, Alexa 35, Alexa 265 |
 | Canon EF | 44.00 mm | Canon DSLRs; Pyxis EF |
 | Sony E | 18.00 mm | FX3, FX6, FX2; Venice 2 and Burano carry E-mount under a removable PL adapter |
-| L-mount | 20.00 mm | Panasonic Lumix, Sigma, Leica; Pyxis L |
+| L-mount | 20.00 mm | Panasonic Lumix, Sigma, Leica; Pyxis L-mount version |
 | Canon RF | 20.00 mm | C400, C80, C50 |
 | Nikon Z | 16.00 mm | Nikon ZR |
 | Micro Four Thirds | 19.25 mm | Lumix GH7 |
@@ -685,7 +685,7 @@ The number to protect is the relationship (the face against the background, the 
 
 ### 9.3 RGB parade
 
-The parade shows three waveforms side by side, one per channel (red, green, blue). Point the camera at a grey card or white card under the key: the three traces at the same height mean the white balance is neutral. Saturated colour shows as one channel high: watch the red channel on Indian bridal red, sindoor, saffron robes and red carpets, which clips in red long before the luma waveform shows trouble, producing flat, detail-less fabric. Pull exposure or saturation until the red trace sits below clip.
+The parade shows three waveforms side by side, one per channel (red, green, blue). Point the camera at a grey card or white card under the key: the three traces at the same height mean the white balance is neutral. Saturated colour shows as one channel high: watch the red channel on Indian bridal red, sindoor (the red powder in a married Hindu woman's hair parting), saffron robes and red carpets, which clips in red long before the luma waveform shows trouble, producing flat, detail-less fabric. Pull exposure or saturation until the red trace sits below clip.
 
 ### 9.4 Vectorscope
 
@@ -894,7 +894,7 @@ The script supervisor tracks eyelines, prop positions, liquid levels in glasses,
 
 ### 12.7 Plates for VFX and AI extension
 
-A plate is footage shot to be composited. For each VFX or AI-extended shot, record: a clean plate (the same frame, locked off, with no actors, 5 to 10 seconds); camera height, tilt, lens, focus distance and stop; an HDRI (a 360 degree high dynamic range photo of the location, bracketed, for lighting CG objects); a chrome ball and grey ball for light reference; a lens distortion grid; tracking markers on green or blank surfaces; and measurements. For AI extension (22-ai-era-craft-and-generative-tools.md, section 6.3), shoot wider than the final frame, keep highlights unclipped, and save stills in RAW, because the generated extension inherits the plate's quality.
+A plate is footage shot to be composited. For each VFX or AI-extended shot, record: a clean plate (the same frame, locked off, with no actors, 5 to 10 seconds); camera height, tilt, lens, focus distance and stop; an HDRI (a 360 degree high dynamic range photo of the location, bracketed, for lighting CG, computer-generated, objects); a chrome ball and grey ball for light reference; a lens distortion grid; tracking markers on green or blank surfaces; and measurements. For AI extension (22-ai-era-craft-and-generative-tools.md, section 6.3), shoot wider than the final frame, keep highlights unclipped, and save stills in RAW, because the generated extension inherits the plate's quality.
 
 ### 12.8 Stills and motion on one set
 
@@ -963,7 +963,7 @@ Lighting for each subject is in 15-lighting-and-sound.md, section 6; the cliché
 
 ### 14.1 Product
 
-Tabletop on a sweep or a built surface, camera on a geared head or motion control; turntables (motorised, programmable, from 1 rpm) for 360 degree reveals; macro and probe lenses (section 8.7) for texture; the Bolt for repeatable passes and for following falling or splashing objects. Liquids and pours: shoot at 240 fps and above for splashes (section 6.9), use a hero bottle and duplicates, a wrangler for refills, a narrow shutter for crisp droplets, and backlight through liquids so they glow. A pour is designed on the tech scout: nozzle, angle, glass, backlight, catch tray. Products must be immaculate: clean with lint-free gloves, check for dust at 200 percent on the monitor between takes.
+Tabletop on a sweep (a curved backdrop with no visible horizon) or a built surface, camera on a geared head or motion control; turntables (motorised, programmable, from 1 rpm) for 360 degree reveals; macro and probe lenses (section 8.7) for texture; the Bolt for repeatable passes and for following falling or splashing objects. Liquids and pours: shoot at 240 fps and above for splashes (section 6.9), use a hero bottle and duplicates, a wrangler for refills, a narrow shutter for crisp droplets, and backlight through liquids so they glow. A pour is designed on the tech scout: nozzle, angle, glass, backlight, catch tray. Products must be immaculate: clean with lint-free gloves, check for dust at 200 percent on the monitor between takes.
 
 ### 14.2 Jewellery
 
@@ -996,7 +996,7 @@ Formats: look films (15 to 30 seconds per look), the campaign film (60 to 90 sec
 
 ### 14.7 Architecture and real estate
 
-Level camera and tilt-shift or post correction for verticals (section 8.8); wide primes (18 to 24 mm full frame) used sparingly; golden hour for facades with texture, blue hour for buildings with lit interiors; slow lateral moves (truck or slider) that reveal depth with parallax. Drone only with purpose: the building's relation to sea, city or desert. In India, advertised project details and images must match the RERA registration, and in Dubai real estate advertising needs a Trakheesi permit (10-ux-writing-and-content-design.md and 13-motion-graphics-and-3d-production.md cover the rules); renders are labelled as artist's impressions.
+Level camera and tilt-shift or post correction for verticals (section 8.8); wide primes (18 to 24 mm full frame) used sparingly; golden hour for facades with texture, blue hour for buildings with lit interiors; slow lateral moves (truck or slider) that reveal depth with parallax. Drone only with purpose: the building's relation to sea, city or desert. In India, advertised project details and images must match the RERA registration (with the state's Real Estate Regulatory Authority), and in Dubai real estate advertising needs a Trakheesi permit (Dubai's real estate advertising permit; 10-ux-writing-and-content-design.md and 13-motion-graphics-and-3d-production.md cover the rules); renders are labelled as artist's impressions.
 
 ### 14.8 Events
 
@@ -1078,7 +1078,7 @@ Study each for one thing. The method (shot-for-shot breakdowns of ten fashion fi
 | Jonathan Glazer | Guinness "Surfer" (1999), Levi's "Odyssey" (2002), Sony Bravia "Paint" (2006), Under the Skin (2013), The Zone of Interest (2023) | One idea executed with total control; sound as image; real people on hidden cameras |
 | Romain Gavras | Justice "Stress" (2008), M.I.A. "Born Free" (2010), Athena (2022) | Choreographed crowds, long takes of mass movement, scale |
 | Daniel Wolfe | Catch Me Daddy (2014) | Raw performance and casting |
-| Nadia Lee Cohen | Books Women (2020) and Hello, My Name Is (2021); films | Hyperreal colour, casting and production design as character |
+| Nadia Lee Cohen | Books Women (2020) and Hello, My Name Is (2021) | Hyperreal colour, casting and production design as character |
 | Megaforce and Vincent Haycock | Rihanna, "Bitch Better Have My Money" (2015, Megaforce with Rihanna); Calvin Harris, "Feel So Close" (2011, Haycock) | Choreographed in-camera invention (Megaforce, a Paris collective); cinematic music video scale (Haycock) |
 | Aman films | Films on aman.com and Aman's channels | Restraint: architecture, landscape, few people, long holds, ambient sound |
 | Cartier | L'Odyssée de Cartier (2012, Bruno Aveillan) | The brand's symbols and history told as one continuous odyssey; scale and craft in a 3.5 minute film |
@@ -1122,6 +1122,7 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Abaya and sheila: the full-length robe and the headscarf worn by many Gulf women.
 - Abby Singer and martini shot: the last shot before a company move or the second-last of the day, and the last shot of the day.
 - Above the line and below the line: creative principals agreed before production, and the crew, kit, locations and post that scale with days.
+- Academy, flat, Univisium and scope: the 1.33, 1.85, 2.0 and 2.39 aspect ratios.
 - ACES (Academy Color Encoding System): the Academy's colour management framework for moving images.
 - ADR (automated dialogue replacement): re-recording dialogue in post to replace unusable location sound.
 - Anamorphic lens: a lens that squeezes a wide field horizontally onto the sensor, desqueezed in post, with oval bokeh and streak flares.
@@ -1131,6 +1132,7 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Axis of action: the imaginary line between two subjects that the camera stays on one side of.
 - B-roll: supporting footage of textures, details, places and people that carries a brand film between hero moments.
 - Best boy electric: the gaffer's deputy for crew, power distribution and rental orders.
+- Bird's eye and worm's eye: a camera directly overhead, and one at ground level looking up.
 - Bit depth: the number of tonal steps per colour channel (8 bit is 256, 10 bit 1,024, 12 bit 4,096).
 - Blocking: the planned movement of actors and camera in a scene.
 - Blue hour: the twilight when the sky's brightness matches lit interiors, about 20 to 25 minutes near the tropics.
@@ -1141,6 +1143,7 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - CDL (ASC Color Decision List): slope, offset, power and saturation values that carry a look between systems.
 - Checksum verification: a hash comparison proving each copy of the media matches the card.
 - Chroma subsampling: recording colour at lower resolution than brightness (4:4:4, 4:2:2, 4:2:0).
+- Chrome ball and grey ball: reflective and matte spheres shot on set as light reference for CG.
 - Cinewhoop: a small FPV drone with prop guards, built for flying through interiors.
 - Circle of confusion: the largest blur spot still read as sharp; 0.03 mm by full-frame convention.
 - Clamshell: a beauty setup with a key above the face and a fill or reflector below.
@@ -1150,23 +1153,32 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Company move: relocating the whole unit to a new location during a shoot day.
 - Contrast and affinity: Bruce Block's principle that contrast in a visual component raises intensity and affinity lowers it.
 - Coverage: the closer shots filmed after the master so the editor can shape a scene.
+- Crash zoom: a fast zoom during a shot, a 1970s and documentary signature.
 - CRI and R9: the colour rendering index of a light source, and its saturated-red test sample.
 - Crop factor: the ratio of the full-frame diagonal to a sensor's diagonal, used to compare framing between formats.
 - Custody log: a signed record of each high-value piece leaving and returning to the product table.
 - Cutaway: a shot outside the scene's action used to compress time or hide a cut.
 - Dailies: the day's footage, synced and with the look applied, for review.
+- DCI 4K: the 4,096 pixel wide cinema resolution.
 - Deal memo: the short contract confirming a crew member's rate, hours and terms.
 - Debayering: converting single-colour photosite data into full RGB pixels.
 - Depth of field: the distance between the nearest and farthest points acceptably sharp.
+- Desqueeze: stretching an anamorphic image back to its true proportions in post.
+- Diffraction: softening as the effective aperture narrows, pronounced on macro and probe lenses.
+- Diffusion filter: a filter that lifts and glows highlights and softens contrast, such as the Black Pro-Mist.
 - Director of photography (DP, DOP): the head of camera and lighting, responsible for the image.
 - DIT (digital imaging technician): the crew member who secures, checks and looks after the footage and the on-set look.
+- Dolly grip: the grip who pushes the dolly or crane and hits marks in time with the operator.
 - Dolly zoom: a dolly and an opposite zoom together, holding subject size while the background stretches.
 - Dual base ISO: a sensor with two analogue gain circuits, each giving a clean native sensitivity.
 - Dutch angle: a tilted horizon, used for disorientation.
 - Dynamic range: the span in stops between the darkest usable tone and clipping.
+- Eighths of a page: the unit schedules use to count screenplay length, one page being about a minute.
 - ENG (electronic news gathering): the television news camera tradition and its conventions.
 - ETTR (expose to the right): exposing as bright as possible without clipping, for cleaner shadows.
+- EVF (electronic viewfinder): a small screen viewfinder on the camera body.
 - Exposure index (EI): a rating that moves middle grey within the recorded range without changing analogue gain.
+- Exposure ramping: changing exposure gradually through a time lapse, for the day-to-night "holy grail" shot.
 - Eyeline: the direction and height of a subject's look relative to the lens.
 - f-number: focal length divided by entrance pupil diameter; each full stop halves the light.
 - False colour: a monitor mode that paints brightness ranges in colour bands.
@@ -1176,9 +1188,12 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Focus breathing: the change in framing when a lens racks focus.
 - Focus peaking: coloured outlines on the sharpest edges of a monitor image.
 - Focus stacking: merging frames focused at different distances into one sharp still.
+- Focus throw: the rotation of a focus ring from closest focus to infinity, about 270 to 300 degrees on cinema lenses.
 - Focus-by-wire: an electronic focus ring with no hard stops, so marks cannot be repeated.
+- fps (frames per second): the capture or playback rate.
 - FPV drone: a first-person-view drone flown with goggles, agile enough to fly through interiors.
 - Frame grab: a still pulled from motion footage.
+- Frame lines: monitor overlays marking each deliverable's crop.
 - FWICE: the Federation of Western India Cine Employees, the umbrella of Mumbai craft unions.
 - Gaffer: the chief lighting technician who executes the DP's lighting plan.
 - Gamut: the range of colours an encoding can describe.
@@ -1187,6 +1202,8 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Global shutter: a sensor that reads every row at once, avoiding rolling shutter skew.
 - Golden hour: the hour after sunrise and before sunset, when the sun is low and warm.
 - Greeking: covering or replacing an uncleared brand or logo in frame.
+- Grey card: an 18 percent reflectance card used for white balance and mid-grey placement.
+- Hacking: pulling a watch's crown to stop the seconds hand, for continuity across takes.
 - Halation: a glow bleeding from highlights into surrounding tones.
 - Handles: extra seconds rolled before and after the action for the editor.
 - HDRI: a 360 degree high dynamic range image of a location, used to light CG elements.
@@ -1200,6 +1217,7 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Intra-frame: compression that encodes each frame on its own.
 - IRE: the unit of the waveform's 0 to 100 percent scale.
 - IRND: a neutral density filter that also attenuates infrared, preventing colour casts in blacks.
+- Jharokha: an enclosed overhanging balcony window of Rajasthani architecture.
 - Jib: an arm that raises or lowers the camera through space.
 - Jump cut: a cut between near-identical framings that reads as a skip.
 - Kandura, ghutra and agal: the Emirati man's full-length robe, the headcloth, and the black cord that holds it.
@@ -1208,6 +1226,7 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Lead room: space left in the direction a subject faces or moves.
 - Lens mount: the bayonet or lock joining lens to body; PL, LPL, EF, E, L-mount, RF and Z are the common standards.
 - Lightmen: Mumbai electricians supplied with a lighting vendor's package.
+- Line producer: the producer who runs the budget line by line and the daily cost control.
 - Log profile: a logarithmic encoding that fits a sensor's dynamic range into a 10 or 12 bit file.
 - Long-GOP: compression that stores a full frame followed by differences, efficient and heavy to edit.
 - Look test: talent photographed in make-up and wardrobe under the planned light before the shoot.
@@ -1215,12 +1234,14 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - LUT (lookup table): a table converting one set of colour values to another; a viewing LUT shows log as Rec.709, a show LUT carries the film's look.
 - Macro lens: a lens that focuses to 1:1 magnification or closer.
 - Master shot: a wide shot that plays a whole scene.
+- Matte box: the hood in front of the lens that holds filters and flags stray light.
 - Midday break: the Gulf's summer ban on outdoor work in direct sun, 15 June to 15 September.
 - Motion control: a computer-driven rig that repeats a camera move exactly.
 - Motivated movement: camera movement caused by something in the scene.
 - Mumps: faces widening at close focus on front-anamorphic lenses.
 - Native ISO: the ISO giving full dynamic range with no added gain.
 - ND filter: a neutral density filter that cuts light evenly; each 0.3 of density is one stop.
+- NDA (non-disclosure agreement): a contract binding crew to secrecy about unreleased product.
 - Negative fill: black surfaces that take light away from one side of the subject.
 - NOC (no-objection certificate): written consent from an owner or authority, such as a housing society or the Animal Welfare Board of India.
 - Online: conforming the edit to the full-quality originals.
@@ -1231,6 +1252,7 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Pan and tilt: horizontal and vertical rotation of the camera on a fixed point.
 - Parallax: the shift between near and far objects as the camera moves.
 - Pencil, hold and challenge: an informal booking interest, a reservation of dates, and another production's request for the same dates that forces a confirm or release.
+- Pheras and baraat: the circling of the sacred fire at a Hindu wedding, and the groom's procession.
 - Photoboard: a storyboard made from photographs.
 - Photosite: one light-sensitive cell of a sensor.
 - Plate: footage shot to be composited.
@@ -1243,24 +1265,32 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Probe lens: a long, thin macro lens that places the viewpoint inside a scene.
 - Process trailer and low-loader: low trailers carrying the picture car, so talent can act while a driver tows.
 - Proxies: lightweight copies of the footage for editing.
+- QC (quality control): checking exposure, focus and files against a standard.
 - Rack focus: shifting focus between subjects within a shot.
 - RAW: sensor data recorded before debayering, with white balance and ISO as adjustable metadata.
 - Rec.709: the ITU-R BT.709 standard for HD and SDR video, its gamut and transfer, displayed at gamma 2.4 for grading.
 - Recce: a reconnaissance visit to a location before the shoot.
 - Rehoused lens: vintage stills glass in a cinema barrel.
 - Remote pilot certificate (RPC): India's drone pilot qualification issued through DGCA-authorised training organisations.
+- RERA and Trakheesi: India's state real estate regulators' project registration, and Dubai's real estate advertising permit.
 - Residual current device (RCD): a safety switch that cuts power when current leaks to earth.
 - Result direction: asking an actor for an outcome (a look, a smile) in place of a playable thought or action.
 - RGB parade: three waveforms side by side, one per colour channel.
 - Rider: the contract's list of a talent's on-set requirements.
 - Risk assessment: the 1st AD's written list of a shoot's hazards and their controls.
 - Rolling shutter: row-by-row sensor readout that skews fast motion.
+- Room tone: about 30 seconds of a location's ambient sound recorded for the edit.
 - Run and gun: shooting reactively with minimal kit and no lit setups.
+- Scheimpflug principle: tilting the lens relative to the sensor angles the plane of focus.
+- Script supervisor: the crew member tracking continuity, timings and take notes for the editor.
 - SDR (standard dynamic range): the conventional display range that Rec.709 describes.
+- Sensor Overdrive: the Alexa 35 Xtreme mode that reaches 660 fps at 11 stops of range.
 - Shift, unit and spot boys: the Mumbai 12 hour working day, the whole crew, and the crew who supply tea, water, chairs and umbrellas.
+- Short lighting: a key on the side of the face turned away from camera.
 - Shot list: the setup-by-setup document of size, movement, lens, duration and frame rate.
 - Shot ratio: footage shot divided by footage used.
 - Shutter angle: exposure time as a fraction of the frame interval; 180 degrees is half.
+- Sindoor: the red powder in a married Hindu woman's hair parting.
 - Skin tone line: the vectorscope line, at about 123 degrees, near which skin of every complexion falls.
 - Slate: the clapperboard identifying scene, shot and take, and marking sync.
 - Slugline: a screenplay scene heading in capitals.
@@ -1274,15 +1304,23 @@ Chart and grey card at the head of each setup; slate every take; camera and soun
 - Storyboard: the film drawn as numbered frames matched to the shot list.
 - Stripboard: a schedule of one colour-coded strip per scene.
 - Sunny 16 rule: in full sun, correct exposure is f/16 at a shutter of one over the ISO.
+- Superwhite: signal above 100 percent on the waveform, up to 109 in legal-range video.
+- Sweep: a curved tabletop backdrop with no visible horizon.
 - T-stop: an f-number corrected for the lens's measured light transmission.
 - Tech scout: heads of department walking the chosen location to plan rigging, power and lenses, after the recce.
+- Technocrane: a telescoping camera crane whose arm extends during the shot.
 - Tilt-shift: a lens that shifts to correct verticals and tilts to angle the plane of focus.
 - Time lapse and hyperlapse: frames captured at an interval to compress time; a hyperlapse also moves the camera between frames.
 - Toe: the bottom of the tone curve, where shadows crush into noise.
 - Treatment: the director's written and visual proposal for a film.
+- TVC (television commercial): an advertisement made for broadcast.
 - UIN (Unique Identification Number): the registration number every drone in India carries from Digital Sky.
+- Unit base and holding area: where the trucks, catering and crew base sit, and where cast wait.
+- Variable ND: two polarisers rotated against each other to give adjustable density.
 - Vectorscope: a display of hue and saturation.
 - Veiling glare: a milky lift of the blacks when light strikes a lens's front element.
+- VFX and CG: visual effects, and computer-generated imagery.
+- Video assist: the monitor feed to video village and the recording of takes for playback.
 - Video village: the monitor position where the director's team, agency and client watch takes.
 - Waveform: a display of brightness by horizontal position in the frame.
 - White balance and tint: the colour temperature rendered as neutral, in kelvin, and the green to magenta axis.
