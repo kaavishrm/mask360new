@@ -1118,64 +1118,113 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 
 ## Terms introduced
 
+- Action safe: the inner area of a video frame kept clear because displays may crop 3 to 5 percent at the edges.
 - Active white space: space shaped on purpose to group, isolate, frame or direct the eye.
+- Adaptation matrix: the table of every format against every language and placement, recording size, safe zone, owner and approval per cell.
 - Adaptive layout: distinct layouts designed for set width ranges and switched between at breakpoints.
+- Alignment: the positioning of elements so their edges or centres share a line.
+- Anchor positioning: CSS that places an element relative to another named element, with fallback positions when space runs out.
 - App shell: the persistent frame of navigation, header and content region in an application.
 - Armature: the network of diagonals and reciprocals of a frame used to place strong elements (dynamic symmetry).
+- Art direction: serving a differently cropped or composed image per viewport through the picture element.
 - aspect-ratio: the CSS property that fixes an element's width to height ratio.
+- Assertion-evidence structure: a slide whose title is a full-sentence claim, supported by visual evidence.
 - Asymmetric balance: balance of unequal elements by position, like a lever about an axis.
+- Atmospheric perspective: distant planes rendered lighter and lower in contrast, which signals depth.
+- Balance: the state in which the visual weights on either side of an axis feel resolved.
 - Baseline grid: horizontal lines at the body leading to which every baseline snaps.
+- Baseline (web platform): the WebDX Community Group status for a feature that works in current Chrome, Edge, Firefox and Safari; widely available 30 months after it is newly available.
+- Bento grid: a modular card layout of unequal cells (1 x 1, 2 x 1, 1 x 2, 2 x 2) on a 4 or 6 column base.
 - Bleed: image area printed beyond the trim so that trimming error shows no white edge.
 - Blind folio: a page counted in the numbering but printed without its number.
+- Breakout grid: a named-line CSS grid in which children sit at the text measure and opt into wide or full-bleed zones.
 - Breakpoint: a width at which a layout changes structure.
+- Buy box: the block on a product page holding name, price, options and the purchase action.
 - Canon of page construction: the medieval and incunabula method of placing a text block on a page by diagonals or ninths.
 - Central fixation bias: the tendency of viewers to fixate the centre of an image first, whatever its content.
+- ch: a CSS unit equal to the advance width of the 0 glyph in the current font.
+- Closure: the eye's completion of a figure that a frame edge or a gap leaves incomplete.
+- Column: a vertical division of the live area.
 - Column grid: a grid of vertical columns with free vertical placement.
+- Common region: grouping of elements that share a bounded area, stronger than proximity.
 - Compound grid: two or more grids overlaid on one live area.
+- Contact sheet: a page of thumbnails of a whole shoot, used to edit pairs and sequences at a glance.
 - Container query: a CSS rule conditioned on the size of an ancestor container instead of the viewport.
 - Container query units: cqi, cqw, cqh, cqb, cqmin and cqmax, each 1 percent of a container dimension.
+- Continuity (good continuation): the reading of aligned elements as one line across gaps.
+- Contrast: a measurable difference between two elements in one variable.
 - Contrast and affinity: Bruce Block's principle that difference in a visual component raises intensity and similarity lowers it.
+- Counter-form: Ruder's term for the unprinted area treated as a form equal to the printed one.
 - Creep: the outward push of inner pages in a saddle-stitched publication, which narrows their outside margins after trimming.
+- Cross-alignment (incremental leading): a caption or display leading that meets the body baseline grid after a whole number of lines.
 - Crosshead: a subhead inside the body of a long article.
 - Crystallographic balance: equal emphasis across the whole surface with no focal point.
 - Density: the amount of content per unit of screen area, set by spacing and control heights.
+- Density-independent pixel (dp): Android's layout unit, mapped to physical pixels through the device scale factor.
+- Device pixel ratio: the number of device pixels per CSS pixel.
+- Direction: the path the eye takes through a layout.
 - Dynamic symmetry: Jay Hambidge's system of composing with root rectangles, diagonals and reciprocals.
+- Dynamic viewport units: dvh (the visible height as browser bars move), svh (smallest, bars shown) and lvh (largest, bars hidden).
 - Edge pressure: tension created by an element placed very close to, but not bleeding off, a frame edge.
+- Edge-to-edge: an Android app drawing behind the system bars and padding its own content by the window insets.
 - Em: a distance equal to the type size.
+- Entry point: the element through which a reader first enters a page or spread.
 - F pattern: the scanning pattern of first lines read fully, then the left edge, on dense web text.
+- Fibonacci sequence: the series 1, 1, 2, 3, 5, 8, 13 and on, in which the ratio of successive terms converges on the golden ratio.
 - Field: Müller-Brockmann's grid cell, a block of n lines of text.
 - Flatplan: the page-by-page thumbnail map of a publication used to plan pace.
 - Flowline (hang line): a horizontal line that divides the page into bands and from which elements hang.
 - Focal point: the element the eye lands on first.
 - Fold: the bottom edge of the first visible screen.
 - Folio: the printed page number.
+- Fore-edge: the outer, unbound edge of a page.
 - Format: the outer boundary of a layout and its proportion.
+- fr: a CSS grid unit equal to one share of the free space in the grid's tracks.
 - Frame within a frame: an element of the scene (door, arch, window) that frames the subject inside the image.
+- Framing: the choice of what a frame includes and excludes.
 - Golden canon: Tschichold's name for the 2:3 page with a 2:3 text area placed in ninths.
 - Golden ratio: the proportion of about 1.618 in which the whole relates to the larger part as the larger to the smaller.
-- Gutenberg diagram: a map of reading gravity from top left (primary optical area) to bottom right (terminal area).
+- Grey-box layout (wireframe): boxes for every element placed on the grid before real content, to test hierarchy and pace.
+- Gutenberg diagram: a newspaper heuristic, with little eye-tracking support, mapping reading gravity from top left (primary optical area) to bottom right (terminal area).
 - Gutter (alley): the space between columns.
+- Half-leading: the extra line height CSS splits equally above and below the glyphs.
 - Hanging punctuation: punctuation placed outside the text edge so the edge looks straight.
 - Headroom: the space between the top of a subject's head and the top of the frame.
 - Hierarchical grid: regions sized and placed by importance, sharing alignments without a repeating module.
 - Hierarchy: the order in which a viewer reads the elements, set by the designer.
+- IMAG (image magnification): the live camera feed of a speaker shown on screens beside a stage.
+- Imposition: the arrangement of pages on the press sheet.
+- Incunabula: books printed in Europe before 1501.
 - Inset: padding on all sides of a container; squish inset has less vertical padding, stretch inset more.
+- International Typographic Style: the grid-based, asymmetric, sans serif design of Zurich and Basel from the 1950s.
 - Intrinsic web design: Jen Simmons's term for layouts that size themselves from content and space using modern CSS.
+- Irradiation (halation): the effect that makes light strokes on a dark ground look heavier than the same strokes dark on light.
+- Keylines: reference shapes that fix each icon's size within its grid.
+- Kubrick frame: one-point perspective symmetry with a centred vanishing point and a mirrored scene.
+- Layer-cake pattern: scanning that fixates headings and reads the body only under a relevant one.
+- Layering: the stacking order of elements on the z-axis.
+- Lay-flat binding: a binding (Otabind, Swiss binding) that opens flat so images and type can cross the gutter.
 - Lead room (nose room): extra space in the direction a subject faces or moves.
 - Leading: the distance from one baseline to the next.
 - Leading lines: lines in a scene that carry the eye to the subject.
-- Live area (type area): the region inside the margins where content sits.
+- lh and rlh: CSS units equal to one line-height of the element, and of the root element.
+- Live area (type area, Satzspiegel): the region inside the margins where content sits.
 - Logical properties: CSS properties named by flow direction (inline, block, start, end) that flip in right-to-left layouts.
 - Manuscript grid: a single text block in a margin frame.
 - Margin: the space between the format edge and the live area.
+- Mark (in layout): the logo treated as a marker, with one fixed position and a derived size per ratio family.
 - Marker: a fixed position for recurring elements such as folios, running heads and logos.
 - Master and detail: a list and the selected item's detail, side by side or stacked.
 - Measure: the length of a line of text in characters.
+- Menu engineering: the analysis of each dish by margin and popularity to decide its place on the menu (Kasavana and Smith).
+- Mobile first: designing the narrowest layout first and adding structure as width allows.
 - Modular grid: a grid of columns and rows forming equal modules.
 - Module: the cell formed where a column crosses a row.
 - Modulor: Le Corbusier's red and blue scales of sizes derived from the human body and the golden ratio.
+- Morphological box: a grid of parameters (rows) and options (columns) in which a design is one path (Gerstner, after Zwicky).
 - Negative space: the unoccupied area of a page or frame, of any colour.
 - One-point perspective: a composition with a single central vanishing point.
+- Optical adjustment: a correction applied so that a layout looks right where measurement says it is right.
 - Optical alignment: placement adjusted so edges look aligned, compensating for shape and sidebearing.
 - Optical centre: the point that looks centred, slightly above the geometric centre.
 - Out-of-home (OOH): advertising encountered outside the home, from hoardings to digital screens.
@@ -1183,33 +1232,67 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Passive white space: leftover space that serves no grouping, isolation or framing purpose.
 - Perfect binding: a glued-spine binding that consumes part of the inside margins.
 - Pixel grid: alignment of screen layout to whole device pixels and a 4 or 8 px unit.
+- Pixel map: the native pixel resolution of an LED wall: wall width in millimetres divided by the pitch.
+- Pixel pitch: the distance in millimetres between LED centres on a wall (P3.9 is 3.9 mm).
+- Pixel snapping: placing positions, sizes and hairlines on whole device pixels.
 - Planimetric frame: a frontal composition with figures arranged parallel to a background plane.
+- Point (Apple): Apple's layout unit, mapped to physical pixels through the device scale factor.
+- Predicted-attention tool: software that draws a saliency heatmap from a model trained on eye-tracking data.
+- Product detail page (PDP): the page for a single product.
+- Product listing page (PLP): the collection or category grid of products.
+- Programme: Gerstner's set of rules and parameters that generates many correct solutions to a family of problems.
+- Proportion: the relation of parts to each other and to the whole.
+- Protect zone: the area of a master image that every crop must keep.
 - Proximity: grouping of elements by distance.
 - Pull quote: an extract from the text set large to draw the browsing reader.
 - Radial balance: elements arranged around a central point.
+- Ratio family: a band of format aspect ratios that shares one master layout.
+- Read deck: the version of a deck built to be read alone on a phone or screen, without a presenter.
+- reading-flow: a CSS property that makes focus order follow the visual order of a grid or flex layout.
+- Reciprocal: in dynamic symmetry, the line from a corner perpendicular to the diagonal.
+- Reflow (SC 1.4.10): the WCAG requirement that content works at 320 CSS px wide with no two-dimensional scrolling.
 - Responsive layout: one layout that reflows fluidly across widths.
 - Rhythm: the pattern of intervals between repeated elements.
+- Right-to-left (RTL): scripts written from the right, such as Arabic, whose layouts mirror.
 - Root rectangle: a rectangle whose long side is the square root of an integer times its short side.
+- Row: a horizontal division of the live area.
 - Rule of thirds: placing a subject on the lines or intersections of a 3 x 3 division of the frame.
 - Running head: a title repeated at the top or bottom of each page.
 - Saddle stitching: binding by staples through the fold.
 - Safe zone: the inner area of a format kept free of text and logos because of trim or interface overlay.
+- Scale: size relative to the format and to the other elements.
+- Scrim: a gradient or tint laid over an image so that type on it reads.
+- Shirorekha: the headline from which Devanagari letters hang.
+- Sidebearing: the built-in space on either side of a glyph.
+- Similarity: grouping of elements that share colour, size, shape, weight or texture.
+- Spacing grid (8 point grid): the constraint of every dimension to multiples of a base unit.
 - Spacing scale: the finite set of permitted spacing values.
 - Spatial zone: a group of modules assigned one role.
 - Split view: two panes side by side in one window.
+- Sponsor tier: a group of partner marks shown at one size, a fixed step from the other tiers.
+- Spread: two facing pages seen together, the unit of design in a bound publication.
 - Squint test: blurring or shrinking a layout to see which elements dominate.
 - Stack and inline space: vertical and horizontal space between siblings, applied by the parent.
 - Stacking context: a CSS layering scope from which children cannot escape whatever their z-index.
-- Standfirst (dek): the summary between headline and body.
+- Standfirst (dek, sell): the summary between headline and body.
+- Sticky split: a two-column layout in which a media column stays fixed while text sections scroll beside it.
 - Subgrid: a CSS grid value that lets a child grid use its parent's tracks.
 - Symmetric balance: mirrored weight about a central axis.
 - Tangent: two edges that just touch, creating unwanted tension.
 - Tension: visual energy from near-collision, imbalance, unexpected scale or crop.
+- Text spacing (SC 1.4.12): the WCAG requirement that layouts survive user-set line, paragraph, letter and word spacing.
+- text-box-trim: the CSS property that trims half-leading so type aligns to cap height and baseline.
+- Thumb zone: the lower area of a phone screen within thumb reach, where platforms place their action rows.
 - Top layer: the browser layer above all stacking contexts, used by modal dialogs and popovers.
 - UI chrome: the platform interface drawn over or around content.
+- Unity: the sense that every element belongs to one system.
 - Van de Graaf canon: the diagonal construction placing a text block whose height equals the page width.
+- Variety: the controlled difference that keeps a system alive.
 - Villard diagram: a construction dividing a line into equal parts without measurement.
+- Visual angle: the angle an object subtends at the eye, which sets legibility at a distance.
 - Visual weight: the apparent pull of an element on the eye and on the balance of a layout.
+- Weber's law: the smallest noticeable difference is a roughly constant fraction of the magnitude.
+- Window size classes: Android's named width ranges: compact under 600 dp, medium, expanded, large, and extra-large from 1600 dp.
 - Z pattern: the eye's path across the top, diagonally down and across the bottom of a sparse layout.
 
 ## Sources and further reading

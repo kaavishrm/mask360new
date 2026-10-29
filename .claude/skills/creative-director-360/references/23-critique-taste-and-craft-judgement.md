@@ -8,7 +8,7 @@ How to see, how to judge, how to say it, and how to build the eye in yourself an
 2. [What the expert eye sees](#2-what-the-expert-eye-sees)
 3. [The craft tells catalogue](#3-the-craft-tells-catalogue)
 4. [Critique methods](#4-critique-methods)
-5. [Self critique checklists per deliverable](#5-self-critique-checklists-per-deliverable)
+5. [Self-critique checklists per deliverable](#5-self-critique-checklists-per-deliverable)
 6. [Giving feedback](#6-giving-feedback)
 7. [Receiving feedback and decision rights](#7-receiving-feedback-and-decision-rights)
 8. [Killing work and the edit](#8-killing-work-and-the-edit)
@@ -20,7 +20,7 @@ How to see, how to judge, how to say it, and how to build the eye in yourself an
 - [Terms introduced](#terms-introduced)
 - [Sources and further reading](#sources-and-further-reading)
 
-Division of labour with the rest of the stack: design-taste holds the taste principles, the canon, currency, the cheap tells and the house critique format (design-taste, section 8). 00-curriculum-and-method.md, section 3, holds the training method (exposure targets, pair drills, copywork, library tools and prices). This file is the judgement in use: what to look at, how to name it, how to run the room, how to write the note, and how to score the work.
+Division of labour with the rest of the stack: design-taste holds the taste principles, the canon, currency, the cheap tells and the house critique format (design-taste, section 8). 00-curriculum-and-method.md, section 3, holds the training method (exposure targets, pair drills, copywork (rebuilding a master's piece to measurement to learn its decisions), library tools and prices). This file is the judgement in use: what to look at, how to name it, how to run the room, how to write the note, and how to score the work.
 
 ## 1. How taste forms
 
@@ -44,7 +44,7 @@ Volume targets live in 00, section 3.1 (about 200 references a week, 10,000 a ye
 | 1 | The object in hand or the space in person: a printed Gentlewoman, an Aesop bottle, a room at The Postcard Goa, the Louvre Abu Dhabi dome | Scale, material, light and sound survive; a screen flattens all four |
 | 2 | The live primary artefact at full quality: the site on a calibrated display at 100 percent, the film at full resolution with sound | Motion and interaction only exist live; a GIF of a site is a different object |
 | 3 | The maker's own case study (Pentagram, Collins, Koto, Studio Dumbar pages) | Shows the system, often the rejected routes and the constraints |
-| 4 | Edited aggregators: Fonts In Use, Brand New, It's Nice That, Awwwards Sites of the Day, D&AD archive | An editor or a jury filtered it; the verdict is attached |
+| 4 | Edited aggregators: Fonts In Use, Brand New, It's Nice That, Awwwards Sites of the Day (its daily award to the top jury-scored site), D&AD archive | An editor or a jury filtered it; the verdict is attached |
 | 5 | Algorithmic feeds: Pinterest, Instagram Explore, Dribbble Popular, Behance | Ranked by engagement, which rewards the peaking wave (design-taste, references/currency-2026.md) |
 | 6 | Screenshots of screenshots and generated mood images | No provenance, compressed, and trains the eye on the model default (22-ai-era-craft-and-generative-tools.md, section 5) |
 
@@ -61,7 +61,7 @@ A pair teaches only if one variable differs; two unrelated posters teach prefere
 | Pencil and shortlist | Excellence against merit | D&AD archive, same category and year |
 | Same headline, two kerning passes | Spacing | Self-made in Figma: metric against optical against manual |
 | Same shot, two grades | Skin, black level, saturation | Self-made in DaVinci Resolve from one clip |
-| Same scene, two cuts | Cut point, hold length | Self-made from one stringout (16-editing-colour-grading-and-delivery.md, section 5.4) |
+| Same scene, two cuts | Cut point, hold length | Self-made from one stringout (every take of a scene laid end to end; 16-editing-colour-grading-and-delivery.md, section 5.4) |
 | Same copy, two edits | Adjectives, length, rhythm | Self-made: a brand's About page against its sentence-by-sentence edit |
 
 ### 1.4 Articulation: the four-rung ladder
@@ -92,12 +92,18 @@ The second condition is more dangerous in 2026, because generative tools give ev
 |---|---|---|---|
 | Paul Graham | "Taste for Makers", February 2002 | Taste can be studied because good and bad design exist; he lists 14 properties, from "Good design is simple" and "Good design solves the right problem" to "Good design is redesign", "Good design can copy" and "Good design is often daring" | Which of the 14 does this fail? Is this solving the brief's problem or a more comfortable one? |
 | Dieter Rams | Ten principles of good design (formulated from the late 1970s; published by Vitsoe), Less but Better (1995) | Good design is innovative, useful, aesthetic, understandable, unobtrusive, honest, long-lasting, thorough down to the last detail, environmentally friendly, and "as little design as possible" | Is anything here present for the designer's benefit? Is the last detail as considered as the first? |
-| Michael Bierut | Pentagram partner from 1990, part-time consulting partner from early 2025; Seventy-Nine Short Essays on Design (2007); How to (2015); co-founded Design Observer in 2003 with Jessica Helfand, Rick Poynor and William Drenttel | Design writing as public criticism; work shown with its brief, constraints and rejected options | Can the maker explain this decision in plain words to a non-designer, and does the explanation come from the content? |
+| Michael Bierut | Pentagram partner from 1990, part-time consulting partner from early 2025 (as of October 2026); Seventy-Nine Short Essays on Design (2007); How to (2015); co-founded Design Observer in 2003 with Jessica Helfand, Rick Poynor and William Drenttel | Design writing as public criticism; work shown with its brief, constraints and rejected options | Can the maker explain this decision in plain words to a non-designer, and does the explanation come from the content? |
 | Stefan Sagmeister | Beauty, with Jessica Walsh (2018), shown at the MAK Vienna and the Museum Angewandte Kunst Frankfurt between 2018 and 2020 | Beautiful forms "are function themselves"; beauty makes objects, buildings and strategies more effective | Did "clean" leave beauty on the table? Is this merely correct? |
-| Kenya Hara | Art director of Muji since 2001; Designing Design (2007); White (2010); Ex-formation (2017) | Emptiness is a receptive state that the viewer fills, distinct from simplicity, which is a reduction | Does the empty space receive the viewer, or is it content that is missing? |
+| Kenya Hara | Art director of Muji since 2001 (as of October 2026); Designing Design (2007); White (2010); Ex-formation (Lars Müller, 2015) | Emptiness is a receptive state that the viewer fills, distinct from simplicity, which is a reduction | Does the empty space receive the viewer, or is it content that is missing? |
 | John Berger | Ways of Seeing, BBC Two, four 30-minute films, January 1972, produced by Mike Dibb; book, Penguin, 1972 | "Seeing comes before words"; publicity sells the spectator an envied future self; the nude and the gaze | Whom is this image asking the viewer to envy, and is that the brand's register? Who is looking at whom? |
 
 The house reads Graham and Rams for structure, Sagmeister as the counterweight when restraint turns sterile, Hara for the reason empty space reads as luxury, and Berger before every luxury campaign, because the episode on publicity describes the mechanism the campaign uses.
+
+Graham's 14 as crit questions: simple (what can go?); timeless (will it hold in 2036?); solves the right problem (is this the brief's problem?); suggestive (does it leave the viewer room to complete it?); often slightly funny (is there wit anywhere?); hard (where did the effort go?); looks easy (is the effort hidden?); uses symmetry (is repetition doing structural work?); resembles nature (does it borrow a model that already works in the world?); is redesign (how many versions came before this one?); can copy (whose solution did it learn from, openly?); often strange (is anything here unexpected?); happens in chunks (which moment or movement does it belong to?); often daring (what risk did it take?).
+
+Hara inherited a Muji whose art direction Ikko Tanaka set at its founding in 1980. Muji aims at the customer's rational "this will do" (kore de ii) over the craving "this is what I want" (kore ga ii); the Horizon campaign (2003, shot at the Salar de Uyuni in Bolivia and on the Mongolian grassland) makes that emptiness an image; his exhibitions RE-DESIGN (2000) and HAPTIC (2004) treat everyday objects as subjects for redesign and touch. Ex-formation (Hara's term for making the familiar unknown again, the reverse of adding information) gives a crit question: does the work make the viewer see a familiar thing as if for the first time?
+
+Rams's set and the other durable principle sets, dissected: 28-masters-methods-and-principle-systems.md, section 11. The cognition behind expert judgement: 27-how-the-best-designers-think.md, sections 2 and 11.
 
 ### 1.7 History as a critique instrument
 
@@ -126,7 +132,7 @@ Twenty minutes, before email, every working day:
 3. Five minutes: one crit of something in the wild in the house format (a hoarding on the Western Express Highway, a Sheikh Zayed Road billboard, a restaurant menu, an app onboarding). Verdict, one thing working, one thing not, the fix.
 4. Five minutes: one craft detail rebuilt (kern one word, match one easing, grade one frame).
 
-Weekly: the Friday crit (00, section 3.8). Monthly: one visit to primary artefacts (in Mumbai, the CSMVS museum and the Kala Ghoda galleries; in Dubai, Alserkal Avenue and Jameel Arts Centre; in Abu Dhabi, the Louvre Abu Dhabi), with five annotated references from it.
+Weekly: the Friday crit (00, section 3.8). Monthly: one visit to primary artefacts (in Mumbai, the CSMVS museum (Chhatrapati Shivaji Maharaj Vastu Sangrahalaya) and the Kala Ghoda galleries; in Dubai, Alserkal Avenue and Jameel Arts Centre; in Abu Dhabi, the Louvre Abu Dhabi), with five annotated references from it.
 
 ### 1.11 Critique in the 12-month programme
 
@@ -139,9 +145,17 @@ The programme is 00, section 7. Critique milestones overlaid on it:
 | 7 to 9 | Facilitate the Critical Response Process (4.3) for peers in another discipline | Four sessions; maker rates usefulness 4 or above out of 5 |
 | 10 to 12 | Lead crits (00 schedules crits 6 to 10 in month 11); score with the rubric (section 13) alongside a second scorer | Rubric scores within 1 point of the second scorer on 8 of 10 dimensions |
 
+### 1.12 When to trust the two-second call
+
+Daniel Kahneman and Gary Klein, "Conditions for intuitive expertise: a failure to disagree" (American Psychologist, 2009), agree that intuition is valid only where the environment is regular enough to predict and gives the expert fast, clear feedback. Applied: the CD's two-second call is reliable on craft and register (kerning, grade, hierarchy, tone), where the rules are stable and feedback arrives in every crit and press check. It is unreliable on predicting virality, sales or the winner of a test, where feedback is slow and noisy; those calls go to data (7.6). The evidence that trained eyes see differently: Calvin Nodine, Paul Locher and Elizabeth Krupinski (Leonardo, 1993) tracked eye movements and found art-trained viewers scanning the relations between compositional elements while untrained viewers fixated on individual objects.
+
+### 1.13 The standard of taste
+
+The client line "taste is subjective" has two classic answers. David Hume, "Of the Standard of Taste" (1757), holds that some judges are better than others: the true judge has "strong sense, united to delicate sentiment, improved by practice, perfected by comparison, and cleared of all prejudice", which maps onto the four components in 1.1 (comparison is exposure, delicacy is discrimination, practice builds articulation and nerve). His model of discrimination is the story from Don Quixote of Sancho Panza's two kinsmen, who taste a hogshead of wine and report, one a taste of leather, the other of iron; they are mocked until the cask is emptied and an old key on a leather thong lies at the bottom. A judgement is proved when its hidden cause is found, which is what a rung 3 note (1.4) does. Pierre Bourdieu, Distinction (1979; English 1984), answers from sociology: "taste classifies, and it classifies the classifier"; luxury taste is a social signal, so the CD designs to the audience's distinction codes (an old Delhi family, a first-generation Mumbai buyer, an Emirati family) whatever the CD personally prefers. House position: both hold, Hume for the craft verdict and Bourdieu for the register. Client script: "Taste here is a prediction about how your buyer will judge this, and we can test it", then run a test from 4.8.
+
 ## 2. What the expert eye sees
 
-The novice sees the whole and reacts to it. The expert sees the whole in two seconds, forms a verdict, then runs a checking pass at three distances: the full piece at arm's length (hierarchy, weight, idea), 100 percent (alignment, spacing, colour), and 200 to 400 percent (kerning, edges, artefacts). Each item below is something the expert checks on that pass, with the threshold that separates fine from defect. The fixes and references are in section 3.
+The novice fixates on objects and reacts to the whole; the expert scans the relations between them (Nodine, Locher and Krupinski, 1993; 1.12). The expert sees the whole in two seconds, forms a verdict, then runs a checking pass at three distances: the full piece at arm's length (hierarchy, weight, idea), 100 percent (alignment, spacing, colour), and 200 to 400 percent (kerning, edges, artefacts). Each item below is something the expert checks on that pass, with the threshold that separates fine from defect. The fixes and references are in section 3.
 
 ### 2.1 Typography
 
@@ -154,21 +168,23 @@ Detail in 03-typography.md, sections 4, 5, 6 and 8.
 - Faux styles: bold or italic synthesised by the software because the real weight or style is not loaded (outlines thickened, counters clogged), a slanted roman passed as italic, small caps made by shrinking capitals (strokes visibly thinner than the caps beside them).
 - Wrong figures: proportional figures in price columns, old-style figures in UI tables, a hyphen where a minus sign belongs, the letter x for a multiplication sign, straight quotes, and inch marks used as apostrophes.
 - Tracking on lowercase: positive letter-spacing on lowercase running text breaks word shapes. Capitals and small caps take positive tracking at small sizes; lowercase display usually wants negative.
-- Orphan lines: a single word on the last line of a paragraph or headline (a runt), or a paragraph's last line stranded at the top of a column or slide.
+- Runts, widows and orphans (03-typography.md, section 6.4, in Bringhurst's senses): a runt is a single word or part of a word alone on the last line; a widow is a paragraph's last line stranded at the top of a column, page or slide; an orphan is its first line stranded at the bottom.
+- Measure (the length of a line of text, counted in characters): body text outside 45 to 75 characters per line, about 66 being ideal for a single column (Bringhurst, chapter 2), loses the eye at the return or breaks the rhythm. The weekly case is a desktop luxury site running paragraphs 120 to 140 characters wide; the fix is `max-width` in `ch` units, about 60 to 70ch.
 - Size steps too close: two roles 2 to 4px apart (16 and 18px, 28 and 32px) read as a mistake. The house working rule is a ratio of at least 1.25 between adjacent levels, or a difference carried by weight, case or colour instead of size.
 
 ### 2.2 Colour
 
 Detail in 04-colour.md.
 - Temperature mismatch: a warm photograph on a cool grey interface, or neutrals with a blue cast beside a tungsten-lit interior. Checked with the eyedropper in OKLCH (a perceptually uniform colour space of lightness, chroma and hue): true neutrals sit at chroma near 0; tinted neutrals share one hue across the palette.
-- Muddy mids: midtones that go grey-brown, usually from a gradient interpolated in sRGB between complementary hues, or from darkening a colour by overlaying black.
+- Muddy mids: midtones that go grey-brown, usually from a gradient interpolated in sRGB (the standard web RGB colour space) between complementary hues, or from darkening a colour by overlaying black.
 - Banding: visible steps in a smooth gradient, from 8-bit output across large areas or heavy compression.
-- Contrast fails: text under 4.5:1 or large text and interface parts under 3:1 (WCAG 2.2, the W3C Web Content Accessibility Guidelines; numbers in 26-platform-and-format-specs-2026.md, section 8). Pale grey captions for elegance fail first.
+- Contrast fails: text under 4.5:1 or large text and interface parts under 3:1 (WCAG 2.2, the W3C Web Content Accessibility Guidelines; numbers in 26-platform-and-format-specs-2026.md, section 8; method in 11-accessibility-and-inclusive-design.md, section 2). Pale grey captions for elegance fail first.
 - Saturation creep: each round adds a little saturation because each version is judged against the last. Version 7 beside version 1 shows it.
 - The accent used twice: an accent works because it is scarce. A second use halves the signal of the first. The house flame (#F53901) appears once per view.
 
 ### 2.3 Layout
 
+Detail in 05-layout-grids-and-composition.md, sections 6, 7 and 8.
 - Grid drift: elements 2 to 8px off their columns, usually from nudging. Checked with the column overlay on.
 - Margin inconsistency: outer margins that differ between slides, pages or breakpoints; the eye compares margins across a turn of the page.
 - Unintended alignment: two edges that almost align (1 to 4px apart) or touch tangentially. Near-misses read as error; edges either align exactly or separate by at least one grid unit.
@@ -178,11 +194,11 @@ Detail in 04-colour.md.
 
 ### 2.4 UI
 
-Detail in 06-ui-design-craft.md, sections 3, 13 and 22.
+Detail in 06-ui-design-craft.md, sections 3, 13 and 22, and 09-interaction-design-and-ux-patterns.md, section 12.
 - Radius mismatch: nested corners that are not concentric. Inner radius equals outer radius minus the padding between them (06, section 13).
 - Inconsistent hover: some cards change background, some underline, some do nothing.
 - 1px misalignment: icons a pixel off-centre in their buttons from odd-sized bounding boxes; elements blurred by a half-pixel transform.
-- Focus ring absent: the outline removed with nothing in its place, failing WCAG 2.4.7 Focus Visible (Level AA).
+- Focus ring absent: the outline removed with nothing in its place, failing WCAG 2.4.7 Focus Visible (Level AA; 11, section 5).
 - Icon weight against type weight: a 2px icon stroke beside 300-weight text looks bolder than the word it labels; match stroke to the text's stem.
 - State missing: no empty, loading, error, disabled or partial state designed; the developer invents them.
 - Shadow stacking: shadows with different light directions, or a card with a shadow inside a card with a shadow.
@@ -200,9 +216,9 @@ Detail in 12-motion-principles-and-ui-motion.md, sections 3, 4 and 16.
 
 ### 2.6 Video
 
-Detail in 16-editing-colour-grading-and-delivery.md and 15-lighting-and-sound.md.
+Detail in 16-editing-colour-grading-and-delivery.md, 15-lighting-and-sound.md and 14-video-preproduction-and-cinematography.md, sections 8, 10 and 12.
 - Light direction continuity breaks: the key light on the left in the wide and on the right in the close-up of the same moment.
-- Eyeline errors: a character looks frame left in the single when the other person is frame right; the 180-degree line crossed without motivation.
+- Eyeline errors: a character looks frame left in the single when the other person is frame right; the 180-degree line (the imaginary line between two subjects that the camera stays on one side of) crossed without motivation.
 - The 30-degree jump: a cut between two shots of the same subject with less than about 30 degrees of camera angle change and similar size, read as a jump cut.
 - Warp wobble: the rubbery, rolling distortion that Premiere's Warp Stabilizer adds when pushed too far.
 - Orange skin: skin pushed off the skin tone indication line on the vectorscope (16, section 8.5), usually by a warm look applied to the whole frame.
@@ -214,17 +230,17 @@ Detail in 16-editing-colour-grading-and-delivery.md and 15-lighting-and-sound.md
 ### 2.7 Photography
 
 Detail in 15-lighting-and-sound.md, sections 2 to 6.
-- Flat light: no direction and no shadow modelling, from on-camera flash or open shade with no negative fill.
-- HDR and over-retouching are on design-taste's cheap list; the expert sees the mechanism: halos along high-contrast edges, grey highlights, bent door frames near a liquified waist, pores replaced by blur.
+- Flat light: no direction and no shadow modelling, from on-camera flash or open shade with no negative fill (a black flag that removes bounce light to deepen shadow).
+- HDR (high dynamic range tone-mapping) and over-retouching are on design-taste's cheap list; the expert sees the mechanism: halos along high-contrast edges, grey highlights, bent door frames near a liquified waist, pores replaced by blur.
 - Stock pose: hand on chin, pointing at a screen, laughing at nothing, the arms-crossed team photo.
 - Wrong lens for the subject: a 24mm lens close to a face swells the nose; faces want about 85 to 135mm full-frame equivalent at a distance; architecture shot without a shift lens or correction shows converging verticals.
 
 ### 2.8 Print
 
-Detail in 04-colour.md, section 10, and 26-platform-and-format-specs-2026.md, section 6.
+Detail in 04-colour.md, section 10, 20-print-packaging-ooh-and-physical-production.md, sections 2, 3, 5 and 11, and 26-platform-and-format-specs-2026.md, section 6.
 - Wrong paper: gloss-coated stock for a hotel's letter, or a heavy uncoated sheet that swallows a photograph's shadows.
 - Gloss: gloss lamination on a luxury object, which reflects light and shows fingerprints.
-- Rich black mismatch: two black builds side by side (K 100 beside C60 M40 Y40 K100) so one panel looks grey.
+- Rich black mismatch: two rich blacks (black built from K plus other inks for density) side by side (K 100 beside C60 M40 Y40 K100) so one panel looks grey.
 - Foil as default: gold foil on every element, and foil on hairlines finer than the finisher's stated minimum, which fills in.
 - Misregistration: coloured fringes around small type knocked out of a four-colour background.
 
@@ -232,15 +248,15 @@ Detail in 04-colour.md, section 10, and 26-platform-and-format-specs-2026.md, se
 
 Detail in 21-web-design-and-digital-craft.md, sections 3 and 5.
 - Font flash: text rendering in a fallback face and then jumping when the web font arrives, shifting the layout.
-- Layout shift: Cumulative Layout Shift above 0.1 (web.dev, Core Web Vitals, as of October 2026).
-- Slow hero: Largest Contentful Paint above 2.5 seconds at the 75th percentile, usually an unoptimised hero video or image.
-- Scroll jank: dropped frames while scrolling, and interactions slower than the 200ms Interaction to Next Paint threshold.
+- Layout shift: Cumulative Layout Shift (CLS) above 0.1 (web.dev, Core Web Vitals, Google's loading, responsiveness and stability measures, as of October 2026).
+- Slow hero: Largest Contentful Paint (LCP) above 2.5 seconds at the 75th percentile, usually an unoptimised hero video or image.
+- Scroll jank: dropped frames while scrolling, and interactions slower than the 200ms Interaction to Next Paint (INP) threshold.
 - The preloader: a percentage counter or logo animation that delays content the visitor came for.
 - Cursor effects: custom cursors that lag behind the pointer, trailing blobs, and magnetic buttons that move away from the click.
 
 ### 2.10 Copy
 
-Design-taste lists the copy tells (adjectives, exclamation marks, selling, dashes, contrast constructions, "elevate"); 10-ux-writing-and-content-design.md gives the craft. The expert also sees the mechanism under them: claims with no fact attached; every sentence the same length; the brand describing itself in the third person; a promise in the headline with no proof in the next line; and lines that could sit under any competitor's logo.
+Design-taste lists the copy tells (design-taste, section 3, copy); 10-ux-writing-and-content-design.md gives the craft. The expert also sees the mechanism under them: claims with no fact attached; every sentence the same length; the brand describing itself in the third person; a promise in the headline with no proof in the next line; and lines that could sit under any competitor's logo.
 
 ### 2.11 AI-generated material
 
@@ -506,7 +522,7 @@ The reason for the order is cost and sunk cost: polish applied to a dead idea ma
 | Workshop with a client team of 8 to 15 | I like, I wish, what if (4.4) | Everyone speaks; CD converts wishes into problems |
 | Final QA before delivery | Checklists (section 5), rubric (section 13) | Completeness matters more than conversation |
 
-## 5. Self critique checklists per deliverable
+## 5. Self-critique checklists per deliverable
 
 Run before any piece goes to the CD, and again before it goes to the client. Questions are numbered so a reviewer can cite them ("identity 14 fails"). The CD's own final gate is 19-campaigns-and-creative-direction.md, section 17; the UI polish audit is 06-ui-design-craft.md, section 22; web launch QA is 21-web-design-and-digital-craft.md, section 15.
 
