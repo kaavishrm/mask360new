@@ -1,6 +1,6 @@
 # Print, packaging, OOH and physical production
 
-Making physical things at a luxury standard: specification, materials, finishes, vendors and quality control, for print, packaging, outdoor, retail, events and stationery in India and the UAE. As of October 2026.
+Making physical things at a luxury standard: specification, materials, finishes, vendors and quality control, for print, packaging, out of home (OOH) advertising, press, retail, events and stationery in India and the UAE. As of October 2026.
 
 ## Contents
 
@@ -19,25 +19,25 @@ Making physical things at a luxury standard: specification, materials, finishes,
 
 Then [Terms introduced](#terms-introduced) and [Sources and further reading](#sources-and-further-reading).
 
-How this file sits in the corpus. The taste calls (matte over gloss, material honesty, one idea, the cheap tells) live in design-taste, SKILL.md sections 2, 3 and 5; this file does not repeat them. Colour engineering for print (gamut, rich black builds, total ink, TVI, press characterisations, delta E tolerances) lives in 04-colour.md, sections 9 and 10. Size tables for A series, business cards, posters, DOOH and LED walls live in 26-platform-and-format-specs-2026.md, sections 3.8, 5.11 and 6. Type for print lives in 03-typography.md, section 14. This file is the production layer: what to specify, what to order, what to check, and why each choice reads expensive or cheap once it exists in the hand or on the street.
+How this file sits in the corpus. The taste calls (matt over gloss, material honesty, one idea, the cheap tells) live in design-taste, SKILL.md sections 2, 3 and 5; this file does not repeat them. Colour engineering for print (gamut, rich black builds, total ink, TVI (tone value increase, section 1.5), press characterisations, and delta E tolerances, delta E being the measured difference between two colours) lives in 04-colour.md, sections 9 and 10. Size tables for A series, business cards, posters, DOOH (digital out of home: networked screens in public places, sold by the slot) and LED walls live in 26-platform-and-format-specs-2026.md, sections 3.9, 5.11 and 6. Type for print lives in 03-typography.md, section 14; identity applied to packs and print lives in 18-brand-strategy-and-identity-design.md, section 4.11. This file is the production layer: what to specify, what to order, what to check, and why each choice reads expensive or cheap once it exists in the hand or on the street.
 
-Status marks used where a value is time-sensitive or unpublished: (V) read in a primary or reference source in October 2026; (T) trade norm, consistent across vendors and fixed by no published standard; (U) not verifiable in this pass, to be confirmed with the vendor or the regulation before release. Unmarked values are stable technical facts. The web search budget for this pass ran out before the time-sensitive checks were complete, so more items than usual carry (T) or (U); treat them as planning values.
+Status marks used where a value is time-sensitive or unpublished: (V) read in a primary or reference source in October 2026; (T) trade norm, consistent across vendors and fixed by no published standard; (U) not verified in this pass. Unmarked values are stable technical facts. Values marked (T) or (U) are planning values; confirm them on the quote or in the regulation before release.
 
 ## 1. Print fundamentals
 
 ### 1.1 Resolution and viewing distance
 
-Effective resolution is the pixel count of a placed image divided by its printed size in inches; InDesign shows it as "Effective PPI" in the Links panel, and it is the only resolution figure that matters (the "Actual PPI" of the file is irrelevant once the image is scaled).
+Effective resolution is the pixel count of a placed image divided by its printed size in inches, given in pixels per inch (ppi); InDesign shows it as "Effective PPI" in the Links panel, and it is the only resolution figure that matters (the "Actual PPI" of the file is irrelevant once the image is scaled).
 
-- 300 ppi at final size for anything read in the hand (cards, books, brochures, packaging). Reason: offset at 150 to 175 lpi needs a sampling rate of 1.5 to 2 times the screen ruling (the quality factor); 175 x 1.7 is about 300. Above about 400 ppi the RIP discards data and nothing improves.
+- 300 ppi at final size for anything read in the hand (cards, books, brochures, packaging). Reason: offset at 150 to 175 lpi (lines per inch, the halftone screen ruling of section 1.5) needs a sampling rate of 1.5 to 2 times the screen ruling (the quality factor); 175 x 1.7 is about 300. Above about 400 ppi the RIP (raster image processor, the software that converts the PDF into plate or printer data) discards data and nothing improves.
 - 150 ppi at final size for large format viewed from a metre or more (A1 and larger posters, roll-ups, exhibition panels); 100 ppi for bus shelters and mupis; 20 to 30 ppi at size for hoardings, usually delivered as 300 ppi at 1:10 scale.
 - The viewing distance rule: the eye resolves about one minute of arc, so the useful limit in ppi is about 3438 divided by the viewing distance in inches. 26-platform-and-format-specs-2026.md, section 6.6 derives it and tabulates it by product.
 - Line art (one-bit bitmap, such as a scanned signature or engraving) needs 1200 ppi at size, because hard edges stair-step visibly at 300. Logos and type travel as vectors and have no resolution.
-- An upscaled image is a resampled image. AI upscaling (22-ai-era-craft-and-generative-tools.md) can rescue a hero shot for a hoarding; it invents texture in jewellery, fabric and skin, so check the result at 100 percent on the detail that the client sells.
+- An upscaled image is a resampled image. AI upscaling (22-ai-era-craft-and-generative-tools.md, section 6.8) can rescue a hero shot for a hoarding; it invents texture in jewellery, fabric and skin, so check the result at 100 percent on the detail that the client sells.
 
 ### 1.2 Colour mode, conversion timing and profiles
 
-Work in RGB, soft proof against the output profile throughout, and convert to CMYK once, at export, through the profile of the press that will print the job. Reasons: an early CMYK conversion throws away the gamut the screen versions of the same campaign need; each reconversion between CMYK profiles compounds shifts; and the same RGB master can then be converted separately for coated offset, uncoated offset, newsprint and large format. 04-colour.md, section 10.1 gives the rendering intents.
+Work in RGB, soft proof against the output profile throughout, and convert to CMYK once, at export, through the ICC profile (a file describing a device's colour behaviour, to the International Color Consortium format) of the press that will print the job. Reasons: an early CMYK conversion throws away the gamut the screen versions of the same campaign need; each reconversion between CMYK profiles compounds shifts; and the same RGB master can then be converted separately for coated offset, uncoated offset, newsprint and large format. 04-colour.md, section 4.2 gives the rendering intents.
 
 | Characterisation | ICC profile | Paper and process | When to use it |
 |---|---|---|---|
@@ -51,11 +51,13 @@ Work in RGB, soft proof against the output profile throughout, and convert to CM
 
 The paper white of each characterisation differs (04-colour.md, section 10.7). Ask every printer in writing which condition they print to and whether they hold FOGRA or PSO certification; most Indian commercial printers answer "CMYK", which means FOGRA39 in practice.
 
+Print conditions. ISO 12647-2:2013 groups offset stocks into eight print conditions, PC1 to PC8: PC1 (premium coated) is characterised by FOGRA51 and PC5 (wood-free uncoated) by FOGRA52. Many Indian prepress houses convert uncoated jobs through Adobe's bundled "Uncoated FOGRA29" profile, an older uncoated characterisation, without saying so; ask which profile converted the file, and supply your own conversion through FOGRA52 when the printer names none. Process control is contested. PSO (ProzessStandard Offsetdruck, run by Fogra and the German printing federation bvdm on ISO 12647-2) controls each ink's solid density and TVI curve to aim values. G7 (Idealliance's method, devised by Don Hutcheson and described in ISO/TS 10128) calibrates the press to a neutral grey balance, so that different processes and papers share a similar appearance. US printers and many packaging converters work to G7; European printers and most certified Indian printers work to PSO. House position: ask which one the printer is certified to, accept either, and hold the brand solids to the tolerances of 04-colour.md, section 9.3 under both, because the brand colour is what the client judges. For packs with several spot colours, consider extended gamut printing (04-colour.md, section 10.6; characterised by FOGRA55).
+
 ### 1.3 Black: single ink, rich and registration
 
 - K 100 alone for all text, fine rules and small marks, because one plate cannot misregister against itself.
 - A rich black (K 100 with cyan, magenta and yellow under it) for large solids; the house build is C60 M40 Y40 K100, with warm and cool variants and an uncoated build in 04-colour.md, section 10.2. Use one build per job and per suite: a business card, letterhead and folder printed with different blacks look like three brands on the desk.
-- Registration black (C100 M100 Y100 K100) is for printer's marks only. Applied to artwork it lays 400 percent ink, sets off, cracks on folds and never dries on uncoated stock.
+- Registration black (C100 M100 Y100 K100) is for printer's marks only. Applied to artwork it lays 400 percent ink, sets off (set-off: wet ink transferring to the back of the next sheet in the delivery stack), cracks on folds and never dries on uncoated stock.
 - InDesign hides the difference by default: set Preferences, Appearance of Black, to "Display All Blacks Accurately" so a K 100 panel beside a rich black panel shows its real mismatch on screen.
 
 ### 1.4 Overprint, knockout and trapping
@@ -68,21 +70,21 @@ Trapping is the deliberate overlap of adjacent colours so that misregistration d
 
 Tone value increase (TVI, the ISO term for dot gain) makes mid-tones print darker than the file, most on uncoated stock and newsprint; the profile compensates if the file was converted through the right one (04-colour.md, section 10.4). What the designer controls:
 
-- Highlights: tints under about 3 percent can drop out on CTP plates and tints over about 95 percent fill in (T). A 2 percent brand tint behind text will either vanish or blotch.
+- Highlights: tints under about 3 percent can drop out on CTP (computer-to-plate) plates and tints over about 95 percent fill in (T). A 2 percent brand tint behind text will either vanish or blotch.
 - Gradients: long gradients with small value change band on press and on large-format inkjet; add 1 to 2 percent monochromatic noise in Photoshop and avoid gradients that end abruptly at 0 percent.
 - Screen ruling (lines per inch, lpi) is chosen by press and paper: higher rulings resolve more detail but gain more and need smoother paper. Typical values are tabulated in section 12.2.
 
-Amplitude modulated (AM) screening varies dot size on a fixed grid at fixed angles (classically cyan 15, magenta 75, yellow 0 or 90, black 45 degrees), producing the rosette visible under a loupe. Frequency modulated (FM, stochastic) screening keeps a fixed tiny dot, about 20 to 25 micrometres, and varies how many dots there are (V: Stochastic screening, Wikipedia, read October 2026). FM gives no rosette and no screen moiré, holds fine detail in jewellery and textiles, and reaches a slightly wider gamut; it shows grain in flat mid-tone tints and demands tight plate and press control. Hybrid screens combine both: Kodak Staccato (FM), Agfa Sublima, Screen Spekta. House: ask for FM or hybrid on jewellery, watch and textile look books printed above 175 lpi equivalent, AM elsewhere.
+Amplitude modulated (AM) screening varies dot size on a fixed grid at fixed angles (classically cyan 15, magenta 75, yellow 0 or 90, black 45 degrees), producing the rosette visible under a loupe. Frequency modulated (FM, stochastic) screening keeps a fixed tiny dot, about 20 to 25 micrometres, and varies how many dots there are (V: Stochastic screening, Wikipedia, read October 2026). FM gives no rosette and no screen moiré, holds fine detail in jewellery and textiles, and reaches a slightly wider gamut; it shows grain in flat mid-tone tints and demands tight plate and press control. Hybrid (cross-modulated) screens use AM dots in the mid-tones and FM dots in the extreme highlights and shadows (Agfa Sublima, Screen Spekta); Kodak Staccato is a pure FM screen. House: ask for FM or hybrid on jewellery, watch and textile look books printed above 175 lpi equivalent, AM elsewhere.
 
 Moiré is an interference pattern from two regular grids overlapping: fine fabric weaves (houndstooth, twill, a sheer sari), architectural louvres or a rescreened printed image beating against the halftone. Fixes in order: FM screening, a slight rotation or scale of the image, a minimal blur on the offending area, and for rescreened originals a descreen at scan.
 
 ### 1.6 Spot colour and Pantone
 
-A spot colour is a pre-mixed ink printed from its own plate. The Pantone Matching System is the default library in both countries; 04-colour.md, section 10.5 covers when a spot beats process.
+A spot colour is a pre-mixed ink printed from its own plate. The Pantone Matching System is the default library in both countries; 04-colour.md, section 10.5 covers when to choose a spot over a process build.
 
 - Coated (C) and uncoated (U) are the same ink formula seen on two papers; a brand book cites both (PANTONE 2685 C and 2685 U) and the uncoated one is almost always duller and darker. Specify the C or U chip that matches the stock being printed.
 - Pantone Color Bridge shows each solid beside its CMYK simulation with CMYK, sRGB and HEX values; the brand book takes its process build from it and states the visible distance.
-- Series numbering (V: Pantone, Wikipedia, read October 2026): metallics 871 to 877 and 8001 to 8965; premium packaging metallics 10101 to 10454; fluorescents 801 to 814 and 901 to 942; pastels 9140 to 9163. Metallics and fluorescents cannot be shown on screen; judge them only on a drawdown on the job's stock. Fluorescents fade in daylight within weeks, which rules them out of windows and outdoor.
+- Series numbering (V: Pantone, Wikipedia, read October 2026): metallics 871 to 877 and 8001 to 8965; premium packaging metallics 10101 to 10454; fluorescents 801 to 814 and 901 to 942; pastels carry 9000-series numbers (for example 9140 C, 9182 C and 9580 C in the Pastels and Neons guide; V: pantone.com colour finder). Metallics and fluorescents cannot be shown on screen; judge them only on a drawdown on the job's stock. Fluorescents fade in daylight within weeks, which rules them out of windows and outdoor.
 - The library had 2,161 solid colours in the 2019 edition (V, same source); later editions added colours, so cite the guide edition in the brand book.
 - Pantone Plus versus Pantone Connect. Pantone Plus was the library series bundled with Adobe applications; after the Adobe and Pantone licensing dispute, Pantone colour values were removed from Photoshop, Illustrator and InDesign in November 2022, and the Pantone Plus colour books were removed from Illustrator in 2023 after Pantone deprecated the series (V, Pantone article on Wikipedia, citing Wired, November 2022). Pantone Connect is the current route: a web app, mobile apps and an Adobe Creative Cloud extension (V: pantone.com, read October 2026). The premium price was reported as US$15 a month in 2022; the October 2026 price was not published on the page read (U). Files that carried Pantone Plus swatches still open; their names survive, so the printer can mix the ink, and the screen values may display as black until the library is licensed.
 - Physical guides fade with light and handling; replace the studio's working guides roughly every 12 to 18 months (T) and keep one archived guide per brand job as the reference.
@@ -94,7 +96,7 @@ A spot colour is a pre-mixed ink printed from its own plate. The Pantone Matchin
 |---|---|---|---|---|
 | Conventional sheetfed (oil based) | Absorption and oxidation | Any paper, cheap, the reference process | Needs drying time before laminating, foiling or folding, often overnight (T) | Most commercial print |
 | UV and LED-UV | Cured instantly by ultraviolet light | Prints on plastics, foil board, synthetic papers; finishing the same day; sharper dot on uncoated | Slightly different gloss; some UV inks deink poorly in recycling | Packaging, labels, uncoated jobs with tight lead times |
-| Soy and vegetable based | As conventional | Lower VOCs; part of the petroleum oil replaced by vegetable oil (the share varies by maker) | Marginally slower drying | Sustainability briefs; ask for the maker's data sheet before claiming it |
+| Soy and vegetable based | As conventional | Lower VOCs (volatile organic compounds, solvents that evaporate into the air); part of the petroleum oil replaced by vegetable oil (the share varies by maker) | Marginally slower drying | Sustainability briefs; ask for the maker's data sheet before claiming it |
 | Metallic | As above | Cheaper than foil for large areas; can be overprinted | Duller than foil; needs a sealing varnish to stop tarnish and rub; sinks and dulls on uncoated | Large metallic fields where foil would be wasteful |
 | Opaque white | As above | Prints light on dark and kraft stocks | Offset white is thin, needs two hits; screen printed white is denser | Kraft, black and coloured boards |
 | Fluorescent | As above | Brightness CMYK cannot reach | Fades in light | Short-life items, fashion events |
@@ -122,26 +124,30 @@ Imposition is the arrangement of pages on the press sheet so that, once printed 
 - A signature is one press sheet folded into a section: 4, 8, 16 or 32 pages. A B1 press sheet (700 x 1000 mm in trade use; ISO B1 is 707 x 1000) carries eight A4 pages a side, so a 16-page A4 signature; a B2 press sheet carries an 8-page A4 signature.
 - Page counts: any saddle-stitched or sewn book is a multiple of 4; offset economy favours multiples of 8 or 16 because a part-signature wastes sheet and make ready. A 52-page book costs nearly what a 64-page book costs on B1.
 - Creep (shingling): in saddle stitching, inner pages push out further than outer ones and are trimmed narrower; on 64 pages of 130 gsm the difference reaches a millimetre or two. The printer compensates; the designer keeps 5 mm or more of safe area at the fore edge and avoids thin borders.
-- Gripper edge: about 10 to 15 mm along one sheet edge is held by the press grippers and cannot print (T); full-bleed work needs a sheet larger than the trimmed size, which is why SRA sizes exist (SRA3 320 x 450 mm, SRA2 450 x 640, SRA1 640 x 900).
-- Work-and-turn and work-and-tumble print both sides of a sheet from one plate set; the printer chooses, and it affects which edge is the gripper.
+- Gripper edge: about 10 to 15 mm along one sheet edge is held by the press grippers and cannot print (T); full-bleed work needs a sheet larger than the trimmed size, which is why SRA (supplementary raw format A) sizes exist (SRA3 320 x 450 mm, SRA2 450 x 640, SRA1 640 x 900).
+- Work-and-turn (the sheet turns over side to side and keeps its gripper edge) and work-and-tumble (the sheet tumbles head to tail, so the opposite edge becomes the gripper) print both sides of a sheet from one plate set. The printer chooses; tumbling changes the gripper edge, which matters when a foil or an emboss must back up exactly to the print.
 
 ### 1.11 Binding
 
 | Method | Page range (approximate) | How it opens | Character and luxury use |
 |---|---|---|---|
 | Saddle stitch | 8 to about 64 pages; up to about 80 on thin stock (T) | Opens flat at the centre spread only | Magazines, slim catalogues; loop stitch variant for ring binders. Thick saddle books bulge and gape |
-| Perfect binding (hot-melt EVA glue) | From a spine of about 3 to 4 mm, roughly 48 pages of 100 to 120 gsm (T) | Fights to close; text near the spine is lost | Paperbacks, reports. Coated stock and heavy ink at the spine shed pages |
+| Perfect binding (hot-melt EVA glue, ethylene vinyl acetate) | From a spine of about 3 to 4 mm, roughly 48 pages of 100 to 120 gsm (T) | Fights to close; text near the spine is lost | Paperbacks, reports. Coated stock and heavy ink at the spine shed pages |
 | PUR binding (polyurethane reactive glue) | As perfect binding | Opens wider; stronger on coated and heavy stocks | The minimum for a perfect-bound luxury piece; needs about a day to cure before handling (T) |
 | Case binding (hardcover) | From about 48 pages (T) | Depends on the text block; sewn blocks open best | Brand books, coffee-table books, anniversary books; cloth, paper or leather over 2 to 3 mm greyboard, headbands, ribbon markers |
-| Smyth sewing | Any multiple of signatures | Lies flat | The gold standard for books that must open fully (V: Bookbinding, Wikipedia); pair with a case or an exposed spine |
+| Smyth sewing | Any multiple of signatures | Lies flat | Sewn through the folds and to each other, so the book opens flat and lasts; called the "gold standard" of binding by Joshua P. Hochschild (First Things, November 2020, as quoted in Bookbinding, Wikipedia); pair with a case or an exposed spine |
 | Singer sewing | One section, about 8 to 48 pages (T) | Flat at centre | Machine lockstitch through the fold with visible, often coloured, thread; a quiet luxury cue for look books and menus |
 | Swiss binding | Sewn or PUR block | Lies flat; front cover hinges free | Text block glued to the back cover only, spine exposed; art catalogues, brand books |
 | Exposed spine (open spine, lay-flat) | Sewn signatures | Lies flat | Visible stitching and glue, covers attached at the sides; reads crafted when the sewing thread is specified |
+| Otabind and RepKover | A perfect or PUR-bound block whose cover spine floats free of the block | A softcover that lies flat | Cookbooks, manuals and look books that must stay open on a table; ask Indian binders whether they run it before designing for it (T) |
+| Lay-flat photo binding | Pages printed one side, mounted back to back on thin board and hinged at the spine | Completely flat with no gutter | Panoramas cross the spread unbroken; hotel, architecture and wedding books; page count limited and pages thick |
 | Japanese stab binding | Loose sheets, any count within a few millimetres of thickness | Opens partly | Holes about 10 mm from the spine, hand-stitched patterns; limited runs, invitations, menus |
-| Wire-o | Up to about 25 mm thick (T) | Opens 360 degrees | Notebooks and functional menus; 3:1 pitch up to 9/16 inch, 2:1 above (V: Bookbinding, Wikipedia). Half-concealed wire-o hides the wire under a wrap cover |
+| Wire-o (double-loop wire) | Up to about 25 mm thick (T) | Opens 360 degrees | Notebooks and functional menus; 3:1 pitch up to 9/16 inch, 2:1 above (V: Bookbinding, Wikipedia). Half-concealed wire-o hides the wire under a wrap cover |
 | Screw posts (Chicago screws) | Any | Flat | Menus and portfolios whose pages change |
 
 Luxury defaults: Smyth sewn with an exposed spine or Swiss binding for brand books; Singer sewn for slim look books and menus; case bound Smyth sewn for anything that must last on a coffee table; never wire-o on a luxury piece unless the brief is a working notebook.
+
+Cased covers and their parts. Woven book cloth (buckram is the heavy, filled grade; Brillianta from Van Heek Textiles is a widely stocked range), paper-based cloth substitutes (Wibalin from Winter and Company), real leather and bonded leather (leather fibre re-formed with a binder, cheaper and duller). Foil on cloth needs lines of about 0.3 to 0.5 mm or more, because the weave breaks finer lines (T). The parts a luxury book specifies: endpapers (the folded sheets glued between case and block, coloured or printed), headbands and tailbands (small woven bands at the ends of the spine), a ribbon marker, a dust jacket (a removable paper wrapper) with flaps of about 80 to 100 mm (T), and a slipcase (an open-ended board box the book slides into). Margins for books that must open: 05-layout-grids-and-composition.md, sections 4.2 and 4.4.
 
 ### 1.12 Folding, creasing and grain
 
@@ -170,9 +176,9 @@ Luxury defaults: Smyth sewn with an exposed spine or Swiss binding for brand boo
 
 ### 2.2 Coated and uncoated
 
-Coated paper carries a mineral layer (clay or calcium carbonate with binder) that holds the ink on the surface: sharper dots, denser blacks, wider gamut. Gloss, silk (satin) and matt are degrees of calendering and coating. Uncoated paper lets ink sink into the fibres: softer dots, lower density, a narrower gamut, warmer and more tactile, and it can be written on with a fountain pen and fed through a laser printer.
+Coated paper carries a mineral layer (clay or calcium carbonate with binder) that holds the ink on the surface: sharper dots, denser blacks, wider gamut. Gloss, silk (satin) and matt are degrees of coating and calendering (pressing the sheet between polished rollers to smooth and gloss it). Uncoated paper lets ink sink into the fibres: softer dots, lower density, a narrower gamut, warmer and more tactile, and it can be written on with a fountain pen and fed through a laser printer.
 
-Luxury prefers uncoated for four reasons: touch carries the message before the eye reads (design-taste, SKILL.md section 5, Material); gloss is the default of mass print, so its absence reads as intent; uncoated ages well and does not scuff white; and letterpress, deboss and edge paint need a soft, bulky sheet. The cost is image quality: photography on uncoated loses density and saturation. The house rule follows from that: uncoated for stationery, invitations, menus and type-led pieces; matt coated or silk, or a smooth high-white uncoated with FM screening, for photography-led look books; gloss only when the idea is gloss (a lacquered surface, a beauty product shot meant to look wet).
+Luxury prefers uncoated for four reasons: touch carries the message before the eye reads (the related material rule in design-taste, SKILL.md section 5, is matt over gloss); gloss is the default of mass print, so its absence reads as intent; uncoated ages well and does not scuff white; and letterpress, deboss and edge paint need a soft, bulky sheet. The cost is image quality: photography on uncoated loses density and saturation. The house rule follows from that: uncoated for stationery, invitations, menus and type-led pieces; matt coated or silk, or a smooth high-white uncoated with FM screening, for photography-led look books; gloss only when the idea is gloss (a lacquered surface, a beauty product shot meant to look wet).
 
 ### 2.3 Textures, cotton, tinted, kraft and translucent
 
@@ -180,7 +186,7 @@ Luxury prefers uncoated for four reasons: touch carries the message before the e
 - Embossed textures (linen, leather grain, hammer) are pressed in after making. Linen embossed board is a cheap tell when it imitates luxury it is not; a real felt-marked or cotton sheet reads honestly.
 - Cotton papers (made from cotton linters or rag) are soft, bulky, strong and take deep letterpress and blind deboss beautifully: Crane's Lettra (100 percent cotton, made for letterpress), Gmund Cotton, and handmade cotton rag from Sanganer in Jaipur. They cost several times woodfree stock and vary in caliper, which matters for envelopes and digital presses.
 - Tinted and coloured stocks: through-dyed sheets carry colour through the fibre, so trimmed and edge-painted edges match the face (GF Smith Colorplan, Fedrigoni Sirio Color); surface-coloured boards show a white core at the cut. For a coloured card, specify through-dyed or duplex the colour on both faces.
-- Black stock: print on it with foil, opaque white, screen print or deboss, never with process inks that disappear into it.
+- Black stock: print on it with foil, opaque white, screen print or deboss; process inks disappear into it.
 - Kraft: unbleached brown sulphate board, strong and cheap. It reads honest in craft, coffee and sustainability briefs and reads cheap when it stands in for a lack of decision; it greys every colour printed on it and needs opaque white under brand colours.
 - Translucent papers (vellum, tracing, Curious Translucents, Gmund Transparent): used as overlays in invitations and brand books for a reveal. Ink dries slowly on them, they show every fold, and laser printers distort them.
 
@@ -198,11 +204,12 @@ Luxury prefers uncoated for four reasons: touch carries the message before the e
 
 ### 2.5 India: mills, handmade paper and the import reality
 
-- Large Indian mills make the volume grades: JK Paper (Rayagada in Odisha, Songadh in Gujarat), ITC's Paperboards and Specialty Papers Division (Bhadrachalam in Telangana, the reference for virgin packaging boards), TNPL, West Coast Paper Mills (Dandeli). Ballarpur Industries (BILT), once the largest, went through insolvency from January 2020 and the NCLT approved Finquest Financial Solutions' bid on 31 March 2023 (V: Ballarpur Industries, Wikipedia); do not plan around its specialty grades.
+- Large Indian mills make the volume grades: JK Paper (Rayagada in Odisha, Songadh in Gujarat), ITC's Paperboards and Specialty Papers Division (Bhadrachalam in Telangana, the reference for virgin packaging boards), TNPL, West Coast Paper Mills (Dandeli). Ballarpur Industries (BILT), once the largest, went through insolvency from January 2020 and the NCLT (National Company Law Tribunal) approved Finquest Financial Solutions' bid on 31 March 2023 (V: Ballarpur Industries, Wikipedia); do not plan around its specialty grades.
 - Indian trade vocabulary a printer will use: art paper and art card (gloss or matt coated paper and board), maplitho (uncoated woodfree printing paper), bond, duplex board (coated recycled board with a grey back, the material of cheap cartons), SBS or FBB (virgin carton boards), kappa board (greyboard for rigid boxes and files). Sheet sizes are quoted in inches (23 x 36, 25 x 36, 20 x 30); write the spec in millimetres and confirm the parent sheet.
 - Handmade paper is an Indian luxury asset: cotton rag with deckle edges from Sanganer in Jaipur, the Kalpi cluster in Uttar Pradesh, and the Sri Aurobindo Ashram handmade paper unit in Puducherry. Uses: wedding and launch invitations, place cards, menus, certificates. Constraints: caliper varies sheet to sheet (digital presses misfeed), sizing varies (ink feathers on some sheets), deckles need hand handling, and colours vary by batch, so buy the whole job's paper in one lot plus 15 percent.
-- The import reality: European specialty stocks reach India through specialty merchants in Mumbai and Delhi (Old Delhi's Chawri Bazar remains the paper and invitation market). Stocks not held locally take weeks to arrive; merchants often sell by the full pack or carton; landed cost stacks freight, basic customs duty, the social welfare surcharge on that duty, IGST and the merchant margin. Book the paper when the estimate is approved, keep a sample library of what each merchant actually holds, and name an Indian alternative on the spec in case the import slips.
-- The UAE: Dubai and Sharjah merchants hold more European specialty stock than Mumbai, and GCC customs duty is 5 percent of the CIF value for most goods. Many Gulf luxury jobs are printed in Dubai on European paper and shipped; some go the other way, printed and hand-finished in India for craft and cost, then shipped to Dubai.
+- The import reality: European specialty stocks reach India through specialty merchants in Mumbai and Delhi (Old Delhi's Chawri Bazar remains the paper and invitation market). Stocks not held locally take weeks to arrive; merchants often sell by the full pack or carton; landed cost stacks freight, basic customs duty, the social welfare surcharge at 10 percent of that duty, IGST (integrated goods and services tax, levied on imports) and the merchant margin. Book the paper when the estimate is approved, keep a sample library of what each merchant actually holds, and name an Indian alternative on the spec in case the import slips.
+- PIMS. India's Paper Import Monitoring System, run by the DGFT (Directorate General of Foreign Trade), requires advance online registration for imports of the specified paper and paperboard headings of Chapter 48 of the customs tariff; it has applied since 1 October 2022 and has been extended since (U: confirm current validity on dgft.gov.in). The merchant normally holds the registration; a brand importing its own specialty paper registers before shipment, or the consignment waits at the port.
+- The UAE: Dubai and Sharjah merchants hold more European specialty stock than Mumbai, and GCC (Gulf Cooperation Council) customs duty is 5 percent of the CIF (cost, insurance and freight) value for most goods. Many Gulf luxury jobs are printed in Dubai on European paper and shipped; some go the other way, printed and hand-finished in India for craft and cost, then shipped to Dubai.
 
 ### 2.6 Whiteness, shade, brightness and opacity
 
@@ -216,25 +223,30 @@ Luxury prefers uncoated for four reasons: touch carries the message before the e
 | Board | Construction | Character | Use |
 |---|---|---|---|
 | SBS (solid bleached sulphate) | Bleached chemical pulp throughout, usually coated one side (C1S) | White through the cut edge, smooth, strong | Premium folding cartons, cosmetic and fragrance cartons |
-| FBB (folding boxboard, GC1 and GC2) | Mechanical pulp middle between chemical pulp layers | Stiffer per gram than SBS, slightly cream inside | Most cartons; the economical premium choice |
-| WLC and duplex (GD, GT grades) | Recycled fibre with a grey or white back | Cheap, grey inside | Shipping inner packs; a tell on any pack the customer opens |
+| FBB (folding boxboard; GC1 has a white back, GC2 a cream back) | Mechanical pulp middle between chemical pulp layers | Stiffer per gram than SBS, slightly cream inside | Most cartons; the economical premium choice |
+| WLC (white lined chipboard) and duplex (GD and GT grades) | Recycled fibre with a grey back (GD) or a white or cream back (GT), in the DIN 19303 grade names | Cheap, grey inside | Shipping inner packs; a tell on any pack the customer opens |
 | C1S and C2S | Coated one side or both sides | C2S prints both faces | Folders, cards, cartons printed inside |
 | Greyboard (chipboard, kappa board) | Recycled solid board 1 to 3 mm | Rigid, unprinted, always wrapped | Rigid boxes, book covers, presentation boxes |
 | Corrugated | Fluted medium between liners | Strength for transit | Shippers and mailers; microflute for printed retail packs |
 
 Corrugated flute heights, approximate: A 4.5 to 5 mm, C about 4 mm, B about 3 mm, E about 1.5 mm, F (microflute) about 0.8 mm (T). E and F print well enough for retail and mailer boxes; B and C are for shipping. Litho-lamination (an offset-printed sheet laminated onto corrugated) gives a printed luxury finish on a transit-strength box.
 
+Board by name. Reference virgin boards: Holmen Iggesund's Invercote (SBS, the reference for fragrance and spirits cartons) and Incada (FBB); the FBB and SBS grades of Metsä Board and Stora Enso; and ITC's Bhadrachalam boards in India, where the grade sheet should be asked for by name. Specify caliper in microns as well as grammage on every carton spec, because Indian converters quote board in gsm and the caliper of a given gsm varies by mill and moves the dieline. Metallic board comes two ways: transfer-metallised board (a vacuum-metallised layer transferred from a reusable film carrier, the film then removed) recycles with paper and prints like board; film-laminated metallised board is a paper and plastic composite, and a full-coverage holographic or metallised laminate fails any "plastic-free" claim.
+
 ### 2.8 Sustainability and certification
 
 - FSC (Forest Stewardship Council) labels: FSC 100%, FSC Mix and FSC Recycled. The FSC logo may only appear when every company in the chain, printer included, holds a chain-of-custody (CoC) certificate and the job is invoiced as FSC; a designer cannot add the logo to artwork on trust. PEFC (Programme for the Endorsement of Forest Certification) runs an equivalent scheme.
-- Recycled content: post-consumer fibre (from collected waste) carries a stronger claim than pre-consumer fibre (mill offcuts). Quote the percentage from the mill's data sheet.
+- Recycled content: post-consumer fibre (recovered from used products collected as waste) carries a stronger claim than pre-consumer fibre (mill and converter offcuts). Quote the percentage from the mill's data sheet.
 - Plastic-free: no film lamination, no plastic windows, no cellophane overwrap; aqueous coatings and paper-based alternatives. Foil is a thin layer that most mills accept in small areas for repulping (T); full-coverage metallised board is a different matter.
-- Inks: vegetable-based inks help; deinkability (how well ink separates in recycling) varies, and some UV inks and liquid toners deink poorly (assessed by INGEDE Method 11) (T).
-- Regulation that reaches luxury packaging in 2026: the EU Packaging and Packaging Waste Regulation (EU) 2025/40 entered into force in February 2025 (V: Wikipedia) and applies generally from 12 August 2026 (U: confirm on EUR-Lex); it targets excess packaging, including features that only inflate perceived volume such as double walls and false bottoms (U), which matters for Indian and Gulf brands that export or sell into Europe. India's Plastic Waste Management Rules, 2016 with extended producer responsibility (EPR) guidelines from 2022 and the ban on identified single-use plastic items from 1 July 2022 apply to brand owners. The UAE banned single-use plastic shopping bags from 1 January 2024 and extends the ban to further single-use plastic products from 1 January 2026 under Ministerial Resolution No. 380 of 2022 (U).
+- Inks: vegetable-based inks help; deinkability (how well ink separates in recycling) varies, and some UV inks and liquid toners deink poorly, as assessed by INGEDE Method 11 (INGEDE: the International Association of the Deinking Industry) (T).
+- EU: the Packaging and Packaging Waste Regulation (PPWR, Regulation (EU) 2025/40) entered into force on 11 February 2025 and applies generally from 12 August 2026. Its minimisation duties (Article 10, including the ban on features that only inflate perceived volume, such as double walls, false bottoms and unnecessary layers) and the maximum 50 percent empty-space ratio for grouped, transport and e-commerce packaging (Article 24) apply from 1 January 2030; harmonised labelling and recyclability grades phase in later still (U: confirm each date in Articles 10, 24 and 71 on EUR-Lex). It binds Indian and Gulf brands that sell into Europe and shows where luxury packaging law is heading.
+- India, plastics: the Plastic Waste Management Rules, 2016, with the guidelines of 2022 on EPR (extended producer responsibility: the duty on producers and brand owners to collect and process the packaging they place on the market), and the ban on identified single-use plastic items from 1 July 2022. The Plastic Waste Management (Amendment) Rules, 2021 set plastic carry bags at a minimum of 75 microns from 30 September 2021 and 120 microns from 31 December 2022, and non-woven carry bags at a minimum of 60 gsm. Producers and brand owners print the EPR registration number generated on the CPCB (Central Pollution Control Board) centralised portal on plastic packaging, which takes in the jars, tubes, pumps and film elements of a luxury pack, so artwork reserves a space for it; the Plastic Waste Management (Amendment) Rules, 2024 require certification before a plastic is called compostable or biodegradable (U: confirm scope and effective dates on cpcb.nic.in).
+- India, green claims: the CCPA (Central Consumer Protection Authority) Guidelines for Prevention and Regulation of Greenwashing or Misleading Environmental Claims, notified in October 2024 (U), require specific, verifiable substantiation and disclosure behind words such as "eco-friendly", "sustainable", "biodegradable" and "plastic-free", and treat vague or selective claims as misleading.
+- UAE: single-use plastic shopping bags banned from 1 January 2024, with the ban extended to further single-use plastic products from 1 January 2026 under Ministerial Resolution No. 380 of 2022 (U).
 
 ## 3. Finishes
 
-Cost tiers for every finish are in section 12.6. The general shape: a finish has a tooling cost (a die, block or screen), a make-ready cost, and a per-unit cost; on short luxury runs the tooling dominates, so one well-chosen finish costs far less than three.
+Cost tiers for every finish are in section 12.4, and indicative price bands in section 12.5. The general shape: a finish has a tooling cost (a die, block or screen), a make-ready cost, and a per-unit cost; on short luxury runs the tooling dominates, so one well-chosen finish costs far less than three.
 
 ### 3.1 Foil
 
@@ -243,7 +255,7 @@ Cost tiers for every finish are in section 12.6. The general shape: a finish has
 - Constraints: lines under about 0.2 to 0.3 mm break, large solids pinhole and fill unevenly, textured stocks lose foil in their valleys (raise pressure or choose a smoother stock), foil on soft-touch laminate needs a compatible foil (T). Register of foil to print is about plus or minus 0.3 to 0.5 mm (T); never butt foil against a printed edge.
 - Cold foil: an adhesive is printed by plate, the foil is laminated onto it and cured inline. It can be overprinted with CMYK to make coloured metallics, is cheaper on long label and carton runs, and has no impression and a softer edge. Use it for metallic photography on labels; avoid it where a crisp, pressed edge is the point.
 - Digital foil: toner-based sleeking (foil fused onto toner by a laminator) for very short runs; digital embellishment presses (Scodix; MGI JETvarnish 3D with iFoil, MGI being part of Konica Minolta) print a raised polymer and foil it with no die, which makes personalised foil names possible. The raised polymer can read plastic on uncoated cotton; proof it on the job stock.
-- Taste: gold foil as the default luxury signal is a cheap tell (design-taste, SKILL.md section 3 and section 5, Material). Alternatives that read richer: blind deboss, tone-on-tone foil (black on black, white pigment on white), copper or pale gold used once on one element, or no foil at all.
+- Taste: gold foil as the default luxury signal is a cheap tell in India and the Gulf because it is the most imitated luxury cue (section 11); the related material rule is in design-taste, SKILL.md section 5, Material. Alternatives that read richer: blind deboss, tone-on-tone foil (black on black, white pigment on white), copper or pale gold used once on one element, or no foil at all.
 
 ### 3.2 Embossing and debossing
 
@@ -260,7 +272,7 @@ Cost tiers for every finish are in section 12.6. The general shape: a finish has
 
 ### 3.4 Laminates and the scuff problem
 
-Film laminates (BOPP, applied with heat) come in gloss, matt, soft-touch (a velvety, rubbery feel), anti-scuff matt and soft-touch, and textured (linen, sand).
+Film laminates (BOPP, biaxially oriented polypropylene, applied with heat) come in gloss, matt, soft-touch (a velvety, rubbery feel), anti-scuff matt and soft-touch, and textured (linen, sand).
 
 - Scuffing: matt and soft-touch films on dark solids show white scuff marks from fingers, other boxes and courier bags within days. Specify anti-scuff film or an anti-scuff aqueous coating on dark packs, and test by rubbing two samples face to face fifty times.
 - Fingerprints and grease show on soft-touch; it also attracts dust in humid Mumbai storage.
@@ -277,7 +289,7 @@ Film laminates (BOPP, applied with heat) come in gloss, matt, soft-touch (a velv
 
 Letterpress is relief printing: inked raised surfaces pressed into the sheet. Photopolymer plates made from the digital file replaced metal type for most commercial work; platen presses (the Heidelberg Windmill is the common one) and cylinder proof presses (Vandercook) print most jobs. One colour per pass; register about plus or minus 0.3 to 0.5 mm (T); large solids print with a mottled, slightly salty texture that is part of the character.
 
-The debate. The traditional trade and fine-press position: a kiss impression, ink transferred with no bite, because biting type damaged it and signalled poor make-ready; held by older trade printers and many fine-press printers. The contemporary position: a deep, even impression on soft cotton is the tactile proof of the process and the reason to pay for it when digital print is cheap; held by the stationery studios of the letterpress revival since the 2000s. House position: deep impression on cards and invitations made from cotton of 600 gsm or more, duplexed so the reverse stays clean; light impression on text-heavy pieces and on anything printed both sides of a single sheet, because bite on text shows through and breaks the reverse.
+The debate. The traditional trade and fine-press position: a kiss impression, ink transferred with no bite, because biting damaged metal type and signalled poor make-ready; it is the norm among older trade printers and much of the fine-press world (no single published proponent was verified in this pass). The contemporary position: a deep, even impression on soft cotton is the tactile proof of the process and the reason to pay for it when digital print is cheap; it is the signature of the stationery studios of the letterpress revival since the 2000s, of which Studio On Fire in Minneapolis is a widely published example. House position: deep impression on cards and invitations made from cotton of 600 gsm or more, duplexed so the reverse stays clean; light impression on text-heavy pieces and on anything printed both sides of a single sheet, because bite on text shows through and breaks the reverse.
 
 ### 3.7 Edges: painting, gilding, duplexing and triplexing
 
@@ -296,14 +308,14 @@ Screen printing pushes ink through a mesh stencil and lays down a thick film: op
 ### 3.10 Perforation, round corners, pockets and inserts
 
 - Micro-perforation for tear-off RSVP slips and tickets; specify perforation pitch with the finisher and test the tear on the job stock, because cotton tears ragged.
-- Round corners: 3, 4 or 6 mm radius are the usual tools (T). Use one radius across a whole suite; the house layer's curved edges (design-taste, SKILL.md section 7) extend to stationery corners.
-- Pockets, belly bands and inserts: glued or folded pockets in folders, belly bands around an invitation suite, envelope liners; each adds hand work, which India prices well and the UAE prices high.
+- Round corners: 3, 4 or 6 mm radius are the usual tools (T). Use one corner radius across the pieces of one stationery suite so they stack as a set; for Mask360's own stationery the house layer's curved edges apply (design-taste, SKILL.md section 7).
+- Pockets, belly bands (a paper band wrapped around a suite or a book) and inserts: glued or folded pockets in folders, belly bands around an invitation suite, envelope liners; each adds hand work, which India prices well and the UAE prices high.
 
 ### 3.11 Combining finishes with restraint
 
 - One hero finish, at most one supporting finish, and a reason for each tied to the idea: deboss the monogram because the brand speaks quietly; foil one line because that is where light should catch.
 - The production order: print, dry, coat or laminate, foil, emboss or deboss (or combination), die cut, duplex, trim, edge paint, hand finishing. A finish specified out of this order either cannot be made or costs a second pass.
-- Run the design-taste tests (SKILL.md section 4): cover the logo and see whether the piece still belongs to the brand; ask whether the finish looks like four hundred hours or four hundred rupees.
+- Run the design-taste tests (SKILL.md section 4, step 7) on the physical sample of the finished piece.
 
 ## 4. Printing methods
 
@@ -325,6 +337,8 @@ Offset lithography transfers ink from a plate (image areas accept ink, non-image
 
 Variable data printing (VDP) changes content from sheet to sheet: guest names on place cards, numbered limited editions, personalised invitations, unique patterns. HP SmartStream Mosaic generates a unique variation of a pattern for every item; Ferrero's Nutella Unica campaign in Italy (2017) printed about seven million unique jar labels with it (T). VDP is the luxury use of digital: personalisation that offset cannot do.
 
+Formats and stocks. HP Indigo runs in two sizes: the SRA3-plus 7K series and the B2 series (12K, 15K, 100K and 120K, sheets of about 750 x 530 mm), which prints a folding carton or a book cover in one piece (T: confirm the model each vendor runs). In Chawri Bazar and most Indian quick-print shops "digital" means dry toner (Konica Minolta, Xerox), so ask for HP Indigo by model in writing. Uncoated and cotton stocks print well on Indigo only when treated for it: ask for the mill's digital or Indigo-treated version (Mohawk's i-Tone surface treatment is the reference) or test-print on the job stock. Most digital engines cap sheet thickness well below a 700 gsm board, so heavy cards are printed on 300 to 350 gsm sheets and duplexed after (T).
+
 ### 4.3 Letterpress, screen and risograph
 
 Letterpress and screen are covered in sections 3.6 and 3.9 as finishes because that is how luxury uses them. Risograph is a stencil duplicator (Riso Kagaku, Japan) that prints one drum colour per pass in soy-based inks on uncoated paper: a standard palette plus fluorescent pink and orange, vivid flat colour, visible grain and a registration drift of about 1 to 2 mm (T). The drift and grain are the charm for zines, gallery and event ephemera, and studio self-promotion; no Pantone match is possible, so never use it for a brand colour that must hold.
@@ -338,7 +352,7 @@ Letterpress and screen are covered in sections 3.6 and 3.9 as finishes because t
 
 | Technology | Ink and substrates | Strengths | Limits | Use |
 |---|---|---|---|---|
-| Solvent | Solvent inks on PVC flex, vinyl, mesh | Outdoor durability, cheap per square metre, very wide machines (3.2 and 5 m) | Odour, VOCs, coarse at close range | Hoardings, building wraps |
+| Solvent | Solvent inks on PVC (polyvinyl chloride) flex, vinyl, mesh | Outdoor durability, cheap per square metre, very wide machines (3.2 and 5 m) | Odour, VOCs, coarse at close range | Hoardings, building wraps |
 | Eco-solvent | Milder solvent inks (Roland, Mimaki) | Finer than solvent, indoor and outdoor | Slower drying before laminating | Posters, vinyl, vehicle graphics |
 | Latex | Water-based latex inks (HP Latex) | Odourless, prints dry, indoor safe, good on vinyl, paper and textiles | Heat on some films | Retail interiors, wall graphics, hotel and mall installations |
 | UV flatbed | UV-cured inks printed directly onto rigid boards (Durst, swissQprint, Canon Arizona, EFI) | Prints on acrylic, Dibond, timber, glass, foam board; white ink and varnish layers | Thick ink film can crack if the board flexes | Signage, display panels, event boards |
@@ -346,7 +360,7 @@ Letterpress and screen are covered in sections 3.6 and 3.9 as finishes because t
 
 ### 4.6 3D printing for prototypes
 
-FDM (fused filament) for quick structural models; SLA (resin, such as Formlabs printers) for smooth surfaces and fine detail, closer to an injection-moulded cap or a jewellery box insert; SLS (sintered nylon) for strong functional parts. Uses: bottle caps and closures before mould tooling, packaging inserts, retail fixture scale models, award trophies, and hero props for shoots. A sanded and painted SLA print photographs as a finished product, which lets a launch campaign shoot before the moulds exist.
+FDM (fused filament) for quick structural models; SLA (resin, such as Formlabs printers) for smooth surfaces and fine detail, closer to an injection-moulded cap or a jewellery box insert; SLS (sintered nylon) for strong functional parts. Uses: bottle caps and closures before mould tooling, packaging inserts, retail fixture scale models, award trophies, and hero props for shoots. A sanded and painted SLA print photographs as a finished product, which lets a launch campaign shoot before the moulds exist; for rendered product visuals in place of a print, see 13-motion-graphics-and-3d-production.md, section 8.3.
 
 ### 4.7 Cost structure
 
@@ -354,7 +368,8 @@ FDM (fused filament) for quick structural models; SLA (resin, such as Formlabs p
 - Variable costs: paper (often the largest variable cost on long runs), press time per thousand sheets, finishing per unit, packing, delivery.
 - The unit cost curve: offset unit cost falls steeply over the first few thousand copies as fixed costs spread, then flattens; digital unit cost is nearly flat (a click charge per sheet). The crossover sits somewhere between a few hundred and about 1,500 copies depending on page count, sheet size and colours (T). Always quote both at the edge.
 - Over-runs and under-runs: trade custom allows a delivered quantity a few percent either side of the order (T). Write "no under-run" on invitations, numbered editions and anything with a guest list.
-- Every extra finish adds its own make-ready, tooling and spoilage; a three-finish card is often four times the price of the same card with one.
+- Every extra finish adds its own make-ready, tooling and spoilage; a three-finish card is often four times the price of the same card with one (T).
+- Specifications to price and trade minimum orders: section 12.5.
 
 ### 4.8 Lead times in India and the UAE
 
@@ -375,13 +390,15 @@ Planning values for October 2026, in working days from approved proof to deliver
 
 Calendar effects: Diwali and the Indian wedding season (roughly October to February) load every printer, card maker and box maker in Delhi, Mumbai and Jaipur; book capacity weeks ahead. In the UAE, private sector working hours shorten by two hours a day during Ramadan, Eid closes workshops, and the midday outdoor work ban (12:30 to 15:00 from 15 June to 15 September) limits daytime installation.
 
+Seasonal gifting programmes are, in trade experience, the largest single packaging jobs of the year in both markets (T). Corporate Diwali gifting (Diwali falls in October or November; 8 November in 2026) briefs open in July and August, and custom rigid boxes and hampers need 8 to 12 weeks with sampling (T), so lock the structure by early September. Ramadan moves about 11 days earlier each year and is expected to begin on 8 February 2027 (V: Umm al-Qura table in Ramadan, Wikipedia; subject to moon sighting): brief Ramadan and Eid hampers 10 to 12 weeks ahead and keep production clear of the Eid closure. UAE National Day (2 December) and year-end hotel hampers stack in November. Food hampers carry FSSAI (Food Safety and Standards Authority of India) or GCC labelling on each item and a declaration for the combination package (section 6.9).
+
 ## 5. Prepress and proofing
 
 ### 5.1 File preparation
 
-- Format: PDF/X-4 is the house default (ISO 15930-7; PDF 1.6; live transparency, optional content (layers) and colour-managed RGB, CMYK and spot data with an output intent) (V: PDF/X, Wikipedia). PDF/X-1a (ISO 15930-1 and 15930-4; PDF 1.3 and 1.4; CMYK and spot only, flattened) when a packaging converter or an older RIP insists; Indian packaging converters often do. PDF/X-6 (ISO 15930-9, 2020, based on PDF 2.0) is ahead of most presses in both countries; ask first. Version table: 26-platform-and-format-specs-2026.md, section 6.8.
+- Format: PDF/X-4 is the house default (ISO 15930-7; PDF 1.6; live transparency, optional content (layers) and colour-managed RGB, CMYK and spot data with an output intent, the embedded ICC profile that names the print condition the file was made for) (V: PDF/X, Wikipedia). PDF/X-1a (ISO 15930-1 and 15930-4; PDF 1.3 and 1.4; CMYK and spot only, flattened) when a packaging converter or an older RIP insists; Indian packaging converters often do. PDF/X-6 (ISO 15930-9, 2020, based on PDF 2.0) is ahead of most presses in both countries; ask first. Version table: 26-platform-and-format-specs-2026.md, section 6.8.
 - Fonts: embed (subset) in the PDF. Outline type only for logos, for packaging when the converter's workflow requires it, and for display type that has been manually kerned and must not reflow. Keep a live-type master, because outlined text cannot be corrected at press.
-- Images: linked, never embedded in InDesign; effective resolution checked in the Links panel; colour mode consistent with the export (RGB with ICC profiles for X-4, CMYK for X-1a).
+- Images: linked in InDesign, because embedded images bloat the file and cannot be relinked; effective resolution checked in the Links panel; colour mode consistent with the export (RGB with ICC profiles for X-4, CMYK for X-1a).
 - Spot colours: named exactly as in the Pantone library ("PANTONE 2685 C"); two spellings of one ink ("Pantone 2685 C" and "PANTONE 2685 C") create two plates. Delete unused swatches.
 - Technical layers: dielines, foil, spot UV, emboss and white ink each on its own layer as a named spot colour ("Dieline", "Foil_Gold", "SpotUV", "Emboss", "White") set to overprint, so the printer can separate them and they never knock out the artwork beneath.
 - Overprint settings: black text overprints, white objects knock out, rich black panels knock out.
@@ -394,6 +411,7 @@ Calendar effects: Diwali and the Indian wedding season (roughly October to Febru
 - Acrobat Pro: Print Production tools, Preflight (with the PDF/X-4 compliance and the printer's profile), Output Preview (separations and total area coverage with a highlight above the limit), and Overprint Preview turned on so overprint errors show. Acrobat's preflight engine is licensed from callas software, whose pdfToolbox printers also run; Enfocus PitStop Pro is the other common printer-side tool.
 - Separations preview, plate by plate: each spot plate carries only what it should; the black plate shows text as K 100 only; the dieline plate does not appear in any printing separation; no RGB remains in an X-1a file.
 - A two-person check before release: the designer exports, a second person preflights the exported PDF, which is what the press receives, against the spec sheet.
+- Arabic and Indic text: a native reader checks the exported PDF before release (section 5.8).
 
 ### 5.3 Proof types
 
@@ -404,43 +422,53 @@ Calendar effects: Diwali and the Indian wedding season (roughly October to Febru
 | Drawdown | Spot ink pulled by hand on the actual stock | Pantone, metallic and fluorescent appearance on the real paper | Anything else |
 | Wet proof (press proof) | A short run on a proofing or production press on the actual stock | Everything about the print | Finishes, unless also made |
 | White dummy | Blank pages on the specified stocks, bound as specified | Weight, bulk, spine width, opening, feel | Print |
-| Prototype | A finished sample made by hand or on a cutting table (Esko Kongsberg is the common one) | Structure, fit, finishes, unboxing | Production consistency |
+| Prototype | A finished sample made by hand or on a cutting table (the Kongsberg table, made by Kongsberg Precision Cutting Systems since Esko sold the business in 2018, is the common one) | Structure, fit, finishes, unboxing | Production consistency |
 | Indigo proof | The final digital process on the final stock | Short-run jobs entirely; a fair preview for offset of the same stock | Offset dot and Pantone exactness |
 
 House rule: contract proof plus drawdowns for every offset job; white dummy for every book and box; physical prototype for every rigid box and every carton before the die is approved; wet proof for packaging in a launch.
 
 ### 5.4 Colour bars and control strips
 
-A colour bar on the press sheet (at the gripper or tail edge) carries solids of each ink, tints (25, 50, 75 percent), grey balance patches, overprint (trapping) patches and slur and doubling patches. The printer reads it with a spectrodensitometer (X-Rite eXact, Techkon SpectroDens) or with a closed-loop camera system on the press (Heidelberg Prinect Image Control and Axis Control), adjusting ink keys across the sheet. On proofs, the Fogra Media Wedge plays the same role. Ask to see the measured values for the OK sheet; a printer who cannot show them is matching by eye.
+A colour bar on the press sheet (at the gripper or tail edge) carries solids of each ink, tints (25, 50, 75 percent), grey balance patches, overprint (trapping) patches, and slur and doubling patches (fine line patterns that show a dot smeared in the direction of travel, slur, or printed twice slightly offset, doubling). The printer reads it with a spectrodensitometer (X-Rite eXact, Techkon SpectroDens) or with a closed-loop camera system on the press (Heidelberg Prinect Image Control and Axis Control), adjusting ink keys across the sheet. On proofs, the Fogra Media Wedge plays the same role. Ask to see the measured values for the OK sheet; a printer who cannot show them is matching by eye.
 
 ### 5.5 The press pass
 
-Bring: the signed contract proof, approved drawdowns, the spec sheet with tolerances, a 10x loupe, a spectrophotometer if available, and the brand's physical colour references. Judge under the printer's D50 viewing booth (ISO 3664:2009); shop fluorescent tubes and window light start disputes.
+Bring: the signed contract proof, approved drawdowns, the spec sheet with tolerances, a 10x loupe, a spectrophotometer if available, and the brand's physical colour references. Judge under the printer's D50 viewing booth (the 5000 K daylight simulator of ISO 3664:2009); shop fluorescent tubes and window light start disputes.
 
 Check, in this order:
 1. The right file version, stock, grain and sheet (read the slug).
 2. Register: the rosette and the register marks under the loupe; the fringe on small type.
 3. Colour: brand solids against drawdowns, skin tones and product colour against the proof, grey balance neutral, density even across the sheet (compare left, centre and right).
-4. Defects: hickeys (spots from dust or dried ink), ghosting, scumming, set-off, streaks, banding in gradients.
+4. Defects: hickeys (spots from dust or dried ink), ghosting (a faint shadow image where the press starves an area of ink), scumming (ink printing in non-image areas when the ink and water balance fails), set-off, streaks, banding in gradients.
 5. Back-up register (front against reverse on a sheet held to the light).
 6. A fold or crease test on a sheet if the job folds; a scratch and rub test if it will be laminated or coated.
+7. The OK sheet once more under the light it will live in (the store's LED track, a hotel lobby at 2700 K), because two inks can match under D50 and part under warm light (metamerism, 04-colour.md, section 1.5).
 
 Press time is billed by the hour; decide within minutes and change one thing at a time. Sign the OK sheet, date it, keep one copy and leave one with the press. Ask for 10 to 20 sheets pulled at intervals through the run for receipt QC.
 
 ### 5.6 Tolerances
 
-- Colour: the house tolerances in 04-colour.md, section 9.3 (brand solids 2.0 dE00 on contract proofs and 3.0 on press sheets, measured at nine positions; paper white within 2.0; secondary colours 4.0).
+- Colour: the house tolerances in 04-colour.md, section 9.3 (brand solids 2.0 dE00, the CIEDE2000 colour difference, on contract proofs and 3.0 on press sheets, measured at nine positions; paper white within 2.0; secondary colours 4.0).
 - Mechanical, planning values (T): plate register on sheetfed offset within about 0.1 mm; front-to-back register within about 0.5 mm; trim within about 0.5 to 1 mm; folds within about 1 mm; foil and emboss to print within about 0.3 to 0.5 mm; die cut to print within about 0.5 mm. Write the values on the spec; a printer who will not sign them is telling you the real tolerance.
 
 ### 5.7 The sign-off sheet
 
-One page per job, signed at each gate: job name and number; client approver; file name and version with date; stock and grain; colours and named Pantones (C or U); screening; proof type and date; drawdown references; finishes with areas; binding and folding; quantity with over and under-run allowance; delivery address and date; tolerances; sign-off at proof, at press pass, at receipt; and a line for deviations accepted, with the reason. It settles every dispute later.
+One page per job, signed at each gate: job name and number; client approver; file name and version with date; stock and grain; colours and named Pantones (C or U); screening; proof type and date; drawdown references; finishes with areas; binding and folding; quantity with over and under-run allowance; delivery address and date; tolerances; a line reading "Arabic and Indic text checked by a native reader on the exported PDF: name and date"; sign-off at proof, at press pass, at receipt; and a line for deviations accepted, with the reason. It settles every dispute later.
+
+### 5.8 Arabic and Indic text through export
+
+Broken Arabic and Devanagari are the most common visible failure on Gulf bilingual packs and on Indian Hindi or Marathi labels and signs. The shaping engine (the software that joins Arabic letters and places Indic vowel signs) is chosen by the paragraph composer, and copy pasted from Word or WhatsApp into a frame on the default Adobe Paragraph Composer shows as disconnected letters running left to right. 03-typography.md, sections 11 and 15 covers shaping on screen; this is the export and hand-off chain to the printer or converter.
+
+- Set Arabic and Indic text with the Adobe World-Ready Paragraph Composer in InDesign, or the Middle Eastern and South Asian composers in Illustrator, with the paragraph direction set to right to left for Arabic.
+- A native reader signs the exported PDF, because export, font substitution and the converter's software can break shaping after a check on the layout. Outline Arabic and Devanagari only after that sign-off, only in the converter's final file, and keep a live master.
+- Checklist: joined letterforms; right-to-left word order; Arabic punctuation (the reversed comma and question mark); no clipped diacritics; no word split across a line break; the numeral system agreed (section 8.2); no faux bold and no stretched kashida (the Arabic joining stroke drawn out to justify a line); in Devanagari, the short i vowel sign (the i matra) drawn before its consonant and conjuncts formed correctly; Marathi glyph forms where the copy is Marathi (section 8.2).
+- Regulated translations on food and cosmetics labels come from a certified translator and pass the client's regulatory lead with the rest of the label panel (section 6.9).
 
 ## 6. Packaging
 
 ### 6.1 Structure and dielines
 
-A dieline is the flat drawing of a pack: cut lines, crease lines, perforations, glue areas, bleed and the panels' names. Conventions vary by converter; the common ones are solid lines for cuts, dashed lines for creases, dash-dot lines for perforations and hatched areas for glue, on a separate overprinting spot layer. Always get the dieline from the converter who will make the pack, because their board caliper changes every dimension by fractions of a millimetre.
+Identity application to packs: 18-brand-strategy-and-identity-design.md, section 4.11; this section is construction, regulation and testing. A dieline is the flat drawing of a pack: cut lines, crease lines, perforations, glue areas, bleed and the panels' names. Conventions vary by converter; the common ones are solid lines for cuts, dashed lines for creases, dash-dot lines for perforations and hatched areas for glue, on a separate overprinting spot layer. Always get the dieline from the converter who will make the pack, because their board caliper changes every dimension by fractions of a millimetre.
 
 - Read a dieline by naming each panel (front, back, sides, top tuck, dust flaps, glue flap) and checking which face the customer sees first on the shelf and in the hand. Artwork bleeds 3 mm past cuts; nothing important sits within 3 to 5 mm of a crease, because creases move print by up to a millimetre.
 - Standard styles: the FEFCO Code catalogues corrugated styles by number (0201 is the regular slotted shipping box; 0427 is the die-cut mailer with a tuck-in lid that most e-commerce and PR boxes use); the ECMA Code does the same for folding cartons (reverse tuck end, straight tuck end, crash-lock or auto bottom, seal end, sleeves). Naming the code on a brief saves a round of drawings.
@@ -459,17 +487,17 @@ Rigid (set-up) boxes are made from greyboard, 1.5 to 3 mm thick (1.5 for small j
 | Book style (clamshell) | Box opening like a hardcover book, sometimes with a spine print | Archive and collectable | Brand books, limited editions |
 | Collapsible rigid | Folds flat with magnets or tabs and sets up in seconds | Saves freight and warehouse space | Exported sets from India to the Gulf |
 
-The lid-and-base fit is the craft test: too tight and the lid sticks, too loose and it drops. Ask for a fit sample in the real wrap paper, because the paper's caliper changes the fit.
+The lid-and-base fit is the craft test: too tight and the lid sticks, too loose and it drops. Ask for a fit sample in the real wrap paper, because the paper's caliper changes the fit. Heat, humidity and transit testing: section 6.16.
 
 The luxury unboxing sequence, designed in order: a plain protective shipper (no logo, so it is not stolen in transit); a sleeve or band carrying the brand; the box; tissue closed with a seal; a card with a message; the product held in an insert; secondary items (dust bag, care card, certificate). Each layer should take one gesture to open, and none should need scissors.
 
 ### 6.3 Folding cartons
 
-Folding cartons are die-cut from SBS or FBB board, usually 300 to 450 gsm, printed offset or flexo, finished, die cut, folded and glued on a folder-gluer. Common luxury upgrades: a heavier board, an inside print, a foil and emboss on the front, an uncoated or textured laminated face (a specialty paper laminated to board), and a crash-lock bottom so the product sits firm. A carton window with a plastic patch reads mass market; a die-cut aperture with no film reads crafted.
+Folding cartons are die-cut from SBS or FBB board, usually 300 to 450 gsm, printed offset or flexo, finished, die cut, folded and glued on a folder-gluer (a machine that folds the flat blank along its creases and glues the side seam in one pass). Common luxury upgrades: a heavier board, an inside print, a foil and emboss on the front, an uncoated or textured laminated face (a specialty paper laminated to board), and a crash-lock bottom so the product sits firm. A carton window with a plastic patch reads mass market; a die-cut aperture with no film reads crafted.
 
 ### 6.4 Labels and hang tags
 
-- Facestocks: uncoated and felt-marked papers for wine, spirits, F&B and craft beauty; wet-strength label papers that survive an ice bucket; film facestocks (PP, PE, PET) for bathroom products; clear film for the "no label" look on glass.
+- Facestocks: uncoated and felt-marked papers for wine, spirits, F&B and craft beauty; wet-strength label papers that survive an ice bucket; film facestocks (PP, PE and PET: polypropylene, polyethylene and polyester) for bathroom products; clear film for the "no label" look on glass.
 - Adhesives: permanent, removable, freezer and wet-application grades; the converter chooses with the bottle and the filling line, because a label that wrinkles on a cold or wet bottle is an adhesive failure.
 - Finishes: hot or cold foil, emboss (a raised label emboss reads strongly on wine), screen-printed tactile varnish, die-cut shapes.
 - Formats: wrap labels on cylinders; front and back labels; neck labels and collars; hang tags on cord or ribbon (350 to 600 gsm, letterpress or foil, eyelet or punched hole); seals across closures as tamper evidence.
@@ -483,56 +511,92 @@ Folding cartons are die-cut from SBS or FBB board, usually 300 to 450 gsm, print
 
 ### 6.6 Closures, inserts, tissue, ribbon and seals
 
-- Caps: weight reads as quality in fragrance; zamac (zinc alloy) caps and surlyn caps are the heavy luxury options; magnets in caps add the click.
-- Inserts: moulded pulp (wet-pressed for a smooth, fine surface that reads premium and recycles with paper; dry-pressed is the rough egg-tray look); folded paperboard inserts with no glue; board wrapped in paper or fabric. EVA foam is acceptable when cut cleanly and covered; exposed polyurethane foam and flocked plastic trays are cheap tells.
-- Tissue: about 17 to 30 gsm, acid-free for silver and textiles (T); one-colour printed patterns; folded, never crumpled.
-- Ribbon: grosgrain, double-faced satin, silk or cotton tape; woven or printed brand ribbon carries a minimum order; specify width, colour (by Pantone TCX or a physical sample), edge finish and length per pack.
+- Caps: weight reads as quality in fragrance; zamac (zinc alloy) caps and Surlyn caps (a heavy, glass-clear ionomer resin, originally a DuPont trade name) are the heavy luxury options; magnets in caps add the click.
+- Inserts: moulded pulp (wet-pressed for a smooth, fine surface that reads premium and recycles with paper; dry-pressed is the rough egg-tray look); folded paperboard inserts with no glue; board wrapped in paper or fabric. EVA (ethylene vinyl acetate) foam is acceptable when cut cleanly and covered; exposed polyurethane foam and flocked plastic trays are cheap tells.
+- Tissue: about 17 to 30 gsm, acid-free for silver and textiles (T); one-colour printed patterns; folded flat with crisp creases.
+- Ribbon: grosgrain, double-faced satin, silk or cotton tape; woven or printed brand ribbon carries a minimum order; specify width, colour (by a Pantone TCX textile reference, section 9.9, or a physical sample), edge finish and length per pack.
 - Seals: die-cut stickers on uncoated stock, embossed seals, and wax seals (section 9.6).
 
 ### 6.7 Fragrance and beauty conventions
 
-The category vocabulary: a carton (FBB or SBS, often foil and emboss), the flacon or jar, a heavy cap, an insert holding the bottle centred, historically a cellophane overwrap (now being removed for sustainability), a batch code, and on cosmetics the period-after-opening symbol (an open jar with a number of months, such as 12M). Regulation: in India, the Cosmetics Rules, 2020 under the Drugs and Cosmetics Act, 1940 set the label particulars (name, manufacturer, batch, dates, ingredients); in the UAE, cosmetics labelling follows UAE.S GSO 1943 (U: read the current text before artwork). Refill systems are the strongest sustainability move in fragrance; Mugler's Angel has offered refills since its 1992 launch, which proves the format can carry luxury.
+The category vocabulary: a carton (FBB or SBS, often foil and emboss), the flacon or jar, a heavy cap, an insert holding the bottle centred, historically a cellophane overwrap (now being removed for sustainability), a batch code, and on cosmetics the period-after-opening symbol (an open jar with a number of months, such as 12M). Regulation: in India, the Cosmetics Rules, 2020 under the Drugs and Cosmetics Act, 1940 set the label particulars, and the Legal Metrology declarations apply as well (section 6.9); in the UAE, cosmetics labelling follows UAE.S GSO 1943 (a GCC Standardization Organization standard adopted as a UAE standard) (U: read the current text before artwork). Refill systems are the strongest sustainability move in fragrance; Mugler's Angel has offered refills since its 1992 launch, which proves the format can carry luxury.
+
+Sampling and sensory items that every fragrance launch orders:
+- Scent blotters (mouillettes): narrow strips of uncoated, absorbent blotting board of about 250 to 300 gsm, so the juice wicks, foiled or debossed with the name and supplied in fans of 50 to 100 (T); a coated or laminated blotter holds no scent.
+- Microencapsulated fragrance varnish (scratch-and-sniff: fragrance sealed in microcapsules that burst under friction), printed as a spot on invitations and mailers; confirm compatibility with the fragrance house and expect a shelf life of months (T).
+- Sample vials on die-cut cards with a slot or a paper sleeve, with no plastic blister; testers printed "Tester, not for sale", carrying the same legal panel as the retail pack; discovery sets and coffrets (a gift box holding several products) as drawer or book-style rigid boxes (section 6.2).
+- Sensory finishes: flock (fibres bonded to the sheet for a velvet feel), pearlescent coatings, thermochromic ink (colour that changes or vanishes with the warmth of a touch) and tactile varnish (section 3.3).
 
 ### 6.8 Jewellery packaging
 
 - The layers: pouch (suede, microfibre, cotton flannel; anti-tarnish lining for silver), inner box (ring box with a slit insert, earring card, necklace box with a neck form, bangle box), outer box or carrier bag, and the paper: certificate, care card, invoice wallet.
 - Certificates: diamond grading reports come from the laboratory (GIA, IGI); the brand's own certificate of authenticity is designed as an object, on heavy cotton stock or as a card-size (85.6 x 54 mm, ID-1) laminated card, with security features where counterfeiting is a risk.
-- India: mandatory BIS hallmarking of gold jewellery began in phases in June 2021, and since 1 April 2023 hallmarked gold jewellery must carry a six-digit alphanumeric HUID (hallmark unique identification) (U: confirm the current scope). Show it on the certificate and the box with pride; buyers look for it. Red velvet boxes are the traditional expectation; a modern Jaipur or Mumbai house can break it, but should do so deliberately and with a material that feels as generous.
+- India: mandatory BIS (Bureau of Indian Standards) hallmarking of gold jewellery began in phases in June 2021, and since 1 April 2023 hallmarked gold jewellery must carry a six-digit alphanumeric HUID (hallmark unique identification) (U: confirm the current scope). Show it on the certificate and the box with pride; buyers look for it. Red velvet boxes are the traditional expectation; a modern Jaipur or Mumbai house can break it, but should do so deliberately and with a material that feels as generous.
 - The Gulf: gifting culture expects substantial boxes; weight and the sound of closure matter as much as the print.
 
-### 6.9 Food packaging and FSSAI labelling in India
+### 6.9 Labelling in India: Legal Metrology for every pack, FSSAI for food
 
-Governing texts: the Food Safety and Standards (Labelling and Display) Regulations, 2020, and the Legal Metrology (Packaged Commodities) Rules, 2011 for net quantity, retail sale price and consumer care details. The values below follow 26-platform-and-format-specs-2026.md, section 6.10, which could not read the regulations directly (U); read the consolidated FSSAI text before artwork.
+Two regimes apply. The Legal Metrology (Packaged Commodities) Rules, 2011 apply to every pre-packaged commodity sold at retail in India, whatever the category: fragrance, cosmetics, candles, chocolates, apparel boxes and gift sets as much as food. The Food Safety and Standards (Labelling and Display) Regulations, 2020 add the food layer. The FSSAI values below follow 26-platform-and-format-specs-2026.md, section 6.10, which could not read the regulations directly (U); read the consolidated texts before artwork.
 
-- Mandatory declarations: name of the food; list of ingredients in descending order of weight; nutritional information; veg or non-veg mark; food additives; name and complete address of the manufacturer (and packer or brand owner); FSSAI logo with the licence number; net quantity; retail sale price inclusive of taxes; consumer care details; date marking (date of manufacture or packing, and use-by or best-before); batch or lot number; country of origin for imports; instructions for use where needed; allergen declaration.
+- Legal Metrology declarations, every pack: name and address of the manufacturer, packer or importer; country of origin for imports; common or generic name of the commodity; net quantity in standard units; month and year of manufacture; MRP (maximum retail price) inclusive of all taxes; unit sale price (the price per kg, litre or unit, so packs of different sizes can be compared); consumer care contact. Unit sale price and the month and year of manufacture on all packages arrived with amendments in force from 1 April 2022 (U: verify dates and any later amendment). Gift sets and hampers are combination packages and still carry the declarations.
+- Cosmetics (Cosmetics Rules, 2020): name of the cosmetic; manufacturer's name, address and manufacturing licence number; batch number; date of manufacture and use-before date; ingredients; warnings where required. Imported cosmetics carry the import registration certificate number issued through CDSCO (Central Drugs Standard Control Organisation) (U: verify the current particulars).
+- FSSAI mandatory declarations on food: name of the food; list of ingredients in descending order of weight; nutritional information; veg or non-veg mark; food additives; name and complete address of the manufacturer (and packer or brand owner); FSSAI logo with the licence number; net quantity; retail sale price inclusive of taxes; consumer care details; date marking (date of manufacture or packing, and use-by or best-before); batch or lot number; country of origin for imports; instructions for use where needed; allergen declaration.
 - Veg and non-veg marks: a green filled circle inside a green-outlined square for vegetarian; a brown filled triangle inside a brown-outlined square for non-vegetarian (the triangle replaced the earlier brown circle under the 2020 regulations). The mark scales with the principal display panel: about 3 mm diameter up to 100 cm², rising to 8 mm above 2,500 cm².
 - Nutrition panel: energy (kcal), protein, carbohydrate (with total and added sugars), total fat (with saturated and trans fat) and sodium, per 100 g or 100 ml and per serve, with the percentage contribution to recommended dietary allowance per serve. In July 2024 FSSAI approved showing total sugar, salt and saturated fat in bold and larger type; check whether the amendment is notified.
+- Front-of-pack labelling (U: status as of October 2026): FSSAI's 2022 draft proposed the Indian Nutrition Rating, a star rating on the front panel, and in 2025 the Supreme Court directed FSSAI to decide on front-of-pack warning labels. Reserve front-panel space on any Indian F&B pack until the rule is settled, because a mandatory mark added late displaces the design.
 - Letter heights: Legal Metrology Table-I by principal display panel area (1.0 mm under 50 cm² up to 6.0 mm above 2,500 cm²); the house floor is 1.5 mm cap height for any mandatory text.
 - Menus: food businesses with a central licence or outlets in ten or more locations must show calorie values on menus under the same regulations (U: confirm scope).
-- House rule: lay out the regulatory panel first, have it approved by the client's regulatory lead, then design around it, because it cannot move once approved.
+- House rule, for food, cosmetics and every retail pack: lay out the regulatory panel first, have it approved by the client's regulatory lead, then design around it, because it cannot move once approved.
 
 ### 6.10 GCC labelling
 
-Prepackaged food in the UAE follows UAE.S GSO 9 (labelling of prepackaged foodstuffs) and UAE.S GSO 2233 (nutritional labelling), administered by the Ministry of Industry and Advanced Technology (MoIAT, which absorbed ESMA, the Emirates Authority for Standardization and Metrology, in 2020), with enforcement by Dubai Municipality and ADAFSA in Abu Dhabi (U: read the current versions). Arabic is mandatory on the label; other languages may appear alongside. Production and expiry dates are mandatory on food. Saudi Arabia follows SFDA rules on the same GSO base. Design consequences: a bilingual pack needs Arabic and Latin set in matched families with equal optical size (03-typography.md, section 15), and a sticker over an imported pack satisfies the regulator while looking like an afterthought to the customer; print bilingual from the start.
+Prepackaged food in the UAE follows UAE.S GSO 9 (labelling of prepackaged foodstuffs) and UAE.S GSO 2233 (nutritional labelling), administered by the Ministry of Industry and Advanced Technology (MoIAT, which absorbed ESMA, the Emirates Authority for Standardization and Metrology, in 2020), with enforcement by Dubai Municipality and ADAFSA (the Abu Dhabi Agriculture and Food Safety Authority) in Abu Dhabi (U: read the current versions). Arabic is mandatory on the label; other languages may appear alongside. Production and expiry dates are mandatory on food. Saudi Arabia follows SFDA (Saudi Food and Drug Authority) rules on the same GSO base. Marks: the UAE national halal mark for products that claim halal; the Nutri-Mark front-of-pack grade, reported as phased in from bakery products in 2025 (U: confirm scope and dates with MoIAT and the Ministry of Health and Prevention). Every mark carries legible Arabic. Design consequences: a bilingual pack needs Arabic and Latin set in matched families with equal optical size (03-typography.md, section 15), and a sticker over an imported pack satisfies the regulator while looking like an afterthought to the customer; print bilingual from the start.
 
 ### 6.11 Barcodes and QR codes
 
-- EAN-13: nominal size 37.29 x 25.93 mm at 100 percent magnification, permitted from 80 to 200 percent; quiet zones of 11 modules left and 7 right; black bars on white or a light ground; never red, gold or metallic bars, because scanners read red as white and metallics as glare (U per 26-platform-and-format-specs-2026.md, section 6.9; verify against the GS1 General Specifications). GS1 India (prefix 890) and GS1 UAE (prefix 629) issue company prefixes.
+- EAN-13 (the 13-digit retail barcode): nominal size 37.29 x 25.93 mm at 100 percent magnification, permitted from 80 to 200 percent; quiet zones of 11 modules left and 7 right; black bars on white or a light ground; never red, gold or metallic bars, because scanners read red as white and metallics as glare (U per 26-platform-and-format-specs-2026.md, section 6.9; verify against the GS1 General Specifications). GS1 India (prefix 890) and GS1 UAE (prefix 629) issue company prefixes.
 - Placement: on the back or base panel, away from creases, seams and the curve of a narrow bottle; never truncated in height without the retailer's agreement.
-- 2D codes: GS1 US's Sunrise 2027 programme (T) aims for retail point-of-sale scanners to read 2D codes (GS1 Digital Link QR codes and DataMatrix) by the end of 2027, which will let one code serve both checkout and consumer content.
-- QR codes (ISO/IEC 18004): a quiet zone of four modules on every side; error correction levels L, M, Q and H restore about 7, 15, 25 and 30 percent of codewords (V: QR code, Wikipedia), so a small centred logo needs level H; minimum printed size about 20 mm for close reading and a size of about one tenth of the scanning distance (T). Test with three phones on the printed sample.
+- 2D codes: GS1 US's Sunrise 2027 programme (T) aims for retail point-of-sale scanners to read 2D codes (GS1 Digital Link QR codes, which carry the product number inside a web address, and DataMatrix, a square 2D code) by the end of 2027, which will let one code serve both checkout and consumer content.
+- QR codes (ISO/IEC 18004:2024): a quiet zone of four modules on every side; error correction levels L, M, Q and H restore about 7, 15, 25 and 30 percent of codewords (V: QR code, Wikipedia), so a small centred logo needs level H; minimum printed size about 20 mm for close reading and a size of about one tenth of the scanning distance (T). Test with three phones on the printed sample.
 
 ### 6.12 Sustainability directions
 
-- Mono-material: an all-paper box with paper inserts, no lamination, no plastic window, no magnets glued into the board, so it recycles in one stream. Magnets and foam make a rigid box landfill in most Indian and Gulf municipal systems.
-- Reduction: right-size the box to the product (the EU PPWR's limits on void space and on false bottoms and double walls (U, section 2.8) point the same way).
+- Mono-material: an all-paper box with paper inserts, no lamination, no plastic window, no magnets glued into the board, so it recycles in one stream. Magnets and foam make a rigid box landfill in most Indian and Gulf municipal systems. Any plastic component carries the EPR registration number in India (section 2.8).
+- Reduction: right-size the box to the product (the EU PPWR's minimisation duty and 50 percent empty-space ratio, both from 1 January 2030, section 2.8, point the same way).
 - Refill and reuse: refillable flacons and compacts; boxes designed to be kept (a drawer box that becomes a jewellery store).
 - Certified fibre: FSC Mix or Recycled with the converter's CoC.
-- Honest claims: claim only what can be documented. Greenwashing law is tightening in the EU and India's consumer protection framework issued guidelines on environmental claims (U: confirm current status before writing pack copy).
+- Honest claims: claim only what can be documented. India's CCPA greenwashing guidelines (section 2.8) require specific, verifiable substantiation, so every environmental word on a pack has a document behind it in the production file; EU law is tightening the same way.
 
 ### 6.13 Unboxing design as content
 
-An unboxing is filmed more often than it is seen in person; design it for a top-down camera. One reveal per layer; a contrast between the box interior and the product so the product reads instantly on a phone screen; an inside-lid print or message that only appears on opening; a sound (the magnet's click, the slow draw of a well-fitted lid, tissue paper); and no crumpled fillers. The PR mailer to creators is a separate object from the retail box: it carries a personal card, a reason to film, and nothing that breaks in a courier van. The campaign side of this sits in 19-campaigns-and-creative-direction.md, section 6.
+Design the unboxing for a top-down phone camera. One reveal per layer; a contrast between the box interior and the product so the product reads instantly on a phone screen; an inside-lid print or message that only appears on opening; a sound (the magnet's click, the slow draw of a well-fitted lid, tissue paper); and no crumpled fillers. The PR mailer to creators is a separate object from the retail box: it carries a personal card, a reason to film, and nothing that breaks in a courier van. The physical press kit survives for launches on the same rules: a box or folder with a printed fact sheet, a few image cards, a product sample where possible and a QR to the digital press room; a USB stick in a press kit is obsolete. The campaign side of this sits in 19-campaigns-and-creative-direction.md, section 6.
+
+### 6.14 Spirits and wine labelling in India
+
+India's premium spirits (Amrut, Paul John and Indri whiskies; Hapusa and Greater Than gins) are among its strongest luxury design categories, and Indian wine (Sula, Grover Zampa, Fratelli) follows the same route; their labels follow rules of their own.
+
+- The Food Safety and Standards (Alcoholic Beverages) Regulations, 2018 require statutory warnings ("Consumption of alcohol is injurious to health" and "Be safe, don't drink and drive"), forbid health and nutrition claims, and set the declarations (U: verify the exact wording, minimum type size and later amendments before artwork).
+- Every state's excise department registers labels separately and may require "For sale in [state] only" and a state-specific MRP, often as a sticker or a variable panel; plan a variable label panel and expect weeks of approvals per state. Bottle decoration (section 6.5) and gift cartons need excise approval too.
+- Advertising is restricted (19-campaigns-and-creative-direction.md, section 16.8), so the bottle, the carton and the on-premise collateral carry the brand, and that is where the design budget belongs.
+
+### 6.15 Carrier bags and dust bags
+
+The carrier bag is the brand object a luxury customer carries down the street, so in retail, jewellery, fashion and events it is designed and specified as carefully as the box.
+
+- Body: paper of 157 to 250 gsm, either coated art paper laminated (louder) or uncoated, through-dyed or specialty stock (quieter). A turned-over top of about 40 to 50 mm, reinforced with 300 to 400 gsm board, and a base board of 300 to 600 gsm (T). Size the gusset (the folded side panel) and width to the box plus 1 to 2 cm, and the height 3 to 5 cm above it.
+- Handles: twisted or flat paper (machine-made, mass), cotton or polyester rope knotted through eyelets, grosgrain or satin ribbon glued under a reinforcement strip, or die-cut handles. Handmade bags are the luxury tier; machine-made twisted-handle kraft reads high street. Test with a load of 1.5 times the heaviest product, lifted ten times.
+- Rules: India's thickness and gsm floors for carry bags and the UAE single-use bag ban apply to any plastic or non-woven bag (section 2.8).
+- Dust bags: cotton drill (a strong twill-woven cotton) of about 150 to 250 gsm, cotton flannel or microsuede, with a drawstring or an envelope flap; marked with a water-based screen print, flock, a debossed leather patch or a woven label (section 9.9); sized to the product plus 5 to 8 cm each way (T).
+- Cheap tells: a glossy laminated bag with a rope handle that frays, and a bag too small for the box it carries (section 11).
+
+### 6.16 Transit, heat and humidity testing
+
+Gulf heat and Indian monsoon humidity cause most of the luxury pack failures that appear after approval (T).
+
+- Transit: e-commerce and PR mailers are tested to ISTA 3A (the International Safe Transit Association's parcel delivery test, for packages up to 70 kg) or ISTA 6-Amazon where Amazon ships them.
+- Heat: container and courier-van interiors in a Gulf summer pass 50 to 60 °C (T). Hot-melt glue creeps, magnets glued to board debond, soft-touch turns tacky, and wax seals and chocolate melt. Specify high-temperature or PUR adhesives and magnets seated in a board pocket as well as glued.
+- Humidity: monsoon humidity warps rigid boxes. Line the inside of lid and base with a balancing paper of similar weight to the wrap, so the tension is equal on both faces; acclimatise board before making (section 10.4) and condition samples in a humidity chamber, or through a monsoon week, before approval.
+- The field test: one finished sample left for 48 hours in a car boot in Dubai in June, then opened and judged against the approved sample.
 
 ## 7. Out of home
 
@@ -540,18 +604,19 @@ Out of home (OOH) is the oldest broadcast medium and the most physical: it is re
 
 ### 7.1 Formats in India
 
-Sizes are quoted in feet; confirm every site's exact visible area and frame from the media owner's site sheet, because two "40 x 20" sites in Mumbai can differ by a foot and in frame depth (T, sizes from trade practice and 26-platform-and-format-specs-2026.md, section 3.8).
+Sizes are quoted in feet; confirm every site's exact visible area and frame from the media owner's site sheet, because two "40 x 20" sites in Mumbai can differ by a foot and in frame depth (T, sizes from trade practice and 26-platform-and-format-specs-2026.md, section 3.9).
 
 | Format | Typical size | Where | Notes |
 |---|---|---|---|
-| Hoarding (billboard) | 40 x 20 ft (12.2 x 6.1 m), 30 x 20, 30 x 15, 20 x 10, 60 x 20 | Arterial roads, flyovers, rooftops | Front-lit or backlit; flex or vinyl. After the Ghatkopar hoarding collapse in Mumbai in May 2024, the Brihanmumbai Municipal Corporation capped new hoardings at 40 x 40 ft and tightened structural audits (U: check the current BMC policy) |
+| Hoarding (billboard) | 40 x 20 ft (12.2 x 6.1 m), 30 x 20, 30 x 15, 20 x 10, 60 x 20 | Arterial roads, flyovers, rooftops | Front-lit or backlit; flex or vinyl. The Brihanmumbai Municipal Corporation's (BMC) maximum permitted hoarding size is 40 x 40 ft; the 120 x 120 ft hoarding that collapsed at Ghatkopar on 13 May 2024 breached it, and BMC then ordered the removal of oversized hoardings and tightened structural audits (U: confirm the current BMC advertising policy) |
 | Unipole | Faces commonly 40 x 20 or 30 x 15 ft, single or V-shaped double faces | Highways, expressway approaches | Long approach distances; size type for 100 m and more |
 | Gantry | Spans the carriageway; sizes per structure | Expressways, toll plazas | Read head-on; very short text |
 | Bus shelter | Panels about 6 x 4 ft (about 1.2 x 1.8 m), often backlit | City roads | Close reading, long dwell for waiting passengers |
 | Metro | Pillar wraps, platform panels, station branding, train wraps, digital screens | Mumbai and Delhi metro networks | Sizes per network media kit; dwell on platforms is minutes |
-| Airport | Digital totems (1080 x 1920), large LED walls, backlit panels, baggage belt and trolley branding, aerobridges | Mumbai T2 (CSMIA), Delhi T3 (IGIA) | Sold by the airport media concessionaire; the most affluent audience in Indian OOH; formats and sizes per the concessionaire's kit (U) |
+| Airport | Digital totems (1080 x 1920), large LED walls, backlit panels, baggage belt and trolley branding, aerobridges | Mumbai T2 (CSMIA), Delhi T3 (IGIA), Navi Mumbai (NMIA) | Sold by the airport media concessionaire (Times OOH at Mumbai airport per 26-platform-and-format-specs-2026.md, section 3.9); the most affluent audience in Indian OOH; formats and sizes per the concessionaire's kit (U) |
+| New premium inventory | Per operator kit | Mumbai Metro Line 3 (the Aqua Line, mostly underground from Cuffe Parade to Aarey JVLR via BKC, the Bandra Kurla Complex, fully open since 8 October 2025); Navi Mumbai International Airport (commercial flights since 25 December 2025); Noida International Airport, Jewar (commercial flights since 15 June 2026) (V: Wikipedia, read October 2026) | Media sold through each operator's concessionaire; record the concessionaire's name and the kit's date when read (U) |
 | Mall | Portrait digital screens (1080 x 1920), atrium drops, escalator panels, standees | Premium malls in Mumbai, Delhi NCR, Bengaluru | Close range, slow walking dwell |
-| Cinema | On-screen spots (DCP), lobby standees and screens | PVR INOX (merged in 2023) and others | On-screen delivery follows the DCP spec in 26-platform-and-format-specs-2026.md, section 5.8 |
+| Cinema | On-screen spots (DCP: Digital Cinema Package), lobby standees and screens | PVR INOX (merged in 2023) and others | On-screen delivery follows the DCP spec in 26-platform-and-format-specs-2026.md, section 5.8 |
 
 ### 7.2 Formats in the UAE
 
@@ -562,9 +627,9 @@ Sizes are quoted in feet; confirm every site's exact visible area and frame from
 | Bridge banners | Per bridge | Over major roads | Vinyl or mesh, read head-on |
 | Mupi (2 m² backlit) | 1185 x 1750 mm visible | Bus shelters, malls, airport | The six-sheet-sized backlit poster |
 | Mall digital | 1080 x 1920 portrait screens, atrium LED walls | Dubai Mall (Emaar), Mall of the Emirates (Majid Al Futtaim) | Bilingual on the same face |
-| Airport | 1080 x 1920 digital, landscape LED walls, backlit lightboxes | DXB, Abu Dhabi (Zayed International) | Sold by the airport concessionaire; confirm the current one and the kit (U) |
+| Airport | 1080 x 1920 digital, landscape LED walls, backlit lightboxes | DXB, Abu Dhabi (Zayed International) | Dubai Airports' advertising concession is held by JCDecaux (26-platform-and-format-specs-2026.md, section 3.9); Zayed International's Terminal A, opened in 2023, sells its own inventory; confirm the concessionaire and kit date for each (U) |
 
-Permits and regulators: road advertising in Dubai is permitted by the RTA and Dubai Municipality and in Abu Dhabi by the municipal authority (U); the media owner holds the site permit, but the content may still need approval. Real estate advertising in Dubai carries a Trakheesi permit number from the Dubai Land Department; in India, project ads carry the RERA registration number, and in Maharashtra MahaRERA has required a QR code on project advertisements since 2023 (U: confirm current formats and placement rules before artwork).
+Permits and regulators: road advertising in Dubai is permitted by the RTA (Roads and Transport Authority) and Dubai Municipality and in Abu Dhabi by the municipal authority (U); the media owner holds the site permit, and the content may still need approval (checklist in section 7.9). Real estate advertising in Dubai carries a Trakheesi permit number from the Dubai Land Department; in India, project ads carry the RERA (state real estate regulatory authority) registration number, and in Maharashtra MahaRERA has required a QR code on project advertisements since 2023 (U: confirm current formats and placement rules before artwork).
 
 ### 7.3 DOOH pixel specifications
 
@@ -573,18 +638,21 @@ Permits and regulators: road advertising in Dubai is permitted by the RTA and Du
 - Files: MP4 H.264 at 25 fps for video, JPG or PNG for statics, no audio unless the site is specified with sound (T). Spot lengths: 10 and 15 seconds in loops of about 60 to 120 seconds shared by several advertisers (T).
 - Motion: roadside digital permits commonly restrict full-motion video and fast transitions because they distract drivers; plan static frames with quick dissolves for roadside and save motion for malls, airports and metro (U: read each site's permit conditions). Hold a readable frame from the first second, because viewers arrive mid-loop. Brand present in every frame.
 - Minimum text height on an LED face: about 30 wall pixels (26-platform-and-format-specs-2026.md, section 5.11), and more for thin weights, because LED glow fills counters.
+- Designing for LED faces: outdoor LED runs at about 5,000 to 8,000 nits (candela per square metre) by day and dims at night by ambient sensor, under municipal caps (T and U). Black on LED is LEDs switched off, which shows the dark cabinet: use it as negative space. Large white fields glare at night and wash out the brand. Strokes under about 2 LED pixels sparkle or vanish, so thicken hairline serifs and rules or switch to a sturdier cut. Cabinet seams and frame members show in daylight, so keep faces and type off the seams marked on the pixel map. LED colour shifts off axis, so judge the artwork from the approach angle. Deliver a night version where the media owner allows dayparting (scheduling different creative by time of day).
+- Anamorphic 3D: forced-perspective content on a corner (L-shaped) or curved LED face, rendered for one sweet spot, a pedestrian or traffic viewpoint from which the illusion holds. It collapses off axis, so check the site survey photograph from that point before buying. Content is rendered to the native pixel map at the site's frame rate, usually as 15 to 30 second loops, with a painted false frame or box edge creating the depth. Brief the 3D studio with the screen model, pixel map, pitch, and the sweet-spot photograph with its height. References: d'strict's "Wave" at COEX, Seoul (2020) and the Cross Shinjuku Vision 3D cat, Tokyo (2021). Pipeline: 13-motion-graphics-and-3d-production.md, section 8.2; FOOH (fake out of home: computer-generated imagery shown as if it were a real installation) and its disclosure: 19-campaigns-and-creative-direction.md.
 
 ### 7.4 Type size by viewing distance
 
-Two working rules from the sign trade (T): about 1 inch of cap height per 10 feet of distance for strong, at-a-glance legibility (distance divided by 120), and about 1 inch per 30 feet as the limit of legibility in good conditions for a sturdy sans (distance divided by 360). Condensed, light, script and high-contrast didone faces need more.
+Two working rules from the sign trade (T): about 1 inch of cap height per 10 feet of distance for strong, at-a-glance legibility (distance divided by 120), and about 1 inch per 30 feet as the limit of legibility in good conditions for a sturdy sans (distance divided by 360). Condensed, light, script and high-contrast didone faces need more, as do front-lit boards at night and older audiences.
 
-| Viewing distance | Impact cap height (d/120) | Minimum legible cap height (d/360) | Typical site |
-|---|---|---|---|
-| 5 m | 4 cm | 1.4 cm | Mupi, bus shelter from the pavement |
-| 15 m | 12.5 cm | 4.2 cm | Bus shelter from the road, mall atrium |
-| 30 m | 25 cm | 8.3 cm | City hoarding at a junction |
-| 60 m | 50 cm | 17 cm | Hoarding on an arterial road |
-| 120 m | 1.0 m | 33 cm | Unipole or highway hoarding at approach |
+| Viewing distance | Impact cap height (d/120) | Minimum legible cap height (d/360) | Impact, in feet and inches | Typical site |
+|---|---|---|---|---|
+| 1 m | 8 mm | 3 mm | 3.3 ft: 0.3 in | Handheld sign, menu board |
+| 5 m | 4 cm | 1.4 cm | 16 ft: 1.6 in | Mupi, bus shelter from the pavement |
+| 15 m | 12.5 cm | 4.2 cm | 49 ft: 4.9 in | Bus shelter from the road, mall atrium |
+| 30 m | 25 cm | 8.3 cm | 98 ft: 9.8 in | City hoarding at a junction |
+| 60 m | 50 cm | 17 cm | 197 ft: 19.7 in | Hoarding on an arterial road |
+| 120 m | 1.0 m | 33 cm | 394 ft: 39 in | Unipole or highway hoarding at approach |
 
 On a 40 x 20 ft hoarding (6.1 m tall) read at 60 m, the impact headline cap height is about 8 percent of the board's height; a typical luxury layout with a small serif line at 3 percent is unreadable from the road. The practical test: print the layout so that its width relates to your eye distance as the real board's width relates to the real viewing distance (a 12 m board at 60 m reads like a 12 cm print at 60 cm), and read it at a glance.
 
@@ -601,7 +669,7 @@ Put a QR code on OOH only where people stand still within a few metres and the d
 
 ### 7.7 Placement and dwell time
 
-- Dwell time is how long the audience can look: seconds on a highway, a minute at a signal, several minutes on a metro platform or at an airport gate. Copy length, QR use and detail scale with dwell.
+- Dwell time is how long the audience can look: about 9 seconds for a board legible from 150 m at 60 km/h and under 6 seconds at 100 km/h (section 7.5), a minute at a signal, several minutes on a metro platform or at an airport gate. Copy length, QR use and detail scale with dwell.
 - Approach: the distance and angle from which the board is first legible, and whether it is on the driver's side (right-hand drive in India and left-hand drive in the UAE change which side of the road is easier to read).
 - Clutter: a board among twenty others needs a single bold field of colour or image; a solitary board can afford quiet.
 - Context: an airport audience is affluent and unhurried; a highway audience is captive but distracted; a mall audience is shopping. Luxury buys fewer, better sites and shows the product at a scale the eye cannot ignore.
@@ -620,9 +688,24 @@ Put a QR code on OOH only where people stand still within a few metres and the d
 
 Allow 2 to 5 working days to print and mount a hoarding in India and 3 to 7 in the UAE including permit checks (T, section 4.8). Installation is often at night; monsoon and the UAE midday work ban (15 June to 15 September) affect daytime work. Ask for the mounting date, photographs of the mounted board, and a replacement clause for damage and fading. For DOOH, content approval by the media owner and sometimes the authority can take several days; submit early with a still of every frame.
 
+Content approval checklist, before files go to the media owner:
+- UAE: content standards under Federal Decree-Law No. 55 of 2023 on Media Regulation, administered by the National Media Authority, which replaced the UAE Media Council in December 2025 (24-business-of-creative-and-agency-operations.md, section 14.7; 19-campaigns-and-creative-direction.md, section 16.6): respect for religion, the state and public morals; no alcohol, tobacco or gambling advertising; modest styling on public outdoor faces (shoulders and knees covered is the working norm (T)); the UAE flag, emblem and images of the rulers only with approval (19-campaigns-and-creative-direction.md, section 16.12); Arabic copy proofread by a native reader (section 5.8); the Trakheesi permit number on property ads.
+- India: the ASCI (Advertising Standards Council of India) Code and the CCPA's 2022 guidelines on misleading advertisements; no surrogate alcohol advertising (19-campaigns-and-creative-direction.md, section 16.8); the RERA registration number and, in Maharashtra, the MahaRERA QR on property ads; the national flag and emblem kept out of advertising under the Emblems and Names (Prevention of Improper Use) Act, 1950.
+- Both: stills of every DOOH frame to the media owner early, with the approval date recorded on the sign-off sheet (section 5.7).
+
 ### 7.10 Media buying literacy
 
 A creative director must be able to read a media plan, whoever buys it. Static OOH in India is sold per site per month, often with a minimum period, with printing and mounting quoted separately (T); DOOH is sold by spot share of a loop over a period, and increasingly programmatically (Moving Walls and Vistar Media are programmatic DOOH platforms active in the region (T)). Ask for site photographs and approach videos, illumination hours, traffic or footfall data and its source, the share of voice in a loop, proof-of-display reports (time-stamped and geo-tagged photographs), and the replacement terms. Measurement in Indian OOH has no single industry currency (T), so compare vendors on audited data where offered and on site inspection where not. GST on outdoor advertising space is 18 percent and on print media space 5 percent (24-business-of-creative-and-agency-operations.md, section 3.6).
+
+### 7.11 Press: newspaper and magazine advertising
+
+Front-page jackets and magazine pages still carry India's luxury real estate, jewellery and retail launches, and Gulf launches run in Gulf News, Khaleej Times and the regional editions of Vogue and Harper's Bazaar. Specifications in short: 26-platform-and-format-specs-2026.md, section 6.12; newsprint colour: 04-colour.md, section 10.9.
+
+- Formats: solus front page (the only advertisement on the page); full jacket (a four-page wrap over the paper); half jacket (a half-width flap over page one); French window (die-cut flaps on the front page that open onto the ad); gatefold; ear panels (the small boxes beside the masthead); strip; inserts (loose pamphlets dropped into copies by distribution area).
+- Booking: by the column-centimetre against a release order (RO: the agency's written booking with size, position, date and rate); front page, right-hand pages and the first pages carry premiums. Sizes come from each title's mechanical data sheet; an Indian broadsheet full page measures about 33 x 52 cm (T: confirm per title). Property ads carry the RERA number and the MahaRERA QR, or the Trakheesi permit number in Dubai (section 7.2).
+- Coldset newsprint: convert through ISOnewspaper26v4 (the ISO 12647-3 characterisation; the 26 is the TVI in percent at the 40 percent patch), total ink about 240 percent (T: confirm with the title), 85 to 100 lpi. Open the shadows and lift the mid-tones before conversion, because shadows plug. Text and rules in K only, with no rich black text; no reversed type under 8 pt, and 9 pt or more for reversed serifs; no reversed hairlines; allow 0.3 to 0.5 mm colour misregistration (T). Pale luxury palettes die on grey-yellow newsprint, so proof the layout on yesterday's paper before the client signs.
+- Delivery: PDF/X-1a through the publication's ad portal, with the RO number in the file name, usually the day before publication (T).
+- Magazines (Vogue India, AD India, Condé Nast Traveller India, Vogue Arabia, Harper's Bazaar Arabia): heatset web or sheetfed on coated stock, FOGRA39 or FOGRA51; trim, bleed and type area from the title's sheet. On perfect-bound titles keep type 10 to 15 mm from the spine and plan spread crossovers so the gutter swallows no face, product or word.
 
 ## 8. Retail and environmental
 
@@ -634,14 +717,18 @@ Wayfinding is the system that lets people find their way through a space: identi
 - Contrast: the UK's BS 8300 asks for a light reflectance value (LRV) difference of at least 30 points between sign and background and between sign and wall; the Dubai Universal Design Code (2017) sets the accessibility frame in Dubai (T). Matt surfaces, because gloss reflects light sources into the reader's eyes.
 - Pictograms: ISO 7001 public information symbols and ISO 7010 safety signs are the shared vocabulary; the AIGA and US Department of Transportation symbol set (Roger Cook and Don Shanosky, 1974) is the model of a coherent family. Draw custom pictograms only when the brand earns them, and test recognition.
 - Mounting heights: projecting and overhead signs clear head height; wall signs sit where the eye falls while walking. Confirm the local building code and the mall's fit-out manual, which in Gulf malls is strict.
+- India and tactile signs: the Harmonised Guidelines and Standards for Universal Accessibility in India (MoHUA, the Ministry of Housing and Urban Affairs, 2021) and the National Building Code of India 2016 set the Indian frame (U: verify the edition in force). Where no local value exists, tactile signs follow the 2010 ADA (Americans with Disabilities Act) Standards for Accessible Design, section 703: raised characters at least 0.8 mm (1/32 in) high, cap height 16 to 51 mm, Grade 2 Braille below the text, mounted with the baselines between about 1.22 and 1.52 m above the floor beside the latch side of the door. Matt finishes and the LRV contrast above apply.
 
-### 8.2 Bilingual Arabic and English wayfinding
+### 8.2 Bilingual and multilingual signage: Arabic, English and Indian languages
 
 - Arabic takes the prominent position (right or top) with at least equal visual size to the English; UAE municipal and mall rules commonly require Arabic on signage and some require it first (U: confirm with the landlord's design manual and the permit).
 - Match optical size: Arabic set in the same nominal size as Latin usually reads smaller, so scale it until the Arabic body height matches the Latin x-height.
 - Pair purpose-designed families with an Arabic and Latin design (Dubai Font, the city's own Arabic and Latin family released in 2017; Frutiger Arabic; the 29LT families from 29Letters); 03-typography.md, section 15 covers the pairing.
 - Lay out each language in its own column or band with its own alignment (Arabic ranged right, English ranged left), and place directional arrows at the outer edge of the sign on the side they point, so neither language is split by them.
 - Numerals: Western digits are standard in UAE commercial use; Saudi signage may use Eastern Arabic digits (03-typography.md, section 15).
+- Maharashtra: the 2022 amendment to the Maharashtra Shops and Establishments (Regulation of Employment and Conditions of Service) Act, 2017 requires shop and establishment signboards in Marathi in the Devanagari script, with the Marathi lettering no smaller than any other script on the board. In September 2023 the Supreme Court gave Mumbai establishments two months to comply, and BMC enforcement followed from late November 2023 (U: verify current enforcement).
+- Karnataka: the Kannada Language Comprehensive Development (Amendment) Act, 2024 requires Kannada on 60 percent of a signboard's area (U: verify the placement rule). Check Tamil Nadu and other states before any fit-out.
+- Design consequence: a Mumbai facade is bilingual by law, so commission the Devanagari wordmark from a type designer (Indian Type Foundry and Ek Type are the local references); auto-transliterated lettering reads as a sticker beside a drawn Latin mark. Marathi uses its own forms of la and sha, selected by the OpenType locl feature under the Marathi language tag, and a font set to Hindi shows a Marathi reader the wrong forms (03-typography.md, section 15.1).
 
 ### 8.3 Vinyl, window graphics, lightboxes and SEG
 
@@ -653,7 +740,7 @@ Wayfinding is the system that lets people find their way through a space: identi
 
 - Visual merchandising arranges product so it sells: a clear focal point per window or table, groups in odd numbers, a triangle or pyramid composition that leads the eye, the hero product at eye level (roughly 1.2 to 1.6 m from the floor (T)), and a refresh rhythm that gives returning customers something new.
 - Jewellery display: lighting with a high colour rendering index (CRI 95 or more (T)) and a mix of diffuse light for metal and point light for stones; neutral linen, stone or leather grounds; no velvet in saturated colours unless it is the house code.
-- Props: real materials at real scale; a prop that looks like a prop is a cheap tell in retail exactly as in photography (design-taste, SKILL.md section 3, Image).
+- Props: real materials at real scale; a prop that looks like a prop is a cheap tell in retail exactly as in photography (the image rule in design-taste, SKILL.md section 5, asks for a detail that could not be bought).
 
 ### 8.5 Materials and fabrication tolerances
 
@@ -665,20 +752,22 @@ Wayfinding is the system that lets people find their way through a space: identi
 | Stainless steel | Cool, durable | Brushed (No. 4) or mirror | Mirror finish shows every mark |
 | Timber | Warm, human | Veneer on a stable core for large panels; solid for edges and small items | Moves with humidity: a Mumbai monsoon and Dubai air conditioning are opposite extremes |
 | Stone | Permanence | Makrana marble from Rajasthan, Indian granites, imported marbles; honed over polished for luxury | Weight (about 2.7 tonnes per cubic metre for marble (T)), fragile corners, staining |
-| MDF | Paintable, cheap | Sprayed 2-pack polyurethane paint for a fine finish | Swells with moisture; chips at edges |
+| MDF (medium-density fibreboard) | Paintable, cheap | Sprayed 2-pack polyurethane paint for a fine finish | Swells with moisture; chips at edges |
 | Fabric | Soft, acoustic | Fire-rated textiles for public interiors | Fire certificates required by mall and civil defence approvals |
 
-Fabrication tolerances, planning values (T): laser cutting about 0.1 mm; CNC routing about 0.2 to 0.5 mm; joinery about 1 mm; site installation 3 to 5 mm. Design shadow gaps (3 to 5 mm recesses between materials) so tolerances disappear into a deliberate line; flush joints between different materials show every millimetre.
+Fire certification. UAE Civil Defence and Indian venues reject event and retail materials that arrive without test certificates against named standards, and a missing certificate stalls a build on site. Ask suppliers for NFPA 701 (textiles and films, vertical flame test); BS 5867-2 Type B (curtains and drapes); EN 13501-1 reaction-to-fire classes (A1 and A2, then B to F, with smoke subclasses s1 to s3 and flaming-droplet subclasses d0 to d2; B-s1,d0 is the common interior ask); or DIN 4102-1 class B1. In the UAE the UAE Fire and Life Safety Code of Practice (Civil Defence, 2018 edition) governs, approvals need certificates from approved laboratories, and aluminium composite panel needs a fire-rated core (A2 or FR mineral) after the facade fires of the 2010s (T). In India, Part 4 (Fire and Life Safety) of the National Building Code of India 2016 governs, and venues accept flame-retardant-treated fabric with a treatment certificate (T). Temporary stages, truss and outdoor banners need a structural engineer's sign-off for wind load; after the Ghatkopar collapse (section 7.1), expect the request on every outdoor structure in Mumbai.
+
+Fabrication tolerances, planning values (T): laser cutting about 0.1 mm; CNC (computer numerical control) routing about 0.2 to 0.5 mm; joinery about 1 mm; site installation 3 to 5 mm. Design shadow gaps (3 to 5 mm recesses between materials) so tolerances disappear into a deliberate line; flush joints between different materials show every millimetre.
 
 ### 8.6 Event branding
 
-- Backdrops and stages: one bold idea at scale beats a wall of logos. The step-and-repeat (a backdrop of repeated logos for photographs) is the default; alternatives that photograph better: a single mark at large scale on a textured material, a pattern drawn from the brand's archive, a floral or botanical wall in the brand palette, a sculptural monogram, or a lit typographic line.
+- Backdrops and stages: carry one bold idea at scale. The step-and-repeat (a backdrop of repeated logos for photographs) is the default; alternatives that photograph better: a single mark at large scale on a textured material, a pattern drawn from the brand's archive, a floral or botanical wall in the brand palette, a sculptural monogram, or a lit typographic line.
 - Stage and set: build in timber and fabric with SEG panels for graphics; specify LED wall pitch for the audience distance (section 7.3).
 - Menus, place cards and table numbers: the guest touches them; uncoated cotton, letterpress or digital with VDP for names, calligraphy for a VIP table.
 - Invitations as objects: section 9.6.
 - Lanyards: woven ribbon with a woven mark reads better than printed polyester; metal or leather fittings; recyclable or reusable cards.
-- Signage at events: boards on easels in timber or Dibond, never foam board for luxury (it bows, dents and shows its core).
-- Fire safety: UAE venues require fire-rated materials with certificates for approval by Civil Defence; Indian venues increasingly ask for them (T).
+- Signage at events: boards on easels in timber or Dibond; foam board bows, dents and shows its core, so it stays out of luxury events.
+- Fire safety: UAE venues require fire-rated materials with certificates for approval by Civil Defence; Indian venues increasingly ask for them (T). Standards to name: section 8.5.
 
 ### 8.7 Pop-ups and art installations
 
@@ -686,27 +775,48 @@ A pop-up is a temporary retail or experience space: modular, transportable, perm
 
 ### 8.8 Craft and fabrication clusters
 
-Specific vendor names change faster than this file; qualify every new vendor with a site visit, three references from comparable luxury jobs, and a paid sample. The clusters to know:
+Specific vendor names change faster than this file; qualify every new vendor with a site visit, three references from comparable luxury jobs, and a paid sample, and record each vetted vendor with date, job, contact and quality score in the agency's vendor database (24-business-of-creative-and-agency-operations.md, section 7.9). The clusters to know:
 
 - Mumbai: the film and advertising set-construction trade builds event sets and pop-ups fast and to camera standard; large-format printers and packaging converters across the city and the Bhiwandi and Thane belts (T).
 - Delhi NCR: Chawri Bazar for paper, invitations and their printers; event fabrication and production companies across Okhla, Noida and Gurugram; book printers in the NCR (Thomson Press and Replika Press are long-established names).
 - Jaipur: Sanganer handmade paper and hand block printing on textile, Bagru block printing, brass and metal craft, stone carving, gem cutting and the jewellery trade around Johari Bazaar. The source for invitation wraps, pouches, place-card holders and installation craft.
 - Hyderabad and beyond: Pragati Offset (Hyderabad) has a reputation for art-book printing; Manipal Technologies (Manipal) for large-scale secure and commercial print; Parksons Packaging and TCPL Packaging for folding cartons (T).
+- Sivakasi (Tamil Nadu): India's long-established printing town for offset at scale (calendars, diaries, labels, cartons); competitive on long runs and slow on bespoke finishing, so use it for volume items and keep luxury finishing with specialists (T).
 - Dubai and Sharjah: printing and fabrication workshops in Al Quoz, Dubai Investments Park and Sharjah's industrial areas; exhibition contractors who serve Dubai World Trade Centre; established printers include Emirates Printing Press and Al Ghurair Printing and Publishing in Dubai and United Printing and Publishing in Abu Dhabi (T).
+
+### 8.9 Facade and store signage
+
+Shop fronts, hotel porte-cochères (covered drive-up entrances) and restaurant fascias are signage at architectural scale.
+
+| Type | Construction | Reads as |
+|---|---|---|
+| Flat-cut letters | Brass, stainless steel or acrylic, pinned 10 to 25 mm off the wall on stand-off locators (T) | Quiet, architectural |
+| Built-up (fabricated) letters | Folded metal faces with 50 to 100 mm returns (the letter sides) | Solid, monumental |
+| Halo-lit (reverse-lit) letters | Opaque metal faces; LEDs inside wash the wall behind from a 30 to 50 mm stand-off (T) | The luxury standard at night |
+| Push-through acrylic | Acrylic letters pushed through a routed metal face and lit from behind | Crisp, corporate |
+| Face-lit channel letters, lightbox fascias | Translucent acrylic faces lit from inside | High street |
+| Glass neon and LED neon flex | Hand-bent, gas-filled glass tube; or silicone LED strip shaped to the lettering | Glass reads warm and crafted; LED flex is cheaper, cooler in tone and more even |
+| Externally lit letters | Unlit letters grazed by a concealed light | Heritage buildings, hotels |
+| Projecting blade sign | A double-sided sign at right angles to the facade | Street-level discovery |
+
+- Finishes: PVD (physical vapour deposition: a hard metallic coating bonded to stainless steel) gives a brass or bronze look that survives coastal humidity in Mumbai, Goa and Dubai; real brass needs lacquer or a patina plan (section 8.5). Light at 2700 to 3000 K to match warm facades, on timers or dimmers.
+- Constraints: each mall's fit-out manual (the landlord's rule book for tenant design) sets the sign zone, maximum letter height, illumination and approved fabricators (Dubai Mall, Mall of the Emirates, Jio World Drive, Phoenix Palladium, DLF Emporio), so read it before sketching. Municipal sign licences and illuminated-sign fees apply in both countries (U: confirm the current authority in Dubai and the BMC licence). In India the state language rules of section 8.2 apply to every facade.
+
+### 8.10 Exhibition stands
+
+Trade shows are fixed points in the year for jewellery, hospitality, real estate and beauty clients, with hard organiser rules and deadlines.
+
+- Shows (U: verify dates each year): IIJS (India International Jewellery Show) Premiere, Mumbai, August (GJEPC, the Gem and Jewellery Export Promotion Council); Arabian Travel Market, Dubai World Trade Centre, around May; Cityscape Global, Riyadh; Beautyworld Middle East, Dubai, autumn; Dubai Watch Week, November.
+- Stand types and rules: shell scheme (the organiser's modular panel system; panel sizes in 26-platform-and-format-specs-2026.md, section 6.4) or space-only (bare floor for a custom build). The organiser's stand regulations set the maximum height (often about 4 m, higher with approval), approval for double-deck (two-storey) stands, open sides and aisle setbacks, rigging and the approved contractor list. Stand drawings are due about 6 to 8 weeks before the show, and build days are usually 2 to 4 (T).
+- Graphics and fit: SEG, dye-sublimated fabric and UV flatbed panels (sections 4.5 and 8.3). Jewellery stands need CRI 95 lighting (section 8.4), lockable showcases in laminated glass and insurer-approved security. Fire certificates apply (section 8.5).
 
 ## 9. Stationery and collateral at a luxury standard
 
 ### 9.1 Business cards
 
-| Size (mm) | Where | Note |
-|---|---|---|
-| 85 x 55 | UK and most of Europe | The house size for Mask360 and clients in both countries (26-platform-and-format-specs-2026.md, section 6.2) |
-| 89 x 51 (3.5 x 2 in) | United States, Canada | Use for US-facing roles only |
-| 90 x 55 and 90 x 50 | India (both conventions), Australia | The Indian printer's default |
-| 90 x 54 | China, Hong Kong, Singapore | |
-| 85.6 x 54 | ISO/IEC 7810 ID-1 (credit card) | For cards that must fit a card slot, and for certificates |
+Identity application to stationery: 18-brand-strategy-and-identity-design.md, section 4.11. Sizes by region: 26-platform-and-format-specs-2026.md, section 6.2. The house size is 85 x 55 mm for Mask360 and clients in both countries; 85.6 x 54 mm (ISO/IEC 7810 ID-1, the credit card size) for cards that must fit a card slot and for certificates; 90 x 55 or 90 x 50 mm is the Indian printer's default, so state the size on the spec.
 
-The luxury specification: 600 gsm or more, usually two 300 to 350 gsm sheets duplexed (or a single 700 gsm board), uncoated cotton or Colorplan; one or two colours letterpress with a deep impression, or a single pigment foil; blind deboss for the mark; edge paint in one colour; square or 3 to 4 mm round corners consistent with the suite. Bilingual Arabic and English cards (Arabic on the reverse) are expected for UAE government-facing roles. A 300 gsm laminated card with spot UV is the opposite of all this, and it is section 11's first exhibit.
+The luxury specification: 600 gsm or more, usually two 300 to 350 gsm sheets duplexed (or a single 700 gsm board), uncoated cotton or Colorplan; one or two colours letterpress with a deep impression, or a single pigment foil; blind deboss for the mark; edge paint in one colour; square or 3 to 4 mm round corners consistent with the suite. Bilingual Arabic and English cards (Arabic on the reverse) are expected for UAE government-facing roles. Section 11 lists the 300 gsm laminated card with spot UV among the print tells.
 
 ### 9.2 Letterheads and envelopes
 
@@ -730,6 +840,8 @@ A6 or A7 flat cards at 600 gsm or more with matching lined envelopes, or folded 
 
 The set: welcome card (letterpress, personalised by VDP), in-room directory (now mostly a QR code or tablet, with a printed one-page essentials card), privacy and make-up-room door hangers (die-cut 600 gsm board, leather or timber), pillow and turndown menus, notepads (glued pads of 80 to 100 gsm uncoated that take pencil), laundry lists, amenity labels (waterproof synthetic labels on bathroom bottles), key card sleeves. Design for housekeeping: every item is replaced, often daily, so cost per room night and storage matter; a durable holder with replaceable inserts serves both luxury and budget. Sustainability expectations in 2026 push hotels to fewer printed items, recycled and FSC stocks, and refillable amenities.
 
+Chain-operated hotels (Marriott, IHG, Accor, IHCL) follow the operator's brand standards for in-room collateral, signage and uniforms, with mandatory items and approved suppliers: get the standards manual before designing. Pre-opening print sits in the OS&E (operating supplies and equipment) budget, usually managed by a procurement firm and ordered several months before opening (T); deliver a print-ready kit with a spec sheet per item (section 10.1) so the procurement house can re-quote it without redesign.
+
 ### 9.6 Invitations
 
 - The suite: card (600 gsm or more, duplexed cotton, letterpress or engraved), envelope (lined), inner envelope for formal events, RSVP card and envelope or a QR to an RSVP page, details card, map, belly band or ribbon, wax seal.
@@ -740,15 +852,23 @@ The set: welcome card (letterpress, personalised by VDP), in-room directory (now
 
 ### 9.7 Look books and brand books
 
-- Format: an editorial proportion (for example 230 x 300 mm or 240 x 320 mm) reads as a book; A4 reads as a report. Landscape suits architecture and real estate; portrait suits fashion and jewellery.
+- Format: an editorial proportion (for example 230 x 300 mm or 240 x 320 mm) reads as a book; A4 reads as a report. Landscape suits architecture and real estate; portrait suits fashion and jewellery. Margins: 05-layout-grids-and-composition.md, sections 4.2 and 4.4.
 - Paper: mix stocks by signature (a smooth high-white or matt coated for photography, an uncoated tinted stock for text and section openers, a translucent fly sheet at the opening); check that the printer can run each stock and that the bulk adds up to the spine.
-- Binding: Swiss binding or Smyth sewn with an exposed spine for brand books; Singer sewn for slim look books; case bound for anniversary books (section 1.11).
+- Binding: Swiss binding or Smyth sewn with an exposed spine for brand books; Singer sewn for slim look books; case bound for anniversary books; lay-flat photo binding for panoramic real estate and hotel books (section 1.11, with cover cloths and parts).
 - Print run: brand books and look books often run 100 to 500 copies, which sits at the digital and offset crossover; quote both (section 4.7).
-- Protection: a glassine wrap, a belly band or a slipcase; shrink-wrapping reads mass market.
+- Protection: a glassine wrap (glassine: a smooth, grease-resistant translucent paper), a belly band or a slipcase; shrink-wrapping reads mass market.
 
-### 9.8 Press kits
+### 9.8 Security printing for vouchers, tickets and certificates
 
-Most press material in 2026 is digital: a press room page and a downloadable image library. The physical press kit survives for launches as an object: a box or folder with a printed fact sheet, a few image cards, a product sample where possible, and a QR to the digital room. Beauty and fashion PR mailers to editors and creators follow the unboxing rules in section 6.13; a USB stick in a press kit is obsolete.
+Hotel and spa gift vouchers, numbered event tickets and jewellery certificates attract copying; press kits and PR mailers are covered in section 6.13. The toolkit: guilloche (fine interlaced line patterns drawn by a pattern engine, hard to rescan); microtext of 0.3 mm or under, which photocopies as a line; UV-fluorescent ink, invisible in daylight and glowing under a UV lamp; void pantograph (copy-evident) backgrounds that print the word VOID on a photocopy; sequential numbering by VDP; holographic foil patches; thermochromic ink that fades under a thumb; and a perforated stub for redemption records. Pair the number with a QR to a verification page. Choose one or two features for the actual counterfeiting risk and keep them quiet, because a luxury voucher should still look like stationery.
+
+### 9.9 Textiles, uniforms and merchandise
+
+- Colour: Pantone's Fashion, Home and Interiors system is separate from the graphics PMS (Pantone Matching System), with TCX (cotton) and TPG (paper) references numbered like 19-4052 TCX. Specify textile colour from a TCX reference and approve a lab dip (04-colour.md, section 9.5); a PMS C chip is a reference for ink on paper.
+- Embroidery: priced by stitch count after a one-time digitising fee (converting the artwork into a stitch file). Keep text above about 5 mm cap height and satin columns (the smooth, closely stitched strokes) within about 1 to 10 mm wide (T); thin serifs fill in.
+- Woven labels: damask (finest detail, thin high-density yarns), taffeta (coarser, cheaper), satin (soft and lustrous).
+- Print on fabric: water-based or discharge screen print (soft hand, section 3.9); DTG (direct-to-garment inkjet, short runs on cotton); DTF (direct-to-film: a printed film transfer that bonds to almost any fabric, with a slightly plastic feel); dye sublimation (polyester only, section 4.5).
+- Uniforms follow the operator's brand standards in chain hotels (section 9.5); lanyards and event merchandise are in section 8.6, dust bags in section 6.15.
 
 ## 10. Working with printers and fabricators
 
@@ -792,8 +912,8 @@ Follow section 5: contract proof and drawdowns signed by the client; physical sa
 ### 10.4 Delivery, storage and QC on receipt
 
 - Paper and print are hygroscopic: they take up and lose moisture. Mumbai's monsoon humidity curls sheets and waves edges; Dubai's air-conditioned dryness makes them brittle and static. Ask printers to acclimatise paper in the press room before printing (often a day or two (T)), and store finished goods flat, wrapped, off the floor, away from sun and air-conditioning vents.
-- Receipt QC: count the cartons and sample the contents; inspect a sample sized by an acceptance sampling plan (ISO 2859-1 defines the usual AQL tables) against the signed OK sheet under D50; check colour across items in a suite (cards against letterheads against envelopes, side by side); check finishes (foil register, emboss depth, edge paint coverage), set-off, scuffs, trim and fold accuracy, and packing. Record defects with photographs on the day of delivery; claims made later are weaker.
-- India: goods moved by road above Rs 50,000 in value need an e-way bill generated on the GST system (some states set different intra-state thresholds); ask the printer to raise it so a delivery is not held at a checkpoint.
+- Receipt QC: count the cartons and sample the contents; inspect a sample sized by an acceptance sampling plan (ISO 2859-1 defines the usual AQL tables, AQL being the acceptable quality limit) against the signed OK sheet under D50; check colour across items in a suite (cards against letterheads against envelopes, side by side); check finishes (foil register, emboss depth, edge paint coverage), set-off, scuffs, trim and fold accuracy, and packing. Record defects with photographs on the day of delivery; claims made later are weaker.
+- India: goods moved by road above ₹50,000 in value need an e-way bill generated on the GST system (some states set different intra-state thresholds); ask the printer to raise it so a delivery is not held at a checkpoint.
 
 ### 10.5 Common failures and how to prevent them
 
@@ -814,9 +934,9 @@ Follow section 5: contract proof and drawdowns signed by the client; physical sa
 
 ### 10.6 Tax and duty
 
-- India: print and packaging supplies fall across the 5 and 18 percent GST slabs that the reform of 22 September 2025 created (with 40 percent for sin and luxury goods) (V: Goods and Services Tax (India), Wikipedia); the rate depends on whether the supply is classified as goods (printed matter, cartons, boxes, by HSN code) or a printing service (by SAC code). Confirm the code and rate on the vendor's tax invoice with the chartered accountant before quoting the client. Advertising and design services remain at 18 percent and print media space at 5 percent (24-business-of-creative-and-agency-operations.md, section 3.6).
+- India: print and packaging supplies fall across the 5 and 18 percent GST slabs that the reform of 22 September 2025 created (with 40 percent for sin and luxury goods) (V: Goods and Services Tax (India), Wikipedia); the rate depends on whether the supply is classified as goods (printed matter, cartons, boxes), by HSN code (Harmonised System of Nomenclature, the goods classification), or as a printing service, by SAC code (Services Accounting Code). Cartons, boxes and cases of paper and paperboard (HSN 4819) were reported cut to 5 percent in that reform; confirm printed matter (HSN 4911), paper (HSN 4802 and 4810) and printing job work (SAC 9989) on the rate notification of the CBIC (Central Board of Indirect Taxes and Customs) (U). Confirm the code and rate on the vendor's tax invoice with the chartered accountant before quoting the client. Advertising and design services remain at 18 percent and print media space at 5 percent (24-business-of-creative-and-agency-operations.md, section 3.6).
 - UAE: VAT at 5 percent on print, packaging and fabrication.
-- Imports: GCC customs duty of 5 percent of CIF value on most goods into the UAE; into India, specialty paper attracts basic customs duty, the social welfare surcharge calculated on that duty, and IGST (U: confirm the current tariff line in the CBIC customs tariff for the specific paper). The landed cost of imported stock is a multiple of its mill list price once freight, duty, tax and merchant margin stack; get the merchant's landed price per sheet.
+- Imports: GCC customs duty of 5 percent of CIF value on most goods into the UAE; into India, specialty paper attracts basic customs duty, the social welfare surcharge at 10 percent of that duty, and IGST, and needs PIMS registration (section 2.5) (U: confirm the current tariff line in the CBIC customs tariff for the specific paper). The landed cost of imported stock is a multiple of its mill list price once freight, duty, tax and merchant margin stack; get the merchant's landed price per sheet.
 
 ## 11. The cheap print tells and their fixes
 
@@ -844,8 +964,18 @@ The general cheap tells live in design-taste, SKILL.md section 3. These are the 
 | Shrink-wrap on books | Supermarket cue | Glassine, belly band or slipcase |
 | Foam board event signs | Bows and dents; core shows at the edge | Timber, Dibond or framed fabric |
 | Coarse flex hoarding with small type | Unreadable, and grainy up close | Type sized to distance (section 7.4), fabric or film for close formats |
+| Disconnected or reversed Arabic, faux-bold Arabic, stretched kashida, broken Devanagari matras | The reader sees a broken word before the brand | Re-set in the right composer; native reader's proof of the exported PDF (section 5.8) |
+| Gold printed as a CMYK yellow-beige gradient | Reads as a picture of gold | Metallic ink, foil, or no gold |
+| Wrinkled or bubbled wrap at rigid box corners, glue squeeze-out at turn-ins | The box was made in a hurry | Fit sample; QC of corners under raking light |
+| Frayed ribbon ends | Unfinished at the first touch | Cut on a dovetail; heat-seal synthetic ribbon |
+| White core at the cut edge of surface-coloured board | Breaks the solid colour at every edge | Through-dyed stock, or the colour duplexed on both faces |
+| Letterhead and envelope whites that differ | Two whites side by side read as two suppliers | Convert both from one mill and one lot |
+| QR codes dressed in brand colours with a large logo | Fails to scan, and looks like a sticker | Dark on light; level H only with a small mark (section 6.11) |
+| Glossy laminated carrier bag with a fraying rope handle; a bag too small for the box | Mass retail at the moment the customer walks out | Uncoated or through-dyed bag sized to the box; ribbon or cotton rope handles (section 6.15) |
 
 ## 12. Reference tables
+
+Sizes (A and B series, business cards, envelopes, posters, hoardings, DOOH screens): 26-platform-and-format-specs-2026.md, sections 3.9 and 6.1 to 6.4. Type size by viewing distance: section 7.4.
 
 ### 12.1 Paper weights by use
 
@@ -874,52 +1004,19 @@ The general cheap tells live in design-taste, SKILL.md section 3. These are the 
 | Screen printing | 45 to 85 lpi | | Halftones coarse by nature |
 | Risograph | Fixed by machine, about 100 to 200 lpi equivalent or grain (T) | | |
 
-### 12.3 Bleed and safe area by product
+### 12.3 Bleed and safe area for products beyond the specs file
+
+26-platform-and-format-specs-2026.md, section 6.5 gives business cards, brochures, posters, banners, hoardings, packaging and vehicle wraps; these are the products it leaves out.
 
 | Product | Bleed | Safe area |
 |---|---|---|
-| Business cards, postcards, place cards | 3 mm | 4 to 5 mm |
-| Brochures and look books | 3 mm | 5 mm; 8 mm at the spine of perfect and PUR binding; more at the fore edge of saddle-stitched books with creep |
+| Saddle-stitched books with creep | 3 mm | 5 mm or more at the fore edge, growing towards the centre spread (section 1.10) |
 | Book covers and jackets | 3 to 5 mm; 15 to 20 mm turn-in on cased covers | 10 mm from spine hinges |
-| Posters A2 and larger | 5 mm | 10 mm |
-| Folding cartons and labels | 3 mm beyond cut lines | 3 to 5 mm from every crease and cut |
 | Rigid box wraps | Turn-in of 15 to 20 mm | Keep art off corners and turn-ins |
 | Roll-ups and exhibition panels | Per supplier, often 10 mm plus the base cassette area | 50 mm |
-| Banners | 10 to 25 mm plus hems and eyelets | 50 mm |
-| Hoardings | 100 mm at full size | 300 mm |
+| Labels on curved bottles | 3 mm beyond the cut | 3 mm from the cut, and art kept off the curve's tightest point (T; section 6.5) |
 
-Source for the full set: 26-platform-and-format-specs-2026.md, section 6.5.
-
-### 12.4 Standard sizes
-
-| Item | Size |
-|---|---|
-| A0, A1, A2, A3 | 841 x 1189, 594 x 841, 420 x 594, 297 x 420 mm |
-| A4, A5, A6 | 210 x 297, 148 x 210, 105 x 148 mm |
-| SRA3, SRA2, SRA1 press sheets | 320 x 450, 450 x 640, 640 x 900 mm |
-| B2 and B1 press sheets (trade) | about 500 x 700 and 700 x 1000 mm |
-| Business cards | 85 x 55 (Europe, house), 89 x 51 (US), 90 x 55 and 90 x 50 (India), 90 x 54 (China, Hong Kong, Singapore) mm |
-| Envelopes | DL 110 x 220, C6 114 x 162, C5 162 x 229, C4 229 x 324 mm |
-| Posters | A2 to A0; 24 x 36 in (US); cinema one sheet 27 x 40 in |
-| Bus shelter and mupi | About 1200 x 1800 mm; 1185 x 1750 mm visible on the 2 m² mupi |
-| Indian hoardings | 40 x 20, 30 x 20, 30 x 15, 20 x 10, 60 x 20 ft |
-| UAE unipoles | Faces of about 12 x 4 m and larger |
-| DOOH screens | 1920 x 1080, 1080 x 1920, LED walls at native pixel map |
-
-### 12.5 Type size by viewing distance
-
-| Distance | Impact cap height | Minimum legible cap height | In feet and inches (impact) |
-|---|---|---|---|
-| 1 m (handheld sign, menu board) | 8 mm | 3 mm | 3.3 ft: 0.3 in |
-| 5 m | 4 cm | 1.4 cm | 16 ft: 1.6 in |
-| 15 m | 12.5 cm | 4.2 cm | 49 ft: 4.9 in |
-| 30 m | 25 cm | 8.3 cm | 98 ft: 9.8 in |
-| 60 m | 50 cm | 17 cm | 197 ft: 19.7 in |
-| 120 m | 1.0 m | 33 cm | 394 ft: 39 in |
-
-Rules from section 7.4 (T): impact at distance divided by 120 (1 inch per 10 feet); minimum at distance divided by 360 (1 inch per 30 feet). Add size for light, condensed, script and high-contrast faces, for night viewing of front-lit boards, and for older audiences.
-
-### 12.6 Finish cost tiers
+### 12.4 Finish cost tiers
 
 Relative tiers for a short luxury run (500 to 2,000 pieces) in India and the UAE; prices move with quantity, sheet size and city, so use tiers to choose and quotes to decide (T).
 
@@ -933,67 +1030,178 @@ Relative tiers for a short luxury run (500 to 2,000 pieces) in India and the UAE
 
 The house rule: one tier 3 to 5 finish per piece, chosen for the idea; the budget saved on the second and third finishes buys a better paper, which the hand notices first.
 
+### 12.5 Indicative price bands and minimum orders, India and UAE
+
+No live quote was read for this file, so rupee and dirham prices are unknown as of October 2026. The table fixes the exact specifications and quantities that each quarter's three dated quotes in India and the UAE should price, so the bands stay comparable from one quarter to the next; record each figure in the agency's rate log marked (T, quote dated) and never carry an undated figure forward.
+
+| Item | Specification to quote | Quantities | What moves the price |
+|---|---|---|---|
+| Letterpress business cards | 85 x 55 mm; 700 gsm cotton (2 x 350 gsm duplexed); 2 colours letterpress, one side; edge paint | 100 and 250 | Cotton stock (often imported), plates, duplexing and edge paint by hand |
+| Look book, digital | A5, 64 pages plus cover; 150 gsm silk text; 300 gsm uncoated cover; PUR bound; HP Indigo | 250 | Click charge per sheet, binding |
+| Look book, offset | The same specification, sheetfed offset to FOGRA51 | 1,000 | Plates and make-ready spread over the run; the crossover with digital (section 4.7) |
+| Foil and emboss blocks | Magnesium, copper and brass, per square centimetre of die | One die each | Metal, engraving depth, sculpting (section 3.1) |
+| Magnetic rigid box | 200 x 150 x 60 mm; 2 mm greyboard; 150 gsm specialty wrap; foil on the lid; paperboard insert; concealed magnets | 500 and 1,000 | Wrap paper, hand work, magnets, insert |
+| Folding carton | 350 gsm SBS; 4 colours plus 1 foil and 1 emboss; crash-lock bottom | 5,000 | Cutting die, foil block, board |
+| Handmade carrier bag | 250 x 100 x 300 mm; 210 gsm uncoated; turned-over top with board; cotton rope handles | 500 | Hand labour, handle type (section 6.15) |
+| Hoarding print and mount | 40 x 20 ft front-lit flex, solvent print, mounted on the existing frame | One site | Material per square foot, access, night work |
+| Mupi backlit print | 1185 x 1750 mm visible, backlit film | 1 and 10 faces | Film, lightbox proofing |
+| SEG backdrop | Dye-sublimated fabric with silicone edge, per square metre; frame hire separate | Per m² | Frame purchase or hire, size |
+| UV flatbed panel | 3 mm Dibond, direct UV print with a white layer, per square metre | Per m² | Board, white layer, cutting |
+
+Trade minimum orders (T): handmade rigid boxes from about 300 to 500; machine-made rigid boxes from several thousand; custom woven ribbon by the roll; moulded pulp inserts with their own tooling charge; moulded glass details in the tens of thousands. Agency billing on print and mock-ups: cost plus about 10 percent handling, or production at the house mark-up (24-business-of-creative-and-agency-operations.md, sections 3.9 and 7.3).
+
 ## Terms introduced
 
+- Accordion fold (concertina): parallel folds in alternating directions that give equal panels.
 - AM screening: amplitude modulated halftoning that varies dot size on a fixed grid at fixed angles per ink.
+- Anamorphic 3D: forced-perspective LED content rendered for one viewpoint so that it appears to leave the screen.
 - Anilox roller: an engraved roller that meters a controlled film of ink onto a flexo plate.
 - Applied ceramic labelling: ceramic ink screen printed onto glass and fired for a permanent decoration.
 - AQL sampling: acceptance sampling by an acceptable quality limit, with sample sizes from ISO 2859-1 tables.
 - Aqueous coating: a water-based protective coating applied inline by a coating tower.
 - Arc label: a fan-shaped label calculated to sit straight on a conical or tapered container.
 - Art paper and art card: Indian trade names for coated paper and coated board.
+- ASCI: the Advertising Standards Council of India, the self-regulatory advertising body.
 - Backlit film: translucent polyester printed for lightboxes and illuminated panels.
+- Balancing paper: a lining glued inside a rigid box so the tension matches the outer wrap and the board stays flat.
+- Belly band: a paper band wrapped around a stationery suite or a book.
+- BIS: the Bureau of Indian Standards, which runs gold hallmarking.
+- Blade sign: a double-sided sign projecting at right angles from a facade.
 - Bleed: image extended beyond the trim line so trimming leaves no white edge.
 - Blind emboss: a raised impression with no ink or foil.
+- Bonded leather: leather fibre re-formed with a binder into sheets.
+- Book cloth: woven fabric backed for covering book cases; buckram is a heavy, filled grade.
+- BOPP: biaxially oriented polypropylene, the common laminating film.
+- Brightness (ISO brightness): the blue-light reflectance of paper at 457 nm.
+- Built-up letters: fabricated sign letters with folded metal faces and returns.
 - Bulk: caliper divided by grammage, the measure of how thick a sheet is for its weight.
+- C1S and C2S: board coated on one side or on both sides.
+- Calendering: pressing paper between polished rollers to smooth and gloss it.
 - Caliper: the thickness of a sheet, in micrometres.
 - Case binding: hardcover binding with a text block glued into a case of board covered in cloth, paper or leather.
+- Cast and calendered vinyl: cast vinyl is cast as a thin film, conformable and long-lasting; calendered vinyl is rolled into sheet, cheaper and for flat, short-term use.
+- CCPA: India's Central Consumer Protection Authority, which issues binding advertising and claims guidelines.
 - Chain of custody (CoC): FSC or PEFC certification that each company handling certified material keeps it traceable.
+- CIE whiteness: a measure of how white paper looks, pushed up by optical brightening agents.
+- CIF: cost, insurance and freight, the import value on which customs duty is charged.
+- Coffret: a gift box holding several products, usually fragrance or beauty.
 - Cold foil: foil transferred onto a printed adhesive and cured inline, with no heated die.
+- Column-centimetre: the newspaper booking unit, one column wide by one centimetre deep.
 - Combination die: a brass die that foils and embosses in one pass.
+- Combination package: a retail pack holding several products, which still carries Legal Metrology declarations.
 - Contract proof: a proof made to ISO 12647-7 that the press is contracted to match.
+- Corrugated board: a fluted paper medium glued between liners for transit strength.
+- Cotton drill: a strong twill-woven cotton used for dust bags.
+- Cotton paper: paper made from cotton linters or rag, soft, bulky and strong.
 - Crash-lock bottom: a carton base that locks into place when the carton is opened.
 - Creasing (scoring): pressing a channel into board so it folds without cracking.
 - Creep (shingling): the outward push of inner pages in a saddle-stitched book, compensated in imposition.
+- Cross fold (French fold): two folds at right angles in one sheet.
+- CTP: computer-to-plate, imaging printing plates directly from the digital file.
+- D50: the 5000 K daylight simulator of ISO 3664 used to judge print.
+- Damask, taffeta and satin labels: woven label constructions, damask for the finest detail, taffeta coarser and cheaper, satin soft and lustrous.
+- DataMatrix: a square two-dimensional barcode.
 - Day-night printing: extra ink density or a second printed layer on backlit material so it reads in daylight and when lit.
+- Dayparting: scheduling different creative by time of day on a screen.
+- DCP: Digital Cinema Package, the file format for cinema projection.
 - Deboss: an impression pressed into the sheet.
+- Decision point: a place where a visitor chooses a direction, and so where a wayfinding sign belongs.
 - Deckle edge: the soft, uneven edge of handmade or mould-made paper.
+- Deinkability: how well ink separates from fibre in paper recycling.
+- Delta E (dE00): the measured difference between two colours; dE00 uses the CIEDE2000 formula.
 - Die cutting: cutting shapes, creases and perforations with a steel-rule die.
 - Die stamping: the British stationers' term for engraving.
 - Dieline: the flat technical drawing of a pack's cuts, creases, glue areas and panels.
 - Digital embellishment: inkjet-applied raised varnish and foil that needs no die.
+- Digitising: converting artwork into an embroidery stitch file.
+- Discharge ink: textile ink that removes the fabric's dye and leaves a soft print.
+- DOOH: digital out of home, networked screens in public places sold by the slot.
 - Drawdown: a spot ink pulled by hand on the actual stock to show its true appearance.
 - Dry-back: the gloss difference between printed and unprinted areas as ink dries on coated stock.
+- DTF and DTG: direct-to-film, a printed film transfer bonded to fabric with heat; direct-to-garment, inkjet printing straight onto fabric.
 - Duplex board: Indian trade name for coated recycled board with a grey back.
 - Duplexing: laminating two sheets together into one thicker board.
+- Dust bag: a cloth bag that protects a product inside its box.
+- Dust jacket: a removable paper wrapper with flaps around a cased book.
 - Dwell time: how long an audience can look at an OOH site.
-- E-way bill: India's electronic document for moving goods above Rs 50,000 in value.
+- Dye sublimation: printing dye that turns to gas under heat and bonds into polyester.
+- Dynamic QR code: a QR code that points to a redirect, so its destination and tracking can change after printing.
+- E-way bill: India's electronic document for moving goods above ₹50,000 in value.
+- EAN-13: the 13-digit retail barcode.
+- Ear panel: a small advertisement box beside a newspaper's masthead.
 - ECMA Code: the catalogue of standard folding carton styles.
+- Edge foiling: metallic foil applied to the edges of cards or books.
 - Edge painting: colouring the edges of finished cards or books.
 - Effective resolution: an image's pixel count divided by its printed size, in ppi.
+- EN 13501-1: the European reaction-to-fire classification, A1 to F with smoke and flaming-droplet subclasses.
+- Endpaper: the folded sheet glued between a book's case and its text block.
 - Engraving (intaglio): printing from ink held in a recessed die, giving a raised image.
+- EPR: extended producer responsibility, the duty of producers and brand owners to collect and process the packaging they place on the market.
+- Error correction level: the share of damaged codewords a QR code can restore, set as L, M, Q or H.
+- EVA: ethylene vinyl acetate, used as hot-melt binding glue and as foam.
 - Exposed spine: a binding that leaves sewn signatures visible at the spine and lies flat.
+- Extended gamut printing (ECG): process printing with orange, green and violet added to CMYK.
+- Face-lit channel letters: sign letters with translucent faces lit from inside.
 - FBB: folding boxboard, a carton board with a mechanical pulp middle between chemical pulp layers.
 - FEFCO Code: the catalogue of standard corrugated box styles, such as 0201 and 0427.
 - Felt-marked paper: paper textured by the felt of the paper machine.
+- Fit-out manual: a landlord's rule book for tenant design and signage.
+- Flat-cut letters: letters cut from sheet metal or acrylic and pinned off a wall.
 - Flexography: printing from flexible relief plates inked by an anilox roller.
+- Flock: fibres bonded to a surface for a velvet feel.
 - Flute: the wave-shaped middle layer of corrugated board, graded A, B, C, E and F by height.
 - FM screening: frequency modulated (stochastic) halftoning with a fixed tiny dot whose density varies.
+- Folder-gluer: a machine that folds a carton blank along its creases and glues the side seam in one pass.
+- FOOH: fake out of home, computer-generated imagery presented as a real outdoor installation.
+- French window: a newspaper front-page format with die-cut flaps that open onto the ad.
+- Front-of-pack labelling: nutrition grades or warnings printed on the principal display panel.
 - FSC: Forest Stewardship Council, the forest certification scheme with 100%, Mix and Recycled labels.
+- FSSAI: the Food Safety and Standards Authority of India.
+- G7: Idealliance's press calibration method based on neutral grey balance.
 - Gate fold: a fold where two outer panels close over a centre panel like doors.
+- GC1 and GC2: folding boxboard grades with a white or a cream back.
+- GD and GT: recycled carton board grades with a grey back or a white or cream back.
+- Ghosting: a faint shadow image where the press starves an area of ink.
+- Gilding: real gold leaf applied to book edges.
+- Glassine: a smooth, grease-resistant translucent paper.
 - Grain direction: the alignment of fibres in the machine direction of a sheet.
+- Grammage (gsm): the weight of paper in grams per square metre.
 - Gravure: printing from engraved cylinders, economic on very long runs.
 - Greyboard (kappa board): rigid recycled board used under wraps in rigid boxes and book cases.
 - Gripper edge: the unprintable sheet margin held by the press grippers.
+- GS1 Digital Link: a QR code that carries the product number inside a web address.
+- GSO: the GCC Standardization Organization, whose standards the UAE adopts as UAE.S GSO.
+- Guilloche: fine interlaced line patterns printed to resist copying.
+- Gusset: the folded side panel of a bag.
+- Halo-lit letters: opaque sign letters lit from behind so they wash the wall with light.
+- Headband and tailband: small woven bands at the ends of a book's spine.
+- Heatset and coldset: web offset dried in an oven (magazines, catalogues) or by absorption into the paper (newspapers).
 - Hickey: a spot or ring on a printed sheet caused by dust or dried ink.
 - Hot foil stamping: transferring foil from a carrier with a heated metal die.
+- HSN code: a Harmonised System of Nomenclature code, classifying goods for tax and customs.
 - HUID: hallmark unique identification, the six-digit alphanumeric code on BIS-hallmarked gold jewellery in India.
+- Hybrid screening: AM dots in the mid-tones with FM dots in the extreme highlights and shadows.
+- Hygroscopic: taking up and losing moisture from the air.
+- ICC profile: a file describing a device's colour behaviour, in the International Color Consortium format.
+- ID-1: the ISO/IEC 7810 card size, 85.6 x 54 mm.
+- IGST: integrated goods and services tax, levied on imports into India.
 - Imposition: arranging pages on a press sheet so they read in order after folding and trimming.
+- Indian Nutrition Rating: FSSAI's draft front-of-pack star rating.
+- INGEDE: the International Association of the Deinking Industry, whose Method 11 tests deinkability.
+- ISTA: the International Safe Transit Association, whose procedures test packs for transit.
+- Jacket and half jacket: a four-page newspaper wrap over the paper, or a half-width flap over its front page.
+- Japanese stab binding: loose sheets hand-stitched through holes near the spine.
+- Kashida: the Arabic joining stroke, drawn out to justify a line.
 - Kiss cutting: cutting through a label's face material while leaving its liner intact.
 - Kiss impression: letterpress printing with ink transfer and no visible bite.
 - Knockout: an object that removes the inks beneath it.
+- Kraft: unbleached brown sulphate paper or board.
+- Lab dip: a dyed fabric sample submitted for colour approval.
 - Laid paper: paper carrying parallel laid lines and chain lines from a dandy roll.
 - Latex printing: large-format inkjet with water-based latex inks, odourless and dry on exit.
+- Lay-flat photo binding: pages mounted on board and hinged so the spread opens flat with no gutter.
+- LED neon flex: silicone-encased LED strip shaped to imitate glass neon.
+- Legal Metrology declarations: the particulars every pre-packaged retail product in India must carry.
 - Letterpress: relief printing from raised inked surfaces pressed into the sheet.
 - Liquid electrophotography (LEP): HP Indigo's digital process using liquid ElectroInk.
 - Litho-lamination: an offset-printed sheet laminated onto corrugated board.
@@ -1001,57 +1209,123 @@ The house rule: one tier 3 to 5 finish per piece, chosen for the idea; the budge
 - LRV: light reflectance value, the share of light a surface reflects, used to set sign contrast.
 - Make-ready: setting up a press or finishing machine for a job, including waste sheets.
 - Maplitho: Indian trade name for uncoated woodfree printing paper.
+- Matra: a Devanagari vowel sign attached to a consonant.
+- Metamerism: two colours that match under one light and differ under another.
+- Microencapsulated fragrance varnish: varnish carrying fragrance in microcapsules that burst under friction.
+- Microtext: lettering too small to survive photocopying.
 - Moiré: an interference pattern from overlapping regular grids.
+- Mouillette (scent blotter): an absorbent paper strip for smelling fragrance.
 - Moulded pulp: fibre formed in moulds into inserts and trays.
+- MRP: maximum retail price inclusive of all taxes, mandatory on Indian retail packs.
 - Mupi: a 2 m² backlit street poster unit at bus shelters, malls and airports.
+- National Media Authority: the UAE federal media regulator that replaced the UAE Media Council in December 2025.
+- NFPA 701: the US vertical flame test for textiles and films.
 - Nick: a small uncut tie that holds a die-cut piece in its sheet during stripping.
+- Nits: candela per square metre, the unit of screen brightness.
+- Nutri-Mark: the UAE's front-of-pack nutrition grade.
 - OBA: optical brightening agent, a fluorescent additive that makes paper look whiter.
+- Offset lithography: printing from a plate whose image areas accept ink and non-image areas accept water, via a rubber blanket.
+- One-way vision film: perforated window film that shows an image outside and stays see-through inside.
+- OOH: out of home, advertising seen in public places.
 - Opacity: the share of light a sheet blocks, which governs show-through.
+- OS&E: operating supplies and equipment, the hotel pre-opening budget that buys collateral.
+- Otabind and RepKover: softcover bindings with a free-floating cover spine that lie flat.
+- Output intent: the ICC profile embedded in a PDF/X file to name the print condition it was made for.
+- Over-run and under-run: the trade tolerance on delivered quantity either side of the order.
 - Overprint: printing an object on top of the inks beneath it.
 - PDF/X-1a: a print PDF standard allowing only CMYK and spot colour, flattened.
 - PDF/X-4: a print PDF standard allowing live transparency, layers and ICC-managed colour.
+- PEFC: Programme for the Endorsement of Forest Certification, a forest certification scheme parallel to FSC.
 - Perfect binding: a softcover binding with the page block glued at the spine.
 - Period-after-opening symbol: an open-jar icon showing how many months a cosmetic lasts once opened.
 - Pigment foil: a non-metallic coloured foil.
+- PIMS: India's Paper Import Monitoring System, which requires registration before paper imports.
 - Pixel pitch: the distance between LED centres on a screen, in millimetres.
+- Plastisol: PVC-based screen ink that sits on top of fabric and feels plastic.
+- Porte-cochère: a covered drive-up entrance to a hotel or building.
+- Post-consumer and pre-consumer fibre: recycled fibre from used products against fibre from mill and converter offcuts.
+- ppi: pixels per inch, the resolution of an image at its printed size.
+- PPWR: the EU Packaging and Packaging Waste Regulation, Regulation (EU) 2025/40.
 - Preflight: an automated check of a file against print requirements.
 - Press pass: approving the first good sheets at the press before the run.
 - Principal display panel (PDP): the face of a pack the consumer sees at retail.
+- Print condition: one of the ISO 12647-2 classes of stock and process, PC1 to PC8.
+- Proof-of-display: time-stamped and geo-tagged photographs proving an OOH site ran the campaign.
+- PSO: ProzessStandard Offsetdruck, the Fogra and bvdm process control standard built on ISO 12647-2.
 - PUR binding: binding with polyurethane reactive glue, stronger and more flexible than hot-melt.
+- Push-through acrylic: acrylic letters pushed through a routed metal face and lit from behind.
+- PVD: physical vapour deposition, a hard metallic coating bonded to steel.
 - Quality factor: the ratio of image ppi to screen lpi, usually 1.5 to 2.
 - Quiet zone: the blank margin a barcode or QR code needs to scan.
+- Registered emboss: an emboss aligned to printed or foiled art.
 - Registration black: 100 percent of all four process inks, for printer's marks only.
+- Release order (RO): an agency's written booking of a press insertion.
+- RERA: an Indian state's real estate regulatory authority, whose registration number every project advertisement carries.
 - Rich black: black ink supported by cyan, magenta and yellow for deep solids.
 - Rigid box: a set-up box of wrapped greyboard that does not fold flat.
+- RIP: raster image processor, the software that converts a PDF into plate or printer data.
 - Risograph: a stencil duplicator printing one soy-ink drum colour per pass.
+- Roll fold: successive panels rolled inward, each slightly narrower.
 - Rosette: the circular pattern of AM halftone dots seen under a loupe.
+- SAC code: a Services Accounting Code, classifying services for GST.
 - Saddle stitch: binding with wire staples through the fold of nested sheets.
 - Safe area: the inset from trim inside which important content stays.
+- Satin column: a smooth, closely stitched embroidery stroke.
 - SBS: solid bleached sulphate, a virgin white carton board.
 - Screen ruling (lpi): the number of halftone lines per inch.
+- Sculpted die: a hand-engraved brass emboss die with rounded, bevelled levels.
+- Scumming: ink printing in non-image areas when the ink and water balance fails.
 - SEG: silicone edge graphic, a printed fabric with a silicone edge inserted into a frame groove.
+- Set-off: wet ink transferring to the back of the next sheet in the stack.
+- Shade: the tint of a white paper, from blue white to natural white, cream and ivory.
 - Shadow gap: a deliberate recess between materials that hides fabrication tolerance.
+- Shaping engine: the software that joins Arabic letters and places Indic vowel signs.
+- Sheetfed and web offset: offset lithography on cut sheets or from reels of paper.
+- Shell scheme: an exhibition organiser's modular panel stand.
 - Shoulder box: a rigid box with a neck rising from the base onto which the lid closes.
 - Signature: a press sheet folded into a section of 4, 8, 16 or 32 pages.
 - Singer sewing: machine lockstitch sewing through the fold of a single section, thread visible.
+- Sleeking: fusing foil onto toner with a laminator, for very short runs.
+- Slipcase: an open-ended board box a book slides into.
 - Slug: the area outside the bleed that carries job information and is trimmed away.
+- Slur and doubling: a dot smeared in the direction of press travel, or printed twice slightly offset, each shown by a control patch.
 - Smyth sewing: sewing signatures through their folds and to each other so the book lies flat.
 - Soft-touch laminate: a film with a velvety surface, prone to scuffing.
+- Solus: the only advertisement on a page.
+- Space-only stand: bare exhibition floor for a custom build.
 - Spot colour: a pre-mixed ink printed from its own plate.
 - Spot UV: gloss UV coating applied in register to part of a sheet.
+- SRA: supplementary raw format A, oversized sheets that allow bleed on A-size work.
+- Stand-off: a fixing that holds a sign letter or panel away from the wall.
 - Step-and-repeat: an event backdrop of repeated logos for photographs.
+- Surlyn: a heavy, glass-clear ionomer resin used for fragrance caps.
+- Sweet spot: the single viewpoint from which an anamorphic image holds.
 - Swiss binding: a binding with the text block glued only to the back cover.
+- TCX and TPG: Pantone's textile system references, cotton chips and paper chips.
+- Thermochromic ink: ink whose colour changes or vanishes with warmth.
 - Thermography: raised glossy print made by heating resin powder on wet ink.
 - Through-dyed: paper coloured through its fibre so its edges match its face.
 - Tone value increase (TVI): the darkening of mid-tones on press as dots spread.
+- Trakheesi: the Dubai Land Department's permit system for property advertising.
+- Transfer-metallised board: board carrying a metallised layer transferred from a reusable film, recyclable with paper.
 - Trapping: overlapping adjacent colours slightly so misregistration leaves no gap.
 - Trim: the line where the printed sheet is cut to size.
 - Triplexing: laminating three sheets, often to show a coloured core at the edge.
+- Unit sale price: the price per kg, litre or unit printed on Indian retail packs.
+- UV-fluorescent ink: ink invisible in daylight that glows under ultraviolet light.
 - Variable data printing (VDP): digital printing that changes content from piece to piece.
+- Visual merchandising: arranging product and props in a store or window so it sells.
+- VOCs: volatile organic compounds, solvents that evaporate into the air.
+- Void pantograph: a background pattern that prints a warning word on a photocopy.
+- Volumetric weight: the courier charge weight from a parcel's dimensions, commonly length x width x height in cm divided by 5,000.
 - Wayfinding: the system of signs and cues that lets people navigate a space.
 - White dummy: an unprinted sample made from the specified stocks and binding.
+- Wire-o: double-loop wire binding that opens 360 degrees.
+- WLC: white lined chipboard, a recycled carton board.
+- Work-and-tumble: printing both sides from one plate set by tumbling the sheet head to tail, changing the gripper edge.
 - Work-and-turn: printing both sides of a sheet from one plate set by turning the sheet over.
 - Wove paper: smooth, even paper with no laid pattern.
+- Z fold: three equal panels folded in a zigzag.
 
 ## Sources and further reading
 
@@ -1065,24 +1339,44 @@ Books
 - David Gibson, The Wayfinding Handbook: Information Design for Public Places, Princeton Architectural Press, 2009.
 
 Specifications, standards and regulations
-- ISO 12647-2:2013, offset lithographic process control; ISO 12647-7:2016, contract proofing; ISO 3664:2009, viewing conditions: https://www.iso.org
+- ISO 12647-2:2013, offset lithographic process control; ISO 12647-3:2013, coldset newspaper printing; ISO 12647-7:2016, contract proofing; ISO 3664:2009, viewing conditions; ISO/TS 10128:2009, adjustment of colour reproduction (including near-neutral calibration): https://www.iso.org
 - ISO 15930 (PDF/X): part 1 and 4 (PDF/X-1a), part 7:2010 (PDF/X-4), part 9:2020 (PDF/X-6): https://www.iso.org
-- ISO 216:2007 (A and B sizes), ISO 269 (envelopes), ISO/IEC 18004:2015 (QR code), ISO 7001 and ISO 7010 (symbols), ISO 2859-1 (sampling): https://www.iso.org
+- ISO 216:2007 (A and B sizes), ISO 269:1985 (envelopes), ISO/IEC 18004:2024 (QR code), ISO 7001:2023 (public information symbols), ISO 7010:2019 (safety signs), ISO 2859-1:1999 (sampling by attributes), ISO/IEC 7810:2019 (identification cards, ID-1): https://www.iso.org
 - European Color Initiative, ISO Coated v2, PSO Coated v3 and PSO Uncoated v3 profiles: https://www.eci.org
 - Fogra, characterisation data FOGRA39, FOGRA51, FOGRA52 and the Media Wedge: https://fogra.org
-- GS1 General Specifications: https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications ; GS1 US, Sunrise 2027: https://www.gs1us.org
-- FEFCO, International Fibreboard Case Code: https://www.fefco.org ; ECMA Code for folding cartons: https://www.ecma.org
+- GS1 General Specifications (release number not recorded in this pass; cite the release read): https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications ; GS1 US, Sunrise 2027: https://www.gs1us.org
+- FEFCO, International Fibreboard Case Code (current edition): https://www.fefco.org ; ECMA Code of folding carton styles (current edition): https://www.ecma.org
+- INGEDE Method 11, assessment of print product recyclability (deinkability test): https://www.ingede.com
+- ISTA 3A and ISTA 6-Amazon test procedures, International Safe Transit Association: https://ista.org
 - FSC certification and labels: https://fsc.org ; PEFC: https://pefc.org
-- Food Safety and Standards (Labelling and Display) Regulations, 2020, FSSAI: https://www.fssai.gov.in
-- Legal Metrology (Packaged Commodities) Rules, 2011, Department of Consumer Affairs: https://consumeraffairs.nic.in
+- Food Safety and Standards (Labelling and Display) Regulations, 2020, and Food Safety and Standards (Alcoholic Beverages) Regulations, 2018, FSSAI: https://www.fssai.gov.in
+- Legal Metrology (Packaged Commodities) Rules, 2011 and amendments; CCPA Guidelines for Prevention and Regulation of Greenwashing or Misleading Environmental Claims, 2024; Department of Consumer Affairs: https://consumeraffairs.nic.in
+- Cosmetics Rules, 2020, CDSCO: https://cdsco.gov.in
+- Plastic Waste Management Rules, 2016, with the amendments of 2021, 2022 and 2024 and the EPR guidelines of 2022, CPCB: https://cpcb.nic.in
+- Paper Import Monitoring System (PIMS), DGFT: https://www.dgft.gov.in
+- GST rate notifications, CBIC: https://cbic-gst.gov.in
+- Maharashtra Shops and Establishments (Regulation of Employment and Conditions of Service) Act, 2017 and its 2022 amendment; Kannada Language Comprehensive Development Act, 2022 and its 2024 amendment: https://www.indiacode.nic.in
+- National Building Code of India 2016, Part 4, Fire and Life Safety, Bureau of Indian Standards: https://www.bis.gov.in
+- Harmonised Guidelines and Standards for Universal Accessibility in India, 2021, Ministry of Housing and Urban Affairs: https://mohua.gov.in
 - UAE.S GSO 9, UAE.S GSO 2233 and UAE.S GSO 1943, Ministry of Industry and Advanced Technology: https://moiat.gov.ae
-- Regulation (EU) 2025/40 on packaging and packaging waste: https://eur-lex.europa.eu/eli/reg/2025/40/oj
+- UAE Ministerial Resolution No. 380 of 2022 on single-use products, Ministry of Climate Change and Environment: https://www.moccae.gov.ae
+- UAE Fire and Life Safety Code of Practice, 2018 edition, UAE Civil Defence: https://www.dcd.gov.ae
+- Dubai Universal Design Code, 2017, Dubai Municipality: https://www.dm.gov.ae
+- Regulation (EU) 2025/40 on packaging and packaging waste (PPWR), Articles 10, 24 and 71: https://eur-lex.europa.eu/eli/reg/2025/40/oj
 - Swiss Ordinance on materials and articles in contact with food, SR 817.023.21: https://www.fedlex.admin.ch
-- BS 8300, design of an accessible and inclusive built environment, BSI: https://www.bsigroup.com
+- BS 8300-1:2018 and BS 8300-2:2018, design of an accessible and inclusive built environment; BS 5867-2:2008, fabrics for curtains and drapes, flammability; BSI: https://www.bsigroup.com
+- EN 13501-1:2018, fire classification of construction products (reaction to fire): https://www.cencenelec.eu ; DIN 4102-1:1998, fire behaviour of building materials: https://www.din.de
+- NFPA 701, Standard Methods of Fire Tests for Flame Propagation of Textiles and Films: https://www.nfpa.org
+- 2010 ADA Standards for Accessible Design, section 703 (signs), US Department of Justice: https://www.ada.gov
 - Bureau of Indian Standards, hallmarking and HUID: https://www.bis.gov.in
 
+Articles
+- Joshua P. Hochschild, "Publishers' Bind", First Things, November 2020: https://www.firstthings.com
+- Chris Stokel-Walker, "Adobe Just Held a Bunch of Colors Hostage", Wired, 2 November 2022: https://www.wired.com/story/adobe-pantone-color-subscription-fee/
+
 Pages read in October 2026
-- Pantone, Pantone Connect: https://www.pantone.com/pantone-connect
+- Pantone, Pantone Connect and colour finder (9140 C, 9182 C, 9580 C): https://www.pantone.com/pantone-connect ; https://www.pantone.com/color-finder/9580-C
+- Kongsberg Precision Cutting Systems: https://www.kongsbergsystems.com
 - Wikipedia, Pantone (series numbering, 2019 colour count, Adobe removal, ownership): https://en.wikipedia.org/wiki/Pantone
 - Wikipedia, Stochastic screening: https://en.wikipedia.org/wiki/Stochastic_screening
 - Wikipedia, PDF/X: https://en.wikipedia.org/wiki/PDF/X
@@ -1090,10 +1384,12 @@ Pages read in October 2026
 - Wikipedia, QR code: https://en.wikipedia.org/wiki/QR_code
 - Wikipedia, Fedrigoni, Arjowiggins and Ballarpur Industries: https://en.wikipedia.org/wiki/Fedrigoni ; https://en.wikipedia.org/wiki/Arjowiggins ; https://en.wikipedia.org/wiki/Ballarpur_Industries
 - Wikipedia, Goods and Services Tax (India): https://en.wikipedia.org/wiki/Goods_and_Services_Tax_(India)
-- Wikipedia, Packaging and Packaging Waste Regulation: https://en.wikipedia.org/wiki/Packaging_and_Packaging_Waste_Regulation
+- Wikipedia, Ghatkopar hoarding collapse: https://en.wikipedia.org/wiki/Ghatkopar_hoarding_collapse
+- Wikipedia, Line 3 (Mumbai Metro), Navi Mumbai International Airport and Noida International Airport: https://en.wikipedia.org/wiki/Line_3_(Mumbai_Metro) ; https://en.wikipedia.org/wiki/Navi_Mumbai_International_Airport ; https://en.wikipedia.org/wiki/Noida_International_Airport
+- Wikipedia, Ramadan (Umm al-Qura dates for 2026 and 2027): https://en.wikipedia.org/wiki/Ramadan
 
 Tool documentation
 - Adobe InDesign help (Live Preflight, Separations Preview, Appearance of Black) and Adobe Acrobat help (Print Production: Preflight, Output Preview): https://helpx.adobe.com/indesign.html ; https://helpx.adobe.com/acrobat.html
 
 Sibling files
-- 03-typography.md, sections 14 and 15; 04-colour.md, sections 9 and 10; 19-campaigns-and-creative-direction.md, sections 6 and 14; 24-business-of-creative-and-agency-operations.md, sections 3.6 and 7; 26-platform-and-format-specs-2026.md, sections 3.8, 5.8, 5.11 and 6; design-taste, SKILL.md sections 2 to 5 and 7.
+- 03-typography.md, sections 11, 14 and 15; 04-colour.md, sections 1.5, 4.2, 9 and 10; 05-layout-grids-and-composition.md, sections 4.2 and 4.4; 13-motion-graphics-and-3d-production.md, sections 8.2 and 8.3; 18-brand-strategy-and-identity-design.md, section 4.11; 19-campaigns-and-creative-direction.md, sections 6, 14, 16.6, 16.8 and 16.12; 22-ai-era-craft-and-generative-tools.md, section 6.8; 24-business-of-creative-and-agency-operations.md, sections 3.6, 3.9, 7.3, 7.9 and 14.7; 26-platform-and-format-specs-2026.md, sections 3.9, 5.8, 5.11 and 6; design-taste, SKILL.md sections 2 to 5 and 7.

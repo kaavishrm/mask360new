@@ -262,147 +262,208 @@ Design-taste lists the copy tells (design-taste, section 3, copy); 10-ux-writing
 
 The tells (impossible light, uniform bokeh, plastic skin, nonsense script, jewellery that does not clasp, flicker, morphing, dead eyes) and the fix for each are in 22-ai-era-craft-and-generative-tools.md, section 5. The critique rule: every generated frame is reviewed at 200 percent by someone other than its operator (22, section 5.4).
 
+### 2.12 Sound
+
+Detail in 15-lighting-and-sound.md, sections 10 to 13, and 16-editing-colour-grading-and-delivery.md. Sound carries half of every film the CD approves; the ear runs the same three-distance pass (the whole mix, each stem, each cut).
+- Loudness off target: integrated loudness in LUFS (loudness units relative to full scale, measured per ITU-R BS.1770) away from the platform target: EBU R 128 sets minus 23 LUFS for broadcast, and streaming platforms normalise to about minus 14 LUFS (values per platform in 15, section 13.4, and 26). A hot mix is turned down and loses its punch; a quiet one sounds thin beside the ad before it.
+- Sync drift: sound against picture is detectable from about 45ms with sound leading and 125ms with sound lagging (ITU-R BT.1359-1; 02-perception-and-psychology.md, section 16). Check lips and hard sounds (a door, a clasp) in the last minute, where drift accumulates.
+- Music cut mid-phrase: a music edit off a 4- or 8-bar boundary, so the ear hears the join.
+- Dead air: room tone (the location's ambient sound with nobody speaking) missing under cuts, so the background drops to digital silence.
+- Ambience jumping at picture cuts: the background changing exactly on the cut; the fix is a J cut or an L cut (sound leading or trailing the picture across the cut).
+- Breaths and sibilance: voice-over breaths stripped entirely (robotic) or left loud (nervous); harsh s sounds left without a de-esser (a processor that tames sibilance).
+- Recognisable library music: a track the audience has heard under ten other advertisers.
+- No Foley (sound effects performed and recorded to picture) on product handling: without the clasp click, the cork, the fabric and the key card, the product feels weightless.
+
+### 2.13 CGI and archviz
+
+Real estate is a core Mask360 category and renders are critiqued weekly. 2.11 and 22 cover generated material; CGI (computer-generated imagery) and archviz (architectural visualisation) come from a 3D pipeline (13-motion-graphics-and-3d-production.md, section 8).
+- Light that contradicts the place: sun direction disagreeing with the shadows, the stated time or the site's latitude (Mumbai about 19°N, Dubai about 25°N; compute the angle with a sun-path tool such as SunCalc); interior lights glowing at noon; a replaced sky that disagrees with the reflections in the glazing.
+- Surfaces too perfect: hard 90-degree edges with no bevel to catch light; uniform roughness with no smudge or wear; repeated plant instances.
+- Missing contact: no contact shadows or ambient occlusion (the soft darkening where surfaces meet), so furniture floats.
+- Entourage (the people, cars and props added for scale and life) cloned: the same cut-out person on two balconies.
+- Lens: ultra-wide interiors at 14 to 16mm that make a 2BHK read as a ballroom; the house keeps about 24mm full-frame equivalent or longer at about 1.2 to 1.6m eye height.
+- Regulation: section 12 of RERA makes the promoter liable to buyers who suffer loss from a false statement in an advertisement or prospectus, so a render shows no amenity absent from the sanctioned plan, and the artist's impression line stays on every render.
+
+References for light and restraint: MIR (Bergen) and Brick Visual (Budapest).
+
 ## 3. The craft tells catalogue
 
-A craft tell is a specific execution defect that a trained eye reads as unattended work. This catalogue extends design-taste, section 3 (which covers surface, type choice, layout clichés, image genres, motion clichés and copy words) and does not repeat it. Severity per 4.5. References are to work or documents that do the thing right.
+A craft tell is a specific execution defect that a trained eye reads as unattended work. This catalogue extends design-taste, section 3 (which covers surface, type choice, layout clichés, image genres, motion clichés and copy words) and does not repeat it. References are to work or documents that do the thing right. The default severity column applies 4.5: S4 where the tell breaks law, access on a core path or the brand mark; S3 where it shows in the two-second read or on the hero; S2 where it is visible at 100 percent; S1 where it shows only at 200 to 400 percent. Context moves a rating (the same tell on a hero rises a step, in an appendix it falls one), and the reviewer states any change in the note.
 
-| # | Discipline | Tell | Why it reads cheap | The fix | The reference |
-|---|---|---|---|---|---|
-| 1 | Type | Font kerning left at default on a display headline | Gaps at AV, To, Ty, LT scale with size and are visible across a room | Optical kerning in the tool, then a manual pass at final size | Klim Type Foundry specimen pages |
-| 2 | Type | Round and pointed letters aligned mathematically to the margin | The headline looks indented against the body text | Hang O, C, A and opening quotes past the margin by eye at final size | Müller-Brockmann's Musica Viva posters |
-| 3 | Type | Straight quotes and inch-mark apostrophes | Says the copy was pasted from a text editor and nobody set it | Typographer's quotes and apostrophes; primes only for feet and inches | Butterick's Practical Typography, "straight and curly quotes" |
-| 4 | Type | Hyphen used as a minus sign in prices or temperatures | The hyphen sits high and short beside figures | True minus sign (U+2212) | 03-typography.md, section 8 |
-| 5 | Type | Software-synthesised bold or italic | Outlines thickened evenly, counters clog, italics are slanted romans | Load the real weight and style; `font-synthesis: none` on the web | 03-typography.md, section 12 |
-| 6 | Type | Small caps made by scaling capitals | Stems visibly thinner than neighbouring caps | Real small caps (`font-variant-caps: small-caps` with a font that has them) or none | Commercial Type specimens |
-| 7 | Type | Proportional figures in price columns and tables | Columns of ₹ and AED values do not align | Tabular lining figures (`tnum`, `lnum`) | 03-typography.md, section 9 |
-| 8 | Type | Display type at body leading | Lines drift apart; the headline stops reading as one shape | Display leading 0.95 to 1.1; check descender and ascender clashes by eye | The Gentlewoman covers |
-| 9 | Type | A runt (one word alone) on the last line of a headline | The line break looks accidental | Rebreak by hand; `text-wrap: balance` for headings, `pretty` for body (CSS Text Level 4) | The New York Times Magazine headlines |
-| 10 | Type | Staircase or wedge rag | The paragraph shape draws attention from the words | Rebreak, adjust measure by a few characters, allow limited hyphenation in print | Bringhurst, The Elements of Typographic Style, chapter 2 |
-| 11 | Type | Rivers in justified text | White channels pull the eye down the column | Ragged right on screen; in print, adjust word-space limits and hyphenation | Hochuli, Detail in Typography |
-| 12 | Type | Positive tracking on lowercase body | Word shapes fall apart; reads like a student exercise | Tracking 0 on lowercase text; positive only on caps and small caps | 03-typography.md, section 4 |
-| 13 | Type | Adjacent sizes 2 to 4px apart | Two levels that read as one level misset | Ratio of at least 1.25, or separate by weight, case or colour | Swiss Typography posters by Josef Müller-Brockmann |
-| 14 | Type | Default underline crashing through descenders | Looks like browser default | `text-underline-offset` about 0.15 to 0.25em; skip-ink on | 21-web-design-and-digital-craft.md, section 3 |
-| 15 | Type | Devanagari set at the same point size as Latin | Devanagari looks small and light beside the Latin | Optical match by headline and x-height (03, section 15) | Ek Type's Mukta and Baloo families in bilingual use |
-| 16 | Type | Arabic letter-spaced like Latin, or bolded by stroke | Joins break; letters read as separate glyphs | Never track Arabic; use the family's real weights; kashida only as the script allows | 29LT (29Letters) Arabic families |
-| 17 | Type | Numerals in Latin face inside Arabic text without a matched design | Weight and height jump mid-line | A family with matched Arabic and Latin figures, or set figures in the Arabic face | Dubai Font (2017), drawn with matched Arabic and Latin |
-| 18 | Type | Text set on a curve or in a circle with uneven spacing | Letters on the top of the arc crowd, the bottom gap | Respace on the path by hand; prefer straight setting | Seal and medal typography, Royal Mint coins |
-| 19 | Colour | Neutral greys with a random hue cast | The palette feels dirty without anyone knowing why | Build neutrals in OKLCH: chroma near 0, or one hue shared across all tints | Linear's interface greys |
-| 20 | Colour | Brand red converted to CMYK by the software | The flame goes brown-orange in print | Specify CMYK and a Pantone separately, proof on the real stock | 04-colour.md, section 9 |
-| 21 | Colour | Gradient banding | Steps visible on large screens and projectors | Add 1 to 2 percent noise; export 10-bit for video masters | Apple product film backgrounds |
-| 22 | Colour | Gradient going grey in the middle | sRGB interpolation passes through desaturated mids | Interpolate in OKLCH (`linear-gradient(in oklch, ...)`) or add a midpoint stop | CSS Color Module Level 4, interpolation |
-| 23 | Colour | Hover and pressed states made with a black overlay | Muddy, darkened hue | Shift lightness in OKLCH keeping hue | Radix Colors 12-step scales |
-| 24 | Colour | The accent used twice in one view | Neither use reads as the signal | One accent use per view; second emphasis by weight or space | design-taste, section 7 (the flame accent) |
-| 25 | Colour | Saturation creeping across rounds | The work grows louder and cheaper by increments | Compare against v1 at every round; hold saturation values as tokens | Aesop's constant label palette |
-| 26 | Colour | White balance different across a photo set | The set looks sourced from several shoots | Grade the set together to one neutral reference | Kinfolk and Apartamento photo stories |
-| 27 | Colour | Dark mode as an inverted light mode | Pure black ground with full-saturation colours vibrates | Ground near #0A0A0A to #121212, accents desaturated | Material Design dark theme guidance (#121212 surface) |
-| 28 | Colour | Elegant pale grey captions under 4.5:1 | Illegible on phones in daylight, fails WCAG | Raise contrast; carry elegance through size and space | WCAG 2.2, 1.4.3 |
-| 29 | Colour | Skin shifted by the brand's colour grade | Faces turn orange or green with the look | Key and protect skin before the look node | 16-editing-colour-grading-and-delivery.md, section 8.5 |
-| 30 | Layout | Elements drifting 2 to 8px off the grid | Accumulated nudging reads as unsure | Snap to columns; audit with overlay | Vignelli and Noorda, NYC Transit Graphics Standards Manual, 1970 |
-| 31 | Layout | Edges that nearly align | Reads as a mistake | Align exactly or offset by at least one grid unit | Experimental Jetset posters |
-| 32 | Layout | Outer margins that differ slide to slide | The deck jumps as it advances | Master slides with locked margins; check by flicking through at speed | Apple keynote decks |
-| 33 | Layout | Content centred on the mathematical centre | Looks low on the page | Raise to the optical centre, a few percent above | Classic book title pages |
-| 34 | Layout | Equal spacing between unrelated groups | Proximity no longer explains structure | Space within groups at least half the space between them | Gestalt proximity; Stripe's documentation pages |
-| 35 | Layout | Captions far from their images | The eye cannot pair them | Caption within one line-height of the image edge | The Gentlewoman picture captions |
-| 36 | Layout | Image and headline both at full strength | Nothing leads | One leads; the other recedes in size or value | Ssense editorial pages |
-| 37 | Layout | Gutters narrower than the leading | Columns read across the gutter | Gutter at least the body leading, usually more | Müller-Brockmann, Grid Systems in Graphic Design |
-| 38 | Layout | Type over the busiest part of a photograph | Legibility fails or needs a scrim | Crop the image to give type a quiet area | Bottega Veneta campaign layouts |
-| 39 | Layout | The logo on every slide or page at varying sizes | Furniture competing with content | Logo on cover and close only, fixed size | Pentagram case study decks |
-| 40 | Layout | A single orphan bullet carried to a new slide | Looks like overflow | Edit the copy to fit, or restructure the slide | Edward Tufte's handouts |
-| 41 | UI | Nested radii that are not concentric | Corners look pinched or bloated | Inner radius equals outer radius minus padding | 06-ui-design-craft.md, section 13 |
-| 42 | UI | Icons from two libraries mixed | Stroke, terminal and corner styles clash | One icon family per product; draw missing icons to its grid | Apple SF Symbols |
-| 43 | UI | Icon stroke heavier than the adjacent text stem | The icon shouts over its label | Match stroke to text stem weight at that size | Linear's sidebar |
-| 44 | UI | Focus outline removed with no replacement | Keyboard users are lost; fails WCAG 2.4.7 | A 2px focus ring at 3:1 against adjacent colours | GOV.UK Design System focus states |
-| 45 | UI | Hover treatments differ across similar components | Feels assembled from several kits | One hover rule per component class | Vercel dashboard |
-| 46 | UI | Empty, loading and error states never designed | The developer's default appears in production | Design the state matrix per component (06, section 3) | Notion's empty states |
-| 47 | UI | Spinner on actions under one second | Flicker that makes fast feel slow | Show nothing under about 1 second; a skeleton or progress beyond | Nielsen's response-time limits (0.1, 1 and 10 seconds) |
-| 48 | UI | Shadows with mixed light directions | Breaks the physical model | One light source, one elevation scale | 06-ui-design-craft.md, section 12 |
-| 49 | UI | Touch targets under 24 CSS px | Missed taps; fails WCAG 2.5.8 | 24px minimum, 44pt for primary mobile actions per Apple HIG | Apple Human Interface Guidelines |
-| 50 | UI | Placeholder text used as the label | Label vanishes on typing; low contrast | Persistent label above the field | GOV.UK Design System text input |
-| 51 | UI | Buttons labelled "Submit" or "Click here" | Says nothing about the outcome | Verb plus object: "Request the floor plan" | 10-ux-writing-and-content-design.md |
-| 52 | UI | Disabled primary button with no reason given | Users cannot tell what is missing | Keep enabled and validate, or state the missing requirement | GOV.UK Design System button guidance |
-| 53 | UI | Half-pixel blur from centring transforms | Text and hairlines go soft | Round positions to whole pixels; avoid translate(-50%) on odd sizes | Figma pixel grid, snap to pixel |
-| 54 | UI | Row heights that change between screens | Density mismatch | One density scale per product, two modes at most | Gmail's display density settings |
-| 55 | UI | Toasts that vanish before they can be read | Message lost, action missed | Persist messages with actions until dismissed | WCAG 2.2.1 Timing Adjustable |
-| 56 | Motion | Durations chosen per element | No rhythm; the interface feels nervous | Three or four duration tokens (for example 150, 250, 400ms) | 12-motion-principles-and-ui-motion.md, section 17 |
-| 57 | Motion | Exits as slow as entrances | Interface lingers | Exits about 20 to 30 percent shorter than entrances | Material Design motion guidance |
-| 58 | Motion | List stagger where the last item lands after a second | Users wait for decoration | Cap total stagger near 300 to 400ms | 12-motion-principles-and-ui-motion.md, section 5 |
-| 59 | Motion | No `prefers-reduced-motion` handling | Excludes vestibular-sensitive users | Reduce to opacity changes when the setting is on | 12-motion-principles-and-ui-motion.md, section 11 |
-| 60 | Motion | Scroll speed hijacked | Visitor loses control; trackpads feel broken | Native scroll; scroll-linked effects only on transform and opacity | Apple product pages' scroll scenes |
-| 61 | Motion | Animated icons in a different stroke weight from static icons | The set looks sourced from two places | Animate from the same icon masters | Airbnb's Lottie-based icon animation |
-| 62 | Motion | Logo animation that resolves off the final lockup | The last frame and the static logo disagree | End on the exact master artwork, frame-checked | Studio Dumbar identity animations |
-| 63 | Motion | Body text animated letter by letter | Reading is blocked for the length of the effect | Kinetic type for display only; body arrives as a block | Studio Dumbar, OutSystems identity |
-| 64 | Motion | Ease-out tails of 600ms or more on small UI moves | Interface feels sluggish | 150 to 300ms for small moves (12, section 4) | Linear's command menu |
-| 65 | Motion | Every element on a page entering from the same direction | Monotone choreography | Choreograph by hierarchy: lead element first, one direction per idea | Buck and Ordinary Folk title sequences |
-| 66 | Motion | Camera moves in 3D with no motivation | Spectacle with no idea | Each move reveals something or holds still | Apple product reveal films |
-| 67 | Video | Key light side flips within a scene | Continuity break the audience feels | Lighting plan per scene; check stills side by side | Roger Deakins' lighting in Skyfall |
-| 68 | Video | Eyelines that do not meet | The two people seem not to be talking | Shoot both sides of the line consistently; mark eyeline on set | Wong Kar-wai and Christopher Doyle, In the Mood for Love |
-| 69 | Video | Cut between near-identical angles | Reads as a jump cut | Change angle by at least about 30 degrees or change size clearly | Walter Murch, In the Blink of an Eye |
-| 70 | Video | Warp Stabilizer wobble | Rubbery picture | Lower smoothness, crop more, or keep the handheld | 16-editing-colour-grading-and-delivery.md, section 10.4 |
-| 71 | Video | Crushed blacks | Detail lost in hair and fabric | Shadows lifted to read texture; check the waveform floor | 16, section 8.13 |
-| 72 | Video | Clipped highlights on marble, white shirts and chrome | Flat white blobs | Expose for highlights; roll off in the grade | 16, section 9.4 |
-| 73 | Video | Dissolve as the default transition | Signals indecision | Cut; dissolve only for time or meaning | Murch's Rule of Six (16, section 1.1) |
-| 74 | Video | Score from frame one | No breath, reads as a stock edit | Open on room tone or silence, bring music on a beat or a cut | 16, section 4.5 |
-| 75 | Video | Default editor captions | Typographic system abandoned at the last step | Captions in the brand face, safe-zone placed (16, section 11) | 16-editing-colour-grading-and-delivery.md, section 11.2 |
-| 76 | Video | Music drowning the voice | Message lost | Duck music under dialogue; mix to the platform target | 15-lighting-and-sound.md, section 13 |
-| 77 | Video | Whoosh effect on the end-frame logo | Stock library cliché | Silence, room tone or the score's last note | 15-lighting-and-sound.md, section 15 |
-| 78 | Video | 25 and 30 fps footage mixed without proper conversion | Judder on pans | Shoot at one project rate; optical-flow conversion only where unavoidable | 16, section 10.6 |
-| 79 | Video | Vertical reframe that cuts heads and products | Automated reframe left unchecked | Reframe by hand per shot with the platform safe zone on | 26-platform-and-format-specs-2026.md, section 2 |
-| 80 | Video | Speed ramps on every move | Imported trick, dated quickly | Real-time speed; one ramp only if it is the idea | Spike Jonze, Kenzo World (2016) |
-| 81 | Photo | On-camera flash as the only light | Flat, shadowless, documentary by accident | Off-axis key, negative fill, or window light | Paolo Roversi portraits (soft but directional) |
-| 82 | Photo | Wide lens close to a face | Swollen nose, distorted features | About 85 to 135mm full-frame equivalent for portraits | Peter Lindbergh portraits |
-| 83 | Photo | Converging verticals in architecture | Building looks to be falling | Shift lens or perspective correction | Hélène Binet's architectural photography |
-| 84 | Photo | Mixed colour temperatures uncorrected | Green and orange casts in one frame | Gel to one temperature or grade by area | Interiors in Apartamento |
-| 85 | Photo | Product cut out with no contact shadow | Floats like a render | Shoot on the surface; keep or rebuild the real contact shadow | Aesop product still lifes |
-| 86 | Photo | Catchlight shaped like a ring light | Signals influencer kit | Window, softbox or a shaped source | Classic Vogue beauty covers |
-| 87 | Photo | Jewellery lit only with soft light | Stones look dead, no fire | Hard point sources for sparkle with soft fill for metal | Van Cleef and Arpels high jewellery stills |
-| 88 | Photo | Jewellery that floats on velvet | Product catalogue language | Worn on skin, in motion, low light | Sophie Bille Brahe campaigns |
-| 89 | Photo | Over-sharpening halos | Crunchy edges, digital look | Sharpen for output size at low radius; mask to detail | 16, section 10.8 |
-| 90 | Photo | Product half out of focus at f/1.4 | The thing being sold is soft | Stop down or focus-stack | Watch photography by A. Lange und Söhne |
-| 91 | Print | Gloss lamination on a luxury piece | Reflects light, shows fingers | Uncoated stock, or soft-touch where durability is needed | Hermès printed matter |
-| 92 | Print | Two black builds side by side | One panel looks grey | One rich black per document (C60 M40 Y40 K100 on coated; 04, section 10.2) | 04-colour.md, section 10.2 |
-| 93 | Print | Foil on every element | Ornament as status signal | One foil element, or blind emboss | Le Labo's typed labels |
-| 94 | Print | Foil or emboss on hairlines below the finisher's minimum | Detail fills in | Ask the finisher's minimum line before artwork | Press check with the finisher |
-| 95 | Print | Small type knocked out of a four-colour build | Coloured fringes from misregistration | Knock out of a single ink, or set type larger and heavier | 04, section 10.2 rules |
-| 96 | Print | Fold across the paper grain | The fold cracks | Fold parallel to grain; score heavy boards | Printer's imposition proof |
-| 97 | Print | Spot UV as decoration | Surface trick that reads as mass-market | One functional varnish or none | Penguin Classics paperbacks (matte, uncoated feel) |
-| 98 | Print | Proof viewed on a coated profile for uncoated stock | Colour and shadow mismatch on press | Proof with the correct output profile and a printed contract proof | FOGRA and PSO offset printing standards (04, section 10) |
-| 99 | Print | Small grey text built from four colours | Fuzzy at body sizes | Grey from black ink only | Newspaper typesetting practice |
-| 100 | Print | Thin single-ply business cards | Bend in the hand | Duplex or triplex boards, letterpress or blind deboss | 26-platform-and-format-specs-2026.md, section 6 |
-| 101 | Print | Ignoring paper colour in the palette | Whites go cream, colours shift on uncoated | Choose the paper first; proof colours on it | G F Smith Colorplan swatches |
-| 102 | Web | Font swap shifting the layout | Page jumps as it loads | `size-adjust` and metric overrides on the fallback, or `font-display: optional` | 21-web-design-and-digital-craft.md, section 3 |
-| 103 | Web | Images without dimensions | Layout shift above CLS 0.1 | Width and height or `aspect-ratio` on every media element | web.dev, CLS guide |
-| 104 | Web | Autoplay hero video as the LCP element | LCP above 2.5 seconds on mobile | Poster image as LCP, video after, compressed AVIF (a high-efficiency image format) poster | 21, section 5 |
-| 105 | Web | Percentage preloader | Delay dressed as craft | Content first; progressive reveal | Awwwards jury usability scoring (12.2) |
-| 106 | Web | Smooth-scroll library breaking anchors and find-in-page | Basic browser functions fail | Native scroll; test anchor links and Ctrl+F | 21, section 6 |
-| 107 | Web | Cookie banner covering the hero | First impression is a consent form | Compact banner that pushes content down or sits at the bottom edge, never over the headline | GOV.UK cookie banner |
-| 108 | Web | Content hidden until a scroll animation runs | Blank sections when JavaScript fails or is slow | Content visible by default, animation as enhancement | Progressive enhancement practice |
-| 109 | Web | Default Open Graph image | Shared link previews look broken | A designed 1200 by 630 image per key page | 26-platform-and-format-specs-2026.md, section 4 |
-| 110 | Web | Framework default favicon | Looks unfinished in every tab | A favicon drawn for 16 and 32px | Brand guidelines favicon pages |
-| 111 | Web | Errors shown only after submit | Users redo forms | Inline validation on blur | GOV.UK error summary pattern |
-| 112 | Web | Default 404 page | Dead end with no brand | A 404 page with the brand voice and three ways back | GOV.UK "Page not found" pattern |
-| 113 | Copy | Feature list as a hero headline | Reads as a brochure | One line with one fact only this brand has | Aesop's product descriptions |
-| 114 | Copy | Superlatives without proof ("finest", "best") | Claims nobody believes; the code of the Advertising Standards Council of India (ASCI) requires claims to be substantiated | Replace with a verifiable fact | ASCI Code, chapter I |
-| 115 | Copy | Rhetorical question headlines | Lazy engagement device | A statement | 10-ux-writing-and-content-design.md |
-| 116 | Copy | Every sentence the same length | Monotone, machine rhythm | Vary: one short sentence after two longer | Gary Provost's sentence-length passage |
-| 117 | Copy | Title Case Headlines | Corporate and dated in house style | Sentence case | Design-taste house layer |
-| 118 | Copy | Hindi or Arabic by machine translation | Errors native readers see at once; register wrong | Transcreation by a native writer, then review | 10-ux-writing-and-content-design.md, multilingual sections |
-| 119 | Copy | "Luxury" in luxury copy | Saying it proves its absence | Describe material, place, hand, time | design-taste, references/worlds.md, hospitality |
-| 120 | Copy | Calls to action that mismatch the destination | "Discover" leads to a form | CTA says what happens next | 10-ux-writing-and-content-design.md |
-| 121 | Copy | Brand speaking of itself in the third person | Distance, press-release voice | "We" and the host's voice | design-taste, references/worlds.md, hospitality DNA |
-| 122 | Identity | Mark that fails at 16px | Detail closes up in a favicon or app tab | A small-size version drawn separately | 18-brand-strategy-and-identity-design.md, section 3 |
-| 123 | Identity | Clear space set arbitrarily | Lockups crowd in partner use | Clear space defined from a part of the mark | Vignelli's Unimark standards |
-| 124 | Identity | Monogram made by overlapping font letters | No drawing, no ownership | Draw the monogram; optical weights balanced | Louis Vuitton monogram canvas (1896) |
-| 125 | Identity | Symbol and wordmark at different optical weights | The lockup tilts | Adjust symbol weight and size until they balance | Chermayeff and Geismar lockups |
-| 126 | Identity | Colour specified only in hex | Print and signage drift | Hex, RGB, CMYK per stock, Pantone, and paint references | 18-brand-strategy-and-identity-design.md, section 12 |
-| 127 | Identity | Bilingual lockup designed after the Latin one | Arabic or Devanagari looks bolted on | Design both scripts together from the start | Khatt Foundation, Typographic Matchmaking |
-| 128 | Deck | Slide furniture: logo, page number, footer on every slide | Clutter that shrinks the content area | Cover, section breaks and close only | Apple keynote slides |
-| 129 | Deck | Six-plus bullets on a slide | Document pasted into a deck | One idea per slide, the detail in a leave-behind | Edward Tufte, The Cognitive Style of PowerPoint |
-| 130 | Deck | Charts in default software palettes | Breaks the visual system at the most important slide | Chart colours from the palette; one highlighted series | Financial Times Visual Vocabulary |
-| 131 | Deck | Ending on "Thank you" | The last slide wasted | End on the idea or the decision being asked for | design-taste, section 2, "an ending" |
-| 132 | Social | Key text inside the bottom 20 percent of a 9:16 frame | Covered by captions and buttons | Respect each platform's safe zone | 26-platform-and-format-specs-2026.md, section 2 |
-| 133 | Social | Reel cover frame chosen by the platform | Grid shows a blurred mid-motion frame | Design and upload a cover | Instagram cover selection |
-| 134 | Social | Carousel slides with shifting margins | The swipe exposes the inconsistency | One master frame for every slide | 26-platform-and-format-specs-2026.md, section 2 |
-| 135 | Social | Logo in the first frame of a reel | Signals an ad; thumbs scroll | Earn the first second with the picture; brand later | 16, section 4.5 |
+| # | Discipline | Tell | Why it reads cheap | The fix | The reference | Default severity |
+|---|---|---|---|---|---|---|
+| 1 | Type | Font kerning left at default on a display headline | Gaps at AV, To, Ty, LT scale with size and are visible across a room | Optical kerning in the tool, then a manual pass at final size | Klim Type Foundry specimen pages | S3 |
+| 2 | Type | Round and pointed letters aligned mathematically to the margin | The headline looks indented against the body text | Hang O, C, A and opening quotes past the margin by eye at final size | Müller-Brockmann's Musica Viva posters | S2 |
+| 3 | Type | Straight quotes and inch-mark apostrophes | Says the copy was pasted from a text editor and nobody set it | Typographer's quotes and apostrophes; primes only for feet and inches | Butterick's Practical Typography, "straight and curly quotes" | S2 |
+| 4 | Type | Hyphen used as a minus sign in prices or temperatures | The hyphen sits high and short beside figures | True minus sign (U+2212) | 03-typography.md, section 8 | S2 |
+| 5 | Type | Software-synthesised bold or italic | Outlines thickened evenly, counters clog, italics are slanted romans | Load the real weight and style; `font-synthesis: none` on the web | 03-typography.md, section 12 | S2 |
+| 6 | Type | Small caps made by scaling capitals | Stems visibly thinner than neighbouring caps | Real small caps (`font-variant-caps: small-caps` with a font that has them) or none | Commercial Type specimens | S2 |
+| 7 | Type | Proportional figures in price columns and tables | Columns of ₹ and AED values do not align | Tabular lining figures (equal-width numerals at cap height; `tnum`, `lnum`) | 03-typography.md, section 9 | S2 |
+| 8 | Type | Display type at body leading | Lines drift apart; the headline stops reading as one shape | Display leading 0.95 to 1.1; check descender and ascender clashes by eye | The Gentlewoman covers | S2 |
+| 9 | Type | A runt (one word alone) on the last line of a headline | The line break looks accidental | Rebreak by hand; `text-wrap: balance` for headings, `pretty` for body (CSS Text Level 4) | The New York Times Magazine headlines | S3 |
+| 10 | Type | Staircase or wedge rag | The paragraph shape draws attention from the words | Rebreak, adjust measure by a few characters, allow limited hyphenation in print | Bringhurst, The Elements of Typographic Style, chapter 2 | S2 |
+| 11 | Type | Rivers in justified text | White channels pull the eye down the column | Ragged right on screen; in print, adjust word-space limits and hyphenation | Hochuli, Detail in Typography | S2 |
+| 12 | Type | Positive tracking on lowercase body | Word shapes fall apart; reads like a student exercise | Tracking 0 on lowercase text; positive only on caps and small caps | 03-typography.md, section 4 | S2 |
+| 13 | Type | Adjacent sizes 2 to 4px apart | Two levels that read as one level misset | Ratio of at least 1.25, or separate by weight, case or colour | Swiss Typography posters by Josef Müller-Brockmann | S2 |
+| 14 | Type | Default underline crashing through descenders | Looks like browser default | `text-underline-offset` about 0.15 to 0.25em; skip-ink on | 21-web-design-and-digital-craft.md, section 3 | S2 |
+| 15 | Type | Devanagari set at the same point size as Latin | Devanagari looks small and light beside the Latin | Optical match by headline and x-height (03, section 15) | Ek Type's Mukta and Baloo families in bilingual use | S3 |
+| 16 | Type | Arabic letter-spaced like Latin, or bolded by stroke | Joins break; letters read as separate glyphs | Never track Arabic; use the family's real weights; kashida (the stroke that lengthens Arabic joins for justification) only as the script allows | 29LT (29Letters) Arabic families | S3 |
+| 17 | Type | Numerals in Latin face inside Arabic text without a matched design | Weight and height jump mid-line | A family with matched Arabic and Latin figures, or set figures in the Arabic face | Dubai Font (2017), drawn with matched Arabic and Latin | S2 |
+| 18 | Type | Text set on a curve or in a circle with uneven spacing | Letters on the top of the arc crowd, the bottom gap | Respace on the path by hand; prefer straight setting | Seal and medal typography, Royal Mint coins | S1 |
+| 19 | Colour | Neutral greys with a random hue cast | The palette feels dirty without anyone knowing why | Build neutrals in OKLCH: chroma near 0, or one hue shared across all tints | Linear's interface greys | S2 |
+| 20 | Colour | Brand red converted to CMYK by the software | The flame goes brown-orange in print | Specify CMYK (the four process inks) and a Pantone separately, proof on the real stock | 04-colour.md, section 9 | S3 |
+| 21 | Colour | Gradient banding | Steps visible on large screens and projectors | Add 1 to 2 percent noise; export 10-bit for video masters | Apple product film backgrounds | S2 |
+| 22 | Colour | Gradient going grey in the middle | sRGB interpolation passes through desaturated mids | Interpolate in OKLCH (`linear-gradient(in oklch, ...)`) or add a midpoint stop | CSS Color Module Level 4, interpolation | S2 |
+| 23 | Colour | Hover and pressed states made with a black overlay | Muddy, darkened hue | Shift lightness in OKLCH keeping hue | Radix Colors 12-step scales | S2 |
+| 24 | Colour | The accent used twice in one view | Neither use reads as the signal | One accent use per view; second emphasis by weight or space | design-taste, section 7 (the flame accent) | S2 |
+| 25 | Colour | Saturation creeping across rounds | The work grows louder and cheaper by increments | Compare against v1 at every round; hold saturation values as tokens | Aesop's constant label palette | S2 |
+| 26 | Colour | White balance different across a photo set | The set looks sourced from several shoots | Grade the set together to one neutral reference | Kinfolk and Apartamento photo stories | S2 |
+| 27 | Colour | Dark mode as an inverted light mode | Pure black ground with full-saturation colours vibrates | Ground near #0A0A0A to #121212, accents desaturated | Material Design dark theme guidance (#121212 surface) | S3 |
+| 28 | Colour | Elegant pale grey captions under 4.5:1 | Illegible on phones in daylight, fails WCAG | Raise contrast; carry elegance through size and space | WCAG 2.2, 1.4.3 | S3; S4 on core text |
+| 29 | Colour | Skin shifted by the brand's colour grade | Faces turn orange or green with the look | Key and protect skin before the look node | 16-editing-colour-grading-and-delivery.md, section 8.5 | S3 |
+| 30 | Layout | Elements drifting 2 to 8px off the grid | Accumulated nudging reads as unsure | Snap to columns; audit with overlay | Vignelli and Noorda, NYC Transit Graphics Standards Manual, 1970 | S2 |
+| 31 | Layout | Edges that nearly align | Reads as a mistake | Align exactly or offset by at least one grid unit | Experimental Jetset posters | S2 |
+| 32 | Layout | Outer margins that differ slide to slide | The deck jumps as it advances | Master slides with locked margins; check by flicking through at speed | 05-layout-grids-and-composition.md, section 14 | S2 |
+| 33 | Layout | Content centred on the mathematical centre | Looks low on the page | Raise to the optical centre, a few percent above | Jan Tschichold's Penguin title pages and Penguin Composition Rules (1947); 05, section 7 | S1 |
+| 34 | Layout | Equal spacing between unrelated groups | Proximity no longer explains structure | Space within groups at least half the space between them | Gestalt proximity (02-perception-and-psychology.md, section 3.1); Stripe's documentation pages | S2 |
+| 35 | Layout | Captions far from their images | The eye cannot pair them | Caption within one line-height of the image edge | The Gentlewoman picture captions | S2 |
+| 36 | Layout | Image and headline both at full strength | Nothing leads | One leads; the other recedes in size or value | Ssense editorial pages | S2 |
+| 37 | Layout | Gutters narrower than the leading | Columns read across the gutter | Gutter at least the body leading, usually more | Müller-Brockmann, Grid Systems in Graphic Design | S2 |
+| 38 | Layout | Type over the busiest part of a photograph | Legibility fails or needs a scrim | Crop the image to give type a quiet area | Bottega Veneta campaign layouts | S2 |
+| 39 | Layout | The logo on every slide or page at varying sizes | Furniture competing with content | Logo on cover and close only, fixed size | Pentagram case study decks | S2 |
+| 40 | Layout | A single orphan bullet carried to a new slide | Looks like overflow | Edit the copy to fit, or restructure the slide | Edward Tufte's handouts | S2 |
+| 41 | UI | Nested radii that are not concentric | Corners look pinched or bloated | Inner radius equals outer radius minus padding | 06-ui-design-craft.md, section 13 | S2 |
+| 42 | UI | Icons from two libraries mixed | Stroke, terminal and corner styles clash | One icon family per product; draw missing icons to its grid | Apple SF Symbols | S2 |
+| 43 | UI | Icon stroke heavier than the adjacent text stem | The icon shouts over its label | Match stroke to text stem weight at that size | Linear's sidebar | S2 |
+| 44 | UI | Focus outline removed with no replacement | Keyboard users are lost; fails WCAG 2.4.7 | A 2px focus ring at 3:1 against adjacent colours | GOV.UK Design System focus states | S4 |
+| 45 | UI | Hover treatments differ across similar components | Feels assembled from several kits | One hover rule per component class | Vercel dashboard | S2 |
+| 46 | UI | Empty, loading and error states never designed | The developer's default appears in production | Design the state matrix per component (06, section 3) | Notion's empty states | S3 |
+| 47 | UI | Spinner on actions under one second | Flicker that makes fast feel slow | Show nothing under about 1 second; beyond it, a skeleton (grey placeholder shapes in the layout of the coming content) or progress | Nielsen's response-time limits (0.1, 1 and 10 seconds) | S2 |
+| 48 | UI | Shadows with mixed light directions | Breaks the physical model | One light source, one shadow depth scale | 06-ui-design-craft.md, section 12 | S2 |
+| 49 | UI | Touch targets under 24 CSS px | Missed taps; fails WCAG 2.5.8 | 24px minimum, 44pt for primary mobile actions per Apple HIG | Apple Human Interface Guidelines | S4 |
+| 50 | UI | Placeholder text used as the label | Label vanishes on typing; low contrast | Persistent label above the field | GOV.UK Design System text input | S2 |
+| 51 | UI | Buttons labelled "Submit" or "Click here" | Says nothing about the outcome | Verb plus object: "Request the floor plan" | 10-ux-writing-and-content-design.md | S2 |
+| 52 | UI | Disabled primary button with no reason given | Users cannot tell what is missing | Keep enabled and validate, or state the missing requirement | GOV.UK Design System button guidance | S2 |
+| 53 | UI | Half-pixel blur from centring transforms | Text and hairlines go soft | Round positions to whole pixels; avoid translate(-50%) on odd sizes | Figma pixel grid, snap to pixel | S2 |
+| 54 | UI | Row heights that change between screens | Density mismatch | One density scale per product, two modes at most | Gmail's display density settings | S2 |
+| 55 | UI | Toasts (brief pop-up status messages) that vanish before they can be read | Message lost, action missed | Persist messages with actions until dismissed | WCAG 2.2.1 Timing Adjustable | S2 |
+| 56 | Motion | Durations chosen per element | No rhythm; the interface feels nervous | Three or four duration tokens (for example 150, 250, 400ms) | 12-motion-principles-and-ui-motion.md, section 17 | S2 |
+| 57 | Motion | Exits as slow as entrances | Interface lingers | Exits about 20 to 30 percent shorter than entrances | Material Design motion guidance | S2 |
+| 58 | Motion | List stagger where the last item lands after a second | Users wait for decoration | Cap total stagger near 300 to 400ms | 12-motion-principles-and-ui-motion.md, section 5 | S2 |
+| 59 | Motion | No `prefers-reduced-motion` handling | Excludes vestibular-sensitive users | Reduce to opacity changes when the setting is on | 12-motion-principles-and-ui-motion.md, section 11 | S3 |
+| 60 | Motion | Scroll speed hijacked | Visitor loses control; trackpads feel broken | Native scroll; scroll-linked effects only on transform and opacity | Apple product pages' scroll scenes | S2 |
+| 61 | Motion | Animated icons in a different stroke weight from static icons | The set looks sourced from two places | Animate from the same icon masters | Airbnb's Lottie-based icon animation | S1 |
+| 62 | Motion | Logo animation that resolves off the final lockup | The last frame and the static logo disagree | End on the exact master artwork, frame-checked | Studio Dumbar identity animations | S2 |
+| 63 | Motion | Body text animated letter by letter | Reading is blocked for the length of the effect | Kinetic type for display only; body arrives as a block | Studio Dumbar, OutSystems identity | S2 |
+| 64 | Motion | Ease-out tails of 600ms or more on small UI moves | Interface feels sluggish | 150 to 300ms for small moves (12, section 4) | Linear's command menu | S2 |
+| 65 | Motion | Every element on a page entering from the same direction | Monotone choreography | Choreograph by hierarchy: lead element first, one direction per idea | Buck and Ordinary Folk title sequences | S2 |
+| 66 | Motion | Camera moves in 3D with no motivation | Spectacle with no idea | Each move reveals something or holds still | Apple product reveal films | S2 |
+| 67 | Video | Key light side flips within a scene | Continuity break the audience feels | Lighting plan per scene; check stills side by side | Roger Deakins' lighting in Skyfall | S3 |
+| 68 | Video | Eyelines that do not meet | The two people seem not to be talking | Shoot both sides of the line consistently; mark eyeline on set | Wong Kar-wai and Christopher Doyle, In the Mood for Love | S3 |
+| 69 | Video | Cut between near-identical angles | Reads as a jump cut | Change angle by at least about 30 degrees or change size clearly | Walter Murch, In the Blink of an Eye | S3 |
+| 70 | Video | Warp Stabilizer wobble | Rubbery picture | Lower smoothness, crop more, or keep the handheld | 16-editing-colour-grading-and-delivery.md, section 10.4 | S3 |
+| 71 | Video | Crushed blacks | Detail lost in hair and fabric | Shadows lifted to read texture; check the waveform floor | 16, section 8.13 | S3 |
+| 72 | Video | Clipped highlights on marble, white shirts and chrome | Flat white blobs | Expose for highlights; roll off in the grade | 16, section 9.4 | S3 |
+| 73 | Video | Dissolve as the default transition | Signals indecision | Cut; dissolve only for time or meaning | Murch's Rule of Six (emotion, story, rhythm, eye trace, two-dimensional plane, three-dimensional space, in that order; 16, section 1.1) | S2 |
+| 74 | Video | Score from frame one | No breath, reads as a stock edit | Open on room tone or silence, bring music on a beat or a cut | 16, section 4.5 | S2 |
+| 75 | Video | Default editor captions | Typographic system abandoned at the last step | Captions in the brand face, safe-zone placed (16, section 11) | 16-editing-colour-grading-and-delivery.md, section 11.2 | S2 |
+| 76 | Video | Music drowning the voice | Message lost | Duck music under dialogue; mix to the platform target | 15-lighting-and-sound.md, section 13 | S3 |
+| 77 | Video | Whoosh effect on the end-frame logo | Stock library cliché | Silence, room tone or the score's last note | 15-lighting-and-sound.md, section 15 | S2 |
+| 78 | Video | 25 and 30 fps footage mixed without proper conversion | Judder on pans | Shoot at one project rate; optical-flow conversion only where unavoidable | 16, section 10.6 | S2 |
+| 79 | Video | Vertical reframe that cuts heads and products | Automated reframe left unchecked | Reframe by hand per shot with the platform safe zone on | 26-platform-and-format-specs-2026.md, section 2 | S3 |
+| 80 | Video | Speed ramps on every move | Imported trick, dated quickly | Real-time speed; one ramp only if it is the idea | Spike Jonze, Kenzo World (2016) | S2 |
+| 81 | Photo | On-camera flash as the only light | Flat, shadowless, documentary by accident | Off-axis key, negative fill, or window light | Paolo Roversi portraits (soft but directional) | S2 |
+| 82 | Photo | Wide lens close to a face | Swollen nose, distorted features | About 85 to 135mm full-frame equivalent for portraits | Peter Lindbergh portraits | S2 |
+| 83 | Photo | Converging verticals in architecture | Building looks to be falling | Shift lens or perspective correction | Hélène Binet's architectural photography | S2 |
+| 84 | Photo | Mixed colour temperatures uncorrected | Green and orange casts in one frame | Gel to one temperature or grade by area | Interiors in Apartamento | S2 |
+| 85 | Photo | Product cut out with no contact shadow | Floats like a render | Shoot on the surface; keep or rebuild the real contact shadow | Aesop product still lifes | S2 |
+| 86 | Photo | Catchlight (the light source reflected in the eye) shaped like a ring light | Signals influencer kit | Window, softbox or a shaped source | Irving Penn's studio portraits in north light | S2 |
+| 87 | Photo | Jewellery lit only with soft light | Stones look dead, no fire | Hard point sources for sparkle with soft fill for metal | Van Cleef and Arpels high jewellery stills | S2 |
+| 88 | Photo | Jewellery that floats on velvet | Product catalogue language | Worn on skin, in motion, low light | Sophie Bille Brahe campaigns | S2 |
+| 89 | Photo | Over-sharpening halos | Crunchy edges, digital look | Sharpen for output size at low radius; mask to detail | 16, section 10.8 | S2 |
+| 90 | Photo | Product half out of focus at f/1.4 | The thing being sold is soft | Stop down or focus-stack | Watch photography by A. Lange und Söhne | S2 |
+| 91 | Print | Gloss lamination on a luxury piece | Reflects light, shows fingers | Uncoated stock, or soft-touch where durability is needed | Hermès printed matter | S2 |
+| 92 | Print | Two black builds side by side | One panel looks grey | One rich black per document (C60 M40 Y40 K100 on coated; 04, section 10.2) | 04-colour.md, section 10.2 | S2 |
+| 93 | Print | Foil on every element | Ornament as status signal | One foil element, or blind emboss | Le Labo's typed labels | S2 |
+| 94 | Print | Foil or emboss on hairlines below the finisher's minimum | Detail fills in | Ask the finisher's minimum line before artwork; confirm at the press check (approving sheets on the press floor as they run) | 20-print-packaging-ooh-and-physical-production.md, section 3 | S2 |
+| 95 | Print | Small type knocked out of a four-colour build | Coloured fringes from misregistration | Knock out of a single ink, or set type larger and heavier | 04, section 10.2 rules | S2 |
+| 96 | Print | Fold across the paper grain | The fold cracks | Fold parallel to grain; score heavy boards | 20, section 5 | S2 |
+| 97 | Print | Spot UV (a gloss varnish printed on selected areas) as decoration | Surface trick that reads as mass-market | One functional varnish or none | Penguin Classics paperbacks (matte, uncoated feel) | S2 |
+| 98 | Print | Proof viewed on a coated profile for uncoated stock | Colour and shadow mismatch on press | Proof with the correct output profile and a printed contract proof (a colour proof the printer agrees to match) | FOGRA and PSO (the German print research body and its ISO 12647-2 based offset standard; 04, section 10) | S2 |
+| 99 | Print | Small grey text built from four colours | Fuzzy at body sizes | Grey from black ink only | 04-colour.md, section 10 | S2 |
+| 100 | Print | Thin single-ply business cards | Bend in the hand | Duplex or triplex boards, letterpress or blind deboss | 26-platform-and-format-specs-2026.md, section 6 | S2 |
+| 101 | Print | Ignoring paper colour in the palette | Whites go cream, colours shift on uncoated | Choose the paper first; proof colours on it | G F Smith Colorplan swatches | S2 |
+| 102 | Web | Font swap shifting the layout | Page jumps as it loads | `size-adjust` and metric overrides on the fallback, or `font-display: optional` | 21-web-design-and-digital-craft.md, section 3 | S3 |
+| 103 | Web | Images without dimensions | Layout shift above CLS 0.1 | Width and height or `aspect-ratio` on every media element | web.dev, CLS guide | S3 |
+| 104 | Web | Autoplay hero video as the LCP element | LCP above 2.5 seconds on mobile | Poster image as LCP, video after, compressed AVIF (a high-efficiency image format) poster | 21, section 5 | S3 |
+| 105 | Web | Percentage preloader | Delay dressed as craft | Content first; progressive reveal | Awwwards jury usability scoring (12.2) | S2 |
+| 106 | Web | Smooth-scroll library breaking anchors and find-in-page | Basic browser functions fail | Native scroll; test anchor links and Ctrl+F | 21, section 6 | S3 |
+| 107 | Web | Cookie banner covering the hero | First impression is a consent form | Compact banner at the bottom edge, or one that pushes content down, leaving the headline clear | GOV.UK cookie banner | S3 |
+| 108 | Web | Content hidden until a scroll animation runs | Blank sections when JavaScript fails or is slow | Content visible by default, animation as enhancement | GOV.UK Service Manual, progressive enhancement guidance | S3 |
+| 109 | Web | Default Open Graph image (the preview image platforms show for a shared link) | Shared link previews look broken | A designed 1200 by 630 image per key page | 26-platform-and-format-specs-2026.md, section 4 | S2 |
+| 110 | Web | Framework default favicon | Looks unfinished in every tab | A favicon drawn for 16 and 32px | 18-brand-strategy-and-identity-design.md, section 3 | S1 |
+| 111 | Web | Errors shown only after submit | Users redo forms | Inline validation on blur | GOV.UK error summary pattern | S2 |
+| 112 | Web | Default 404 page | Dead end with no brand | A 404 page with the brand voice and three ways back | GOV.UK "Page not found" pattern | S2 |
+| 113 | Copy | Feature list as a hero headline | Reads as a brochure | One line with one fact only this brand has | Aesop's product descriptions | S3 |
+| 114 | Copy | Superlatives without proof ("finest", "best") | Claims nobody believes; the code of the Advertising Standards Council of India (ASCI) requires claims to be substantiated | Replace with a verifiable fact | ASCI Code, chapter I | S4 |
+| 115 | Copy | Rhetorical question headlines | Lazy engagement device | A statement | 10-ux-writing-and-content-design.md | S2 |
+| 116 | Copy | Every sentence the same length | Monotone, machine rhythm | Vary: one short sentence after two longer | Gary Provost's sentence-length passage | S2 |
+| 117 | Copy | Headlines set in Title Case ("Experience Timeless Royal Luxury") | Corporate and dated in house style | Sentence case | design-taste, section 5 (copy) | S2 |
+| 118 | Copy | Hindi or Arabic by machine translation | Errors native readers see at once; register wrong | Transcreation (rewriting copy in another language for meaning and register) by a native writer, then review | 10-ux-writing-and-content-design.md, multilingual sections | S4 |
+| 119 | Copy | "Luxury" in luxury copy | Saying it proves its absence | Describe material, place, hand, time | design-taste, references/worlds.md, hospitality | S2 |
+| 120 | Copy | Calls to action that mismatch the destination | "Discover" leads to a form | CTA says what happens next | 10-ux-writing-and-content-design.md | S2 |
+| 121 | Copy | Brand speaking of itself in the third person | Distance, press-release voice | "We" and the host's voice | design-taste, references/worlds.md, hospitality DNA | S2 |
+| 122 | Identity | Mark that fails at 16px | Detail closes up in a favicon or app tab | A small-size version drawn separately | 18-brand-strategy-and-identity-design.md, section 3 | S3 |
+| 123 | Identity | Clear space set arbitrarily | Lockups crowd in partner use | Clear space defined from a part of the mark | Vignelli's Unimark standards | S2 |
+| 124 | Identity | Monogram made by overlapping font letters | No drawing, no ownership | Draw the monogram; optical weights balanced | Louis Vuitton monogram canvas (1896) | S2 |
+| 125 | Identity | Symbol and wordmark at different optical weights | The lockup tilts | Adjust symbol weight and size until they balance | Chermayeff and Geismar lockups | S2 |
+| 126 | Identity | Colour specified only in hex | Print and signage drift | Hex, RGB, CMYK per stock, Pantone, and paint references | 18-brand-strategy-and-identity-design.md, section 12 | S2 |
+| 127 | Identity | Bilingual lockup designed after the Latin one | Arabic or Devanagari looks bolted on | Design both scripts together from the start | Khatt Foundation, Typographic Matchmaking | S3 |
+| 128 | Deck | Slide furniture: logo, page number, footer on every slide | Clutter that shrinks the content area | Cover, section breaks and close only | 05-layout-grids-and-composition.md, section 14 | S2 |
+| 129 | Deck | Six-plus bullets on a slide | Document pasted into a deck | One idea per slide, the detail in a leave-behind | Edward Tufte, The Cognitive Style of PowerPoint | S2 |
+| 130 | Deck | Charts in default software palettes | Breaks the visual system at the most important slide | Chart colours from the palette; one highlighted series | Financial Times Visual Vocabulary | S2 |
+| 131 | Deck | Ending on "Thank you" | The last slide wasted | End on the idea or the decision being asked for | design-taste, section 2, "an ending" | S2 |
+| 132 | Social | Key text inside the bottom 20 percent of a 9:16 frame | Covered by captions and buttons | Respect each platform's safe zone | 26-platform-and-format-specs-2026.md, section 2 | S3 |
+| 133 | Social | Reel cover frame chosen by the platform | Grid shows a blurred mid-motion frame | Design and upload a cover | 17-short-form-social-and-platform-craft.md, section 3 | S2 |
+| 134 | Social | Carousel slides with shifting margins | The swipe exposes the inconsistency | One master frame for every slide | 26-platform-and-format-specs-2026.md, section 2 | S2 |
+| 135 | Social | Logo in the first frame of a reel | Signals an ad; thumbs scroll | Earn the first second with the picture; brand later | 16, section 4.5 | S2 |
+| 136 | Type | Body measure outside 45 to 75 characters (120 to 140 on desktop luxury sites) | The eye loses the return; long lines read as a document dump | `max-width` of about 60 to 70ch; about 66 characters for a single column | Bringhurst, The Elements of Typographic Style, chapter 2 | S2 |
+| 137 | Type | Apostrophe in a shortened year set as an opening quote ('26) | Smart quotes guessed wrong; typesetters see it at once | U+2019, the closing quote, for the elided digits | Butterick's Practical Typography, "apostrophes" | S2 |
+| 138 | Sound | Mix off the platform loudness target | Normalisation turns it down, or it sounds thin beside the ad before it | Mix to the platform target in LUFS, true peak at or below minus 1 dBTP | 15-lighting-and-sound.md, section 13.4 | S3 |
+| 139 | Sound | Lip sync drifting late in the film | Felt before it is named; detectable from about 45ms early or 125ms late | Re-sync at the conform; check the last minute as closely as the first | ITU-R BT.1359-1 (02, section 16) | S3 |
+| 140 | Sound | Music cut mid-phrase | The ear hears the splice | Cut music on 4- or 8-bar boundaries and shape the picture cut around the phrase | 15-lighting-and-sound.md, section 12 | S2 |
+| 141 | Sound | Digital silence under dialogue cuts | The background drops out; the edit sounds pasted together | Room tone laid under every dialogue edit | 15-lighting-and-sound.md, section 10.6 | S2 |
+| 142 | Sound | Ambience jumping on the picture cut | Every cut announces itself | J and L cuts; ambience crossfaded a few frames either side | Walter Murch, In the Blink of an Eye | S2 |
+| 143 | Sound | Voice-over breaths stripped or left loud; sibilance untreated | Robotic, nervous or hissing, worst on phone speakers | Breaths lowered and kept in their timing; de-ess before the final compression | 15-lighting-and-sound.md, section 11 | S1 |
+| 144 | Sound | Library track the audience recognises | The brand borrows another advertiser's memory | Commission, or license a less-used track and edit it to picture | 15-lighting-and-sound.md, section 12 | S2 |
+| 145 | Sound | No Foley on product handling | The product feels weightless | Record the clasp, cork, fabric and key card to picture | 15-lighting-and-sound.md, section 11 | S2 |
+| 146 | CGI | The same cut-out person on two balconies | Reads as assembled from a library | Cast and vary the entourage; fewer, better people | MIR (Bergen) archviz portfolio | S2 |
+| 147 | CGI | Sun direction disagreeing with the shadows, the stated time or the latitude | Buyers who know the site see it at once | Compute the sun angle for the site with SunCalc and light to it | MIR (Bergen) archviz portfolio | S3 |
+| 148 | CGI | Interior lights glowing at noon; a sky that disagrees with the glazing reflections | Light logic broken; the image reads as CG | Lights off by day, or a dusk scene; reflections re-rendered with the chosen sky | Brick Visual (Budapest) interiors | S2 |
+| 149 | CGI | Hard 90-degree edges with no bevel; uniform roughness | Edges catch no light; surfaces look plastic | Bevels of a few millimetres; roughness maps with smudge and wear | Brick Visual (Budapest) interiors | S2 |
+| 150 | CGI | No contact shadows or ambient occlusion | Furniture floats | Contact shadows and ambient occlusion checked at 100 percent | 13-motion-graphics-and-3d-production.md, section 8 | S2 |
+| 151 | CGI | Repeated plant instances | The garden is visibly copied and pasted | Vary species, scale and rotation in the scatter | MIR (Bergen) archviz portfolio | S2 |
+| 152 | CGI | Ultra-wide interior at 14 to 16mm | A 2BHK reads as a ballroom; buyers feel misled on the site visit | About 24mm full-frame equivalent or longer at 1.2 to 1.6m eye height | Hélène Binet's architectural photography | S3 |
+| 153 | CGI | Over-blue pool water | Resort-brochure cliché | Water tinted by depth, sky and tile; checked against a photograph of real water | MIR (Bergen) archviz portfolio | S2 |
+| 154 | CGI | Amenity rendered that is absent from the sanctioned plan | Promoter liability to buyers under RERA section 12 | Render only the sanctioned plan; artist's impression line on every render | Real Estate (Regulation and Development) Act 2016, section 12 | S4 |
+| 155 | Events | LED wall too coarse for the camera distance | Moiré (interference patterns between the camera sensor and the LED grid) on the livestream | Pixel pitch in millimetres at or below the minimum viewing distance in metres; camera test on the wall before the show | 20-print-packaging-ooh-and-physical-production.md, section 7 | S3 |
+| 156 | Events | Stage key and house lights at mixed colour temperatures | Faces green or orange on camera | One key temperature, gels matched | 15-lighting-and-sound.md, sections 2 to 6 | S2 |
+| 157 | Events | Step-and-repeat logos on every surface | Sponsor clutter replaces the set | Logos on one designated wall | Es Devlin's stage designs | S2 |
+| 158 | Events | Florals taller than the lectern | Faces hidden from the room and the camera | Florals below the speaker's chin line | Checklist 5.14, question 5 | S2 |
+| 159 | Events | Set designed for the room that fails the 16:9 and 9:16 camera crops | The livestream and the reels show the wrong part of the stage | Design from the camera crops outwards to the room | Es Devlin's stage designs | S3 |
+| 160 | Events | Flat-lit photo moment | Guests' photos, which are the campaign, look cheap | Key light and backdrop designed for phone cameras | Chanel's Grand Palais show sets under Karl Lagerfeld | S2 |
+| 161 | Events | Projection keystoned | The image is a trapezoid | Projector square to the surface, or warp-corrected in the media server | 20-print-packaging-ooh-and-physical-production.md, section 8 | S2 |
+| 162 | Events | Signage below the sightline once the room is full | Nobody finds the bar or the exit | Signage above the heads of a standing crowd | 20, section 8.1 | S2 |
+| 163 | Packaging | Rigid box lid that clacks shut or sticks | The first touch of the brand feels cheap | Tolerance set so the lid settles slowly on its air cushion | Apple iPhone box | S3 |
+| 164 | Packaging | Glue or wrap creasing at the corners; ribbon pulls that fray | Hand-making looks careless | Checked on pre-production samples; ribbon ends heat-sealed or folded | 20-print-packaging-ooh-and-physical-production.md, section 6 | S2 |
+| 165 | Packaging | Black PE foam inserts | Reads as electronics or a toolbox | Moulded pulp, flocked or fabric-wrapped inserts | Aesop packaging | S2 |
+| 166 | Packaging | Barcode on the front face | Retail mechanics on the hero face | Barcode on the base or back panel | Aesop packaging | S2 |
+| 167 | Packaging | Mandatory declarations cramped or below the legal letter height | Fails the Legal Metrology rules in India; looks like an afterthought | A declarations panel designed from the start, with a 1.5mm cap height floor | 20, section 6 | S4 |
+| 168 | Packaging | Unboxing with no sequence | Everything visible at once; no reveal | Order the layers: outer, card, tissue, product, accessories | Apple iPhone box | S2 |
+| 169 | Email | Image-only email | Blank with images off; silent to screen readers | Live-text headline and body, images as support | Really Good Emails archive | S3 |
+| 170 | Email | HTML over 102KB | Gmail clips the message and hides the rest behind a link | Keep HTML under 102KB | 21-web-design-and-digital-craft.md, section 10 | S3 |
+| 171 | Email | Black logo vanishing in dark mode | The brand disappears in dark inboxes | Dark-mode logo swap, or a keyline | 21, section 10 | S2 |
+| 172 | Email | Preheader reading "View in browser"; fake "Re:" subject lines | The inbox preview wasted; deceptive subjects cost trust and deliverability | Preheader written as a second headline; an honest subject | 09-interaction-design-and-ux-patterns.md, section 13 | S3 |
 
 ## 4. Critique methods
 

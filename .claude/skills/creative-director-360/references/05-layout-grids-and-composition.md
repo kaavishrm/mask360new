@@ -512,7 +512,7 @@ Responsive layout reflows one design fluidly across widths; adaptive layout swit
 
 ### 9.1 Mobile first
 
-Design the narrowest layout first and add structure as width allows. Reasons: the phone layout forces the content order (one column admits one order, which becomes the hierarchy for every other size); CSS written with min-width queries adds rules as the screen grows, which is simpler than removing them; and in India and the Gulf the phone is the primary screen for consumer luxury, so the phone layout is the flagship.
+Design the narrowest layout first and add structure as width allows. Reasons: the phone layout forces the content order (one column admits one order, which becomes the hierarchy for every other size); CSS written with `min-width` queries adds rules as the screen grows, which is simpler than removing them; and in India and the Gulf the phone is the primary screen for consumer luxury, so the phone layout is the flagship.
 - Test widths: 320 CSS px, the conformance floor (WCAG 2.2 SC 1.4.10 Reflow, AA: no two-dimensional scrolling at 320 CSS px wide, which equals a 1280 px window at 400 percent zoom); 360 (the narrowest common Android device); 390 and 402 (iPhone); 440 (iPhone Pro Max); 768; 1024; 1366 and 1536 (the most common Windows laptop resolutions after 1920 x 1080, at 125 percent scaling; 06-ui-design-craft.md, section 1.3); 1440; 1920.
 - SC 1.4.12 Text Spacing (AA): the layout survives line height of 1.5 times the font size, paragraph spacing of 2 times, letter spacing of 0.12 em and word spacing of 0.16 em with no clipped text. That rules out fixed-height cards, fixed-height hero text boxes and text baked into images. SC 1.4.4 Resize Text (AA): text resizes to 200 percent.
 - SC 1.3.2 Meaningful Sequence (A): when `grid-area`, `order` or `row-reverse` moves boxes, the DOM still follows the reading order, because CSS `reading-flow` works only in Chromium (limited availability, MDN, October 2026).
@@ -521,8 +521,8 @@ Design the narrowest layout first and add structure as width allows. Reasons: th
 ### 9.2 Breakpoints, and why container queries replace most of them
 
 A breakpoint is a width at which the layout changes. Set breakpoints where the content breaks (the measure exceeds 75 characters, a row of cards becomes cramped); device widths change every year and make poor breakpoints.
-- House page breakpoints: 26-platform-and-format-specs-2026.md, section 4.8 (480, 768, 1024, 1280, 1440, 1920, all min-width and written in rem so they move with user zoom). Android's window size classes, which 06-ui-design-craft.md, section 16.1 also uses, are compact under 600 dp, medium 600 to 840, expanded 840 to 1200, large 1200 to 1600, extra-large 1600 and above (developer.android.com, read October 2026; large and extra-large were added for desktop and connected displays).
-- Container queries (`@container`), Baseline since 2023 (Chrome 105, Safari 16, Firefox 110), let a component change layout by the width of its container instead of the viewport. A product card in a 320 px sidebar and in an 800 px main column is one component with one rule. Page-level breakpoints then decide only the page skeleton (how many regions, where navigation sits); everything inside responds to its container. Container query units (cqi, cqw, cqh, cqb, cqmin, cqmax: 1 percent of the container's inline size, width, height, block size, smaller and larger) size type and spacing by container.
+- House page breakpoints: 26-platform-and-format-specs-2026.md, section 4.8 (480, 768, 1024, 1280, 1440, 1920, all `min-width` and written in `rem` so they move with user zoom). Android's window size classes, which 06-ui-design-craft.md, section 16.1 also uses, are compact under 600 dp, medium 600 to 840, expanded 840 to 1200, large 1200 to 1600, extra-large 1600 and above (developer.android.com, read October 2026; large and extra-large were added for desktop and connected displays).
+- Container queries (`@container`), Baseline since 2023 (Chrome 105, Safari 16, Firefox 110), let a component change layout by the width of its own container. A product card in a 320 px sidebar and in an 800 px main column is one component with one rule. Page-level breakpoints then decide only the page skeleton (how many regions, where navigation sits); everything inside responds to its container. Container query units (`cqi`, `cqw`, `cqh`, `cqb`, `cqmin`, `cqmax`: 1 percent of the container's inline size, width, height, block size, smaller and larger) size type and spacing by container.
 
 ### 9.3 Fluid column grids
 
@@ -542,7 +542,7 @@ Breakpoints and containers follow 26-platform-and-format-specs-2026.md, section 
 
 - Text: `max-width: 65ch` on paragraphs (section 4.4), giving 60 to 75 characters in most faces.
 - Content container: 1200 to 1360 px on desktop, 1600 px maximum at 1920 and above (26-platform-and-format-specs-2026.md, section 4.8). Images may run full-bleed to the viewport; text never runs past its measure.
-- Standfirsts and display text get their own max-width (about 20 to 30ch for a standfirst at 28 to 40 px), because a large standfirst across a wide container becomes a 120-character line.
+- Standfirsts and display text get their own `max-width` (about `20ch` to `30ch` for a standfirst at 28 to 40 px), because a large standfirst across a wide container becomes a 120-character line.
 - Laptop widths: the luxury grid's 1200 px container plus two 120 px margins is 1440 px, so at 1366 either the container or the margins must give. Write the container as `width: min(1200px, 100% - 2 * var(--margin))` with `--margin: clamp(48px, 8.3vw, 120px)` from the laptop breakpoint up: at 1366 that gives 113 px margins and a 1139 px container (columns of about 73 px); at 1536 the margin caps at 120 and the container returns to 1200 px with 168 px each side.
 
 ### 9.5 Intrinsic design
@@ -568,7 +568,7 @@ Jen Simmons named intrinsic web design in her 2018 talks (An Event Apart, "Every
 | Anchor positioning (`anchor-name`, `position-anchor`, `anchor()`, `position-area`, `position-try-fallbacks`) | `anchor-name`, `position-area` and `position-try-fallbacks` Baseline newly available since January 2026 (Firefox 147); `position-anchor` since September 2026 (Safari 27); the feature as a whole not yet Baseline (MDN and web-features data, October 2026) | Tooltips, menus and image labels placed relative to another element, with fallback positions when space runs out; combine with `popover` so the element renders in the top layer, outside z-index stacking (10.9) |
 | `reading-flow` | Limited availability: Chromium only (Chrome 137); not Baseline (MDN, October 2026) | Makes focus order follow the visual order of a grid; until it is Baseline, keep DOM order equal to reading order (9.1) |
 | Masonry (`display: grid-lanes`) | Experimental; not yet Baseline (MDN, October 2026) | Pinterest-style packed columns; use only as progressive enhancement with a grid fallback |
-| Native dialog and popover | Baseline (dialog 2022, popover attribute April 2024) | Overlays in the top layer, outside z-index stacking (section 10.9) |
+| Native `dialog` and `popover` | Baseline (`dialog` 2022, `popover` attribute April 2024) | Overlays in the top layer, outside z-index stacking (section 10.9) |
 
 ### 9.7 The fold
 
@@ -604,12 +604,12 @@ Editorial and luxury pages mix measure-width text, wider images and full-bleed m
 .flow > .full { grid-column: full; }
 ```
 
-Every child sits at the 65ch measure by default, and images opt into `wide` or `full`. The 8rem tracks fill before the `1fr` tracks take the leftover space, and on a phone the side tracks collapse to the margin with no media query. It is the web form of spatial zones (1.1), and a step out by one zone is the readable break that 17.2 asks for. Base technique: Josh W. Comeau, "Full-bleed layout using CSS Grid" (5 October 2020, updated December 2025), with `1fr min(42rem, 100%) 1fr`; the named lines add the intermediate wide zone.
+Every child sits at the `65ch` measure by default, and images opt into `wide` or `full`. The 8rem tracks fill before the `1fr` tracks take the leftover space, and on a phone the side tracks collapse to the margin with no media query. It is the web form of spatial zones (1.1), and a step out by one zone is the readable break that 17.2 asks for. Base technique: Josh W. Comeau, "Full-bleed layout using CSS Grid" (5 October 2020, updated December 2025), with `1fr min(42rem, 100%) 1fr`; the named lines add the intermediate wide zone.
 
 ### 9.10 Sticky split and scroll narratives
 
 The sticky split is the most common structure on luxury property, hotel and jewellery collection sites.
-- Two columns on the 12-column grid (6:6 or 7:5). One holds media with `position: sticky; top: 0; height: 100dvh` (plus `align-self: start` inside a grid, or the item stretches and never sticks); the other carries text sections at 45 to 60ch, each at least `100dvh` tall so each media change has time to register.
+- Two columns on the 12-column grid (6:6 or 7:5). One holds media with `position: sticky; top: 0; height: 100dvh` (plus `align-self: start` inside a grid, or the item stretches and never sticks); the other carries text sections at a measure of 45 to 60 characters, each at least `100dvh` tall so each media change has time to register.
 - The media changes as each text section enters the viewport, driven by `IntersectionObserver` or a CSS scroll-driven animation (12-motion-principles-and-ui-motion.md, section 7.2; 21-web-design-and-digital-craft.md, section 6.4). Under `prefers-reduced-motion: reduce`, swap with a cut in place of a cross-fade.
 - Below the medium width class it stacks into image-then-text pairs, in DOM order.
 - Uses: floor-by-floor residence narratives, room categories, collection stories. One sticky split per page (the one peak in 9.8); several in a row make the scroll feel stuck.
@@ -639,7 +639,7 @@ The app shell is the persistent frame (navigation, header, content region) that 
 
 ### 10.2 Sidebars and split views
 
-- Sidebar plus content: sidebar fixed width, content fluid with min-width 0 (so long content cannot push the sidebar off screen); Every Layout's Sidebar primitive wraps it below a content threshold, usually 50 to 60 percent of the container.
+- Sidebar plus content: sidebar fixed width, content fluid with `min-width: 0` (so long content cannot push the sidebar off screen); Every Layout's Sidebar primitive wraps it below a content threshold, usually 50 to 60 percent of the container.
 - Split view: two panes side by side, for example list and editor; ratios 1:2 or 1:3 (a 360 px list beside a fluid editor). Panes collapse to one at the compact width class.
 - Inspector panels on the right: 280 to 360 px, collapsible; the Figma and Adobe convention, so users already expect it.
 
@@ -688,10 +688,10 @@ A dashboard is a single-screen display of the most important information for one
 
 ### 10.9 Z-index and layering
 
-Layering is the stacking order of elements on the z-axis. Without a scale, z-index values escalate (999, 9999, 99999) until nothing can be predicted.
+Layering is the stacking order of elements on the z-axis. Without a scale, `z-index` values escalate (999, 9999, 99999) until nothing can be predicted.
 - House scale: base 0, raised content 10, sticky header 100, dropdown and popover 200, overlay scrim 300, modal 400, toast 500, tooltip 600. Values are tokens (07-design-systems-and-tokens.md, section 6.9).
-- Stacking contexts: any element with `transform`, `opacity` under 1, `filter` or `isolation: isolate` creates a new stacking context, and children cannot escape it whatever their z-index. Most "z-index does not work" bugs are this.
-- The top layer: the native `dialog` element opened with `showModal()` and elements using the `popover` attribute render in the browser's top layer, above every stacking context. Use them for modals, menus and tooltips and the z-index scale shrinks to page-level elements.
+- Stacking contexts: any element with `transform`, `opacity` under 1, `filter` or `isolation: isolate` creates a new stacking context, and children cannot escape it whatever their `z-index`. Most "`z-index` does not work" bugs are this.
+- The top layer: the native `dialog` element opened with `showModal()` and elements using the `popover` attribute render in the browser's top layer, above every stacking context. Use them for modals, menus and tooltips and the `z-index` scale shrinks to page-level elements.
 
 ### 10.10 Product listing and product page layouts
 
@@ -724,7 +724,7 @@ Framing is the choice of what the frame includes and excludes. The shot size (ex
 
 ### 11.4 Leading lines, frames within frames, diagonals
 
-- Leading lines: lines in the scene (corridors, colonnades, roads, the edge of a pool, a table) that carry the eye to the subject. Converging lines toward a vanishing point are the strongest.
+- Leading lines: lines in the scene (corridors, colonnades, roads, the edge of a pool, a table) that carry the eye to the subject. Converging lines towards a vanishing point are the strongest.
 - Frames within frames: doorways, arches, windows, mirrors, jharokhas and mashrabiya screens that frame the subject inside the image. They focus attention, add depth and carry cultural specificity for Indian and Gulf work (the Amber Fort arches, a Dubai courtyard).
 - Diagonals: lines at an angle read as movement and instability; horizontals as rest; verticals as dignity and height. A product shot on a diagonal reads as active; on a horizontal, as calm. Dynamic tension comes from diagonals against the frame's verticals and horizontals; Hambidge's diagonals and reciprocals (section 5.1) are a way to place them.
 
@@ -809,7 +809,7 @@ Picture editing is a core creative-director task in fashion, hospitality and pro
 - One lead image per spread, at least twice the linear size of the next (the 2 to 3 band in 6.2). Two images of equal size and equal interest side by side compete.
 - Pair across the gutter by one shared variable (horizon height, colour, gesture, form) and one contrast (scale or distance: a wide shot facing a detail), which is Block's contrast and affinity (11.7) applied to a pair.
 - Horizons and eye lines continue across the gutter or break by at least a module; a step of a few millimetres reads as an error (7.7).
-- Gazes and movement face into the spread or toward the copy (6.12).
+- Gazes and movement face into the spread or towards the copy (6.12).
 - Sequence by rhythm: wide, medium, detail, then a pause image. Three images of the same shot size in a row flatten a carousel, a profile row or an editorial sequence.
 - Edit from a contact sheet at thumbnail size first, because pairs and sequences are judged at a glance before they are judged at full size.
 
@@ -886,7 +886,7 @@ Each slide makes one point, stated in its title as a sentence (the assertion-evi
 The house look (Space Grotesk, client decks on #0A0A0A with the client's real hex, 70 visual to 30 text, curved edges, scroll-driven presentation) is set in design-taste, SKILL.md, section 7, and implemented at the sizes in 26-platform-and-format-specs-2026.md, section 7.3. Layout consequences specific to this file:
 - 70 to 30 visual to text means most slides are image or diagram slides with a single line; text-only slides are the exception and get the most space.
 - Client as hero: the client's product or property fills the frame; the agency mark is small, fixed in one corner, the same position on every slide (6.14; co-branded decks follow 6.15).
-- Scroll-driven decks (a web page presented by scrolling) use the 1440 web grid (section 2.3) with each "slide" a 100vh section; the 1920 grid applies when the deck is exported to PDF or PowerPoint.
+- Scroll-driven decks (a web page presented by scrolling) use the 1440 web grid (section 2.3) with each "slide" a `100vh` section; the 1920 grid applies when the deck is exported to PDF or PowerPoint.
 
 ### 14.4 Text sizes for projection and screen
 
@@ -965,7 +965,7 @@ Meta's safe zone for Reels and Stories (ads guide, read October 2026): keep 14 p
 
 - Canvas 1280 x 720 minimum width 640; YouTube's help page recommends 3840 x 2160 (26-platform-and-format-specs-2026.md, section 2.3). The thumbnail is seen small: in phone feeds, suggested rails and on TV grids. Test at 25 percent scale (320 x 180).
 - Composition: one face showing a clear emotion, or one object, large (filling a third to half of the frame); three words or fewer in a heavy weight; strong tonal contrast between subject and ground; nothing important in the bottom right corner, where the duration stamp sits.
-- Faces: eyes on or near the upper third line, looking toward the text or toward the viewer.
+- Faces: eyes on or near the upper third line, looking towards the text or towards the viewer.
 - Consistency: a channel's thumbnails form a grid like Instagram's (15.4); a fixed position for the text and a consistent colour field make the channel recognisable in a crowded feed.
 - YouTube Studio's Test and Compare (rolled out in 2024) tests up to three thumbnails against each other and picks by watch-time share; use it on any client video with meaningful traffic before arguing about thumbnails in a meeting.
 
@@ -1029,12 +1029,12 @@ Common breaks: an image crossing the gutter or margin, an element bleeding off t
 ### 18.2 Tools
 
 - Adobe InDesign: Layout, Margins and Columns for the column grid; Layout, Create Guides for rows and columns with gutters fitted to the margins; Preferences, Grids, Baseline Grid set to the body leading; parent pages (called master pages before 2021) for markers and folios; Optical Margin Alignment in the Story panel.
-- Figma: layout guides per frame (columns, rows, uniform grid) saved as styles; auto layout with gap and padding bound to spacing variables; a grid flow in auto layout since 2025 that maps to CSS Grid; Vertical trim in the type panel (the text-box-trim equivalent).
+- Figma: layout guides per frame (columns, rows, uniform grid) saved as styles; auto layout with gap and padding bound to spacing variables; a grid flow in auto layout since 2025 that maps to CSS Grid; Vertical trim in the type panel (the `text-box-trim` equivalent).
 - Browsers: Firefox DevTools' grid inspector (track numbers, area names, gaps) and Chrome's grid and flex overlays; overlay comparison extensions (06-ui-design-craft.md, section 20) to check build against design.
 - Keynote and PowerPoint: guides on the slide master and fixed layouts for title, body, image and divider slides; snap to guides on.
 - InDesign Liquid Layout (rules for how page items scale or reposition when the page size changes) and Adjust Layout (reflows a document to a new page size and margins): the print side of the multi-format adaptation in 2.4.
 - Framer and Webflow: breakpoints with CSS Grid and flex controls, for marketing sites built without hand-coding (21-web-design-and-digital-craft.md, sections 7.3 and 7.4). Figma Sites (launched at Config, May 2025) publishes sites from Figma frames.
-- Affinity: since 30 October 2025 a single application from Canva (which bought its maker, Serif, in March 2024) that combines the former Designer, Photo and Publisher, free for individuals (affinity.studio, read October 2026); vendors outside Adobe use it for page layout with master pages and baseline grids.
+- Affinity: since 30 October 2025 a single application from Canva (which bought its maker, Serif, in March 2024) that combines the former Designer, Photo and Publisher, free for individuals (affinity.studio, read October 2026); the Publisher side carries page layout for vendors who do not license InDesign.
 
 ## 19. Layout QA checklist
 
@@ -1149,8 +1149,8 @@ Worked values from sections 2 to 4, 6.14 and 13 to 15; platform sizes from 26-pl
 - Common region: grouping of elements that share a bounded area, stronger than proximity.
 - Compound grid: two or more grids overlaid on one live area.
 - Contact sheet: a page of thumbnails of a whole shoot, used to edit pairs and sequences at a glance.
-- Container query: a CSS rule conditioned on the size of an ancestor container instead of the viewport.
-- Container query units: cqi, cqw, cqh, cqb, cqmin and cqmax, each 1 percent of a container dimension.
+- Container query: a CSS rule conditioned on the size of an ancestor container.
+- Container query units: `cqi`, `cqw`, `cqh`, `cqb`, `cqmin` and `cqmax`, each 1 percent of a container dimension.
 - Continuity (good continuation): the reading of aligned elements as one line across gaps.
 - Contrast: a measurable difference between two elements in one variable.
 - Contrast and affinity: Bruce Block's principle that difference in a visual component raises intensity and similarity lowers it.
