@@ -204,7 +204,7 @@ The Accessible Perceptual Contrast Algorithm (APCA), by Andrew Somers of Myndex 
 |---|---|---|
 | 90 | Preferred for body text; suggested ceiling for very large bold text and large colour areas | Body 18 px at 300 or 14 px at 400 |
 | 75 | Minimum for columns of body text | 24 px at 300, 18 px at 400, 16 px at 500, 14 px at 700 |
-| 60 | Minimum for content text that is not body (labels, captions) | 48 px at 200, 36 at 300, 24 at 400, 21 at 500, 18 at 600, 16 at 700 |
+| 60 | Minimum for content text that is not body (subheads, buttons, navigation, labels; 12 to 14 px captions take Lc 90, 04-colour.md, section 6.4) | 48 px at 200, 36 at 300, 24 at 400, 21 at 500, 18 at 600, 16 at 700 |
 | 45 | Headlines and large heavy text; fine pictograms | 36 px at 400 or 24 px bold |
 | 30 | Absolute minimum for any text (placeholder, disabled); large solid non-text | Non-text at least 5.5 px in the smallest dimension |
 | 15 | Non-semantic elements (dividers) | Non-text at least 5 px |
@@ -220,7 +220,7 @@ The positions. Somers and the APCA documentation argue that the WCAG 2 ratio mis
 
 ### 3.4 The house rule, worked on the house palette
 
-Pass WCAG 2.2 AA by ratio and reach the APCA targets in 04-colour.md, section 6.4 (Lc 75 body, 60 secondary, 45 display, 15 dividers); where they disagree the stricter one wins for text. Values computed for this file with the WCAG 2.2 formula and the APCA 0.0.98G constants (the implementation reproduces the published Lc 106.0 and -107.9 reference values):
+Pass WCAG 2.2 AA by ratio and reach the APCA targets in 04-colour.md, section 6.4 (Lc 90 for body at 16 px and weight 400, with Lc 75 only from 18 px at 400, 16 px at 500 or 14 px at 700; Lc 90 in ink for 12 to 14 px captions, and Lc 75 for grey captions from 15 px; Lc 60 for non-body content text such as subheads, buttons and navigation; Lc 45 for headlines at 36 px at 400 or 24 px at 700; Lc 30 for placeholder and disabled text; Lc 15 for dividers); where they disagree the stricter one wins for text. Values computed for this file with the WCAG 2.2 formula and the APCA 0.0.98G constants (the implementation reproduces the published Lc 106.0 and -107.9 reference values):
 
 | Pair | WCAG 2 ratio | APCA Lc | Verdict and use |
 |---|---|---|---|
@@ -230,12 +230,12 @@ Pass WCAG 2.2 AA by ratio and reach the APCA targets in 04-colour.md, section 6.
 | White on flame #F53901 | 3.84:1 | -69.6 | Button labels only at 18.66 px bold or above; below that, use the action alias |
 | Ink on flame #F53901 | 5.16:1 | 39.8 | The disagreement case: WCAG passes ink at any size; APCA reads Lc 39.8, below the Lc 45 minimum for 36 px regular or 24 px bold headlines and above only the Lc 30 spot-readable floor. House: ink on flame is not a text pairing; white on flame at 18.66 px bold or larger is the only flame text pairing; ink on flame is allowed for solid non-text marks (icons at least 5.5 px in the smallest dimension, the Lc 30 row of 3.3) |
 | White on action alias #C72E00 | 5.50:1 | -81.2 | Small button labels and text links on white (#C72E00 on white is 5.50:1, Lc 75.8); the alias is a token for small sizes and #F53901 stays the one brand colour (07-design-systems-and-tokens.md, section 12.1) |
-| Grey #767676 on white | 4.54:1 | 71.6 | Passes WCAG by 0.04; below Lc 75, so captions only; body text takes #6B6B6B or darker |
-| Grey #6B6B6B on white | 5.33:1 | 76.5 | The lightest grey the house allows for body-size secondary text |
+| Grey #767676 on white | 4.54:1 | 71.6 | Passes WCAG by 0.04; below Lc 75, so neither body nor captions; non-body text from 24 px at 400 (Lc 60) only; body and captions take #6B6B6B or darker |
+| Grey #6B6B6B on white | 5.33:1 | 76.5 | The lightest grey the house allows for secondary text: captions from 15 px at 400, body only from 18 px at 400, 16 px at 500 or 14 px at 700; 12 to 14 px captions stay in ink (04-colour.md, section 6.4) |
 | Grey #949494 on white | 3.03:1 | 57.1 | The lightest grey for input borders and icons (3:1 non-text); never for text below 24 px |
 | Grey #E5E5E5 on white | 1.26:1 | 12.9 | Decorative hairline only; never an input border or the only boundary of a control |
 | Grey #8A8A8A on #0A0A0A | 5.73:1 | -39.5 | The dark-mode trap: passes WCAG, fails APCA for any content text |
-| Grey #BDBDBD on #0A0A0A | 10.54:1 | -66.7 | Minimum for secondary text on the client-deck ground (design-taste, section 7: decks on #0A0A0A) |
+| Grey #BDBDBD on #0A0A0A | 10.54:1 | -66.7 | Minimum for non-body secondary text (Lc 60: 24 px at 400, 18 px at 600, 16 px at 700) on the client-deck ground (design-taste, section 7: decks on #0A0A0A); secondary body text there needs Lc 75 |
 
 Space Grotesk at 300 for body (design-taste, section 7) is the house's riskiest typographic choice for access: APCA asks Lc 90 for 18 px at weight 300 and Lc 75 only from 24 px, and the smaller x-height (3.3) pushes each threshold one size further. The consequence is a rule: weight-300 body text is set in ink at Lc 90 or above at 18 px or larger, and any grey secondary text steps up to weight 400.
 
@@ -576,7 +576,7 @@ Blindness is a small part of visual impairment. Low vision (vision that glasses 
 | Legal and footer text | 12 px | 13 to 14 px | Legal text is still content under 1.4.3 and 1.4.4 |
 | Form inputs on iOS | 16 px | 16 px | iOS Safari zooms the page when focusing an input under 16 px, disorienting everyone |
 | Email body | 14 px | 16 px | Mobile mail clients apply their own scaling inconsistently |
-| Deck on a 1920 px canvas | 18 px captions (26-platform-and-format-specs-2026.md, section 7) | 24 px body | Projectors lose contrast; rooms are long |
+| Deck on a 1920 px canvas | 18 px captions (26-platform-and-format-specs-2026.md, section 7.3) | 28 to 32 px body, 20 px captions | Projectors lose contrast; rooms are long |
 
 Set font sizes in `rem` so that the user's browser default font size (a setting many low-vision users change) scales the whole type system; pixel font sizes zoom with page zoom but ignore that default.
 
@@ -852,7 +852,7 @@ A brochure, menu, price list or fact sheet published on a site is web content un
 
 ### 13.2 Accessible decks
 
-Use the slide layouts' title placeholders and give every slide a unique title (screen reader users navigate decks by title). Set reading order (PowerPoint's Reading Order pane; Selection Pane order) and alt text on every meaningful image; mark decorative images as decorative. Run PowerPoint's Check Accessibility (Review tab) before export; verify the exported PDF in PAC whatever the authoring tool, because Keynote, Google Slides and Figma exports carry limited or no tagging. Type: 24 px body and 18 px captions minimum on a 1920 px canvas (26-platform-and-format-specs-2026.md, section 7); client decks on #0A0A0A (design-taste, section 7) keep secondary text at #BDBDBD or lighter (section 3.4), because projectors in daylight rooms crush low-contrast greys. Information is never carried only by animation or by speaker notes; send the deck with notes or a text summary. Video in decks: captioned, and never autoplaying with sound.
+Use the slide layouts' title placeholders and give every slide a unique title (screen reader users navigate decks by title). Set reading order (PowerPoint's Reading Order pane; Selection Pane order) and alt text on every meaningful image; mark decorative images as decorative. Run PowerPoint's Check Accessibility (Review tab) before export; verify the exported PDF in PAC whatever the authoring tool, because Keynote, Google Slides and Figma exports carry limited or no tagging. Type: 28 to 32 px body and 18 px captions minimum on a 1920 px canvas (26-platform-and-format-specs-2026.md, section 7.3); client decks on #0A0A0A (design-taste, section 7) keep secondary text at #BDBDBD or lighter (section 3.4), because projectors in daylight rooms crush low-contrast greys. Information is never carried only by animation or by speaker notes; send the deck with notes or a text summary. Video in decks: captioned, and never autoplaying with sound.
 
 ### 13.3 Accessible email
 

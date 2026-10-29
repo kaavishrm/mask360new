@@ -92,7 +92,7 @@ Instagram's own Help Centre could not be read in this check. The verified number
 | Frame rate and bitrate | 30 fps fixed frame rate, H.264, progressive, square pixels, stereo AAC 128 kbps or higher; no edit lists or special boxes in the container | V | facebook.com/business/ads-guide/update/video/instagram-story | 2026-10-28 |
 | Profile picture | Upload 320 x 320; displays at about 110 px on mobile | U | no page read | not read |
 
-Reason for the 4:5 default: 4:5 is the tallest ratio the feed shows without crop, so it buys the most screen per post; 1:1 gives up 20% of the height for nothing, and 1.91:1 gives up 58%. Reason for 1440-wide masters: Instagram delivers to 3x phones (1206 to 1320 px wide, section 4.7), so a 1080-wide upload is already upscaled on an iPhone 17 Pro Max. Hashtag house rule (H): 3 to 5 specific hashtags in the caption and none in the first comment, because Instagram now ranks by caption keywords and topic classification, the organic cap is reported at five, and a block of tags reads as spam on a luxury grid.
+Reason for the 4:5 default: 4:5 is the tallest ratio the feed shows without crop, so it buys the most screen per post; 1:1 gives up 20% of the height for nothing, and 1.91:1 gives up 58%. Reason for 1440-wide masters: Instagram delivers to 3x phones (1206 to 1320 px wide, section 4.7), so a 1080-wide upload is already upscaled on an iPhone 17 Pro Max. Hashtag house rule (H): 0 to 3 specific hashtags (place and category) at the end of the caption and none in the first comment (17-short-form-social-and-platform-craft.md, section 6.9, owns the practice), because Instagram now ranks by caption keywords and topic classification, the organic cap is reported at five, and a block of tags reads as spam on a luxury grid.
 
 ### 2.2 TikTok
 
@@ -1040,7 +1040,7 @@ APCA (Accessible Perceptual Contrast Algorithm, Andrew Somers, Myndex) is the ca
 | 30 | Absolute minimum for placeholder and disabled text; minimum for large solid meaningful non-text | Non-text at least 5.5 px in the smallest dimension |
 | 15 | Absolute minimum for discernible non-semantic elements (dividers) | Non-text at least 5 px |
 
-Why both tables: WCAG 2.2 is the legal reference (India's Rights of Persons with Disabilities Act 2016 and GIGW 3.0, the Guidelines for Indian Government Websites and Apps, point at WCAG 2.1 AA; the UAE's Digital Government guidance points at WCAG 2.1 AA, U) and APCA is the better predictor of what the eye reads, especially for the thin light-on-dark type the house favours. The house checks both (H): pass WCAG AA by ratio and reach Lc 75 for body, Lc 60 for secondary, Lc 45 for display.
+Why both tables: WCAG 2.2 is the legal reference (India's Rights of Persons with Disabilities Act 2016 and GIGW 3.0, the Guidelines for Indian Government Websites and Apps, point at WCAG 2.1 AA; the UAE's Digital Government guidance points at WCAG 2.1 AA, U) and APCA is the better predictor of what the eye reads, especially for the thin light-on-dark type the house favours. The house checks both (H): pass WCAG AA by ratio and reach the size-paired APCA levels in 04-colour.md, section 6.4: Lc 90 for body at 16 px and weight 400 (Lc 75 only from 18 px at 400, 16 px at 500 or 14 px at 700), Lc 60 for non-body content text, Lc 45 for headlines at 36 px at 400 or 24 px at 700.
 
 ### 8.3 Other accessibility numbers
 
@@ -1054,7 +1054,7 @@ Why both tables: WCAG 2.2 is the legal reference (India's Rights of Persons with
 | Flash | Three per second maximum; LED walls and strobing campaign films are the common offenders | V | w3.org/TR/WCAG22; section 5.11 |
 | Focus indicator | 2.4.11 Focus not obscured (AA) and 2.4.13 Focus appearance (AAA): a 2 CSS px perimeter at 3:1 against the unfocused state | V (criteria) U (values summarised) | w3.org/TR/WCAG22 |
 | India, ICT standard | IS 17802 (Bureau of Indian Standards, 2021, parts 1 and 2), based on EN 301 549, alongside GIGW 3.0 | U | 11-accessibility-and-inclusive-design.md, section 14.1 |
-| EU, European Accessibility Act | Applies from 28 June 2025 to e-commerce and other services sold to EU consumers, including by non-EU businesses, assessed against EN 301 549 (WCAG 2.1 AA for web); matters for a Jaipur jeweller or a Dubai hotel selling to Europe | U | 11-accessibility-and-inclusive-design.md, section 14.4 |
+| EU, European Accessibility Act | Applies from 28 June 2025 to e-commerce and other services sold to EU consumers, including by non-EU businesses, assessed against EN 301 549 (V3.2.1 maps to WCAG 2.1 AA for web; V4.1.1, adopted 24 August 2026, aligns to WCAG 2.2); matters for a Jaipur jeweller or a Dubai hotel selling to Europe | U | 11-accessibility-and-inclusive-design.md, section 14.4 |
 
 ## 9. Typography and motion numbers, short form
 

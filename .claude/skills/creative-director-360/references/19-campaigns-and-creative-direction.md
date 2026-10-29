@@ -316,7 +316,7 @@ House position: in luxury the craft is the promise, so AI that is visible as AI 
 - Headline and visual. The Bernbach form: the two halves complete each other and neither works alone. "Think Small" (1959) with a tiny car in white space; the Economist's white line on red with no visual at all.
 - The visual metaphor. One object stands for the claim: the Heinz drawing (2021), the mouldy Whopper (2020), the Fevicol-strong bus (2001). The test is whether the metaphor survives without the headline.
 - The one-liner. A line that is the whole ad. The Economist ran for 30 years on it. The Indian masters are Amul's topicals (daCunha Communications, weekly since 1966), where the pun is the idea and the Amul girl is the constant.
-- Out-of-home reads in 3 seconds at 60 kilometres an hour on the Sheikh Zayed Road and in 1 second on a Mumbai hoarding at a signal. Seven words or fewer; the house type set at a size that reads at 50 metres; one image. Formats, type size by viewing distance and materials are in 20-print-packaging-ooh-and-physical-production.md, section 7.
+- Out-of-home exposure is arithmetic: a board legible from 150 metres is in view for about nine seconds at 60 kilometres an hour and under six at 100, as on a highway such as the Sheikh Zayed Road, of which a driver spares a fraction; at a Mumbai signal the dwell runs to a minute or more, so the same campaign can carry more copy there (20-print-packaging-ooh-and-physical-production.md, section 7.5). Seven words or fewer on the highway; the house type set at a size that reads at 50 metres; one image. Formats, type size by viewing distance and materials are in 20-print-packaging-ooh-and-physical-production.md, section 7.
 
 ### 6.3 Social
 

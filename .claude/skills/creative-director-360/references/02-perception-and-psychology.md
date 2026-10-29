@@ -79,7 +79,7 @@ The buyers of high jewellery, real estate and private banking are mostly 40 to 7
 - Lower contrast sensitivity: Cynthia Owsley, Robert Sekuler and Dennis Siemsen ("Contrast sensitivity throughout adulthood", Vision Research, 1983) found sensitivity at middle and high spatial frequencies declining from middle age, with low frequencies spared, so fine strokes go first.
 - Blue loss and glare: the yellowed lens absorbs short wavelengths, so blues and violets merge with dark neutrals, and lens opacities scatter light, so glare from a bright screen or a backlit sign rises.
 
-Design consequence: hairline weights, light grey text on white and blue-on-navy states fail the luxury buyer first. House floor for audiences over 40: body at 16 to 18px or larger, contrast of at least 4.5:1 and APCA (Accessible Perceptual Contrast Algorithm) Lc 75 or better (04-colour.md, section 6.2), no hairline weights below about 18px, and a check under Chrome DevTools' reduced-contrast and blurred-vision emulation before sign-off.
+Design consequence: hairline weights, light grey text on white and blue-on-navy states fail the luxury buyer first. House floor for audiences over 40: body at 16 to 18px or larger, contrast of at least 4.5:1 and APCA (Accessible Perceptual Contrast Algorithm) Lc 90 for 16px body at weight 400, Lc 75 only from 18px at 400 (04-colour.md, section 6.4), no hairline weights below about 18px, and a check under Chrome DevTools' reduced-contrast and blurred-vision emulation before sign-off.
 
 ## 2. Preattentive processing, saliency and visual search
 

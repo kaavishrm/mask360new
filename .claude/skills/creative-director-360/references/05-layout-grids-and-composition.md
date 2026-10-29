@@ -536,7 +536,7 @@ A breakpoint is a width at which the layout changes. Set breakpoints where the c
 | wide (1440) | 12 | 32 px | auto (40 px at 1440; 120 px for the luxury 1200 px container) | 1360 px |
 | ultra (1920) | 12 | 32 px | auto (160 px at 1920) | 1600 px |
 
-Breakpoints and containers follow 26-platform-and-format-specs-2026.md, section 4.8; the column counts step 4, 8, 12 as Android's window size classes do (9.2). 07-design-systems-and-tokens.md, section 6.11 lists the house breakpoints as 480, 768, 1024, 1280 and 1600; this file follows 26 until the two are reconciled. Grid tokens from 07 hold: 4, 8 and 12 columns; gutters 16, 24, 32. Gutters grow with the viewport because a 16 px gutter at 1440 makes columns read as one block, and a 32 px gutter at 390 wastes 8 percent of the screen per gutter.
+Breakpoints and containers follow 26-platform-and-format-specs-2026.md, section 4.8; the column counts step 4, 8, 12 as Android's window size classes do (9.2). 07-design-systems-and-tokens.md, section 6.11 carries the same six values as tokens. Grid tokens from 07 hold: 4, 8 and 12 columns; gutters 16, 24, 32. Gutters grow with the viewport because a 16 px gutter at 1440 makes columns read as one block, and a 32 px gutter at 390 wastes 8 percent of the screen per gutter.
 
 ### 9.4 Maximum content widths and measure
 

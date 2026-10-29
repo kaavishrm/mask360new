@@ -616,7 +616,7 @@ UGC (user-generated content) is content made by customers or creators about a br
 | 2 min or more | The whole section that mentions the brand |
 
 - India, statutory: the Department of Consumer Affairs issued "Endorsement Know-hows!" for influencers on 20 January 2023 under the Consumer Protection Act, 2019, whose Section 21 empowers the Central Consumer Protection Authority to penalise misleading advertisements (up to 10 lakh rupees, up to 50 lakh for repeat offences) and to bar endorsers.
-- UAE: the UAE Media Council regulates influencer advertising under Federal Decree-Law No. 55 of 2023 on media regulation. The council's site (uaemc.gov.ae) returned HTTP 503 during this check; when it is down, use WAM (the Emirates News Agency, wam.ae), which publishes the council's announcements in full. Reported, to confirm there before contracting: the council's media content standards and a fines regime under the decree-law, in force from 2025, with fines reported up to 1 million dirhams; an advertiser permit for individuals who publish paid content, announced in 2025 and reported as free for its first years, with a separate visitor permit for foreign creators; and a 2025 council warning against using AI to depict national figures, leaders or national symbols without approval. Ask every UAE creator for the permit number in the contract.
+- UAE: influencer advertising falls under Federal Decree-Law No. 55 of 2023 on media regulation, enforced by the National Media Authority (NMA), which a Federal Decree-Law of 18 December 2025 created to take over the UAE Media Council, the National Media Office and WAM (WAM, December 2025); 24-business-of-creative-and-agency-operations.md, section 14.7, holds the governing statement. The Advertiser Permit, launched by the Media Council on 30 July 2025, is mandatory from 31 January 2026 for anyone in the UAE publishing paid or unpaid promotional content: free for three years to those registered by that date, then AED 1,000 a year, with a three-month visitor permit for foreign creators through a licensed agency. Posting without one is reported at AED 10,000 for a first offence and AED 40,000 for a repeat (Gulf News, 1 February 2026; Pinsent Masons gives up to AED 10,000), and content breaches at AED 5,000 to AED 1,000,000 under Cabinet Resolution No. 42 of 2025 (19-campaigns-and-creative-direction.md, section 16.6). The permit portal (uaemc.gov.ae) returned HTTP 503 during this check; WAM (the Emirates News Agency, wam.ae) publishes the authority's announcements in full. Reported, to confirm there: a 2025 Media Council warning against using AI to depict national figures, leaders or national symbols without approval. Ask every UAE creator for the permit number in the contract.
 - Saudi Arabia: the General Authority for Media Regulation's Mawthooq licence is required for influencers who advertise (reported); confirm current terms before contracting a Riyadh creator.
 
 ### 5.9 Influencer tiers and vetting
@@ -756,7 +756,7 @@ Synthetically generated information (SGI), in India's amended IT Rules, is conte
 | India, IT Rules | SGI requires a prominent visible label and embedded provenance metadata, with exclusions for routine editing such as colour correction (file 22, section 7.6) | 20 February 2026 | A hybrid film with a generated sky that depicts a real place as real is SGI; label it |
 | India, ASCI | A virtual influencer must disclose that the audience is not interacting with a real human being (ASCI guidelines, read 29 October 2026) | Current guidelines | Generated guests, results and testimonials are never presented as real |
 | EU, AI Act Article 50 | Transparency duties for deepfakes and machine-readable marking of generated content (file 22) | 2 August 2026 | Any campaign targeting EU audiences (a Dubai hotel selling to Germany) is labelled as if the house were the deployer |
-| UAE | No AI-specific disclosure rule in advertising regulation found; the media law and consumer protection rules on misleading content apply (file 22). Reported: a 2025 UAE Media Council warning against AI depictions of national figures, leaders and national symbols without approval (confirm on wam.ae, 5.8) | Decree-Law No. 55 of 2023, in force 2025 | Label anyway; never generate or alter imagery of rulers, the flag or national symbols |
+| UAE | No AI-specific disclosure rule in advertising regulation found; the media law and consumer protection rules on misleading content apply (file 22). Reported: a 2025 warning from the UAE Media Council (now the National Media Authority) against AI depictions of national figures, leaders and national symbols without approval (confirm on wam.ae, 5.8) | Decree-Law No. 55 of 2023, in force 2025 | Label anyway; never generate or alter imagery of rulers, the flag or national symbols |
 
 ### 7.3 The tells and how audiences react
 
@@ -997,7 +997,7 @@ All values from 26-platform-and-format-specs-2026.md (verified V, third-party T 
 - Ads in Status: WhatsApp's paid placement for businesses inside Status, announced 16 June 2025.
 - Advantage+ creative enhancements: Meta's automatic edits to an ad (brightness, music, animation, expansion, text variation).
 - Advantage+ sales campaigns: Meta's automated sales campaign type, renamed from Advantage+ shopping campaigns in 2025 (reported).
-- Advertiser permit (UAE): the UAE Media Council's permit for individuals who publish paid promotional content, announced in 2025.
+- Advertiser permit (UAE): the permit, launched by the UAE Media Council in July 2025 and now administered by the National Media Authority, that anyone in the UAE publishing paid or unpaid promotional content must hold from 31 January 2026.
 - Aggregator: an account that mainly posts unoriginal content; excluded from Instagram recommendations since April 2026.
 - AI-generated profile label: Instagram's label, since 31 August 2026, for profiles that feature an AI-generated person.
 - Alt text: a written description of an image's content, read by screen readers and by search.
@@ -1068,6 +1068,7 @@ All values from 26-platform-and-format-specs-2026.md (verified V, third-party T 
 - Material connection: any relationship between a creator and a brand (payment, free product, employment) that requires disclosure.
 - Mawthooq: Saudi Arabia's licence for influencers who advertise.
 - Meta AI translations: Meta's free AI dubbing of Reels, with optional lip sync.
+- National Media Authority (NMA): the UAE federal media regulator created by a Federal Decree-Law of 18 December 2025, which took over the UAE Media Council, the National Media Office and WAM.
 - Non-follower share: the share of views from For You or Explore, a measure of distribution to non-followers.
 - Object wipe: a transition in which something crossing the lens hides the cut.
 - Open gate: recording the full area of a camera's sensor so several crops can be taken.
@@ -1204,7 +1205,8 @@ Regulation and standards
 - Government of India, Information Technology Act, 2000, Section 69A, and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, as amended in 2026 (see 22-ai-era-craft-and-generative-tools.md, section 7.6, for the amendment sources).
 - Government of India, Copyright Act, 1957, Section 17.
 - Government of India, Real Estate (Regulation and Development) Act, 2016.
-- UAE, Federal Decree-Law No. 55 of 2023 on Media Regulation; UAE Media Council, https://uaemc.gov.ae (unreachable, HTTP 503, on 29 October 2026); Emirates News Agency (WAM), https://www.wam.ae, for the council's announcements.
+- UAE, Federal Decree-Law No. 55 of 2023 on Media Regulation; permit portal of the former UAE Media Council, https://uaemc.gov.ae (unreachable, HTTP 503, on 29 October 2026); Emirates News Agency (WAM), https://www.wam.ae, for the National Media Authority's announcements.
+- WAM, UAE Government issues Federal Decree-Law establishing, organising National Media Authority, 18 December 2025, https://www.wam.ae/en/article/bn9xsue-uae-government-issues-federal-decree-law
 - W3C, Web Content Accessibility Guidelines 2.2, success criteria 1.4.3 and 2.3.1, https://www.w3.org/TR/WCAG22/
 - IAB Tech Lab, IAB New Ad Portfolio: Fixed Size Ad Specifications, 2017 (extracted in 26-platform-and-format-specs-2026.md, section 3.6).
 

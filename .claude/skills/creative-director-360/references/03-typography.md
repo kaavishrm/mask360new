@@ -624,7 +624,7 @@ HarfBuzz (Behdad Esfahbod) is the shaping engine inside Chrome, Firefox, Android
 
 ### 11.2 Hinting
 
-Hinting is instruction data in a font that nudges outlines onto the pixel grid at small sizes, so that stems land on whole pixels and x-heights are consistent across letters. TrueType hints are a byte-coded programme per glyph (the `fpgm`, `prep`, `cvt` and per-glyph instructions) that can move points arbitrarily; PostScript and CFF hints are declarative (stem widths, alignment zones called blue zones) and the rasteriser decides what to do with them. Platform policy differs: Windows honours hints (strong grid-fitting, crisp but distorted shapes, thin weights breaking up); macOS and iOS ignore most hints and render the true outline with antialiasing (softer, heavier, faithful to the drawing); FreeType sits between, with an autohinter that infers hints when a font has none. The practical consequence: a light weight (300) that looks elegant on a Mac looks ragged and grey on a 1x Windows laptop at 14px. The house body weight of 300 therefore holds at 16px and up, and labels below 14px step to 400 on every platform. Tools: ttfautohint (Werner Lemberg, FreeType project) adds hints to unhinted web fonts; test on a real 1x Windows screen, since every designer's Mac hides the problem.
+Hinting is instruction data in a font that nudges outlines onto the pixel grid at small sizes, so that stems land on whole pixels and x-heights are consistent across letters. TrueType hints are a byte-coded programme per glyph (the `fpgm`, `prep`, `cvt` and per-glyph instructions) that can move points arbitrarily; PostScript and CFF hints are declarative (stem widths, alignment zones called blue zones) and the rasteriser decides what to do with them. Platform policy differs: Windows honours hints (strong grid-fitting, crisp but distorted shapes, thin weights breaking up); macOS and iOS ignore most hints and render the true outline with antialiasing (softer, heavier, faithful to the drawing); FreeType sits between, with an autohinter that infers hints when a font has none. The practical consequence: a light weight (300) that looks elegant on a Mac looks ragged and grey on a 1x Windows laptop at 14px. The house body weight of 300 therefore holds at 18px and up, body at 16 to 17px steps to 400 (the APCA floor in 04-colour.md, section 6.4, and 11-accessibility-and-inclusive-design.md, section 3.4), and labels below 14px step to 400 on every platform. Tools: ttfautohint (Werner Lemberg, FreeType project) adds hints to unhinted web fonts; test on a real 1x Windows screen, since every designer's Mac hides the problem.
 
 ### 11.3 Antialiasing and font smoothing
 
@@ -1020,7 +1020,7 @@ Designer credit matters beyond manners: a face by a named designer at a foundry 
 ### 18.2 The 30-minute test
 
 1. Minutes 0 to 5: drop the trial file into Wakamai Fondue; read the glyph count, axes, features, file size, vertical metrics.
-2. 5 to 12: in Figma or a browser, set the client's real headline at 120px with -0.02em, a lede at 24px, body at 16px and 300 weight, a caption at 12px with +0.02em, and a table of prices with `tnum`. Screenshot.
+2. 5 to 12: in Figma or a browser, set the client's real headline at 120px with -0.02em, a lede at 24px, body at 18px and 300 weight, a caption at 12px with +0.02em, and a table of prices with `tnum`. Screenshot.
 3. 12 to 17: set the same on a 1x Windows machine; compare stems and counters at 16px and 12px.
 4. 17 to 22: set a bilingual line (Latin plus the client's script) and a price in rupees, riyals and dirhams; check the three currency glyphs (trial and test files often lack them, section 16.4), the matched weights, the leading.
 5. 22 to 27: set a paragraph with hyphenation and `text-wrap: pretty`; count the rag faults; set the ligatures and the quotation marks; check `case` on an all-caps label.
@@ -1077,7 +1077,7 @@ House values, as of October 2026, with the sections that give the reasons. Sizes
 
 | Context | Size | Leading | Tracking | Measure | Weight | Figures and features | Section |
 |---|---|---|---|---|---|---|---|
-| Body, web | 16 to 18 | 1.5 to 1.6 | 0 | 55 to 70 (about 55 to 60ch; count to confirm) | 300 at 16px and up, 400 below | onum pnum in prose, liga on, hyphens auto | 5, 6, 7.3 |
+| Body, web | 16 to 18 | 1.5 to 1.6 | 0 | 55 to 70 (about 55 to 60ch; count to confirm) | 300 at 18px and up, 400 below (04-colour.md, section 6.4) | onum pnum in prose, liga on, hyphens auto | 5, 6, 7.3 |
 | Body, print | 9 to 10.5pt | 1.3 to 1.5 (1.5 to 1.7 for luxury) | 0 | 55 to 70 | Regular; one step lighter on uncoated | onum, smcp for abbreviations | 14 |
 | Lede and standfirst | 20 to 28 | 1.35 to 1.45 | 0 to -0.005 | 60 to 75 | 300 or 400 | | 7.3 |
 | Caption | 12 to 14 web; 6.5 to 8pt print | 1.35 to 1.45 | +0.01 to +0.02 | 35 to 50 | 400 | lnum tnum for product codes | 4.3, 14.2 |
@@ -1088,7 +1088,7 @@ House values, as of October 2026, with the sections that give the reasons. Sizes
 | Form input | 16 minimum | 1.4 | 0 | Field width | 400 | Labels at 14, sentence case | 11.5 |
 | App body | iOS 17pt; Android 16sp | 22pt; 24sp | 0 (iOS applies its own tracking) | Screen width | Regular | Dynamic Type and font scale honoured | 11.5, 11.6 |
 | Table and price list | 14 to 16 | 1.4 | 0 | | 400; 500 for totals | tnum lnum mandatory; minus sign U+2212; figure space for alignment | 8.5, 8.8 |
-| Deck, 1920 by 1080 | Body 24 to 28; headings 48 to 96; caption 18 | 1.3 body, 1.0 to 1.1 headings | Display -0.02 | 45 to 60 | House 300 body, 700 heads | Tabular figures in every chart | 7 |
+| Deck, 1920 by 1080 | Body 28 to 32; slide titles 96 to 160, other headings 48 to 96; caption 18 minimum, 20 preferred (26-platform-and-format-specs-2026.md, section 7.3) | 1.3 body, 1.0 to 1.1 headings | Display -0.02 | 45 to 60 | House 300 body, 700 heads | Tabular figures in every chart | 7 |
 | Email | 16 to 18 | 1.5 | 0 | 50 to 65 | 400 | System stack with brand face first | 12.8 |
 | Video title, 16:9 at 1080p | 72 and up | 0.95 to 1.05 | -0.02 | 3 to 6 words | 500 and up | Hold 1.5s plus 0.3s per word over three | 13.3, 13.4 |
 | Video caption and lower third, 1080p | Name 36 to 44; subtitle 40px cap height | 1.1 to 1.2 | 0 | 42 characters per line, 2 lines | 400 and up | 20 characters per second ceiling | 13.3, 13.4 |

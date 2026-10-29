@@ -179,7 +179,7 @@ Value shapes that trip people up:
 | `dimension` | `{"value": 16, "unit": "px"}` with unit `px` or `rem` | Unit is required even when value is 0; the old string form `"16px"` is legacy |
 | `duration` | `{"value": 200, "unit": "ms"}` with unit `ms` or `s` | Object form, same reason |
 | `fontWeight` | A number in the range 1 to 1000, or a string alias such as `thin` (100), `bold` (700), `black` (900) | Case-sensitive aliases; out-of-range numbers invalid |
-| `color` | `{"colorSpace": "oklch", "components": [0.62, 0.22, 35], "alpha": 1, "hex": "#F53901"}` | See 4.2 |
+| `color` | `{"colorSpace": "oklch", "components": [0.633, 0.229, 33.8], "alpha": 1, "hex": "#F53901"}` | See 4.2 |
 | `shadow` | One shadow object, or an array of shadow objects and references | `offsetX`, `offsetY`, `blur`, `spread` are dimensions; `inset` optional, default false |
 | `gradient` | Array of stops, each `{"color": ..., "position": 0 to 1}` | Positions outside 0 to 1 are clamped |
 | `typography` | `fontFamily`, `fontSize` (dimension), `fontWeight`, `letterSpacing` (dimension), `lineHeight` (number) | `lineHeight` "SHOULD be interpreted as a multiplier of the fontSize" |
@@ -456,9 +456,9 @@ Speed is chosen by the size of the element or the distance it travels. Spatial s
 | Tailwind v4 | sm 640, md 768, lg 1024, xl 1280, 2xl 1536 (as `--breakpoint-*`) | Mobile-first min-width |
 | Bootstrap 5 | 576, 768, 992, 1200, 1400 | Still common in Indian enterprise work |
 | Material 3 window size classes | compact below 600, medium 600 to 839, expanded 840 to 1199, large 1200 to 1599, extra-large 1600 and up | Named ranges for layout decisions; the boundaries are the values given |
-| House | 480, 768, 1024, 1280, 1600 | 1600 added because luxury pages are viewed on large monitors where a 1280 cap looks like a mobile site stretched |
+| House | 480, 768, 1024, 1280, 1440, 1920 (26-platform-and-format-specs-2026.md, section 4.8, owns the values and containers) | 1440 and 1920 added because luxury pages are viewed on large monitors where a 1280 cap looks like a mobile site stretched |
 
-Grid tokens: `grid.columns` 4 (compact), 8 (medium), 12 (expanded and up); `grid.gutter` 16, 24, 32; `grid.margin` 16, 32, 64, and 120 at 1600 and above; grid construction is in 05-layout-grids-and-composition.md section 9. Container queries (`@container`, which style a component by the size of its container; supported in every evergreen browser since 2023) move most component-level layout decisions off the viewport breakpoints; the breakpoint tokens then matter only for page templates. Devanagari and Arabic text runs about 10 to 30 percent longer than English for the same content, so templates are tested with the longest script before a breakpoint is fixed.
+Grid tokens: `grid.columns` 4 (compact), 8 (medium), 12 (expanded and up); `grid.gutter` 16, 24, 32; `grid.margin` 16, 32, 64, and 120 from the 1440 breakpoint up; grid construction is in 05-layout-grids-and-composition.md section 9. Container queries (`@container`, which style a component by the size of its container; supported in every evergreen browser since 2023) move most component-level layout decisions off the viewport breakpoints; the breakpoint tokens then matter only for page templates. Devanagari and Arabic text runs about 10 to 30 percent longer than English for the same content, so templates are tested with the longest script before a breakpoint is fixed.
 
 ### 6.12 Icon sizes and strokes
 
@@ -790,7 +790,7 @@ Content guidelines belong inside the component documentation, as Polaris demonst
 
 ## 12. Accessibility inside the system
 
-The system is where accessibility is cheapest: fixed once in a component, correct everywhere. The working floor for Mask360 clients is WCAG 2.2 AA; the Indian and UAE legal references, test method and assistive technology detail are in 11-accessibility-and-inclusive-design.md sections 4, 5, 14 and 16, and the contrast maths in 04-colour.md section 6. What the system itself must build in:
+The system is where accessibility is cheapest: fixed once in a component, correct everywhere. The working floor for Mask360 clients is WCAG 2.2 AA; the Indian and UAE legal references, test method and assistive technology detail are in 11-accessibility-and-inclusive-design.md sections 4, 5, 6, 14 and 16, and the contrast maths in 04-colour.md section 6. What the system itself must build in:
 
 ### 12.1 Contrast
 
@@ -1099,7 +1099,7 @@ The house defaults in one place; each row's reasoning is in section 6 (springs i
 | Duration | `motion.duration` | 100, 150, 250, 350, 500, 800 ms | instant, fast, base, moderate, slow, cinematic; reduced theme sets all to 0 or 1 |
 | Easing | `motion.easing` | standard (0.2, 0, 0, 1); enter (0, 0, 0, 1); exit (0.3, 0, 1, 1); emphasised enter (0.05, 0.7, 0.1, 1); emphasised exit (0.3, 0, 0.8, 0.15) | Composed into `motion.transition.fade`, `slide`, `scale` |
 | Spring | `motion.spring` (under `$extensions`) | Damping 0.9 or 1; stiffness 300 to 3800 | fast, default, slow, each spatial and effects; luxury sets spatial damping to 1 |
-| Breakpoints | `breakpoint` | 480, 768, 1024, 1280, 1600 | Container queries for component layout |
+| Breakpoints | `breakpoint` | 480, 768, 1024, 1280, 1440, 1920 | Container queries for component layout; values from 26-platform-and-format-specs-2026.md, section 4.8 |
 | Grid | `grid` | columns 4, 8, 12; gutter 16, 24, 32; margin 16, 32, 64, 120 | Per breakpoint |
 | Ratio | `ratio` | 1:1, 4:5, 3:2, 16:9, 21:9, 9:16 | square, portrait, classic, wide, cinema, story |
 | Backdrop blur | `blur.backdrop` | 8, 16, 24 px | Solid fallback under reduced transparency |

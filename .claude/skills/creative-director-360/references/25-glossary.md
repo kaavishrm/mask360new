@@ -1,0 +1,3878 @@
+# Glossary: every term in the creative-director-360 corpus
+
+The A to Z of every term defined across the 28 reference files of this skill, as of October 2026: 3,729 entries.
+
+Method: a script read the "Terms introduced" section at the end of every reference file (00 to 24 and 26 to 28), 4,876 entries in all, and normalised each term (lowercase, trimmed, trailing punctuation removed, plural folded to singular, American spelling folded to British, hyphens and spaces treated alike). Entries sharing a term were merged: where the files agree, the entry keeps the most complete definition and lists every home file; where two disciplines use one word differently, the entry is split and the discipline named in brackets, as with LUT (look-up table) and LUT (letter of undertaking). Acronyms defined in one file and spelled out in another, synonyms such as dark pattern and deceptive pattern, and word-order variants were then merged by hand into one entry that carries both forms, such as ACD (associate creative director). Each definition is the working one-line version; the home file holds the fuller context, the reasoning, the numbers and the sources, so read it before acting on a definition. Code identifiers are filed under their first letter, ignoring leading symbols, so `:has()` sits under H and `@scope` under S.
+
+Home numbers are the two-digit prefixes of the reference files:
+
+| Home | File |
+| --- | --- |
+| 00 | 00-curriculum-and-method.md |
+| 01 | 01-history-and-movements.md |
+| 02 | 02-perception-and-psychology.md |
+| 03 | 03-typography.md |
+| 04 | 04-colour.md |
+| 05 | 05-layout-grids-and-composition.md |
+| 06 | 06-ui-design-craft.md |
+| 07 | 07-design-systems-and-tokens.md |
+| 08 | 08-ux-research-and-strategy.md |
+| 09 | 09-interaction-design-and-ux-patterns.md |
+| 10 | 10-ux-writing-and-content-design.md |
+| 11 | 11-accessibility-and-inclusive-design.md |
+| 12 | 12-motion-principles-and-ui-motion.md |
+| 13 | 13-motion-graphics-and-3d-production.md |
+| 14 | 14-video-preproduction-and-cinematography.md |
+| 15 | 15-lighting-and-sound.md |
+| 16 | 16-editing-colour-grading-and-delivery.md |
+| 17 | 17-short-form-social-and-platform-craft.md |
+| 18 | 18-brand-strategy-and-identity-design.md |
+| 19 | 19-campaigns-and-creative-direction.md |
+| 20 | 20-print-packaging-ooh-and-physical-production.md |
+| 21 | 21-web-design-and-digital-craft.md |
+| 22 | 22-ai-era-craft-and-generative-tools.md |
+| 23 | 23-critique-taste-and-craft-judgement.md |
+| 24 | 24-business-of-creative-and-agency-operations.md |
+| 26 | 26-platform-and-format-specs-2026.md |
+| 27 | 27-how-the-best-designers-think.md |
+| 28 | 28-masters-methods-and-principle-systems.md |
+
+## Contents
+
+- [Numbers and symbols](#numbers-and-symbols)
+- [A](#a)
+- [B](#b)
+- [C](#c)
+- [D](#d)
+- [E](#e)
+- [F](#f)
+- [G](#g)
+- [H](#h)
+- [I](#i)
+- [J](#j)
+- [K](#k)
+- [L](#l)
+- [M](#m)
+- [N](#n)
+- [O](#o)
+- [P](#p)
+- [Q](#q)
+- [R](#r)
+- [S](#s)
+- [T](#t)
+- [U](#u)
+- [V](#v)
+- [W](#w)
+- [X](#x)
+- [Y](#y)
+- [Z](#z)
+
+## Numbers and symbols
+
+- **2:3 pulldown**: spreading 4 film frames across 10 interlaced fields to carry 23.976 material at 29.97, at the cost of judder. Home: 13.
+- **2.5D**: flat layers placed in 3D space so that a camera move produces parallax. Home: 13.
+- **2-pass VBR (variable bitrate)**: an encode whose first pass measures complexity and whose second spends bits where motion and detail need them. Home: 13, 16.
+- **2-pop**: a one-frame 1 kHz tone 2 seconds before the first frame of action, matched by a one-frame flash in picture, used to prove sync. Home: 13.
+- **2BHK**: an Indian flat with two bedrooms, a hall and a kitchen. Home: 23.
+- **2i (second pair of eyes)**: GOV.UK's review of every piece of content by a second content designer before it publishes. Home: 10.
+- **2x rule**: capping served image density at 2 device pixels per CSS pixel, because 3x files cost 2.25 times the bytes for no visible gain in photographs. Home: 21.
+- **3:1 rule**: keep a second microphone at least three times as far from a source as the first to limit comb filtering. Home: 15.
+- **3-2-1 rule**: three copies of the media, on two different kinds of storage, one kept off-site. Home: 13, 14, 16, 26.
+- **3-D Secure**: the card schemes' step-up authentication in which the issuing bank confirms a card payment with a code or an app prompt. Home: 09, 10.
+- **3-second video plays**: Meta's count of plays lasting at least 3 seconds, or nearly the full length of a shorter video. Home: 17.
+- **3D Camera Tracker**: the After Effects effect that solves a camera move from a plate so 3D layers can be pinned into it. Home: 13.
+- **4Cs**: the four diamond grading attributes (carat, colour, clarity, cut), stated together with the grading report that certifies them. Home: 10.
+- **5.1**: six-channel surround (left, right, centre, LFE, left surround, right surround), the broadcast and streaming surround standard. Home: 15.
+- **6-3-5 brainwriting**: six people each write three ideas in five minutes and pass the sheet on, for six rounds, up to 108 ideas in 30 minutes without production blocking (Rohrbach). Home: 19, 27.
+- **7W framework**: Romaniuk's prompt set for finding category entry points: why, when, where, while, with whom, with what, how feeling. Home: 18.
+- **10,000 decisions view**: the working model (a house estimate) that a finished identity, site or film is the sum of about 10,000 small decisions, most of them made by the maker's defaults. Home: 00.
+- **20-to-2 loop**: the house styleframe loop: 20 draft generations cut to 2 survivors, refined, composited and upscaled once. Home: 22.
+- **30-degree rule**: change camera angle by at least about 30 degrees, or shot size clearly, between consecutive shots of one subject, to avoid a jump cut. Home: 14, 16, 23.
+- **32-bit float**: a recording format storing each sample as a floating-point number so that signals above 0 dBFS are retained and can be reduced in post without clipping. Home: 15.
+- **60-30-10 rule**: the interior designers' proportion of 60 percent dominant colour, 30 percent secondary and 10 percent accent by area; an extension rule in Itten's sense. Home: 04.
+- **70 percent camera rule**: the house limit of at least 70 percent camera-originated screen time and at most 30 percent generated motion in a delivered film. Home: 22.
+- **100 bad ideas**: the rule that each pair writes 100 numbered ideas in a day, because the idea usually arrives after the first 50 clichés. Home: 19.
+- **180-degree line**: the imaginary line between two subjects that the camera stays on one side of, keeping screen directions consistent. Home: 23, 28.
+- **180-degree rule**: keep every camera on one side of the axis of action so screen direction stays consistent. Home: 14, 16.
+- **180-degree shutter rule**: a shutter open for half of each frame interval, so shutter speed is about double the frame rate. Home: 14.
+- **301 and 302 redirects**: permanent and temporary HTTP redirects; a QR vanity URL uses 302 so its destination can change after printing. Home: 21.
+- **360 creative director (CD)**: the person accountable for every creative output of a brand or campaign across identity, print, web, product interface, motion, film, social and events, and for the people who make them; commands every craft well enough to brief, judge and correct the specialist in each, and works at least one at the specialist's level. Home: 00, 19.
+- **360Brew**: LinkedIn's research foundation model for ranking, a 150 billion parameter decoder-only model described in a January 2025 paper. Home: 17.
+
+## A
+
+- **A and AAAA records**: DNS records mapping a name to an IPv4 and an IPv6 address. Home: 21.
+- **A/B test**: an online controlled experiment that randomly splits live traffic between a control and variants and compares a pre-declared metric. Home: 08.
+- **A/B test (YouTube)**: YouTube's test of up to 3 titles, thumbnails or pairs, won by the highest watch time. Home: 17.
+- **AAC-LC (Advanced Audio Coding, low complexity)**: the compressed audio profile every device decodes, used in MP4 deliverables. Home: 16.
+- **AAF (Advanced Authoring Format)**: the interchange file that carries an edit's audio clips, handles, levels and fades to Pro Tools. Home: 15, 16.
+- **Abaya**: the woman's over-garment worn in the Gulf, usually black. Home: 15, 16, 22.
+- **Abaya and sheila**: the full-length robe and the headscarf worn by many Gulf women. Home: 14.
+- **Abby Singer and martini shot**: the last shot before a company move or the second-last of the day, and the last shot of the day. Home: 14.
+- **ABCD framework**: Google's YouTube creative guidance (Attract, Brand, Connect, Direct), built with Kantar. Home: 16, 17, 19.
+- **Abductive reasoning**: inference to the best explanation; given a desired value and no known form, proposing a form that would deliver it (Cross, Dorst). Home: 27.
+- **Abney effect**: the apparent shift in hue when white is added to a colour at constant wavelength. Home: 02.
+- **Abney effect and Bezold-Brücke shift**: apparent hue shifts when white light is added, or when luminance changes, at constant wavelength. Home: 04.
+- **Above the line and below the line**: creative principals agreed before production, and the crew, kit, locations and post that scale with days. Home: 14.
+- **Abrupt onset and looming**: the sudden appearance of an object, and its growth as if approaching, both of which capture attention. Home: 02.
+- **Absolute grounds for refusal**: objections to a trademark arising from the mark itself, such as descriptiveness, deception or offence. Home: 18.
+- **Absolute retention**: the share of a video's own viewers still watching at each moment. Home: 17.
+- **Abstract mark**: a non-representational logo form, Peirce's symbol, which means only what spend teaches. Home: 18.
+- **Academy, flat, Univisium and scope**: the 1.33, 1.85, 2.0 and 2.39 aspect ratios. Home: 14.
+- **`accent-color`**: the CSS property that brands checkboxes, radios and range inputs; not Baseline as of October 2026. Home: 21.
+- **Accessibility Conformance Report (ACR)**: a completed VPAT stating how a product meets each accessibility criterion. Home: 11.
+- **Accessibility contract**: the documented role, name, keyboard behaviour, focus management and states a component guarantees, taken from the APG. Home: 07.
+- **Accessibility overlay**: a third-party toolbar or AI script claiming to make a site accessible without changing its markup; the house refuses them. Home: 11, 21.
+- **Accessibility statement**: a page stating the standard targeted, conformance status, known exceptions, a contact route and the last audit date. Home: 11, 21.
+- **Accessibility tree**: the browser's structure of roles, names, states and values that assistive technology reads. Home: 11.
+- **Accessible name**: the label assistive technology reads for an element, from its content, `aria-label` or `aria-labelledby`. Home: 06, 10, 11.
+- **Accordion fold (concertina)**: parallel folds in alternating directions that give equal panels. Home: 20.
+- **Account planning**: the discipline, begun in 1968 at Boase Massimi Pollitt and J. Walter Thompson London, that brings research and the audience's view into the brief. Home: 19.
+- **ACD (associate creative director)**: the day-to-day creative lead of a team of two to six, who holds craft decisions by delegation from the CD and gives the first sign-off before the CD decides in the room. Home: 23, 24.
+- **ACEA**: the European automobile manufacturers' association, whose registration data tracks car sales in Europe. Home: 18.
+- **ACES (Academy Color Encoding System)**: a colour-managed pipeline that converts every camera's footage into one working space for grading and delivery. Home: 00, 13, 14, 16.
+- **ACES2065-1**: the archival colour space of the Academy Color Encoding System, with AP0 primaries. Home: 16, 22.
+- **ACES and its spaces**: the Academy Color Encoding System; ACES2065-1 (AP0 primaries, linear, the archive master), ACEScg (AP1, linear, for CGI and compositing) and ACEScct (AP1, log with a toe, for grading). Home: 04.
+- **ACEScc**: pure logarithmic ACES grading space on AP1 primaries. Home: 16.
+- **ACEScct**: logarithmic ACES grading space on AP1 primaries with a toe near black, the ACES grading default. Home: 16.
+- **ACEScg**: the linear ACES working space for rendering and compositing. Home: 13, 16.
+- **Achromatopsia**: rod monochromacy; the absence of functioning cones, so no hue is perceived. Home: 04.
+- **Acquiescence bias**: the tendency of respondents to agree with statements regardless of content. Home: 08.
+- **Acquired distinctiveness**: the legal status of a sign that has come to identify one trader through use, the route by which single colours are registered. Home: 04, 18.
+- **ACT Rules**: the W3C Accessibility Conformance Testing rule format, shared by automated engines such as axe-core and by manual test methods. Home: 11.
+- **Action safe**: the area inside which important action must sit; 93 percent of width and height under SMPTE ST 2046-1. Home: 03, 05, 13, 16.
+- **Action safe and title safe**: the central 93% (3.5% inset) and 90% (5% inset) of a 16:9 frame, inside which picture and text respectively must sit for every television; from SMPTE ST 2046-1. Home: 26.
+- **Activation**: the share of new users who reach the first moment of real value in a product. Home: 08.
+- **Active and passive attention**: eyes on an ad, and an ad in view with the eyes elsewhere, measured by camera eye tracking; pixel share, the fraction of the screen an ad covers, predicts both. Home: 02.
+- **Active attention**: attention with eyes on the ad, measured by eye tracking, as distinct from a counted view. Home: 17.
+- **Active white space**: space shaped on purpose to group, isolate, frame or direct the eye. Home: 05.
+- **AD (art director)**: owner of the visual idea: composition, image, type and layout. Home: 24.
+- **ADA Title III**: the Americans with Disabilities Act provision on public accommodations, applied by US courts to websites and apps. Home: 11.
+- **Adaptation matrix**: the table of every format against every language and placement, recording size, safe zone, owner and approval per cell. Home: 05.
+- **Adaptive bitrate**: streaming that offers several renditions and switches between them by measured bandwidth. Home: 21.
+- **Adaptive layout**: distinct layouts designed for set width ranges and switched between at breakpoints. Home: 05.
+- **Adex**: advertising expenditure, the total spent on advertising media in a market in a year. Home: 24.
+- **Adjacent possible**: the set of states reachable in one step from what currently exists; the edge innovation explores (Kauffman, Johnson). Home: 27.
+- **Adjusted Wald interval**: a binomial confidence interval computed after adding about two successes and two failures; recommended for small samples (Agresti and Coull). Home: 08.
+- **ADM BWF**: a WAV file carrying Audio Definition Model metadata, the delivery format for Dolby Atmos masters. Home: 15.
+- **Adoption rate**: the share of product screens or pages built from system components. Home: 07.
+- **ADR (automated dialogue replacement)**: re-recording dialogue in post to replace unusable location sound. Home: 14, 15.
+- **ADR, RevPAR**: average daily rate per occupied room; revenue per available room, occupancy times ADR. Home: 08.
+- **Ads in Status**: WhatsApp's paid placement for businesses inside Status, announced 16 June 2025. Home: 17.
+- **Advance notice of proposed rulemaking (ANPRM)**: the first, question-only stage of a US federal rulemaking, with no draft rule text. Home: 09.
+- **Advanced 3D**: After Effects' renderer with HDRI lighting, model import, physical materials and extrusion. Home: 13.
+- **Advanced beginner**: the second Dreyfus stage, scored 2 in 00-curriculum-and-method.md: the competent behaviour done from a checklist with a senior's review each time. Home: 00.
+- **Advantage+ creative**: Meta's automated creative enhancements (image expansion, animation, text rewrites, added music) applied to an ad unless each toggle is switched off. Home: 26.
+- **Advantage+ creative enhancements**: Meta's automatic edits to an ad (brightness, contrast, music, crop, text), switched off for graded work. Home: 16, 17.
+- **Advantage+ placements**: Meta's automatic placement setting, which serves one ad's assets into every placement, including in-stream, Messenger and Audience Network. Home: 26.
+- **Advantage+ sales campaigns**: Meta's automated sales campaign type, renamed from Advantage+ shopping campaigns in 2025 (reported). Home: 17.
+- **Advertiser permit (UAE)**: the UAE permit, launched by the UAE Media Council in July 2025 and now administered by the National Media Authority, that anyone in the UAE publishing paid or unpaid promotional content on social media must hold from 31 January 2026; free for its first three years. Home: 16, 17, 19, 24.
+- **AE influence**: in After Effects, the share of the time between two keyframes over which a keyframe's ease acts; it maps to cubic-bezier control points (12-motion-principles-and-ui-motion.md, section 15.7). Home: 12.
+- **aerender**: After Effects' command-line renderer, the basis of AE render farms and automation. Home: 13.
+- **Aesthetic fine-tuning**: tuning a model on human preference scores so that its default output matches crowd taste. Home: 22.
+- **Aesthetic-usability effect**: the tendency to judge attractive designs as more usable (Kurosu and Kashimura, 1995); a case of the halo effect, one strong quality colouring every other judgement. Home: 02, 23.
+- **Affinity diagram (affinity mapping)**: observations written one per note and grouped bottom up by similarity until themes emerge; descends from the KJ method. Home: 08, 27.
+- **Affordance**: an action possibility arising from the relation between an object's properties and an agent's capabilities (Gibson; Norman). Home: 02, 27, 28.
+- **Agal**: the black cord that holds the ghutra or shemagh in place. Home: 22.
+- **Agate**: the smallest newspaper text size, about 5.5 point, used for listings and tables. Home: 28.
+- **Ageing flag**: the marker "(unverified since <month year>)" placed on a claim that has missed two quarterly refreshes. Home: 00.
+- **Agency cut**: the creative director's version of the film, built on the director's cut, before the client sees anything. Home: 16.
+- **Agency producer**: the studio's own producer, who owns the estimate, schedule, bids, rights and the production bible. Home: 19.
+- **Agent**: an AI system that carries out multi-step actions on the user's behalf, which the interface must let the user supervise. Home: 09, 27.
+- **Agent Payments Protocol (AP2)**: Google's open protocol for agent payments, which records the person's instruction as a signed intent mandate and the approved items and price as a signed cart mandate. Home: 09.
+- **Agentic action**: an action an AI assistant performs for the person, such as booking, paying or messaging staff. Home: 10.
+- **Agentic Commerce Protocol (ACP)**: the open checkout standard developed by OpenAI and Stripe for purchases inside an AI assistant, first implemented in ChatGPT. Home: 09.
+- **Aggregator**: an account that mainly posts unoriginal content; excluded from Instagram recommendations since April 2026. Home: 17.
+- **AGI (agency gross income)**: revenue after pass-through costs, the denominator for the house's financial ratios. Home: 24.
+- **Agitprop**: agitation-propaganda, the state's use of design and performance to carry political instruction. Home: 01.
+- **AgX**: the view transform that replaced Filmic as Blender's default in 4.0, rolling highlights off smoothly. Home: 13.
+- **AgX and Filmic**: Blender's view transforms (AgX the default since 4.0, November 2023) that compress highlights and desaturate bright colours toward white. Home: 04.
+- **AI answer**: what generative assistants and AI search summaries say about a brand, treated as a link in the first impression chain. Home: 18.
+- **AI crawlers**: the user agents AI vendors use for training (GPTBot, ClaudeBot), search indexing (OAI-SearchBot, Claude-SearchBot, PerplexityBot) and user-initiated fetches (ChatGPT-User, Claude-User, Perplexity-User). Home: 21.
+- **AI-generated profile label**: Instagram's label, since 31 August 2026, for profiles that feature an AI-generated person. Home: 17.
+- **AI hyperrealism**: the finding that white AI-generated faces are judged human more often than real human faces. Home: 02.
+- **AI-moderated interview**: an interview in which software asks the questions and follow-ups against researcher-set goals. Home: 08.
+- **AI note-taker**: a meeting assistant that joins calls to record and transcribe; barred from sessions unless the consent form names it. Home: 08.
+- **AI Overviews and AI Mode**: Google features that answer a query on the results page and link out through query fan-out. Home: 21.
+- **Aided awareness**: recognition of a brand from a prompted list. Home: 18.
+- **Al Sadu**: Bedouin weaving of geometric bands in wool and camel hair, inscribed by UNESCO for the UAE in 2011. Home: 01.
+- **Al Talli**: braided decorative trim of metal thread, inscribed by UNESCO for the UAE in 2022. Home: 01.
+- **ALE (Avid Log Exchange)**: a text file of clip metadata that can carry CDL values per clip. Home: 16.
+- **Alembic**: an open format for baked animated geometry. Home: 13.
+- **Aleph**: Runway's model for editing an existing shot: adding, removing or transforming objects, new angles, relighting. Home: 22.
+- **Alias token**: a token that names a role in the interface (`text.subtle`) and resolves to a global token; also called semantic token. Home: 07.
+- **Alif**: the first letter of the Arabic alphabet, a vertical stroke and the unit of Ibn Muqla's proportioned script. Home: 01.
+- **Alignment**: the positioning of elements so their edges or centres share a line. Home: 05.
+- **All-intra encoding**: video in which every frame is a keyframe, so seeking to any time is exact; the requirement for scroll-scrubbed video. Home: 12.
+- **`alpha()`**: the CSS Color 5 function that rewrites only the alpha channel of an origin colour. Home: 04.
+- **Alpha matte**: a track matte that cuts a layer by another layer's transparency. Home: 13.
+- **Alpha tint**: a colour with transparency, written with a slash alpha in CSS, that composites over whatever lies beneath it. Home: 04.
+- **Alt text**: the text equivalent of an image, read by screen readers and shown when the image fails to load. Home: 10, 17.
+- **AM screening**: amplitude modulated halftoning that varies dot size on a fixed grid at fixed angles per ink. Home: 20.
+- **Ambience bed**: a continuous background sound layer that runs under a scene to unify cuts. Home: 15.
+- **Ambient and focal vision**: the periphery's coding of where things are and of a scene's gist (its overall layout and meaning), and the fovea's coding of what things are. Home: 02.
+- **Ambient and key shadow**: the soft, unoffset, low-alpha shadow that implies distance, and the sharp, offset shadow that defines the edge, in a two-part shadow model. Home: 06.
+- **Ambient occlusion**: the soft darkening rendered where surfaces meet; with contact shadows (the dark line where an object meets its surface), it stops CG objects floating. Home: 23.
+- **Ambisonic**: a full-sphere recording format decodable to any speaker layout. Home: 15.
+- **AMEC**: the International Association for Measurement and Evaluation of Communication, author of the Barcelona Principles. Home: 24.
+- **Amusement Park Theoretical model**: creativity as a hierarchy of general requirements, thematic areas, domains and micro-domains (Baer and Kaufman). Home: 27.
+- **ANA**: Association of National Advertisers, the US client body whose surveys track in-housing. Home: 24.
+- **Anachronism (failure mode)**: the look of a technology used without the technology, such as a CSS letterpress deboss. Home: 01.
+- **Analogical distance**: how far the source domain of an example sits from the problem's domain; a middle range works best (Chan, Fu). Home: 27.
+- **Anamorphic 3D (anamorphic billboard)**: a forced-perspective illusion on a corner LED screen, built for one screen's geometry and one sweet-spot viewpoint. Home: 13, 20, 26.
+- **Anamorphic lens**: a lens that squeezes a wide field horizontally onto the sensor, desqueezed in post, with oval bokeh and streak flares. Home: 14.
+- **Anchor exemplar**: a reference piece scored at 1, 3 or 5 on one rubric dimension, used to calibrate scorers. Home: 23.
+- **Anchor point**: the pivot about which a layer scales and rotates. Home: 13.
+- **Anchor positioning**: CSS (`anchor-name`, `position-anchor`, `anchor()`, `position-area`) that places an element relative to a named anchor element, with fallback positions when it would overflow. Home: 05, 06, 07, 21.
+- **Anchoring**: the first opinion or number voiced setting the range of what follows. Home: 02, 23.
+- **Andromeda**: Meta's ad retrieval system, announced 2 December 2024, which matches distinct creatives to distinct people, so near-identical variants count as one concept. Home: 00, 17, 19.
+- **Anilox roller**: an engraved roller that meters a controlled film of ink onto a flexo plate. Home: 20.
+- **Animacy**: the perception of an object as alive and acting with intent. Home: 02.
+- **Animatic**: storyboard frames cut to the chosen music with a scratch voice, used to present a film before it is shot. Home: 08, 13, 14, 19, 22, 23, 27, 28.
+- **`animation-range`**: the CSS property that limits which part of a scroll or view timeline drives an animation, with keywords such as entry, exit, cover and contain. Home: 12.
+- **`animation-trigger`**: the Chrome-only CSS property that starts a time-based animation when an element crosses a scroll range. Home: 12.
+- **Anisotropy**: highlights stretched along one direction, as on brushed metal. Home: 13.
+- **Anomalous trichromacy**: colour vision with one cone type shifted in sensitivity; the milder and more common form of CVD. Home: 04.
+- **Anti-laws of marketing**: Kapferer and Bastien's rules by which luxury, which must stay incomparable, departs from premium marketing, which competes on comparison. Home: 00, 18, 19.
+- **Antialiasing (greyscale, subpixel)**: shading edge pixels by coverage; subpixel uses the RGB stripes for triple horizontal resolution. Home: 03.
+- **Anticipation**: a small move opposite to the main action before it begins; in interface it adds latency. Home: 12, 13.
+- **AOV**: arbitrary output variable; a render pass holding one component of the image (diffuse, specular, depth). Home: 13.
+- **AP0**: the ACES primaries that enclose the whole spectral locus, two of them imaginary. Home: 16.
+- **AP1**: the smaller ACES primaries used by ACEScg, ACEScc and ACEScct. Home: 16.
+- **APCA (Accessible Perceptual Contrast Algorithm)**: Andrew Somers' contrast model that reports a signed lightness contrast value Lc and ties the requirement to font size and weight. Home: 02, 03, 06, 07, 11, 26.
+- **APCA and Lc**: the Accessible Perceptual Contrast Algorithm, a polarity-aware contrast method whose levels are tied to font size and weight, and its signed lightness contrast value from about minus 108 to 106; proposed by its author for WCAG 3, removed from the WCAG 3 drafts in 2023, and not named in the current draft. Home: 04.
+- **Aperture**: the opening of a partly closed counter (c, e, a, s). Home: 03.
+- **Apex and vertex**: the top and bottom points where two diagonals meet. Home: 03.
+- **APG (WAI-ARIA Authoring Practices Guide)**: the W3C's catalogue of widget patterns (combobox, dialog, disclosure, grid and others) with their keyboard and focus behaviour. Home: 07, 09, 11.
+- **API (application programming interface)**: the defined way one piece of software requests data or actions from another, including the route by which software calls a model. Home: 10, 22.
+- **App Clip**: a small part of an iOS app launched from a QR code, NFC tag or link without installing the app. Home: 09.
+- **App preview**: the 15 to 30 s video at the head of an App Store product page, delivered at Apple's accepted resolutions. Home: 26.
+- **App shell**: the persistent frame of navigation, header and content region in an application. Home: 05.
+- **App Tracking Transparency (ATT)**: Apple's framework, since iOS 14.5, that requires the person's permission before an app tracks them across other companies' apps and sites. Home: 10.
+- **Apparent motion (beta movement)**: the perception of one object moving from stills shown 40 to 100ms apart; the basis of screen animation, distinct from Wertheimer's objectless phi phenomenon. Home: 02, 12.
+- **Appeal**: the animation principle that a character's inner life is readable in its drawing (Thomas and Johnston). Home: 12, 27.
+- **Apple reference modes**: factory display presets on Apple XDR and Studio displays that fix gamut, white point, transfer function and brightness (for example Internet and Web, sRGB). Home: 04.
+- **Applied ceramic labelling**: ceramic ink screen printed onto glass and fired for a permanent decoration. Home: 20.
+- **Approval gate**: a pause in an agent's execution that shows the exact action and requires the person's approval before it runs. Home: 09.
+- **AQL sampling**: acceptance sampling by an acceptable quality limit, with sample sizes from ISO 2859-1 tables. Home: 20.
+- **Aqueous coating**: a water-based protective coating applied inline by a coating tower. Home: 20.
+- **AR Lens and AR Filter**: Snapchat's camera effect that tracks a face or the world, and its overlay applied to a Snap after capture. Home: 26.
+- **AR try-on**: an augmented reality overlay of a true-scale 3D product on a tracked hand, ear or neck in a live camera feed. Home: 11, 22.
+- **Arabic-Indic digits**: the numerals U+0660 to U+0669 used with Arabic text. Home: 13.
+- **Arabizi**: Arabic written in Latin letters with numerals standing for sounds Latin lacks (3 for ع, 7 for ح). Home: 08, 10.
+- **Arbitrary mark**: a real word used out of context as a name, such as Apple for computers. Home: 18.
+- **Arc label**: a fan-shaped label calculated to sit straight on a conical or tapered container. Home: 20.
+- **Arc, pedestal and truck**: camera moves that circle the subject, rise or fall without tilting, and travel sideways. Home: 14.
+- **Archetype (brand)**: twelve recurring character types (Mark and Pearson, 2001) used to describe brand personality. Home: 18.
+- **Archetype (research)**: a behavioural pattern describing a segment without demographic detail or a face. Home: 08.
+- **Archviz**: architectural visualisation, the CGI (computer-generated imagery) of unbuilt buildings and interiors. Home: 23.
+- **Arcs**: the principle that natural movement follows curved paths. Home: 12.
+- **`aria-activedescendant`**: an ARIA attribute through which a focused element (a combobox input) points to the highlighted option by ID. Home: 07, 11.
+- **Arm and leg**: a horizontal or rising stroke attached at one end; a falling diagonal attached at one end. Home: 03.
+- **Armature**: the network of diagonals and reciprocals of a frame used to place strong elements (dynamic symmetry). Home: 05.
+- **Arousal potential (Berlyne's inverted U)**: a stimulus's complexity, novelty and surprise, with preference highest at moderate levels. Home: 02.
+- **Arrival sequence**: the ordered thresholds of shade, water and light a hotel guest passes before reaching a room (Kerry Hill). Home: 28.
+- **Art and copy pair**: the two-person creative unit of an art director and a copywriter, the working form of advertising ideas since DDB's founding in 1949. Home: 19.
+- **Art direction (images)**: serving a differently cropped or composed image per viewport through the picture element. Home: 05, 06, 21.
+- **Art-Net and sACN**: protocols that carry DMX lighting control over Ethernet. Home: 15.
+- **Art paper and art card**: Indian trade names for coated paper and coated board. Home: 20.
+- **Articulation**: the capacity to name the property, value and reference behind a judgement in the technical terms of the discipline, so that private taste becomes direction a team can execute; the articulation ladder has four rungs: feeling, location, mechanism, fix with reference. Home: 00, 23.
+- **Articulation check**: an open screener question whose answer predicts whether a candidate will talk freely. Home: 08.
+- **Artist's impression**: the caption on a computer-generated or illustrated frame of a building or product that does not yet exist. Home: 19.
+- **As-of date**: the dated marker ("as of October 2026") on any claim that can move, at file level, claim level or as an ageing flag. Home: 00.
+- **ASC**: the American Society of Cinematographers. Home: 15.
+- **ASC CDL (American Society of Cinematographers Color Decision List)**: a primary grade written as slope, offset and power per RGB channel plus one saturation value. Home: 16.
+- **Ascender and descender**: the parts of lowercase letters above x-height and below the baseline. Home: 03.
+- **`asChild`**: a prop (Radix) that makes a component render its child element and lend that element its behaviour, without adding DOM. Home: 07.
+- **ASCI (Advertising Standards Council of India)**: the self-regulatory body that writes and enforces the ASCI Code and its guidelines. Home: 19, 20, 24.
+- **ASD-STE100 (Simplified Technical English)**: an aerospace controlled-language specification that limits sentence length, noun clusters and word meanings. Home: 10.
+- **ASE**: Adobe Swatch Exchange, the swatch file format shared by Adobe applications. Home: 04.
+- **`aspect-ratio`**: the CSS property that reserves a box's proportion before its media loads. Home: 05, 21.
+- **Aspect ratio token**: a named ratio (square, portrait, wide) that every image box in a product is sized by. Home: 06.
+- **Assembly**: the stringout cut to structure at about 1.5 times the target length. Home: 16, 19.
+- **Assertion (WCAG 3)**: a reported statement of organisational process, such as usability testing with disabled people. Home: 11.
+- **Assertion-evidence structure**: a slide whose title is a full-sentence claim, supported by visual evidence. Home: 05.
+- **Assignment**: a written transfer of copyright ownership from the creator to another party. Home: 24.
+- **Assimilation (Bezold effect)**: fine patterns taking on the colour of adjacent elements, the opposite of simultaneous contrast. Home: 02.
+- **Assistive technology**: hardware or software a disabled person uses to operate a device or read content, such as screen readers, magnifiers, switches and voice control. Home: 11.
+- **Assumption mapping**: plotting assumptions by importance against strength of evidence to choose what to test first. Home: 08.
+- **Asymmetric balance**: balance of unequal elements by position, like a lever about an axis. Home: 05.
+- **ATA Carnet**: an international customs document for temporary duty-free import of goods such as camera kit. Home: 24.
+- **ATAG**: the Authoring Tool Accessibility Guidelines 2.0 (W3C, 2015), the standard for accessible CMSs and editors that help authors produce accessible content. Home: 11.
+- **Atmospheric perspective**: distant planes rendered lighter and lower in contrast, which signals depth. Home: 05.
+- **Atomic design**: Brad Frost's method of building interfaces from atoms, molecules and organisms up to pages. Home: 07, 28.
+- **Atomic research**: a repository model that stores experiments, facts, insights and conclusions as separate linked units. Home: 08.
+- **Attention check**: a survey item with one correct answer, used to catch inattentive respondents. Home: 08.
+- **Attentional blink**: the failure to report a second target arriving about 200 to 500ms after a first. Home: 02.
+- **Attentional synchrony**: the convergence of many viewers' gaze on the same point in edited video. Home: 02.
+- **Attitudinal research, behavioural research**: studying what people say; studying what people do. Home: 08.
+- **AttrakDiff**: Hassenzahl's word-pair questionnaire of pragmatic and hedonic quality. Home: 08.
+- **Atypical combination**: a pairing of elements rarely seen together; high impact comes from one such intrusion in a conventional base (Uzzi). Home: 27.
+- **Audio description (AD)**: narration of visual information for blind and low-vision viewers, fitted into gaps in the soundtrack. Home: 11.
+- **Aura**: Walter Benjamin's term for an artwork's unique presence in time and place, which mechanical reproduction strips away. Home: 01.
+- **Authority**: deference to perceived expertise as a cue for compliance. Home: 02.
+- **Auto bezier**: interpolation that AE smooths automatically through a keyframe. Home: 13.
+- **Auto Color Management (ACM)**: the Windows 11 system-level colour management that maps non-wide-gamut apps into sRGB. Home: 04.
+- **Auto layout**: Figma's frame setting that sizes and spaces children from direction, padding and gap, mirroring CSS flexbox. Home: 06.
+- **Autodocs**: Storybook's generated documentation page built from a component's stories and prop types. Home: 07.
+- **Automatic dubbing (YouTube)**: YouTube's default-on AI dubbing of eligible videos into other languages, marked "auto-dubbed". Home: 17.
+- **Automatically created assets**: Google Ads features that write text from the landing page, expand final URLs, enhance images and build video from supplied stills. Home: 26.
+- **AV1**: the royalty-free video codec of the Alliance for Open Media, served by YouTube for high-resolution streams. Home: 16.
+- **AV company**: the audio-visual contractor that runs sound, light and screens at an event. Home: 15.
+- **AV script**: a two-column script with picture on the left and sound on the right, timed. Home: 14.
+- **Avatar**: a small image or initials block representing a person or entity, at fixed sizes with a deterministic fallback. Home: 06.
+- **AVE (advertising value equivalent)**: valuing press coverage at the price of the same space bought as advertising, a method the Barcelona Principles reject. Home: 24.
+- **Average percentage viewed**: average watch time divided by video length; above 100 percent means replays. Home: 17.
+- **Average shot length (ASL)**: a film's running time divided by its number of shots; a measurable pace value. Home: 16, 17, 28.
+- **Average watch time**: total watch time divided by plays. Home: 17.
+- **AVIF**: an image format derived from the AV1 codec, 30 to 50 percent smaller than JPEG at matched quality. Home: 21, 23.
+- **AVIF and WebP**: compressed image formats for the web, smaller than JPEG at equal visual quality. Home: 00.
+- **Avoid solo use**: Romaniuk's quadrant for an asset with high fame and low uniqueness, shared with another brand. Home: 18.
+- **Awareness**: the share of the target who know a brand exists; unaided, aided or top-of-mind. Home: 18.
+- **AWB (air waybill)**: the courier's tracking number for a shipment. Home: 09.
+- **axe-core (axe)**: Deque's open-source accessibility rules engine, run in browser extensions, CI, Storybook, Vitest and Playwright. Home: 07, 21.
+- **Axis (stress)**: the angle of the thinnest points of a round letter; oblique in humanist faces, vertical in didones. Home: 03.
+- **Axis (variable font)**: a named dimension of a variable font's design space (wght, wdth, opsz, slnt, ital, GRAD). Home: 03, 27.
+- **Axis of action**: the imaginary line between two subjects that the camera stays on one side of. Home: 14.
+- **Azulejo**: Portuguese painted, tin-glazed tiles, common in Goan houses. Home: 01.
+
+## B
+
+- **B-camera**: a second camera covering the same take from another angle. Home: 15.
+- **B-frame**: a bidirectionally predicted video frame, built from frames before and after it. Home: 13, 16, 26.
+- **B-roll**: supporting footage of textures, details, places and people that carries a brand film between hero moments. Home: 14, 17, 22.
+- **Back/forward cache (bfcache)**: the browser keeping the previous page in memory so Back restores it instantly with its state. Home: 21.
+- **Back light**: a source behind the subject, high and opposite the key, that separates hair and shoulders from the background. Home: 15.
+- **`backdrop-filter`**: the CSS property that blurs or tints whatever lies behind an element, the technical basis of glassmorphism. Home: 01.
+- **Backlit film**: translucent polyester printed for lightboxes and illuminated panels. Home: 20.
+- **Backplate (backing plate)**: a solid or translucent panel of surface colour placed behind small type so that it stays legible over an image or footage. Home: 04, 13.
+- **Backup image**: the static JPG or PNG an HTML5 ad serves where HTML5 cannot run. Home: 26.
+- **Badge**: a small dot or count attached to an icon or tab to signal something new or unread. Home: 06.
+- **Balance**: the state in which the visual weights on either side of an axis feel resolved. Home: 05.
+- **Balancing paper**: a lining glued inside a rigid box so the tension matches the outer wrap and the board stays flat. Home: 20.
+- **Balcão**: the raised, roofed entrance porch with built-in seats of the Goan house. Home: 01.
+- **Banding**: visible steps in a gradient caused by too few code values across the tonal distance. Home: 04, 06, 13, 16, 23.
+- **Bandwagon, snob and Veblen effects**: demand that rises as more people own a good, falls as more people own it, and rises with its price. Home: 02.
+- **Banner**: a persistent message strip at the top of content for session-level conditions such as offline or unpaid. Home: 06.
+- **Banner blindness**: the learned tendency to ignore anything that looks like an advertisement. Home: 02.
+- **Barcelona Principles**: AMEC's principles for measuring communication by outcomes. Home: 24.
+- **Barge-in**: the ability of a person to interrupt a voice system while it is speaking. Home: 09.
+- **Bartleson-Breneman effect**: the fall in perceived image contrast as the viewing surround darkens. Home: 02.
+- **Baseline (measurement)**: the level of the brief's success measure captured before launch, against which results are read. Home: 19.
+- **Baseline (typography)**: the line on which letters without descenders sit. Home: 03, 05.
+- **Baseline (web platform)**: the web platform's label for a feature supported in the current versions of Chrome, Edge, Firefox and Safari; "newly available" marks the date the last of them shipped it. Home: 03, 04, 05, 06, 07, 21.
+- **Baseline grid**: the horizontal lines every line of text sits on, shared across columns and pages. Home: 00, 03, 05.
+- **Basis Universal**: a compressed texture format that transcodes to whatever the GPU reads. Home: 13.
+- **Batch day**: one shoot day planned to produce a month or more of series content. Home: 17.
+- **Beadboard**: expanded polystyrene sheet used as a cheap large white bounce; sold in Mumbai as thermocol. Home: 15.
+- **Beat, hold, release**: the units of scroll narrative pacing; a scene, a pinned stretch of scroll, and free scrolling between. Home: 12.
+- **Beat sheet**: the film written as a list of timed beats that must sum to the brief's duration. Home: 13.
+- **Beauty dish**: a shallow metal reflector with a centre deflector, crisper than a softbox. Home: 15.
+- **Beer's law**: the absorption colour of a medium deepens with the distance light travels through it. Home: 13.
+- **Belly band**: a paper band wrapped around a stationery suite or a book. Home: 20.
+- **Ben-Day dots**: the printed dot pattern of cheap colour comics, enlarged by Lichtenstein. Home: 01.
+- **Benchmarking**: measuring a product with a standard instrument so it can be compared over time or against competitors. Home: 08.
+- **Bento grid**: a modular card layout of unequal cells (1 x 1, 2 x 1, 1 x 2, 2 x 2) on a 4 or 6 column base. Home: 05.
+- **Best boy and sparks**: the gaffer's deputy, and the lighting electricians. Home: 15.
+- **Best boy electric**: the gaffer's deputy for crew, power distribution and rental orders. Home: 14.
+- **Bezier interpolation**: keyframe interpolation shaped by hand-set influence handles. Home: 13.
+- **Bezold-Brücke shift**: the apparent change in hue with changing intensity. Home: 02.
+- **BHK**: the Indian count of bedrooms plus hall and kitchen used to name an apartment's configuration (a 3 BHK has three bedrooms). Home: 09.
+- **Bi-colour**: a fixture with warm and cool white emitter sets, tunable between them. Home: 15.
+- **Bi-script mark**: a symbol built to read in two scripts at once, as the rupee sign joins Devanagari "ra" and Latin "R". Home: 28.
+- **Bias against creativity**: the implicit preference for familiar ideas under uncertainty, even among people who say they value creativity (Mueller, Melwani and Goncalo). Home: 27.
+- **Bias light**: a dim D65 light behind the reference monitor that steadies the viewer's adaptation. Home: 16.
+- **Biased renderer**: a path tracer that trades exactness for speed through caching and clamping. Home: 13.
+- **Bidi (bidirectional text)**: the Unicode rules that order mixed left-to-right and right-to-left text; controlled in CSS by `direction` and `unicode-bidi`. Home: 03, 10.
+- **Bidi isolation**: wrapping an inserted run of text, with the HTML `<bdi>` element, `unicode-bidi: isolate` or Unicode U+2066 to U+2069, so that its direction is resolved on its own and cannot reorder the text around it. Home: 09, 10.
+- **Big idea**: one large, repeated visual or verbal thought that organises a whole piece or campaign, often working through a pun, substitution or contradiction; the Bernbach and Ogilvy tradition. Home: 01, 19.
+- **BIMI**: Brand Indicators for Message Identification, the standard that shows a verified brand logo beside the sender in Gmail, Apple Mail and Yahoo. Home: 21, 26.
+- **Bins**: folders inside an edit project, organised by day, scene and camera. Home: 16.
+- **Biological motion**: the immediate perception of a living body from a few moving points of light. Home: 02.
+- **Bird's eye and worm's eye**: a camera directly overhead, and one at ground level looking up. Home: 14.
+- **BIS**: the Bureau of Indian Standards, which runs gold hallmarking. Home: 20.
+- **BIS hallmark**: the Bureau of Indian Standards' purity mark on gold jewellery, carrying a HUID. Home: 10.
+- **Bisociation**: the collision of two self-consistent, habitually separate frames of reference that produces a creative act (Koestler). Home: 27.
+- **Bit depth**: the number of tonal steps per colour channel (8 bit is 256, 10 bit 1,024, 12 bit 4,096). Home: 04, 14.
+- **Bitmap**: a font or image stored as a grid of pixels. Home: 01.
+- **Black point compensation**: the ICC conversion option that maps source black to destination black so shadows keep detail. Home: 04.
+- **Black smear**: the trailing artefact on OLED panels when dark grey content moves over pure black, caused by slow pixel response from the off state. Home: 04.
+- **Black wrap**: matte black aluminium foil moulded over lamps to control spill. Home: 15.
+- **Blade sign**: a double-sided sign projecting at right angles from a facade. Home: 20.
+- **Blanding**: replacing a distinctive brand mark with a near-identical geometric sans-serif wordmark, so brands become interchangeable. Home: 01, 18.
+- **Bleach bypass**: skipping the bleach stage in film processing, leaving silver for high contrast and low saturation. Home: 16.
+- **Bleed**: print extended beyond the trim line (3 to 100 mm by product) so that cutting drift leaves no white edge. Home: 00, 05, 20, 26.
+- **Blended rate**: one hourly rate averaged across a team's roles, used for retainers and sanity checks. Home: 24.
+- **Blimp**: a basket windshield around a microphone. Home: 15.
+- **Blind deboss**: an impression pressed into board with no ink or foil. Home: 18.
+- **Blind emboss**: a raised impression with no ink or foil. Home: 20.
+- **Blind emboss and deboss**: a design raised from, or pressed into, the sheet with no ink or foil. Home: 26.
+- **Blind folio**: a page counted in the numbering but printed without its number. Home: 05.
+- **Blind reconstruction**: a drill in which a reference is viewed for 10 seconds, closed, redrawn from memory as a wireframe and compared with the original. Home: 00.
+- **Blind spot and filling-in**: the receptor-free retinal region where the optic nerve leaves the eye, and the brain's completion of it from the surround. Home: 02.
+- **Blind variation and selective retention**: the model of creativity as variations produced without foreknowledge of success, then selected (Campbell). Home: 27.
+- **Block (Are.na)**: one piece of content (image, link, text, file) that can sit in many channels. Home: 00.
+- **Blocking**: the planned movement of actors and camera in a scene. Home: 14.
+- **Blocking pass**: the first animation pass, with positions and timing and no polish. Home: 13.
+- **Bloom**: the soft spread of light around highlights from lens and emulsion scatter. Home: 16.
+- **Blue hour**: the period after sunset and before sunrise when the sun is 4 to 6 degrees below the horizon and the sky is deep blue. Home: 14, 15.
+- **Blue zones**: alignment zones in PostScript hinting where overshoots are suppressed at small sizes. Home: 03.
+- **Blur-up**: showing a blurred placeholder and cross-fading to the full image when it loads. Home: 06.
+- **BlurHash**: a 20 to 30 character string (Wolt, 2018) decoded on the client into a blurred preview of an image. Home: 06.
+- **BNPL (buy now, pay later)**: a short-term instalment loan offered at checkout; in India, a digital loan under the RBI's Digital Lending Directions. Home: 09, 10.
+- **Bodymovin**: an After Effects plugin (Hernan Torrisi, 2015) that exports animation as JSON for runtime playback. Home: 01, 13.
+- **Bokeh**: how a lens renders out-of-focus highlights; oval on anamorphics. Home: 14.
+- **Bonded leather**: leather fibre re-formed with a binder into sheets. Home: 20.
+- **Bonded uplink**: several mobile data connections combined into one stream, for remote review from location. Home: 14.
+- **Book cloth**: woven fabric backed for covering book cases; buckram is a heavy, filled grade. Home: 20.
+- **Book light**: a bounce followed by a diffusion frame in a V shape, giving a very large even soft source. Home: 15.
+- **Booking engine**: the hotel's direct reservation system (Sabre SynXis, Amadeus iHotelier, SiteMinder and others) that the site hands the guest to. Home: 21.
+- **Boom**: a pole-mounted microphone held above the frame line. Home: 15.
+- **BOPP**: biaxially oriented polypropylene, the common laminating film. Home: 20.
+- **Bottom sheet**: a surface that rises from the bottom edge to resting heights (detents) for a choice or short task. Home: 06.
+- **Bouba-kiki effect**: the near-universal matching of rounded shapes to "bouba" and spiky shapes to "kiki". Home: 02.
+- **Bouma (word shape)**: the outline of a word formed by ascenders and descenders, once thought to be the unit of recognition. Home: 02.
+- **Bouma's law**: crowding occurs when flankers are closer than about half the target's eccentricity (its distance from the point of fixation). Home: 02.
+- **Bounce (lighting)**: light reflected from a white or nearby surface onto a subject to imitate soft daylight, carrying the surface's colour into the shadow side; introduced in Indian cinema by Subrata Mitra. Home: 01, 22.
+- **Bounce (spring parameter)**: Apple's and Motion's -1 to 1 measure of oscillation; 0 is critically damped, and the damping ratio is 1 minus a positive bounce. Home: 12.
+- **Bowens mount**: the bayonet accessory mount most softboxes fit. Home: 15.
+- **Bowl, counter, eye**: a closed curved stroke; the white it encloses; the counter of e. Home: 03.
+- **bpc**: bits per channel, the colour precision of a project or file (8, 16 or 32). Home: 13.
+- **BPM**: beats per minute, the tempo of a piece of music. Home: 15.
+- **Bracketed and unbracketed serif**: a serif joined to the stem by a curve, or meeting it at an angle. Home: 03.
+- **Bracketing**: shooting several exposures at different levels of the same frame to merge later. Home: 15.
+- **Bradford transform**: the standard chromatic adaptation matrix used to move colours between white points such as D50 and D65. Home: 04.
+- **Braintrust**: Pixar's group of senior filmmakers who give candid notes on a film in progress without the authority to mandate the fix (Catmull). Home: 00, 19, 23, 27, 28.
+- **Branchaloris**: a real branch held in a beam to throw a leaf pattern. Home: 15.
+- **Brand architecture**: the system that organises how a company's brands relate to each other and to the parent. Home: 18.
+- **Brand audit**: an inventory of every live brand expression with judgement, in four lenses: visual, verbal, experiential, competitive. Home: 18.
+- **Brand building and activation**: Binet and Field's two kinds of advertising: emotional, broad-reach work that builds memory, and rational, targeted work that converts now. Home: 00.
+- **Brand equity**: the differential effect that brand knowledge has on how buyers respond to the brand's marketing (Keller). Home: 18.
+- **Brand experience**: the sum of what a buyer meets, in the order they meet it. Home: 18.
+- **Brand Experience Scale**: Brakus, Schmitt and Zarantonello's 12-item scale of sensory, affective, intellectual and behavioural brand experience. Home: 08.
+- **Brand guidelines**: the document, site or system that records every rule the identity runs on. Home: 18.
+- **Brand house**: the diagram that arranges platform elements with essence at the top and pillars beneath. Home: 18.
+- **Brand Identity Prism**: Kapferer's six-facet model: physique, personality, relationship, culture, reflection, self-image. Home: 18.
+- **Brand Key**: Unilever's one-page brand model, running from competitive environment and target to discriminator and essence. Home: 18.
+- **Brand lift study**: Meta's and YouTube's lift studies, which measure ad recall, awareness and consideration against a held-out control. Home: 08, 17, 18, 19.
+- **Brand on a page**: a single sheet carrying the positioning, mark, palette, type, images and voice. Home: 18.
+- **Brand platform**: the written set of foundational statements (purpose, vision, mission, values, personality, promise, proposition, pillars, essence) a brand operates from. Home: 18.
+- **Brand portal**: the living online guidelines site holding a brand's rules and downloadable assets. Home: 24.
+- **Brand prominence**: how conspicuously a brand's mark is displayed on a product, preferred loud by Han, Nunes and Drèze's parvenus and poseurs and quiet by their patricians (proletarians are the fourth class). Home: 02.
+- **Brand purpose**: a brand's stated reason to exist beyond profit, used as a source of ideas; a contested strategy. Home: 19.
+- **Brand tracker**: a repeated survey measuring awareness, salience, consideration and image over time. Home: 18.
+- **Brand world**: the identity understood as a world with its own physics, where the logo is one object. Home: 18.
+- **Branded entertainment**: content commissioned by a brand to be watched for its own sake, such as BMW's "The Hire". Home: 01.
+- **Branded house**: one master brand across every offer, with descriptors. Home: 18.
+- **Branded residence**: homes sold under a hospitality or fashion brand licensed to a developer, with the licensor approving every touchpoint. Home: 18, 19.
+- **Breadcrumb, location-based**: a trail showing the page's position in the hierarchy, as opposed to the path the person clicked. Home: 09.
+- **Breadcrumbs**: the trail of parent pages shown above a page title. Home: 06.
+- **Breadth-first**: working on the whole design at low resolution before going deep on any part, the habit of experts; depth-first is the novice's habit of finishing one component first (Ball and Ormerod). Home: 27.
+- **Breadth sheet and deep run**: the house generate format: ten compositions across at least four categories, then ten variants inside the strongest category. Home: 27.
+- **Breakout grid**: a named-line CSS grid in which children sit at the text measure and opt into wide or full-bleed zones. Home: 05.
+- **Breakpoint**: a width at which a layout changes structure. Home: 05.
+- **BridgePCA**: Myndex's WCAG 2-compatible contrast test computed with APCA's perceptual maths. Home: 11.
+- **Brief back**: the creative team's written restatement of the brief, under 200 words, within 24 hours of receiving it. Home: 19.
+- **Brief crit**: the six-question check of a brief before work starts (4.12). Home: 23.
+- **Brightness (ISO brightness)**: the blue-light reflectance of paper at 457 nm. Home: 20.
+- **Broad and short lighting**: keying the side of the face turned towards (broad) or away from (short) the camera. Home: 15.
+- **Broadcast channel**: Instagram's one-to-many chat where followers react and vote but do not reply in the thread. Home: 17.
+- **Brotli**: Google's general-purpose compression algorithm, used inside WOFF2 and for HTTP responses. Home: 21.
+- **Browse mode and focus mode**: a screen reader's reading mode, where letters jump by element type, and its interaction mode, where keys go to the page. Home: 11.
+- **Brutalism**: the 1950s architecture of exposed raw concrete (béton brut) that gave web brutalism its name. Home: 01.
+- **BT.1886**: the ITU recommendation setting gamma 2.4 as the reference display curve for HD. Home: 16.
+- **Build defect**: a departure of the build from a correct spec; a design defect is a fault in the spec itself. Home: 23.
+- **Built-up letters**: fabricated sign letters with folded metal faces and returns. Home: 20.
+- **Bulk**: caliper divided by grammage, the measure of how thick a sheet is for its weight. Home: 20.
+- **Bulk action**: an action applied to a selection of several records at once. Home: 09.
+- **Bulletproof button**: an email button built from a table cell with padding and a background colour so it renders with images off. Home: 21.
+- **Bumper**: a YouTube non-skippable ad of 6 s or less, built around one idea. Home: 17, 26.
+- **Bundled production fee**: one production price that includes the house's margin, with vendor costs not itemised. Home: 24.
+- **Burn report**: the Monday report for each live job of budget hours, hours burnt, percent complete and forecast hours at completion. Home: 24.
+- **Burnt-in timecode**: a timecode display rendered into a review picture. Home: 13.
+- **Butterfly (Paramount) lighting**: a key above and in front of the face that casts a small shadow under the nose; also called paramount. Home: 15, 22.
+- **Button**: a final musical hit that ends a cue on the end frame. Home: 16.
+- **Buy box**: the block on a product page holding name, price, options and the purchase action. Home: 05.
+- **Buyout**: a one-off fee for all agreed uses of a work or a performance. Home: 15, 24.
+- **BWF**: Broadcast Wave Format, a WAV that carries timecode and metadata; polyphonic BWF holds several tracks in one file. Home: 15.
+
+## C
+
+- **C1S and C2S**: board coated on one side or on both sides. Home: 20.
+- **C2PA**: the Coalition for Content Provenance and Authenticity, whose specification (version 2.5 as of October 2026) defines signed provenance manifests bound to a file. Home: 17, 22.
+- **C2PA and Content Credentials**: the Coalition for Content Provenance and Authenticity's specification for a signed provenance manifest bound to a file, and the consumer-facing name for that manifest. Home: 00.
+- **C2PA manifest**: the cryptographically signed record of an asset's origin and edits defined by the Coalition for Content Provenance and Authenticity, shown to users as Content Credentials. Home: 09, 22, 26.
+- **CAA record**: a DNS record naming which certificate authorities may issue for a domain. Home: 21.
+- **CABAC**: context-adaptive binary arithmetic coding, the H.264 entropy coder YouTube asks for because it compresses better than CAVLC. Home: 13, 16, 26.
+- **Calendar art**: mass-printed devotional and popular images sold in bazaars and given away as calendars, descended from Ravi Varma's chromolithographs. Home: 01.
+- **Calendering**: pressing paper between polished rollers to smooth and gloss it. Home: 20.
+- **Calibration and profiling**: setting a display to a target (calibration) and measuring and recording what it then does (profiling, which writes the ICC profile). Home: 04.
+- **Calibration session**: a monthly exercise in which the team scores work independently, then compares, to align the quality scale. Home: 24.
+- **Caliper**: the thickness of a sheet, in micrometres. Home: 20.
+- **Call sheet**: the document issued the evening before a shoot with times, locations, contacts, weather, nearest hospital, shot list and conduct contact. Home: 14, 19, 24.
+- **Calligraffiti**: Arabic calligraphy painted as street art, as by eL Seed. Home: 01.
+- **CAM02-UCS**: the uniform colour space of CIECAM02, the colour appearance model CAM16 replaced. Home: 04.
+- **CAM16 and CAM16-UCS**: a colour appearance model (Li et al., 2017) predicting how a colour looks under stated viewing conditions, and the uniform space derived from it. Home: 04.
+- **Cameo**: Sora's consented insertion of a real person's likeness, withdrawn with the service. Home: 22.
+- **Camera log gamut**: a manufacturer's wide-gamut primaries paired with its log curve (ARRI Wide Gamut 4 with LogC4, S-Gamut3.Cine with S-Log3, and others). Home: 04.
+- **Camera to Cloud**: Frame.io's system for uploading proxies from cameras and encoders while rolling. Home: 14.
+- **Campaign platform**: an idea built to carry new executions across channels and seasons for years. Home: 00.
+- **Campaignable idea**: an idea that produces its second and tenth execution as easily as its first. Home: 19.
+- **Canon of page construction**: the medieval and incunabula method of placing a text block on a page by diagonals or ninths. Home: 05.
+- **Canonical link**: the `link` element that names the preferred URL of a page among its variants. Home: 21.
+- **Cap height**: the height of a capital letter above the baseline. Home: 03, 05, 27.
+- **`cap`, `lh` and `rlh` units**: CSS units equal to the font's cap height, the element's computed line height and the root element's line height. Home: 03, 05.
+- **CAPTCHA**: a challenge test meant to tell people from bots; no longer reliable against AI agents. Home: 08.
+- **Caption (post)**: the text under a post, distinct from on-screen captions. Home: 17.
+- **Caption (video)**: synchronised text of speech and meaningful sound in video. Home: 11.
+- **Card**: a bounded container holding one item's image, title, metadata and action as a single tappable unit. Home: 06.
+- **Card sorting (open, closed, hybrid)**: a research method in which participants group items; open sorts let them name categories, closed sorts give the categories. Home: 08, 09, 10.
+- **Carepa**: translucent oyster-shell window panes set in a timber lattice, typical of Goan houses. Home: 01.
+- **Carpet area**: the usable floor area inside a unit's walls; the basis of sale under India's RERA Act 2016, and required in advertisements by state authorities such as MahaRERA. Home: 09, 10.
+- **CART**: Communication Access Realtime Translation, live human captioning displayed on screen. Home: 11.
+- **Cascade**: the algorithm that decides which competing CSS declaration wins, by origin, layer, specificity and order. Home: 21.
+- **Cascade layer (`@layer`)**: a CSS `@layer` that sets precedence between groups of styles independently of selector specificity. Home: 07, 21.
+- **Case binding**: hardcover binding with a text block glued into a case of board covered in cloth, paper or leather. Home: 20.
+- **Case film**: the two-minute film that presents a campaign's problem, insight, idea, execution and results to an awards jury. Home: 19.
+- **Case-sensitive forms (`case`)**: punctuation and figures raised to centre on capitals. Home: 03.
+- **Cash cow**: a portfolio brand that funds the others with little investment. Home: 18.
+- **Cast and calendered vinyl**: cast vinyl is cast as a thin film, conformable and long-lasting; calendered vinyl is rolled into sheet, cheaper and for flat, short-term use. Home: 20.
+- **Catchlight**: the reflection of the light source in the eye. Home: 15, 22, 23.
+- **Categorical, sequential and diverging scales**: data palettes of distinct hues at equal lightness and chroma for unordered groups; one hue across a monotonic lightness range for ordered quantities; two hues meeting at a neutral midpoint for data with a meaningful centre. Home: 04.
+- **Category codes**: the signs a category shares that let a buyer recognise it in under a second. Home: 18.
+- **Category design**: the Play Bigger method of naming a problem and a new category and being seen as its leader. Home: 18.
+- **Category entry points (CEPs)**: the cues a buyer starts from when a need arises, which a brand links itself to. Home: 18, 19.
+- **Caustics**: focused patterns of light thrown by refractive or reflective objects onto nearby surfaces. Home: 13.
+- **Caveat**: a short, specific disclosure placed next to high-stakes AI output. Home: 09.
+- **CBFC**: the Central Board of Film Certification, which certifies films and ad films shown in Indian cinemas. Home: 26.
+- **CCAA**: Canada's Companies' Creditors Arrangement Act, the creditor protection regime Ssense entered in 2025. Home: 21.
+- **CCO (chief creative officer)**: owner of the creative standard and reputation of the whole house. Home: 24.
+- **CCPA (Central Consumer Protection Authority, India)**: India's Central Consumer Protection Authority, which issues statutory guidelines on misleading advertising, greenwashing and dark patterns. Home: 19, 20, 21, 24.
+- **CDL (ASC Color Decision List)**: slope, offset, power and saturation values that carry a look between systems. Home: 14.
+- **CDN (content delivery network)**: servers that cache a site's files at edge nodes and deliver them from the node nearest each visitor. Home: 21, 24.
+- **Central fixation bias (central bias)**: the tendency of viewers to fixate the centre of an image first, whatever its content. Home: 02, 05.
+- **Centralised model**: a dedicated team builds and serves the system to product teams. Home: 07.
+- **Centre bias and inward bias**: the preference for a single object at the centre of a frame and, when it is off centre, for it to face into the frame. Home: 02.
+- **CFF (Compact Font Format)**: the PostScript outline format inside OpenType, 1000 UPM by convention. Home: 03.
+- **CFG scale**: classifier-free guidance scale; how strongly a diffusion model follows the prompt, typically 4 to 8 in Stable Diffusion. Home: 22.
+- **CGI (computer-generated imagery)**: images and film made in 3D software. Home: 01, 19, 24, 27.
+- **`ch` unit**: the advance width of the digit zero in the current font; wider than the average character in most text faces. Home: 03, 05, 21.
+- **Chain of custody (CoC)**: FSC or PEFC certification that each company handling certified material keeps it traceable. Home: 20.
+- **Change blindness**: the failure to notice a change between two views separated by a disruption. Home: 02.
+- **Change list**: the numbered record of what changed between versions, with timecodes. Home: 16.
+- **Change order**: a written, priced addition or alteration to scope, signed before the work starts. Home: 24.
+- **Change request form**: a one-page record of an addition's scope, price and date, signed before work starts. Home: 19.
+- **Changeset**: a small file added with a pull request that states the semver bump and a release note, read by the Changesets tool at release. Home: 07.
+- **Channel subscriptions**: WhatsApp's paid monthly access to a channel's exclusive updates, announced 16 June 2025. Home: 17.
+- **Character reference (--cref)**: the Midjourney V6 parameter carrying a character's identity from a reference image, replaced by --oref in V7. Home: 22.
+- **Chartability**: Frank Elavsky's set of heuristics for auditing the accessibility of data visualisations. Home: 11.
+- **Chartjunk**: Tufte's term for decoration in a chart that carries no information. Home: 01.
+- **Check designs**: Figma's linter, using no generative AI, that flags hard-coded values a variable could replace and assets from the wrong library. Home: 07.
+- **Checkout Extensibility**: Shopify's branding settings and checkout extensions, the only supported way to customise its checkout. Home: 21.
+- **Checksum**: a value computed from a file's contents (xxHash or MD5) that proves a copy is identical to its source. Home: 16.
+- **Checksum verification**: a hash comparison proving each copy of the media matches the card. Home: 14.
+- **Chemistry meeting**: a 60 to 90 minute meeting that tests the fit between client and house before any paid work. Home: 24.
+- **Chiaroscuro**: strong light and dark contrast with much of the frame in shadow. Home: 15.
+- **China ball**: a paper lantern used as an omnidirectional soft source. Home: 15.
+- **Chip**: a compact, rounded control that represents a filter, a choice, an entered value or a suggested action. Home: 06.
+- **Choice architecture**: the design of the context in which people choose. Home: 02.
+- **Choice overload**: reduced choosing or satisfaction when options are too many, under specific conditions. Home: 02.
+- **Choreography**: the order and offset in which moving elements enter, move and leave. Home: 00.
+- **Choreography page**: documentation of what moves in what order, per transition type, using the motion tokens. Home: 07.
+- **Chroma**: the colourfulness of a colour relative to a grey of the same lightness; the C in LCH and OKLCH, the radial axis of Munsell. Home: 04.
+- **Chroma subsampling**: storing colour at lower resolution than brightness; 4:2:0 halves it in both directions. Home: 02, 03, 13, 14, 16.
+- **Chromatic adaptation**: the visual system's normalisation to the prevailing illuminant, modelled by von Kries as an independent gain on each cone class. Home: 02, 04.
+- **Chrome ball**: a reflective sphere photographed on set to record the lighting environment for later matching. Home: 22.
+- **Chrome ball and grey ball**: reflective and matte spheres shot on set as light reference for CG. Home: 14.
+- **Chromolithography**: colour printing from several hand-drawn limestone plates, one per colour, which made large areas of flat colour cheap. Home: 01.
+- **Chunk**: a unit of information bound by prior knowledge that occupies one working memory slot. Home: 02.
+- **Chunking**: encoding a complex pattern as one familiar unit, the basis of expert recognition (Chase and Simon). Home: 27.
+- **CI**: continuous integration, the automated build and test run on every change. Home: 07.
+- **CICP**: coding-independent code points, the compact colour metadata (primaries, transfer, matrix) carried by AVIF, HEIC and video streams. Home: 04.
+- **CIE chromaticity diagram**: the plot of all visible colours on which display gamuts appear as triangles. Home: 16.
+- **CIE standard observer**: the 1931 (2 degree) and 1964 (10 degree) colour matching functions that define how a standard human mixes primaries to match any colour. Home: 04.
+- **CIE whiteness**: a measure of how white paper looks, pushed up by optical brightening agents. Home: 20.
+- **CIE XYZ**: the 1931 root space in which Y is luminance and every visible colour is positive; all conversions pass through it. Home: 04.
+- **CIEDE2000 (delta E 2000, dE00)**: the current colour-difference formula, on which a difference of about 1 is one just noticeable difference side by side. Home: 02, 04, 16, 22.
+- **CIELAB**: the CIE 1976 space of L*, a*, b*, perceptually spaced by a cube root; the space of ICC profiles and spectrophotometers. Home: 04.
+- **CIF**: cost, insurance and freight, the import value on which customs duty is charged. Home: 20.
+- **Cinemagraph**: a still photograph in which one element moves in a loop. Home: 17.
+- **Cinewhoop**: a small FPV drone with prop guards, built for flying through interiors. Home: 14.
+- **Circle of confusion**: the largest blur spot still read as sharp; 0.03 mm by full-frame convention. Home: 14.
+- **Circled takes**: the director's chosen takes, marked on the sound and camera reports. Home: 15.
+- **`clamp()`**: a CSS function returning a preferred value held between a floor and a ceiling. Home: 21.
+- **Clamshell**: a beauty setup with a key above the face and a fill or reflector below. Home: 14, 15.
+- **Class kerning**: kerning stored by groups of similar shapes in place of individual pairs. Home: 03.
+- **Classes (Vox-ATypI)**: humanist, garalde, transitional, didone, mechanistic, lineal (grotesque, neo-grotesque, geometric, humanist), glyphic, script, graphic, blackletter and Gaelic; groups by axis, contrast and serif. Home: 03.
+- **Clay**: grey-shaded renders of a model, used to approve form before materials. Home: 13.
+- **CLDR**: the Unicode Common Locale Data Repository, the locale database (plural rules, date and number formats) behind Intl, ICU and the platforms. Home: 10.
+- **Clean plate**: a frame of the set without the unwanted object, composited over it to remove it. Home: 13, 14, 16, 19.
+- **Clear Print**: RNIB's guidance for legible print, with body text at 12 pt minimum and 14 pt preferred on matt stock. Home: 11.
+- **Clear space (exclusion zone)**: the margin around a mark that nothing else may enter, defined from an element of the mark. Home: 18.
+- **Clearance check**: a reverse image search plus trademark searches by class (WIPO Global Brand Database, IP India, the UAE Ministry of Economy register) run on a mark before it is shown. Home: 00.
+- **Clearance log**: the art department's record of every artwork, brand, building and screen in frame and its permission. Home: 14.
+- **Clearance pass**: the check before picture lock that clears, blurs or replaces third-party marks, artworks, plates, screens and people without releases. Home: 16.
+- **CLI**: command-line interface, a tool run from the terminal (Style Dictionary, Terrazzo, shadcn, Code Connect). Home: 07.
+- **Click-through rate (CTR)**: clicks divided by impressions. Home: 17.
+- **Click-to-WhatsApp ad**: a Meta click-to-message ad whose button opens a WhatsApp chat with a pre-filled first message. Home: 17.
+- **`clickTag`**: the variable an ad server fills with the tracked landing URL in an HTML5 ad. Home: 26.
+- **Client chair exercise**: writing the five questions the client's own boss will ask them, the day before a presentation, and re-ordering the deck to answer them. Home: 19.
+- **Client cut**: v01, the first version the client sees and the first that counts against the rounds in scope. Home: 16.
+- **Client round**: one consolidated set of client comments and one revised version. Home: 16.
+- **Clienteling**: the one-to-one selling a client advisor does with known customers, in India and the Gulf mostly over WhatsApp. Home: 08, 10, 19, 21.
+- **Clienteling kit**: the campaign assets cleared for advisors to send one to one: stills, a vertical cut, the story in the advisor's voice, an invitation and a lookbook PDF. Home: 19.
+- **Close Friends**: an Instagram Stories audience restricted to a chosen list. Home: 17.
+- **Close-up diopter and split diopter**: a single-element magnifier that lets a lens focus closer, and one that covers half the frame to hold two focus planes. Home: 14.
+- **Closed GOP**: a group of pictures that references no frame outside itself, so a stream can be cut, or playback can jump, at every GOP boundary. Home: 13, 16, 26.
+- **Closure**: the completion of incomplete figures by the visual system, including illusory contours (edges seen where no luminance edge exists, as in the Kanizsa triangle). Home: 02, 05.
+- **Cloze test**: a comprehension test in which every nth word is deleted and readers fill the blanks; 60 percent correct passes. Home: 10.
+- **CMC(2:1)**: the textile colour-difference formula (BS 6923, ISO 105-J03) that weights lightness differences half as much as chroma and hue. Home: 04.
+- **CMO (chief marketing officer)**: the client's senior marketing decision maker. Home: 24.
+- **CMO (collective management organisation)**: a body that licenses and collects royalties on behalf of many rights holders. Home: 15.
+- **CMS (content management system)**: the software editors use to publish a site (WordPress, Shopify, Webflow, Framer). Home: 07, 10, 24.
+- **CMYK**: the four-ink subtractive process model; meaningless as a colour until an output profile is attached. Home: 04, 22, 23.
+- **CNAME**: a DNS record pointing a name at another name. Home: 21.
+- **CNC**: computer numerically controlled machining, used to cut physical models directly from digital files. Home: 27.
+- **Co-brand lockup**: the fixed arrangement of two brands' marks with a joining word or divider. Home: 18.
+- **Co-driver**: a master brand that shares the purchase decision equally with a sub-brand. Home: 18.
+- **Co-evolution**: the process in which a partial solution reveals a new aspect of the problem, which reshapes the solution (Dorst and Cross). Home: 27.
+- **Coach mark**: a small callout pointing at one control, shown once. Home: 09.
+- **COB**: chip on board, an LED fixture with one dense emitter array that behaves as a point source. Home: 15.
+- **COD (cash on delivery)**: payment collected at the door, still expected in Indian e-commerce. Home: 09.
+- **COD and RTO**: cash on delivery, and return to origin, a COD order refused at the door and shipped back. Home: 21.
+- **Code, codebook**: a short label attached to a segment of qualitative data; the list of codes with definitions and inclusion rules. Home: 08.
+- **Code Connect**: Figma's tool for mapping a design component to its code implementation so Dev Mode and the Figma MCP server show real code. Home: 07, 21.
+- **Code Connect and Dev Mode**: Figma's mapping of a design component to its production code, and the inspection mode for engineers that shows it with token names, measurements and annotations. Home: 06.
+- **Code layer**: an interactive, code-backed prototype object on the Figma canvas, in open beta since Config India, October 2026. Home: 06.
+- **Code point**: the number Unicode assigns to a character, such as U+20B9 for the rupee sign. Home: 01.
+- **Code splitting**: shipping only the JavaScript a view needs and lazy-loading the rest on interaction or intersection. Home: 21.
+- **Code-switching**: alternating between two languages inside one utterance (Hinglish, Arabic with English names). Home: 09.
+- **Code syntax**: the per-platform code name (Web, Android, iOS) stored on a Figma variable and shown in Dev Mode snippets. Home: 07.
+- **Codec**: video compression formats, from the universal H.264 to the 30 to 50 percent smaller AV1. Home: 13, 21.
+- **Codemod**: a script that rewrites consuming code automatically during a migration. Home: 07.
+- **Codes**: a brand's owned, repeated signs (a colour, a weave, an animal, a box), the luxury form of distinctive brand assets. Home: 19.
+- **Coffret**: a gift box holding several products, usually fragrance or beauty. Home: 20.
+- **COGA**: the W3C Cognitive and Learning Disabilities Accessibility Task Force. Home: 11.
+- **Cognitive entrenchment**: the loss of flexibility that comes with deep domain expertise (Dane). Home: 27.
+- **Cognitive load theory**: Sweller's account of learning and use as limited by working memory load. Home: 02.
+- **Cognitive pretesting**: piloting a survey while respondents think aloud as they answer. Home: 08.
+- **Cognitive walkthrough**: an inspection that steps through a task as a first-time user, asking four (or two) questions at each action. Home: 08.
+- **Cohen's d**: an effect size, the difference between two group means in standard deviation units. Home: 02.
+- **Cohen's kappa, inter-rater reliability**: a statistic of agreement between coders corrected for chance; the degree to which coders agree. Home: 08.
+- **Coherence**: the same brand character recognisable everywhere, with behaviour adapted to each medium. Home: 18, 23.
+- **Cohort analysis**: comparing groups of users defined by start date or another shared attribute over time. Home: 08.
+- **Cold foil**: foil transferred onto a printed adhesive and cured inline, with no heated die. Home: 20.
+- **Coldset offset**: newspaper offset printing in which the ink dries by absorption into the paper, without heat. Home: 04.
+- **Collab post**: an Instagram post co-authored by two or more accounts, shown on each profile with shared likes, comments and views. Home: 17.
+- **Collapse Transformations**: the AE switch that passes vector sharpness and 3D through a precomp boundary. Home: 13.
+- **`color-mix()`, `contrast-color()`, `light-dark()` and relative colour syntax**: the CSS Color 5 forms that interpolate one or more colours in a named space; return black or white, whichever contrasts more; return one of two values by colour scheme; and derive a colour from an origin colour's channels, as in oklch(from var(--x) calc(l + 0.1) c h). Home: 04.
+- **Color Slice**: Resolve's six-vector grading palette with a dedicated skin vector and density controls. Home: 16.
+- **Color Warper**: Resolve's mesh tool for hue-saturation and chroma-luma adjustment on a grid. Home: 16.
+- **Colorimeter and spectrophotometer**: a filter-based display measuring device, and a device measuring reflectance or emission per wavelength, usable for print. Home: 04.
+- **Colour boost**: a saturation control that raises low-saturation areas more than high ones. Home: 16.
+- **Colour constancy**: the perception of stable object colour across changes in illumination. Home: 02, 04.
+- **Colour model and colour space**: a numeric description scheme (RGB, HSL), and a model fixed to primaries, white point and transfer function (sRGB, Display P3). Home: 04.
+- **Colour rendering index (CRI)**: colour rendering index; fidelity of a source against eight test colours, out of 100; R9 is the saturated red sample. Home: 04, 15, 16.
+- **Colour script**: a plan assigning a colour or palette to each emotional state or section of a film. Home: 01.
+- **Colour tags**: the ITU-T H.273 codes for primaries, transfer and matrix in a video file's header; 1-1-1 is BT.709 SDR, 9-18-9 is BT.2020 HLG. Home: 16, 26.
+- **Colour temperature**: the kelvin temperature of the black body whose light matches a source; lower is redder. Home: 04, 15.
+- **Colour vision deficiency (CVD)**: reduced ability to tell some hues apart, most often red from green, caused by absent or altered cone types. Home: 02, 04.
+- **Column**: a vertical division of the live area. Home: 05.
+- **Column centimetre**: the newspaper booking unit, one column wide by one centimetre deep. Home: 20, 26.
+- **Column grid**: a grid of vertical columns with free vertical placement. Home: 05.
+- **Comb filtering**: the hollow tone caused by summing two recordings of one source with a time offset. Home: 15.
+- **Combination die**: a brass die that foils and embosses in one pass. Home: 20.
+- **Combination mark**: a symbol and a wordmark in a fixed lockup. Home: 18.
+- **Combination navigation**: a few visible navigation links shown alongside a menu that holds the rest. Home: 06.
+- **Combination package**: a retail pack holding several products, which still carries Legal Metrology declarations. Home: 20.
+- **Combobox**: a text field with a filtered popup list of options. Home: 06.
+- **ComfyUI**: a node-based interface for Stable Diffusion and other open models in which each node is a model, a sampler or a filter. Home: 13, 22.
+- **Command palette**: a keyboard-opened search field (usually Cmd+K) that lists actions, navigation and records with fuzzy matching. Home: 06, 09.
+- **Commercials (Snapchat)**: non-skippable ads inside curated content; Standard runs 3 to 6 s, Extended Play up to 180 s with the first 6 s non-skippable. Home: 26.
+- **Commitment and consistency**: the tendency to act in line with earlier commitments, especially public and written ones. Home: 02.
+- **Commitment, marking and bypassing patterns**: reading nearly every word, holding the gaze still while the page scrolls, and skipping repeated first words in a list. Home: 02.
+- **Common fate**: grouping of elements that move or change together. Home: 02.
+- **Common-law use**: rights earned by trading under a name without registering it. Home: 18.
+- **Common region**: grouping of elements that share a bounded area, stronger than proximity. Home: 02, 05.
+- **Company move**: relocating the whole unit to a new location during a shoot day. Home: 14.
+- **Competency map**: the table of disciplines by level (novice, competent, expert, master) with observable behaviours for each. Home: 00.
+- **Competitive teardown**: a step-by-step documentation of competitors' experiences scored on a fixed rubric. Home: 08.
+- **Complementary, split complementary, analogous, triadic, tetradic**: hue schemes at 180 degrees, 150 and 210 degrees, within about 60 degrees, 120 degree spacing, and four hues respectively. Home: 04.
+- **Completion rate**: the share of plays that reach the end of a video. Home: 17.
+- **Component API**: the props, slots, events and names through which a component is used in Figma and in code. Home: 07.
+- **Component library**: coded, versioned, tested UI components published as a package. Home: 07.
+- **Component token**: a token scoped to one slot of one component, resolving to an alias. Home: 07.
+- **Componential model**: creativity as the product of domain-relevant skills, creativity-relevant processes and intrinsic task motivation (Amabile). Home: 27.
+- **Composer (Paragraph, Single-line)**: InDesign's line-breaking engines; the first weighs the whole paragraph, the second one line at a time. Home: 03.
+- **Composite token**: a DTCG token whose value is an object of several sub-values (typography, shadow, border, transition, gradient, strokeStyle). Home: 07.
+- **Composited layer**: a bitmap in GPU memory that the compositor moves without repainting, costing width times height times 4 bytes. Home: 12.
+- **`compositeWithTrainedAlgorithmicMedia`**: the IPTC Digital Source Type value for a capture combined with generated elements. Home: 22.
+- **Composition over configuration**: designing a component as a family of small parts the consumer assembles (`Dialog.Root`, `Dialog.Title`), so each new need becomes a child with no new prop. Home: 07.
+- **Compositor**: the browser or OS stage that places already painted layers on screen on the GPU; transform and opacity changes run here alone. Home: 12.
+- **Compositor-only properties**: CSS properties (transform, opacity) the browser's compositor animates without layout or paint. Home: 13, 21.
+- **Compound grid**: two or more grids overlaid on one live area. Home: 05.
+- **Compromise effect**: the gain in share of an option placed between two extremes. Home: 02.
+- **Computer-generated work**: under India's Copyright Act 1957, section 2(d)(vi), a work whose author is the person who causes it to be created. Home: 18.
+- **Concatenation**: building a sentence in code from fragments; fails in translation because word order, gender and plurals differ. Home: 10.
+- **Concentric radius**: the rule that a nested element's radius equals the outer radius minus the padding between them. Home: 07.
+- **ConcentricRectangle**: the SwiftUI shape (iOS 26 and later) that computes each corner's radius to stay concentric with its container or the device's screen corners. Home: 06.
+- **Concept**: the organising thought a stranger could describe without seeing the work; an execution is one expression of it. Home: 19.
+- **Concept testing (monadic, sequential monadic)**: judging early ideas with target users; one concept per participant, or several in rotated order. Home: 08.
+- **Conceptual and experimental innovators**: Galenson's two types: the first plans from a preconceived idea and peaks young, the second searches by trial and peaks late. Home: 27.
+- **Conceptual blending**: mapping two input mental spaces into a blended space that carries emergent structure (Fauconnier and Turner). Home: 27.
+- **Conceptual model**: the user's explanation of how a system works, built from the system image. Home: 02.
+- **Cones and rods**: the retina's colour receptors (S, M and L cones, peaking near 420, 534 and 564 nm) and its low-light receptors (rods, peaking near 498 nm, carrying no hue). Home: 04.
+- **Confidence interval (one-sided, two-sided)**: the range likely to contain the population value at a stated confidence; bounded on one side or on both. Home: 08.
+- **Confidence level (research rating)**: the house rating of a finding by the number of participants and independent sources behind it. Home: 08.
+- **Confidence level (statistics)**: the share of repeated samples whose interval would contain the true value, usually 95%. Home: 18.
+- **Confirmation bias**: noticing and weighting evidence that supports an existing belief. Home: 08.
+- **Confirmshaming**: a deceptive pattern in which the decline option mocks the person. Home: 10.
+- **Conform**: rebuilding a locked edit from the original media: the picture from camera originals in the finishing application, and the audio from the original recordings against the locked picture. Home: 15, 16.
+- **Conformance level**: a, AA or AAA, the WCAG grade of a success criterion; AA is the level laws cite. Home: 11.
+- **Conformity**: yielding to a group's judgement against one's own, as Asch demonstrated in 1951. Home: 08.
+- **Conjoint analysis (choice-based), part-worth utility**: a trade-off method in which respondents choose between bundles of attribute levels; the estimated worth of each level. Home: 08.
+- **Conjunct**: a combined form of two or more Devanagari consonants written without the inherent vowel between them. Home: 01, 18, 28.
+- **Conjunct, half form, halant (virama)**: a fused consonant cluster in Indic scripts; a consonant without its stem; the mark that kills the inherent vowel. Home: 03.
+- **Connected TV (CTV)**: YouTube and streaming apps watched on a television set; Google runs 16 to 30 s non-skippable Video reach ads only there. Home: 26.
+- **Connection (Are.na)**: one block or channel added to a channel; the unit the free Guest plan caps at 200. Home: 00.
+- **Connotation**: what a sign suggests beyond what it shows. Home: 18.
+- **Consensual Assessment Technique**: rating creative products by several domain experts working independently, with their agreement checked (Amabile). Home: 27.
+- **Consent manager**: under India's DPDP Act, a registered intermediary through which a person gives, manages and withdraws consent. Home: 08, 21.
+- **Consent Mode v2**: Google's mechanism that adjusts tag behaviour according to the user's consent choices, required for EEA traffic since March 2024. Home: 21.
+- **Consent register**: the log of each participant's consent version, scopes, retention end date and deletion date. Home: 08.
+- **Consistency**: the same assets reproduced the same way on every surface. Home: 18.
+- **Conspicuous consumption**: Veblen's term for spending in order to display status. Home: 01, 02.
+- **Constraints**: physical, cultural, semantic and logical limits that restrict possible actions. Home: 02.
+- **Construction grid**: the geometric scaffold a mark is drawn on. Home: 18.
+- **Contact shadow**: the tight dark shadow where an object meets a surface; its absence is the floating-object tell. Home: 22.
+- **Contact sheet**: a page of thumbnails of a whole shoot, used to edit pairs and sequences at a glance. Home: 05.
+- **Container**: the file wrapper that holds streams and metadata (MOV, MP4, MXF, WebM). Home: 13.
+- **Container query (`@container`)**: CSS that styles an element by the size or style of its container instead of the viewport. Home: 05, 06, 07, 21.
+- **Container query unit**: `cqi`, `cqw`, `cqh`, `cqb`, `cqmin` and `cqmax`, each 1 percent of a container dimension. Home: 03, 05, 21.
+- **Container transform**: Material's pattern in which an element morphs into the view it opens. Home: 12.
+- **Content audit**: the qualitative judgement of a content inventory against criteria such as accuracy, voice and ROT. Home: 10.
+- **Content Credentials**: provenance metadata attached to media under the C2PA standard. Home: 17, 22, 23.
+- **Content design**: working out what a person needs at a moment and giving it in the best form, which may not be words. Home: 10.
+- **Content-first design**: writing a screen's content, as a priority guide, before any layout is drawn. Home: 10.
+- **Content ID**: YouTube's automated system that matches uploads against rights holders' reference files. Home: 15, 17, 26.
+- **Content inventory**: the quantitative list of every page, screen, string, email and template with its metadata. Home: 10.
+- **Content model**: the content types of a product with their fields and relationships, the structure a CMS implements. Home: 00, 09, 10.
+- **Content pillar**: one of three to five subjects an account returns to, each serving a business goal. Home: 17.
+- **Content Publishing API**: Meta's programming interface through which scheduling tools post to Instagram; it accepts up to 20 carousel items. Home: 26.
+- **Content strategy**: planning for the creation, delivery and governance of useful, usable content (Halvorson). Home: 10.
+- **Content token**: a named, versioned string (a label, an error message, a legal line) kept beside the design tokens. Home: 07.
+- **`content-visibility: auto`**: CSS that skips layout and paint of off-screen sections until they near the viewport. Home: 21.
+- **Context of use (natural, scripted, limited, none)**: how far a study lets people use the product as in life. Home: 08.
+- **Contextual cueing**: faster search through repeated spatial layouts, learned without awareness. Home: 02.
+- **Contextual forms**: the isolated, initial, medial and final shapes of an Arabic letter, selected by the OpenType features isol, init, medi and fina. Home: 28.
+- **Contextual inquiry**: an interview in the participant's own setting during real work, on the master and apprentice model. Home: 08.
+- **Contextual shaping**: the change of an Arabic letter's form according to its position in a word. Home: 01.
+- **Contingency**: the reserve in a production estimate, 10 percent of direct costs, released only by the CD and the client together. Home: 19.
+- **Continuity editing**: the cutting system that hides the cut through screen direction, eyelines and matched action. Home: 16.
+- **Continuous bezier**: bezier interpolation with linked handles, smooth through the keyframe. Home: 13.
+- **Continuous corner**: Apple's term for a squircle corner on layers and icons. Home: 06.
+- **Continuous discovery**: Teresa Torres's practice of weekly customer touchpoints by the team that builds the product, mapped on opportunity solution trees. Home: 00, 08.
+- **Contract for service**: an engagement of an independent contractor; under Indian law the freelancer keeps copyright unless it is assigned. Home: 24.
+- **Contract of service**: employment; the employer owns work made in its course unless agreed otherwise. Home: 24.
+- **Contract proof**: a colour-managed proof made to ISO 12647-7 that the printer agrees to match. Home: 03, 20, 23.
+- **Contract proof and drawdown**: an ISO 12647-7 proof carrying a measured media wedge that the press is contracted to match, and a hand-pulled sample of a spot ink on the actual stock. Home: 04.
+- **Contrast (composition)**: difference between elements in size, weight, value, colour or texture. Home: 05, 23.
+- **Contrast (stroke)**: the ratio of thickest to thinnest stroke in a face. Home: 03.
+- **Contrast and affinity**: Bruce Block's principle that visual components gain intensity through contrast and calm through similarity. Home: 05, 14, 28.
+- **Contrast ratio (WCAG)**: (L1 plus 0.05) divided by (L2 plus 0.05) on relative luminance, from 1:1 to 21:1. Home: 04.
+- **Contrast sensitivity function**: the eye's sensitivity to contrast as a function of spatial frequency, measured in cycles per degree (pairs of light and dark bars per degree of visual angle). Home: 02.
+- **Contribution**: any proposed change to the system that goes through the contribution process. Home: 07.
+- **Control characters**: the glyphs drawn first in a typeface (n, o, H, O, then a, e, d, p, v) because they set the stems, bowls, heights and spacing of the rest. Home: 27, 28.
+- **Controlled component**: a component whose value comes from props and whose changes are reported through a callback. Home: 07.
+- **Controlled vocabulary**: an agreed list of terms with one preferred term per concept and mapped synonyms; a thesaurus adds broader, narrower and related relationships. Home: 09.
+- **ControlNet**: a conditioning network that constrains a diffusion model to edges, depth or pose taken from a reference image. Home: 22.
+- **Convenience sample, probability sample**: whoever is reachable; a sample in which everyone in the population has a known chance of selection. Home: 08.
+- **Conventional Commits**: a commit-message convention (`feat`, `fix`, `BREAKING CHANGE`) that tools read to produce release notes. Home: 07.
+- **Convergent thinking**: narrowing to the single correct answer (Guilford). Home: 27.
+- **Conversion rate**: the share of sessions or users who complete a defined goal. Home: 08.
+- **Conversions API (CAPI)**: Meta's server-to-server event feed, deduplicated against the browser pixel by a shared `event_id`. Home: 21.
+- **Convolution reverb**: a reverb that applies a recorded impulse response so a dry sound takes on a real room. Home: 15.
+- **Cooperative principle**: Grice's assumption that each speaker tries to be helpful, expressed as four maxims (relevant, sufficient, truthful, clear). Home: 09.
+- **COPE**: create once, publish everywhere; structured content reused across surfaces (Jacobson, NPR, 2009). Home: 10.
+- **Copy (act)**: reproducing the recognisable whole of a specific work. Home: 01.
+- **Copy deck**: the document carrying every string with key, context, budget, translations and status from writer to engineer. Home: 10.
+- **Copyright assignment**: the written transfer of copyright from the author; in India deemed to run five years and cover India only if the deed is silent. Home: 18.
+- **Copywork**: reproduction of a master's work by hand, measured against the original, to learn its decisions from the inside. Home: 00, 19, 23.
+- **Copywriting**: persuasive writing that makes a person want something; lives in campaigns and landing pages. Home: 10.
+- **Core requirement (WCAG 3)**: a requirement that must be met for conformance. Home: 11.
+- **Core strategy statement**: the centre of Halvorson and Rach's model: what content the organisation will produce, for whom, to achieve what. Home: 10.
+- **Core Web Vitals**: Google's loading, responsiveness and stability measures: LCP (Largest Contentful Paint, good at 2.5 seconds or less), INP (Interaction to Next Paint, 200ms or less; replaced First Input Delay in 2024) and CLS (Cumulative Layout Shift, 0.1 or less), at the 75th percentile. Home: 00, 06, 12, 18, 21, 23, 26.
+- **Corner bug**: a small persistent mark in a corner of the frame. Home: 13.
+- **Corner portrait**: Irving Penn's 1948 set-up of two flats in a narrow angle that leaves the sitter nowhere to lean. Home: 28.
+- **Corporate Memphis**: the flat illustration style of rubber-limbed figures that spread through technology brands from about 2017, unrelated in intent to the Memphis Group. Home: 01.
+- **Correlated colour temperature (CCT)**: correlated colour temperature, the kelvin of the nearest black-body colour, quoted for LEDs and discharge lamps. Home: 04, 15.
+- **Corrugated board**: a fluted paper medium glued between liners for transit strength. Home: 20.
+- **CORS (cross-origin resource sharing)**: the request mode font fetches use, hence the `crossorigin` attribute on font preloads. Home: 03.
+- **Cost per acquisition (CPA)**: spend divided by conversions. Home: 17.
+- **Costly signalling (handicap principle)**: credible communication of a hidden quality through a signal that is expensive to fake, such as the peacock's tail. Home: 02.
+- **Costume**: a borrowing so complete, every element from one cited movement, that the source is seen before the brand. Home: 01.
+- **Cotton drill**: a strong twill-woven cotton used for dust bags. Home: 20.
+- **Cotton paper**: paper made from cotton linters or rag, soft, bulky and strong. Home: 20.
+- **Counter-form**: Ruder's term for the unprinted area treated as a form equal to the printed one. Home: 05.
+- **Courtesy bias**: respondents' tendency to tell a researcher who seems to represent the brand what will please (Jones, 1963). Home: 08.
+- **Cover**: alternative takes, framings and versions shot to protect the edit. Home: 19.
+- **Cover frame**: the still a platform shows for a video in the profile grid and before playback. Home: 16, 17.
+- **Cover-the-movement test**: showing the work to an outsider; if they name the movement before the brand, the borrow is too large. Home: 01.
+- **Coverage (design system)**: the share of the audited interface inventory that the system now provides. Home: 07.
+- **Coverage (film)**: the closer shots filmed after the master so the editor can shape a scene. Home: 14.
+- **CPL (composition playlist)**: the XML file in a DCP that orders its picture, sound and subtitle tracks. Home: 16.
+- **cps**: characters per second, the reading-speed measure for subtitles. Home: 26.
+- **Craft tell**: a specific execution defect that a trained eye reads as unattended work. Home: 23.
+- **Crash-lock bottom**: a carton base that locks into place when the carton is opened. Home: 20.
+- **Crash zoom**: a fast zoom during a shot, a 1970s and documentary signature. Home: 14.
+- **Crazy 8s, lightning demos, heat-map voting, Decider**: design-sprint exercises and role: eight sketches in eight minutes; three-minute tours of existing solutions; silent dot stickers on liked parts of sketches; the person with final say. Home: 08.
+- **Creasing (scoring)**: pressing a channel into board so it folds without cracking. Home: 20.
+- **Creative brief**: the one-page contract between strategy and creative, with the fields set out in 19-campaigns-and-creative-direction.md, section 2.1. Home: 19.
+- **Creative cliff illusion**: the mistaken expectation that creativity declines across an ideation session (Lucas and Nordgren). Home: 27.
+- **Creative director (CD)**: the person accountable for the idea and the craft quality of all of a brand's or campaign's output; in an agency, the owner of an account group's work from brief to craft sign-off. Home: 01, 24.
+- **Creative Effectiveness Ladder**: Hurman and Field's six levels for rating a campaign's effect, from influential idea to enduring icon, set out in "The Effectiveness Code". Home: 19.
+- **Creative fatigue**: declining ad performance as an audience sees the same creative repeatedly. Home: 17, 19.
+- **Creative team**: a copywriter and an art director working as a pair from the first idea, the structure DDB introduced in 1949. Home: 01.
+- **Creativity templates**: Goldenberg, Mazursky and Solomon's six recurring structures found in most award-finalist ads. Home: 19.
+- **Creator content**: user-generated content commissioned and paid for by a brand. Home: 17.
+- **Creep (shingling)**: the outward push of inner pages in a saddle-stitched publication, which narrows their outside margins after trimming. Home: 05, 20.
+- **CRF**: constant rate factor, the x264 and x265 quality setting where lower numbers mean higher quality and larger files. Home: 13, 21.
+- **CRI and R9**: the colour rendering index of a light source, and its saturated-red test sample. Home: 14.
+- **Crisis mode**: the prepared monochrome identity set, pause list and owner used when the brand must go quiet. Home: 18.
+- **Crit**: a critique session in which finished or in-progress work is judged against the brief with a verdict, what works, what does not and the fix with a reference. Home: 00, 19, 28.
+- **Crit formats**: desk crit (one to one, mid-process), pin-up (group, work at real size on the wall), jury (final, outside reviewers), gallery walk (silent written notes on many pieces) and remote crit (shared at 100 percent, with a recorded walk-through for async rounds). Home: 23.
+- **Critical design**: design that uses speculative objects to question assumptions about technology and society. Home: 01.
+- **Critical flicker fusion frequency**: the rate at which a flickering light appears steady; it rises with log luminance (Ferry-Porter law) and with stimulus area (Granit-Harper law). Home: 02.
+- **Critical path**: the chain of dependent tasks whose total duration sets the end date. Home: 24.
+- **Critical print size**: the smallest print size, about 0.2 degrees of x-height, that still supports maximum reading speed. Home: 02.
+- **Critical Response Process**: Liz Lerman's four-step critique format: statements of meaning, the maker's questions, neutral questions, and opinions only with the maker's permission. Home: 00, 23.
+- **Critically damped**: a spring at damping ratio 1, the fastest arrival with no overshoot. Home: 12.
+- **CRM (customer relationship management)**: the client's customer relationship management system, where enquiries and leads are routed. Home: 07, 21, 24.
+- **CRMX**: LumenRadio's wireless DMX system. Home: 15.
+- **Crop factor**: the ratio of the full-frame diagonal to a sensor's diagonal, used to compare framing between formats. Home: 14.
+- **Cross-alignment (incremental leading)**: a caption or display leading that meets the body baseline grid after a whole number of lines. Home: 05.
+- **Cross cutting**: alternating between two lines of action in different places. Home: 16.
+- **Cross-domain measurement**: GA4 configuration that carries one session across the site and a third-party domain such as a booking engine. Home: 21.
+- **Cross fold (French fold)**: two folds at right angles in one sheet. Home: 20.
+- **Cross-polarisation**: polarising filters on both light and lens to remove specular glare. Home: 15.
+- **Crossbar, crotch, joint, spur**: a horizontal joining stroke; the inside angle of two strokes; where strokes meet; a small projection. Home: 03.
+- **Crosshead**: a subhead inside the body of a long article. Home: 05.
+- **Crossmodal correspondence**: a systematic match between features in different senses shared by most people; sonic seasoning uses it to change perceived taste with sound. Home: 02.
+- **Crowding**: interference from adjacent letters that slows recognition, a factor in dyslexia. Home: 02, 11.
+- **CRPD**: the UN Convention on the Rights of Persons with Disabilities (2006), whose Article 9 makes access to ICT a right. Home: 11.
+- **Crushed blacks**: shadow detail clipped to zero on the waveform. Home: 23.
+- **CrUX**: the Chrome User Experience Report, the field dataset behind Core Web Vitals. Home: 21.
+- **Cryptomatte**: automatic ID mattes keyed by object or material name, written into an EXR. Home: 13.
+- **Crystallographic balance**: equal emphasis across the whole surface with no focal point. Home: 05.
+- **CSF**: Component Story Format, Storybook's file format in which each named export is one story. Home: 07.
+- **CSG**: constructive solid geometry; shapes combined by union, subtraction and intersection. Home: 13.
+- **CSMVS**: Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, Mumbai's principal museum. Home: 23.
+- **CSP, Content-Security-Policy**: the response header listing the origins a page may load scripts, styles and frames from. Home: 21.
+- **CSS**: Cascading Style Sheets, the web's styling language. Home: 01.
+- **CSS pixel**: the web's reference unit, mapped to physical pixels by the device pixel ratio. Home: 06.
+- **CSS reference pixel**: the visual angle of one pixel at 96 dpi viewed from about 71cm, about 0.0213 degrees. Home: 02.
+- **CST (Color Space Transform)**: the Resolve node that converts between colour spaces and gammas with optional tone and gamut mapping. Home: 16.
+- **CTB and CTO**: colour temperature blue and orange correction gels. Home: 15.
+- **CTC (cost to company)**: the Indian annual pay figure including employer provident fund and gratuity accrual. Home: 24.
+- **CTP**: computer-to-plate, imaging printing plates directly from the digital file. Home: 20.
+- **Cubic-bezier**: an easing curve from (0, 0) to (1, 1) defined by two control points; x is time, y is progress. Home: 12.
+- **Cucoloris (cookie)**: a cut-out panel between a hard source and the subject that throws a pattern. Home: 15.
+- **Cue sheet**: the record of every music cue in a film with timings, composers and publishers, used for rights reporting. Home: 24.
+- **Cultural capital**: Bourdieu's term for the education and familiarity that let a person read a code as refined. Home: 00, 01.
+- **Cultural risk review**: the pre-mortem and response plan run on work that touches religion, gender, caste, nation or community. Home: 19.
+- **Cultural strategy**: Holt's method of building a brand by performing a myth that resolves a tension in the culture. Home: 18.
+- **Cumulative layout shift (CLS)**: the Core Web Vitals metric for unexpected movement of visible content; 0.1 or less is good. Home: 03, 06, 12, 21.
+- **CUPED**: a variance-reduction technique for experiments that uses pre-experiment data. Home: 08.
+- **Curb-cut effect**: the pattern by which features designed for disabled people benefit everyone. Home: 11.
+- **Curiosity gap**: the gap between what a viewer knows and wants to know, which drives attention until closed. Home: 17.
+- **Currency**: how current a piece reads against the wave of rising, peaking, dead and timeless looks. Home: 23.
+- **Currency signs**: ₹ U+20B9 (Indian rupee), U+20C1 (Saudi riyal, Unicode 17.0), U+20C3 (UAE dirham, Unicode 18.0). Home: 03.
+- **Custody log**: a signed record of each high-value piece leaving and returning to the product table. Home: 14.
+- **Custom properties**: CSS variables, written `--name` and read with `var(--name)`. Home: 21.
+- **Customer-based brand equity pyramid**: Keller's model running from salience through performance and imagery, judgements and feelings, to resonance. Home: 18.
+- **Customer Effort Score (CES)**: a 7-point agreement rating of how easy the company made it to handle an issue. Home: 08.
+- **Customer satisfaction (CSAT)**: the share of respondents rating an interaction 4 or 5 on a 5-point satisfaction scale. Home: 08.
+- **Customer service window**: the 24-hour period after a person's last message in which a WhatsApp business may reply freely; outside it only approved templates may be sent. Home: 09, 10.
+- **Customer stage map**: a visual of one archetype's experience of a goal over time, across stages and channels; its usual industry name is discussed in 08-ux-research-and-strategy.md, section 12.3. Home: 08.
+- **Customisable select**: `appearance: base-select` with `::picker(select)`, which makes the native select fully stylable; not Baseline as of October 2026. Home: 06, 07, 11, 21.
+- **Cut on action**: a cut placed within a movement so the movement carries the eye across it. Home: 16.
+- **Cutaway**: a shot outside the scene's action used to compress time or hide a cut. Home: 14.
+- **Cutdown**: a shorter version derived from the hero cut (60, 30, 15 or 6 seconds). Home: 16.
+- **cva**: class-variance-authority, a utility that maps variant props to class lists, used across shadcn/ui. Home: 07.
+- **CxF (CxF3, CxF/X-4)**: the Color Exchange Format (ISO 17972) that stores spectral colour data; CxF/X-4 carries spot colour characterisation inside a PDF. Home: 04.
+- **Cycle**: in Linear's method, a fixed-length work period, commonly two weeks, into which unfinished work rolls over. Home: 27.
+
+## D
+
+- **D2C (direct to consumer)**: brands that sell through their own website and app, bypassing retailers. Home: 01, 21, 24.
+- **D50**: the standard daylight illuminant at 5000 kelvin under which printed proofs are judged (ISO 3664). Home: 00, 20.
+- **D50 and D65**: standard white points of about 5000K and 6500K, used for print viewing and for screen calibration. Home: 23.
+- **D65**: the CIE standard daylight illuminant at 6,504 K, the display white point. Home: 15, 16.
+- **Dailies**: the daily review of the previous day's footage or animation in front of the director. Home: 14, 15, 27, 28.
+- **Daily (motion daily)**: one reference shot reproduced in a single day. Home: 00.
+- **DAM (digital asset management)**: the searchable, permissioned library of a client's approved assets, masters and sidecars, with metadata and usage terms. Home: 22, 24, 26.
+- **Damask, taffeta and satin labels**: woven label constructions, damask for the finest detail, taffeta coarser and cheaper, satin soft and lustrous. Home: 20.
+- **Damping**: the coefficient c that resists a spring's motion; c = 4π x ζ x m / response. Home: 12.
+- **Damping ratio (Apple: damping fraction)**: c over 2 sqrt(k m), the dimensionless number ζ that sets whether a spring overshoots. Home: 07, 12.
+- **Danda and double danda**: the Devanagari full stop (U+0964) and the verse or section mark (U+0965). Home: 03.
+- **Dante**: a network protocol that carries many channels of audio over Ethernet. Home: 15.
+- **Dark adaptation**: the recovery of visual sensitivity in low light, complete after 20 to 30 minutes. Home: 02.
+- **DASH**: MPEG-DASH, the open segmented streaming format, played through Media Source Extensions. Home: 21.
+- **Dash family**: hyphen-minus, hyphen, non-breaking hyphen, figure dash, en dash, em dash and minus, the horizontal marks covered in 03-typography.md, section 8.3. Home: 03.
+- **Data binding (Rive)**: typed view-model properties that the runtime sets and the Rive file reacts to. Home: 12.
+- **Data-driven animation**: an After Effects rig whose text, colour or timing are read from a JSON, CSV or TSV file. Home: 13.
+- **Data-ink ratio**: the share of a graphic's ink devoted to showing data, which Tufte says should be maximised. Home: 01.
+- **Data minimisation**: collecting only the personal data a study needs. Home: 08.
+- **Data principal**: under India's DPDP Act, the individual whose personal data is processed. Home: 08.
+- **Data thresholds**: GA4's withholding of small segments from reports, which hides low-volume luxury segments. Home: 08.
+- **DataMatrix**: a square two-dimensional barcode. Home: 20.
+- **DaVinci Intermediate (DI)**: Blackmagic's log curve paired with DaVinci Wide Gamut. Home: 16.
+- **DaVinci Wide Gamut (DWG)**: Blackmagic's working gamut, larger than any camera gamut. Home: 16.
+- **Day-90 review**: the revisit of a client principle set after ninety days, counting what each principle rejected. Home: 28.
+- **Day for night**: shooting in daylight, backlit and underexposed, and grading cool so it reads as night. Home: 15.
+- **Day-night printing**: extra ink density or a second printed layer on backlit material so it reads in daylight and when lit. Home: 20.
+- **Dayparting**: scheduling different creative by time of day on a screen. Home: 20.
+- **dB(A)**: sound level weighted to the ear's sensitivity. Home: 15.
+- **dB SPL**: sound pressure level in decibels against the threshold of hearing. Home: 15.
+- **dBFS**: decibels relative to full scale, the level measure of digital audio in which 0 is the maximum before clipping. Home: 00, 15.
+- **dBu**: analogue level in decibels against 0.775 V. Home: 15.
+- **DCI (Digital Cinema Initiatives)**: the body whose 2K and 4K frame sizes define cinema mastering. Home: 03.
+- **DCI 4K**: the 4,096 pixel wide cinema resolution. Home: 14.
+- **DCI-P3 and Display P3**: the cinema projection space with a greenish white at gamma 2.6, and Apple's version with D65 and the sRGB curve. Home: 04.
+- **DCP (Digital Cinema Package)**: the JPEG 2000 and PCM file set with XML playlists that cinema servers ingest. Home: 13, 15, 16, 20, 26.
+- **DCTL (DaVinci CTL)**: Resolve's language for scripted colour transforms. Home: 16.
+- **DDP and DAP**: delivered duty paid and delivered at place; whether cross-border duties are prepaid or collected on delivery. Home: 21.
+- **De-esser**: a compressor that acts only on the sibilant band. Home: 15, 23.
+- **De minimis rule**: the UAE cap on a Qualifying Free Zone Person's non-qualifying revenue at 5 percent of revenue or AED 5 million, whichever is lower. Home: 24.
+- **Dead carousel**: the listicle carousel with an icon per slide, a numbered pill and a gradient, which reads as generated. Home: 17.
+- **Dead cat (windjammer)**: a fur cover over a blimp that cuts wind noise. Home: 15.
+- **Deaf (capital D)**: people who identify with Deaf culture and use a sign language as their first language. Home: 11.
+- **Deal memo**: the short contract confirming a crew member's rate, hours and terms. Home: 14.
+- **Debayering**: converting single-colour photosite data into full RGB pixels. Home: 14.
+- **Deboss**: an impression pressed into the sheet. Home: 20.
+- **Debounce**: waiting until a burst of input pauses (for example 150ms after the last keystroke) before acting on it. Home: 06, 09.
+- **Deceptive pattern (dark pattern)**: an interface design that tricks or pressures a person into an action they did not intend; India's 2023 Central Consumer Protection Authority guidelines name 13. Home: 01, 02, 06, 09, 10, 19.
+- **Decision point**: a place where a visitor chooses a direction, and so where a wayfinding sign belongs. Home: 20.
+- **Decision table**: a table of conditions and the outcome for each combination, used where three or more conditions interact. Home: 09.
+- **Deckle edge**: the soft, uneven edge of handmade or mould-made paper. Home: 20.
+- **Decoupling**: separating production from origination and awarding it to a production specialist at lower rates. Home: 24.
+- **Decoy effect (asymmetric dominance)**: a shift of choice towards an option made to dominate an added inferior option. Home: 02.
+- **Deductive coding, inductive coding**: applying a codebook written in advance; building codes from the data. Home: 08.
+- **Deemed acceptance**: a clause that treats silence for a set period after delivery as acceptance. Home: 24.
+- **Deep and flat space**: Bruce Block's terms for space shown by perspective, overlap and size change, and for frontal, planimetric space without those cues. Home: 05.
+- **Deep link**: a URL that opens a specific screen in an app when installed and the web equivalent when not; deferred deep links carry the destination through an install. Home: 06, 09.
+- **Deep work**: a block of uninterrupted, cognitively demanding work (Newport). Home: 27.
+- **Deepfake**: synthetic media showing a real person saying or doing what they did not; in the EU AI Act, generated or manipulated content resembling real persons, places or events that would falsely appear authentic. Home: 22.
+- **Default effect**: the tendency to stay with a pre-selected option. Home: 02.
+- **Default mode network**: the brain system active in memory, imagination and unfocused thought. Home: 27.
+- **Definition of done**: the checklist a ticket must pass to count as complete. Home: 24.
+- **Deinkability**: how well ink separates from fibre in paper recycling. Home: 20.
+- **Deliberate practice**: practice with a specific goal just beyond current ability, full concentration, immediate informative feedback and repetition with the last error corrected (Ericsson). Home: 00, 27.
+- **Delight budget**: the house allowance of one piece of decorative motion per screen or page. Home: 12.
+- **Delivery matrix**: the table of every asset in a campaign by ratio, duration, language, codec and platform spec. Home: 00.
+- **Delta E**: the distance between two colours in CIELAB under a stated formula (CIE76, CIE94, CIEDE2000). Home: 04, 20.
+- **Demand Gen**: Google's campaign type serving YouTube, Discover and Gmail, which replaced Video action campaigns from 2025. Home: 17, 26.
+- **Dendrogram, similarity matrix**: the tree from hierarchical clustering of card-sort data; the table of how often each pair of cards was grouped together. Home: 08.
+- **Denotation**: what a sign literally shows. Home: 18.
+- **Denoted and connoted message**: Barthes's distinction between what an image literally shows and the meanings it suggests. Home: 01.
+- **Density (colour grading)**: a Color Slice control that darkens a colour as it saturates, as film dyes do. Home: 16.
+- **Density (layout)**: the amount of content per unit of screen area, set by spacing and control heights. Home: 05.
+- **Density bucket**: an Android screen density class (mdpi to xxxhdpi) that determines which raster asset is loaded. Home: 06.
+- **Density-independent pixel (dp)**: Android's layout unit, mapped to physical pixels through the device scale factor. Home: 05, 06, 07, 12, 18, 21, 26.
+- **Density theme**: a theme that remaps spacing and size aliases together (compact, comfortable). Home: 07.
+- **Departure log**: the record of every change from the approved PPM book, with who asked, why, and the CD's signature. Home: 19.
+- **Deprecation policy**: the rules for marking, aliasing and removing a token or component. Home: 07.
+- **Depth of field**: the distance between the nearest and farthest points acceptably sharp. Home: 14.
+- **Derivative (font)**: a modified copy of the font software; permitted by OFL with a name change, prohibited by most commercial EULAs. Home: 03.
+- **Descriptive mark**: a name that says what the product is, protectable only with acquired distinctiveness. Home: 18.
+- **Design animatic**: the animatic rebuilt with final designed frames before animation starts. Home: 13.
+- **Design engineer**: the role between design and front-end engineering that owns motion, interaction and component polish in code. Home: 21, 24, 27.
+- **Design fixation**: adherence to the features of an example solution, including its flaws, even when instructed to avoid them (Jansson and Smith). Home: 27.
+- **Design ops and creative ops**: the function that owns tools, files, naming, DAM, review tooling, utilisation reporting and process. Home: 24.
+- **Design sprint**: Jake Knapp's five-day process (map, sketch, decide, prototype, test) for answering a critical question with a prototype; Sprint 2.0 is the four-day variant. Home: 08.
+- **Design system**: the shared decisions, assets, code, rules, people and process that let many people build one coherent product family. Home: 07.
+- **Design system ecosystem**: Brad Frost's 2023 layer model of tokens, core system, technology-specific implementations, recipes, smart components and products. Home: 07.
+- **Design thinking**: a facilitated, user-centred problem-solving process built on research, ideation and prototyping, popularised by IDEO and the Stanford d.school. Home: 01, 08.
+- **Design token**: a named, platform-neutral value for a single design decision, stored once and transformed into each platform's format. Home: 00, 06, 07, 18, 22, 28.
+- **Desirability test**: participants choose words from the 118 Microsoft product reaction cards to describe a design, then explain. Home: 08.
+- **Desk research (secondary research)**: assembling existing data and sources before collecting new data. Home: 08.
+- **Desktop publishing**: page layout and typesetting done by the designer on a personal computer, a term coined by Paul Brainerd in 1985. Home: 01.
+- **Desqueeze**: stretching an anamorphic image back to its true proportions in post. Home: 14.
+- **Detachment rate**: detaches divided by inserts for a component over a period, from Figma library analytics. Home: 07.
+- **`details` and `summary`**: the native HTML disclosure elements; the name attribute groups them into an exclusive accordion. Home: 21.
+- **`::details-content`**: the pseudo-element selecting a disclosure's content box so opening can animate. Home: 21.
+- **Detent**: a resting height of a sheet, such as medium or large on iOS. Home: 06, 09, 12.
+- **Determinate and indeterminate progress**: an indicator that shows a known fraction of the work, and one that shows work in progress without a fraction. Home: 06.
+- **Détournement**: the Situationist tactic of hijacking an existing image or text so it turns against its original meaning. Home: 01.
+- **Dev Mode**: Figma's inspection view for engineers, showing specs, code snippets and Code Connect output. Home: 07, 21, 23.
+- **Device pixel ratio**: physical pixels per CSS pixel; 2 on most laptops and tablets, 3 on current iPhones. Home: 05, 06, 26.
+- **Dhanteras**: the festival two days before Diwali, the peak gold and jewellery buying day in India. Home: 19.
+- **`dialog` element**: the native HTML modal with focus trapping, an inert background and Escape to close. Home: 21.
+- **Diary study (interval-, signal-, event-contingent)**: participants log experiences over days or weeks, at fixed times, when pinged, or when the event happens. Home: 08.
+- **Didone**: the high-contrast serif style of Bodoni and Didot, with hairline serifs and vertical stress. Home: 18.
+- **Didot point**: 0.376mm, the older European point; the PostScript point is 0.3528mm. Home: 03.
+- **Die cutting**: cutting shapes, creases and perforations with a steel-rule die. Home: 20.
+- **Die stamping**: the British stationers' term for engraving. Home: 20.
+- **Diegetic sound**: sound that belongs to the world of the scene. Home: 16.
+- **Dieline**: the flat drawing of a package's cut, crease and fold lines from which it is printed and die-cut. Home: 00, 20, 23.
+- **DIFC (Dubai International Financial Centre) and ADGM (Abu Dhabi Global Market)**: financial free zones with their own English-language common-law courts. Home: 24.
+- **Differentiation**: being meaningfully different in what the brand offers. Home: 18.
+- **Diffraction**: softening as the effective aperture narrows, pronounced on macro and probe lenses. Home: 14.
+- **Diffuse reflection**: scattered return of light from a matte surface. Home: 15.
+- **Diffusion filter**: a filter that lifts and glows highlights and softens contrast, such as the Black Pro-Mist. Home: 14.
+- **DIGIPIN**: India Post's 10-character geocode identifying a 4 by 4 metre cell, launched 2025. Home: 09.
+- **Digital embellishment**: inkjet-applied raised varnish and foil that needs no die. Home: 20.
+- **Digital-first guideline**: a guideline published as a website with downloadable assets and values held as tokens. Home: 18.
+- **Digital intermediate**: the digital master a film is graded on, which replaced photochemical timing. Home: 04.
+- **Digital replica**: a synthetic reproduction of a performer's voice or likeness, in SAG-AFTRA and Copyright Office usage. Home: 22.
+- **Digital twin**: a consented identity model of a real person's face and voice, owned by that person and licensed per use. Home: 22.
+- **`digitalCapture`**: the IPTC Digital Source Type value for an image captured by a camera. Home: 22.
+- **Digitising**: converting artwork into an embroidery stitch file. Home: 20.
+- **DIN 476**: the 1922 German paper-size standard that defined the A series. Home: 01.
+- **Dips (YouTube)**: moments in a retention curve where viewers skipped or stopped watching. Home: 17.
+- **Direct manipulation**: Shneiderman's 1983 term for interfaces with a continuous representation of the object, physical actions in place of commands, and rapid, reversible, visible operations. Home: 02, 09.
+- **Direct messages (DMs)**: private messages on a platform, where most sends happen. Home: 17.
+- **Direction**: the path the eye takes through a layout. Home: 05.
+- **Direction lock**: holding a gesture to the axis it began on once its travel is within about 30 degrees of that axis. Home: 12.
+- **Direction token**: a custom property (`--dir`, 1 or -1) that multiplies horizontal transforms so they mirror in right-to-left layouts. Home: 12.
+- **Directness**: in tree testing, the share of participants who went down the tree without backtracking. Home: 08.
+- **Director of photography (DP, DOP)**: the head of camera and lighting, responsible for the image. Home: 14, 15, 23, 24.
+- **Director's cut**: the director's version of the film, made in a protected period before agency notes. Home: 16.
+- **Disability simulation**: an empathy exercise in which non-disabled people briefly imitate an impairment; the evidence finds it counterproductive. Home: 11.
+- **Discharge ink**: textile ink that removes the fabric's dye and leaves a soft print. Home: 20.
+- **Discrimination**: the trained ability to tell better from worse in a pair, at the speed of a two-second verdict. Home: 00, 23.
+- **Discussion guide**: the ordered list of topics, prompts and timings that structures an interview. Home: 08.
+- **Dispersion**: the splitting of white light into colours by a refractive material, set by its Abbe number. Home: 13.
+- **Displacement**: the Surrealist move of placing an object where it does not belong. Home: 01.
+- **Display mode**: one of the surfaces (inline card or carousel, fullscreen, picture-in-picture) in which an app renders inside ChatGPT. Home: 28.
+- **Display P3**: Apple's wide-gamut screen colour space, larger than sRGB; a colour specified only in sRGB can look duller on a P3 display. Home: 00.
+- **Display referred**: values that describe what a display should emit, bounded at its white and black. Home: 16.
+- **Disproportionate burden**: the EAA ground for limiting compliance, valid only with a documented assessment renewed at least every five years. Home: 11.
+- **Dissolve**: a transition in which one shot fades into the next over several frames. Home: 16.
+- **Distance theme**: a platform-scale theme for kiosks, in-room tablets and signage, with larger text and touch targets and no hover states. Home: 07.
+- **Distinction**: Bourdieu's account of taste as a social signal that classifies the person judging. Home: 23.
+- **Distinctive asset tracking**: an annual test showing each asset without the brand name to measure fame and uniqueness. Home: 18.
+- **Distinctive brand asset (DBA)**: a sensory element that triggers the brand without its name, scored by fame (the share of category buyers who link it to the brand) and uniqueness (the share who link it to no competitor). Home: 00, 02, 16, 18.
+- **Distinctiveness**: being recognisable as yourself, quickly. Home: 18.
+- **Distro**: a power distribution box. Home: 15.
+- **DIT (digital imaging technician)**: the crew member who secures, verifies and backs up camera media on set and manages monitoring and the on-set colour look. Home: 14, 15, 16.
+- **Dither**: deliberate noise that converts banding into a fine texture the eye reads as smooth. Home: 04, 13, 16.
+- **Divergent Association Task**: naming ten nouns as unrelated as possible, scored by their average semantic distance (Olson and colleagues). Home: 27.
+- **Divergent thinking**: producing many candidate answers to an open problem, scored by fluency, flexibility, originality and elaboration (Guilford). Home: 27.
+- **Divyang**: the Indian government's preferred term for disabled people since 2015, rejected by many disability rights organisations as patronising. Home: 11.
+- **Diwani**: a dense, flowing Ottoman chancery style of Arabic calligraphy, used for display. Home: 01, 18.
+- **Diya**: a clay oil lamp, lit for Diwali and weddings. Home: 15.
+- **DLT (distributed ledger technology) platform**: an Indian telecom operator's distributed ledger registry on which a business registers its identity, sender headers and SMS templates before sending. Home: 09, 10.
+- **DME stems (DME)**: separate dialogue, music and effects mixes delivered as individual files, the base for versioning and language mixes. Home: 15, 16.
+- **DMX**: DMX512, the wired lighting-control standard of 512 channels per universe. Home: 15.
+- **DNxHR**: Avid's family of intra-frame editing codecs, the counterpart of ProRes. Home: 16.
+- **Document post**: a LinkedIn post of a PDF or slide file shown as a swipeable carousel. Home: 17.
+- **Doherty threshold**: the finding (IBM, 1982) that productivity rises sharply when system response drops below 400ms. Home: 02, 12.
+- **Dolby Atmos bed and objects**: the fixed channel layout of an Atmos mix (bed) and the individual sounds carrying position metadata (objects). Home: 15.
+- **Dolby Vision**: HDR video with dynamic metadata, delivered in numbered profiles. Home: 13, 16.
+- **Dolly grip**: the grip who pushes the dolly or crane and hits marks in time with the operator. Home: 14.
+- **Dolly zoom**: a dolly and an opposite zoom together, holding subject size while the background stretches. Home: 14.
+- **DOM (Document Object Model)**: the page's element tree, which composition props such as asChild keep free of extra wrappers. Home: 07, 10, 11.
+- **DOM order**: the order of elements in the HTML, which screen readers and the Tab key follow. Home: 05.
+- **Domain and field**: in Csikszentmihalyi's systems model, the symbolic rules and works of a practice, and the gatekeepers who decide which novelty enters it. Home: 27.
+- **Domain-bound code**: an SMS one-time code whose last line names the domain ("@example.com #123456"), so iOS and Safari autofill it only there. Home: 10.
+- **Domain model**: a map of a subject's concepts and their relationships, drawn with subject experts before the content model. Home: 10.
+- **Domain warping**: feeding one noise field into the coordinates of another to produce liquid and marble forms. Home: 13.
+- **Dominant code**: a category's current normal set of signs. Home: 18.
+- **DOOH (digital out of home)**: digital out-of-home, screen-based advertising in public places. Home: 11, 16, 17, 20, 26.
+- **Dot gain (tone value increase, TVI)**: the spread of a printed halftone dot on press, which darkens midtones relative to the file. Home: 00, 03, 04, 20, 26.
+- **Dot voting**: each person places a fixed number of dots on the options they favour. Home: 08.
+- **dotLottie**: the open container format that zips Lottie animations with shared assets, themes and state machines. Home: 01, 12, 13, 21.
+- **Double-barrelled question**: a question that asks about two things at once. Home: 08.
+- **Double diamond**: the Design Council's 2005 model of discover, define, develop and deliver. Home: 08.
+- **Double jeopardy law**: Sharp's finding that smaller brands have fewer buyers, who are also slightly less loyal. Home: 00, 18.
+- **Double quotation**: citing the absorbed commercial form of a movement in the belief that it is the original. Home: 01.
+- **Double-storey and single-storey**: a and g drawn with two compartments (Garamond) or one (Futura). Home: 03.
+- **DPA (data processing agreement)**: the contract that sets how a processor handles a controller's personal data. Home: 24.
+- **DPDP Act**: India's Digital Personal Data Protection Act 2023 and its Rules (notified 13 November 2025), which set the consent standard and under which faces and voices are personal data. Home: 06, 21, 22.
+- **dpi**: dots per inch, the resolution of a screen or printer. Home: 01.
+- **Draco**: Google's open mesh compression for glTF. Home: 13.
+- **Draco and Meshopt**: two geometry compression schemes for glTF models. Home: 21.
+- **Draft mode**: Midjourney's faster, cheaper preview generation, about ten times faster at half the GPU cost. Home: 22.
+- **Drag threshold**: the distance (about 8px) a pointer must move before a press becomes a drag. Home: 09.
+- **Drawdown**: a spot ink pulled by hand on the actual stock to show its true appearance. Home: 20.
+- **Drawer**: a navigation panel that slides in from the side of the screen. Home: 06.
+- **Dreyfus model**: the model of skill acquisition by Stuart and Hubert Dreyfus, first set out in a 1980 Berkeley report; the stages as now used (novice, advanced beginner, competent, proficient, expert) come from Mind over Machine (1986). Home: 00.
+- **Drip pricing**: revealing fees late in a purchase flow; a named deceptive pattern in India's 2023 guidelines. Home: 09, 10.
+- **Drop**: a scarce, timed, announced release of one asset or product. Home: 19.
+- **Drop cap and raised initial**: an enlarged first letter sunk into the opening lines; one that rises from the first baseline. Home: 03.
+- **Drop frame**: a timecode count that skips two frame numbers each minute, except every tenth, to stay in step with the clock at 29.97 fps. Home: 13, 15.
+- **Drop target**: the state of a valid destination while a dragged item hovers over it. Home: 06.
+- **Dry-back**: the gloss difference between printed and unprinted areas as ink dries on coated stock. Home: 20.
+- **DSO (days sales outstanding)**: receivables divided by daily revenue; how long the house waits to be paid. Home: 24.
+- **DST and PES**: the Tajima and Brother machine-embroidery file formats made by a digitiser from the vector. Home: 18.
+- **DTAA (double taxation avoidance agreement)**: a treaty that prevents the same income being taxed twice across two countries. Home: 24.
+- **DTCG (Design Tokens Community Group)**: the W3C Design Tokens Community Group and its JSON format for design tokens, including a colour module. Home: 04, 06, 07, 12.
+- **DTF and DTG**: direct-to-film, a printed film transfer bonded to fabric with heat; direct-to-garment, inkjet printing straight onto fabric. Home: 20.
+- **Dual base ISO**: a sensor with two analogue gain circuits, each giving a clean native sensitivity. Home: 14.
+- **Dual branding**: running "New, formerly Old" on every surface for 12 to 24 months after a rename. Home: 18.
+- **Dual coding theory**: Paivio's account of memory in separate verbal and non-verbal codes. Home: 02.
+- **Dual mono**: the same mono signal placed on both stereo channels. Home: 16.
+- **Dual pathway to creativity**: originality reached either by flexibility (switching categories) or by persistence (going deep in a few) (Nijstad and colleagues). Home: 27.
+- **Duck and decorated shed**: Venturi, Scott Brown and Izenour's distinction between a building whose form is its sign and a plain building with a sign applied. Home: 01.
+- **Ducking**: an automatic level reduction of music keyed from dialogue. Home: 15.
+- **Dulling spray**: a matte aerosol applied to shiny surfaces to kill reflections. Home: 15.
+- **Duplex board**: Indian trade name for coated recycled board with a grey back. Home: 20.
+- **Duplexing**: laminating two sheets together into one thicker board. Home: 20.
+- **Dust bag**: a cloth bag that protects a product inside its box. Home: 20.
+- **Dust jacket**: a removable paper wrapper with flaps around a cased book. Home: 20.
+- **Dutch angle**: a tilted horizon, used for disorientation. Home: 14, 22.
+- **Duv**: the offset of a source's colour above (green) or below (magenta) the black-body curve. Home: 15.
+- **`dvh`, `svh` and `lvh` units**: dvh (the visible height as browser bars move), svh (smallest, bars shown) and lvh (largest, bars hidden). Home: 05, 06, 21.
+- **Dwell time**: how long an audience can look at an OOH site. Home: 20.
+- **DXF**: the vector exchange format used for CNC routing and laser cutting. Home: 18.
+- **DXV3 and HAP**: GPU-decoded playback codecs, Resolume's own and an open family used by media servers such as disguise. Home: 26.
+- **Dyad, triad, mini-group**: interviews with two or three people who share a decision; a focus group of 4 to 5. Home: 08.
+- **Dye sublimation**: printing dye that turns to gas under heat and bonds into polyester. Home: 20.
+- **Dymo tape**: embossed plastic labelling tape. Home: 01.
+- **Dynamic colour**: the colour scheme Android 12 and later derive from the user's wallpaper. Home: 06.
+- **Dynamic identity**: an identity system of rules that produces many versions of the mark, keeping its structure fixed while fill, content or form changes, as with MTV (1981). Home: 01, 18.
+- **Dynamic injunction**: an Indian court order that extends to infringers and platforms identified after it is granted; also called a John Doe order. Home: 22.
+- **Dynamic Island**: the pill-shaped camera cutout on recent iPhones that the system animates as a status surface. Home: 06.
+- **Dynamic QR code**: a QR code that points to a redirect, so its destination and tracking can change after printing. Home: 20.
+- **Dynamic range (audio)**: the span between noise floor and the loudest clean level. Home: 15.
+- **Dynamic range (image)**: the span in stops between the darkest usable tone and clipping. Home: 14.
+- **`dynamic-range-limit`**: the CSS property that caps how much HDR headroom an element may use (standard, constrained, no-limit). Home: 04.
+- **Dynamic symmetry**: Jay Hambidge's system of composing with root rectangles, diagonals and reciprocals. Home: 05.
+- **Dynamic Type**: Apple's system for user-selected text sizes, with seven standard and five accessibility sizes. Home: 03, 06, 11.
+
+## E
+
+- **E.164**: the international phone number format of a plus sign, country code and digits with no separators. Home: 06, 10.
+- **E-cinema**: non-DCI digital cinema projection, common in Indian single screens. Home: 16.
+- **E-konte**: the Japanese storyboard; Miyazaki draws his as the film's script. Home: 28.
+- **E-mandate**: a standing instruction on a card or UPI for recurring debits, with a pre-debit notification at least 24 hours ahead under RBI rules. Home: 10.
+- **E&O insurance**: errors and omissions cover for claims arising from the content of a broadcast work. Home: 19.
+- **E-way bill**: India's electronic document for moving goods above ₹50,000 in value. Home: 20.
+- **EAN-13**: the 13-digit retail barcode. Home: 20.
+- **Ear, link, loop**: the parts of a binocular (double-storey) g: the ear is the small stroke projecting from the top right of the upper bowl, the link is the stroke joining the upper bowl to the lower loop, and the loop is the lower bowl, open or closed. Home: 03.
+- **Ear panel**: a small advertisement box beside a newspaper's masthead. Home: 20.
+- **Ease-in, ease-out, ease-in-out**: curves that start slow, end slow, or both; the house uses them for exits, entrances and on-screen moves. Home: 12.
+- **Easing**: the acceleration curve of a move (ease-out decelerates into place, ease-in accelerates away). Home: 00, 12.
+- **Eastern Arabic-Indic digits**: the digit forms U+0660 to U+0669 (٠ to ٩) used in Arabic text in parts of the Arab world, more often in Saudi than in UAE consumer UI. Home: 10, 18.
+- **Easy Read**: a format for readers with intellectual disability that pairs short sentences with a supporting image for each point. Home: 11.
+- **EBU R 128**: the European Broadcasting Union's loudness recommendation, minus 23 LUFS integrated for broadcast (version 5, November 2023). Home: 00.
+- **ECD (executive creative director)**: owner of creative output across a group of accounts or an office. Home: 24.
+- **ECMA Code**: the catalogue of standard folding carton styles. Home: 20.
+- **Ecological valence theory**: colour preference learned from the liked and disliked objects associated with each colour. Home: 02.
+- **Edge foiling**: metallic foil applied to the edges of cards or books. Home: 20.
+- **Edge painting**: colouring the cut edges of thick board, finished cards or books. Home: 18, 20.
+- **Edge pressure**: tension created by an element placed very close to, but not bleeding off, a frame edge. Home: 05.
+- **Edge swipe**: a gesture that starts at a screen edge, reserved by the platform for back, home and system panels. Home: 06.
+- **Edge-to-edge**: an Android app drawing behind the status and navigation bars and padding its own content by the system insets. Home: 05, 06.
+- **Edit Model (--edit)**: the Midjourney V8.x instruction editor, taking a written instruction and up to four reference images; it replaces --oref on V8.x. Home: 22.
+- **Editor's assembly**: the editor's first cut of the material, seen by the director only. Home: 16.
+- **Editorial carousel**: a carousel run as a photo story in sequence, like a magazine spread. Home: 17.
+- **Edits**: Instagram's video and carousel editing app, launched 22 April 2025, with an assistant since 30 September 2026. Home: 17.
+- **EDL (edit decision list)**: the CMX3600 text list of cuts and dissolves, one video track per file. Home: 16.
+- **EEA**: the European Economic Area, the territory where Consent Mode v2 is required. Home: 21, 22.
+- **Effective hourly rate**: a job's fee divided by the hours logged on it. Home: 24.
+- **Effective resolution**: an image's pixel count divided by its printed size, in ppi. Home: 20.
+- **Effects spring**: in Material 3 Expressive, a critically damped spring for colour, opacity and elevation. Home: 07, 12.
+- **Eighths of a page**: the unit schedules use to count screenplay length, one page being about a minute. Home: 14.
+- **EIN**: equivalent input noise, a preamp's self-noise referred to its input, in dBu; more negative is quieter. Home: 15.
+- **Einstellung effect**: the persistence of a learned procedure when a simpler or better one is available (Luchins, Bilalić). Home: 27.
+- **EL Zone System**: Ed Lachman's monitor display that colours each stop above and below grey in its own hue. Home: 15.
+- **Elaboration**: the detail added to an idea, one of Guilford's four divergent scores. Home: 27.
+- **Element interactivity**: the number of elements that must be processed together to understand a task. Home: 02.
+- **Elementarism**: van Doesburg's 1924 revision of De Stijl that admitted the diagonal. Home: 01.
+- **Elements**: Kling's feature taking up to four reference images to hold a subject consistent across a clip. Home: 22.
+- **Elephant**: the Kyoorius award, given at First List, Baby, Blue, Baby Black, Black and Purple levels. Home: 19.
+- **Eleven-star experience**: Chesky's exercise of taking one moment of an experience from one star past five to an absurd eleven, then working back to the feasible point. Home: 27, 28.
+- **Ellipsis**: the single character … (U+2026). Home: 03.
+- **Em**: the square whose side equals the point size; the unit in which all font metrics are expressed. Home: 03, 05.
+- **Emblem**: type set inside a shape, crest-like. Home: 18.
+- **Emergent code**: a sign rising at the edge of a category. Home: 18.
+- **EMI (equated monthly instalment)**: repayment of a purchase in equal monthly amounts over a fixed tenure, usually on a credit card in India; No Cost EMI offsets the interest with an equal upfront discount. Home: 09, 10, 19, 21.
+- **Emiratisation**: the UAE federal quota for UAE nationals in private-sector jobs, run by MOHRE through the Nafis programme. Home: 24.
+- **Empathy map**: a canvas of what a user says, thinks, does and feels, with a goal section in Dave Gray's 2017 revision. Home: 08.
+- **Emptiness**: in Kenya Hara's sense, a receptive state the viewer fills, distinct from simplicity. Home: 23, 27, 28.
+- **Empty state**: the state of a screen with no content yet, used to explain and offer the first action. Home: 09, 10.
+- **EN 301 549**: the European harmonised standard for ICT accessibility; V4.1.1 (2026) aligns it with WCAG 2.2 and the EAA. Home: 11.
+- **EN 13501-1**: the European reaction-to-fire classification, A1 to F with smoke and flaming-droplet subclasses. Home: 20.
+- **End card**: the closing frame carrying the logo, line and call to action. Home: 13.
+- **End frame**: the closing frame of a film carrying the mark and name, held 3 seconds or more. Home: 16.
+- **End tag**: a 1 to 1.5 second logo ending for 6 second bumpers and short cutdowns. Home: 13.
+- **Endonym**: a language's name in its own script ("हिन्दी", "العربية"). Home: 10.
+- **Endorsed brand**: an independent brand carrying a visible parent signature. Home: 18.
+- **Endowment effect**: valuing something more because one owns it. Home: 02.
+- **Endpaper**: the folded sheet glued between a book's case and its text block. Home: 20.
+- **Enforcement test**: the single yes or no question a reviewer asks to check a principle on a new artefact. Home: 28.
+- **ENG (electronic news gathering)**: the television news camera tradition and its conventions. Home: 14.
+- **Engaged views**: YouTube's count of Shorts views that pass its engagement threshold, used for revenue sharing and eligibility. Home: 17.
+- **Engraving (intaglio)**: printing from ink held in a recessed die, giving a raised image. Home: 20.
+- **Enhanced conversions**: Google Ads sending a hashed email or phone with a conversion so it can be matched to a signed-in user. Home: 21.
+- **Enhanced measurement**: GA4's automatically collected events such as scroll, outbound click and video engagement. Home: 21.
+- **Entourage**: the people, cars and props added to a render for scale and life. Home: 23.
+- **Entry point**: the element through which a reader first enters a page or spread. Home: 05.
+- **EOTF (electro-optical transfer function)**: the curve by which a display converts code values to light. Home: 16.
+- **EPR**: extended producer responsibility, the duty of producers and brand owners to collect and process the packaging they place on the market. Home: 20.
+- **EQ**: equalisation, cutting or boosting frequency bands. Home: 15.
+- **Equal odds rule**: a creator's number of hits is a linear function of total output with a roughly constant ratio (Simonton). Home: 27.
+- **Equalisation levy**: India's 6 percent levy on online advertising bought from non-residents, abolished from 1 April 2025. Home: 24.
+- **Equestrian Knight Design (EKD)**: Burberry's mounted-knight device, first drawn in 1901 and restored in 2023. Home: 01.
+- **Ergative construction**: the Hindi perfective pattern in which a transitive verb agrees with its object, which keeps the user's gender out of the sentence. Home: 10.
+- **Error correction level**: the share of a QR code that can be damaged and still scan; level H is 30 percent. Home: 20, 21.
+- **Error summary**: a list of a form's errors at the top of the page, each linked to its field, headed "There is a problem" (GOV.UK Design System). Home: 10.
+- **Essential Properties**: precomp properties exposed for editing in the parent comp; formerly Master Properties. Home: 13.
+- **Ethnography, rapid ethnography**: extended immersion in a group's life; a compressed form using narrow focus, key informants and several observers. Home: 08.
+- **Etimad**: Saudi Arabia's government procurement platform. Home: 24.
+- **ETTR (expose to the right)**: exposing as bright as possible without clipping, for cleaner shadows. Home: 14.
+- **EULA (end-user licence agreement)**: the foundry's licence that governs where a typeface may be used, including in logos and trademarks. Home: 03, 18, 24.
+- **European Accessibility Act (EAA)**: Directive (EU) 2019/882, applying accessibility requirements to products and services from 28 June 2025. Home: 11.
+- **EV**: exposure value; one step doubles or halves the light. Home: 13.
+- **EVA**: ethylene vinyl acetate, used as hot-melt binding glue and as foam. Home: 20.
+- **Evaluating scale**: Erin Meyer's scale of how directly a culture gives negative feedback; upgraders (absolutely) and downgraders (kind of) shift how strong a note sounds. Home: 23.
+- **Evaluative (formative) research, generative research, summative research**: testing whether a design works; discovering what to make and for whom; measuring how well a finished product performs. Home: 08.
+- **Even-over statement**: a principle written as "A even over B", naming the good thing it gives up. Home: 27.
+- **Evergreen content**: content whose value does not decay with date. Home: 17.
+- **Everydays**: Beeple's practice of one finished image per day since 1 May 2007. Home: 27.
+- **EVF (electronic viewfinder)**: a small screen viewfinder on the camera body. Home: 14.
+- **Evidence set**: the material a person is scored on: three pieces of work from the last six months, one crit they led and one brief they wrote. Home: 00.
+- **Ex-formation**: Kenya Hara's method of making a familiar subject unknown again so it is seen fresh. Home: 23, 27, 28.
+- **Ex parte**: granted without hearing the other side. Home: 22.
+- **Exaggeration**: pushing motion past realism so it reads; in interface, overshoot and bounce. Home: 12.
+- **Examples page**: a Figma library page named Examples (or components whose names end in _example) holding complete designs the Figma agent learns from. Home: 07.
+- **Excess share of voice (ESOV)**: share of voice minus share of market, a predictor of share growth. Home: 18.
+- **Excise**: work the interface makes the person do that serves the system instead of the goal (Cooper). Home: 09.
+- **Execution**: one expression of a concept. Home: 19.
+- **Executive control network**: the brain system that sustains attention and evaluates. Home: 27.
+- **Expected value**: probability of winning multiplied by first-year gross margin, minus pitch cost. Home: 24.
+- **Experience map**: a map of a human activity independent of any one product or company. Home: 08.
+- **Expert informant**: a person who serves the target customers (a concierge, a private banker) interviewed for second-hand evidence across many clients. Home: 08.
+- **Expert review**: an informal inspection by an experienced practitioner against heuristics, guidelines and domain knowledge. Home: 08.
+- **Expertise reversal effect**: guidance that helps novices but burdens experts. Home: 02.
+- **Export of services**: a supply to a client outside the country that meets the statutory conditions and is zero-rated for GST or VAT. Home: 24.
+- **Exposed spine**: a binding that leaves sewn signatures visible at the spine and lies flat. Home: 20.
+- **Exposure**: the volume of references seen with attention and filed, the stock the eye compares new work against; the first component of taste. Home: 00, 23.
+- **Exposure index (EI)**: a rating that moves middle grey within the recorded range without changing analogue gain. Home: 14.
+- **Exposure ramping**: changing exposure gradually through a time lapse, for the day-to-night "holy grail" shot. Home: 14.
+- **Exposure triangle**: aperture, shutter speed and ISO, traded against one another to set a camera's exposure. Home: 00.
+- **Expression**: a JavaScript snippet attached to an AE property and evaluated every frame. Home: 13.
+- **Expression Selector**: a text-animator selector whose amount for each character is computed by an expression. Home: 13.
+- **Extended audio description**: description that pauses the video when natural gaps are too short. Home: 11.
+- **Extended collection**: a Figma Enterprise variables collection that inherits a parent collection and overrides only the values that differ, used for multi-brand systems. Home: 07.
+- **Extended colour gamut (ECG)**: seven-ink process printing (CMYK plus orange, green, violet) that reaches most spot colours; Hexachrome was Pantone's six-ink predecessor. Home: 04, 20.
+- **Extension (Itten's contrast of)**: the proportion of area each colour occupies, and the balance of areas against lightness. Home: 04.
+- **Extremes and mainstreams, lead users**: sampling a few people at the edges beside the typical ones; people who meet a need before the market does (von Hippel). Home: 08.
+- **Eye trace**: where the viewer's eye sits on the frame across a cut, one of Murch's six criteria. Home: 16, 27, 28.
+- **Eye tracking (fixation, saccade, gaze plot, heatmap)**: recording where people look; a pause of the eye; a jump between pauses; one person's sequence; aggregated fixations. Home: 08.
+- **Eyebrow**: a short category line set above a title. Home: 06.
+- **Eyeline**: the direction and height of a subject's look relative to the lens. Home: 14, 15, 23.
+- **Eyeline match**: a look off screen followed by a shot of what is looked at. Home: 16.
+
+## F
+
+- **F&B (food and beverage)**: restaurants, bars, cafés and catering, a hospitality revenue line and a Mask360 client sector. Home: 15.
+- **f-number (f-stop)**: the geometric aperture: focal length divided by the entrance pupil diameter; each full stop halves the light. Home: 14, 15.
+- **F-pattern**: the eyetracking pattern in which people read two horizontal bands at the top of a page, then scan down the left edge. Home: 02, 05, 08, 10.
+- **Fabrican**: a liquid fibre sprayed from a can that dries as fabric, used for Coperni's 2022 dress. Home: 01.
+- **Facade**: a static button or poster standing in for a heavy embed, which loads the real widget only on tap. Home: 21.
+- **Face-lit channel letters**: sign letters with translucent faces lit from inside. Home: 20.
+- **Faceted classification**: describing each item by several independent attributes (facets) instead of one tree (Ranganathan). Home: 09.
+- **Fade through**: Material's pattern of fade out, then fade in with a slight scale, for unrelated destinations. Home: 12.
+- **Fade to black**: picture fading to black, for an ending or a chapter break. Home: 16.
+- **Fade-up**: opacity 0 to 1 with a rise of about 30px on every section as it enters; the page-builder default and a cheap tell. Home: 12.
+- **Fail point, wait point**: the step in a service blueprint that breaks most often; a step where the customer waits. Home: 08.
+- **Fair use**: the US copyright defence for unlicensed use that is transformative and does not harm the market for the work. Home: 01, 22.
+- **Fake letterbox**: black bars added to a 16:9 social video to imitate cinema. Home: 13.
+- **Falloff**: the rate at which illuminance drops with distance from a source. Home: 15.
+- **False colour**: a monitor mode that paints each brightness band a flat colour. Home: 14, 15.
+- **Fame (of a brand asset)**: Romaniuk's measure of the share of category buyers who link an asset to the brand. Home: 01, 18.
+- **Family of angles**: the range of camera angles from which a surface mirrors the light source (Hunter, Biver and Fuqua). Home: 00.
+- **Fanciful or coined mark**: an invented word used as a name, the strongest category for protection. Home: 18.
+- **Fast Start**: an MP4 whose moov atom (the index) is at the front, so playback starts before the download completes. Home: 26.
+- **Faux out-of-home (FOOH)**: a CGI film showing an impossible object in a real street, presented as if it were a real installation. Home: 01, 17, 18, 19, 20.
+- **Faux style**: bold, italic or small caps synthesised by software from another style. Home: 23.
+- **FBB**: folding boxboard, a carton board with a mechanical pulp middle between chemical pulp layers. Home: 20.
+- **fBm**: fractal Brownian motion; octaves of noise summed at doubling frequency and halving amplitude. Home: 13.
+- **FCPXML**: Final Cut Pro's XML timeline interchange format, used for picture turnover to Resolve. Home: 16.
+- **Feature and conjunction search**: search for a target differing in one feature, efficient at under about 10ms per item, and for a combination of features, serial at about 20 to 30ms per item. Home: 02.
+- **Feature integration theory**: Treisman's account of parallel feature maps bound by serial attention. Home: 02.
+- **Fechner's law**: sensation grows with the logarithm of stimulus intensity. Home: 02.
+- **Federated model**: contributors from several product teams build the system part-time. Home: 07.
+- **Feedback**: immediate, informative communication of the result of an action. Home: 02.
+- **Feedback sandwich**: praise, criticism, praise; replaced in the house by the design-taste critique format. Home: 23.
+- **FEFCO Code**: the catalogue of standard corrugated box styles, such as 0201 and 0427. Home: 20.
+- **Felt-marked paper**: paper textured by the felt of the paper machine. Home: 20.
+- **`fetchpriority`**: the HTML attribute that raises or lowers a resource's request priority. Home: 21.
+- **Fibonacci sequence**: the series 1, 1, 2, 3, 5, 8, 13 and on, in which the ratio of successive terms converges on the golden ratio. Home: 05.
+- **Fidelity**: the degree to which a design artefact resembles the finished product in look and behaviour. Home: 09.
+- **Field**: Müller-Brockmann's grid cell, a block of n lines of text. Home: 05.
+- **Field order**: which of an interlaced frame's two fields is displayed first (upper field first for 1080i). Home: 16.
+- **`field-sizing: content`**: CSS that lets an input or textarea grow with its content. Home: 21.
+- **Figma agent**: Figma's canvas AI agent (beta from 20 May 2026) that designs and audits with a library's components, guidelines, examples and skills. Home: 07.
+- **Figure and ground**: the assignment of a region as the object (figure) against a shapeless background (ground). Home: 02.
+- **Figures (lining, old-style, tabular, proportional)**: cap-height uniform digits; x-height digits with extenders; equal-width digits; digits with individual widths. Home: 03.
+- **Fill light**: the secondary, lower-intensity source opposite the key that lifts the shadows the key leaves and sets the lighting ratio. Home: 15, 22.
+- **Findability**: the degree to which an object is easy to discover or locate; one face of Morville's user experience honeycomb. Home: 09.
+- **Finder, minder and grinder**: Maister's three roles in a professional service firm: the partner who wins work, the manager who runs it and the staff who do it. Home: 00.
+- **Fine cut**: the edit after the rough cut, in which every transition, title and frame count is polished before picture lock. Home: 16, 19.
+- **Fineness**: gold purity in parts per thousand (750 for 18k, 916 for 22k). Home: 10.
+- **FIRC or FIRA**: the bank's certificate or advice proving receipt of foreign currency against an invoice. Home: 24.
+- **Fire**: the dispersion of white light into spectral colours by a cut diamond. Home: 16.
+- **Fireflies**: isolated over-bright pixels from rare light paths in a path-traced render. Home: 13.
+- **First and last 10 percent**: the parts of a job the CD does personally (the first board and sketch; the final pass), with the middle delegated against the standards document. Home: 19.
+- **First assistant camera (1st AC)**: the focus puller, who also owns lens changes and the camera build. Home: 14.
+- **First assistant director (1st AD)**: the assistant director who runs the floor, the schedule and safety on a shoot. Home: 14, 19.
+- **First-click test**: showing a screen and a task and recording where people click first; a correct first click predicts success. Home: 08, 10.
+- **First contentful paint (FCP)**: the lab metric for the first text or image painted. Home: 21.
+- **First impression chain**: the sequence of surfaces a buyer meets first, from search result to the AI answer. Home: 18.
+- **First input delay (FID)**: the interaction metric INP replaced on 12 March 2024. Home: 21.
+- **First Moment of Truth**: P&G's term (2005) for the moment a buyer meets the product on the shelf. Home: 18.
+- **Fit-out manual**: a landlord's rule book for tenant design and signage. Home: 20.
+- **Fitting and sidebearings**: the designer's spacing of a face through the white on each side of every glyph. Home: 03.
+- **Fitts's law**: the model in which pointing time grows with distance and falls with target size. Home: 06, 11.
+- **Fitts's law and Hick's law**: the models that the time to hit a target grows with its distance and shrinks with its size (Fitts), and that decision time grows with the number of choices (Hick). Home: 00.
+- **Fitts's law, index of difficulty and throughput**: movement time grows with the index of difficulty, log2 of distance over width plus one, in bits; throughput is that index divided by movement time, in bits per second. Home: 02.
+- **Fitzpatrick skin type (phototype)**: the dermatological classification of skin phototypes from I to VI by response to sun. Home: 08, 16.
+- **Five planes**: Garrett's layers of user-experience decisions from abstract to concrete: strategy, scope, structure, skeleton, surface. Home: 27, 28.
+- **Five-second test**: showing a screen for five seconds and asking what it was for, to test what its words say at a glance. Home: 08, 10, 18.
+- **Five-user rule**: Nielsen and Landauer's finding that five users find about 85 percent of problems when each problem affects 31 percent of users. Home: 08.
+- **Five whys**: Toyoda's root-cause technique of asking why repeatedly until the cause is reached. Home: 08.
+- **Fixation**: a pause between saccades during which visual information is taken in. Home: 02.
+- **Fixed-effects model**: a statistical model that compares each unit (in social analytics, each account) with its own baseline. Home: 17.
+- **FK**: forward kinematics; posing a limb joint by joint from its root. Home: 13.
+- **Flag, cutter, floppy**: black panels that block light; a cutter is long and narrow; a floppy is a hinged double panel. Home: 15.
+- **Flange focal distance**: the distance from the lens mount to the sensor, which decides which lenses adapt to which bodies. Home: 14.
+- **Flanker or fighter brand**: a portfolio brand that defends the price flank against a cheaper competitor. Home: 18.
+- **Flash**: a pair of opposing changes in relative luminance. Home: 11.
+- **Flash blend**: compositing one ambient exposure with several flash-lit exposures by hand. Home: 15.
+- **Flash frame**: a single stray frame of a trimmed clip left at a cut. Home: 16.
+- **Flat and Scope**: the 1.85:1 and 2.39:1 DCP picture containers. Home: 16.
+- **Flat-cut letters**: letters cut from sheet metal or acrylic and pinned off a wall. Home: 20.
+- **Flat design**: an interface style of flat colour and type without simulated texture or depth, dominant from about 2010 to 2020. Home: 01.
+- **Flatplan**: the page-by-page thumbnail map of a publication used to plan pace. Home: 05.
+- **Flesch-Kincaid grade**: a readability formula that converts sentence and word length into a US school grade. Home: 00, 10.
+- **Flesch Reading Ease**: an English readability formula based on sentence length and syllables per word; higher is easier. Home: 10.
+- **Flexbox**: one-dimensional CSS layout along a row or column. Home: 21.
+- **Flexibility**: the number of categories of idea produced, one of Guilford's four scores. Home: 27.
+- **Flexible ad format**: Meta's ad format holding up to 10 images and videos, from which the system picks per placement and person. Home: 17.
+- **Flexography**: printing from flexible relief plates inked by an anilox roller. Home: 20.
+- **Flight**: a burst of paid media with its own budget and dates. Home: 00.
+- **FLIP (animation technique)**: First, Last, Invert, Play; the technique that turns a layout change into a transform-only animation. Home: 12.
+- **FLIP (fluid solver)**: a liquid simulation method that combines particles and a grid. Home: 13.
+- **Floating action button (FAB)**: Material's large button for a screen's main action. Home: 06.
+- **Floating label**: a field label that starts inside the field and moves above it on focus. Home: 06.
+- **Flock**: fibres bonded to a surface for a velvet feel. Home: 20.
+- **Flow**: absorbed performance under clear goals, immediate feedback and challenge slightly above skill (Csikszentmihalyi). Home: 02, 27.
+- **Flow field**: a grid of angles across a canvas that curves follow step by step (Tyler Hobbs). Home: 28.
+- **Flowline (hang line)**: a horizontal line that divides the page into bands and from which elements hang. Home: 05.
+- **Fluency**: the count of ideas produced, one of Guilford's four scores. Home: 27.
+- **Fluent 2**: Microsoft's cross-platform design system. Home: 06.
+- **Fluid type**: a size expressed as a CSS clamp() between a minimum and a maximum across a viewport range. Home: 03, 07.
+- **Flush-left, ragged-right**: lines aligned on the left edge and left uneven on the right, so word spacing stays constant. Home: 01.
+- **Flute**: the wave-shaped middle layer of corrugated board, graded A, B, C, E and F by height. Home: 20.
+- **Flutter echo**: rapid ringing between parallel hard surfaces. Home: 15.
+- **FM screening**: frequency modulated (stochastic) halftoning with a fixed tiny dot whose density varies. Home: 20.
+- **FMCG (fast-moving consumer goods)**: packaged goods sold quickly at low cost, the networks' core retainer category. Home: 24.
+- **fMRI**: functional magnetic resonance imaging, which maps brain activity through changes in blood oxygenation. Home: 27.
+- **Focal point (composition)**: the element the eye lands on first. Home: 05.
+- **Focal point (image crop)**: the stored crop centre of an image (`object-position`) that keeps the subject in frame across ratios. Home: 06, 07.
+- **Focus breathing**: the change in framing when a lens racks focus. Home: 14.
+- **Focus-by-wire**: an electronic focus ring with no hard stops, so marks cannot be repeated. Home: 14.
+- **Focus group (FGD)**: a moderated discussion among 5 to 8 similar people on a defined topic. Home: 08.
+- **Focus peaking**: coloured outlines on the sharpest edges of a monitor image. Home: 14.
+- **Focus stacking**: merging frames focused at different depths into one image sharp from front to back. Home: 00, 13, 14, 15.
+- **Focus throw**: the rotation of a focus ring from closest focus to infinity, about 270 to 300 degrees on cinema lenses. Home: 14.
+- **Focus trap**: a behaviour that keeps keyboard focus cycling inside a component, correct only for modals. Home: 06, 11.
+- **Focus-visible**: focus the browser judges should be shown, as after keyboard navigation, matched by `:focus-visible`. Home: 06.
+- **Focus-within**: the state of a container that holds the focused element, matched by `:focus-within`. Home: 06.
+- **Focused view (TikTok)**: an ads optimisation goal that pays only for views of at least 6 seconds or an interaction within the first 6 seconds. Home: 17.
+- **Fogg behaviour model**: B = MAP; a behaviour occurs when motivation, ability and a prompt coincide. Home: 02.
+- **Fogger**: a machine that produces dense, local, short-lived cloud. Home: 15.
+- **FOGRA**: the German graphic technology research association whose characterisation data (FOGRA39, FOGRA51, FOGRA52) define the standard offset printing conditions used in ICC profiles. Home: 26.
+- **FOGRA39**: the press characterisation for coated sheetfed offset (profile ISO Coated v2, ECI); the house default when an Indian or UAE printer names no profile. Home: 00.
+- **FOGRA39, FOGRA51, FOGRA52, GRACoL, G7**: characterisation datasets for coated offset (ISO 12647-2:2004), premium coated to the 2013 revision (M1, optical brighteners) and uncoated to the 2013 revision; the United States sheetfed reference (GRACoL 2013, CRPC6); and Idealliance's grey-balance calibration method. Home: 04.
+- **FOGRA and PSO**: the German print research body and its ISO 12647-2 based offset standard. Home: 23.
+- **FOIT, FOUT, FOFT**: flash of invisible, unstyled, or faux text while a web font loads. Home: 03.
+- **Fold**: the bottom edge of the first visible screen. Home: 05.
+- **Folder-gluer**: a machine that folds a carton blank along its creases and glues the side seam in one pass. Home: 20.
+- **Foley**: sound performed to picture in a studio with props. Home: 15, 22, 23.
+- **Folio**: the printed page number. Home: 05.
+- **Follow through and overlapping action**: parts continuing after the body stops, and parts moving at different rates. Home: 12.
+- **`font-display`**: the descriptor that decides what shows while a web font loads (swap, optional). Home: 00, 03, 21.
+- **Font flash**: fallback text visibly replaced by the web font as it loads. Home: 23.
+- **Font Loading API**: the JavaScript interface (`document.fonts`) for loading and observing fonts. Home: 03.
+- **`font-optical-sizing`**: the property that lets a variable font choose its design for the rendered size. Home: 21.
+- **`font-size-adjust`**: the CSS property that scales each font in a stack so that one metric (x-height by default) matches. Home: 03, 21.
+- **`font-synthesis`**: the property that allows or stops the browser faking bold and italic styles. Home: 21.
+- **Foot-candle**: illuminance of one lumen per square foot, 10.76 lux. Home: 15.
+- **Footfall conversion**: the share of store visitors who buy. Home: 08.
+- **Force majeure**: events outside either party's control that suspend contract obligations. Home: 24.
+- **Forced-choice comparison**: the discrimination drill of choosing the better of two pieces in two seconds and checking the call against a reference judgement. Home: 00.
+- **Forced colours mode (`forced-colors`)**: Windows contrast themes that replace author colours with a small system palette, exposed to CSS as `forced-colors: active`. Home: 06, 07, 11, 21.
+- **Forces diagram**: the JTBD model of push and pull towards change against anxiety and habit. Home: 08.
+- **Forcing function**: a constraint that makes an error impossible: an interlock forces the order of steps, a lock-in keeps an operation running, a lockout blocks a dangerous action (Norman). Home: 09.
+- **Fore-edge**: the outer, unbound edge of a page. Home: 05.
+- **Forgiving format**: an input that accepts every reasonable way of writing a value and normalises it. Home: 09.
+- **Form model (dynamic, rational, geometric)**: classification by the construction of the skeleton, applied across serif and sans. Home: 03.
+- **Format**: the outer boundary of a layout and its proportion. Home: 05.
+- **Format sheet**: the one-page specification of a series format that lets any editor reproduce it. Home: 17.
+- **Forward-up map**: a "you are here" map aligned so that up on the map is straight ahead for the viewer. Home: 09.
+- **Found image**: an existing image recontextualised as the work, as in Saville's "Unknown Pleasures". Home: 28.
+- **Foundation Sprint**: Knapp and Zeratsky's short sprint, set out in "Click" (2025), that fixes customer, problem, differentiation and approach before design sprints. Home: 08.
+- **Foundations**: the layer of principles and brand decisions (colour, type, grid, spacing, iconography, imagery) above tokens. Home: 07.
+- **Four C model**: mini-c, little-c, Pro-c and Big-C creativity, from personal insight to domain-changing work (Kaufman and Beghetto). Home: 27.
+- **Fovea and foveola**: the central retinal pit of about 5 degrees and its rod-free centre of about 1 to 2 degrees. Home: 02.
+- **fps (frames per second)**: the capture or playback rate of video, the number of frames recorded or shown each second. Home: 14.
+- **FPV drone**: a first-person-view drone flown with goggles, agile enough to fly through interiors. Home: 14.
+- **`fr` unit**: a CSS grid unit equal to one share of the free space in the grid's tracks. Home: 05.
+- **Fractal dimension**: a measure of how a pattern fills space across scales, from 1 for a line to 2 for a filled plane. Home: 02.
+- **Fragment shader**: the shader stage that colours each pixel. Home: 13.
+- **Frame**: the statement of what kind of problem this is, in the form "if we look at the situation as X, then Y follows"; reframing is changing it (Schön, Dorst). Home: 27.
+- **Frame blending**: generating in-between frames when footage is slowed (Frame Mix dissolves, Pixel Motion uses optical flow). Home: 13.
+- **Frame budget**: the time available to draw one frame: about 16.7 ms at 60 Hz and 8.3 ms at 120 Hz. Home: 09, 12, 27.
+- **Frame grab**: a still pulled from motion footage. Home: 14.
+- **Frame lines**: monitor overlays marking each deliverable's crop. Home: 14.
+- **Frame of reference**: the category the buyer shops a brand against on the day they decide. Home: 18.
+- **Frame-rate independence**: writing per-frame motion against elapsed time so it runs at the same speed at 60Hz and 120Hz. Home: 12.
+- **Frame within a frame**: an element of the scene (door, arch, window) that frames the subject inside the image. Home: 05.
+- **Framing (behavioural economics)**: the change in choice produced by describing equivalent options differently. Home: 02.
+- **Framing (composition)**: the choice of what a frame includes and excludes. Home: 05.
+- **Free entry point window**: a WhatsApp window of up to 7 days, opened when a person messages from a click-to-WhatsApp ad or a Facebook Page call-to-action and the business replies, in which most messages are free. Home: 09.
+- **Freeze frame**: a single frame held on screen. Home: 16.
+- **French window**: a newspaper front-page format with die-cut flaps that open onto the ad. Home: 20.
+- **Frequency**: average impressions per person reached. Home: 17.
+- **Frequency separation**: a retouching technique that splits an image into a texture layer and a tone layer so each can be edited alone. Home: 16, 22.
+- **Fresnel**: a lamp with a stepped lens that focuses from spot to flood. Home: 15.
+- **Front door**: Dan Brown's principle that at least half of visitors arrive somewhere other than the home page, so every landing page must orient the person on its own. Home: 09.
+- **Front loading**: putting the meaningful word first in a line, link or list item. Home: 10.
+- **Front-of-house desk**: the main console mixing an event for the audience. Home: 15.
+- **Front-of-pack labelling**: nutrition grades or warnings printed on the principal display panel. Home: 20.
+- **Frutiger Aero**: a 2017 nostalgia label for the glossy, aqua, nature-themed interface look of about 2004 to 2013. Home: 01.
+- **FSC**: Forest Stewardship Council, the forest certification scheme with 100%, Mix and Recycled labels. Home: 20.
+- **FSSAI**: the Food Safety and Standards Authority of India, which fixes the veg and non-veg marks on packaged food. Home: 04, 20.
+- **`fsType`**: the OS/2 field that states whether a font may be embedded in documents (Installable, Editable, Preview & Print, Restricted). Home: 03.
+- **FTE (full-time equivalent)**: one person's full working capacity, the unit of a retainer staffing plan. Home: 24.
+- **FUI**: fictional user interface; screen graphics designed for film and television. Home: 13.
+- **Full range**: code values 0 to 255 (8 bit) or 0 to 1023 (10 bit). Home: 16.
+- **Functional and perceptual patterns**: Kholmatova's split between components and the system's felt qualities. Home: 28.
+- **Functional fixedness**: the inability to see an object outside its usual function (Duncker). Home: 27.
+- **Functional pattern**: Kholmatova's term for a concrete reusable interface part with a purpose. Home: 07.
+- **Funnel**: the ordered steps to a goal with the share surviving each step. Home: 08.
+- **Future-state map**: a map of the experience the business intends, labelled apart from the researched current state. Home: 08.
+- **Futures cone**: a model of probable, plausible, possible and preferable futures used in speculative design. Home: 01.
+- **FWICE**: the Federation of Western India Cine Employees, the umbrella of Mumbai craft unions. Home: 14.
+
+## G
+
+- **G7**: Idealliance's press calibration method based on neutral grey balance. Home: 20.
+- **GA**: generally available; a vendor's stable, supported release of a model or endpoint. Home: 22.
+- **GA4**: Google Analytics 4, Google's event-based analytics product. Home: 21.
+- **Gabor-Granger**: a pricing method that asks purchase likelihood at successive prices to build a demand curve. Home: 08.
+- **Gaffer**: the chief lighting technician who executes the DP's lighting plan. Home: 14, 15.
+- **Gain map**: a per-pixel brightness map stored beside an SDR base image that HDR screens apply; standardised as ISO 21496-1 and used by Ultra HDR. Home: 04, 26.
+- **Gain staging**: setting levels at each stage of the chain so processors work in range and the bus keeps headroom. Home: 15.
+- **Gamma and transfer function**: the curve relating code values to linear light; gamma 2.2 for design displays, 2.4 (BT.1886) for video, 2.6 for cinema. Home: 04.
+- **Gamut**: the range of colours an encoding can describe. Home: 14.
+- **Gamut and gamut mapping**: the range of colours a space or device can show, and the method for bringing out-of-range colours inside it (clipping, chroma reduction, perceptual compression; in CSS, binary search with local MINDE, EdgeSeeker or Ray Trace). Home: 04.
+- **Gamut compression**: pulling out-of-gamut colours inside a target gamut before the grade, as the ACES Reference Gamut Compression does. Home: 16.
+- **Gamut mapping**: the compression of out-of-gamut colours into a display's gamut inside an output transform. Home: 07, 16.
+- **Gate**: an approval point with a named approver, a written approval and a date. Home: 24.
+- **Gate fold**: a fold where two outer panels close over a centre panel like doors. Home: 20.
+- **Gate weave**: the slight frame-to-frame drift of film in a camera or projector gate, or its emulation. Home: 16.
+- **Gaussian splatting**: a 3D scene built from millions of small coloured ellipsoids fitted to photographs, viewable from new angles with true parallax. Home: 13, 21, 22.
+- **Gaze cueing**: the shift of attention to where another person looks. Home: 02.
+- **GC1 and GC2**: folding boxboard grades with a white or a cream back. Home: 20.
+- **GCC (Gulf Cooperation Council)**: the six Gulf states: Bahrain, Kuwait, Oman, Qatar, Saudi Arabia and the UAE. Home: 18, 19, 22, 23, 24.
+- **`gclid` and `fbclid`**: the Google and Meta click identifiers added to a landing URL, captured to report offline conversions. Home: 21.
+- **GCR**: grey component replacement, the separation method in which black ink replaces the grey part of CMY mixes. Home: 04.
+- **GD and GT**: recycled carton board grades with a grey back or a white or cream back. Home: 20.
+- **GDPR (General Data Protection Regulation)**: the EU's data protection law, which follows EU data subjects. Home: 21, 24.
+- **GeM (Government e-Marketplace)**: India's online portal for central government purchasing. Home: 24.
+- **GenEffect**: Figma's shader-driven effect, which animates in Figma but does not export to code. Home: 12.
+- **Geneplore**: the two-phase model of generation (preinventive structures) and exploration (interpretation) (Finke, Ward and Smith). Home: 27.
+- **General flash threshold**: the WCAG luminance and area limit above which more than three flashes per second are prohibited. Home: 11.
+- **Generative UI**: a pattern in which a model returns structured data rendered as real interface components. Home: 09.
+- **Generic name**: the common name of a product, which can never be registered as a trademark. Home: 18.
+- **Genlock**: locking several cameras to one sync signal. Home: 14.
+- **Genuine brand extension**: a product sharing a restricted brand's name that exists in the market at scale and is advertised without reference to the restricted product. Home: 19.
+- **Geo experiment, incrementality**: a test comparing matched regions with and without spend; the actions that would not have happened without the ads. Home: 08.
+- **Geographical indication (GI)**: a registered name that ties a product to its place of origin, such as the Kolhapuri chappal. Home: 01.
+- **Geometry Nodes**: Blender's node-based procedural geometry system. Home: 13.
+- **Gesamtkunstwerk**: the total work of art, every object of a space designed to one idea. Home: 01.
+- **Gestalt**: the school of psychology that described how parts are organised into wholes. Home: 02.
+- **Gestalt grouping**: the principles by which the eye organises parts into wholes. Home: 05.
+- **Get, Who, To, By**: the one-line brief summary: get this audience, who believe this, to do that, by this direction. Home: 19.
+- **Ghosting**: a faint shadow image where the press starves an area of ink. Home: 20.
+- **Ghutra**: the Gulf head cloth, often in a red and white check. Home: 16, 22.
+- **GIF**: Graphics Interchange Format, an early web image format. Home: 01.
+- **Giga-project**: the term used for Saudi Arabia's PIF-funded developments at the scale of a city or region. Home: 18.
+- **GIGW**: Guidelines for Indian Government Websites and Apps, version 3.0 of 2023, aligned with WCAG 2.1 AA. Home: 07, 11, 26.
+- **Gilding**: real gold leaf applied to book edges. Home: 20.
+- **Gimbal**: a motorised stabiliser that keeps the camera level while it travels. Home: 14.
+- **Girih**: interlaced geometric strapwork in Islamic ornament. Home: 23.
+- **Glance legibility**: how quickly text is read in a brief glance. Home: 02.
+- **Glass Lion**: the Cannes Lions award for work that challenges gender bias, first given in 2015. Home: 01.
+- **Glassine**: a smooth, grease-resistant translucent paper. Home: 20.
+- **Glassmorphism**: frosted, translucent interface panels that blur what lies behind them. Home: 01.
+- **GLB and USDZ**: the binary glTF 3D file Android and Chrome read, and Apple's packaged Universal Scene Description file that iOS AR Quick Look opens. Home: 18, 26.
+- **Global shutter**: a sensor that reads every row at once, avoiding rolling shutter skew. Home: 14.
+- **Global token**: a raw value with a descriptive name (`color.stone.600`), referenced only by aliases; also called primitive, reference or base token. Home: 07.
+- **Global usage matrix**: a head office's record of the term, territory and media licensed for each element of a global campaign. Home: 24.
+- **GLSL**: the OpenGL Shading Language, used to write WebGL shaders. Home: 13, 21.
+- **glTF**: the Khronos transmission format for 3D scenes, as .gltf or binary .glb. Home: 13.
+- **glTF and GLB**: the Khronos 3D transmission format and its single-file binary form. Home: 21.
+- **Goal-directed design**: Cooper's method of designing for the person's goals through personas and scenarios. Home: 09.
+- **Goal-gradient effect**: effort increasing as a goal approaches. Home: 02.
+- **Gobo**: a pattern cut-out that shapes the shadow a light casts: a metal or glass slide inside a projection fixture, or a cucoloris (cookie) placed in front of a light. Home: 15, 22.
+- **Golden canon**: Tschichold's name for the 2:3 page with a 2:3 text area placed in ninths. Home: 05.
+- **Golden hour**: the period when the sun is below about 6 degrees altitude, warm and low. Home: 14, 15.
+- **Golden ratio**: the proportion of about 1.618 in which the whole relates to the larger part as the larger to the smaller. Home: 02, 05.
+- **Golden set**: a fixed list of real questions with approved answers, re-run on every model or prompt change. Home: 22.
+- **Good continuation (continuity)**: grouping of elements that lie along a smooth line or curve, based on contour integration by an association field of linked detectors. Home: 02, 05.
+- **Google-Extended**: the `robots.txt` token controlling Gemini training and grounding, with no effect on Search. Home: 21.
+- **GOP (group of pictures)**: the run of video frames between keyframes; a long GOP makes seeking coarse. Home: 12, 13, 16.
+- **GPU**: graphics processing unit, the processor that renders images. Home: 01.
+- **GPU time**: the graphics-processor time a generator bills against a plan. Home: 22.
+- **Grade (GRAD)**: a variable font axis that changes stroke weight without changing glyph width. Home: 03, 06.
+- **Grade match**: reproduction of a reference frame's colour and tone on different footage, checked on the scopes and by a blind pick. Home: 00.
+- **Grain**: the visible particle structure of film, or its emulation. Home: 16.
+- **Grain direction**: the alignment of fibres in the machine direction of a sheet. Home: 20.
+- **Grammage (gsm)**: grams per square metre, the weight measure for paper stock. Home: 00, 20, 26.
+- **Graph editor**: AE's view of keyframes as value or speed curves. Home: 13.
+- **Grapheme cluster**: what a reader sees as one character, such as a consonant with its vowel sign. Home: 12.
+- **Graphic device**: a recurring shape, line or pattern derived from the mark that carries the identity when the logo is absent. Home: 18.
+- **Graphical perception**: the accuracy with which chart encodings are read, ranked by Cleveland and McGill from position on a common scale down to colour saturation. Home: 02.
+- **Gravure**: printing from engraved cylinders, economic on very long runs. Home: 20.
+- **Greeking**: covering or replacing an uncleared brand or logo in frame. Home: 14.
+- **Greenwashing**: an environmental claim made without verifiable evidence. Home: 19.
+- **Grey-box layout (wireframe)**: boxes for every element placed on the grid before real content, to test hierarchy and pace. Home: 05.
+- **Grey card**: an 18 percent reflectance card used for white balance and mid-grey placement. Home: 14, 22.
+- **Greyboard (kappa board)**: rigid recycled board used under wraps in rigid boxes and book cases. Home: 20.
+- **Grice's maxims**: quantity, quality, relation and manner, the cooperative principles of conversation, used to review assistant flows. Home: 10.
+- **Grid (egg crate)**: a fabric honeycomb on a soft source that limits spread. Home: 15.
+- **Grid and subgrid**: two-dimensional CSS layout, and a nested element adopting its parent's tracks. Home: 21.
+- **Grid cloth**: woven diffusion fabric, tough enough for large outdoor frames. Home: 15.
+- **Grid drift**: elements slipping a few pixels off their columns through nudging. Home: 23.
+- **`grid-lanes`**: the CSS display value for native masonry, in Safari 26.4 only as of October 2026. Home: 21.
+- **Grip**: the crew member who rigs stands, flags and frames. Home: 15.
+- **Gripper edge**: the unprintable sheet margin held by the press grippers. Home: 20.
+- **GROQ**: Sanity's query language for its content lake. Home: 21.
+- **Gross margin**: fee revenue minus the direct cost of delivery, divided by fee revenue. Home: 24.
+- **Grotesk**: a sans-serif typeface of the nineteenth-century German lineage, such as Akzidenz-Grotesk. Home: 01, 18.
+- **Groupthink**: a group's drive for agreement suppressing doubt (Irving Janis, 1972). Home: 23.
+- **GS1 Digital Link**: a QR code that carries the product number inside a web address. Home: 20.
+- **GSAP**: the GreenSock Animation Platform, a JavaScript animation library for the web. Home: 01.
+- **GSM-7 and UCS-2**: the two SMS encodings; GSM-7 carries 160 Latin characters per message, UCS-2 carries 70 characters of any script. Home: 10.
+- **GSO**: the GCC Standardization Organization, whose standards the UAE adopts as UAE.S GSO. Home: 20.
+- **GST (goods and services tax)**: India's goods and services tax, an indirect tax charged at rates that vary by category (18 percent on agency services) and, for hotel rooms, by tariff; the abbreviation also names Gulf Standard Time, so the house writes "Dubai time" where Indian readers see it. Home: 10, 24.
+- **GSUB and GPOS**: the OpenType substitution and positioning tables that carry features and kerning. Home: 03.
+- **Guarantor of design**: what warrants a design decision, located by Nelson and Stolterman in the client's desiderata. Home: 27.
+- **Guardrail metric**: a metric that must not degrade while an experiment optimises its primary metric. Home: 08.
+- **Guest checkout**: a checkout that needs no account, with the account offered after the order. Home: 09.
+- **Guided search**: Wolfe's model in which feature maps guide attention towards likely targets. Home: 02.
+- **Guilloche**: fine interlaced line patterns printed to resist copying. Home: 20.
+- **Gulf Standard Time**: UTC+4, the UAE's time zone; its abbreviation GST clashes with India's tax, so the house writes "Dubai time". Home: 10.
+- **Gulfs of execution and evaluation**: the gaps between intention and available action, and between system state and its interpretation. Home: 02.
+- **Gusset**: the folded side panel of a bag. Home: 20.
+- **Gutenberg diagram**: a newspaper heuristic, with little eye-tracking support, mapping reading gravity from top left (primary optical area) to bottom right (terminal area). Home: 02, 05.
+- **Gutter (alley)**: the space between columns. Home: 05.
+- **Gyro stabilisation**: stabilising footage from the camera's recorded gyro data (Gyroflow) with no image analysis. Home: 16.
+
+## H
+
+- **H.264 (AVC)**: the Advanced Video Coding standard, the universal delivery codec. Home: 16.
+- **H.265 (HEVC)**: High Efficiency Video Coding, the successor to H.264 at about half the bitrate for equal subjective quality. Home: 16.
+- **H&J**: hyphenation and justification settings (word space, letter space, glyph scaling limits). Home: 03.
+- **Habituation**: a response that weakens with repetition, which is why frequent confirmations stop being read. Home: 09.
+- **Habituation, orienting response and dishabituation**: a decreasing response to a repeated stimulus without consequence (in feeds, creative wear-out), the reflexive turn towards a novel stimulus, and the return of the response when the stimulus changes. Home: 02.
+- **Hacking**: pulling a watch's crown to stop the seconds hand, for continuity across takes. Home: 14.
+- **Hairline (interface border)**: a 1px (or 0.5px on 2x screens) border at low alpha used to define an edge without a shadow. Home: 06.
+- **Hairline (type)**: the thinnest stroke in a face with contrast. Home: 03.
+- **Halation (film)**: the red-orange glow around bright highlights from light reflecting back through the film base. Home: 14, 16, 22.
+- **Halation (irradiation)**: light strokes appearing to bleed into a dark ground, which makes light-on-dark text read worse than its ratio suggests. Home: 04, 05, 06, 11.
+- **Half-leading**: the CSS model that splits line-height minus content height above and below the text. Home: 03, 05.
+- **Halftone**: a pattern of dots of varying size that reproduces continuous tone in print. Home: 01.
+- **Halo effect**: one positive trait colouring judgements of unrelated traits. Home: 02.
+- **Halo-lit letters**: opaque sign letters lit from behind so they wash the wall with light. Home: 20.
+- **Handles**: extra frames beyond each cut point, delivered so a clip can be extended. Home: 13, 14, 16.
+- **Handling**: a fee, usually about 10 percent, for managing a third-party cost the client pays directly. Home: 24.
+- **Handoff protocol**: the defined exchange between design and engineering for each feature built with the system. Home: 07.
+- **Hanging punctuation**: setting quotation marks and hyphens into the margin so the text edge reads straight. Home: 00, 05, 21.
+- **Hanging punctuation and optical margin alignment**: pushing marks into the margin so the text edge looks straight. Home: 03.
+- **Happy path, edge path, error path**: the shortest route through a flow with every input valid; a valid but unusual route; a route caused by invalid input or system failure, with its recovery. Home: 09.
+- **Haptic design**: design that starts from how a thing feels in the hand (Hara's 2004 exhibition). Home: 28.
+- **Haptic feedback**: a short vibration pattern the device plays in response to an interaction. Home: 06.
+- **Harakat**: the optional Arabic vowel marks written above and below the line. Home: 03, 18, 28.
+- **Hard limit and visible limit**: a maximum the platform enforces, against the device-dependent point at which text truncates. Home: 10.
+- **Harding test**: automated analysis of video for flashes and patterns that risk photosensitive epilepsy (seizures triggered by flashing light or patterns), run in analysers such as the commercial Harding FPA and named after the neurologist Graham Harding. Home: 02, 11, 16, 17.
+- **HarfBuzz**: the open-source shaping engine inside Chrome, Firefox and Android. Home: 03.
+- **`:has()`**: the CSS parent selector. Home: 21.
+- **Hazer**: a machine that produces a fine long-hanging mist to make light beams and depth visible. Home: 15.
+- **HCT**: Google's hue, chroma, tone space (CAM16 hue and chroma, CIELAB tone) used by Material 3. Home: 04, 07.
+- **HDR10**: PQ high dynamic range video with static metadata (SMPTE ST 2086, MaxCLL, MaxFALL). Home: 13, 16.
+- **HDR10+**: Samsung's PQ HDR format with dynamic metadata. Home: 13, 16.
+- **HDR10, HDR10+ and Dolby Vision**: HDR formats built on PQ, with static metadata (HDR10) or scene-by-scene dynamic metadata (HDR10+, Dolby Vision). Home: 04.
+- **HDR merge**: combining bracketed exposures into one high dynamic range image. Home: 15.
+- **HDR palette**: Resolve's zone-based exposure and colour wheels with zones defined in stops. Home: 16.
+- **HDR reference white (diffuse white)**: the HDR level for diffuse, graphics and caption white, such as a white card, at about 203 cd/m2 (nits) under ITU-R BT.2408. Home: 04, 13, 16, 26.
+- **HDR, SDR, PQ, HLG**: high and standard dynamic range; the perceptual quantizer (SMPTE ST 2084, absolute, to 10,000 nits) and hybrid log-gamma (ARIB STD-B67, relative, backwards compatible). Home: 04.
+- **HDR sheen**: the tone-mapped look of flat local contrast, edge halos and evenly lit surfaces. Home: 16.
+- **HDRI**: a high dynamic range panorama used to light a CG scene with a captured environment. Home: 02, 13, 14, 15.
+- **Headband and tailband**: small woven bands at the ends of a book's spine. Home: 20.
+- **Header (SMS)**: the registered sender ID on a commercial SMS; in India suffixed by class (-P, -S, -T, -G) since 2025. Home: 10.
+- **Headless CMS**: a content store that serves structured content over an API with no fixed presentation layer. Home: 10, 21.
+- **Headless component**: a component that implements behaviour, state and ARIA without styling. Home: 07.
+- **Headroom**: the space between the top of a subject's head and the top of the frame. Home: 05, 14.
+- **HEART**: Google's framework of happiness, engagement, adoption, retention and task success, worked through goals, signals and metrics. Home: 08.
+- **Heatset and coldset**: web offset dried in an oven (magazines, catalogues) or by absorption into the paper (newspapers). Home: 20.
+- **Helmholtz-Kohlrausch effect**: saturated colours appearing brighter than their luminance predicts. Home: 02, 04.
+- **Helper text**: the short line beside a field stating the constraint or the reason for the data. Home: 10.
+- **Hero-adjacent**: sitting next to the real hero product, or in a paid placement; such generated elements need an indemnified tool or a generic subject. Home: 22.
+- **Hero asset**: the real subject of an advertisement (the piece, the dish, the suite, the face) that the buyer will compare with reality; always photographed. Home: 22.
+- **Hero cut**: the main film from which every cutdown and ratio derives. Home: 16.
+- **Hero-first**: cutting the 16:9 or scope hero first and deriving every vertical from it. Home: 16.
+- **Hero, hub, help**: Google's model of a brand's content as a few big pieces, a regular series and always-on answers. Home: 19.
+- **Heuristic evaluation**: an inspection method in which several evaluators independently judge an interface against a list of heuristics. Home: 09, 28.
+- **Heuristic evaluation, severity rating**: independent inspection against usability principles; Nielsen's 0 to 4 scale of problem seriousness. Home: 08.
+- **Hick-Hyman law**: choice reaction time grows with log2 of the number of equally likely options plus one. Home: 02.
+- **Hickey**: a spot or ring on a printed sheet caused by dust or dried ink. Home: 20.
+- **Hidden and false affordances**: action possibilities with no perceptible cue, and cues suggesting an action that does not exist (Gaver). Home: 02.
+- **Hidden Disabilities Sunflower**: a lanyard scheme, launched at London Gatwick in 2016, that signals a non-visible disability. Home: 11.
+- **Hidden navigation**: navigation kept behind a control such as a hamburger icon or a "Menu" label instead of shown on the page. Home: 06, 09.
+- **Hide from publishing**: a Figma variable setting that keeps the variable out of the published library. Home: 07.
+- **Hierarchical grid**: regions sized and placed by importance, sharing alignments without a repeating module. Home: 05.
+- **Hierarchy**: the order in which a viewer reads the elements, set by the designer. Home: 05, 23.
+- **HIG**: Apple's Human Interface Guidelines. Home: 07.
+- **High dynamic range (HDR)**: video or stills with a wider brightness range and gamut than SDR and Rec. 709, shown brighter on supported screens; also, in photography, the over-processed tone-mapped look of lifted shadows and compressed highlights. Home: 13, 17, 22, 23.
+- **High key and low key**: lighting with small shadow areas and bright grounds (high) or large shadow areas and dark grounds (low). Home: 15.
+- **High-net-worth (HNW)**: people with investable assets above about US$1 million in the wealth-report convention. Home: 08.
+- **High-pass filter**: a filter that removes everything below a set frequency. Home: 15.
+- **Highlight reel, insight poster**: 2 to 4 minutes of captioned clips supporting findings; a printed sheet carrying one insight with quotes and context. Home: 08.
+- **Highlighter test**: readers mark copy in green where it sounds like the brand and in red where it does not, to test tone against a voice chart. Home: 10.
+- **Highlights**: saved Instagram Stories shown as round covers under the bio. Home: 17.
+- **Hijri calendar and Umm al-Qura**: the Islamic lunar calendar, and Saudi Arabia's computed version of it that Intl supports as islamic-umalqura. Home: 10.
+- **Hills, Playbacks and Sponsor Users**: IBM Enterprise Design Thinking's outcome statements, scheduled alignment reviews and real users embedded in the team. Home: 27.
+- **Hinglish**: Hindi and English mixed in one sentence, usually in Roman script. Home: 01, 10, 19, 23.
+- **Hinting**: instructions in a font that snap outlines to the pixel grid at small sizes. Home: 03, 28.
+- **HiPPO**: the highest paid person's opinion, on which a room converges. Home: 23.
+- **Histogram**: the scope showing the distribution of pixel values from black to white. Home: 14, 16.
+- **Hit**: a short percussive sound accent placed on a contact or a lock frame. Home: 13.
+- **Hit target (hit area)**: the touchable or clickable area of a control (44pt iOS, 48dp Android, 24 CSS px minimum under WCAG 2.5.8). Home: 09, 28.
+- **HLG (hybrid log-gamma)**: the relative, SDR-compatible HDR transfer function from the BBC and NHK. Home: 13, 14, 16, 26.
+- **HLS**: HTTP Live Streaming, Apple's segmented streaming format with an `.m3u8` playlist, native in Safari. Home: 21.
+- **HMI**: a metal halide arc lamp with ballast, the brightest daylight source per watt. Home: 15.
+- **HMU (hair and make-up)**: the department, its artists and its line on a shoot's call sheet. Home: 14.
+- **Hold**: a shot left longer than its information requires. Home: 16.
+- **Hold keyframe**: a keyframe with no interpolation, so the value jumps at the key. Home: 13.
+- **Hold rate**: ThruPlays divided by 3-second video plays; whether the body of a film keeps the viewers the hook won. Home: 00, 17.
+- **Holding statement**: the first public response to a controversy, drafted before launch. Home: 19, 24.
+- **Homage and pastiche**: homage borrows one principle of a reference and applies it to new content; pastiche takes the surface without the principle. Home: 23.
+- **Home indicator**: the bar at the bottom edge of an iPhone screen that a swipe uses to go home. Home: 06.
+- **Honeypot field**: a hidden form input that people never fill and bots do, used to reject spam. Home: 21.
+- **Hook**: whatever earns the first 3 seconds of attention. Home: 17.
+- **Hook rate (thumb-stop ratio)**: 3-second video views divided by impressions; the share of people served a video who stayed past the first three seconds (also called the thumb-stop ratio). Home: 00, 17, 23.
+- **Hot foil stamping**: a heated die pressing metallic or pigment foil from a carrier film onto the sheet. Home: 20, 26.
+- **Hot metal**: type cast from molten metal on Monotype and Linotype machines. Home: 01.
+- **Hot-potato process**: Dan Mall and Brad Frost's practice of passing a component between design and code in short loops. Home: 07.
+- **Hotel reservations rule**: 28 CFR 36.302(e), the US ADA rule on booking and describing accessible hotel rooms. Home: 11.
+- **House codes**: the fixed vocabulary a maison owns (materials, motifs, colours, silhouettes, objects) that each creative director recombines. Home: 28.
+- **House of brands**: independent brands under a parent invisible to buyers. Home: 18.
+- **Hover intent**: delaying a menu's open and close until the pointer has rested on it or left it for a set time. Home: 06, 09, 12.
+- **How-might-we (HMW) question**: a problem reframed as an open invitation to generate solutions. Home: 08.
+- **`hreflang`**: the link attribute that tells search engines which language and region a page serves. Home: 09, 21.
+- **HSL**: hue, saturation and lightness, a simple cylindrical transform of RGB that is not perceptually uniform. Home: 28.
+- **HSL, HSV, HSB**: geometric rearrangements of the RGB cube published in 1978 (HSV by Alvy Ray Smith, HSL by Joblove and Greenberg) with no perceptual basis; their lightness and value channels do not match perceived lightness. Home: 04.
+- **HSN code**: a Harmonised System of Nomenclature code, classifying goods for tax and customs. Home: 20.
+- **HSS**: high-speed sync; pulsed flash that allows shutter speeds above the sync speed. Home: 15.
+- **HSTS**: HTTP Strict Transport Security, a header telling browsers to use only HTTPS for the domain. Home: 21.
+- **HTML**: HyperText Markup Language, the markup language of web pages. Home: 01.
+- **Hub and spoke**: a content team model in which a lead owns the standards and embedded writers ship the strings. Home: 10.
+- **Hue vs hue, hue vs sat, hue vs lum**: curves that rotate, saturate or brighten one hue range. Home: 16.
+- **HUF (Hindu undivided family)**: a family unit taxed as a separate person under Indian income tax. Home: 24.
+- **HUID (hallmark unique identification)**: the six-character alphanumeric code on BIS-hallmarked gold jewellery in India. Home: 10, 16, 18, 19, 20, 21.
+- **Hunt effect**: colourfulness increasing with luminance. Home: 02.
+- **Hurufiyya**: the modernist art movement that used Arabic letters as abstract form. Home: 01.
+- **HVAC**: a building's heating, ventilation and air-conditioning system, used to diffuse scent. Home: 18.
+- **Hybrid architecture**: a deliberate mix of architecture models by business unit. Home: 18.
+- **Hybrid email method**: fluid tables capped by max-width, with MSO conditional comments supplying fixed widths to Outlook. Home: 21.
+- **Hybrid ideation**: people generate alone first and then build on the pooled ideas together, which beats team brainstorming on the best idea (Girotra, Terwiesch and Ulrich). Home: 27.
+- **Hybrid model**: a small core team sets foundations and reviews, product teams contribute through a process. Home: 07.
+- **Hybrid screening**: AM dots in the mid-tones with FM dots in the extreme highlights and shadows. Home: 20.
+- **Hybrid workflow**: a workflow with a real photograph, real footage or a real 3D model at the centre and generation around it. Home: 22.
+- **Hydration**: a framework re-running its component tree in the browser to attach behaviour to server-rendered HTML. Home: 21.
+- **Hydrogen and Oxygen**: Shopify's headless React storefront toolkit and its hosting. Home: 21.
+- **Hygroscopic**: taking up and losing moisture from the air. Home: 20.
+- **Hyperfocal distance**: the focus distance beyond which everything to infinity is acceptably sharp. Home: 14.
+- **Hyphenation zone**: the band at the right margin within which ragged text may hyphenate. Home: 03.
+- **`hyphens`**: the property enabling dictionary hyphenation, which needs a lang attribute. Home: 21.
+- **Hypothesis**: a falsifiable statement with a threshold set before the data arrives. Home: 08.
+- **Hysteresis**: the distance (about 10 points) a gesture travels before a recogniser commits to it. Home: 12.
+
+## I
+
+- **I'jam**: the dots that distinguish Arabic letters of the same shape. Home: 18.
+- **I like, I wish, what if**: a three-prompt group feedback format (keep, missing, possibility) used in design-thinking teaching. Home: 23.
+- **IAB**: Interactive Advertising Bureau, the trade body whose Tech Lab publishes the display ad unit sizes and file weight limits. Home: 26.
+- **IC-Light**: Lvmin Zhang's open-source relighting model (2024), native in ComfyUI. Home: 22.
+- **ICC profile**: a file describing a device's colour behaviour, in the International Color Consortium format. Home: 20.
+- **ICC profile, PCS and colour management**: a file describing a device or space in terms of the Profile Connection Space (CIELAB or XYZ at D50), and the system of such profiles and conversions that gives device numbers a device-independent meaning. Home: 04.
+- **iccMAX (ICC.2)**: the spectral successor to the v4 ICC profile format. Home: 04.
+- **ICE**: prioritisation scoring of impact, confidence and ease, each 1 to 10. Home: 08.
+- **Icon (Peirce)**: a sign that resembles its object, the basis of a pictorial mark. Home: 18.
+- **ICU MessageFormat**: the message syntax from the International Components for Unicode (ICU) library that expresses plural and select variants in one string. Home: 10.
+- **ICV (In-Country Value)**: the UAE certificate scoring a supplier's local spend, used in federal and Abu Dhabi procurement. Home: 24.
+- **ID-1**: the ISO/IEC 7810 card size, 85.6 x 54 mm. Home: 20.
+- **Idea bank**: the archive of killed routes, filed with brief, idea, reason and tags. Home: 23.
+- **Idea gate**: the rubric rule capping the score at 2.5 when Idea scores below 3; the function cap likewise holds the verdict at competent or below when function and access scores 1. Home: 23.
+- **Idea test**: the four questions every idea must pass: it can be said in a sentence, it scales across channels, it comes from the brand, it is new. Home: 19.
+- **Ident**: a longer identity film for a channel or venue. Home: 13.
+- **Iftar**: the meal that breaks the Ramadan fast at sunset. Home: 19.
+- **IGBT strobe**: a flash head that cuts the tube's discharge electronically for very short flash durations. Home: 15.
+- **Ignore or test**: Romaniuk's quadrant for an asset with low fame and low uniqueness. Home: 18.
+- **IGST (integrated GST)**: GST on inter-state and cross-border supplies, including imported services under reverse charge. Home: 20, 24.
+- **IK**: inverse kinematics; posing a limb by moving its end, with the joints solved automatically. Home: 13.
+- **IKEA effect**: the higher value people put on things they made themselves (Norton, Mochon and Ariely). Home: 02, 23, 27.
+- **Ill-structured problem**: a problem whose goal, constraints and operators are not all given (Simon). Home: 27.
+- **Illuminance**: light arriving on a surface, measured in lux. Home: 15.
+- **Illuminant**: a standardised spectral power distribution assumed as white (D50 for print, D65 for screens, A for tungsten, the LED series for modern lamps). Home: 04.
+- **IMAG (image magnification)**: the live camera feed of a speaker shown on screens beside a stage. Home: 05.
+- **Image CDN**: a service that serves resized, reformatted variants of a master image from URL parameters. Home: 21.
+- **Image circle**: the diameter of the sharp, unvignetted image a lens projects. Home: 14.
+- **Image prompt**: an image URL at the start of a Midjourney prompt that conditions content and composition, weighted by --iw. Home: 22.
+- **Image sequence**: pre-rendered frames drawn to a canvas according to scroll progress. Home: 12.
+- **Image sequence scrub**: painting 100 to 150 frames to a canvas by scroll progress. Home: 21.
+- **IMF (Interoperable Master Format)**: SMPTE ST 2067 component master with a playlist per version. Home: 16.
+- **Immersion**: the move of loading the brief, subject, place, material, audience and canon before any making. Home: 27.
+- **Imposition**: arranging pages on a press sheet so they read in order after folding and trimming. Home: 05, 20.
+- **Impressions**: the count of times content was shown, including repeats. Home: 17.
+- **Impulse response**: a recording of how a room answers a click or sweep, used to recreate that room. Home: 15.
+- **In-app browser**: the WebView an app such as Instagram or WhatsApp uses to open links, with its own cookies and limits on sign-in and payment. Home: 09.
+- **In-context review**: a translator's review of strings in the built product or a localised design file. Home: 10.
+- **In-housing**: a client building its own creative team to replace or reduce agency spend. Home: 24.
+- **In medias res**: opening in the middle of the action. Home: 17.
+- **Inattentional blindness**: failure to see an unexpected object in plain view while attending elsewhere. Home: 02.
+- **Incentive**: payment to participants for time and expertise, paid whatever they say. Home: 08.
+- **INCI**: International Nomenclature of Cosmetic Ingredients, the naming system for ingredient lists. Home: 10.
+- **Incidence rate**: the share of screened people who qualify for a study; recruiters price by it. Home: 08.
+- **Incident meter**: a light meter with a dome that reads the light falling on the subject. Home: 15.
+- **Inclusive design**: designing with excluded people so the result works for a wider range of people. Home: 11.
+- **Inclusive Design Principles**: seven principles for inclusive interfaces published by The Paciello Group in 2016. Home: 11.
+- **Incubation**: a scheduled gap after preparation during which unconscious processing continues (Wallas). Home: 27.
+- **Incunabula**: books printed in Europe before 1501. Home: 05.
+- **Indemnification**: a vendor's contractual promise to defend and pay a third-party claim that its output infringes. Home: 22.
+- **Index (Peirce)**: a sign that points to its object by a physical trace or cause. Home: 18.
+- **Indian Nutrition Rating**: FSSAI's draft front-of-pack star rating. Home: 20.
+- **Indo-Deco**: Indian Art Deco that adds Hindu and Mughal motifs to Deco geometry. Home: 01.
+- **Induction loop**: a venue system that transmits sound directly to hearing aids set to the T position. Home: 11.
+- **Inert**: the HTML attribute that removes a subtree from focus and the accessibility tree. Home: 11.
+- **Inevitability**: the sense that no other solution was possible. Home: 23.
+- **Influence**: how far a keyframe's bezier handle reaches into the interval towards the neighbouring keyframe. Home: 13.
+- **Influencer tiers**: nano (under 10,000 followers), micro (10,000 to 100,000), macro (100,000 to 1 million) and mega (over 1 million). Home: 17.
+- **Information architecture (IA)**: the structural design of shared information environments: organisation, labelling, navigation and search. Home: 00, 09, 22, 24.
+- **Information foraging**: Pirolli and Card's theory that people follow cues towards information, weighing expected gain against effort. Home: 06.
+- **Information gap theory**: George Loewenstein's account of curiosity as the felt gap between what one knows and wants to know. Home: 17.
+- **Information scent**: how well a label predicts the content beneath it; the core of Pirolli and Card's information foraging theory, which models people as foragers following the strongest scent. Home: 02, 06, 09.
+- **Informed consent**: a participant's agreement given with knowledge of purpose, recording, access, retention and the right to stop. Home: 08.
+- **INGEDE**: the International Association of the Deinking Industry, whose Method 11 tests deinkability. Home: 20.
+- **Initial load and subload**: the IAB's two file-weight budgets for an ad, before and after the host page's load event. Home: 26.
+- **Ink trap**: a notch cut into a letter's stroke junction so ink spread fills it to a clean corner. Home: 03, 18, 28.
+- **Inline alert**: a boxed message placed next to the content it concerns, in an info, success, warning or error variant. Home: 06.
+- **Inline editing**: editing a value in place without a separate form. Home: 09.
+- **Inline validation**: checking a field's value as the user leaves it, before the form is submitted. Home: 06, 09.
+- **Inpainting**: regenerating a masked region of an image. Home: 22.
+- **Input metrics**: the levers a team can move that drive a North Star metric. Home: 08.
+- **Input tax credit**: GST paid on purchases that is offset against GST charged. Home: 24.
+- **Input transform (IDT)**: the conversion from a camera's log and gamut into the working space. Home: 16.
+- **INS accreditation**: the Indian Newspaper Society's accreditation that gives an agency credit with member publishers. Home: 24.
+- **Insert**: a detail shot cut into a scene. Home: 14.
+- **Inset**: padding on all sides of a container; squish inset has less vertical padding, stretch inset more. Home: 05.
+- **Insight**: a tension or truth that explains behaviour and opens a creative door; held by the audience already. Home: 19.
+- **Insight, insight statement**: the tension or motive that explains a pattern and suggests action; a structured sentence carrying it with evidence. Home: 08.
+- **Inspection methods**: evaluations in which experts examine an interface in place of users. Home: 08.
+- **Inspiration porn**: Stella Young's term for framing disabled people as uplift for a non-disabled audience. Home: 11.
+- **Instagram for TV**: Instagram's television app for Fire TV, Google TV and Samsung smart TVs in the US. Home: 17.
+- **Instagram Plus**: Instagram's optional paid subscription with 6 profile pins, Post Directly to Profile and extra Story features. Home: 17.
+- **Instant Experience**: Meta's full-screen mobile landing page that opens from an ad; required for collection ads. Home: 26.
+- **Integrated and short-term loudness**: loudness averaged over the whole programme with silence gated out, and loudness over a sliding 3 s window, whose maximum R 128 s1 caps for adverts. Home: 26.
+- **Integrated description**: voice-over written to carry a film's visual information, replacing a separate description track. Home: 11.
+- **Integrated loudness**: the gated average loudness of a whole programme, in LUFS. Home: 15.
+- **Intelligent Tracking Prevention (ITP)**: WebKit's anti-tracking system, which caps script-written storage and cross-site tracking. Home: 21.
+- **Intent-based outcome specification**: the interface paradigm in which the user states the desired outcome and the system chooses the method (Nielsen). Home: 27.
+- **Intent flow (UPI)**: handing the payment off to the person's UPI app on mobile and returning to the merchant with the result. Home: 09.
+- **Inter-rater reliability**: the agreement between independent raters of the same work. Home: 27.
+- **Interaction to next paint (INP)**: the Core Web Vital for responsiveness, from input to the next painted frame; good is under 200ms. Home: 02, 06, 09, 12, 21.
+- **Interactive activation model**: McClelland and Rumelhart's model of word recognition from letters identified in parallel. Home: 02.
+- **Interface inventory**: a screenshot census of every element type across a product, grouped and counted (Brad Frost, 2013). Home: 07.
+- **Interlacing**: recording each frame as two fields of alternate lines captured at different instants. Home: 03, 13, 16.
+- **Interleaving**: mixing examples from several categories in one study session, which trains the eye to tell categories apart better than blocking by category (Kornell and Bjork, 2008). Home: 00.
+- **Interline twitter**: flicker of horizontal detail one line thick on an interlaced display. Home: 13.
+- **International Typographic Style**: the grid-based, asymmetric, sans serif design of Zurich and Basel from the 1950s. Home: 05.
+- **Internationalisation (i18n)**: engineering a product so it can be adapted to any locale without code changes. Home: 10.
+- **Interop**: the annual cross-browser programme in which Apple, Google, Microsoft, Mozilla and others agree focus areas to make work identically. Home: 12, 21.
+- **Interop and SMPTE DCP**: the older pre-standard cinema packaging, limited to 24 and 48 fps and now deprecated, and its successor packaged to the SMPTE ST 429 family. Home: 16, 26.
+- **`interpolate-size`**: the CSS property that lets transitions run to size keywords such as `height: auto` (Chrome only as of October 2026). Home: 12.
+- **`interpolate-size` and `calc-size()`**: CSS that lets height animate to and from auto; Chrome only as of October 2026. Home: 21.
+- **Interrotron**: Errol Morris's two-way teleprompter rig that puts the interviewer's face over the lens. Home: 15.
+- **Interruptibility**: the property that an animation can be retargeted mid-flight without a discontinuity. Home: 12.
+- **Interruption level**: iOS's class for a notification (passive, active, time-sensitive, critical), which decides whether it breaks through Focus. Home: 09, 10.
+- **`IntersectionObserver`**: the browser API that reports when an element's visibility crosses a threshold. Home: 12, 21.
+- **Interview snapshot**: Torres's one-page summary of a single interview. Home: 08.
+- **Intimation**: Wallas's felt sense, just before illumination, that a solution is approaching. Home: 27.
+- **Intl (ECMA-402)**: the browser's internationalisation API for locale-aware dates, numbers, plurals and relative times. Home: 10.
+- **Intra-frame codec**: compression that stores every frame complete and on its own (ProRes, DNxHR), so any frame decodes without its neighbours. Home: 13, 14.
+- **Intrecciato**: Bottega Veneta's hand-woven leather technique, the house's principal code, 50 years old in 2025. Home: 18, 19, 28.
+- **Intrinsic, extraneous and germane load**: cognitive load set by the material's complexity for the user, load imposed by presentation that does not serve the task, and resources devoted to building schemas or handling intrinsic load. Home: 02.
+- **Intrinsic motivation**: doing the work for its own interest, the motivational component Amabile found most tied to creativity. Home: 27.
+- **Intrinsic web design**: Jen Simmons's term for layouts that size themselves from content and space using modern CSS. Home: 05, 21.
+- **Intro (YouTube)**: the share of viewers still watching after the first 30 seconds. Home: 17.
+- **Inverse square law**: illuminance falls with the square of distance from a point source. Home: 15.
+- **Inversion**: the move of generating the opposite, the extreme scale or the sole element as a direction. Home: 27.
+- **Inverted U**: the relation in which creativity rises with constraints up to a moderate level and falls beyond it (Acar and colleagues). Home: 27.
+- **Investment potential**: Romaniuk's quadrant for an asset with low fame and high uniqueness, worth spending to build. Home: 18.
+- **Invisible cut**: a join hidden inside a whip, an object crossing the lens or matched movement. Home: 16.
+- **Invisible loop**: a loop whose join between last and first frame cannot be seen. Home: 17.
+- **IOR**: index of refraction; how much a material bends light (glass 1.5, diamond 2.42). Home: 13.
+- **IP-Adapter**: an image prompt adapter that lets a diffusion model take an image as a prompt. Home: 22.
+- **IP rating**: the IP code; the first digit rates dust protection, the second water. Home: 15.
+- **IPA**: the Institute of Practitioners in Advertising (UK), whose Databank holds the effectiveness cases behind Binet and Field's work. Home: 01, 19.
+- **IPRS**: the Indian Performing Right Society, India's registered copyright society for composers, authors and publishers of musical and literary works. Home: 15.
+- **IPRS and PPL**: India's collecting societies for musical compositions (Indian Performing Right Society) and sound recordings (Phonographic Performance Limited). Home: 24.
+- **IPTC**: the International Press Telecommunications Council, whose photo metadata standard defines the creator, rights and description fields embedded in images. Home: 26.
+- **IPTC Digital Source Type**: the IPTC photo metadata field that records how an image was made, including whether a trained model generated all or part of it; the value `trainedAlgorithmicMedia` marks fully generated media. Home: 22, 26.
+- **IPTC photo metadata**: the International Press Telecommunications Council's embedded image fields, including a digital source type that flags AI. Home: 17.
+- **Ira Glass gap**: the condition in which a beginner's taste is ahead of their ability, so their own work disappoints them; closed by a volume of finished work. Home: 00, 23.
+- **IRE**: the 0 to 100 scale of video signal level, 0 for black and 100 for reference white. Home: 04, 14, 16.
+- **Iridium Effie**: Effie Worldwide's global best-of-the-best award. Home: 19.
+- **IRN (invoice reference number)**: the identifier India's GST e-invoice system assigns to each invoice. Home: 24.
+- **IRND**: a neutral density filter that also attenuates infrared, preventing colour casts in blacks. Home: 14.
+- **`:is()` and `:where()`**: selector grouping functions with, respectively, the highest and zero specificity. Home: 21.
+- **IS 17802**: the Bureau of Indian Standards' ICT accessibility standard, based on EN 301 549. Home: 11.
+- **Islands architecture**: a static page where only the interactive components ship JavaScript. Home: 21.
+- **ISO**: the sensor's sensitivity rating; doubling it adds one stop of exposure. Home: 15.
+- **ISO 3664**: the standard for print and photography viewing conditions; critical comparison at D50 and 2000 lux. Home: 23.
+- **ISO 4217 code**: the three-letter international currency code, such as AED or SAR. Home: 01.
+- **ISO 24495-1**: the 2023 international plain language standard, built on four principles: relevant, findable, understandable, usable. Home: 10.
+- **ISO/IEC 27001 and SOC 2**: the international information security management standard and the US service-organisation controls audit. Home: 24.
+- **ISO track**: a single microphone recorded on its own track. Home: 15.
+- **ISRC**: International Standard Recording Code, the 12-character identifier of a recording. Home: 15.
+- **ISTA**: the International Safe Transit Association, whose procedures test packs for transit. Home: 20.
+- **IVR (interactive voice response)**: the automated phone menu, a voice surface of the brand. Home: 18.
+- **iXML**: metadata inside a BWF file carrying scene, take and track names. Home: 15.
+
+## J
+
+- **J-cut**: an edit in which the next shot's sound starts before its picture. Home: 16, 17.
+- **J-cut and L-cut**: edits in which the next shot's sound starts before its picture (J) or the last shot's sound runs over the next picture (L). Home: 00, 23.
+- **Jaali**: a pierced stone or wooden screen in Indian architecture. Home: 01, 15, 23.
+- **Jacket**: a newspaper front-page wrap sold as one advertising unit. Home: 26.
+- **Jacket and half jacket**: a four-page newspaper wrap over the paper, or a half-width flap over its front page. Home: 20.
+- **Jadau**: the Rajasthani name for inlaid kundan jewellery. Home: 01.
+- **Jakob's law**: users expect a site to work like the other sites they use. Home: 02.
+- **Jam sync**: copying timecode from a master clock into a device that then free-runs. Home: 15.
+- **Jank**: dropped or late frames, perceived as stutter. Home: 12.
+- **Japandi**: a hybrid Japanese and Scandinavian interior style. Home: 01.
+- **Japanese stab binding**: loose sheets hand-stitched through holes near the spine. Home: 20.
+- **JAWS and NVDA**: the two leading Windows screen readers, JAWS (Job Access With Speech) commercial from Freedom Scientific and NVDA (NonVisual Desktop Access) free from NV Access. Home: 11.
+- **JCT-VC (Joint Collaborative Team on Video Coding)**: the ITU-T and ISO/IEC group that developed HEVC. Home: 16.
+- **Jharokha**: a projecting enclosed balcony window of Rajasthani and Mughal architecture. Home: 01, 14.
+- **Jib**: an arm that raises or lowers the camera through space. Home: 14.
+- **Job story**: "When [situation], I want to [motivation], so I can [expected outcome]" (Adams, Klement). Home: 08.
+- **Jobs to be done (JTBD), outcome-driven innovation (ODI), switch interview**: the theory that people hire products to make progress in a circumstance; Ulwick's survey-based variant; the timeline interview with recent switchers. Home: 08.
+- **JPEG XL**: a photography format with lossless JPEG recompression, in Safari since 2023 and Chrome 155 since October 2026, with Firefox 158 recorded; not Baseline. Home: 21.
+- **JSON**: a structured text data format used to store animation and other data for software. Home: 01.
+- **JSON-LD**: the script-based format for structured data that Google prefers. Home: 21.
+- **JSON Pointer**: the RFC 6901 path syntax for addressing a location inside a JSON document. Home: 07.
+- **Judder**: an uneven motion cadence produced by pulldown or frame-rate conversion. Home: 13, 16.
+- **Jump cut**: a cut between two shots of the same angle with time removed. Home: 14, 16.
+- **Just noticeable difference (JND)**: the smallest colour difference an observer detects; about 1.0 dE00 side by side under controlled viewing. Home: 02, 04.
+
+## K
+
+- **K-weight**: the IAB's term for creative file weight in kilobytes after gzip compression. Home: 26.
+- **K-weighting and gating**: the BS.1770 filter that approximates the ear's sensitivity, and the exclusion of silence and quiet passages from the loudness average. Home: 15.
+- **Kandura (dishdasha)**: the collarless Emirati men's robe, with a tassel (tarboosha) at the neck. Home: 15, 16, 22.
+- **Kandura, ghutra and agal**: the Emirati man's full-length robe, the headcloth, and the black cord that holds it. Home: 14.
+- **Kano model**: classification of features as must-be, one-dimensional, attractive, indifferent or reverse by their effect on satisfaction. Home: 08.
+- **Kansei engineering**: Nagamachi's method of translating customer feelings into design parameters. Home: 02.
+- **Karaoke caption**: word-by-word highlighted captions synchronised to speech. Home: 17.
+- **Karat**: gold purity as a proportion of 24 (18k is 18 parts in 24). Home: 10.
+- **Karigar**: an Indian artisan; in jewellery, the stone setter or goldsmith. Home: 01, 19.
+- **Kashida (tatweel)**: the horizontal extension stroke that lengthens an Arabic word, used in place of letter-spacing. Home: 03, 10, 13, 18, 20, 23, 28.
+- **KDM (Key Delivery Message)**: the key file that opens an encrypted DCP for one server and one time window. Home: 16, 26.
+- **Keeper ratio**: the number of attempts per usable output, recorded per tool and used to quote. Home: 22.
+- **Ken Burns move**: a slow scale or pan across a still photograph. Home: 12.
+- **Kernel (of a strategy)**: Rumelt's three parts of a good strategy: a diagnosis, a guiding policy and coherent actions. Home: 00.
+- **Kerning (metric, optical)**: pair spacing from the font's tables; pair spacing computed from shapes. Home: 01, 03, 18.
+- **Kerning pair**: a spacing adjustment between two specific letters. Home: 23.
+- **Key (grading)**: a matte of the pixels selected by a qualifier. Home: 16.
+- **Key events**: GA4's name for conversions since March 2024. Home: 21.
+- **Key Fact Statement**: the RBI-mandated summary of a digital loan, including its annual percentage rate, shown before the loan is signed. Home: 09.
+- **Key grip**: the head of the grip department, responsible for rigging, camera support and shaping light without touching the lamp. Home: 14.
+- **Key light**: the main light on a subject, whose direction every shadow must agree with. Home: 15, 22.
+- **Key-to-fill ratio**: the ratio of the main light's intensity to the fill light's, written 2:1 for soft and 8:1 for dramatic. Home: 00.
+- **Key visual**: a campaign's master image and line, from which every format is adapted. Home: 05.
+- **Keyboard contract**: the set of keys users expect a widget type to respond to. Home: 11.
+- **Keying**: separating a subject from a green or blue screen by its colour (Keylight in After Effects). Home: 13.
+- **Keyline shapes (keylines)**: the square, circle and rectangles inside an icon grid's live area that equalise visual weight across silhouettes. Home: 05, 06.
+- **Keys (IBM)**: Hills (outcome statements that frame a release), Playbacks (scheduled reviews) and Sponsor Users (real users on the team). Home: 28.
+- **Keystroke-Level Model**: Card, Moran and Newell's method of predicting expert task time by summing standard operator times. Home: 02.
+- **Khaleeji**: Gulf Arabic dialect, kept for marketing, social and voice surfaces. Home: 10, 15.
+- **Kharmas**: the Hindu calendar period, about mid-December to mid-January, in which wedding dates pause. Home: 17.
+- **Kicker**: a light from behind at 45 degrees on the fill side that lands on cheek and jaw. Home: 14, 15.
+- **Kill fee**: the amount payable if the client cancels after work begins. Home: 24.
+- **Kill list**: the running record of killed routes with one line on why each died. Home: 19.
+- **Kind and wicked learning environments**: environments where feedback is fast and accurate, and those where it is delayed, missing or misleading (Hogarth). Home: 27.
+- **Kinetic typography (kinetic type)**: type that moves on screen, timed so that its motion carries meaning and emphasis. Home: 12, 13.
+- **Kintsugi**: repairing broken ceramics with lacquer and gold, making the break visible. Home: 01.
+- **Kirana**: a neighbourhood grocery shop in India. Home: 18.
+- **Kiss cutting**: cutting through a label's face material while leaving its liner intact. Home: 20.
+- **Kiss impression**: letterpress printing with ink transfer and no visible bite. Home: 20.
+- **Knock-out search**: a quick search for identical or near-identical marks before a name is presented. Home: 24.
+- **Knockout**: an object that removes the inks beneath it. Home: 20.
+- **Kontext**: Black Forest Labs' FLUX.1 model for instruction-based editing of an existing image. Home: 22.
+- **Kore de ii**: "this will do", Muji's stated aim of satisfaction by sufficiency, set against kore ga ii, "this is what I want" (Hara). Home: 01, 23, 27.
+- **Kraft**: unbleached brown sulphate paper or board. Home: 20.
+- **KTX2**: the Khronos GPU texture container, used to carry Basis Universal supercompressed textures. Home: 13, 21.
+- **Ku**: emptiness as a receptive vessel that invites the viewer's meaning, in Kenya Hara's theory. Home: 01.
+- **Kubrick frame**: one-point perspective symmetry with a centred vanishing point and a mirrored scene. Home: 05.
+- **Kufi, Naskh, Nastaliq, Thuluth, Diwani, Ruqah**: Arabic-script styles, from geometric display to hanging Urdu text. Home: 03.
+- **Kufic (Kufi)**: the angular, geometric Arabic script of early Qurans and architecture; square Kufic builds words on a grid. Home: 01, 18.
+- **Kuleshov effect**: the meaning an audience reads into a shot from the shot placed beside it. Home: 16.
+- **Kundan**: the setting of uncut stones in refined gold foil, a Rajasthani court technique. Home: 01, 23, 28.
+- **kVA**: kilovolt-amperes, a generator's apparent power rating. Home: 15.
+- **KYC (know your customer)**: the identity verification a regulated business performs before certain transactions. Home: 06, 09, 24.
+
+## L
+
+- **L1 metadata**: Dolby Vision's automatically analysed per-shot minimum, average and maximum luminance. Home: 16.
+- **L2 and L8 trims**: Dolby Vision's manual per-scene adjustments for mapping HDR to lower-luminance targets. Home: 16.
+- **L-cut**: the previous shot's sound continues under the next shot's picture. Home: 16.
+- **Lab dip**: a small dyed fabric sample returned by a dye house for colour approval. Home: 04, 20.
+- **Label taxonomy**: the house table mapping each edit type to its IPTC value, C2PA action, legal labels and expected platform behaviour (22-ai-era-craft-and-generative-tools.md, section 7.7). Home: 22.
+- **Labelling system**: the set of words used for navigation, headings and links, chosen so that each term has one sense. Home: 09.
+- **Labour codes**: India's four consolidated labour laws on wages, industrial relations, social security and workplace safety, in force since 21 November 2025. Home: 24.
+- **Ladder sheet**: the log of completed exercises: date, exercise, measurement, pass or fail, the one thing learned. Home: 00.
+- **Laddering**: questioning that climbs from attribute to consequence to value, from means-end chain theory. Home: 08.
+- **Laid paper**: paper carrying parallel laid lines and chain lines from a dandy roll. Home: 20.
+- **Lakh and crore**: Indian units of 100,000 (one lakh) and 10,000,000 (one crore), written with digits grouped in twos after the first three (1,00,000 and 1,00,00,000), as `Intl.NumberFormat('en-IN')` produces. Home: 03, 10, 12, 13, 15, 19, 21.
+- **Lam-alef**: the required Arabic ligature formed when lam is followed by alef. Home: 03, 28.
+- **Landmark**: a page region role (banner, navigation, main, complementary, contentinfo, search, form, region) used for navigation. Home: 11.
+- **Large-diaphragm condenser**: a studio microphone with a capsule about 25 mm across, detailed and warm close up. Home: 15.
+- **Largest contentful paint (LCP)**: the Core Web Vital for when the largest element in the viewport is painted; good is 2.5s or less. Home: 06, 12, 21, 22.
+- **Latent space**: the internal space of representations from which a generative model produces its outputs. Home: 27, 28.
+- **Lateral inhibition, Mach bands and Hermann grid**: the suppression of a neuron's response by activity in its neighbours (the basis of centre-surround receptive fields), and its side effects: illusory stripes at the edges of a luminance step and dark spots at the intersections of a white grid. Home: 02.
+- **Lateral transformation**: moving from one idea to a different idea; vertical transformation is refining the same idea (Goel). Home: 27.
+- **Latex printing**: large-format inkjet with water-based latex inks, odourless and dry on exit. Home: 20.
+- **Launching effect**: the perception of causality when one object stops on contact and another moves off. Home: 02.
+- **Lavalier**: a miniature microphone clipped or hidden on the body. Home: 00, 15.
+- **Law of leadership**: Ries and Trout's claim that the first brand into a category owns it in the buyer's mind. Home: 18.
+- **Law of triviality**: Parkinson's observation that committees spend longest on the least important items. Home: 23.
+- **Lay-flat binding**: a binding (Otabind, Swiss binding) that opens flat so images and type can cross the gutter. Home: 05.
+- **Lay-flat photo binding**: pages mounted on board and hinged so the spread opens flat with no gutter. Home: 20.
+- **Layer-cake pattern**: scanning that fixates headings and reads the body only under a relevant one. Home: 02, 05.
+- **Layering**: the stacking order of elements on the z-axis. Home: 05.
+- **Layering token**: Carbon's tokens for nested surfaces (`layer-01` to `layer-03`) that alternate as containers nest. Home: 07.
+- **Layout thrash**: forcing synchronous layout by interleaving style writes and layout reads. Home: 12.
+- **Lazy loading**: deferring an off-screen image or iframe request with `loading="lazy"`. Home: 21.
+- **Lc**: lightness contrast, APCA's signed output value. Home: 11.
+- **LCH**: a colour space of lightness, chroma and hue designed to be perceptually uniform. Home: 04, 28.
+- **LCP image**: the largest image or text block in the first viewport, which decides LCP. Home: 21.
+- **Lead room (nose room)**: extra space in the direction a subject faces or moves. Home: 05, 14.
+- **Leading**: baseline-to-baseline distance, as a ratio or in points. Home: 03, 05.
+- **Leading and measure**: the vertical distance from baseline to baseline (leading) and the width of a line of text in characters (measure). Home: 00.
+- **Leading lines**: lines in a scene that carry the eye to the subject. Home: 05.
+- **Leaf shutter**: a shutter in the lens that syncs with flash at any speed. Home: 15.
+- **Lean UX hypothesis**: "We believe [outcome] will be achieved if [user] attains [benefit] with [feature].". Home: 08.
+- **Leave-behind**: the document left with the client after a meeting, carrying the detail the slides leave out. Home: 05.
+- **LED illuminants**: the CIE 015:2018 spectra for phosphor-converted (LED-B1 to B5), hybrid (LED-BH1), RGB (LED-RGB1) and violet-pumped (LED-V1, V2) white LEDs. Home: 04.
+- **LED neon flex**: silicone-encased LED strip shaped to imitate glass neon. Home: 20.
+- **LED volume**: a stage enclosed by LED screens that show backgrounds rendered in real time, used for virtual production. Home: 01, 15, 28.
+- **Left-digit effect**: the outsized influence of a price's leftmost digit, which charm endings (prices ending in 9 or 99) exploit. Home: 02.
+- **Legacy font**: a pre-Unicode 8-bit font, such as Kruti Dev, that maps Devanagari glyphs onto Latin code points. Home: 01.
+- **Legal Metrology declarations**: the particulars every pre-packaged retail product in India must carry. Home: 20.
+- **Legal range**: video levels 16 to 235 in 8-bit and 64 to 940 in 10-bit, the range broadcast and Rec.709 delivery expect. Home: 13, 16, 26.
+- **Legibility**: the ease of identifying individual characters and words. Home: 02.
+- **Lehenga**: the long embroidered skirt ensemble of Indian bridal dress. Home: 16.
+- **Lenis and lerp**: the smooth scroll library, and the linear interpolation factor that gives scroll its weight. Home: 21.
+- **Lens mount**: the bayonet or lock joining lens to body; PL, LPL, EF, E, L-mount, RF and Z are the common standards. Home: 14.
+- **Lensing**: the refraction of underlying content through a translucent layer, the defining behaviour of Apple's Liquid Glass. Home: 01, 06.
+- **Leq(m)**: the M-weighted equivalent continuous loudness used for cinema trailers and advertisements. Home: 15, 16.
+- **Lerp**: linear interpolation; in smooth scroll, the fraction of remaining distance moved per frame. Home: 12.
+- **Letraset**: dry-transfer lettering sheets (1961), rubbed down letter by letter. Home: 01.
+- **Lettermark**: initials set as letterforms. Home: 18.
+- **Letterpress**: relief printing that presses inked type and plates into the sheet, leaving an impression. Home: 20, 26.
+- **Level (H.264)**: the cap a profile places on resolution, frame rate and bitrate. Home: 16.
+- **Levels of expertise**: Dorst's seven levels: naive, novice, advanced beginner, competent, expert, master, visionary. Home: 27.
+- **Lexicon and ontology**: Abby Covert's two sense-making artefacts: the agreed meaning of each term, and what the things are and how they relate. Home: 09.
+- **LFE**: the low-frequency effects channel, the .1 of 5.1. Home: 15.
+- **Library (production) music**: pre-cleared catalogue music licensed by subscription or per track. Home: 15.
+- **Library analytics**: Figma's per-library and per-component usage data (inserts, detaches, used by, used in). Home: 07.
+- **Library guidelines**: written instruction files attached to a published Figma library that the Figma agent includes in every prompt using that library. Home: 07.
+- **Licence**: permission to use a work while the creator keeps ownership. Home: 24.
+- **Licence register**: the record of every licensed asset with holder, scope, renewal and cost. Home: 18.
+- **Lie factor**: Tufte's ratio of the size of an effect shown in a graphic to the size of the effect in the data. Home: 01.
+- **Lift, gamma, gain**: the three-way corrector for shadows, midtones and highlights. Home: 04, 16.
+- **Ligature (standard, discretionary, contextual, historical)**: glyphs that replace letter sequences, by default, by choice, by context, or for antiquarian setting. Home: 03.
+- **Light buyers**: people who buy from a brand once or twice a year at most, the majority of its buyers. Home: 18.
+- **Light dismiss**: closing a popover or dialog by clicking outside it or pressing Esc. Home: 06, 07, 11, 21.
+- **Light group**: a render pass holding the contribution of one light or set of lights. Home: 13.
+- **Light painting**: moving a source during a long exposure to build a reflection or a lit area. Home: 15.
+- **Lightbox**: a full-screen view of a single image with navigation, zoom and close. Home: 09.
+- **Lighthouse**: Chrome's lab audit tool, which scores a simulated mobile load on FCP, Speed Index, LCP, Total Blocking Time and CLS. Home: 21.
+- **Lighting ratio**: key plus fill against fill, in the ASC definition. Home: 15.
+- **Lightmen**: the Indian industry term for lighting technicians supplied by the rental vendor. Home: 14, 15.
+- **Lightness, luminance and nits**: perceived brightness (L* or OKLab L, compressive); the physical weighted sum of linear light (Y); and its unit, candelas per square metre. Home: 04.
+- **Likert scale, rating scale**: a summed set of agreement items; a single rated item. Home: 08.
+- **Likes per reach**: likes divided by reach; on Instagram a primary signal for reach to followers. Home: 17.
+- **Liking**: the tendency to say yes to people one likes and resembles. Home: 02.
+- **Limited and full range**: video code value ranges of 16 to 235 and 0 to 255 on 8 bit; mismatching them washes out or crushes an image. Home: 04.
+- **Linchpin brand**: a portfolio brand that carries a major segment or the loyalty programme. Home: 18.
+- **Lindy effect**: for non-perishable things, expected remaining life grows with age. Home: 23.
+- **Line box**: the rectangle one line of text occupies in CSS layout, sized by line-height. Home: 03.
+- **Line of interaction**: in a service blueprint, the line between the customer's actions and front-stage staff actions. Home: 18.
+- **Line of visibility**: in a service blueprint, the line below which the customer cannot see the work. Home: 18.
+- **Line producer**: the production company's producer who runs the shoot's budget line by line and its crew, calls, permits, locations, transport and catering day by day; the executive producer (EP) owns the bid and the director relationship. Home: 14, 19, 24.
+- **`linear()`**: the CSS easing function that takes a list of sampled points, used to run a spring curve in plain CSS. Home: 12.
+- **Linear interpolation**: constant-speed change between keyframes. Home: 13.
+- **Linear light, scRGB, srgb-linear**: values proportional to physical light (and the sRGB-primaried spaces that store them), the only domain in which blending, blur and resizing are physically correct. Home: 04.
+- **Linked name**: an endorsement through a shared name root, such as McDonald's McCafé. Home: 18.
+- **Lion**: the Cannes Lions award, given as Grand Prix, Gold, Silver and Bronze in each of 31 Lions across 10 tracks in 2026; Titanium is the top track. Home: 19.
+- **Liquid**: Shopify's templating language of output tags, logic tags and filters. Home: 21.
+- **Liquid electrophotography (LEP)**: HP Indigo's digital process using liquid ElectroInk. Home: 20.
+- **Liquid Glass**: Apple's system material for the navigation layer, introduced with iOS 26 and macOS 26 and still the system material in the 27 releases. Home: 01, 06, 12, 27.
+- **Liquid Layout**: InDesign rules that scale or reposition page items when the page size changes. Home: 05.
+- **Lite pattern**: a design choice that reduces payload or dependence on the network for low-bandwidth use. Home: 09.
+- **Litho-lamination**: an offset-printed sheet laminated onto corrugated board. Home: 20.
+- **Live Activity, Live Update**: iOS 16.1 and Android 16 surfaces that show the state of an ongoing, user-initiated, time-bound activity on the lock screen, Dynamic Island or status bar. Home: 09.
+- **Live area (icon grid)**: the inner region of an icon grid (20dp of a 24dp canvas) within which the glyph is drawn. Home: 06.
+- **Live area (page layout)**: the region inside the margins where content sits. Home: 05.
+- **Live region**: an element whose content changes are announced by screen readers without moving focus. Home: 11.
+- **Living identity**: an identity defined as a rule set or coded behaviours (motion, response, variation) and the software that applies them, handed to the client as a tool, whose output varies while the identity holds (Studio Dumbar). Home: 27, 28.
+- **Living system**: a guideline, Figma library, code components and tokens released together as one versioned thing. Home: 18.
+- **`llms.txt`**: a proposed Markdown index of a site for language models; harmless and unproven. Home: 21.
+- **LMS**: the long, medium and short cone response signals. Home: 04.
+- **LMT (Look Modification Transform)**: a systematic look applied before the ACES output rendering. Home: 16.
+- **Loaded cost**: the hourly cost of a person including statutory costs, benefits and a share of overhead. Home: 24.
+- **Local-first**: an architecture in which the client holds the data and syncs back, so that interactions do not wait for the server. Home: 09.
+- **Localisation (l10n)**: adapting a product to one locale: translation, formats, images, examples. Home: 10.
+- **Localised forms (`locl`)**: language-specific glyph shapes switched by the language tag. Home: 03.
+- **Location effect**: a product image placed low or to the right on a pack being judged heavier. Home: 02.
+- **Lock frame**: the frame on which a logo is complete and still, and where the sound hit lands. Home: 12, 13.
+- **Lockup**: the fixed relationship between mark, wordmark and strapline. Home: 05, 18.
+- **Log encoding (log profile)**: a camera curve storing wide dynamic range by compressing highlights and lifting shadows; a storage format that needs a display transform. Home: 04, 14, 15, 16.
+- **Log wheels**: shadow, midtone and highlight wheels with bounded ranges for log grading. Home: 16.
+- **Logging**: watching every clip once, rating it and adding keywords. Home: 16.
+- **Logical property (CSS)**: CSS properties named by text flow (margin-inline-start) in place of physical direction (margin-left), so a layout mirrors for right-to-left scripts. Home: 00, 03, 05, 07, 09, 10, 11, 21.
+- **Logical resolution**: the size of a screen in points or dp that layouts are designed to, as distinct from physical pixels. Home: 06.
+- **Logo prominence**: the size and visibility of branding on a product, which falls as price rises in luxury. Home: 18.
+- **Logomania**: the fashion cycle of about 1995 to 2005 in which the logo and monogram were the main ornament. Home: 01.
+- **Long animation frame**: a frame that took over 50ms to render, reported with script attribution by the Long Animation Frames API. Home: 12.
+- **Long-form generative art**: an algorithm released to produce hundreds of outputs, each of which must be acceptable. Home: 28.
+- **Long-GOP codec**: compression that stores a full frame and predicts the frames after it from their neighbours (H.264, H.265, AV1); efficient to store and heavy to edit. Home: 13, 14.
+- **Long Nose of Innovation**: Buxton's observation that technologies take about 20 years from invention to market. Home: 28.
+- **Long task**: any main-thread task over 50ms, which blocks interaction and feeds INP. Home: 12, 21.
+- **Look test**: talent photographed in make-up and wardrobe under the planned light before the shoot. Home: 14.
+- **Lookbook**: the ordered sequence of images of a collection, briefed as a film with no motion. Home: 19.
+- **Lookdev**: look development; building and approving materials on a model. Home: 13.
+- **Loop**: a film whose last frame cuts back to its first so the replay reads as continuous. Home: 17.
+- **Loop lighting**: key placed so the nose shadow forms a small loop on the cheek. Home: 15.
+- **LoRA**: Low-Rank Adaptation; a small set of trained weights that adapts a base model to a subject or style. Home: 13, 22.
+- **Loss aversion**: losses weighing more than equal gains, by a factor of about 2. Home: 02.
+- **Lota**: the Indian brass water vessel that the Eames India Report held up as an object perfected by use. Home: 01.
+- **Lota test**: asking which object in the client's culture has been perfected by use, after the Eameses' "India Report". Home: 28.
+- **Lottie**: a JSON-based animation format and family of runtime renderers, open-sourced by Airbnb in 2017. Home: 01, 12, 13, 18, 21.
+- **Lottie and Rive**: a JSON animation format exported from After Effects (Lottie) and an interactive animation runtime with state machines (Rive), both used to ship motion in products. Home: 00.
+- **Low-migration ink**: ink formulated to limit transfer of substances into packaged food. Home: 20.
+- **Low-prevalence effect**: the higher miss rate for targets that appear rarely. Home: 02.
+- **Low vision**: vision that glasses cannot correct to normal, including reduced acuity, contrast sensitivity or field. Home: 11.
+- **Lower third**: the name and role caption in the lower part of the frame that identifies a speaker. Home: 13, 16.
+- **LPO (local purchase order)**: the UAE purchase order without which an invoice is not paid. Home: 24.
+- **LQA (linguistic quality assurance)**: independent scoring of translated strings against an error typology. Home: 10.
+- **LQIP (low quality image placeholder)**: a tiny inlined JPEG blurred with CSS while the full image loads. Home: 06.
+- **LRA**: loudness range, the spread of short-term loudness across a programme, in LU. Home: 15.
+- **LRV**: light reflectance value, a surface's reflected light on a scale from 0 (black) to 100 (white), used for contrast in buildings and signs. Home: 11, 20.
+- **LTFS (Linear Tape File System)**: the format that lets an LTO tape be browsed like a drive. Home: 16.
+- **LTO (Linear Tape-Open)**: archival magnetic tape used for long-term storage of camera originals. Home: 13, 14, 16, 24.
+- **LTR**: left-to-right layout, the default for Latin and Devanagari text. Home: 07.
+- **LU**: loudness unit; 1 LU equals 1 dB on the LUFS scale, so "2 LU above the target" means 2 dB too loud. Home: 00, 15.
+- **LUFS (LKFS)**: loudness units relative to full scale, the integrated loudness measure of ITU-R BS.1770; LKFS is the ATSC name for the same unit. Home: 00, 13, 15, 16, 23, 26.
+- **Lum vs sat, sat vs sat, sat vs lum**: curves that set saturation by brightness, compress the most saturated values, or set brightness by saturation. Home: 16.
+- **Luma matte**: a track matte that cuts a layer by another layer's brightness. Home: 13.
+- **Lumen**: Unreal Engine's real-time global illumination. Home: 13.
+- **LUT (letter of undertaking)**: the annual GST filing that lets an Indian business export services without paying GST. Home: 24.
+- **LUT (look-up table)**: a table that maps input colour values to output values, 1D per channel or 3D across colour; a viewing LUT shows log footage as Rec. 709 on set, and a show LUT carries the film's look into the grade. Home: 00, 13, 14, 16, 18, 22.
+- **LUT and show LUT**: a lookup table mapping input to output colour; the show LUT is the agreed look exported from the grade for every department. Home: 04.
+- **Lux**: the unit of illuminance, one lumen per square metre. Home: 15.
+- **Luxury ease**: the house asymmetric curve, with a quick departure and a long settle. Home: 13.
+- **Luxury strategy**: Kapferer and Bastien's claim that luxury is a business model with rules that invert mass marketing. Home: 18.
+- **Luxury value model**: Wiedmann, Hennigs and Siebels's financial, functional, individual and social dimensions of luxury value. Home: 08.
+- **Lynch's five elements**: paths, edges, districts, nodes and landmarks, the parts of a mental map of a city (Kevin Lynch, 1960). Home: 09.
+
+## M
+
+- **M&E (music and effects)**: the mix without dialogue or voice-over, the base for every language version. Home: 13, 15, 16.
+- **Ma**: the Japanese idea of meaningful interval; in Miyazaki, the pause in which the audience feels the world. Home: 01, 27, 28.
+- **Machine imaginaire**: Vera Molnar's practice of writing rules as if for a machine and executing them by hand. Home: 28.
+- **Macro lens**: a lens that focuses to 1:1 magnification or closer. Home: 14.
+- **Macroblocking**: the square artefacts of a compressed video frame. Home: 17.
+- **mada**: Saudi Arabia's national debit card scheme, operated under the Saudi Central Bank. Home: 09.
+- **Madrid Protocol**: WIPO's system for extending one trademark application to member countries through a single international registration. Home: 18.
+- **Magic hour**: the short windows around sunrise and sunset when light is soft and warm, golden hour and blue hour taken together. Home: 15, 28.
+- **Magic link**: a one-time signed URL sent by email that signs the person in. Home: 09.
+- **Mail Privacy Protection**: Apple's feature, since 2021, that pre-loads email images through a proxy and so registers opens. Home: 21.
+- **Makani number**: Dubai's 10-digit code identifying a building entrance, used in place of a postcode. Home: 09, 10.
+- **Make kit**: a Figma Make feature (early access since October 2025) that imports a Figma library and generates React components and CSS from it. Home: 07.
+- **Make-ready**: setting up a press or finishing machine for a job, including waste sheets. Home: 20.
+- **Make-tools**: Sanders and Stappers's collage, mapping and modelling kits through which participants express latent needs. Home: 08.
+- **Maker schedule**: a calendar of half-day or full-day blocks without meetings (Graham). Home: 27.
+- **Male gaze**: Mulvey's term for the camera's default position as a heterosexual male viewer. Home: 01.
+- **Mandatories**: the elements every execution in a brief must carry (logo, legal line, product). Home: 00.
+- **Manifest (delivery)**: the sheet delivered with every batch listing each file's specs, checksum, disclosures and approvals. Home: 16.
+- **Manuscript grid**: a single text block in a margin frame. Home: 05.
+- **Maplitho**: Indian trade name for uncoated woodfree printing paper. Home: 20.
+- **Mapping**: the relationship between controls and their effects. Home: 02.
+- **Margin**: the space between the format edge and the live area. Home: 05.
+- **Margin of error**: the range around a sample estimate within which the population value probably lies at a stated confidence. Home: 08, 18.
+- **Mark (in layout)**: the logo treated as a marker, with one fixed position and a derived size per ratio family. Home: 05.
+- **Marker**: a fixed position for recurring elements such as folios, running heads and logos. Home: 05.
+- **Marketing mix model (MMM)**: a regression of sales on media spend and other drivers over two to three years of weekly data. Home: 08.
+- **Mascelli's five Cs**: camera angles, continuity, cutting, close-ups and composition, the grammar of the shot (Mascelli, 1965). Home: 00.
+- **Mascot**: a character used as a brand mark. Home: 18.
+- **Masdar**: the Arabic verbal noun, used in UI to name an action without gender agreement. Home: 10.
+- **Mashrabiya**: a carved timber lattice screen of Arab architecture that filters light and view. Home: 01, 15, 27.
+- **Mask**: a path on a layer that limits its visible area. Home: 13.
+- **Maskable icon**: a PWA or Android icon whose important content sits inside a safe circle so that launchers can crop it to any shape. Home: 26.
+- **Masstige**: Silverstein and Fiske's term for goods priced between mass and old luxury and bought for an emotional benefit, often a luxury name on a mass-market product through a collaboration. Home: 18, 19.
+- **Master (brand file)**: editable files (deck, document, social, email) built to the guideline. Home: 18.
+- **Master (variable font)**: a drawn extreme of a variable font's design space between which outlines interpolate. Home: 03.
+- **Master and detail**: a list and the selected item's detail, side by side or stacked. Home: 05.
+- **Master licence (master use licence)**: the licence to use a specific recording of a composition, obtained from the label or owner. Home: 15, 19, 24.
+- **Master shot**: a wide shot that plays a whole scene. Home: 14.
+- **Masterbatch**: concentrated pigment in a carrier resin, used to colour plastics. Home: 04.
+- **Match cut**: a cut that joins two shots on a shared shape, motion or light. Home: 16, 17, 28.
+- **Match on action**: a movement begun in one shot and completed in the next, so the cut rides the movement. Home: 16.
+- **Matching idea**: integration in which each channel does what it is best at in service of one thought. Home: 19.
+- **Matching luggage**: the same key visual, headline and colour applied to every channel, integration in appearance only. Home: 19.
+- **Matchmove**: solving a real camera's motion so a CG camera can match it. Home: 13.
+- **Material 3 and Material 3 Expressive**: Google's design system for Android and the web, and its 2025 extension with a shape library, spring motion scheme and new components. Home: 06.
+- **Material connection**: any relationship between a creator and a brand (payment, free product, employment) that requires disclosure. Home: 17.
+- **Material Design**: Google's design system announced in 2014, built on a paper-and-ink metaphor with defined elevations. Home: 01.
+- **MaterialX**: an open standard for exchanging material definitions between applications. Home: 13.
+- **Matra**: a vowel sign in Devanagari and related scripts, placed above, below or beside the consonant. Home: 01, 03, 12, 18, 20, 22, 27, 28.
+- **Matra and nuqta**: the Devanagari vowel signs above and below the line, and the dot placed under a consonant; the thinnest details of the script. Home: 04.
+- **Matte box**: the hood in front of the lens that holds filters and flags stray light. Home: 14.
+- **Matte painting**: a painted or digital extension of a set or location composited behind live action. Home: 22.
+- **Matterhorn Protocol**: the PDF Association's list of checkpoints and failure conditions for PDF/UA. Home: 11.
+- **Mawthooq**: Saudi Arabia's licence for influencers who advertise. Home: 17, 19, 24.
+- **MaxCLL and MaxFALL**: maximum content light level and maximum frame-average light level of an HDR programme, in nits. Home: 04, 13.
+- **MaxDiff (best-worst scaling)**: ranking items by repeatedly choosing the best and the worst from small sets. Home: 08.
+- **MAYA**: "most advanced yet acceptable", the finding that typicality and novelty jointly predict aesthetic preference (Hekkert and colleagues). Home: 02, 23, 27.
+- **Mayer's multimedia principles**: coherence (cut extraneous material), signalling (cue the structure), spatial and temporal contiguity (words near and in time with pictures), segmenting (learner-paced parts), pre-training (key names first), personalisation (conversational style), voice (good-quality narration) and image (a speaker's face adds little). Home: 02.
+- **McGurk effect**: visible lip movements changing the speech sound heard. Home: 02.
+- **MCP Apps**: the official Model Context Protocol extension, live since 26 January 2026, that renders a tool's interactive components inside an assistant's conversation. Home: 09.
+- **Measure**: the length of a line of text in characters, set on the web in `ch` units. Home: 03, 05, 23.
+- **Measurement plan**: the written list of analytics events, their names and parameters, and campaign tagging rules, fixed before build. Home: 08.
+- **Meenakari**: enamel painted into engraved gold, with Jaipur as its centre. Home: 01, 23, 28.
+- **Mega menu**: a wide navigation panel of grouped links opened from a top-level item on a marketing site. Home: 06.
+- **Memory colour**: the remembered, usually more saturated, colour of a familiar object such as skin, sky or grass. Home: 02.
+- **MENA (Middle East and North Africa)**: the region the Dubai network offices serve. Home: 24.
+- **Mental and physical availability**: Sharp's terms for the chance a brand comes to mind in a buying situation and the ease of buying it. Home: 00.
+- **Mental availability**: the likelihood that a brand comes to mind in buying situations (category entry points). Home: 01, 02, 18.
+- **Mental market share**: a brand's share of all brand-to-CEP links in its category. Home: 18.
+- **Mental model**: a person's simplified internal representation of how something works. Home: 02.
+- **Mental model diagram**: Indi Young's alignment of users' tasks and reasoning (towers) above a line with the organisation's support below it. Home: 08, 28.
+- **Mental penetration**: the share of category buyers who link a brand to at least one CEP. Home: 18.
+- **Mental representations**: the detailed internal models that let an expert see a finished piece before it exists and detect deviation at a glance (Ericsson). Home: 00.
+- **Menu**: a temporary list of actions or options opened from a button, a right click or a long press. Home: 06.
+- **Menu engineering**: the analysis of each dish by margin and popularity to decide its place on the menu (Kasavana and Smith). Home: 05.
+- **Mere exposure effect**: liking a thing more for having seen it more (Zajonc, 1968). Home: 02, 23.
+- **Merz**: Kurt Schwitters's private art-and-design practice built from collage and found print, also the name of his magazine. Home: 01.
+- **meshopt**: Arseny Kapoulkine's open mesh compression for glTF. Home: 13.
+- **Message template (WhatsApp)**: Meta's term for a pre-approved WhatsApp Business message format, required for any conversation the business starts. Home: 09, 26.
+- **MessageFormat 2.0**: Unicode's successor to ICU MessageFormat, Part 9 of the LDML specification (UTS #35), stable since CLDR 47 (March 2025). Home: 10.
+- **Meta AI translations**: Meta's free AI dubbing of Reels, with optional lip sync. Home: 17.
+- **Metafields and metaobjects**: Shopify's custom fields on resources, and standalone structured records. Home: 21.
+- **Metamerism**: different spectra matching under one illuminant or for one observer and differing under another (illuminant and observer metamerism). Home: 00, 02, 04, 20.
+- **Metasearch landing**: a booking page reached from Google Hotel Ads, Google's free booking links or Trivago with dates, guests, room and rate preselected. Home: 09.
+- **Metric-matched fallback**: an `@font-face` rule that adjusts a system font's widths and vertical metrics to match the web font so the swap moves nothing. Home: 21.
+- **Mezzanine**: a high-quality intermediate file from which other encodes are made. Home: 16.
+- **MFN**: most favoured nation, a clause requiring terms no worse than the other rights holder receives. Home: 15.
+- **Mica**: Windows 11's opaque material tinted by the desktop wallpaper. Home: 06.
+- **Micro-typography**: the care of individual characters and spaces inside the line. Home: 03.
+- **Microcopy**: the small strings that carry a person through an interface: labels, buttons, hints, errors, states. Home: 10.
+- **Microencapsulated fragrance varnish**: varnish carrying fragrance in microcapsules that burst under friction. Home: 20.
+- **Microinteraction**: the small contained product moments made of a trigger, rules, feedback, and loops and modes (Saffer). Home: 00, 09, 12.
+- **Microtext**: lettering too small to survive photocopying. Home: 20.
+- **Mid-side**: a stereo method pairing a forward cardioid with a sideways figure-of-eight, decoded to adjustable width. Home: 15.
+- **Midday break**: the Gulf's summer ban on outdoor work in direct sun, 15 June to 15 September. Home: 14.
+- **Miller's law**: the Laws of UX name for Miller's seven plus or minus two, superseded by Cowan's 4 plus or minus 1. Home: 02.
+- **MINDE**: minimum delta E, the gamut-mapping choice of the in-gamut colour closest to the original. Home: 04.
+- **Minimum detectable effect (MDE)**: the smallest true change an experiment is designed to detect. Home: 08.
+- **Minimum-jerk trajectory**: the smooth, bell-shaped velocity profile of human reaching movements. Home: 02.
+- **Minimum viable product (MVP)**: the smallest thing that tests the riskiest assumption. Home: 08.
+- **Mired**: micro reciprocal degrees, one million divided by kelvin; the unit of gel shift. Home: 15.
+- **Mirroring**: reflecting a layout for right-to-left reading, applied to order, direction and alignment but not to numerals, clocks, media or images. Home: 09.
+- **Misregistration**: misalignment between printing plates, seen as coloured fringes. Home: 23.
+- **Mission and treadmill**: Amabile's terms for a pressured day focused on one protected task, and a pressured day fragmented across many. Home: 27.
+- **Mistake**: an error in which the goal or plan is wrong, either rule-based (a right rule misapplied) or knowledge-based (no rule exists) (Reason; Norman). Home: 09.
+- **Mithai**: traditional Indian sweets. Home: 01.
+- **MJML**: a markup language that compiles to table-based email HTML. Home: 21.
+- **Mobile first**: writing the narrow layout as the default CSS and adding complexity as width grows. Home: 05, 21.
+- **Modal**: an overlay that blocks interaction with the page beneath until dismissed. Home: 06.
+- **Modality effect**: increased effective capacity when information is split between speech and image. Home: 02.
+- **Mode (Figma)**: one set of values a variable collection can switch between, such as light and dark. Home: 07.
+- **Model collapse**: the narrowing of a model's output distribution when it is trained on recursively generated data. Home: 22.
+- **Model Context Protocol (MCP)**: Model Context Protocol, an open protocol through which AI agents query tools and data sources such as a design system. Home: 06, 07, 09, 13, 16.
+- **Model Human Processor**: Card, Moran and Newell's model of the user as perceptual, cognitive and motor processors with measured cycle times. Home: 02.
+- **Modeless**: a state of an interface in which the same input always does the same thing; its opposite produces mode errors. Home: 09.
+- **Modelling lamp**: the continuous lamp inside a strobe head that previews where the flash will fall. Home: 15.
+- **Moderated, unmoderated and guerrilla testing**: a facilitator runs the session; participants work alone on a platform; quick intercepts of unscreened people in public places. Home: 08.
+- **Modifier**: in a DTCG resolver, a named axis (theme, brand, density) with contexts that select token sources. Home: 07.
+- **Modular asset system**: the cuts, ratios, plates and end cards planned at PPM so paid variants can be built without losing the frame. Home: 19.
+- **Modular grid**: a fixed set of columns, rows and gutters to which every element on a page snaps. Home: 00, 01, 05.
+- **Modular scale**: a size sequence built by a fixed ratio. Home: 03.
+- **Modular versus integrated**: Kholmatova's axis for whether parts are designed to recombine or pages are designed whole. Home: 07.
+- **Modulation (translation, expansion)**: how stroke thickness varies, by broad-nib angle or by pointed-pen pressure. Home: 03.
+- **Module**: the cell formed where a column crosses a row. Home: 05.
+- **Modulor**: Le Corbusier's red and blue scales of sizes derived from the human body and the golden ratio. Home: 05.
+- **MoGraph (Cinema 4D)**: Cinema 4D's motion-graphics toolset of Cloners, Effectors and Fields. Home: 13.
+- **Mograph (discipline)**: motion graphics as a discipline joining design, animation and compositing. Home: 01.
+- **MOGRT**: Adobe's packaged motion graphics format for Premiere Pro. Home: 13.
+- **Moiré**: a shimmering interference pattern where a fine grid, such as an LED wall, beats against the sensor's. Home: 13, 15, 16, 20, 23.
+- **Moment of truth (first, second, zero)**: a customer contact that makes or loses the customer (Carlzon); the shelf and use (Lafley); the search before purchase (Lecinski). Home: 08, 18.
+- **Monadic exposure**: a test design in which each respondent sees one route only. Home: 18.
+- **Monogram**: initials interlaced into one form. Home: 18.
+- **Monoline**: drawn with strokes of near-constant thickness, contrast near 1:1. Home: 03.
+- **Monorepo**: one repository holding several packages that are versioned and released together. Home: 07.
+- **Montage (Eisenstein)**: metric, rhythmic, tonal, overtonal and intellectual relations between shots. Home: 16.
+- **Moodboard**: a board of existing references showing a direction, each labelled with its source and the one thing borrowed. Home: 22.
+- **Moodboard (Midjourney)**: a Midjourney feature that builds a personalisation profile from uploaded images. Home: 22.
+- **Moov atom**: the index of an MP4 file, placed at the front so playback starts before download ends. Home: 16.
+- **Moral rights**: an author's rights to claim authorship and to object to distortion of a work, under Section 57 of India's Copyright Act. Home: 01, 19, 24.
+- **Morphological box**: a grid of parameters (rows) and options (columns) in which a design is one path (Gerstner, after Zwicky). Home: 05, 27.
+- **MoSCoW**: prioritisation into must, should, could and won't have this time. Home: 08.
+- **Motion aftereffect**: the illusory drift of still things after watching steady motion (the waterfall illusion). Home: 02.
+- **Motion control (AI)**: transferring a reference performance onto a generated subject. Home: 13.
+- **Motion control (camera rig)**: a computer-driven rig that repeats a camera move exactly. Home: 14.
+- **Motion Graphics Template**: an After Effects or Premiere Pro file (`.mogrt`) whose Essential Graphics controls expose text, colour and font to editors. Home: 07.
+- **Motion scheme**: Material 3 Expressive's set of six springs, in a standard and an expressive version. Home: 12.
+- **Motion spec**: a row per animated change stating property, from, to, duration, easing, delay, trigger, interruption, velocity, platform values and reduced-motion behaviour. Home: 12.
+- **Motion test**: a 3 to 5 second animated proof of one direction's movement language, signed with the styleframes. Home: 13.
+- **Motion token**: a named, platform-neutral value for a duration, easing or spring. Home: 12.
+- **Motivated key light**: a main light justified by a visible source in the scene, such as a window or lamp. Home: 28.
+- **Motivated light**: light that appears to come from a source in the scene (a window, a lamp, a candle). Home: 00, 15.
+- **Motivated movement**: camera movement caused by something in the scene. Home: 14.
+- **Mouillette (scent blotter)**: an absorbent paper strip for smelling fragrance. Home: 20.
+- **Moulded pulp**: fibre formed in moulds into inserts and trays. Home: 20.
+- **Mounted Storage**: Frame.io's feature that presents a project as a drive on the desktop. Home: 16.
+- **MPEG-H**: an immersive broadcast audio codec. Home: 15.
+- **MPM**: the material point method, a solver for snow, sand and mud. Home: 13.
+- **MQM**: Multidimensional Quality Metrics, a framework for scoring translation errors by category and severity. Home: 10.
+- **MRP (maximum retail price)**: the tax-inclusive price printed on packaged goods in India under the Legal Metrology rules. Home: 09, 10, 20, 21.
+- **MSA (master services agreement)**: the umbrella contract that sets legal terms once so each SOW can be short. Home: 24.
+- **MSA (Modern Standard Arabic, al-fusha)**: the shared formal written and broadcast register of Arabic, used in simplified form in interfaces. Home: 10, 15.
+- **MSMED Act (Micro, Small and Medium Enterprises Development Act 2006)**: the Indian law capping a buyer's payment period to registered micro and small enterprises at 45 days. Home: 24.
+- **MSO conditional comments**: HTML comments that only Microsoft Office's email renderer reads, used to feed Outlook fixed layouts. Home: 21.
+- **MTPE (machine translation with post-editing)**: machine translation output corrected by a linguist. Home: 10.
+- **Muddy mids**: midtones gone grey-brown through poor interpolation or black overlays. Home: 23.
+- **Muhurat**: the astrologically chosen auspicious date and time that fixes many Indian launches, weddings and openings. Home: 19.
+- **Mult box**: a box that splits one desk output into many XLR line outputs for press crews. Home: 15.
+- **Multi-frame rendering**: After Effects rendering several frames at once across CPU cores. Home: 13.
+- **Multi-reference conditioning**: generating from several reference images in one prompt. Home: 22.
+- **Multiple comparisons**: testing several variants at once, which raises the chance of a false winner unless alpha is corrected (Holm, Bonferroni). Home: 08.
+- **Multivariate test (MVT)**: an experiment varying several elements at once to estimate each effect and their interactions. Home: 08.
+- **Mumps**: faces widening at close focus on front-anamorphic lenses. Home: 14.
+- **Munsell system**: hue, value and chroma on experimentally spaced scales, notated as hue value/chroma. Home: 04.
+- **Mupi**: JCDecaux's 2 m² backlit poster frame (1185 x 1750 mm visible), the standard street and mall poster unit in the UAE. Home: 20, 26.
+- **MX record**: the DNS record that routes a domain's email. Home: 21.
+- **MXF (Material Exchange Format)**: the SMPTE file wrapper used in broadcast and in DCPs. Home: 16.
+- **Mystery shopping**: covert evaluation of a service by a trained assessor posing as a customer, against observable standards. Home: 08.
+- **Myth**: a connotation presented as natural fact. Home: 18.
+
+## N
+
+- **N1**: the first and lightest stage of sleep, at sleep onset (Lacaux and colleagues). Home: 27.
+- **Najdi architecture**: the mud-brick courtyard architecture of central Arabia, with triangular openings and crenellated parapets. Home: 01.
+- **Named instance**: a stored axis position with a style name inside a variable font. Home: 03.
+- **Named timeline**: a scroll or view timeline given a name (`scroll-timeline-name`) and a scope (`timeline-scope`) so elements outside the scroller can follow it. Home: 12.
+- **Naming hierarchy**: the grammar for how names stack from master to variant. Home: 18.
+- **Nanite**: Unreal Engine's virtualised geometry, which streams only the detail a frame needs. Home: 13.
+- **NASA-TLX**: Hart and Staveland's six-sub-scale measure of perceived workload. Home: 02, 08.
+- **Nasab**: the lineage element of an Arabic name ("bint Khalid", daughter of Khalid). Home: 10.
+- **Nasheed**: unaccompanied or voice-led devotional song. Home: 15.
+- **Naskh**: the rounded Arabic book hand, systematised by Ibn Muqla. Home: 01, 18.
+- **Nastaliq**: the hanging Perso-Arabic calligraphic style used for Urdu, which needs extra leading. Home: 01, 26.
+- **National Address**: Saudi Arabia's postal address system, compressible to an 8-character short address of 4 letters and 4 digits. Home: 09.
+- **National digital identity (UAE PASS, Nafath)**: the UAE's and Saudi Arabia's government identity apps for sign-in, signature and verified data sharing. Home: 09.
+- **National Media Authority (NMA)**: the UAE federal media regulator created by a Federal Decree-Law of 18 December 2025, which took over the UAE Media Council, the National Media Office and WAM. Home: 16, 17, 20.
+- **Native audio**: sound generated by a video model together with the picture. Home: 22.
+- **Native ISO**: the ISO giving full dynamic range with no added gain. Home: 14.
+- **Natural frequency**: sqrt(k over m), how fast a spring system wants to oscillate. Home: 12.
+- **Navagraha mandala**: a nine-square diagram of the nine planets used in Indian architecture and city planning. Home: 27.
+- **Navigation rail**: a vertical strip of 3 to 7 destinations on the leading edge of a medium-width window. Home: 06.
+- **Navigation types**: global (everywhere), local (within a section), contextual (inside content), supplemental (indexes and guides outside the hierarchy) and utility (account, cart, language, search). Home: 09.
+- **NaviLens**: a camera-readable code that a phone can detect at a distance without precise aiming, used on packaging and signs. Home: 11.
+- **NCCS**: India's New Consumer Classification System, 12 household grades from A1 to E3 set by chief earner's education and durables owned. Home: 08.
+- **NCS (Natural Colour System)**: the Scandinavian colour standard architects specify. Home: 18.
+- **NCS and RAL**: the Natural Colour System used by architects and interior designers, and the RAL Classic and Design collections used for paint, powder coat and signage. Home: 04.
+- **ND filter (neutral density)**: a filter that cuts light evenly without changing colour; each 0.3 of density is one stop. Home: 14, 15.
+- **NDA (non-disclosure agreement)**: a contract binding crew to secrecy about unreleased product. Home: 14, 23, 24.
+- **Near-copy check**: the QC step that runs hero-adjacent outputs through reverse image search to catch memorised reproductions. Home: 22.
+- **Needle drop**: use of an existing commercial recording. Home: 15.
+- **Negative fill**: black flags or surfaces that absorb light to deepen the shadow side of a subject. Home: 00, 13, 14, 15, 16, 23.
+- **Negative option**: a subscription that continues and charges unless the person acts to stop it (ROSCA's subject). Home: 09.
+- **Negative prompt**: the list of what a model should exclude. Home: 22.
+- **Negative space**: the unoccupied area of a page or frame, of any colour. Home: 05, 23.
+- **Neoplasticism**: Mondrian's reduction of painting to horizontals, verticals, primaries and non-colours. Home: 01.
+- **NER model**: Romero-Fresco and Martínez's method for scoring caption accuracy by the severity of each error. Home: 11.
+- **Nerve**: the willingness to say the verdict aloud and remove what fails. Home: 23.
+- **Nested radius rule**: inner radius equals outer radius minus the padding between them, so corners stay concentric. Home: 06.
+- **Nesting (CSS)**: writing a component's states inside its own rule. Home: 21.
+- **Net (scrim)**: a mesh that reduces light by one (single) or two (double) stops without changing quality. Home: 15.
+- **Net Promoter Score (NPS)**: the percentage of promoters (9 and 10) minus the percentage of detractors (0 to 6) on the 0 to 10 question of how likely a respondent is to recommend the brand. Home: 08, 18.
+- **Network size**: the average number of CEPs linked to a brand among buyers who link any. Home: 18.
+- **Neumorphism**: soft UI; controls rendered as soft extrusions of a same-coloured background with paired light and dark shadows. Home: 01.
+- **Neuroaesthetics**: the study of the brain processes behind aesthetic experience. Home: 02.
+- **Neutral question**: a question with no opinion inside it. Home: 23.
+- **NFPA 701**: the US vertical flame test for textiles and films. Home: 20.
+- **Nice Classification**: WIPO's 45-class system for registering trademarks by goods and services; 13th edition in force from 1 January 2026. Home: 10, 18, 24.
+- **Nick**: a small uncut tie that holds a die-cut piece in its sheet during stripping. Home: 20.
+- **Nielsen Norman Group (NN/g)**: the usability research and consulting firm founded by Jakob Nielsen and Don Norman. Home: 06, 10.
+- **Nit**: one candela per square metre, the unit of display luminance. Home: 16, 20, 26.
+- **Nitaqat**: Saudi Arabia's Saudisation bands, which set quotas for Saudi nationals in private-sector jobs. Home: 24.
+- **NLE (non-linear editor)**: the editing application (Premiere Pro, DaVinci Resolve, Final Cut Pro, Avid Media Composer). Home: 00, 16.
+- **NLE and DAW**: non-linear editing application, and digital audio workstation. Home: 15.
+- **No idea test**: remove the headline and logo, then the picture, to see whether anything distinctive remains. Home: 19.
+- **No-match, no-input**: the two voice error states: speech not understood, and silence. Home: 09.
+- **No-motion-first**: placing decorative motion inside `prefers-reduced-motion: no-preference`, so the default is still (Tatiana Mac). Home: 12.
+- **NOC (no-objection certificate)**: written consent from an owner or authority, such as a housing society or the Animal Welfare Board of India. Home: 14, 24.
+- **`noindex`**: the meta robots or HTTP header value that keeps a page out of the search index. Home: 21.
+- **Nominal group**: people generating ideas alone whose output is pooled, the baseline against which interacting groups are measured. Home: 27.
+- **Non-follower share**: the share of views from For You or Explore, a measure of distribution to non-followers. Home: 17.
+- **Non-interference**: WCAG conformance requirement 5, under which content that does not conform must not block access to the rest of the page. Home: 11.
+- **Non-traditional marks**: trademarks beyond words and images, such as 3D shapes, sounds, smells and holograms. Home: 18.
+- **Norman door**: a door whose form signals the wrong action, used as the test of poor signifiers. Home: 28.
+- **Normative and informative**: WCAG's binding text (the success criteria) and its advisory material (Understanding documents and Techniques). Home: 11.
+- **North light**: skylight from a window that takes no direct sun. Home: 15.
+- **North Star metric**: the single measure that best captures customer value and predicts long-term results. Home: 08.
+- **Notes Day**: Pixar's 2013 day of closure in which employees worked on fixing the company's own problems. Home: 28.
+- **Notes grid**: a note-taking table of timestamp, verbatim quote, observation and tag. Home: 08.
+- **Notification channel**: an Android category of notifications with a name shown in system Settings, switchable on its own. Home: 10.
+- **Novelty effect, change aversion**: users engaging with something because it is new; users resisting it because it changed. Home: 08.
+- **Now, next, later roadmap**: Janna Bastow's format committing to near-term work and holding later items as problems. Home: 08.
+- **NRI (non-resident Indian)**: an Indian citizen living abroad, a distinct audience for Indian real estate. Home: 09.
+- **Nudge**: a choice architecture change that alters behaviour without forbidding options or changing incentives significantly. Home: 02.
+- **Nukta**: the dot below a Devanagari letter that marks sounds borrowed from Persian, Arabic and English. Home: 18.
+- **Nukta and nuqta**: the subscript dot of Devanagari letters for Urdu-derived sounds; the dots that distinguish Arabic letters sharing a skeleton. Home: 03.
+- **Null object**: an invisible AE layer used as a parent or a controller. Home: 13.
+- **NURBS**: non-uniform rational B-splines; mathematically exact curved surfaces. Home: 13.
+- **Nutri-Mark**: the UAE's front-of-pack nutrition grade. Home: 20.
+- **Nyquist**: the rule that a sample rate captures frequencies up to half its value. Home: 15.
+
+## O
+
+- **OB-hour**: an OctaneBench-hour, a farm billing unit of GPU speed multiplied by time. Home: 13.
+- **Object constancy**: keying data points by identity so they travel between chart states (Bostock). Home: 12.
+- **Object wipe**: a transition in which something crossing the lens hides the cut. Home: 17.
+- **Observation, interpretation (finding)**: what was seen or said, verbatim; a pattern across observations with its count. Home: 08.
+- **Observer effect**: people changing their behaviour because they are watched. Home: 08.
+- **Observer metamerism**: disagreement between observers, or between an observer and the standard observer, about a colour match, magnified on narrow-band displays. Home: 04.
+- **Occam's razor**: prefer the simplest design that does the job. Home: 02.
+- **OCIO**: OpenColorIO, the open colour management system used by AE, Blender, Nuke and others. Home: 13.
+- **Octabox**: an eight-sided softbox. Home: 15.
+- **ODT (Output Device Transform)**: the ACES mapping from the rendered image to a specific display. Home: 16.
+- **OETF (opto-electronic transfer function)**: the curve by which a camera encodes light as code values. Home: 16.
+- **OETF and EOTF**: the opto-electronic transfer function (scene light to code value, in the camera) and the electro-optical transfer function (code value to screen light, in the display). Home: 04.
+- **Off-plan**: property sold before it is built. Home: 19.
+- **Offline conversion import**: sending CRM stages (qualified lead, site visit, sale) back to the ad platforms so that campaigns are judged, and bidding optimises, on buyers. Home: 08, 21.
+- **Offline or stale state**: cached data shown without a live connection, labelled with the time it was last updated. Home: 06.
+- **Offset (grading)**: a control that shifts every code value equally, the digital printer light. Home: 16.
+- **Offset lithography**: printing from a plate whose image areas accept ink and non-image areas accept water, via a rubber blanket. Home: 20.
+- **OFL**: the SIL Open Font License 1.1, the open licence of most Google Fonts families. Home: 03.
+- **OFX (OpenFX)**: the open plugin standard used by Resolve and other hosts. Home: 16.
+- **Okabe-Ito palette**: eight colours chosen in 2008 to remain distinguishable under protan and deutan vision. Home: 04.
+- **Okhsv, Okhsl and HSLuv**: picker spaces that rebuild HSV and HSL on OKLab (Ottosson, 2021) or HSL on CIELUV (Boronine), so lightness tracks perception. Home: 04.
+- **OKLab and OKLCH**: Björn Ottosson's 2020 perceptual space and its polar form; the house authoring space for screen colour. Home: 04.
+- **OKLCH**: a perceptually uniform colour space described by lightness, chroma and hue, used for building neutrals and interpolating gradients. Home: 07, 23, 28.
+- **OKLCH and CIELAB**: perceptual colour spaces in which equal numeric steps read as equal visual steps, so tints and shades keep their hue. Home: 00.
+- **OKRs**: objectives with three to five measurable key results. Home: 08.
+- **OLED (organic light-emitting diode)**: a display whose pixels emit their own light and switch fully off for black. Home: 06.
+- **OMF (Open Media Framework)**: the older audio interchange format, 2 GB limit per file. Home: 16.
+- **Omni reference (--oref)**: the Midjourney V7 parameter placing a specific object, character, vehicle or garment from a reference image into a generation, weighted by --ow. Home: 22.
+- **On twos**: animation with a new drawing every second frame (12 a second at 24 fps); on ones every frame, on threes every third. Home: 13.
+- **One accessory rule**: after the edit, remove one more decorative element. Home: 23.
+- **One-light**: a single base correction applied across all footage so it can be viewed and cut. Home: 16.
+- **One-off**: a single execution with no second, such as a stunt or a launch film. Home: 19.
+- **One peak rule**: a page earns one motion moment beyond CSS; everything else holds still. Home: 21.
+- **One-point perspective**: a composition with a single central vanishing point. Home: 05.
+- **One-solution rule**: Rand's practice of presenting a single answer with its reasoning. Home: 28.
+- **One-time password (OTP)**: a code valid for a single sign-in or transaction, sent by SMS, WhatsApp or email or generated by an app. Home: 06, 09, 10, 18, 21.
+- **One voice**: the client's single appointed person who consolidates internal opinions into one written response per round. Home: 19.
+- **One-way vision film**: perforated window film that shows an image outside and stays see-through inside. Home: 20.
+- **Online**: the finishing stage at full resolution with final effects, titles and grade. Home: 14, 16.
+- **Onliness statement (onlyness)**: Neumeier's positioning test, "our brand is the only ___ that ___". Home: 18, 28.
+- **OP1a**: MXF's single-item operational pattern, one clip per file. Home: 16.
+- **Op Art**: optical art, patterns that make the eye perceive movement. Home: 01.
+- **Opacity**: the share of light a sheet blocks, which governs show-through. Home: 20.
+- **Open and closed captions**: captions burned into the picture and always visible, and captions on a separate track that viewers can switch on, off and restyle. Home: 11, 16.
+- **Open gate**: recording the full area of a camera's sensor so several crops can be taken. Home: 14, 16, 17.
+- **Open Graph**: the meta tag protocol (the `og:` tags) that Facebook, LinkedIn, WhatsApp and others read to build a link preview. Home: 21, 26.
+- **Open Graph image**: the og:image picture that apps show as a link preview. Home: 05, 23.
+- **Open shade**: a subject in shadow lit only by open sky. Home: 15.
+- **Open-weight model**: a model whose trained weights are published, so it runs on the house's own machines. Home: 13.
+- **OpenEXR (EXR)**: a high dynamic range, multi-layer, 16 or 32-bit floating-point image format for renders, grading and compositing. Home: 13, 22.
+- **OpenPBR**: an open, physically based surface shading model from the Academy Software Foundation. Home: 13.
+- **OpenType**: the cross-platform font format announced by Microsoft and Adobe in 1996, with room for thousands of glyphs and rules for complex scripts. Home: 01.
+- **Opinion with permission**: the fourth step of the Critical Response Process, in which a responder asks before giving an opinion; the house rule for client-side and guest crits. Home: 00, 23.
+- **Opponent process**: the recoding of cone signals into light-dark, red-green and blue-yellow channels at a stage after the cones (zone theory), which is why afterimages appear in the opponent colour. Home: 02, 04.
+- **Opportunity score**: Ulwick's importance plus the greater of (importance minus satisfaction) or zero; above 10 an opportunity. Home: 08.
+- **Opportunity solution tree**: an outcome at the top, opportunities beneath, solutions beneath those, experiments at the leaves (Torres). Home: 00, 08, 27, 28.
+- **Optical alignment**: aligning by perceived edge, so round and pointed forms overshoot the measured line; the optical centre is the point slightly above geometric centre at which content looks centred. Home: 05, 06, 23.
+- **Optical brightening agent (OBA), M0 and M1**: a fluorescent paper additive that makes the sheet read whiter and bluer under UV, and the ISO 13655 measurement conditions that exclude or include the UV that excites it. Home: 04, 20.
+- **Optical centre**: a point about 2 to 5% above geometric centre where a centred element looks centred. Home: 05, 18.
+- **Optical correction (optical compensation)**: adjustments (overshoot, thinning at joins, raised centres) that make a geometrically regular shape or layout look right to the eye where measurement says it is already right. Home: 03, 05, 18.
+- **Optical flow**: synthesising new frames from estimated motion for slow motion or rate changes. Home: 13, 16.
+- **Optical kerning**: spacing letter pairs by eye so the gaps look equal; metric kerning uses the values stored in the font. Home: 27.
+- **Optical size (`opsz`)**: cuts of a typeface drawn for one size range (text, display), with more contrast and tighter spacing at display sizes. Home: 00, 03, 07, 28.
+- **Optical sizing**: changing an icon's or type's stroke and proportions with its rendered size rather than scaling one drawing. Home: 06.
+- **Optimistic UI (optimistic update)**: showing the result of an action before the server confirms it, and reverting on failure. Home: 00, 06, 09, 12, 28.
+- **Options**: pre-priced extensions of term, territory and media agreed inside the first licence. Home: 15.
+- **Order effects**: the first or last option shown being favoured. Home: 23.
+- **Ordinals (`ordn`)**: letters after a numeral set as superiors. Home: 03.
+- **Organisation scheme**: the rule that decides which group an item belongs to; exact schemes (alphabetical, chronological, geographical) give every item one objective place, ambiguous schemes (topic, task, audience, metaphor) need a judgement. Home: 09.
+- **Orienting response**: the automatic redirection of attention to a change in stimulus. Home: 17.
+- **Original audio**: a brand's own sound that other accounts can reuse on a platform. Home: 15.
+- **Originality**: the statistical rarity of an idea, one of Guilford's four scores. Home: 27.
+- **Orphan page**: a page that no navigation or contextual link reaches. Home: 09.
+- **Orphan, widow, runt**: a first line stranded at a column foot; a last line stranded at a column head; a last line of one word. Home: 03.
+- **ORTF**: a near-coincident stereo pair of cardioids 17 cm apart at 110 degrees. Home: 15.
+- **OS&E**: operating supplies and equipment, the hotel pre-opening budget that buys collateral. Home: 20.
+- **Otabind and RepKover**: softcover bindings with a free-floating cover spine that lie flat. Home: 20.
+- **OTIO (OpenTimelineIO)**: the open timeline interchange format hosted by the Academy Software Foundation. Home: 16.
+- **OTT (over-the-top)**: television delivered as streaming over the internet. Home: 03.
+- **OTT, CTV and VOD**: streaming services, connected TV, and video on demand. Home: 15.
+- **Out-of-core**: a GPU renderer spilling geometry and textures to system memory when VRAM runs out, at a large speed cost. Home: 13.
+- **Out-of-cycle refresh**: a file update run within two weeks of a trigger event, outside the quarterly cycle. Home: 00.
+- **Out-of-gamut**: code values outside EBU R 103's preferred minimum and maximum. Home: 13.
+- **Out of home (OOH)**: advertising in public space: billboards, transit, street furniture and digital screens. Home: 05, 14, 15, 20, 23, 24.
+- **Outcome, output, impact (business outcome, product outcome, traction metric)**: a change in behaviour; what the team ships; the business result; Torres's levels of business result, customer behaviour in the product, and adoption of one feature. Home: 08.
+- **Outline algorithm**: the HTML5 rule that would have re-levelled headings inside sections; never implemented and removed in 2022. Home: 21.
+- **Output intent**: the ICC profile embedded in a PDF/X file to name the print condition it was made for. Home: 20.
+- **Output transform**: the conversion from the working space to the deliverable's display standard, with tone and gamut mapping. Home: 16.
+- **Over-run and under-run**: the trade tolerance on delivered quantity either side of the order. Home: 20.
+- **Overage**: a cost beyond the approved estimate, requiring written approval before it is incurred. Home: 19.
+- **Overdamped**: a spring at damping ratio above 1, creeping to its target. Home: 12.
+- **Overflow menu**: the menu behind a More button that holds a toolbar's lower-priority actions. Home: 06.
+- **Overhead**: every cost that is not a billable person: rent, software, admin, new business, insurance. Home: 24.
+- **Overprint**: printing one ink over another without knocking out the ink beneath. Home: 03, 20.
+- **Overprint and knockout**: ink printed over another ink, against the ink beneath removed. Home: 23.
+- **Override-in-reduce**: full motion by default, stripped inside `prefers-reduced-motion: reduce`; the house approach for feedback motion. Home: 12.
+- **Oversampling**: capturing above delivery resolution and downscaling. Home: 14.
+- **Overscan**: the edge of the picture that a consumer television crops. Home: 03, 13.
+- **Overshoot (motion)**: motion that passes its target before settling; y values above 1 in a curve, a damping ratio below 1 in a spring. Home: 12, 13.
+- **Overshoot (type)**: the small excess by which round letters pass the baseline and cap line so they look the same size as flat ones. Home: 03, 05, 18, 27, 28.
+- **Ovsiankina effect**: the tendency to resume interrupted tasks. Home: 02.
+- **Owned colour**: a colour the category reads as one brand's before the logo appears, earned by consistent exclusive use on one visible surface. Home: 04.
+
+## P
+
+- **P3 (DCI-P3)**: the digital cinema gamut, wider than Rec.709 in reds and greens. Home: 16.
+- **P&L (profit and loss account)**: the record of revenue, costs and profit for a job, an event or the firm. Home: 24.
+- **Pace**: the speed of information or cuts over time. Home: 23.
+- **Pacing (Pearlman)**: the rate and amount of movement and change across a sequence. Home: 16.
+- **Page description language**: a language, such as PostScript, that describes a page's text and graphics as scalable outlines independent of the output device. Home: 01.
+- **Paid discovery sprint**: a two to three week paid engagement that replaces a speculative creative pitch. Home: 24.
+- **Pain of paying**: the felt cost of parting with money, lower with cards and one-tap payment than with cash. Home: 02.
+- **Pair writing**: a content designer and a subject expert writing together in one session (GOV.UK). Home: 10.
+- **Paise and fils**: the hundredths of the rupee and the dirham. Home: 10.
+- **PAL**: the 25 fps analogue colour television standard of India, the Gulf and Europe. Home: 14.
+- **PAN (Permanent Account Number)**: India's income-tax identifier, asked for on large invoices. Home: 10, 24.
+- **Pan and tilt**: horizontal and vertical rotation of the camera on a fixed point. Home: 14.
+- **Panchang**: the Hindu almanac that sets festival and auspicious dates. Home: 19.
+- **Pantone Matching System (PMS)**: Pantone's numbered library of pre-mixed spot inks, shown coated (C) and uncoated (U). Home: 04.
+- **PAO**: period after opening, the open-jar symbol with a month count on cosmetic labels. Home: 10.
+- **PAR**: pixel aspect ratio; one pixel's width divided by its height. Home: 13.
+- **Parabolic reflector**: a deep, focusable reflector giving a specular centre with soft edges. Home: 15.
+- **Parade**: three side-by-side waveforms for red, green and blue. Home: 16.
+- **Paradox of the active user**: users start using software without reading instructions. Home: 02.
+- **Parafoveal vision**: the region from about 1 to 5 degrees around fixation that supplies the reading preview. Home: 02.
+- **Parallax**: the apparent shift of nearer objects against farther ones as the camera moves. Home: 12, 13, 14, 22.
+- **Paraphrase test**: asking a person to restate a policy or consent in their own words to check comprehension. Home: 10.
+- **Parenting**: making one layer inherit another layer's transform. Home: 13.
+- **Pareto principle**: a minority of causes produces most of the effects, popularised as 80 to 20. Home: 02.
+- **Parity audit**: a twice-yearly comparison of every Figma component and property against its code counterpart. Home: 07.
+- **Parkinson's law**: work expands to fill the time available. Home: 02.
+- **Parole in libertà**: "words in freedom", the Futurist practice of setting type at angles and mixed sizes as sound and speed. Home: 01.
+- **Partnership ads**: Meta's ads run from a creator's handle, the brand's or both, labelled "Paid partnership with"; formerly branded content ads. Home: 17, 19.
+- **Partnership Ads Hub**: the area of Ads Manager that lists creator posts tagging a brand or its catalogue products. Home: 17.
+- **Partytown**: a library that moves third-party tag scripts into a web worker, off the main thread. Home: 21.
+- **Parvenus**: Han, Nunes and Drèze's wealthy buyers with a high need for status, who want loud branding. Home: 18.
+- **Passing off**: the common-law wrong of misrepresenting goods or services as another's. Home: 04, 22.
+- **Passive white space**: leftover space that serves no grouping, isolation or framing purpose. Home: 05.
+- **Passkey**: a FIDO credential stored on a device or in a password manager and confirmed with a biometric or the screen lock; written in lower case. Home: 09, 10.
+- **Pastiche**: imitation of a style's surface without its reason; Jameson's "blank parody". Home: 01.
+- **Path tracer**: a renderer that follows random light paths through each pixel. Home: 13.
+- **Patricians**: Han, Nunes and Drèze's wealthy buyers with a low need for status, who want quiet signals only peers can read. Home: 18.
+- **Pattern**: a named, reusable solution to a recurring design problem, stated as a context, a problem with its forces and a solution, and linked to larger and smaller patterns (Alexander); in interaction design it carries its when, anatomy, variants and pitfalls. Home: 09, 27.
+- **Pattern interrupt**: a deliberate break in an expected pattern that triggers an orienting response. Home: 02, 16, 17.
+- **Pattern language**: Alexander's format of named patterns, each with context, problem, solution and links. Home: 28.
+- **Pattern library**: documented solutions to recurring interface problems, each built from components. Home: 07.
+- **PBR**: physically based rendering; a shading model that uses measured material properties. Home: 13, 22.
+- **PCG**: procedural content generation; Unreal Engine's rule-based placement of geometry. Home: 13.
+- **PDF/UA**: ISO 14289, the standard for universally accessible PDF. Home: 11.
+- **PDF/X**: the ISO 15930 family of print-exchange PDF subsets; X-1a is flattened CMYK, X-4 keeps transparency and ICC colour, X-6 is based on PDF 2.0. Home: 26.
+- **PDF/X-1a**: a print PDF standard allowing only CMYK and spot colour, flattened. Home: 20.
+- **PDF/X-4 (ISO 15930-7)**: the print-exchange PDF standard that embeds all fonts and keeps transparency live. Home: 03, 18, 20.
+- **PDF/X and output intent**: the ISO 15930 print-exchange subsets of PDF, and the embedded profile that names the press condition a file is separated for. Home: 04.
+- **PDPL (Saudi Arabia)**: Saudi Arabia's Personal Data Protection Law, enforced since September 2024. Home: 21.
+- **PDPL (UAE)**: the UAE Personal Data Protection Law, Federal Decree-Law No. 45 of 2021, which treats biometric data as sensitive. Home: 22.
+- **Peak**: the single scroll-linked sequence that carries a page's idea. Home: 12.
+- **Peak-end rule**: remembered experience judged mainly by its most intense moment and its end, with its length neglected (duration neglect). Home: 02, 08, 18.
+- **PEAT (Photosensitive Epilepsy Analysis Tool)**: the free flash analyser from the Trace Research and Development Center, University of Maryland, which tests video against the WCAG flash thresholds. Home: 11, 16, 26.
+- **Peeking**: checking a fixed-horizon test repeatedly and stopping at the first significant result, which inflates false positives. Home: 08.
+- **PEFC**: Programme for the Endorsement of Forest Certification, a forest certification scheme parallel to FSC. Home: 20.
+- **Pencil**: the D&AD award, in Black, Yellow (or White for Impact), Graphite and Wood, with shortlist below. Home: 19, 23.
+- **Pencil, hold and challenge**: an informal booking interest, a reservation of dates, and another production's request for the same dates that forces a confirm or release. Home: 14.
+- **Pending state**: a submitted request awaiting a server or human decision, which can persist for days. Home: 06.
+- **Penetration**: the share of category buyers who buy a brand in a period. Home: 18.
+- **People of determination**: the UAE's official term for persons with disabilities since April 2017. Home: 11.
+- **Perceived affordance**: Norman's earlier term for the action possibility a user perceives on screen, later replaced by signifier. Home: 02.
+- **Perceptual duration**: the time a spring takes to visually arrive, stable as bounce changes (Apple's duration parameter, equal to response). Home: 12.
+- **Perceptual learning module**: Kellman's training format of many short classification trials with immediate feedback; the model for the two-second pair drill. Home: 00, 27.
+- **Perceptual load theory**: Lavie's account in which a demanding task filters out distractors and an easy one admits them. Home: 02.
+- **Perceptual map**: a 2 by 2 grid plotting brands on two attributes. Home: 18.
+- **Perceptual pattern**: Kholmatova's term for the descriptive qualities that carry brand and feel (colour, type, tone, motion). Home: 07.
+- **Perceptual span**: the region of text used during one fixation. Home: 02.
+- **Perceptual tests**: the two-second, squint, cover the logo, flip, grey, print it out, phone at arm's length, thumbnail, mute, overnight, other-room, in-feed, shelf, in-situ, competitor wall and swap checks (4.8). Home: 23.
+- **Perceptual uniformity**: the property that equal numeric distances in a space look like equal visual distances. Home: 04.
+- **Perfect binding**: a glued-spine binding that consumes part of the inside margins. Home: 05, 20.
+- **Performance Max**: Google's campaign type that serves one asset group across Search, Display, YouTube, Discover, Gmail and Maps. Home: 26.
+- **Performance standard**: the one-page rule set for a luxury client's paid variants, signed with the media team. Home: 19.
+- **Performative type**: type that behaves by rules in response to sound, data, input or time, so the identity performs anew each time it runs. Home: 12, 27.
+- **Period-after-opening symbol**: an open-jar icon showing how many months a cosmetic lasts once opened. Home: 20.
+- **Perlin noise**: Ken Perlin's 1985 gradient noise. Home: 13.
+- **Permanent Account Number (PAN) and GSTIN**: India's 10-character tax identifier and 15-character Goods and Services Tax Identification Number. Home: 06.
+- **Permanent redirect (301)**: a server rule that sends an old URL to its new address and passes its search signals. Home: 18.
+- **Permission priming**: the app's own screen (Apple's pre-alert screen) shown before the OS permission dialogue to explain the benefit. Home: 09, 10.
+- **Perpetual intermediate**: Cooper's term for the user who stays in the middle of the skill curve, for whom defaults are designed. Home: 09.
+- **Persistence of vision**: a discredited explanation of film motion by retinal afterimages. Home: 02.
+- **Persona**: an archetypal user with goals, built from interviews and research to settle arguments about the user (Cooper); in voice design, the character the system speaks as. Home: 09, 28.
+- **Persona, proto-persona, thinking style**: a fictional individual representing a segment; a persona drafted from team assumptions before research; Indi Young's description of a person's reasoning in a context. Home: 08.
+- **Persona spectrum**: Microsoft's mapping of one ability across permanent, temporary and situational limitations. Home: 11.
+- **Personal data (PII), special category data**: information that identifies a person directly or in combination; the GDPR's protected classes such as health, religion, ethnicity and biometric identification. Home: 08.
+- **Personalisation (--p)**: the Midjourney parameter that biases outputs towards an operator's rating history or a moodboard profile. Home: 22.
+- **Personality rights**: the Indian courts' term for a person's control over commercial use of their identity. Home: 22.
+- **Phantom array effect**: flicker artefacts seen during eye movements across high-frequency flickering light. Home: 02.
+- **Phantom equity**: a cash bonus that tracks the value of shares without issuing them. Home: 24.
+- **Phase and polarity**: the time relationship between two signals, and the sign of a waveform. Home: 15.
+- **Pheras and baraat**: the circling of the sacred fire at a Hindu wedding, and the groom's procession. Home: 14.
+- **Phi phenomenon**: objectless motion seen between two alternately flashing lights. Home: 02.
+- **Phonetic search**: a trademark search on how a name sounds. Home: 18.
+- **Phonological loop, visuospatial sketchpad and episodic buffer**: the verbal, visual-spatial and integrating stores of Baddeley and Hitch's working memory model. Home: 02.
+- **Photo mode**: TikTok's swipeable multi-image post with music. Home: 17.
+- **Photoboard**: a storyboard made from photographs. Home: 14.
+- **Photogram**: a camera-less image made by laying objects on photographic paper and exposing it to light. Home: 01.
+- **Photogrammetry**: reconstruction of a 3D mesh from photographs taken around an object. Home: 13, 22.
+- **Photomontage**: cut photographs recombined to make a new image and argument. Home: 01.
+- **Photon mapping**: caching light paths from the lights as photons so focused light resolves quickly. Home: 13.
+- **Photosensitive epilepsy**: epilepsy in which seizures are triggered by flashing light or regular patterns. Home: 11.
+- **Photosite**: one light-sensitive cell of a sensor. Home: 14.
+- **Phototypesetting**: setting type photographically on film, which freed letterspacing and size from metal. Home: 01.
+- **Phulkari**: Punjabi "flower work" embroidery. Home: 23.
+- **Physical availability**: how easy a brand is to find and buy where and when the buyer looks. Home: 01, 18.
+- **Physical pixel**: one addressable light element on a panel. Home: 06.
+- **Pictorial mark**: a logo drawn as a recognisable object. Home: 18.
+- **Picture lock**: the point after which the edit's picture stops changing and sound, grade and graphics proceed. Home: 00, 16, 19, 24.
+- **Picture superiority effect**: better memory for pictures than for words. Home: 02.
+- **Pigment foil**: a non-metallic coloured foil. Home: 20.
+- **Pilot**: in Dan Mall's method, a real product feature used to build and prove the first components of a system. Home: 07.
+- **PIMS**: India's Paper Import Monitoring System, which requires registration before paper imports. Home: 20.
+- **Pin**: holding an element fixed for a stretch of scroll while a sequence plays. Home: 12.
+- **PIN code**: India's 6-digit postal index number. Home: 10.
+- **Pinball pattern**: nonlinear scanning of complex search results pages, bouncing between results and page features. Home: 02.
+- **PINT AE**: the structured e-invoice format of the UAE eInvoicing Programme. Home: 24.
+- **Pitch fee**: a fee paid for pitch creative, credited against fees on award. Home: 24.
+- **Pitch theatre**: the agency ritual of branded rooms, reveals and chemistry films in a pitch, which the house declines in favour of the lean deck. Home: 19, 24.
+- **Pitch to learn**: a lean, hour-capped pitch entered to understand a category, with the learning written up. Home: 24.
+- **Pitch to win**: a fully resourced, theatrical pitch entered to win the account. Home: 24.
+- **Pivot**: the value around which a contrast change is centred. Home: 16.
+- **Pixel grid**: alignment of screen layout to whole device pixels and a 4 or 8 px unit. Home: 05.
+- **Pixel map**: the native pixel resolution of an LED wall: wall width in millimetres divided by the pitch. Home: 05, 13, 26.
+- **Pixel pipeline**: style, layout, paint, composite; the stages a frame passes through. Home: 12.
+- **Pixel pitch**: the distance in millimetres between adjacent LED centres on a wall; it sets native resolution and minimum viewing distance. Home: 05, 15, 16, 20, 23, 26.
+- **Pixel snapping**: placing element edges on whole device pixels so hairlines and text render crisply. Home: 05, 06.
+- **Pixels per em**: the number of device pixels across a font's em square at a given size. Home: 28.
+- **PKL (packing list)**: the DCP file that lists every asset with its hash. Home: 16.
+- **Place brand**: an identity for a city, region or development, often built before the place exists. Home: 18.
+- **Placeholder text**: example text inside an empty field that vanishes on typing; never a substitute for a label. Home: 06, 10.
+- **Placement asset customisation**: Meta's option to give each ad placement its own asset. Home: 17.
+- **Plain language**: writing a person can understand on the first read and act on. Home: 10.
+- **Plakatstil**: the German object poster of one product, one brand name and flat colour. Home: 01.
+- **Planar tracking**: tracking a flat surface by its texture so it can be replaced or removed. Home: 13, 16.
+- **Planimetric frame**: Bordwell's term for a camera square to a back wall with figures arranged like a frieze. Home: 05, 28.
+- **Plastisol**: PVC-based screen ink that sits on top of fabric and feels plastic. Home: 20.
+- **Plate**: a clean photograph or shot of a location, background or element made for compositing. Home: 14, 22.
+- **Platform accessibility API**: the operating-system interface (UI Automation, NSAccessibility, AT-SPI, AccessibilityNodeInfo) through which assistive technology reads the accessibility tree. Home: 11.
+- **Platform generative enhancements**: features by which ad platforms generate or alter delivered creative (expansion, text variations, animation, music). Home: 22.
+- **Platform idea**: a campaignable idea that runs for years and absorbs product news, seasons and cultures without changing its sentence. Home: 19.
+- **Play principle**: Rand's idea, after Huizinga, that work made as a game inside rules carries life. Home: 28.
+- **Playable direction**: a direction that gives the actor a thought or task to play. Home: 14.
+- **Playblast**: a quick viewport render at real timing, used for layout and simulation review. Home: 13.
+- **Plique-à-jour**: translucent enamel held in an open metal frame like stained glass. Home: 01.
+- **PLP, PDP**: product listing page (a grid of products in a category) and product detail page (one product). Home: 09.
+- **Plural categories**: the CLDR set (zero, one, two, few, many, other) a language uses for counted nouns. Home: 10.
+- **PMC kernel**: Octane's unbiased kernel built for difficult caustic light paths. Home: 13.
+- **PMS (property management system)**: a hotel's operations software. Home: 07.
+- **PO (purchase order)**: the client's written commitment to pay for defined work, issued before work starts. Home: 24.
+- **Point (pt, Apple platforms)**: Apple's layout unit, mapped to physical pixels through the device scale factor. Home: 05, 06, 12.
+- **Point and pica**: the units of type measurement: the digital (DTP) point is 1/72 inch, and the pica is 12 points, or 1/6 inch. Home: 03.
+- **Point of difference**: the one attribute a brand claims that the alternatives in its frame cannot. Home: 18.
+- **Pointer capture**: routing all of a pointer's events to one element until release (`setPointerCapture`), so a drag continues outside it. Home: 12.
+- **Poka-yoke**: Shigeo Shingo's term for mistake-proofing a process so that an error cannot be made or cannot pass undetected. Home: 09.
+- **Polar pattern**: a microphone's sensitivity by direction: omni (all round), cardioid (rejects the rear), supercardioid and hypercardioid (narrower, with a small rear lobe), figure-of-eight (front and back). Home: 15.
+- **Polariser**: a filter that cuts reflections from non-metallic surfaces and darkens sky. Home: 14.
+- **Polki**: uncut, flat-cut diamonds, usually set in kundan. Home: 01, 28.
+- **Polyhierarchy**: an item placed under more than one parent in a hierarchy. Home: 09.
+- **Polymorphic component**: a component that can render as a different element through an as, asChild or render prop. Home: 07.
+- **Pop Art**: art that takes consumer goods, advertising and comics as its subject. Home: 01.
+- **Pop caption**: captions whose words appear one or two at a time with motion. Home: 17.
+- **Popover**: a small overlay anchored to its trigger that closes on outside click or Escape. Home: 06.
+- **Popover API (`popover` attribute)**: the HTML `popover` attribute, which gives top-layer display, light dismiss and focus return without JavaScript. Home: 07, 21.
+- **Porte-cochère**: a covered drive-up entrance to a hotel or building. Home: 20.
+- **Portfolio strategy**: deciding which brands to hold, fold, and where each sits on price and audience. Home: 18.
+- **Poseurs**: Han, Nunes and Drèze's buyers with a high need for status and no means, the market for counterfeits. Home: 18.
+- **POSH Act**: India's Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013, which requires an Internal Committee in offices of 10 or more. Home: 24.
+- **Positioning**: the place a brand occupies in the buyer's mind relative to alternatives. Home: 18.
+- **Positioning statement**: the testable format "for [buyer], [brand] is the [frame] that [difference] because [proof]". Home: 18.
+- **Positive and negative polarity**: dark text on a light ground, and light text on a dark ground, which causes halation (light text appearing to bleed into the ground) for many readers with astigmatism. Home: 02.
+- **Post-consumer and pre-consumer fibre**: recycled fibre from used products against fibre from mill and converter offcuts. Home: 20.
+- **Post Directly to Profile**: an Instagram Plus feature that publishes to the grid or Highlights without showing the post in followers' feeds. Home: 17.
+- **Post-structuralism**: the theory (Derrida, Barthes) that meaning is made by the reader and a text can be read in layers. Home: 01.
+- **Postel's law**: be conservative in what you send and liberal in what you accept. Home: 02.
+- **Poster frame**: the still an app preview shows before playback; Apple defaults it to 5 s in. Home: 26.
+- **Posterisation**: tones collapsed into flat bands, from clipping or too few code values. Home: 16.
+- **PostScript**: Adobe's page description language (1984), which describes type as scalable outlines. Home: 01.
+- **Posture (foldable device)**: a foldable's hinge state, such as tabletop (half-folded horizontally) or book (half-folded vertically). Home: 06.
+- **Posture (product)**: Cooper's classification of a product by how it occupies attention: sovereign, transient, daemonic, auxiliary. Home: 09.
+- **POUR**: WCAG's four principles: perceivable, operable, understandable, robust. Home: 11.
+- **Power distance**: Hofstede's measure of how far less powerful people accept unequal power. Home: 23.
+- **Power window**: a geometric mask that confines a correction. Home: 16.
+- **ppi**: pixels per inch, the density of an image at its printed size; distinct from dpi, the printer's dot density. Home: 00, 20, 26.
+- **PPM (pre-production meeting)**: the meeting at which boards, cast, locations, wardrobe and schedule are approved before a shoot. Home: 19, 24.
+- **PPM book**: the document signed at the pre-production meeting: treatment, boards, cast, locations, wardrobe, props, schedule, budget, usage and delivery list. Home: 14, 19.
+- **PPWR**: the EU Packaging and Packaging Waste Regulation, Regulation (EU) 2025/40. Home: 20.
+- **PQ (perceptual quantiser)**: the absolute HDR transfer function of SMPTE ST 2084. Home: 13, 16.
+- **PQ and HLG**: the two HDR transfer functions, Perceptual Quantizer and Hybrid Log-Gamma, that map signal to brightness on HDR displays. Home: 00.
+- **PR (public relations)**: earned media, press office and reputation work. Home: 24.
+- **Practical**: a visible light source in the frame. Home: 15.
+- **Prägnanz**: the visual system's preference for the simplest, most regular interpretation, formalised as the minimum principle (simplest description) and the likelihood principle (most probable cause). Home: 02.
+- **Pre-light**: lighting and rigging a set the day before the shoot. Home: 14.
+- **Pre-mortem**: Gary Klein's exercise of imagining a project has already failed and listing why, before it starts. Home: 19, 23.
+- **Pre-test**: measuring an advertisement's branding, attention, emotion and message take-out before it runs. Home: 08.
+- **Preattentive processing**: parallel analysis of simple features across the visual field before attention. Home: 02.
+- **Precedent library**: the stock of prior solutions an experienced designer carries and recognises as applicable (Lawson). Home: 27.
+- **Precomp**: a composition used as a layer inside another composition. Home: 13.
+- **Predicted-attention tool**: software that draws a saliency heatmap from a model trained on eye-tracking data. Home: 05.
+- **Predictive back**: Android's back gesture, which previews the destination as the finger moves and commits on release. Home: 06, 09, 12.
+- **Preference test**: participants choose between options and explain why; it rewards the familiar, so it is read with care. Home: 08, 18.
+- **`prefers-color-scheme` and `prefers-reduced-motion`**: media queries for the user's colour scheme and motion preferences. Home: 21.
+- **`prefers-reduced-motion`**: the CSS media query through which a user asks for less motion; the house treats the reduced variant as a designed state. Home: 00.
+- **Preflight**: an automated check of a file against print requirements. Home: 20.
+- **Preheader**: the preview line an email client shows after the subject, written deliberately. Home: 10, 21.
+- **Preinventive structure**: a mental form produced before any meaning is assigned to it (Finke, Ward and Smith). Home: 27.
+- **Preload**: a `link rel="preload"` hint that fetches a critical resource early. Home: 21.
+- **Preload and preconnect**: early fetch of a named resource; early connection to a host. Home: 03.
+- **Premier**: the head of a couture atelier, who holds the craft authority in fittings. Home: 28.
+- **Premium strategy**: being best in a category, compared and proved, as distinct from luxury's incomparability (Kapferer and Bastien). Home: 18.
+- **Premultiplied alpha**: colour already multiplied by the alpha against a background colour. Home: 13.
+- **Presbyopia**: age-related loss of near focus, near universal from the mid-forties. Home: 11.
+- **Presbyopia and senile miosis**: the age-related loss of near focus as the amplitude of accommodation (focusing range in dioptres, the reciprocal of focal distance in metres) falls, and the age-related narrowing of the pupil. Home: 02.
+- **Press check**: approving the first sheets off the press against the signed proof, at the printer. Home: 00, 23.
+- **Press pass**: approving the first good sheets at the press before the run. Home: 20.
+- **Previs (previsualisation)**: pre-visualisation; a rough moving sketch of a film made before the shoot to test framing, pace and coverage. Home: 00, 13, 14, 17, 22, 28.
+- **Price on request**: a PDP that replaces Add to bag with enquiry, appointment, reservation or WhatsApp actions. Home: 21.
+- **Price parity**: the same total on the booking page as in the ad or metasearch listing that sent the person there. Home: 09.
+- **Price realisation**: the share of sales at full price and the average discount depth. Home: 18.
+- **Primacy effect**: the pull of options listed first. Home: 08.
+- **Primary and secondary correction**: whole-frame correction of exposure, white balance and contrast (primary), then targeted correction through qualifiers that isolate a colour range and power windows that isolate a shape (secondary). Home: 00.
+- **Primary generator**: the single strong idea an architect chooses early to narrow the problem enough to start (Darke, Lawson). Home: 27.
+- **Prime (mark)**: the mark for feet, inches, minutes and seconds (U+2032, U+2033). Home: 03.
+- **Prime lens and zoom lens**: a lens of fixed focal length, and one of variable focal length. Home: 14.
+- **Primitive (layer)**: an unstyled building block (box, stack, text, visually-hidden, focus ring) beneath components. Home: 07.
+- **Principal display panel (PDP)**: the face of a package shown to the consumer at retail, whose area sets the minimum letter heights in Indian labelling law. Home: 20, 26.
+- **Principle**: a statement that forbids something and can be cited to send work back; a value is an aspiration that forbids nothing (after Bret Victor). Home: 27.
+- **Print condition**: one of the ISO 12647-2 classes of stock and process, PC1 to PC8. Home: 20.
+- **Print film emulation**: reproducing the response of a projection print stock. Home: 16.
+- **Printer light**: one step of red, green or blue light used by a film lab to time a print; offset is its digital equivalent. Home: 16.
+- **Prior use**: in Indian trademark law, an earlier unregistered use that can defeat a later registration. Home: 18.
+- **Priority guide**: a plain text list of what a screen must say and do, in order of importance, written before layout. Home: 10.
+- **PRO**: performing rights organisation, which collects performance royalties for compositions. Home: 15.
+- **Probe lens**: a long, thin macro lens that places the viewpoint inside a scene. Home: 14.
+- **Problem statement**: a framing of a need without a solution. Home: 08.
+- **Process trailer and low-loader**: low trailers carrying the picture car, so talent can act while a driver tows. Home: 14.
+- **Processing fluency**: the subjective ease of processing, misattributed to liking and truth. Home: 02.
+- **Procrastiworking**: Hische's term for the work done while avoiding assigned work, read as a clue to a vocation. Home: 28.
+- **Product detail page (PDP)**: the page for one product with its specification, price and purchase action. Home: 05, 10, 21.
+- **Product listing page (PLP)**: the product listing page, a collection or category grid. Home: 05, 21.
+- **Product-market fit, PMF survey**: a product retaining a core of users who need it; Sean Ellis's question, with 40 percent "very disappointed" as his threshold. Home: 08.
+- **Product semantics**: the study of how a product's form communicates its use and meaning (Krippendorff and Butter, 1984). Home: 01.
+- **Product tour**: a sequence of overlays with "next" that explains an interface before it is used. Home: 09.
+- **Product trio**: Torres's product manager, designer and engineer who interview customers together weekly. Home: 08, 28.
+- **Production bible**: the single folder from which a stranger could deliver the job: brief, approvals, releases, licences with expiry dates, call sheets, specs, references, vendors. Home: 19.
+- **Production blocking**: the loss of ideas in interacting groups caused by waiting to speak (Diehl and Stroebe). Home: 27.
+- **Productive and expressive motion**: IBM Carbon's split between subtle task motion and motion reserved for occasional important moments. Home: 12.
+- **Professional indemnity**: insurance against claims of error or omission in professional work. Home: 24.
+- **Programmatic DOOH**: screen time bought through automated platforms such as Vistar Media, Broadsign and Moving Walls. Home: 26.
+- **Programme**: Gerstner's set of rules and parameters that generates many correct solutions to a family of problems. Home: 05, 27.
+- **Progress principle**: the finding that progress in meaningful work is the strongest daily motivator (Amabile and Kramer). Home: 27.
+- **Progressive disclosure**: showing the few things most people need first and the rest on request. Home: 02, 09.
+- **Progressive enhancement**: building the baseline rendering for every browser and layering the better one on where supported. Home: 06, 21.
+- **Projection**: computing where a released gesture would stop under deceleration, to decide its destination. Home: 12.
+- **Proletarians**: Han, Nunes and Drèze's buyers with neither the means nor the need to signal status. Home: 18.
+- **Promoted Channels**: WhatsApp's paid visibility for channels in the directory. Home: 17.
+- **Prompt folklore**: stock phrases copied between prompt-sharing communities ("8k, masterpiece") that pull outputs towards the 2022 look. Home: 22.
+- **Proof-of-display**: time-stamped and geo-tagged photographs proving an OOH site ran the campaign. Home: 20.
+- **Proof of play**: the network's log that each DOOH spot ran. Home: 26.
+- **ProPhoto RGB**: a D50 editing space with imaginary primaries covering more than the visible gamut; 16 bit only. Home: 04.
+- **Proportion**: the relation of parts to each other and to the whole. Home: 05.
+- **Proportioned script**: Ibn Muqla's system that measures Arabic letters in rhombic dots against the alif. Home: 01.
+- **ProRes**: Apple's family of intra-frame editing and mastering codecs. Home: 16.
+- **ProRes 422 HQ**: Apple's high-bitrate intermediate codec for editing and grading. Home: 22.
+- **ProRes 4444**: Apple's high-quality video codec with an alpha (transparency) channel, used for graphics delivered over picture. Home: 00, 18.
+- **Prospect-refuge theory**: Appleton's account of the preference for an open view from a sheltered position. Home: 02.
+- **Protanopia, deuteranopia, tritanopia (and the anomalous forms)**: absence or shift of the L (red), M (green) or S (blue) cone; deutan is the most common, tritan is rare and not sex linked. Home: 04.
+- **Protect lines**: crop guides for each delivery ratio marked on the master and the monitor. Home: 17, 26.
+- **Protect zone**: the area of a master image that every crop must keep. Home: 05.
+- **Prototype**: a specific, resolved build that tests a known question; a sketch is quick, cheap, disposable and ambiguous (Buxton). Home: 27.
+- **Prototypicality**: how typical an object is of its category. Home: 02.
+- **Proun**: El Lissitzky's term for his abstract spatial compositions, "projects for the affirmation of the new". Home: 01.
+- **Provocation**: de Bono's tool of stating something absurd and moving from it to an idea. Home: 19.
+- **Proximity**: grouping of elements that are close together; by the pure distance law, grouping probability falls exponentially with the ratio of competing spacings. Home: 02, 05.
+- **Proxy**: a lightweight copy of camera media for editing, relinked to the original at conform. Home: 14, 16.
+- **Pseudo-localisation (pseudo-locale)**: a test build or fake locale (Android `ar-XB`, Xcode's right-to-left pseudolanguage) in which strings are mechanically lengthened, marked or mirrored to expose truncation, hard-coded text and layout breaks. Home: 06, 10.
+- **Pseudonymisation**: replacing identities with codes, with the key held separately. Home: 08.
+- **PsF**: progressive segmented frame; a progressive frame carried as two fields of the same instant. Home: 13.
+- **PSO**: ProzessStandard Offsetdruck, the Fogra and bvdm process control standard built on ISO 12647-2. Home: 20.
+- **PSU**: public-sector undertaking, a government-owned company in India. Home: 07.
+- **Psychological safety**: a shared belief that a team is safe for interpersonal risk, the condition for candid error reporting (Edmondson). Home: 27.
+- **Public liability**: insurance against injury or damage to third parties. Home: 24.
+- **Publication bias**: the under-reporting of null results, which inflates published effect sizes. Home: 02.
+- **Publicity principle**: a policy is acceptable only if its maker would defend it in public. Home: 02.
+- **Pull quote**: an extract from the text set large to draw the browsing reader. Home: 05.
+- **Pull to refresh**: dragging a list down past a threshold to reload it. Home: 06.
+- **Pulli**: the Tamil dot that kills the inherent vowel. Home: 03.
+- **Pulse-width modulation (PWM)**: dimming an LED by switching it on and off rapidly, a cause of visible flicker. Home: 02, 15.
+- **PUR binding**: binding with polyurethane reactive glue, stronger and more flexible than hot-melt. Home: 20.
+- **Purkinje shift**: the move of peak sensitivity from about 555nm in photopic (daylight) vision through mesopic levels to about 507nm in scotopic (night) vision, which darkens reds first. Home: 02, 04.
+- **Purpose-built software**: Linear's term for productivity software designed for one way of working, set against flexible tools. Home: 27.
+- **Purpose-led advertising**: campaigns built on a social cause. Home: 01.
+- **Purpose string**: the sentence an app supplies for the OS permission dialogue (NSCameraUsageDescription and siblings on iOS). Home: 10.
+- **Push-through acrylic**: acrylic letters pushed through a routed metal face and lit from behind. Home: 20.
+- **PVD**: physical vapour deposition, a hard metallic coating bonded to steel. Home: 20.
+- **PWA**: progressive web app, a website installable from the browser through a web manifest and a service worker. Home: 26.
+
+## Q
+
+- **Q**: the width of an EQ band; a higher Q is narrower. Home: 15.
+- **QA (quality assurance)**: checking a deliverable against its specification before release. Home: 23, 24.
+- **QBR (quarterly business review)**: a quarterly meeting with the decider on results, learning, roadmap and relationship health. Home: 24.
+- **QC (quality control)**: the check of every delivered file against its specification and approved version. Home: 14, 16, 22.
+- **QC pass**: the quality-control check of a delivered file for black frames, audio peaks and caption sync. Home: 00.
+- **QPR (quarterly platform release)**: an Android feature update between major versions. Home: 06, 07.
+- **Qualifier**: a selection of pixels by hue, saturation and luminance. Home: 16.
+- **Qualifying Activities**: the activities listed in UAE Ministerial Decision No. 265 of 2023 whose income a Qualifying Free Zone Person may earn from non-free-zone persons at 0 percent. Home: 24.
+- **Qualifying Free Zone Person**: a UAE free zone entity taxed at 0 percent on qualifying income only, which excludes most agency fees from mainland and foreign clients. Home: 24.
+- **Qualitative research, quantitative research**: finding why and how by direct observation; measuring how many and how much. Home: 08.
+- **Quality factor**: the ratio of image ppi to screen lpi, usually 1.5 to 2. Home: 20.
+- **Quality rating (WhatsApp)**: Meta's score for a business phone number, lowered by blocks and reports, which sets its messaging limits. Home: 09.
+- **Query fan-out**: an AI search feature issuing several sub-queries and surfacing a wider set of links. Home: 21.
+- **QuickTime gamma shift**: the lifted look of a BT.709 file in Apple's colour-managed players, which decode it near gamma 1.96. Home: 16.
+- **Quiet hours**: the local-time window outside which non-urgent messages are held (house default 09:00 to 21:00). Home: 10.
+- **Quiet luxury**: unbranded, high-material clothing whose status only insiders can read; the 2023 cycle. Home: 01.
+- **Quiet zone (barcode)**: the blank margin a barcode needs on each side, measured in X-dimensions. Home: 20, 21, 26.
+- **Quiet zone (image)**: a calm area of an image, such as sky or wall, kept to carry type. Home: 05.
+- **Quotation idea**: Abloh's practice of making a borrowing explicit with visible quotation marks or credit. Home: 01.
+
+## R
+
+- **RACI**: a matrix naming who is responsible, accountable, consulted and informed for each deliverable. Home: 10, 24.
+- **Rack focus**: shifting focus between subjects within a shot. Home: 14.
+- **Radial balance**: elements arranged around a central point. Home: 05.
+- **Radical Candor**: Kim Scott's frame of caring personally while challenging directly; its failures are ruinous empathy, obnoxious aggression and manipulative insincerity. Home: 23.
+- **RAG (status flag)**: a red, amber or green status flag in a report. Home: 24.
+- **Rag (typography)**: the profile of the ragged edge of unjustified text. Home: 03, 23.
+- **Rage clicks**: rapid repeated clicks on one spot, a sign of frustration in session replays. Home: 08.
+- **RAIL**: Google's Response, Animation, Idle, Load performance model. Home: 12.
+- **Rainbow spreadsheet**: Tomer Sharon's synthesis grid of observations against colour-coded participants. Home: 08.
+- **Raised surfaces (dark mode)**: the convention, from Material Design's dark theme guidance, of making higher surfaces lighter, because shadows cannot show depth on a dark ground. Home: 04.
+- **RAL**: the German colour standard for paints and powder coatings. Home: 18.
+- **Random entry**: de Bono's tool of forcing a connection with an unrelated word or object. Home: 19.
+- **Range selector**: the part of a text animator that sweeps the effect across characters, words or lines. Home: 13.
+- **Rank**: the dimensionality of a LoRA adaptation, commonly 8 to 32. Home: 22.
+- **Ranked trade-off**: a principle set written as "X over Y" pairs and ranked, so the higher principle wins a collision (after the Agile Manifesto). Home: 27.
+- **Rapid serial visual presentation (RSVP)**: showing words or pictures one at a time at a fixed point. Home: 02.
+- **Rasa**: in the Natya Shastra, an aesthetic emotion the audience tastes; eight classical rasas, with shanta (peace) added later; the vidaai, the bride's farewell, is the classic karuna moment. Home: 23.
+- **Rasterising and compositing**: turning outlines into pixel coverage; painting glyph bitmaps into the frame. Home: 03.
+- **Rate card**: the published hourly or daily price per role and seniority. Home: 24.
+- **Ratio family**: a band of format aspect ratios that shares one master layout. Home: 05.
+- **Ratio of looking to making**: the house weekly split of about 30 percent looking, 50 percent making, 20 percent reflecting. Home: 27.
+- **Ratio token**: an aspect-ratio value (`ratio.portrait` 4:5) that media slots accept, so art direction crops to a system ratio. Home: 07.
+- **RAW**: sensor data recorded before debayering, with white balance and ISO as adjustable metadata. Home: 14.
+- **Raw mode (--raw)**: the Midjourney setting that reduces its default beautification. Home: 22.
+- **Ray depth**: the number of refraction or reflection bounces a renderer follows. Home: 13.
+- **Rayograph**: Man Ray's name for his photograms. Home: 01.
+- **RCCB**: residual current circuit breaker, which cuts the supply on an earth leak. Home: 15.
+- **RCM (DaVinci YRGB Color Managed)**: Resolve's colour-managed project mode. Home: 16.
+- **RCS Business Messaging**: Google's rich messaging channel for businesses on Rich Communication Services, with cards and suggestion chips. Home: 09, 10.
+- **Reach**: the number of unique accounts that saw content. Home: 17.
+- **React Server Components**: React's model of components rendered on the server with no client JavaScript. Home: 07, 21.
+- **Read deck**: the version of a deck built to be read alone on a phone or screen, without a presenter. Home: 05.
+- **Readability**: the ease of reading and understanding continuous text. Home: 02.
+- **`reading-flow`**: a CSS property that makes focus order follow the visual order of a grid or flex layout. Home: 05.
+- **Reading level**: a proxy for comprehension, measured in English by grade-level formulas. Home: 10.
+- **Readymade**: an existing object made into a work by recontextualising it (Duchamp, then Abloh). Home: 01, 27, 28.
+- **Realisation**: fee invoiced divided by hours logged multiplied by the rate-card rate. Home: 24.
+- **Reason to believe**: the two or three specific, checkable proofs that support the proposition. Home: 18, 19.
+- **Rebrand**: a change to the identity, from a refresh to a replacement of name, mark or system. Home: 18.
+- **Rec. 709**: the ITU-R BT.709 standard for HD and SDR video, its gamut and transfer, displayed at gamma 2.4 for grading. Home: 13, 14, 15, 16, 22, 23.
+- **Rec.709-A**: a Resolve output tag that makes Apple's players show a file as graded. Home: 16.
+- **Rec. 709 and Rec. 2020**: the ITU colour standards for HD (709) and ultra-HD and HDR (2020) television, which fix the primaries and gamut a grade is delivered in. Home: 00, 04.
+- **Rec. 2020 (BT.2020)**: ITU-R BT.2020, the wide-gamut primaries defined for ultra-HD television and used for HDR. Home: 13, 16.
+- **Recce**: the location visit before a shoot at which plates, measurements and the sun path are recorded. Home: 14, 15, 22.
+- **Receivables ageing**: unpaid invoices grouped by days outstanding. Home: 24.
+- **Recipe**: in Frost's ecosystem, a composition of core components for a specific product or context, which can graduate into the core. Home: 07.
+- **Reciprocal**: in dynamic symmetry, the line from a corner perpendicular to the diagonal. Home: 05.
+- **Reciprocity**: the tendency to repay what one receives. Home: 02.
+- **Recognition over recall**: Jakob Nielsen's heuristic that interfaces show options so users need not remember them. Home: 02, 11.
+- **Recognition-primed decision**: Klein's model in which an expert matches a situation to a stored pattern and acts on the first workable option. Home: 00, 27.
+- **Red flash threshold**: the WCAG limit for flashes involving saturated red. Home: 11.
+- **Red-team prompt**: a deliberate attempt to make a system fail, used to find invented prices, availability or policies before release. Home: 22.
+- **Redlines**: annotated measurement overlays drawn on a static design export, replaced by live inspection and tokens. Home: 06.
+- **Redundancy effect**: impaired understanding when the same information is presented twice in different forms. Home: 02.
+- **Reference (act)**: taking one identified element from a source and placing it in a new context where it carries a new meaning. Home: 01.
+- **Reference-first**: the habit of choosing three to five canon references with the borrowed thing named before any build. Home: 00.
+- **Reference library**: a filed, tagged, retrievable collection of references, with an articulation line and a source for each. Home: 00.
+- **Reference monitor**: a calibrated display fed by a video output card, on which grading decisions are made. Home: 16.
+- **Reference render**: the locked cut as an H.264 with burned-in timecode, sent with every turnover. Home: 16.
+- **Reflection-in-action**: Schön's term for thinking about the work while doing it, so each move responds to the last. Home: 00, 27.
+- **Reflexive thematic analysis**: Braun and Clarke's later form of thematic analysis that treats the researcher's interpretation as the instrument and rejects reliability scores. Home: 08.
+- **Reflow (SC 1.4.10)**: WCAG 1.4.10, the requirement that content fits a 320 CSS px wide viewport without horizontal scrolling. Home: 05, 11, 26.
+- **Refresh log**: the dated table of every refresh pass, the files touched, what moved and the trigger. Home: 00.
+- **Refresh rate (LED)**: how many times a second the LED drivers redraw the wall; 3,840 Hz or more avoids scan bands on camera. Home: 26.
+- **Refreshable braille display**: a device with a row of electronically raised pins that renders text as braille. Home: 11.
+- **Register**: the formality and vocabulary of a language variety, such as shuddh Hindi, everyday Hindustani or MSA. Home: 10, 23.
+- **Registered custom property**: a CSS custom property declared with `@property`, giving it a type, an initial value and inheritance behaviour. Home: 07.
+- **Registered emboss**: an emboss aligned to printed or foiled art. Home: 20.
+- **Registration black**: 100 percent of all four process inks, for printer's marks only. Home: 20.
+- **Registration drift**: printing plates landing slightly out of alignment, which blurs edges built from several inks. Home: 03.
+- **Registry**: a distribution source from which a CLI (shadcn) copies components into a project, including private GitHub registries. Home: 07.
+- **Regression**: a saccade back to earlier text. Home: 02.
+- **Rehook**: a new reason to keep watching placed inside a film. Home: 17.
+- **Rehoused lens**: vintage stills glass in a cinema barrel. Home: 14.
+- **Relative colour syntax**: CSS that derives a colour from another (`oklch(from var(--x) calc(l - 0.08) c h)`). Home: 07.
+- **Relative grounds for refusal**: objections to a trademark arising from conflict with an earlier mark. Home: 18.
+- **Relative luminance**: the brightness of a colour on a scale from 0 for black to 1 for white, the basis of WCAG contrast and flash tests. Home: 04, 11.
+- **Relative retention**: YouTube's comparison of a video's retention with videos of similar length across YouTube. Home: 17.
+- **Release**: the signed consent of a person to be photographed or filmed, with the usage terms. Home: 19.
+- **Release order (RO)**: an agency's written booking of a press insertion. Home: 20.
+- **Relighting**: changing the apparent light on a photographed subject after the fact. Home: 22.
+- **Relink**: matching each proxy to its original by file name, reel name and timecode. Home: 16.
+- **Rem**: the CSS unit relative to the root font size, 16px by default. Home: 06.
+- **Rembrandt lighting**: a key high and to one side so that a triangle of light falls on the shadow cheek. Home: 15, 22.
+- **Remote associates**: distant associations reachable from a cue; the Remote Associates Test asks for the word linking three others (Mednick). Home: 27.
+- **Remote pilot certificate (RPC)**: India's drone pilot qualification issued through DGCA-authorised training organisations. Home: 14.
+- **Remove until it breaks**: hiding elements one at a time until the idea or function fails, then restoring the last. Home: 23.
+- **Rendering intent**: the rule applied to out-of-gamut colours during an ICC conversion; perceptual compresses the whole gamut smoothly, relative colorimetric keeps in-gamut colours and clips the rest, absolute colorimetric also preserves the source white for paper simulation, saturation maximises saturation without regard to accuracy. Home: 04.
+- **Repeater**: the shape operator that duplicates a shape with an incremental transform. Home: 13.
+- **Repertoire category**: a category where buyers rotate among several brands. Home: 18.
+- **Reph**: the form of ra written as a hook above the Devanagari headline when it opens a conjunct. Home: 03, 18.
+- **Replication crisis**: the failure of many published findings to reproduce in larger, preregistered studies. Home: 02.
+- **Reporting tier (WCAG 3)**: one of six cumulative levels in the draft's reporting model, from avoiding physical harm to Gold. Home: 11.
+- **Reposts (Instagram)**: reposted Reels and posts kept in a separate profile tab and credited to the original (reported August 2025). Home: 17.
+- **Representational fit**: the preference for objects placed where they are normally seen, bowls low and chandeliers high. Home: 02.
+- **Representational momentum**: the forward displacement of a moving object's remembered final position. Home: 02.
+- **`requestAnimationFrame` (rAF)**: the browser callback that runs once before each frame is painted. Home: 12.
+- **RERA**: India's Real Estate (Regulation and Development) Act 2016 and the state Real Estate Regulatory Authorities it created; section 11(2) requires the project registration number in every advertisement, and section 12 makes the promoter liable for false statements in it. Home: 09, 10, 17, 18, 19, 20, 21, 22, 23.
+- **RERA and Trakheesi**: India's state real estate regulators' project registration, and Dubai's real estate advertising permit. Home: 14.
+- **Research operations (ResearchOps)**: the people, process and tooling that let research run at scale and be reused. Home: 08.
+- **Research plan**: the one-page, client-signed statement of decision, questions, method, participants, schedule and budget. Home: 08.
+- **Research question**: an open question the team needs answered, pursued through interview questions about specific episodes and kept out of the moderator's script. Home: 08.
+- **Reserved Font Name**: a name an OFL font's author protects from use by modified versions. Home: 03.
+- **Residual code**: a sign fading from a category. Home: 18.
+- **Residual current device (RCD)**: a safety switch that cuts power when current leaks to earth. Home: 14.
+- **Residual, dominant and emergent codes**: the three tiers of a category's codes in commercial semiotics: fading, the current normal, and rising. Home: 19.
+- **Resistance**: the daily avoidance of creative work (Pressfield). Home: 27.
+- **Resolution**: the sense that a piece arrives and ends. Home: 23.
+- **Resolver document**: the DTCG file that declares sets, modifiers and resolution order for producing token values per context. Home: 07.
+- **Response**: Apple's spring parameter, the undamped period in seconds (2π / ω0). Home: 12.
+- **Responsive Design, Time**: the After Effects feature that fixes intro and outro frames while a MOGRT's hold stretches. Home: 13.
+- **Responsive display ad (RDA)**: the Google Ads format that assembles uploaded images, logos and text into display units of any size. Home: 26.
+- **Responsive layout**: one layout that reflows fluidly across widths. Home: 05.
+- **Responsive logo suite**: one mark drawn at several levels of detail for different sizes. Home: 18.
+- **Responsive web design**: layouts that reflow to fit any screen width (Ethan Marcotte, 2010). Home: 01.
+- **Restraint**: choosing fewer elements, effects and words than the maker could. Home: 23.
+- **Result direction**: asking an actor for an outcome (a look, a smile) in place of a playable thought or action. Home: 14.
+- **Result direction and playable verbs**: result direction asks an actor for an emotion ("be sad"); a playable verb gives an action the actor can do ("to reassure") (Weston). Home: 00.
+- **Retainer**: a fixed monthly fee for an agreed scope or capacity. Home: 24.
+- **Retention curve (product)**: the share of a cohort still active at each later period. Home: 08.
+- **Retention curve (video)**: the share of starting viewers still watching at each moment of a video. Home: 00, 02, 17.
+- **Retirement notice**: the text that replaces a retired section's body for one quarter, giving the reason and the replacement. Home: 00.
+- **Retopology**: rebuilding a sculpted or scanned mesh as a clean, animatable one. Home: 13.
+- **Revenue per head**: annual fee revenue, excluding pass-through costs, divided by total headcount. Home: 24.
+- **Reversal**: de Bono's tool of taking the opposite of the category convention. Home: 19.
+- **Reverse charge**: the tax mechanism in which the buyer of an imported service accounts for the GST or VAT. Home: 22.
+- **Reversed (knocked-out) type**: light type printed by leaving paper unprinted inside a solid. Home: 03.
+- **Reversing shortening factor**: the CSS Transitions rule that a transition reversed mid-flight runs back over a proportionally shorter time. Home: 12.
+- **Review mining**: systematic coding of public reviews for themes and vocabulary. Home: 08.
+- **Revival**: adopting a period style as a whole because its values are wanted again. Home: 01.
+- **Rework rate**: hours spent after client approval divided by total hours. Home: 24.
+- **RFC**: request for comments, a short written proposal for an API or alias change opened for review before build. Home: 07.
+- **RFI (request for information)**: a buyer's request for credentials, size, clients, process and finances. Home: 24.
+- **RFP (request for proposal)**: a buyer's request for scope and price, sometimes with creative. Home: 24.
+- **RGB parade**: three waveforms side by side, one per colour channel. Home: 14.
+- **RGBWW**: fixtures that mix red, green, blue, warm white and cool white emitters. Home: 15.
+- **RHQ (regional headquarters) programme**: the Saudi rule, in force since 1 January 2024, tying government contracts to an in-Kingdom regional headquarters. Home: 24.
+- **Rhythm**: the pattern of repetition and interval across a page, sequence or edit. Home: 05, 23.
+- **Rhythm graph**: a plot of shot duration against time for a whole film, produced in shot-for-shot analysis. Home: 00.
+- **RICE**: reach times impact times confidence, divided by effort. Home: 08.
+- **Rich black**: a black built with cyan, magenta and yellow under the black ink, for large solid areas only. Home: 03, 20, 23, 26.
+- **Rich black and registration black**: black ink supported by other inks for a deeper solid (neutral default C60 M40 Y40 K100), and 100 percent of all four inks, for printer's marks only. Home: 04.
+- **Rider**: the contract's list of a talent's on-set requirements. Home: 14.
+- **Right of publicity**: the US state-law right to control commercial use of one's identity. Home: 22.
+- **Right-to-left (RTL)**: a script direction, as in Arabic, in which layout and directional motion mirror. Home: 05, 07, 10, 12.
+- **Right-to-left (RTL) mirroring**: reflecting a layout and its directional components for Arabic and other right-to-left scripts. Home: 06.
+- **Rigid box**: a set-up box of wrapped greyboard that does not fold flat. Home: 20.
+- **Rim light**: a source directly behind the subject that outlines it. Home: 15.
+- **Ring flash**: a circular flash around the lens that flattens shadow. Home: 01.
+- **RIP (raster image processor)**: the software that converts a PDF into plate or printer data. Home: 03, 20, 26.
+- **Ripomatic**: existing footage from references cut to a script to show pace and tone, for internal use only. Home: 19.
+- **Riser**: a sound that climbs in pitch or density into a cut. Home: 13.
+- **Riser, hit, whoosh, sub, texture**: trailer sound-design elements (a rising build, an impact, a passing air sound, a sub-bass boom, a continuous tonal layer). Home: 15.
+- **Risk assessment**: the 1st AD's written list of a shoot's hazards and their controls. Home: 14.
+- **Risk register**: a per-project list of risks with likelihood, impact, owner, mitigation and trigger. Home: 24.
+- **Risograph**: a stencil duplicator introduced by Riso Kagaku in 1986, valued for misregistration and soy-ink texture. Home: 01, 20.
+- **RITE**: rapid iterative testing and evaluation, changing the design between sessions. Home: 08.
+- **Rive**: a design tool and runtime for interactive vector animation driven by state machines. Home: 13, 21.
+- **River**: a vertical white channel through justified text. Home: 03, 23.
+- **RLM**: the right-to-left mark (U+200F), an invisible character that sets direction so punctuation sits correctly in Arabic subtitles. Home: 26.
+- **`robots.txt`**: the file that tells crawlers what they may fetch. Home: 21.
+- **Roll fold**: successive panels rolled inward, each slightly narrower. Home: 20.
+- **Roll-up**: a free-standing printed banner that retracts into a base cassette. Home: 05.
+- **Rolling shutter**: row-by-row sensor readout that skews fast motion. Home: 14.
+- **Room tone**: the recorded background sound of a space, laid continuously under a scene. Home: 14, 15, 22, 23.
+- **Room tone and wild lines**: a recording of a location's ambient silence, laid under cuts (room tone), and dialogue recorded without picture (wild lines). Home: 00.
+- **Root rectangle**: a rectangle whose long side is the square root of an integer times its short side. Home: 05.
+- **Rosette**: the circular pattern of AM halftone dots seen under a loupe. Home: 20.
+- **Rostrum camera**: a camera fixed above a flat table for frame-by-frame filming of artwork. Home: 28.
+- **ROT**: redundant, outdated and trivial content, the target of a content audit. Home: 09, 10.
+- **Roto**: rotoscoping; isolating a subject from footage frame by frame with masks or a model. Home: 13.
+- **Rough cut**: the first structured edit after the assembly, in which order, length and music are set. Home: 16, 19.
+- **Round**: one consolidated set of client feedback on one presented stage, answered with one revised presentation. Home: 19, 24.
+- **Rove across time**: a spatial keyframe that AE places in time to keep speed constant along a path. Home: 13.
+- **Roving tabindex**: a focus technique where only the active item in a composite widget has `tabindex="0"` and arrow keys move it. Home: 07, 11.
+- **Row**: a horizontal division of the live area. Home: 05.
+- **Royalty relief**: valuing a brand as the licence fee its owner avoids paying by owning it. Home: 18.
+- **RPwD Act**: India's Rights of Persons with Disabilities Act 2016, recognising 21 specified disabilities. Home: 11.
+- **RRT (Reference Rendering Transform)**: the ACES scene-to-display rendering shared by every output. Home: 16.
+- **RTO (return to origin)**: a cash-on-delivery order refused at the door and shipped back. Home: 09.
+- **Rubber banding**: diminishing movement past an edge so the boundary is felt as resistance. Home: 12.
+- **Rubric anchor**: the written description that fixes a score to an observable behaviour. Home: 00.
+- **Rule of six (Murch)**: Murch's weighting of what a cut must serve: emotion 51 percent, story 23, rhythm 10, eye-trace 7, two-dimensional plane 5, three-dimensional space 4. Home: 00, 16, 17, 23, 27, 28.
+- **Rule of thirds**: placing a focal point on the lines dividing a frame into thirds, only weakly related to rated quality. Home: 02, 05.
+- **RUM**: real-user monitoring, field performance data collected from visitors' browsers. Home: 21.
+- **Run and gun**: shooting reactively with minimal kit and no lit setups. Home: 14.
+- **Run of show**: the minute-by-minute script of an event, with cues and owners. Home: 15, 24.
+- **Running head**: a title repeated at the top or bottom of each page. Home: 05.
+- **Runt**: a single word or part of a word alone on the last line of a paragraph or headline. Home: 23.
+- **Runtime CSS-in-JS**: libraries (styled-components, Emotion) that inject styles while the page renders. Home: 07.
+- **Ruq'ah**: the quick, everyday Arabic hand. Home: 01.
+- **Rush surcharge**: a premium of 25 to 50 percent for compressing a timeline below the house minimum. Home: 24.
+- **Rushes**: the raw footage from a shoot. Home: 19.
+
+## S
+
+- **SAC (services accounting code)**: the GST classification code for services; agency services sit under heading 9983. Home: 20, 24.
+- **Saccade**: a rapid ballistic eye movement between fixations, started about 150 to 250ms after a new target appears (saccade latency), during which vision is suppressed (saccadic suppression). Home: 02, 06.
+- **Sachplakat**: the German term for the object poster of one product and one name. Home: 01.
+- **Saddle stitching**: binding with wire staples through the fold of nested sheets. Home: 05, 20.
+- **Safe area (print)**: the inset from trim inside which important content stays. Home: 20.
+- **Safe area (screen)**: the frame region a platform's interface overlays leave clear; text and the key action stay inside it. Home: 00, 06.
+- **Safe triangle**: hover-intent geometry that keeps a submenu open while the pointer moves diagonally towards it (Kamens, 2013). Home: 06, 09, 12.
+- **Safe zone**: the inner area of a format or frame kept free of text and logos because trim or a platform's own interface (captions, buttons, progress bar) would cover the rest. Home: 03, 05, 16, 17, 26.
+- **Salience**: the propensity to be thought of across buying situations, measured through category entry points. Home: 18.
+- **Salience network**: the brain system that switches between the default and executive networks. Home: 27.
+- **Saliency**: bottom-up conspicuity of a region, computed from local contrast in colour, intensity and orientation. Home: 02, 05.
+- **Same-day edit**: an event film edited on site and released within hours of the moment. Home: 16.
+- **SAML 2.0**: a single sign-on standard used by enterprise plans of documentation platforms. Home: 07.
+- **Sample rate and bit depth**: samples per second and bits per sample in digital audio. Home: 15.
+- **Sample ratio mismatch (SRM)**: a traffic split that departs from the design, signalling broken randomisation or tracking. Home: 08.
+- **Sampling bias, non-response bias, recall bias, survivorship bias, social desirability bias**: the people reached differ from the population; responders differ from non-responders; memory distorts frequency; only current customers answer; respondents give the admirable answer. Home: 08.
+- **Sanctioned deviation**: the house policy that lets a set piece leave the component set under the four conditions in 2.5. Home: 07.
+- **Sangeet**: the pre-wedding music night of a north Indian wedding. Home: 01.
+- **Satin stitch (satin column)**: long parallel embroidery stitches laid side by side to fill a narrow shape. Home: 18, 20.
+- **Satisficing**: accepting the first option that meets a threshold because full search is impossible (Simon). Home: 08, 27.
+- **Saturation**: the point at which new data stops producing new codes or themes. Home: 08.
+- **Saturation creep**: saturation rising by small increments across rounds. Home: 23.
+- **SBS**: solid bleached sulphate, a virgin white carton board. Home: 20.
+- **Scalable pixel (sp)**: Android's text unit, equal to dp until the user raises the system text size. Home: 06.
+- **Scale**: size relative to the format and to the other elements. Home: 05.
+- **Scam ad**: work made for awards and run once or never, which the house refuses to enter. Home: 19.
+- **Scarcity**: the higher value placed on what is rare or running out; supply-led scarcity comes from limited production, demand-led scarcity from other buyers. Home: 02.
+- **SCC**: Scenarist Closed Caption, the CEA-608 caption file format for US broadcast with 32 characters per row. Home: 26.
+- **Scene referred**: values that describe light in the scene, unbounded above white. Home: 16.
+- **Scent branding**: a signature fragrance diffused in a brand's spaces. Home: 18.
+- **Scheimpflug principle**: tilting the lens relative to the sensor angles the plane of focus. Home: 14.
+- **Schema**: an organised knowledge structure that lets many elements be handled as one. Home: 02.
+- **SCIM**: a standard for automated user provisioning between an identity provider and a tool. Home: 07.
+- **Scintillation**: the alternation of light and dark reflections as a gem turns. Home: 13.
+- **`@scope`**: CSS that limits rules to a subtree with an optional lower boundary. Home: 21.
+- **Scope creep**: the accumulation of small unpriced additions to agreed scope. Home: 24.
+- **Scoped view transition**: a view transition started on one element (`Element.startViewTransition()`, Chrome only) that leaves the rest of the page live. Home: 12.
+- **Scratch VO**: a rough voice-over read used only for timing. Home: 13.
+- **Screen magnifier**: software that enlarges part of the screen for low-vision users. Home: 11.
+- **Screen reader**: software that converts the accessibility tree into speech or braille and provides navigation commands. Home: 11.
+- **Screen ruling (lpi)**: the number of halftone lines per inch. Home: 20.
+- **Screener**: the questionnaire that admits or excludes candidate participants. Home: 08.
+- **Scrim (image overlay)**: a translucent gradient or flat layer that darkens or lightens an image behind text or an overlay. Home: 03, 04, 05.
+- **Scrim (modal backdrop)**: the translucent layer behind a modal that dims the page beneath. Home: 06, 07.
+- **Script supervisor**: the crew member tracking continuity, timings and take notes for the editor. Home: 14.
+- **Scroll chaining**: a nested scroll container passing its overscroll to the page, prevented with `overscroll-behavior: contain`. Home: 06.
+- **Scroll-driven animation**: CSS animations whose progress is bound to scroll or an element's passage through the viewport. Home: 12, 21.
+- **Scroll-jacking**: taking over scrolling so the page moves other than where the finger says. Home: 12.
+- **Scroll markers and buttons**: `::scroll-marker` and `::scroll-button()`, CSS-generated carousel dots and arrows; Chrome only as of October 2026. Home: 21.
+- **`scroll-snap`**: CSS that settles scroll on section or item boundaries. Home: 21.
+- **Scroll-state container query**: a container query on scroll state, such as stuck, snapped or scrollable (`container-type: scroll-state`, Chrome only). Home: 12.
+- **ScrollTrigger**: the GSAP plugin that binds a timeline to a scroll range with scrub, pin and snap. Home: 21.
+- **Scrub (scroll-scrubbed)**: linking an animation's progress directly to scroll position, optionally with a catch-up time. Home: 12.
+- **Sculpted die**: a hand-engraved brass emboss die with rounded, bevelled levels. Home: 20.
+- **Scumming**: ink printing in non-image areas when the ink and water balance fails. Home: 20.
+- **SDF**: signed distance field; each point stores its distance to the nearest surface. Home: 13.
+- **SDH**: subtitles for the deaf and hard of hearing, adding speaker identification, sound and music to dialogue. Home: 11, 26.
+- **Search landmark**: the `<search>` element or `role="search"`, which marks a search region for assistive technology. Home: 06.
+- **Second eye**: the reviewer, other than the operator, who checks every generated asset at 200 percent and can reject without explanation. Home: 22.
+- **Secondaries**: grading corrections limited to a qualified colour range or a shape (skin, product, sky). Home: 04.
+- **Secondary action**: a supporting move that reinforces the main one. Home: 12.
+- **Secondary correction**: a correction confined by a key, a window or both. Home: 16.
+- **Secondary meaning**: the United States term for a sign's acquired link, in the public mind, to one source. Home: 04.
+- **Section 508**: the US Rehabilitation Act provision setting ICT accessibility for federal agencies and their procurement. Home: 11.
+- **Section Rendering API**: Shopify's endpoint for re-rendering a section without a page reload. Home: 21.
+- **Sections, blocks and theme blocks**: Shopify's reusable page modules, the modules inside them, and blocks defined once for use across sections. Home: 21.
+- **Seductive details effect**: the harm to learning caused by interesting but irrelevant additions. Home: 02.
+- **Seed**: the integer that initialises the noise from which a diffusion model denoises; the same seed and settings reproduce the same output. Home: 22.
+- **Seeing as and seeing that**: the two readings of a sketch, figural possibility and non-figural fact, alternating during design (Goldschmidt). Home: 27.
+- **SEG**: silicone edge graphic, a printed fabric with a silicone edge inserted into a frame groove. Home: 20.
+- **SEG fabric**: silicone edge graphics, dye-sublimation printed fabric tensioned into frames for events and retail. Home: 04.
+- **Segmented control**: a row of connected buttons with one selected, for 2 to 5 mutually exclusive options. Home: 06.
+- **Selective attention**: following one source of information while registering little of others. Home: 02.
+- **Selects**: the 4 and 5 star clips pulled into a timeline. Home: 16.
+- **Semantic differential**: a rating scale between two opposite adjectives, such as calm to lively. Home: 02.
+- **Semantic HTML**: using the element that names the content, so structure exists before CSS. Home: 01, 21.
+- **Semantic network**: a map of how strongly concepts are linked in a person's memory (Kenett). Home: 27.
+- **Semantic token**: an alias token named for its role in the interface, resolving to a global value. Home: 04.
+- **Semantic versioning**: the major.minor.patch numbering scheme (also semver) in which major means breaking, minor additive and patch a fix; applied to brand guidelines as 1.0 at launch, 1.x for additions and 2.0 for a rebrand. Home: 07, 18.
+- **Semantics, syntactics, pragmatics**: Vignelli's three questions: what it means, how it is built, whether it works. Home: 27.
+- **Semi-structured interview**: a guided conversation in which the moderator may follow unplanned threads. Home: 08.
+- **Semiotics**: the study of signs and how meaning is made from them. Home: 01, 18.
+- **Sends**: shares of a post by direct message. Home: 17.
+- **Sends per reach**: sends divided by reach; on Instagram a primary signal for reach to non-followers. Home: 17.
+- **Sensemaking**: the social process of giving data meaning during synthesis (Kolko). Home: 27.
+- **Sensitivity review**: a pre-launch read by someone outside the team for religious, caste, regional, gender and national sensitivities. Home: 24.
+- **Sensor Overdrive**: the Alexa 35 Xtreme mode that reaches 660 fps at 11 stops of range. Home: 14.
+- **Sensory conflict theory**: motion sickness as a mismatch between visual and vestibular signals. Home: 02.
+- **Sentence case**: capitalising only the first word and proper nouns. Home: 10.
+- **Sequential (always-valid) testing**: an experiment design whose statistics stay valid under continuous monitoring. Home: 08.
+- **Serial (Oxford) comma**: the comma before "and" in a list of three or more. Home: 10.
+- **Serial order effect**: the finding that ideas produced later in a divergent session are rated more original than early ones (Beaty and Silvia). Home: 27.
+- **Serial position effect (primacy and recency)**: better memory for the first and last items of a list. Home: 02.
+- **Series**: a repeatable social format with a constant and a variable, where the format is the idea and each post an execution. Home: 17, 19.
+- **Serif types (hairline, slab, wedge, flared or glyphic)**: the family of serif constructions: hairline (thin, unbracketed), slab (heavy, square-ended), wedge (triangular), and flared or glyphic, which has no true serif because the stroke flares at its end as if incised in stone (Optima, Albertus, Trajan). Home: 03.
+- **Serious play**: Scher's working state, in which play is pursued with full seriousness of intent (2008 TED talk). Home: 28.
+- **Server-side tagging**: a tag container on a first-party subdomain that receives events and forwards them to each vendor. Home: 21.
+- **Service blueprint**: a map of service delivery from physical evidence and customer actions down through frontstage, backstage and support processes. Home: 08, 09, 18.
+- **Service worker**: a script the browser runs apart from the page, able to cache files and answer requests offline. Home: 09.
+- **Session replay**: reconstruction of individual visits from recorded page events. Home: 08.
+- **Set**: in a DTCG resolver, an ordered list of token source files. Home: 07.
+- **Set extension**: enlargement of a real shot beyond the built set or location. Home: 22.
+- **Set-off**: wet ink transferring to the sheet above it in the delivery pile. Home: 04, 20.
+- **Set piece**: an art-directed, bespoke section (campaign hero, scroll story) allowed outside the component set. Home: 07.
+- **Set-piece register**: the log of sanctioned set pieces with owner, page, reason and review date. Home: 07.
+- **Settling duration**: the time until a spring's movement is technically below threshold; longer and less predictable than perceptual duration. Home: 12.
+- **Seven stages of action**: Norman's one goal stage, three execution stages and three evaluation stages. Home: 02.
+- **Severity rating**: the S0 to S4 urgency scale, adapted from Nielsen's 0 to 4 usability scale; a default severity is the rating a craft tell carries before context moves it, and the S4 gate puts "not presentable" at the head of any verdict with an open S4. Home: 23.
+- **Shade**: the tint of a white paper, from blue white to natural white, cream and ivory. Home: 20.
+- **Shader**: a program run on the GPU per vertex or per pixel. Home: 13.
+- **Shadow catcher**: an invisible surface that receives only a CG object's shadow or reflection, for compositing over a plate. Home: 13.
+- **Shadow endorser**: a parent known to buyers and absent from the child brand's product and signage. Home: 18.
+- **Shadow gap**: a deliberate recess between materials that hides fabrication tolerance. Home: 20.
+- **Shahada**: the Muslim declaration of faith, carried on the Saudi flag. Home: 23.
+- **Shankha-pola**: conch and red coral bangles worn by married Bengali women. Home: 23.
+- **Shape layer**: AE's native vector layer of paths, fills, strokes and operators. Home: 13.
+- **Shape of AI categories**: Emily Campbell's six groups of AI interface patterns: Wayfinders, Inputs, Tuners, Governors, Trust builders and Identifiers. Home: 09.
+- **Shaping**: converting codepoints into positioned glyphs, including joining and reordering. Home: 03, 22.
+- **Shaping engine**: the software that joins Arabic letters and places Indic vowel signs. Home: 20.
+- **Share of search**: a brand's share of all search queries for the brands in its category, a leading indicator of market share. Home: 17, 18.
+- **Share of voice**: a brand's share of all advertising in its category. Home: 18.
+- **Shared axis**: Material's pattern in which outgoing and incoming views move along one axis with a fade. Home: 12.
+- **Shared-element transition**: one element that persists across two views and morphs from its place on the old screen to its place on the new. Home: 06, 12.
+- **Shayla**: the head scarf worn with the abaya in the Gulf. Home: 22.
+- **Sheetfed and web offset**: offset lithography on cut sheets or from reels of paper. Home: 20.
+- **Shell scheme**: an exhibition organiser's modular panel stand. Home: 20.
+- **Shemagh**: the red-and-white checked headcloth worn in Saudi Arabia and elsewhere in the Gulf. Home: 22.
+- **Shepard tone**: an auditory illusion of a pitch that seems to rise forever. Home: 28.
+- **Shift, unit and spot boys**: the Mumbai 12 hour working day, the whole crew, and the crew who supply tea, water, chairs and umbrellas. Home: 14.
+- **Shirorekha**: the headline stroke that joins the letters of a Devanagari word. Home: 03, 05, 10, 12, 13, 18, 27, 28.
+- **Shirorekha, matra and conjunct**: the Devanagari headline, a vowel sign, and a consonant cluster written as one combined glyph. Home: 02.
+- **Shop Pay**: Shopify's saved-details express checkout. Home: 21.
+- **Shopify Markets**: Shopify's per-market currencies, languages, domains or subfolders and duties within one store. Home: 21.
+- **Shoppable Reels**: Instagram Reels in which creators tag up to 30 catalogue products, launched 24 March 2026. Home: 17.
+- **Short lighting**: a key on the side of the face turned away from camera. Home: 14.
+- **Short-term loudness**: loudness measured over a sliding 3 second window. Home: 15.
+- **Shot-for-shot analysis**: a written list of every cut in a film with size, movement, lens estimate, light, duration and cut type, plus a rhythm graph. Home: 00.
+- **Shot list**: the setup-by-setup document of size, movement, lens, duration and frame rate. Home: 14.
+- **Shot ratio**: footage shot divided by footage used. Home: 14.
+- **Shot reverse shot**: alternating shots of two people in conversation, usually over the shoulder. Home: 16.
+- **Shotgun microphone**: an interference-tube microphone with a narrow forward pickup. Home: 15.
+- **Shoulder box**: a rigid box with a neck rising from the base onto which the lid closes. Home: 20.
+- **Shoulder, spine, stem, tail**: the arch leaving a stem; the curve of S; the main stroke; a descending finishing stroke. Home: 03.
+- **Show LUT**: a look-up table that carries one production's look across shots and days. Home: 00, 16.
+- **Shuddh Hindi**: Sanskritised Hindi vocabulary (आरक्षण, प्रवेश), kept for heritage and government-adjacent clients. Home: 10.
+- **Shutter angle**: exposure time multiplied by frame rate and by 360; a 180 degree shutter exposes for half the frame interval. Home: 13, 14, 15.
+- **Sibilance**: the hissing "s" and "sh" sounds of speech, concentrated at 5 to 8 kHz. Home: 15.
+- **Side sheet**: a panel that slides in from a screen edge on desktop for filters or detail while the page stays interactive. Home: 06.
+- **Sidebearing**: the space on either side of a glyph that sets its spacing before kerning. Home: 05, 27, 28.
+- **Sidecar**: a small file stored beside a video or master with the same base name, such as a caption file or the text record of how a generated asset was made. Home: 13, 22.
+- **Sidecar captions**: a separate timed caption file (SubRip SRT or WebVTT) uploaded with a video and drawn by the player. Home: 17.
+- **Sidecar record**: a small JSON file stored beside a generated asset's master with the same base name, recording tool, model, prompt, seed, references, rights and approver (22-ai-era-craft-and-generative-tools.md, section 6.11). Home: 00.
+- **Sidechain**: a processor input that lets one signal control the processing of another. Home: 15.
+- **Sieckmann criteria**: the CJEU's 2002 test that a sign's representation be clear, precise, self-contained, easily accessible, intelligible, durable and objective. Home: 04.
+- **Signalling theory**: the study of how hidden qualities are conveyed through observable signals. Home: 02.
+- **Signature**: a press sheet folded into a section of 4, 8, 16 or 32 pages. Home: 20.
+- **Significance level (alpha), statistical power**: the accepted false-positive rate; the chance of detecting a real effect of the chosen size. Home: 08.
+- **Significant social media intermediary**: under India's IT Rules, a platform with more than 5 million registered users in India, carrying extra due-diligence duties. Home: 22.
+- **Signifier**: Norman's term for the cue that shows where and how to act. Home: 02, 28.
+- **Signifier and signified**: Saussure's form of a sign and the concept it carries. Home: 18.
+- **Silence move**: a cut that drops all sound for 8 to 20 frames before a reveal or a line. Home: 15.
+- **Silver bullet**: a portfolio brand used to change the image of another. Home: 18.
+- **Silver retention**: a photochemical process that keeps silver in the print for deeper blacks and lower saturation. Home: 01, 28.
+- **SIM swap**: fraud in which an attacker has a phone number moved to a new SIM to receive its codes. Home: 09.
+- **Similarity**: grouping of elements that share colour, size, shape, weight or texture. Home: 02, 05.
+- **Simplex noise**: Ken Perlin's 2001 successor to Perlin noise, cheaper in higher dimensions. Home: 13.
+- **Simultaneous contrast**: a colour's appearance shifting toward the complement of its surround. Home: 02, 04.
+- **Sindoor**: the red powder in a married Hindu woman's hair parting. Home: 14.
+- **Singer sewing**: machine lockstitch sewing through the fold of a single section, thread visible. Home: 20.
+- **Single Ease Question (SEQ)**: a 7-point post-task rating of ease. Home: 08.
+- **Single idea sentence**: the one sentence, written as a feeling, that the idea is reduced to before any execution and that is carried on every document of the job; a house rule. Home: 19, 27.
+- **Single-line version**: a centre-line drawing of the mark for engraving, neon and foil hairlines. Home: 18.
+- **Single-minded proposition**: the one thing the work must leave in the audience's head, in one sentence of under 12 words. Home: 00, 19.
+- **Single-page application (SPA)**: a site that swaps content by script without full page loads. Home: 11.
+- **Single question**: the one question under twelve words asked before generating. Home: 27.
+- **Single symbol method**: Bass's discipline of carrying a film or company in one device, then varying it. Home: 28.
+- **Sip-and-puff**: a switch operated by inhaling or exhaling through a tube. Home: 11.
+- **Site of the Day (SOTD)**: Awwwards' daily award for the highest jury score, which can close early with at least 10 PRO (validated professional) votes. Home: 21, 23, 28.
+- **Sitemap**: an XML list of a site's URLs, up to 50,000 per file. Home: 21.
+- **Situational impairment**: a temporary limit imposed by context, such as glare, noise or a busy hand. Home: 11.
+- **Six Thinking Hats**: de Bono's method of separating kinds of thinking, such as critique (black hat) and generation (green hat). Home: 19.
+- **`size-adjust`**: the `@font-face` descriptor that scales a fallback font's glyph widths. Home: 21.
+- **`size-adjust`, `ascent-override`, `descent-override`, `line-gap-override`**: `@font-face` descriptors that fit a fallback's metrics to the web font's. Home: 03.
+- **`sizes` and `srcset`**: the attributes that list candidate image files and tell the browser the rendered width per breakpoint. Home: 21.
+- **Skeleton screen**: a placeholder that draws the layout's blocks in neutral grey before content arrives. Home: 00, 06, 09, 10, 12, 23.
+- **Sketch (design)**: in Buxton's sense, a quick, cheap, disposable and plentiful drawing made to suggest and explore, where a prototype is made to test. Home: 09.
+- **Sketch (Processing)**: Processing's name for a program, framing code as drawing. Home: 28.
+- **Skeuomorph**: a design that keeps cues from the material or tool it replaces as ornament. Home: 01.
+- **Skill (Figma agent)**: a markdown procedure triggered with a slash command in the Figma agent. Home: 07.
+- **Skin tone line**: the vectorscope line, at about 123 degrees, near which skin of every complexion falls. Home: 14, 16, 23.
+- **Skin tone line and vectorscope**: the scope that plots hue as angle and saturation as radius, and the narrow hue line on it, near the NTSC I axis, along which all human skin falls. Home: 04.
+- **Skip link**: the first focusable link on a page, jumping to the main content. Home: 11.
+- **Skip rate**: the share of views in which the viewer swipes away inside the first 3 seconds. Home: 17.
+- **SKU (stock keeping unit)**: one distinct product variant in a range. Home: 24.
+- **Slate (broadcast master)**: the identifying card at the head of a broadcast master (client, title, duration, version, audio layout, loudness). Home: 16.
+- **Slate (on set)**: the clapperboard that labels and syncs a take; a smart slate displays timecode. Home: 14, 15.
+- **Sleeking**: fusing foil onto toner with a laminator, for very short runs. Home: 20.
+- **Slip**: an error in which the goal is right and the action wrong: capture, description-similarity, mode and memory-lapse slips (Norman). Home: 09.
+- **Slipcase**: an open-ended board box a book slides into. Home: 20.
+- **Slot**: a Figma component property marking an area inside a component where instance content can be added and arranged without detaching. Home: 06, 07.
+- **Slow in and slow out**: more drawings near the poses than between them; the principle behind easing. Home: 12.
+- **Sludge**: friction that makes the beneficial choice harder. Home: 02.
+- **Slug**: the area outside the bleed that carries job information and is trimmed away. Home: 20.
+- **Slugline**: a screenplay scene heading in capitals. Home: 14.
+- **Slur and doubling**: a dot smeared in the direction of press travel, or printed twice slightly offset, each shown by a control patch. Home: 20.
+- **Small Business Relief**: the UAE election that treats a resident business with revenue of AED 3 million or less as having no taxable income. Home: 24.
+- **Small caps (real, faux, petite)**: drawn capitals at about x-height; scaled capitals; capitals at exactly x-height. Home: 03.
+- **Small idea done perfectly**: the luxury alternative to the big idea: a modest thought executed to an unmistakable standard. Home: 19.
+- **Small multiples**: a series of small charts on the same scale for comparison. Home: 01.
+- **Smart+**: TikTok's automated campaign type, which needs several distinct concepts. Home: 17.
+- **Smart Animate**: Figma's prototype transition that interpolates position, size and opacity between same-named layers in two frames. Home: 06, 12.
+- **Smart component**: in Frost's ecosystem, a component wrapped in business logic such as validation or analytics. Home: 07.
+- **Smart default**: a pre-filled value chosen from context that is right for most people and easy to change. Home: 09.
+- **Smash cut**: an abrupt cut between opposite states, quiet to loud or slow to fast. Home: 16.
+- **Smear**: a deliberately distorted in-between drawing that stands in for motion blur. Home: 13.
+- **SMILE and SCRATCH**: Alexandra Watkins's naming tests, five qualities a name should have and seven faults that rule it out. Home: 10.
+- **Smooth pursuit**: eye movement that keeps a moving object on the fovea, accurate up to about 30 degrees per second. Home: 02.
+- **Smooth scroll**: a library that intercepts wheel input and interpolates the scroll position each frame (Lenis in the house stack). Home: 12.
+- **SMS Retriever hash**: the 11-character app hash at the end of an Android OTP message that lets the app read the code without an SMS permission. Home: 10.
+- **Smyth sewing**: sewing signatures through their folds and to each other so the book lies flat. Home: 20.
+- **Snap point**: a position a scrubbed or dragged element settles to after input stops. Home: 12.
+- **Snapshot**: one rendered image of one story in one browser at one viewport, the unit Chromatic bills. Home: 07.
+- **Snoot, barn doors**: tube and hinged leaves that shape a hard beam. Home: 15.
+- **Social listening**: tracking brand and category mentions and sentiment across social platforms. Home: 08, 18.
+- **Social model of disability**: the view that disability arises from barriers in the designed environment. Home: 11.
+- **Social proof**: following what similar others do. Home: 02.
+- **Soft proofing**: on-screen simulation of an output profile, including paper colour and black ink. Home: 04.
+- **Soft-touch laminate**: a film with a velvety surface, prone to scuffing. Home: 20.
+- **Solarisation**: the partial reversal of tones caused by re-exposing a photograph to light during development. Home: 01.
+- **Soleau envelope**: a sealed, dated deposit at the French INPI that proves priority of creation; weaker than a trade mark. Home: 04.
+- **Solid drawing**: keeping forms consistent in three-dimensional space, with weight and volume. Home: 12.
+- **Solitary model**: one team builds the system for itself and others borrow it. Home: 07.
+- **Solus**: the only advertisement on a page. Home: 20.
+- **Sonic identity**: a brand's system of sound logo, theme, functional sounds, voice and usage rules. Home: 15.
+- **Sonic logo (sonic mark)**: a short, repeated audio signature, usually 1 to 3 seconds and rarely over 5, that identifies a brand without its name. Home: 01, 13, 15, 16, 18.
+- **Sonic token**: a named sound an interface plays with its file, duration and loudness. Home: 07.
+- **Sonnenschein's layers**: dialogue, ambience, effects and music, the four layers of a film mix (Sonnenschein, 2001). Home: 00.
+- **Soul ID**: Higgsfield's identity model, trained on photographs of one person. Home: 22.
+- **Sound bridge**: the next shot's sound starting before its picture. Home: 17.
+- **Sound Collection**: Meta's library of royalty-free music for Reels and ads. Home: 17.
+- **Sound hook**: a single recognisable real sound or a specific spoken line placed at frame one of a social cut. Home: 15.
+- **Sound-induced flash illusion**: one flash seen as two when accompanied by two beeps. Home: 02.
+- **Sound symbolism**: the link between speech sounds and meaning that holds across languages. Home: 18.
+- **Soundalike**: music commissioned to imitate a recognisable recording, arrangement or voice. Home: 15.
+- **Source of truth**: the single place a decision is stored, from which every other representation is generated. Home: 07.
+- **SOW (statement of work)**: the contract-grade description of one engagement under an MSA. Home: 24.
+- **sp and dp**: Android scale-independent and density-independent pixels; sp follows the user's font scale. Home: 03.
+- **Space light**: one overhead soft source over the whole set. Home: 15.
+- **Space-only stand**: bare exhibition floor for a custom build. Home: 20.
+- **Space pair**: a Utopia fluid spacing value that interpolates from one step at the smallest viewport to a larger step at the widest. Home: 07.
+- **Space-to-product ratio effect**: more empty space around displayed products raising their perceived appeal and the store's prestige. Home: 02.
+- **Spaced retrieval**: re-testing what was learned at growing intervals (1 day, 1 week, 1 month) to strengthen memory. Home: 00.
+- **Spaces (no-break, narrow no-break, hair, thin, figure, punctuation, zero-width)**: fixed-width spaces for units, punctuation and alignment. Home: 03.
+- **Spacing grid (8 point grid)**: the constraint of every dimension to multiples of a base unit. Home: 05.
+- **Spacing scale**: the finite set of permitted spacing values. Home: 05.
+- **Spark Ads**: TikTok's format for running organic posts as ads, the brand's own or a creator's with authorisation. Home: 17, 24, 26.
+- **Spatial agency bias**: the tendency to picture the actor on the side where reading starts, acting in the reading direction. Home: 02.
+- **Spatial frequency**: how fine a detail is, in cycles per degree of visual angle. Home: 04.
+- **Spatial interpolation**: the shape of a position keyframe's path in space. Home: 13.
+- **Spatial spring**: in Material 3 Expressive, a spring for position and size, which may overshoot. Home: 07, 12.
+- **Spatial zone**: a group of modules assigned one role. Home: 05.
+- **Spec work**: creative work done on speculation, without payment, usually in a pitch. Home: 23, 24.
+- **Specificity**: the degree to which a choice belongs only to this brand. Home: 23.
+- **Specimen**: a foundry's demonstration document for a face. Home: 03.
+- **Spectral power distribution (SPD)**: the energy of a light or reflected stimulus at each wavelength. Home: 04.
+- **Spectral renderer**: a renderer that computes colour by wavelength of light. Home: 13.
+- **Spectrum of distinctiveness**: the scale from generic to fanciful names that sets how strongly a trademark is protected. Home: 18.
+- **Specular highlight**: a mirror-like reflection of a light source whose structure, and agreement with the shading, signals gloss; positive skew in the luminance histogram raises perceived gloss. Home: 02, 16, 22.
+- **Specular reflection**: mirror-like return of the light source from a glossy surface. Home: 15.
+- **Speculation Rules**: the browser API that prefetches or prerenders likely next pages from a JSON rule block. Home: 12, 21.
+- **Speculative design**: design that imagines alternative futures in order to debate which is preferable. Home: 01.
+- **Speed graph**: the graph editor view of speed against time. Home: 13.
+- **Speed Index**: the lab metric integrating visual completeness over time from a filmstrip. Home: 21.
+- **Speed ramp**: a change of playback speed within a shot. Home: 14, 16.
+- **Speeder**: an unmoderated participant who finishes in under a third of the median time. Home: 08.
+- **SPF, DKIM and DMARC**: the three email authentication standards: SPF lists the servers allowed to send for a domain, DKIM puts a cryptographic signature on each message, and DMARC sets the domain's policy for mail that fails; Gmail and Yahoo require all three of bulk senders since February 2024. Home: 10, 21, 26.
+- **Spikes (YouTube)**: moments in a retention curve that were rewatched or shared. Home: 17.
+- **Spill**: coloured light from a green or blue screen reflected onto the subject. Home: 13.
+- **Split-attention effect**: added load when related information is separated in space or time. Home: 02.
+- **Split lighting**: a key at 90 degrees to the face, lighting one half. Home: 15, 22.
+- **Split screen**: two or more frames shown at once. Home: 16.
+- **Split screen copy**: the house overlay format of two halves, at most 4 words each, that land as one thought. Home: 17.
+- **Split toning**: tinting shadows and highlights with different hues. Home: 16.
+- **Split view**: two panes side by side in one window. Home: 05.
+- **SplitText**: the GSAP plugin that splits text into lines, words or characters for reveals. Home: 21.
+- **Sponsor tier**: a group of partner marks shown at one size, a fixed step from the other tiers. Home: 05.
+- **Sponsored Snaps**: Snapchat's ad delivered into the Chat inbox and opened like a Snap. Home: 26.
+- **Spot channel**: a separate channel or layer holding the art for one ink or finish (foil, UV, white), from which the finisher makes the die, block or screen. Home: 26.
+- **Spot colour**: a pre-mixed ink printed from its own plate, specified by a library such as Pantone. Home: 04, 20.
+- **Spot UV**: a gloss coating printed in register over part of the sheet. Home: 20, 23, 26.
+- **Spotlight**: Snapchat's short-video feed. Home: 17.
+- **Spotted pattern**: a scanning pattern of fixations on scattered salient or sought words. Home: 02.
+- **Spread**: two facing pages seen together, the unit of design in a bound publication. Home: 05.
+- **Spread of luxury model**: Chadha and Husband's five stages of luxury adoption in a society: subjugation, start of money, show off, fit in, way of life. Home: 00.
+- **Spread of the set**: how varied a generated set is across frames, palettes and layout skeletons; the house measure against collective narrowing. Home: 27.
+- **Spring (animation)**: motion computed each frame from a damped harmonic oscillator, with a target and a velocity in place of a duration. Home: 00, 12.
+- **Spring token**: a motion token defined by damping ratio and stiffness in place of a duration and a curve. Home: 07.
+- **Squash and stretch**: deformation under force with volume conserved; in interface, only press scale and rubber banding. Home: 12.
+- **Squint test**: blurring the eyes or zooming out to test whether a hierarchy survives. Home: 05, 18, 27.
+- **Squircle**: a corner drawn as a superellipse so curvature eases in from the straight edge. Home: 06.
+- **SRA**: supplementary raw format A, oversized sheets that allow bleed on A-size work. Home: 20.
+- **`srcset`**: the HTML attribute that offers the browser several sizes of one image. Home: 00.
+- **sRGB**: the standard web RGB colour space. Home: 23.
+- **sRGB and Adobe RGB (1998)**: the default screen space (IEC 61966-2-1) and the wider gamma 2.2 space used for photography headed to print. Home: 04.
+- **SRI, Subresource Integrity**: an `integrity` attribute holding a file's hash so the browser refuses a changed third-party script. Home: 21.
+- **SRT (SubRip)**: the plain-text caption format of numbered, timed cues with comma-separated millisecond timecodes. Home: 13, 16, 26.
+- **SRT and RTMP**: protocols for sending a live video feed over the internet. Home: 14.
+- **SSI**: spectral similarity index, the Academy measure (SMPTE ST 2122) comparing a source's spectrum with a reference. Home: 15.
+- **SSO (single sign-on)**: one identity login for every tool, the base of access control. Home: 07, 24.
+- **SSR, server-side rendering**: producing a page's HTML on the server before the browser hydrates it. Home: 21.
+- **ST map**: an image whose red and green values store each pixel's distorted position, used to redistort CG in comp. Home: 13.
+- **Stack and inline space**: vertical and horizontal space between siblings, applied by the parent. Home: 05.
+- **Stacked alpha**: colour and matte stored in one ordinary video and recombined in a shader. Home: 13.
+- **Stacking context**: a CSS layering scope from which children cannot escape whatever their z-index. Home: 05.
+- **Stage gate**: a review point with an owner and one yes-or-no question that funds the next stage. Home: 19.
+- **Stagger**: a per-item delay that turns a group entrance into a sequence. Home: 12.
+- **Stagger interval**: the delay between successive items starting their animation. Home: 07.
+- **Staging**: presenting one idea at a time so the eye knows where to look. Home: 12.
+- **Staging in depth**: placing action in foreground, middle ground and background of one frame. Home: 14.
+- **Stakeholder map**: the written record of decider, approvers, influencers, gatekeepers and users on an account. Home: 08, 24.
+- **Stand-in**: a person of similar height and colouring who holds an actor's marks while the set is lit. Home: 14.
+- **Stand-off**: a fixing that holds a sign letter or panel away from the wall. Home: 20.
+- **Standard dynamic range (SDR)**: the conventional video brightness range, mastered in BT.709 for HD. Home: 14, 17.
+- **Standard of taste**: Hume's term for the joint verdict of qualified judges. Home: 23.
+- **Standards document**: the two-page per-job instrument (objective, idea sentence, references, trash list, tokens, tests, examples of done) that lets a CD delegate without the standard falling. Home: 19.
+- **Standfirst (dek, sell)**: the summary between headline and body. Home: 05.
+- **Start and end frame**: two images between which a video model generates continuous motion. Home: 22.
+- **`@starting-style`**: CSS that sets an element's first style so it can transition in from `display: none`. Home: 21.
+- **STAT, fvar, gvar, avar**: OpenType tables for style attributes, axes and instances, outline deltas, axis mapping. Home: 03.
+- **State**: a named condition of a component that changes its appearance or behaviour. Home: 06.
+- **State audit**: a systematic check that every component renders every applicable state in every variant and mode. Home: 06.
+- **State diagram**: a diagram of the states an object can be in and the transitions between them (Harel statecharts). Home: 09.
+- **State layer**: Material's translucent overlay of the content colour that expresses hover, focus, pressed and dragged. Home: 06, 07, 12.
+- **State machine (Rive)**: in interactive animation, a set of states and transitions that respond to inputs, as used by Rive. Home: 01, 12, 13, 28.
+- **State matrix**: the table of states against variants used to design and audit a component. Home: 06, 07.
+- **Statement of partial conformance**: a WCAG declaration that a page would conform except for named third-party or uncontrolled content. Home: 11.
+- **Static phrase caption**: a full phrase that appears, holds and cuts to the next. Home: 17.
+- **Status (WhatsApp)**: WhatsApp's 24-hour Stories format. Home: 17.
+- **Status codes**: the verification marks used in 26-platform-and-format-specs-2026.md: V verified on the primary page, T third-party only, U unverified, H house rule, D derived from a V value. Home: 26.
+- **Status message**: a change announced to screen readers without moving focus (WCAG 4.1.3). Home: 10.
+- **Statutory zone**: the space reserved in a master layout for legally required marks and numbers. Home: 18.
+- **Steadicam**: a body-worn arm and sled that isolates the camera from footsteps. Home: 14.
+- **Stealth mode**: Midjourney's private generation mode, available on Pro and Mega plans. Home: 22.
+- **Steering law and menu aim**: movement time through a tunnel grows linearly with its length divided by its width, and menu aim keeps a submenu open while the pointer moves diagonally towards it. Home: 02.
+- **Stem**: a mix delivered as separate instrument or element groups. Home: 13, 15.
+- **Step-and-repeat**: an event backdrop of repeated logos for photographs. Home: 20.
+- **Step easing**: steps(n) holds that divide a duration into n equal jumps. Home: 12.
+- **Step-printing**: printing each film frame several times so that motion stutters. Home: 01.
+- **Stepper**: a minus, value and plus control for small numeric ranges. Home: 06.
+- **Steradian**: the unit of solid angle, used by WCAG to set the flashing area limit. Home: 11.
+- **Stevens effect**: perceived contrast increasing with luminance. Home: 02.
+- **Stevens's power law**: perceived magnitude equals a constant times intensity raised to a continuum-specific exponent. Home: 02.
+- **Sticky split**: a two-column layout in which a media column stays fixed while text sections scroll beside it. Home: 05.
+- **Stiffness**: the spring parameter for how strongly a spring pulls towards its target. Home: 07.
+- **Stills window**: time given to the photographer on a motion setup's light and talent. Home: 14.
+- **Sting**: a short logo animation that closes a film or marks a break. Home: 13.
+- **Stock edit**: a timed edit cut entirely from licensed stock footage to isolate editing skill from shooting. Home: 00.
+- **Stop**: a doubling or halving of light. Home: 14, 15.
+- **Story**: one rendered state of one component in Storybook. Home: 07.
+- **Story reel**: storyboard drawings timed to scratch dialogue and cut together as a rough film before animation. Home: 27.
+- **Story spine**: Pixar rule 4's structure: once upon a time, every day, one day, because of that, until finally. Home: 28.
+- **Storyboard**: a sequence of frames describing each shot's framing, lens and movement before the shoot. Home: 14, 22.
+- **Straight ahead and pose to pose**: frame-by-frame simulation, and key poses with in-betweens; in interface, springs and tweens. Home: 12.
+- **Straight alpha**: colour stored unmultiplied, with transparency held only in the alpha channel. Home: 13.
+- **Straight-lining**: giving the same answer down a grid of survey items. Home: 08.
+- **Strategic brand**: the portfolio brand that carries the future of the business. Home: 18.
+- **Streaming**: displaying a generated response as it is produced, token by token. Home: 09, 10, 22.
+- **Streaming state**: AI output arriving in pieces, with Stop replacing Send until it ends. Home: 06.
+- **Strict versus loose**: Kholmatova's axis for how much deviation a system tolerates. Home: 07.
+- **Strike-off**: a printed test of a colour on the actual fabric before the production run. Home: 04.
+- **String length budget**: the maximum character count a component can show at the smallest screen and largest type size, reduced for expansion. Home: 10.
+- **String table**: the externalised file of keys and strings per locale from which a product renders text. Home: 10.
+- **Stringout**: every select laid end to end in script or scene order. Home: 16, 23.
+- **Stripboard**: a schedule of one colour-coded strip per scene. Home: 14.
+- **Strobe**: studio flash, a short intense burst of light. Home: 15.
+- **Strobing**: the stepped look of fast motion at a low frame rate. Home: 13.
+- **Strong endorsement**: a clearly visible parent signature on a child brand, as in Courtyard by Marriott. Home: 18.
+- **Structure mapping**: analogy as the mapping of systems of relations between domains (Gentner). Home: 27.
+- **Structure of Intellect**: Guilford's model classifying intellectual abilities by operation, content and product into 120 cells. Home: 27.
+- **Structured content**: content stored as typed, reusable fields, so that one entry serves every surface. Home: 10.
+- **Structured data**: machine-readable facts about a page in the schema.org vocabulary. Home: 21.
+- **Struggling moment**: in JTBD, the circumstance in which the old way stops working. Home: 08.
+- **Studio crit**: the six-stage critique (present, clarify, observe, interpret, evaluate, suggest) after a silent look. Home: 23.
+- **Style guide**: written identity rules (logo, colour, type, voice, imagery) without working components. Home: 07.
+- **Style reference (`--sref`)**: the Midjourney parameter transferring palette, grain, light and finish from reference images or a code, weighted by --sw. Home: 07, 22.
+- **Styleframe**: a finished still frame that fixes a motion piece's look before animation begins. Home: 00, 13, 22, 27, 28.
+- **Styling**: cosmetic redesign of a product to drive sales without changing its function. Home: 01.
+- **Styling hooks**: Salesforce's published CSS custom properties (`--slds-g-` for global ones) that form its theming contract. Home: 07.
+- **Stylistic set and character variant (`ss01`, `cv01`)**: named alternate glyph groups and single-glyph alternates. Home: 03.
+- **Stylize (--s)**: the Midjourney parameter controlling how strongly its aesthetic prior applies. Home: 22.
+- **Sub-brand**: a named offer under a master brand with its own personality. Home: 18.
+- **Subdivision surface**: a smooth surface computed from a low-polygon cage (Catmull-Clark). Home: 13.
+- **Subgrid**: a CSS grid value that lets a child grid use its parent's tracks. Home: 05.
+- **Subsetting and `unicode-range`**: removing unused glyphs; declaring which codepoints a font file covers. Home: 03, 21.
+- **Substantial similarity**: the copyright test for whether an output copies a specific protected work. Home: 22.
+- **Subsurface scattering**: light entering a surface, scattering inside and leaving elsewhere (skin, wax, pearl). Home: 13.
+- **Subtraction**: removing elements until the piece breaks, then putting one back. Home: 27.
+- **Success criterion (SC)**: a single testable requirement in WCAG, such as SC 1.4.10 Reflow. Home: 05, 11.
+- **Suggestive mark**: a name that hints at a benefit and asks the buyer for a mental step. Home: 18.
+- **Summary judgment**: a ruling without trial because the material facts are not disputed. Home: 22.
+- **Sunk-cost fallacy**: letting unrecoverable past investment drive a future decision. Home: 23.
+- **Sunk cost rule**: the hours already spent on a route count for nothing in the decision to kill it. Home: 19.
+- **Sunny 16 rule**: in full sun, correct exposure is f/16 at a shutter of one over the ISO. Home: 14.
+- **Super**: text over picture, such as a name, a price or a legal line. Home: 13, 16.
+- **Super normal**: objects that disappear into use (Morrison and Fukasawa). Home: 27.
+- **Superfamily**: one design cut across sans, serif, mono, widths and scripts. Home: 03.
+- **Superiors and inferiors (`sups`, `sinf`)**: drawn superscript and subscript forms at the correct weight and height. Home: 03.
+- **Supersampling**: rendering above the delivery size and averaging pixels down, which removes aliasing. Home: 13.
+- **Superwhite**: signal above 100 percent on the waveform, up to 109 in legal-range video. Home: 14.
+- **Supplemental requirement (WCAG 3)**: a requirement beyond conformance that counts towards higher reporting tiers. Home: 11.
+- **SUPR-Q**: an 8-item questionnaire of website quality with usability, trust, loyalty and appearance sub-scales. Home: 08.
+- **Surlyn**: a heavy, glass-clear ionomer resin used for fragrance caps. Home: 20.
+- **Surrealism**: the movement founded by Breton's 1924 manifesto, defined as psychic automatism, thought dictated without the control of reason. Home: 01.
+- **Surrogate advertising**: an advertisement that appears to promote a permitted product in order to promote a restricted one, defined in the CCPA's 2022 guidelines. Home: 19.
+- **Sustainable Web Design model**: the method that estimates grams of CO2 per page view from transferred bytes. Home: 21.
+- **SVG**: Scalable Vector Graphics, the web's vector image format. Home: 01.
+- **SVGO**: an open-source optimiser that strips editor metadata from SVG files. Home: 21.
+- **Swadeshi**: the early twentieth-century movement to boycott British goods in favour of Indian-made ones. Home: 01.
+- **Swash**: a flourished alternate form of a letter, usually a capital or a terminal letter, kept for display sizes. Home: 03.
+- **Sweep (white sweep)**: a continuous backdrop of paper or a built cove curving from wall to floor so that no horizon or join shows; Avedon's white sweep is its portrait form. Home: 01, 14, 22, 28.
+- **Sweet spot**: the single viewpoint from which an anamorphic image holds. Home: 20.
+- **Swipe narrative**: a carousel in which each slide continues the image or sentence of the one before. Home: 17.
+- **Swiss binding**: a binding with the text block glued only to the back cover. Home: 20.
+- **Switch**: a sliding on-off toggle that applies its change at once. Home: 06.
+- **Switch access**: operating a device with one or more switches that step through and select items. Home: 11.
+- **Symbol (Peirce)**: a sign that means by convention alone, the basis of an abstract mark. Home: 18.
+- **Symmetric balance**: mirrored weight about a central axis. Home: 05.
+- **Symphony**: TikTok's generative creative suite of avatars, translation and dubbing. Home: 17.
+- **Sync licence (synchronisation licence)**: permission from the music publisher to set a composition to picture. Home: 15, 19, 24.
+- **Sync point**: a frame where picture and sound must coincide. Home: 13.
+- **Synchresis**: Chion's term for the bond the brain forms between a sound and an image that happen at the same moment. Home: 00.
+- **Synthetic-use release**: the house release, separate from the standard model release, that every talent signs before generation touches their face or voice (22-ai-era-craft-and-generative-tools.md, section 7.4). Home: 22.
+- **Synthetic users, digital twins, silicon samples**: model-generated stand-ins for research participants. Home: 08.
+- **Synthetically generated content (SGC)**: ASCI's term for AI-generated or AI-altered material in advertising, subject to its 2026 labelling guidelines. Home: 19, 24.
+- **Synthetically generated information (SGI)**: the term in India's IT Rules, as amended in 2026 (G.S.R. 120(E)), for audio, visual or audio-visual content artificially or algorithmically created or altered so that it appears authentic; it must carry a prominent label and provenance metadata. Home: 00, 02, 09, 15, 17, 22.
+- **SynthID**: Google's invisible watermark embedded in its image and video model outputs, detectable with Google's tools and independent of file metadata. Home: 00, 22.
+- **System 1 and System 2**: Kahneman's fast, intuitive mode of thought, in which taste judgements form, and the slow, deliberate mode. Home: 00, 02.
+- **System font stack**: a font-family list that renders each platform's own UI face at zero bytes. Home: 03, 21.
+- **System image**: everything a user can perceive of a system, from which the user's model is built. Home: 02.
+- **System Usability Scale (SUS), curved grading scale**: a 10-item questionnaire scored 0 to 100, average 68; Sauro and Lewis's percentile-based grades from A+ to F. Home: 08.
+- **Systems model**: Csikszentmihalyi's account of creativity as the interaction of person, domain and field. Home: 27.
+
+## T
+
+- **t0.1 and t0.5**: flash duration measured above 10 percent and above half of peak output. Home: 15.
+- **T-stop**: an f-number corrected for the lens's measured light transmission. Home: 14, 15.
+- **Tabby and Tamara**: Gulf instalment payment providers licensed by the Central Bank of the UAE. Home: 21.
+- **Tabular figures (tabular numerals)**: digits of equal width so columns of numbers align and counters do not jitter. Home: 06, 07, 12, 13, 23.
+- **Tacit knowledge**: knowledge held in perception and skill that the holder cannot fully state (Polanyi). Home: 00.
+- **Tagged PDF**: a PDF carrying a structure tree and reading order for assistive technology. Home: 11.
+- **Tagging taxonomy**: the controlled list of descriptive, analytic and project tags in a research repository. Home: 08.
+- **Tail**: the slow final stretch of an ease-out curve, where luxury motion spends most of its time. Home: 12.
+- **Tail slate**: a slate shown upside down and clapped at the end of a take. Home: 15.
+- **Tame problem**: a problem with a definitive formulation, a stopping rule and an answer that can be tested as right or wrong. Home: 27.
+- **Tangent**: two edges that just touch, creating unwanted tension. Home: 05.
+- **TASA (Trailer Audio Standards Association)**: the US body that set 85 dB Leq(m) as the trailer loudness ceiling. Home: 15, 16.
+- **Task flow, user flow, wireflow**: a generic step sequence; the same sequence for a specific persona and entry state; a flow drawn with screens. Home: 09.
+- **Task success rate, time on task, error rate**: share reaching the end state; time to success; predefined errors per task. Home: 08.
+- **Taste plateau**: the state in which output stabilises at competent and the eye stops improving. Home: 27.
+- **Taxonomy**: a hierarchical classification of a domain. Home: 09.
+- **TCX and TPG**: Pantone Fashion, Home + Interiors references, as dyed cotton chips (TCX) and as paper chips (TPG). Home: 04, 20.
+- **TDRA and WPC**: the UAE and Indian regulators of radio spectrum for wireless microphones. Home: 15.
+- **TDS (tax deducted at source)**: Indian income tax withheld by the payer and credited to the payee's PAN. Home: 24.
+- **Teal and orange grade**: the look that pushes skin toward orange and shadows, skies and walls toward teal to separate faces by hue. Home: 04, 16.
+- **Teaser, launch, sustain**: the three-phase sequencing of a campaign: scarcity, the hero and full channel set, then the series. Home: 19.
+- **Tech scout**: heads of department walking the chosen location to plan rigging, power and lenses, after the recce. Home: 14.
+- **Technical writing**: explaining how a thing works, in documentation and help, measured by procedure success. Home: 10.
+- **Technocrane**: a telescoping camera crane whose arm extends during the shot. Home: 14.
+- **TEDW**: the open prompts "tell me", "explain", "describe", "walk me through". Home: 08.
+- **Tell**: a defect that identifies an image or clip as generated to a trained eye within two seconds. Home: 22.
+- **Temp love**: a client's attachment to a temp track the job cannot clear. Home: 15.
+- **Temperature and tint**: blue to amber and green to magenta balance controls modelled on camera white balance. Home: 16.
+- **Template (atomic design layer)**: a page-level layout with slots. Home: 07.
+- **Template file (Code Connect)**: framework-agnostic TypeScript that defines how Code Connect generates a component's snippet; the only maintained path since 2.0.0. Home: 07.
+- **Temporal aliasing**: false motion produced when the frame rate samples a repeating movement too slowly (the wagon-wheel effect). Home: 02.
+- **Temporal binding window**: the interval within which sight and sound are fused into one event. Home: 02.
+- **Temporal consistency**: a video model's ability to hold textures and identities stable across frames. Home: 22.
+- **Temporal interpolation**: how a keyframed value changes over time. Home: 13.
+- **Temporal reframing**: expressing a cost per day or per month to change how large it feels. Home: 02.
+- **Tension**: visual energy from near-collision, imbalance, unexpected scale or crop. Home: 05, 23.
+- **Tenting**: enclosing a product in white fabric with lamps outside for shadowless gradients. Home: 15.
+- **TEP**: translation, editing, proofreading; the three-linguist process ISO 17100 describes. Home: 10.
+- **Terminal (ball, teardrop, beak, flag, finial, sheared)**: the end of a stroke that carries no serif, by shape. Home: 03.
+- **Terminology table**: the single list of approved terms per concept with banned synonyms, translations and context. Home: 10.
+- **Territory**: a creative direction with a feeling, a reference and a sample execution, short of a finished idea. Home: 19.
+- **Tesler's law**: the inherent complexity of a task can only be moved between user and system. Home: 02.
+- **Test battery**: the written set of tests that supplies the stopping rule for a wicked problem. Home: 27.
+- **Tester**: a plaintiff who checks businesses for accessibility violations without intending to use them. Home: 11.
+- **Testing effect**: the finding that retrieving something from memory strengthens it more than restudying it (Roediger and Karpicke, 2006). Home: 00.
+- **Tethered shooting**: a camera connected to a computer so every frame is checked at full size as it is taken. Home: 00.
+- **Text animator**: an AE property group that animates ranges of a text layer. Home: 13.
+- **Text-based editing**: cutting picture by editing its transcript. Home: 16.
+- **`text-box-trim` (leading trim)**: removing the space above cap height and below the baseline of a text box (CSS `text-box`), so spacing measures from the letters. Home: 05, 06, 07, 21.
+- **`text-box-trim` and `text-box-edge`**: CSS that removes half-leading and internal space above cap height and below baseline. Home: 03.
+- **Text hold**: a shot left long enough, with quiet space, for a card to be read over it. Home: 17.
+- **Text spacing (SC 1.4.12)**: the WCAG requirement that layouts survive user-set line, paragraph, letter and word spacing. Home: 05.
+- **`text-wrap: balance` and `text-wrap: pretty`**: the CSS line-breaking modes that equalise the lines of short blocks (`balance`) and improve the rag of paragraphs (`pretty`). Home: 03, 21.
+- **Textless**: a master clean of every title and super, the base for localisation. Home: 16.
+- **TextStagger (Figma)**: Figma's native text animation style that staggers by character, word, line or paragraph. Home: 12.
+- **The gap**: the years in which a maker's taste outruns their ability (Ira Glass). Home: 27.
+- **Thematic analysis**: Braun and Clarke's six-phase identification of patterns of meaning in qualitative data. Home: 08.
+- **Theme**: a complete set of alias values for one context (light, dark, brand B, compact). Home: 07.
+- **`theme.json`**: the WordPress block-theme settings file whose presets become `--wp--preset--` custom properties and classes. Home: 07.
+- **Thermochromic ink**: ink whose colour changes or vanishes with warmth. Home: 20.
+- **Thermography**: raised glossy print made by heating resin powder on wet ink. Home: 20.
+- **Think-aloud (concurrent, retrospective)**: participants verbalise thoughts during the task; or afterwards while watching a recording. Home: 08.
+- **Thobe**: the men's robe of Saudi Arabia (collared and buttoned) and Qatar (collar and cuffs). Home: 22.
+- **ThorVG**: an open-source vector renderer, used by dotLottie. Home: 12.
+- **Thought Leader Ads**: LinkedIn ads that promote a member's existing post. Home: 17, 26.
+- **Three-bid rule**: three production companies bid on the same treatment and specification so the bids are comparable. Home: 19.
+- **Three-layer system**: the Higgsfield prompting rule that image, identity and motion prompts are written separately. Home: 22.
+- **Three-level check**: Vignelli's semantics, syntactics and pragmatics (meaning, structure, use) run in that order. Home: 28.
+- **Three-option pricing**: presenting a lean, a recommended and a premium option to anchor the fee. Home: 24.
+- **Three percent rule (Abloh)**: Virgil Abloh's rule of changing an existing design by about three percent, and declaring the source, so it reads as new and stays recognisable; in this house, also the limit of one borrowed element when citing a movement. Home: 01, 27, 28.
+- **Three-point lighting**: key, fill and back light, the base grammar of film and TV lighting. Home: 00, 13, 15.
+- **Three-year test**: asking of each element whether it will embarrass the client in three years. Home: 23.
+- **Through-dyed**: paper coloured through its fibre so its edges match its face. Home: 20.
+- **ThruPlay**: Meta's count of plays to completion or of at least 15 seconds. Home: 17.
+- **Thuluth**: a large, sweeping, architectural style of Arabic calligraphy, used for display. Home: 01, 18.
+- **Thumb stop**: the moment a scrolling viewer stops on a post. Home: 17.
+- **Thumb-stop ratio (hook rate) and hold rate**: 3-second video plays divided by impressions, and ThruPlays (Meta's plays to completion or to at least 15 seconds) divided by 3-second plays. Home: 02.
+- **Thumb zone**: the lower area of a phone screen within thumb reach, where platforms place their action rows. Home: 05, 06.
+- **ThumbHash**: a placeholder hash of about 21 to 25 bytes (Evan Wallace, 2023) encoding a blurred preview, alpha and aspect ratio. Home: 06.
+- **Tie-down**: the rough drawing cleaned to consistent volumes before final line. Home: 13.
+- **TikTok Creative Center**: TikTok's research tool with a top ads library, trend discovery and keyword insights. Home: 17.
+- **TikTok One**: TikTok's creator platform, which absorbed the Creator Marketplace in 2024. Home: 17.
+- **TikTok Shop**: TikTok's in-app commerce, unavailable in India. Home: 17.
+- **Tilt-shift**: a lens that shifts to correct verticals and tilts to angle the plane of focus. Home: 14.
+- **Tilt-shift effect**: a real scene made to look like a miniature by a strong blur gradient. Home: 02.
+- **Time-and-materials**: billing the hours actually worked at rate card. Home: 24.
+- **Time lapse and hyperlapse**: frames captured at an interval to compress time; a hyperlapse also moves the camera between frames. Home: 14.
+- **Time remapping**: making a layer's time a keyframable property. Home: 13.
+- **Time to build**: the measured hours to produce a reference screen with the system against without it. Home: 07.
+- **Timecode**: the running clock written into recordings for synchronisation. Home: 15.
+- **Timeline motion (Figma)**: keyframe animation on a frame's timeline in Figma Design, exportable as CSS and motion.dev code. Home: 12.
+- **Timely content**: content tied to a moment such as an opening, a festival or a trend. Home: 17.
+- **Timing (animation)**: the number of frames a move takes, which sets its weight and mood. Home: 12.
+- **Timing (editing)**: the choice of the frame to cut on. Home: 16.
+- **Timing chart (animation)**: a mark on a key drawing that plans the spacing of the in-betweens. Home: 13.
+- **Timing chart (interface motion)**: the motion spec drawn as bars over a millisecond axis, one row per element. Home: 12.
+- **Tissue session**: rough routes (scamps, quick rough sketches) shown to the client before production, at equal fidelity, to kill cheaply. Home: 19, 23.
+- **Titanium Grand Prix**: the Cannes Lions award for breakthrough work. Home: 01.
+- **Title safe**: the centred 90 percent rectangle of a video frame (SMPTE ST 2046-1) inside which text must stay. Home: 03, 13, 16.
+- **TL84**: the 4,000 K narrow-band fluorescent used as a store standard by many apparel retailers, close to CIE F11. Home: 04.
+- **TLCI (television lighting consistency index)**: the EBU Tech 3355 measure of how faithfully a light renders colour to a television camera, modelled on an idealised three-chip camera. Home: 15, 16.
+- **TM-30**: the IES rendering measure reporting fidelity (Rf) and gamut (Rg) against 99 samples. Home: 15.
+- **Toast (snackbar)**: a brief message that appears without interrupting the task and leaves by itself. Home: 06, 10, 23.
+- **Toe**: the bottom of the tone curve, where shadows crush into noise. Home: 14.
+- **Tofu**: the blank boxes a system shows for glyphs missing from every installed font. Home: 01.
+- **Toile**: a test garment in plain cotton used to fit a design before it is cut in the final cloth. Home: 28.
+- **Token (design)**: a named design value (a colour, a size, a duration) shared across a system; see 07-design-systems-and-tokens.md. Home: 27.
+- **Token (language model)**: the unit of a language model's output, roughly a word fragment; distinct from a design token. Home: 22.
+- **Token endorsement**: a small parent signature on a child brand's pack. Home: 18.
+- **Token tier**: one of the three levels of tokens: global, alias, component. Home: 07.
+- **Tokenisation (cards)**: replacing a card number with a network token; required in India for saved cards since 1 October 2022. Home: 09, 10, 21.
+- **Tonal palette**: Material 3's 13-tone ladder per key colour, from which roles are assigned by tone. Home: 07.
+- **Tonal ramp**: one hue laid out in ordered lightness steps (50 to 950) with a chroma bell and a hue drift. Home: 04.
+- **Tone**: the adjustment of a voice to the person's state in the moment. Home: 10.
+- **Tone map**: territories plotted on two axes the brief cares about, to show where the brand and competitors sit. Home: 19.
+- **Tone mapping**: compressing scene highlight range into a display's range. Home: 16.
+- **Tone of voice**: the consistent manner in which a brand's words sound, separate from what they say. Home: 18.
+- **Tooltip**: a short label that appears on hover or keyboard focus and must never carry essential information. Home: 06.
+- **Tooth height**: the band of short Arabic letters, the Arabic equivalent of x-height. Home: 03, 18.
+- **Top layer**: the browser layer above all page content in which modal dialogs and popovers render. Home: 05, 06, 07, 21.
+- **Top moments (YouTube)**: segments of a video where almost no one dropped off. Home: 17.
+- **Top-of-mind awareness**: the brand named first without a prompt. Home: 18.
+- **Topical**: an advertisement commenting on the week's news with a pun, as in Amul's hoardings. Home: 01.
+- **Total area coverage (TAC)**: total area coverage, the maximum sum of the four ink percentages at any point (300% on PSO Coated v3, 240% on newsprint). Home: 00, 04, 26.
+- **Total Blocking Time**: the lab metric summing main-thread time beyond 50ms per task between FCP and interactivity. Home: 21.
+- **TOTP**: a time-based one-time password generated by an authenticator app every 30 seconds. Home: 09.
+- **Touchpoint**: any point where a buyer meets the brand. Home: 18.
+- **Touchpoint map**: every touchpoint listed by stage, owner, current state, score and frequency. Home: 18.
+- **Toulmin model**: the six slots of an argument: claim, grounds, warrant, backing, qualifier, rebuttal. Home: 23.
+- **Tourism Dirham**: Dubai's fee per room per night, about AED 7 to 20 by hotel classification, named as its own line on a bill. Home: 10.
+- **Track matte**: one layer used to cut another by its alpha or its luminance. Home: 13.
+- **Tracking**: uniform added or removed space across a run (`letter-spacing`). Home: 03, 18.
+- **Tracking and kerning**: spacing adjusted evenly across a run of letters (tracking) and spacing adjusted between one specific pair (kerning). Home: 00.
+- **Trade dress**: the overall look of a product's packaging and presentation, protectable as a whole. Home: 04, 22.
+- **Trade name**: the licensed business name in the UAE and Saudi Arabia, distinct from a trademark. Home: 18.
+- **Trademark drawing**: the version of a mark filed with a registry, black on white. Home: 18.
+- **Traffic**: the function that routes work through the studio and spots collisions between jobs. Home: 24.
+- **`trainedAlgorithmicMedia`**: the IPTC Digital Source Type value for media created by a trained generative model. Home: 22.
+- **Trajectory phrasing (Pearlman)**: shaping movement energy across cuts to build and release tension. Home: 16.
+- **Trakheesi**: the Dubai Land Department's advertising permit system, whose permit number must appear on every property listing. Home: 09, 10, 16, 17, 18, 19, 20, 21, 22, 23.
+- **Transcreation**: rewriting copy in the target language for the same effect, changing the idea, image or joke where needed. Home: 10, 19, 22, 23.
+- **Transcript**: the full text of audio content with speakers, sounds and, for video, key visual information. Home: 11.
+- **Transfer-metallised board**: board carrying a metallised layer transferred from a reusable film, recyclable with paper. Home: 20.
+- **Transient information effect**: the overload caused by long spoken or animated segments that disappear as they play. Home: 02.
+- **Transition type**: a label passed to a view transition (for example back or forward) that CSS can select on to run different choreography. Home: 12.
+- **Translation management system (TMS)**: software that stores strings, glossaries and translation memory and runs the translation and review workflow. Home: 10.
+- **Translation memory**: a database of previously translated segments, reused to keep translations consistent and cut cost. Home: 10.
+- **Trapping**: overlapping adjacent colours slightly so misregistration leaves no gap. Home: 20.
+- **Trash list**: the category tropes refused by name before work begins. Home: 19.
+- **Treatment**: the director's written and visual approach to a script, with references and shot intentions, submitted with the bid. Home: 00, 14, 19.
+- **TReDS (Trade Receivables Discounting System)**: RBI-regulated platforms on which MSME invoices to large buyers are discounted. Home: 24.
+- **Tree test**: a text-only test of a proposed navigation tree that measures findability without visual design. Home: 08, 09, 10.
+- **Trial font (test font)**: a foundry file licensed for evaluation and pitching only, often with a reduced character set. Home: 03.
+- **Trial reel**: an Instagram reel shown first to non-followers only, for testing. Home: 17.
+- **Triangulation**: checking a finding across sources, investigators, theories or methods. Home: 08.
+- **Trichromacy**: colour vision based on three cone types. Home: 02.
+- **Trigger word**: a unique token used in LoRA training captions that calls the trained subject in a prompt. Home: 22.
+- **Trim**: the line where the printed sheet is cut to size. Home: 20.
+- **Trim Paths**: the shape operator that animates the start, end and offset of a stroke. Home: 13.
+- **Triplexing**: laminating three sheets, often to show a coloured core at the edge. Home: 20.
+- **Trompe l'oeil**: a material or image made to pass for another; Blazy's material version is leather finished as denim. Home: 01, 27, 28.
+- **True peak (dBTP)**: decibels true peak, the inter-sample peak level reconstructed by a meter compliant with ITU-R BS.1770. Home: 13, 15, 16, 26.
+- **True-peak limiter**: a limiter that holds inter-sample peaks under a ceiling. Home: 15.
+- **True Tone and Night Shift**: Apple's display features that shift the white point with ambient light or time of day. Home: 23.
+- **Trunk-based development**: a version control practice in which everyone merges small changes into one main branch daily. Home: 24.
+- **Trunk show**: a collection shown by appointment to top clients in a suite, a home or the store after hours. Home: 19.
+- **Trunk test**: Krug's page-level check for site ID, page name, sections, local navigation, you-are-here and search. Home: 09.
+- **Trusted Tester**: the US Department of Homeland Security's standard manual test process for Section 508 conformance. Home: 11.
+- **TSL**: Three Shading Language, the node-based shader language of three.js. Home: 13.
+- **Tsume**: proportional reduction of each glyph's sidebearings in Adobe applications. Home: 03.
+- **TTL**: the seconds a DNS record may be cached. Home: 21.
+- **TTML and IMSC**: Timed Text Markup Language, the XML subtitle format for broadcast and streaming, and its W3C profile for subtitles. Home: 26.
+- **Turbo**: Google's 2019 improved rainbow colour map, smoother in lightness than jet and still not monotonic. Home: 04.
+- **Turnover**: hand-off of the locked edit to sound and colour. Home: 16.
+- **TVC (television commercial)**: an advertisement made for broadcast. Home: 14, 15.
+- **Tween**: an interpolation from a start value to an end value over a fixed duration. Home: 12.
+- **Twilight blend**: a dusk exterior composited from a daylight plate and a dusk plate. Home: 16.
+- **Twyman's law**: any figure that looks interesting or different is usually wrong. Home: 08.
+- **Type ramp**: the fixed set of size and line-height steps a product uses. Home: 03.
+- **Type specimen**: a page that shows a typeface at its sizes and settings so its behaviour can be judged. Home: 00.
+- **Typed confirmation**: a confirmation that requires typing the object's name before an irreversible action. Home: 09.
+- **Typical retention (YouTube)**: a comparison of a video's retention curve with the channel's 10 latest videos of similar length. Home: 17.
+- **Typo tolerance**: matching a query despite misspellings, usually within one or two character edits. Home: 09.
+- **Typographic card**: designed type as a frame of its own or over picture, timed to the edit. Home: 17.
+- **Typographic carousel**: a carousel in which set type is the image. Home: 17.
+- **Typographics**: Lubalin's expressive typography, letterforms drawn and set so tightly that the word becomes an image. Home: 01.
+
+## U
+
+- **UAX #9**: the Unicode Bidirectional Algorithm, revision 52 for Unicode 18.0.0. Home: 10.
+- **UDIM**: numbered UV tiles that let one object carry several texture maps. Home: 13.
+- **Udyam registration**: India's online registration of micro, small and medium enterprises, the key to MSMED Act protection. Home: 24.
+- **UEQ**: the 26-item User Experience Questionnaire with six scales. Home: 08.
+- **UGC (user-generated content)**: material about or for a brand made by its customers or the public. Home: 17, 22, 24.
+- **Ugly baby**: Catmull's term for an early, unformed idea the organisation must protect until it is strong. Home: 28.
+- **UI (user interface)**: the screens, controls and text through which a person uses a product. Home: 01, 10.
+- **UI chrome**: the platform interface drawn over or around content. Home: 05.
+- **UI kit**: a design-tool file of reusable components and styles without code or governance. Home: 07.
+- **UIDesignRequiresCompatibility**: the temporary Info.plist key that kept an app built with the 26 SDK in its pre-26 appearance; ignored when the app is built for the 27 releases. Home: 06.
+- **UIN (Unique Identification Number)**: the registration number every drone in India carries from Digital Sky. Home: 14.
+- **Ukiyo-e**: Edo-period Japanese woodblock prints. Home: 01.
+- **Ultrabounce**: a white fabric with one black side, stretched on a frame for bounce. Home: 15.
+- **UMUX, UMUX-Lite**: 4-item and 2-item usability questionnaires that track SUS. Home: 08.
+- **Unaided attribution**: naming the brand from a sound alone, without prompts. Home: 15.
+- **Unaided awareness**: a brand named without a prompt. Home: 18.
+- **Unbiased renderer**: a renderer that converges on the physically exact result given enough samples. Home: 13.
+- **Uncanny valley**: the drop in affinity for nearly human figures. Home: 02.
+- **Uncontrolled component**: a component that holds its own state and accepts only an initial value. Home: 07.
+- **Underdamped**: a spring at damping ratio below 1, which overshoots and oscillates. Home: 12.
+- **Underscore**: a music edit without the melody, for use under voice. Home: 13.
+- **Underslung boom**: a boom held below the frame line, pointing up at the speaker. Home: 15.
+- **Unicode**: the universal standard that assigns every character a number, its code point. Home: 01.
+- **Unified Model of Aesthetics**: Berghman and Hekkert's account of aesthetic pleasure as a balance of unity and variety (unity in variety), typicality and novelty, and connectedness and autonomy. Home: 02.
+- **Uniform**: a value sent from JavaScript to a shader (time, mouse, resolution). Home: 13.
+- **Uniform connectedness**: grouping of elements joined by uniform visual properties. Home: 02.
+- **Unigrid**: Vignelli's single grid for all National Park Service publications (1977). Home: 28.
+- **Uninflected image**: Mamet's term for a shot that shows a thing without commenting on it, so meaning comes from the cut. Home: 00.
+- **Unintended alignment**: edges nearly aligned or tangent, read as error. Home: 23.
+- **Unipole**: a single-column roadside billboard, the standard large-format unit on Dubai's highways. Home: 05, 26.
+- **Uniqueness (of a brand asset)**: Romaniuk's measure of the share of category buyers who link an asset to no competitor. Home: 01, 18.
+- **Unit base and holding area**: where the trucks, catering and crew base sit, and where cast wait. Home: 14.
+- **Unit sale price**: the price per kg, litre or unit printed on Indian retail packs. Home: 20.
+- **Unity (composition)**: the sense that every element belongs to one system. Home: 05.
+- **Unity (persuasion)**: Cialdini's seventh principle, influence through shared identity. Home: 02.
+- **Universal Commerce Protocol (UCP)**: an open agentic commerce standard co-developed in 2026 by Google, Shopify, Etsy, Walmart and others, with a lodging draft. Home: 09.
+- **Universal vertical safe box**: the house text area on a 1080 x 1920 frame, the union of every vertical platform overlay: insets of 290 px top, 672 px bottom, 65 px left and 200 px right, leaving 815 x 958 px (26-platform-and-format-specs-2026.md, section 5.6). Home: 17, 26.
+- **UPI (Unified Payments Interface)**: India's real-time bank payment system, opened from checkout through an intent to the user's payment app. Home: 04, 06, 09, 10, 21.
+- **UPM (units per em)**: the grid a font's em is divided into, 1000 or 2048. Home: 03.
+- **Upscaler, faithful and creative**: a faithful upscaler enlarges without inventing detail; a creative upscaler synthesises it. Home: 22.
+- **Usability test**: watching representative people attempt realistic tasks with a design to find where it fails and why. Home: 08.
+- **Usage right**: permission to use a created asset for a defined term, territory and set of media; a buyout is a lump-sum purchase of broad or unlimited usage. Home: 19, 24.
+- **Usage-rights metadata**: territory, media, expiry and release data attached to each photograph and film in the asset library. Home: 07.
+- **USD**: Universal Scene Description, Pixar's scene interchange format. Home: 13.
+- **USDZ**: Apple's zipped Universal Scene Description format, used for AR Quick Look on iOS. Home: 21.
+- **Use or lose**: Romaniuk's quadrant for an asset with high fame and high uniqueness, to be protected and used everywhere. Home: 18.
+- **User experience honeycomb**: Morville's seven qualities of user experience: useful, usable, desirable, findable, accessible, credible and valuable. Home: 09.
+- **`:user-invalid`**: the selector matching an invalid field only after the person has interacted with it. Home: 21.
+- **User story map, walking skeleton**: activities as a backbone with stories beneath, cut into release slices; the thinnest end-to-end slice. Home: 08.
+- **Utilisation**: billable hours divided by available hours. Home: 24.
+- **Utility template**: a pre-approved WhatsApp message template about a transaction the person started, such as a booking update. Home: 10.
+- **UTM parameters**: source, medium and campaign tags added to a link so web analytics attribute the visit. Home: 09, 17, 21.
+- **Utopia**: James Gilyead and Trys Mudford's method and calculators for fluid type and space scales. Home: 07, 21.
+- **UV**: the 2D coordinates that map a texture onto a surface. Home: 13.
+- **UV-fluorescent ink**: ink invisible in daylight that glows under ultraviolet light. Home: 20.
+- **UX (user experience) and UI (user interface)**: the flow and the screens of a digital product. Home: 24.
+- **UX in Motion principles**: Issara Willenskomer's twelve interface restatements of the Disney principles (2017). Home: 12.
+- **UX writing**: writing the words that appear inside an interface. Home: 10.
+
+## V
+
+- **VAE**: variational autoencoder; the component that converts between pixels and a diffusion model's compressed latent image. Home: 22.
+- **Vale**: an open-source prose linter whose YAML rules enforce house style in continuous integration. Home: 10.
+- **Value-based pricing**: setting the fee from the value of the outcome to the client, agreed before scope is detailed. Home: 24.
+- **Value graph**: the graph editor view of value against time. Home: 13.
+- **Value proposition canvas**: a customer profile of jobs, pains and gains set against a value map. Home: 08.
+- **Value test**: setting every colour's chroma to 0 in a mock-up to check that a palette's hierarchy rests on lightness. Home: 04.
+- **Van de Graaf canon**: a geometric construction that places a text block so that it and the margins share the page's proportions. Home: 00, 01, 05.
+- **Van Westendorp Price Sensitivity Meter**: four price questions whose cumulative curves give a range of acceptable prices. Home: 08.
+- **Variable data printing (VDP)**: digital printing that changes content from piece to piece. Home: 20.
+- **Variable font**: a single font file carrying a continuous range of weights or widths along axes, in place of separate static files. Home: 00, 01, 03, 21, 28.
+- **Variable frame rate (VFR)**: a recording rate that varies with processing load, common on phones, converted to constant at ingest. Home: 13, 16.
+- **Variable ND**: two polarisers rotated against each other to give adjustable density. Home: 14.
+- **Variable scope**: a Figma setting that limits which property fields offer a variable. Home: 07.
+- **Variety**: the controlled difference that keeps a system alive. Home: 05.
+- **Varying**: a value passed from the vertex shader to the fragment shader. Home: 13.
+- **VAT (value added tax)**: 5 percent in the UAE and 15 percent in Saudi Arabia. Home: 24.
+- **VDB**: OpenVDB, a sparse volume format for smoke, fire and liquid caches. Home: 13.
+- **Vection**: the illusion of self-motion produced by a moving visual field. Home: 02.
+- **Vectorscope**: the scope plotting chroma as hue angle and saturation radius. Home: 14, 16.
+- **Veg and non-veg marks**: India's FSSAI symbols, a green square with a filled circle and a brown square with a filled triangle. Home: 18.
+- **Veiling glare (veiling flare)**: stray light scattered inside a lens, often from light striking the front element, that lifts the blacks into a milky haze and lowers contrast. Home: 14, 15.
+- **Vellus hair**: the fine, short hair on the face, kept visible in the house retouching standard. Home: 16, 22.
+- **Ventriloquism effect**: perceived sound location captured by a visible source, the clearest case of visual capture (vision dominating hearing when the two conflict). Home: 02.
+- **Vernacular amplification**: Scher's method of drawing a client's existing local visual language with authority. Home: 28.
+- **Version matrix**: ratios multiplied by durations, languages, audio states and end-card variants; the file count of a campaign. Home: 13.
+- **Version stack**: every upload of the same cut stacked for comparison in Frame.io. Home: 13.
+- **Vertex shader**: the shader stage that positions geometry. Home: 13.
+- **Vertical-first**: cutting a campaign's hero in 9:16 and deriving the 16:9 from it. Home: 16.
+- **Vertical metrics (hhea, typo, win)**: a font's ascender, descender and line-gap values (Typo and Win sets in the OS/2 table), with the USE_TYPO_METRICS flag telling applications which set to use. Home: 00, 03, 28.
+- **Vestibular disorder**: a dysfunction of the inner ear's balance system; large on-screen motion can aggravate it and cause dizziness and nausea. Home: 11, 12.
+- **VFX (visual effects)**: digital work added to filmed footage in post-production. Home: 24.
+- **VFX and CG**: visual effects, and computer-generated imagery. Home: 14.
+- **Vibrancy**: Apple's blending that pulls colour from what sits behind a material so content on it stays legible. Home: 06.
+- **Video assist**: the monitor feed to video village and the recording of takes for playback. Home: 14.
+- **Video village**: the monitor position where the director's team, agency and client watch takes. Home: 14, 15, 19, 23.
+- **Vienna Classification**: WIPO's system of codes for the figurative elements of marks; tenth edition in force from 1 January 2026. Home: 18.
+- **View (WCAG 3)**: the content available in a viewport, including content reachable by scrolling or zooming. Home: 11.
+- **View (YouTube Shorts)**: since 31 March 2025, every start or replay of a Short, with no minimum watch time. Home: 17.
+- **View timeline**: a scroll-driven timeline tied to an element's progress through the viewport. Home: 12.
+- **View transform**: the display rendering of scene-linear values (ACES 2.0, AgX), kept out of the EXR. Home: 13.
+- **View transition**: the browser API that snapshots two DOM states or pages and animates between them through pseudo-elements. Home: 12, 21.
+- **Viewed versus swiped away**: YouTube Studio's Shorts hook metric, the share of feed impressions in which the viewer stayed to watch. Home: 17.
+- **Viewport**: the visible area of a page; mobile browsers have a large and a small one depending on toolbar state. Home: 06, 26.
+- **Viewport meta tag**: the `meta` element setting the mobile layout width; it must never block zoom. Home: 21.
+- **Villard diagram**: a construction dividing a line into equal parts without measurement. Home: 05.
+- **Viridis**: the matplotlib family of perceptually uniform sequential maps (viridis, magma, plasma, inferno, cividis). Home: 04.
+- **Virtual influencer**: a computer-generated persona that advertises and must disclose that it is not human. Home: 17.
+- **Virtual staging**: furniture placed by generation into a photograph of an empty property. Home: 22.
+- **Virtualisation**: rendering only the list rows in and near the viewport. Home: 06.
+- **Visceral, behavioural and reflective levels**: Norman's three levels of emotional processing, from fast reaction to conscious meaning. Home: 02.
+- **Viseme**: the mouth shape that corresponds to a speech sound. Home: 22.
+- **Visited**: the state of a link the user has already opened, which browsers limit to colour changes for privacy. Home: 06.
+- **VistaVision**: 35 mm film run horizontally through the camera so each frame spans eight perforations, about twice the standard negative area. Home: 28.
+- **Visual angle**: the angle an object subtends at the eye, which sets legibility at a distance. Home: 02, 05.
+- **Visual merchandising**: arranging product and props in a store or window so it sells. Home: 20.
+- **Visual regression testing**: automated pixel comparison of rendered components against an accepted baseline. Home: 06, 07, 23.
+- **Visual weight**: the apparent pull of an element on the eye and on the balance of a layout. Home: 02, 05.
+- **`visualDuration`**: Motion's perceptual spring duration; equal to Apple's response divided by 1.2. Home: 12.
+- **Visually hidden**: CSS that removes content from view while keeping it in the accessibility tree. Home: 11.
+- **VMC and CMC**: Verified Mark Certificate (requires a registered trademark) and Common Mark Certificate, the certificates that let Gmail show a BIMI logo. Home: 21, 26.
+- **VML**: Vector Markup Language, the legacy Microsoft format the Word-based Outlook for Windows needs for background images. Home: 07, 21.
+- **VO (voice-over)**: narration recorded apart from the picture and laid over it in the edit. Home: 15, 22.
+- **VOCs**: volatile organic compounds, solvents that evaporate into the air. Home: 20.
+- **Voice**: the stable personality of a product's language across every screen. Home: 10.
+- **Voice chart**: a one-page statement of a product's voice, either traits with sample and overshoot lines or Podmajersky's principles set against concepts, vocabulary, verbosity, grammar, punctuation and capitalisation. Home: 10.
+- **Voice control**: operating a device by spoken commands that name visible labels or numbered overlays. Home: 11.
+- **Void pantograph**: a background pattern that prints a warning word on a photocopy. Home: 20.
+- **Volumetric weight**: the courier charge weight from a parcel's dimensions, commonly length x width x height in cm divided by 5,000. Home: 20.
+- **Von Restorff effect**: better memory for the item that differs from the rest. Home: 02.
+- **Vorkurs (preliminary course)**: the Bauhaus preliminary course in materials, colour and form taken before specialisation. Home: 01, 27, 28.
+- **Vox-ATypI**: the 1954 classification adopted by ATypI in 1962 and de-adopted in 2021. Home: 03.
+- **VP9**: Google's open video codec, used by YouTube for higher-resolution streams. Home: 16.
+- **VPAT**: Voluntary Product Accessibility Template, the ITI reporting format (2.5Rev, April 2025). Home: 11.
+- **VRAM**: the memory on a graphics card, which limits GPU rendering. Home: 13.
+
+## W
+
+- **W3C**: the World Wide Web Consortium, the web's standards body. Home: 01.
+- **Wabi-sabi**: the Japanese aesthetic of impermanence, imperfection and incompleteness. Home: 01, 27.
+- **WAI-ARIA (ARIA)**: the W3C's Accessible Rich Internet Applications specification, the roles, states and properties that expose an interface to assistive technology through the accessibility tree; its Authoring Practices Guide sets the keyboard model for widgets. Home: 06, 07, 11.
+- **Wallas four stages**: preparation, incubation, illumination, verification, with intimation inside illumination. Home: 27.
+- **Warm window**: the period, about a second, after one tooltip closes during which the next one appears with no delay. Home: 06.
+- **Warp wobble**: rubbery distortion from over-applied stabilisation. Home: 23.
+- **Watching log**: the dated line-per-item record of active watching: source, title, three things, the reference filed, the drill. Home: 00.
+- **Waveform**: a monitor graph of brightness across the frame, from 0 to 100 percent. Home: 03, 14, 15, 16.
+- **Waveform, vectorscope and RGB parade**: the three scopes that show luminance by position, hue and saturation, and the three colour channels side by side, read alongside the picture when grading. Home: 00.
+- **Wayfinding**: the sequence of decisions a person makes to reach a destination, each needing information at the decision point, and the system of signs and cues in a space or interface that supplies it. Home: 09, 20.
+- **WCAG**: the W3C's Web Content Accessibility Guidelines; version 2.2 (December 2024 edition) is the house standard at level AA. Home: 00, 01, 06, 07, 10, 11, 17, 21, 23.
+- **WCAG2ICT**: the W3C Group Note (2024) on applying WCAG 2.2 to apps, documents, kiosks and other non-web ICT. Home: 11.
+- **WCAG 2.2 AA**: the Web Content Accessibility Guidelines conformance level the house requires. Home: 22.
+- **WCAG-EM**: the W3C Website Accessibility Conformance Evaluation Methodology. Home: 11.
+- **Weather day**: a day of crew and kit held in reserve on an exterior shoot, quoted at about 50 percent of crew fees. Home: 24.
+- **Web 2.0**: the 2004 name for the participatory web of user-generated content, and by extension its glossy visual style. Home: 01.
+- **Web Animations API (WAAPI)**: the JavaScript interface (`Element.animate`) to the browser's animation engine. Home: 12, 21.
+- **Web brutalism**: websites that expose default HTML styling, raw grids and system fonts as a deliberate stance. Home: 01.
+- **web-features**: the web-platform-dx dataset behind Baseline status on MDN and webstatus.dev. Home: 21.
+- **WebAssembly (WASM)**: a compact binary format that browsers run at near-native speed; the dotLottie and Rive renderers ship in it. Home: 12.
+- **Weber's law**: the smallest noticeable difference is a roughly constant fraction of the magnitude. Home: 05.
+- **WebGL**: the browser's interface for hardware-accelerated 3D graphics, used for immersive and 3D web pages. Home: 00, 01, 27.
+- **WebGL and WebGPU**: the browser's GPU rendering APIs, the second with compute shaders and a modern pipeline; WebGPU is not Baseline as of October 2026. Home: 21.
+- **WebGPU**: the W3C browser GPU API that succeeds WebGL. Home: 13.
+- **WebOTP**: the browser API that reads a one-time code from an SMS bound to the site's domain. Home: 06.
+- **WebP**: Google's image format, 25 to 34 percent smaller than JPEG, universal since Safari 14. Home: 21.
+- **WebView**: a browser component embedded in an app, such as Instagram's or WhatsApp's in-app browser. Home: 21, 23.
+- **WebVTT**: Web Video Text Tracks, the HTML5 caption format with positioning and styling, written like SRT with full-stop millisecond separators. Home: 13, 16, 21, 26.
+- **Weekly disobedience**: Borsche's one planned break of a fixed editorial format per issue. Home: 28.
+- **Weight**: the visual mass of an element. Home: 23.
+- **Weight profile**: a set of rubric weights for one deliverable type. Home: 23.
+- **Well-known mark**: a mark a substantial segment of the relevant public knows, protected across all classes. Home: 18.
+- **Wet proof (press proof)**: a proof printed on the job's own paper and press, used to approve colour on a luxury print job. Home: 04, 19.
+- **WGSL**: the WebGPU Shading Language. Home: 13.
+- **Wh**: watt-hours, a battery's stored energy. Home: 15.
+- **"what we are not doing" list**: the written refusal of a category's tropes, made before making. Home: 27.
+- **"What would make this generic" list**: the five things that would turn the work into the category's work, written at concept approval and read before every shoot day and edit. Home: 19.
+- **WhatsApp Business catalogue**: products or services with images and optional prices shown inside a WhatsApp business chat. Home: 17.
+- **WhatsApp Business Platform**: Meta's API service, reached through the Cloud API, through which businesses message customers on WhatsApp. Home: 17, 26.
+- **WhatsApp channel**: a one-to-many broadcast in WhatsApp's Updates tab, where followers react and vote but cannot reply. Home: 17.
+- **WhatsApp Flows**: structured screens (forms, pickers, lists) embedded inside a WhatsApp chat. Home: 09.
+- **Whiplash line**: the sinuous, asymmetric curve of Art Nouveau, drawn from plant stems and hair. Home: 01.
+- **White balance and tint**: the camera or grade setting that renders a neutral surface neutral under a given source, and its green to magenta correction axis. Home: 04, 14.
+- **White dummy**: an unprinted sample made from the specified stocks and binding. Home: 20.
+- **Whitelisting**: the brand running paid ads through a creator's handle. Home: 24.
+- **Whoosh**: an air-movement sound that follows a fast move. Home: 13.
+- **Wicked problem**: a problem with no definitive formulation, no stopping rule and no true or false solutions (Rittel and Webber). Home: 01, 27.
+- **Widow and orphan**: a paragraph's last line stranded at the top of a column, and its first line stranded at the bottom (Bringhurst's senses). Home: 23.
+- **Wild lines**: dialogue recorded without picture, for the edit. Home: 14.
+- **Wild lines and wild sound**: lines or sounds recorded on set without the camera rolling. Home: 15.
+- **`will-change`**: the CSS hint that promotes an element to its own compositor layer in advance of an animation. Home: 12.
+- **Win rate**: pitches won divided by pitches entered, tracked on qualified pitches. Home: 24.
+- **Window size class**: Android's named width ranges: compact under 600 dp, medium, expanded, large, and extra-large from 1600 dp. Home: 05, 06, 07.
+- **Windowed Apps**: the iPadOS 26 multitasking mode with freely resizable windows, window controls and a menu bar. Home: 06.
+- **Wipe**: a transition in which a line or shape pushes one shot off screen. Home: 16.
+- **Wire-o**: double-loop wire binding that opens 360 degrees. Home: 20.
+- **Without thought**: Naoto Fukasawa's approach of design that fits behaviour so closely it goes unnoticed. Home: 01, 27.
+- **Witness marks**: distance engravings read from the side of a lens. Home: 14.
+- **Wizard**: a multi-step flow with one question group per screen and a stepper. Home: 09.
+- **Wizard of Oz prototype**: a prototype in which a human secretly plays the system. Home: 09.
+- **WLC**: white lined chipboard, a recycled carton board. Home: 20.
+- **WOFF2**: the compressed web font container, the only format worth shipping. Home: 03, 21.
+- **Word superiority effect**: better identification of a letter inside a word than alone. Home: 02.
+- **Wordmark (logotype)**: the name set in custom or chosen letterforms as the mark. Home: 18.
+- **Work-and-tumble**: printing both sides from one plate set by tumbling the sheet head to tail, changing the gripper edge. Home: 20.
+- **Work-and-turn**: printing both sides of a sheet from one plate set by turning the sheet over. Home: 20.
+- **Work authorisation**: a signed one-page permission to start phase one, capped at the first milestone, before the full contract clears. Home: 24.
+- **Work-for-hire**: a contract term under which the commissioning party owns the work from creation. Home: 15.
+- **Work models**: Beyer and Holtzblatt's flow, sequence, artefact, cultural and physical models of observed work. Home: 08.
+- **Working memory**: the small store holding information in active use, about 4 chunks; its visual part holds about 3 to 4 objects. Home: 02.
+- **Working space**: the colour space and gamma in which the grade is performed. Home: 16.
+- **Working space and device space**: the well-behaved space a file is edited in, and the space of the device the file ends up on. Home: 04.
+- **World-Ready Paragraph Composer**: the Adobe composer that applies complex-script shaping to Arabic and Indic text. Home: 03, 13, 18.
+- **Wove paper**: smooth, even paper with no laid pattern. Home: 20.
+- **WPS (Wage Protection System)**: the UAE system through which private-sector salaries must be paid. Home: 24.
+- **Wrap report**: the same-day record of what was shot, missed, changed and spent. Home: 24.
+- **Write-off**: hours on a job that the house will not bill, logged with a reason code. Home: 24.
+- **Written rationale**: the one-page note sent within 24 hours of a presentation: task, insight, idea sentence, why this execution. Home: 19.
+- **WWDC**: Apple's Worldwide Developers Conference, held each June, at which Apple announces platform and design changes. Home: 01.
+
+## X
+
+- **`x-default`**: the hreflang value naming the fallback page for unmatched languages. Home: 21.
+- **X-dimension**: the width of the narrowest bar in a barcode (0.330 mm for EAN-13 at 100% magnification), the unit in which barcode sizes and quiet zones are set. Home: 26.
+- **x-height**: the height of lowercase letters without ascenders, the main cue to perceived type size, where point size measures the invisible body of the type. Home: 02, 03, 05, 11, 27.
+- **X'Y'Z'**: the gamma 2.6 encoded CIE XYZ colour of DCP picture. Home: 16.
+- **XAUR**: the W3C XR Accessibility User Requirements (2021), the reference for accessible immersive and extended-reality work. Home: 11.
+- **XDCAM HD422**: Sony's 50 Mbps MPEG-2 4:2:2 broadcast codec. Home: 16.
+- **XLIFF**: the OASIS XML interchange format for localisation data; version 2.1 (2018). Home: 10.
+- **XMP sidecar**: the Adobe metadata file stored beside a raw file, holding its edits and captions. Home: 26.
+- **xxHash**: a fast non-cryptographic checksum for verifying copies. Home: 16.
+- **xxHash64 and MD5**: checksum algorithms for verifying copies; xxHash64 is the faster. Home: 14.
+- **xy coordinates**: CIE chromaticity values used to set a fixture's colour exactly. Home: 15.
+
+## Y
+
+- **YCbCr, luma and chroma subsampling**: the video encoding of luma (Y', the gamma-encoded weighted sum of R'G'B') and two chroma difference channels, and the storage of chroma at lower resolution than luma (4:4:4, 4:2:2, 4:2:0). Home: 04.
+- **Yield per person**: available hours multiplied by utilisation, realisation and rate. Home: 24.
+- **Your Algorithm**: Instagram's control that shows and lets viewers edit the topics shaping their recommendations. Home: 17.
+
+## Z
+
+- **Z-depth**: a pass storing each pixel's distance from the camera. Home: 13.
+- **Z fold**: three equal panels folded in a zigzag. Home: 20.
+- **Z-index scale**: a named ladder of stacking values so components never choose arbitrary numbers. Home: 07.
+- **Z-pattern**: the eye's path across the top, diagonally down and across the bottom of a sparse layout. Home: 02, 05.
+- **Zardozi**: metal-thread embroidery of Persian and Mughal origin. Home: 01, 23.
+- **Zari**: metallic thread embroidery in Indian textiles. Home: 16.
+- **ZATCA (Zakat, Tax and Customs Authority)**: Saudi Arabia's tax authority, which runs the FATOORA e-invoicing system. Home: 24.
+- **Zebra striping**: alternating row backgrounds in a table. Home: 06.
+- **Zebras**: stripes in the viewfinder over areas above a set brightness. Home: 14, 15.
+- **Zeigarnik effect**: the claimed better memory for interrupted tasks, poorly replicated. Home: 02.
+- **Zero crossing**: a point where the waveform passes through silence, where an edit makes no click. Home: 15.
+- **Zero Moment of Truth**: Google's term (Lecinski, 2011) for the research a buyer does before meeting the product. Home: 18.
+- **Zero-rated**: taxed at 0 percent, so no tax is charged and input tax stays recoverable. Home: 24.
+- **Zero-runtime styling**: CSS approaches that resolve styles at build time and inject nothing at render (Tailwind v4, CSS Modules, vanilla-extract, Panda CSS, StyleX). Home: 07.
