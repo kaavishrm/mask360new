@@ -137,7 +137,7 @@ A labelling system is the set of words used for navigation, headings, index term
 - Prefer nouns for places and verbs for tasks; a navigation bar that mixes "Shop" and "Jewellery" reads as two systems.
 - Avoid clever labels for anything load-bearing. Wit belongs in copy (design-taste, section 1, point 8); the tab bar carries plain nouns.
 - Test with a closed card sort (people place items into your categories) for validation and an open sort (they make their own categories) for discovery. Tullis and Wood (2004) found 20 to 30 participants give results that correlate at about 0.93 with a 168-person sample; 15 is the practical floor (study design and recruiting in 08-ux-research-and-strategy.md).
-- Tree testing (text-only navigation of the proposed tree; Optimal Workshop's Treejack is the common tool) measures findability without visual design noise. A top-level task should reach 70 per cent direct success before you build.
+- Tree testing (text-only navigation of the proposed tree; Optimal Workshop's Treejack is the common tool) measures findability without visual design noise. A top-level task should reach 70 percent direct success before you build.
 
 ### 2.5 Navigation systems
 
@@ -151,7 +151,7 @@ A labelling system is the set of words used for navigation, headings, index term
 
 Steve Krug's trunk test ("Don't Make Me Think", 2000, third edition 2014) is the page-level audit: on any page, can you find the site ID, the page name, the sections, the local navigation, a "you are here" marker and search? Any miss is a navigation defect.
 
-Hidden navigation has numbers against it. Kara Pernice and Raluca Budiu's Nielsen Norman Group (NN/g) study "Hamburger Menus and Hidden Navigation Hurt UX Metrics" (26 June 2016) found that on desktop people used hidden navigation in 27 per cent of tasks against 48 per cent for visible and 50 per cent for combined navigation, and were at least 39 per cent slower where it was hidden; on mobile, hidden navigation was used in 57 per cent of tasks against 86 per cent for combined, with tasks 15 per cent slower. House rule: on desktop the top-level categories sit visible in the header (mega-menu behaviour in 06-ui-design-craft.md, section 6); on mobile the 3 to 5 most used destinations are visible as a tab bar or a row, with the rest behind "Menu"; a desktop navigation that is only hidden is acceptable for a single-story microsite with fewer than about six destinations. The reason: what is out of sight is not browsed, and browse is where a luxury store makes its money (5.5).
+Hidden navigation has numbers against it. Kara Pernice and Raluca Budiu's Nielsen Norman Group (NN/g) study "Hamburger Menus and Hidden Navigation Hurt UX Metrics" (26 June 2016) found that on desktop people used hidden navigation in 27 percent of tasks against 48 percent for visible and 50 percent for combined navigation, and were at least 39 percent slower where it was hidden; on mobile, hidden navigation was used in 57 percent of tasks against 86 percent for combined, with tasks 15 percent slower. House rule: on desktop the top-level categories sit visible in the header (mega-menu behaviour in 06-ui-design-craft.md, section 6); on mobile the 3 to 5 most used destinations are visible as a tab bar or a row, with the rest behind "Menu"; a desktop navigation that is only hidden is acceptable for a single-story microsite with fewer than about six destinations. The reason: what is out of sight is not browsed, and browse is where a luxury store makes its money (5.5).
 
 Every page is a front door. Dan Brown's principle of front doors ("Eight principles of information architecture", 2010) assumes that at least half of visitors arrive somewhere other than the home page, and Mark Baker's "Every Page Is Page One" (2013) makes the same case for content. Luxury sessions land on a PDP from Google Shopping or a Meta ad, on a room page from Google Hotel Ads, on a product from a QR code or a WhatsApp link. Every landing template (PDP, room, article, boutique) therefore carries its own orientation (the brand, where the page sits, the next two useful steps) and never depends on the home page for context; the analytics' top 20 landing pages are checked against the trunk test.
 
@@ -253,7 +253,7 @@ The generated-prototype trap. Prompt-to-prototype tools (Figma Make, v0, Lovable
 
 - Name the question on the first frame of every prototype. If it cannot be named, the prototype is decoration.
 - Use real content. Lorem ipsum hides the two problems that matter most: labels and lengths (script length allowances in 16.2). Fake only what the question does not need: a booking prototype can fake payment; it cannot fake the calendar.
-- Test with five people per round (Nielsen, 2000: five users find about 85 per cent of usability problems in a round, assuming a problem probability of 31 per cent; the rule's limits are in 08-ux-research-and-strategy.md, section 6.5), then iterate and test again, because the second round finds what the first fixes revealed.
+- Test with five people per round (Nielsen, 2000: five users find about 85 percent of usability problems in a round, assuming a problem probability of 31 percent; the rule's limits are in 08-ux-research-and-strategy.md, section 6.5), then iterate and test again, because the second round finds what the first fixes revealed.
 
 ## 5. Pattern catalogue A: entry, identity and finding
 
@@ -278,7 +278,7 @@ A pattern is a named, reusable solution to a recurring interaction problem, desc
 
 | Method | Mechanism | Where it fits | Numbers and caveats |
 |---|---|---|---|
-| Passkeys | FIDO2 and WebAuthn credential bound to the device and used after a biometric or device PIN check; synced through iCloud Keychain, Google Password Manager or a third-party manager | Default for new consumer products on iOS and Android and the modern web | FIDO Alliance's "State of Passkeys 2026" (7 May 2026, 11,000 adults in ten countries) counts about 5 billion passkeys in active use, and 75 per cent of respondents have enabled passkeys on at least some accounts. Keep a fallback, a one-time password (OTP) or a magic link, for shared devices, for Indian Android devices without a screen lock, and for in-app browsers, where passkeys often fail (11.3) |
+| Passkeys | FIDO2 and WebAuthn credential bound to the device and used after a biometric or device PIN check; synced through iCloud Keychain, Google Password Manager or a third-party manager | Default for new consumer products on iOS and Android and the modern web | FIDO Alliance's "State of Passkeys 2026" (7 May 2026, 11,000 adults in ten countries) counts about 5 billion passkeys in active use, and 75 percent of respondents have enabled passkeys on at least some accounts. Keep a fallback, a one-time password (OTP) or a magic link, for shared devices, for Indian Android devices without a screen lock, and for in-app browsers, where passkeys often fail (11.3) |
 | Magic link | Email with a one-time signed URL | Low-frequency products, desktop first; hotels and events | Fails on phones where the mail app opens the link in a different browser; pair with a 6-digit code in the same email |
 | SMS OTP in India | 4 to 6 digit code by SMS, auto-read by the Android SMS Retriever API or the WebOTP API, iOS "one-time-code" autofill from Messages | The Indian default for phone-first accounts and for payment authentication mandated by the Reserve Bank of India (RBI) | Design the OTP screen as one field with autofill, a 30 second resend timer, a visible "wrong number" route, and the number shown; the SMS text is a template registered on the operators' DLT (distributed ledger technology) platforms, so its copy is fixed before build (16.4). RBI's Authentication Mechanisms for Digital Payment Transactions Directions, 2025 (issued 25 September 2025, in force from 1 April 2026) keep two factors with at least one dynamic (unique to each transaction) and open the field to biometrics, device-bound tokens and passphrases beside SMS OTP, so a payment screen should expect a fingerprint or an app prompt as often as a code. Delivery delays on numbers in the Do Not Disturb (DND) registry and on roaming numbers are routine, so never block the flow on OTP arrival alone; offer a WhatsApp code or a voice call as the second route |
 | WhatsApp OTP | Authentication template message through the WhatsApp Business Platform | India and the Gulf, where WhatsApp open rates beat SMS | Charged per delivered message (section 16.5); needs an opt-in |
@@ -349,15 +349,15 @@ Section 2.6 covers the system; this entry covers the behaviour at the field.
 
 ### 6.3 Checkout
 
-Baymard Institute's running meta-analysis puts average documented cart abandonment at about 70 per cent (70.22 per cent across 50 studies in its current published figure; page updated 22 September 2025). Its survey of stated reasons, once the shoppers who were just browsing are excluded:
+Baymard Institute's running meta-analysis puts average documented cart abandonment at about 70 percent (70.22 percent across 50 studies in its current published figure; page updated 22 September 2025). Its survey of stated reasons, once the shoppers who were just browsing are excluded:
 
 | Reason | Share of abandoners |
 |---|---|
-| Extra costs too high (shipping, tax, fees) | 40 per cent |
-| Delivery too slow | 20 per cent |
-| Did not trust the site with card details | 19 per cent |
-| Had to create an account | 18 per cent |
-| Checkout too long or complicated | 17 per cent |
+| Extra costs too high (shipping, tax, fees) | 40 percent |
+| Delivery too slow | 20 percent |
+| Did not trust the site with card details | 19 percent |
+| Had to create an account | 18 percent |
+| Checkout too long or complicated | 17 percent |
 
 Baymard's audits count 23.48 form elements (14.88 form fields) in the average US checkout, where 12 to 14 elements (7 to 8 fields) would do. Every rule below exists to remove a reason from that table; the storefront build (Shopify Checkout Extensibility, India's checkout layers) is in 21-web-design-and-digital-craft.md, section 8.6, and checkout started by an AI agent is in 10.11.
 
@@ -383,7 +383,7 @@ Baymard's audits count 23.48 form elements (14.88 form fields) in the average US
 | Cards | RBI tokenisation mandatory since October 2022; two-factor (OTP or equivalent) on every transaction | Never store the card number (the primary account number); offer saved tokenised cards; the OTP step happens on the bank's page, so warn the person before the redirect |
 | Cash on delivery (COD) | Expected in India even at premium price points; no reliable public figure for its share exists, so take it from the client's order data | Offer above a threshold and below a cap; a prepaid discount is a legitimate nudge; confirm COD orders by OTP or WhatsApp to cut RTO (return to origin: a refused order shipped back) |
 | Credit-card EMI (equated monthly instalments) | 3, 6, 9, 12 and 24 month tenures on most bank cards; the usual way Indians pay for jewellery, watches and phones | One quiet line under the PDP price ("EMI from INR 12,083 a month"); a sheet listing, per bank, tenure, monthly amount, interest, discount, processing fee and GST on interest; eligibility checked by card prefix (BIN) or phone before checkout |
-| No Cost EMI | The seller gives an instant discount equal to the interest; the bank still charges interest, and 18 per cent GST falls on that interest. The RBI's circular of 17 September 2013 on zero per cent interest schemes found the interest usually recovered through processing fees | Label an offer "No Cost" only when the total paid equals the price; otherwise it is drip pricing under the guidelines of India's Central Consumer Protection Authority (CCPA, 13.4) |
+| No Cost EMI | The seller gives an instant discount equal to the interest; the bank still charges interest, and 18 percent GST falls on that interest. The RBI's circular of 17 September 2013 on zero percent interest schemes found the interest usually recovered through processing fees | Label an offer "No Cost" only when the total paid equals the price; otherwise it is drip pricing under the guidelines of India's Central Consumer Protection Authority (CCPA, 13.4) |
 | Cardless EMI, BNPL and wallets | Cardless EMI and BNPL (buy now, pay later) are digital loans under the RBI (Digital Lending) Directions, 2025, which require a Key Fact Statement with the annual percentage rate (APR) before the loan is signed; wallets: Paytm, PhonePe, Amazon Pay | Link the Key Fact Statement beside the plan; list wallets only where the audience uses them |
 | Rupee formatting | Indian grouping: 1,45,000 with the lakh and crore commas; symbol "INR" or the rupee sign | Format on every price surface identically (03-typography.md on numerals) |
 | GST | Prices shown inclusive; the invoice shows the split | "Inclusive of all taxes" next to the price, once |
@@ -394,12 +394,12 @@ Baymard's audits count 23.48 form elements (14.88 form fields) in the average US
 |---|---|---|
 | Address | No postal codes in general use; emirate, area, building or villa number, street, and a landmark; Dubai's Makani number is a 10-digit building identifier | Use a map pin plus "area" dropdown plus free text; Makani as optional field; never require a postcode |
 | Phone | +971, 9 digits after the prefix | Delivery runs on phone and WhatsApp |
-| Apple Pay and Google Pay | iPhones carry about 27 per cent of UAE mobile web traffic against about 6 per cent in India (StatCounter, September 2026) | Place the platform wallet first on mobile (Apple Pay on iPhone, Google Pay on Android); it removes the address form |
+| Apple Pay and Google Pay | iPhones carry about 27 percent of UAE mobile web traffic against about 6 percent in India (StatCounter, September 2026) | Place the platform wallet first on mobile (Apple Pay on iPhone, Google Pay on Android); it removes the address form |
 | Cards | Visa and Mastercard dominate; 3-D Secure (the card networks' issuer authentication step) by OTP | Same redirect warning as India |
 | BNPL | Tabby and Tamara (four instalments, no interest to the customer) are common in fashion and beauty | One quiet instalment line under the price (21-web-design-and-digital-craft.md, section 8.9) |
 | Cash on delivery | Available; its share varies by client | Take the share from order data; same threshold rules |
 | Aani and Jaywan | Aani, the instant payment platform run by Al Etihad Payments, the Central Bank's subsidiary; Jaywan, the national domestic card scheme, whose nationwide issuance by banks and exchange houses was inaugurated on 20 July 2026, with a co-badged Jaywan Mastercard credit card | Expect both as checkout options to grow; design the method list to take a new logo without a redesign |
-| Dirham | 5 per cent VAT; the Central Bank unveiled a dirham symbol in March 2025 | Use "AED" until font support for the new symbol is confirmed in the brand typeface; prices inclusive of VAT |
+| Dirham | 5 percent VAT; the Central Bank unveiled a dirham symbol in March 2025 | Use "AED" until font support for the new symbol is confirmed in the brand typeface; prices inclusive of VAT |
 
 - Saudi Arabia realities (as of October 2026; Riyadh is a house market):
 
@@ -408,7 +408,7 @@ Baymard's audits count 23.48 form elements (14.88 form fields) in the average US
 | mada | The national debit card scheme under the Saudi Central Bank (SAMA); the most used card in the Kingdom, and it works inside Apple Pay | Show the mada mark first among cards; have the gateway route mada card ranges as mada, a separate scheme with its own acceptance |
 | Apple Pay | Live in Saudi Arabia since 2021, with mada cards | First on mobile |
 | Wallets and BNPL | STC Bank (formerly STC Pay); Tabby and Tamara (Tamara is Riyadh-based); SADAD for bills | The same instalment line as the UAE |
-| VAT | 15 per cent since 1 July 2020 | Prices shown inclusive |
+| VAT | 15 percent since 1 July 2020 | Prices shown inclusive |
 | Currency | SAMA unveiled a Saudi riyal symbol in February 2025 | Use "SAR" until the brand typeface carries the symbol, the dirham rule |
 | Address | The Saudi National Address: building number, street, district, city, 5-digit postal code and a 4-digit additional number, compressed into an 8-character short address (4 letters and 4 digits) | Offer short-address lookup plus a map pin; the postal code is required here, unlike the UAE |
 | Dates | Hijri dates beside Gregorian where relevant (Ramadan, Eid, official documents) | Intl.DateTimeFormat with the islamic-umalqura calendar, because hand-rolled arithmetic conversions can land a day off |
@@ -470,7 +470,7 @@ Baymard's audits count 23.48 form elements (14.88 form fields) in the average US
   1. Entry: destination or property, dates, guests (adults, children with ages, rooms), promo or member code collapsed. On a single-property site, dates and guests only.
   2. Date picker: two months side by side on desktop, a vertical scrolling calendar on mobile, unavailable and minimum-stay nights visibly disabled, the price per night in each cell when the rate engine can supply it (Airbnb's pattern, which Marriott and Hyatt adopted), a flexible-dates option (plus or minus 3 days) with the cheapest night marked.
   3. Room selection: rooms as cards with gallery, size in square metres and square feet, bed type, occupancy, view, and the lowest rate; "room then rate" is the house default because people choose the space before the terms, and "rate then room" suits promotional landing pages.
-  4. Rate display: every rate with its name, what is included (breakfast, transfer, spa credit), the cancellation policy in one line with the deadline date, and the total for the stay with taxes. India: GST on room tariff applies by rate band (the September 2025 GST rationalisation set 5 per cent without input credit for rooms up to INR 7,500 per night and 18 per cent above; verify the current slabs before quoting). Dubai: 5 per cent VAT, 7 per cent municipality fee, 10 per cent service charge and the Tourism Dirham of AED 7 to 20 per room per night by hotel category; Abu Dhabi runs its own tourism and municipality fees. The reason the total appears before the form: a price that grows at the last step is drip pricing (section 13), and hospitality is where consumers expect it most and forgive it least. For any property that sells to US or UK guests, the total-stay price is the default display with a per-night toggle (the FTC fees rule and the UK's DMCC Act, 13.3).
+  4. Rate display: every rate with its name, what is included (breakfast, transfer, spa credit), the cancellation policy in one line with the deadline date, and the total for the stay with taxes. India: GST on room tariff applies by rate band (the September 2025 GST rationalisation set 5 percent without input credit for rooms up to INR 7,500 per night and 18 percent above; verify the current slabs before quoting). Dubai: 5 percent VAT, 7 percent municipality fee, 10 percent service charge and the Tourism Dirham of AED 7 to 20 per room per night by hotel category; Abu Dhabi runs its own tourism and municipality fees. The reason the total appears before the form: a price that grows at the last step is drip pricing (section 13), and hospitality is where consumers expect it most and forgive it least. For any property that sells to US or UK guests, the total-stay price is the default display with a per-night toggle (the FTC fees rule and the UK's DMCC Act, 13.3).
   5. Member rate: shown beside the public rate with the difference in money, and a sign-in or join link that keeps the selection. Loyalty is the direct channel's only durable advantage: Marriott Bonvoy, Hilton Honors, Accor ALL, IHG One Rewards, Taj's membership through Tata Neu (NeuPass), Jumeirah One and Aman's private client model all run member rates or recognition.
   6. Guest details: name as on ID, phone, email, arrival time, special requests as free text plus structured chips (high floor, away from lift, connecting rooms, dietary, celebration).
   7. Payment: guarantee by card, prepay, or pay at hotel by rate; UPI prepay in India for non-refundable rates; Apple Pay in the Gulf.
@@ -646,10 +646,10 @@ The research position: confirmation dialogs are read less each time they appear,
 ### 9.3 Progressive disclosure
 
 - When: any surface with more options than most people use.
-- Definition: show the few things most people need first, and reveal the rest on request. Jakob Nielsen's 2006 article is the standard statement; the reason is that every visible option costs attention and a chance of error, so options used by under about 20 per cent of people belong behind a step.
+- Definition: show the few things most people need first, and reveal the rest on request. Jakob Nielsen's 2006 article is the standard statement; the reason is that every visible option costs attention and a chance of error, so options used by under about 20 percent of people belong behind a step.
 - Anatomy: a primary set visible, a "more" or "advanced" control, a secondary set that appears in place on the same page with its state remembered. Accessibility: the APG disclosure pattern for a single "show more", the accordion pattern for stacked panels.
 - Variants: accordions for content; staged disclosure in forms (gift options appear when "this is a gift" is ticked); expandable rows; tooltips for definitions; "show more" on long text with the first 3 lines visible.
-- Pitfalls: hiding things 60 per cent of people need; accordions with every panel closed on arrival; "advanced" as a dumping ground.
+- Pitfalls: hiding things 60 percent of people need; accordions with every panel closed on arrival; "advanced" as a dumping ground.
 
 ### 9.4 Inline editing
 
@@ -697,7 +697,7 @@ The pattern vocabulary here follows Emily Campbell's "Shape of AI" library (shap
 
 ### 10.3 Uncertainty and confidence
 
-- Do not show a percentage the model cannot justify; a "87 per cent confident" badge is a fabricated number and reads as one to anyone who has used the product for a week.
+- Do not show a percentage the model cannot justify; a "87 percent confident" badge is a fabricated number and reads as one to anyone who has used the product for a week.
 - Show the basis instead: sources (10.1), the date of the knowledge, a "verify" affordance that opens the source or runs a check (Shape of AI's Verification pattern), and hedged language in the text when the model is unsure.
 - Caveats as a pattern: a short, specific disclosure next to high-stakes output ("Prices are from the brand's site on 12 October; confirm before quoting") beats a generic "AI can make mistakes" footer that nobody reads.
 - Pitfalls: confidence theatre (fake meters); caveats that are identical on every answer; burying "I am not sure" at the end of a confident paragraph.
@@ -811,7 +811,7 @@ Design consequences: detect the in-app user agent and lead with methods that wor
 
 ### 12.1 Nielsen's heuristics, applied
 
-Jakob Nielsen's ten usability heuristics (1994, revised wording 2020) are the standard vocabulary for a heuristic evaluation, in which 3 to 5 evaluators independently inspect an interface against the list and merge findings (Nielsen and Molich, 1990, found that single evaluators catch about 35 per cent of problems and five catch about 75 per cent).
+Jakob Nielsen's ten usability heuristics (1994, revised wording 2020) are the standard vocabulary for a heuristic evaluation, in which 3 to 5 evaluators independently inspect an interface against the list and merge findings (Nielsen and Molich, 1990, found that single evaluators catch about 35 percent of problems and five catch about 75 percent).
 
 | Heuristic | What it asks | Mask360 application |
 |---|---|---|
@@ -860,7 +860,7 @@ Poka-yoke (Shigeo Shingo, "Zero Quality Control: Source Inspection and the Poka-
 - Forgiving formats: accept phone numbers with or without spaces, dashes, brackets and a leading zero or +91; accept card numbers with spaces and format them in groups of four as typed; accept dates typed in any reasonable order and show the interpretation ("12 Nov 2026"); strip whitespace from codes and emails. The reason: every rejected valid input is an error the system caused.
 - Smart defaults: country and currency from locale with a visible override; dates defaulting to the next plausible stay (tonight for a city hotel, the next weekend for a resort); the last used address and payment method; the person's own name on the gift card as sender.
 - Constraints: disable what is impossible (past dates, out-of-stock sizes, a checkout button before an address) and show why; input masks for fixed formats (PIN code, OTP, Makani number); character counts on limited fields, shown when within 20 characters of the limit.
-- Validation timing: Luke Wroblewski's 2009 study with Etre found that inline validation (checking a field when the person leaves it) against a form that validated only on submit produced a 22 per cent increase in success rate, a 22 per cent decrease in errors, a 31 per cent increase in satisfaction and a 42 per cent decrease in completion time. Validate on blur, show success quietly, show errors next to the field, and never validate on the first keystroke (the person has not finished).
+- Validation timing: Luke Wroblewski's 2009 study with Etre found that inline validation (checking a field when the person leaves it) against a form that validated only on submit produced a 22 percent increase in success rate, a 22 percent decrease in errors, a 31 percent increase in satisfaction and a 42 percent decrease in completion time. Validate on blur, show success quietly, show errors next to the field, and never validate on the first keystroke (the person has not finished).
 
 ### 12.5 Error message anatomy, cross-reference
 
@@ -874,7 +874,7 @@ A deceptive pattern (Harry Brignull's term since 2010, "dark pattern" in the old
 
 deceptive.design lists 18 types as of October 2026, each mapped to laws and enforcement actions: sneaking, forced action, hard to cancel, preselection, obstruction, hidden subscription, hidden costs, trick wording, visual interference, fake social proof, fake urgency, nagging, fake scarcity, disguised ads, confirmshaming, comparison prevention, addictive design, and currency confusion.
 
-A seven-category grouping comes from Mathur et al., "Dark Patterns at Scale" (CSCW 2019), who crawled about 11,000 shopping sites and found 1,818 instances on 1,254 of them (about 11 per cent), classified into: sneaking (hidden costs, sneak into basket, hidden subscription), urgency (countdown timers, limited-time messages), misdirection (confirmshaming, visual interference, trick questions, pressured selling), social proof (activity notifications, testimonials of uncertain origin), scarcity (low-stock messages, high-demand messages), obstruction (hard to cancel), and forced action (forced enrolment). Brignull's book "Deceptive Patterns" (2023) carries both taxonomies.
+A seven-category grouping comes from Mathur et al., "Dark Patterns at Scale" (CSCW 2019), who crawled about 11,000 shopping sites and found 1,818 instances on 1,254 of them (about 11 percent), classified into: sneaking (hidden costs, sneak into basket, hidden subscription), urgency (countdown timers, limited-time messages), misdirection (confirmshaming, visual interference, trick questions, pressured selling), social proof (activity notifications, testimonials of uncertain origin), scarcity (low-stock messages, high-demand messages), obstruction (hard to cancel), and forced action (forced enrolment). Brignull's book "Deceptive Patterns" (2023) carries both taxonomies.
 
 | Category (Mathur) | Example seen in luxury and hospitality | Why it is deceptive | The honest version |
 |---|---|---|---|
@@ -901,7 +901,7 @@ A seven-category grouping comes from Mathur et al., "Dark Patterns at Scale" (CS
 - The "click to cancel" amendments to the Negative Option Rule (finalised October 2024) were vacated by the Eighth Circuit on 8 July 2025 (Custom Communications v. FTC) on procedural grounds; the FTC restarted the process with an advance notice of proposed rulemaking (ANPRM, the first, question-only stage of a US rulemaking) on 11 March 2026, which asks among other things whether to mandate click-to-cancel, and continues to enforce the same conduct under ROSCA, so the design obligation (cancel as easily as you joined) stands regardless of the rule's status.
 - The FTC's Rule on the Use of Consumer Reviews and Testimonials (16 CFR Part 465, effective 21 October 2024) covers fake reviews, bought reviews and review suppression (6.7).
 - The FTC's Rule on Unfair or Deceptive Fees (announced 17 December 2024, effective 12 May 2025) covers short-term lodging (hotels, resorts, vacation rentals) and live-event tickets: any price shown must be the total including every mandatory fee (resort, destination and service fees) and must be more prominent than other pricing; government taxes and shipping may be left out of it, but their nature and amount must be disclosed before the person enters payment details. Design consequence: total-stay price as the default for any property selling to US guests (7.1) and all-in ticket prices for US event sales (7.3).
-- United Kingdom: the Digital Markets, Competition and Consumers Act 2024 gave the Competition and Markets Authority (CMA) direct consumer enforcement from 6 April 2025, with fines of up to 10 per cent of global turnover. Section 230(4) counts every fee, tax or charge the consumer will necessarily incur as part of the total price an invitation to purchase must show, which makes drip pricing a misleading omission, and Schedule 20, paragraph 13, bans fake reviews outright.
+- United Kingdom: the Digital Markets, Competition and Consumers Act 2024 gave the Competition and Markets Authority (CMA) direct consumer enforcement from 6 April 2025, with fines of up to 10 percent of global turnover. Section 230(4) counts every fee, tax or charge the consumer will necessarily incur as part of the total price an invitation to purchase must show, which makes drip pricing a misleading omission, and Schedule 20, paragraph 13, bans fake reviews outright.
 
 ### 13.4 India
 
@@ -1015,12 +1015,12 @@ Apple's Human Interface Guidelines carry the lineage from 1987 (1.1): direct man
 
 - Design and test on throttled connections (Chrome DevTools "Slow 4G" and a 400ms round trip) because a share of Indian sessions still run on congested 4G in Mumbai towers and on 3G fallback in Jaipur's old city and Goa's interiors, and because Gulf basements, malls and desert resorts drop to one bar. Numbers vary by month; take the current medians from Ookla's Speedtest Global Index when briefing.
 - Lite patterns, with the reason (budgets in 21-web-design-and-digital-craft.md, section 5): image budgets of about 100KB for hero and 30KB for grid images in AVIF or WebP with responsive sizes (image payload is the main cost); skeleton screens instead of spinners (perceived speed; 06-ui-design-craft.md, section 10.2); critical content server-rendered (first paint before script); a service worker caching the shell and the last catalogue view (offline tolerance); lazy loading below the fold; fonts subset to the scripts in use with font-display swap (03-typography.md); "data saver" respect (the Save-Data client hint); no autoplay video on cellular. Flipkart Lite (2015) was the first large progressive web app built for exactly this and remains the case study.
-- Device reality: StatCounter's September 2026 shares of mobile web traffic put Android at 93.9 per cent and iOS at 6.1 per cent in India, and Android at 73.3 per cent and iOS at 26.7 per cent in the UAE. A luxury product is therefore tested on a mid-range Android first in both markets (21-web-design-and-digital-craft.md, section 14.4, for the India test device) and on a current iPhone second, with the iPhone weighted more heavily in the Emirates, where its share is more than four times India's.
+- Device reality: StatCounter's September 2026 shares of mobile web traffic put Android at 93.9 percent and iOS at 6.1 percent in India, and Android at 73.3 percent and iOS at 26.7 percent in the UAE. A luxury product is therefore tested on a mid-range Android first in both markets (21-web-design-and-digital-craft.md, section 14.4, for the India test device) and on a current iPhone second, with the iPhone weighted more heavily in the Emirates, where its share is more than four times India's.
 
 ### 16.2 Vernacular language switching
 
 - The language selector is reachable on the first screen and in utility navigation, lists each language in its own script and name ("हिन्दी", "العربية", "English", "मराठी") with no flags (a flag is a country; Hindi has no flag and Arabic has 22), and remembers the choice per device and per account. Switching changes the whole surface, including transactional email, WhatsApp templates and error messages, because a half-translated product reads as a product that does not care.
-- String length and script metrics: plan a 30 per cent length allowance for Hindi against English (a common localisation rule, to be checked against the real strings), Devanagari needs about 1.2 times the line height for its matras, Arabic is similar in width to English and needs taller lines; design every label, button and card for the longest language (03-typography.md).
+- String length and script metrics: plan a 30 percent length allowance for Hindi against English (a common localisation rule, to be checked against the real strings), Devanagari needs about 1.2 times the line height for its matras, Arabic is similar in width to English and needs taller lines; design every label, button and card for the longest language (03-typography.md).
 - Mixed script is normal: product names stay in Latin inside Devanagari or Arabic sentences; numerals may be Western (India, UAE in practice) or Eastern Arabic (common in Saudi Arabia); dates may need the Hijri calendar beside the Gregorian in the Gulf (Ramadan timings, Eid offers; the Saudi table in 6.3 gives the implementation).
 - Country (ship-to), language and currency are three separate settings: a Dubai resident may read Hindi, pay in AED and ship to Mumbai. Geo-IP may suggest a country in a dismissible banner and never switches it silently (Google's guidance against IP-based redirects, 21-web-design-and-digital-craft.md, section 8.10).
 
@@ -1112,7 +1112,7 @@ Run it on any existing site or app before redesign, and on any new IA before bui
 2. Is the primary structure (hierarchy, database, sequence) named and consistent with the content's real shape?
 3. Does any path to content exceed three levels? Where it does, is scent strong at every level?
 4. Are there 5 to 9 top-level groups on desktop and 4 to 5 on mobile?
-5. Has every navigation label been tested (closed card sort, 15 or more participants, or tree test with 70 per cent direct success on top tasks)?
+5. Has every navigation label been tested (closed card sort, 15 or more participants, or tree test with 70 percent direct success on top tasks)?
 6. Is each label used in one sense across the whole product, with a written controlled vocabulary and an owner?
 7. Does every page pass Krug's trunk test (site ID, page name, sections, local navigation, you-are-here, search)?
 8. Are global, local, contextual and utility navigation each present where the structure needs them, and visually distinct?
@@ -1331,7 +1331,7 @@ Specifications, standards, laws and platform documentation
 - Universal Commerce Protocol, https://ucp.dev/
 - Vercel, AI SDK documentation, https://ai-sdk.dev/
 - Google PAIR, "People + AI Guidebook", 2019, https://pair.withgoogle.com/guidebook/
-- Reserve Bank of India, Authentication Mechanisms for Digital Payment Transactions Directions, 2025 (25 September 2025); (Digital Lending) Directions, 2025; Master Direction on Prepaid Payment Instruments (27 August 2021); circular on zero per cent interest schemes (17 September 2013), https://www.rbi.org.in/
+- Reserve Bank of India, Authentication Mechanisms for Digital Payment Transactions Directions, 2025 (25 September 2025); (Digital Lending) Directions, 2025; Master Direction on Prepaid Payment Instruments (27 August 2021); circular on zero percent interest schemes (17 September 2013), https://www.rbi.org.in/
 - NPCI, UPI product statistics, https://www.npci.org.in/what-we-do/upi/product-statistics
 - Department of Posts, DIGIPIN, https://www.indiapost.gov.in/VAS/Pages/digipin.aspx and https://github.com/INDIAPOST-gov/digipin
 - Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 2023, and the advisory of 5 June 2025, https://consumeraffairs.gov.in/

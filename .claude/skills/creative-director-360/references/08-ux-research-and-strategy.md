@@ -197,7 +197,7 @@ A focus group is a moderated discussion among a small group of similar people on
 
 - Size and length: 5 to 8 participants (Krueger and Casey; the older 8 to 10 norm suits only simple topics, because ten people in 90 minutes get under nine minutes each); 90 to 120 minutes; a moderator plus a note-taker.
 - Composition: homogeneous by segment, NCCS band (section 10.1), gender where custom requires, and seniority, because people defer to those above them in income, age or rank.
-- Number: 3 to 4 groups per segment. Greg Guest, Emily Namey and Kevin McKenna ("How Many Focus Groups Are Enough?", Field Methods, 2017) found 2 to 3 groups captured about 80 per cent of themes and 3 to 6 about 90 per cent.
+- Number: 3 to 4 groups per segment. Greg Guest, Emily Namey and Kevin McKenna ("How Many Focus Groups Are Enough?", Field Methods, 2017) found 2 to 3 groups captured about 80 percent of themes and 3 to 6 about 90 percent.
 - Use for: category vocabulary; social norms (what is acceptable to wear, gift or show at a wedding); early reactions to territories and names; co-creation (section 3.5).
 - Keep out: usability (one person drives and the rest watch); purchase prediction; private subjects (money, the body, family disputes); HNW participants, who will not speak candidly before peers; finished films (19-campaigns-and-creative-direction.md, section 8.1, anti-law 20, and section 10.8).
 - Pitfalls: conformity, which Solomon Asch demonstrated in 1951 (participants went along with a group's plainly wrong judgement on about a third of critical trials), and the dominant voice; the moderator controls both by collecting individual written answers before discussion. Professional repeat respondents are a known problem in Indian fieldwork: screen out anyone who joined any group in the last six months, and ask the recruiter for a signed declaration and a call-back check. The client in the viewing room reacts to one quote; brief observers that one voice is an anecdote (section 6.7).
@@ -226,7 +226,7 @@ A diary study asks participants to log experiences over time in their own settin
 
 - Prompt types (Niall Bolger, Angelina Davis and Eshkol Rafaeli, Annual Review of Psychology, 2003): interval-contingent (log at fixed times, for routines), signal-contingent (log when pinged, for momentary states), event-contingent (log when the event happens, for purchases, stays, cravings).
 - Duration: one to four weeks; long enough to see variation, short enough to keep compliance. Beauty routines need at least two weeks to see weekday and weekend differences; a hotel stay is a three-to-five-day diary with pre-arrival and post-stay entries.
-- Number: recruit 12 to 15 to finish with 10; dropout of 20 to 30 per cent is ordinary in house experience, so plan for it.
+- Number: recruit 12 to 15 to finish with 10; dropout of 20 to 30 percent is ordinary in house experience, so plan for it.
 - Tools: dscout is the purpose-built platform; WhatsApp is the practical tool in India and the Gulf because participants already live in it (with a consent form that covers the data flow, section 10.4).
 - Protocol: a kick-off call to build rapport and teach the logging; daily nudges; a mid-point check; a closing interview built around their own entries, which is where the insight surfaces.
 - Pitfall: entries decay into box-ticking after day five. Vary prompts, pay part of the incentive per completed week, and read entries daily so you can probe while it is fresh.
@@ -277,7 +277,7 @@ A survey measures the distribution of known attitudes or self-reported facts acr
 ### 4.4 Sampling and minimum n
 
 - A probability sample (everyone in the population has a known chance of selection) supports generalisation; a convenience sample (whoever answers the Instagram link) supports only description of those who answered. Most agency surveys are convenience samples and must be reported as such.
-- Margin of error (the range around a sample estimate within which the population value probably lies) at 95 per cent confidence for a proportion near 50 per cent: n 100 gives plus or minus 9.8 points; n 200 gives 6.9; n 384 gives 5.0; n 600 gives 4.0; n 1,067 gives 3.0. Each subgroup you intend to compare needs its own n; a 400-person survey split into four cities is four surveys of 100.
+- Margin of error (the range around a sample estimate within which the population value probably lies) at 95 percent confidence for a proportion near 50 percent: n 100 gives plus or minus 9.8 points; n 200 gives 6.9; n 384 gives 5.0; n 600 gives 4.0; n 1,067 gives 3.0. Each subgroup you intend to compare needs its own n; a 400-person survey split into four cities is four surveys of 100.
 - House floor: 100 per subgroup for directional reads, 384 overall when a single headline proportion must hold to plus or minus 5 points.
 - UAE samples: quota by nationality group (Emirati, other Arab, Western expatriate, South Asian, other Asian), residency and visa status, and income band, because nationality drives behaviour and Emiratis are a small minority of residents; a convenience sample over-represents expatriate English speakers. Recruit Emirati participants through Emirati or Arabic-speaking recruiters and moderate in Gulf Arabic. Take any population share quoted in a proposal from the latest UAE Federal Competitiveness and Statistics Centre (FCSC) release, with its date.
 - Fraud: count n after removing fraudulent and bot responses (section 10.9).
@@ -310,7 +310,7 @@ Card sorting asks participants to group content items (cards) into categories, r
 - Cards: 30 to 60 items; above about 60, fatigue degrades the later sorts. Write card labels in plain language, without category words in them, because a card called "Bridal necklaces" sorts itself into "Bridal" (label craft: 10-ux-writing-and-content-design.md, sections 4.2 and 4.16).
 - Number: Thomas Tullis and Larry Wood (UPA, 2004) compared subsamples with a 168-person sort: 15 participants correlated at about 0.90 and 30 at about 0.95; Nielsen interpolates about 0.93 at 20. House: 15 minimum for remote unmoderated sorts, 20 to 30 for decisions that will be expensive to reverse.
 - Tool: Optimal Workshop's card sorting tool (sold for years as OptimalSort; the company now presents itself as Optimal); Lyssna also runs card sorts. Moderated in-person sorts with paper cards and think-aloud give the reasons behind the groups, which remote sorts do not.
-- Analysis: the similarity matrix shows, for each pair of cards, the percentage of participants who grouped them together. The dendrogram is the tree produced by hierarchical cluster analysis of that matrix; cut it at a level that yields the number of groups the navigation can carry, and read the joins near the root as weak. House reading: treat clusters above about 60 to 70 per cent pairwise agreement as stable; cards that float between clusters need cross-links or relabelling.
+- Analysis: the similarity matrix shows, for each pair of cards, the percentage of participants who grouped them together. The dendrogram is the tree produced by hierarchical cluster analysis of that matrix; cut it at a level that yields the number of groups the navigation can carry, and read the joins near the root as weak. House reading: treat clusters above about 60 to 70 percent pairwise agreement as stable; cards that float between clusters need cross-links or relabelling.
 - Pitfall: a card sort shows how people group content. Labels and findability need their own evidence, so validate both with a tree test (section 5.2).
 
 ### 5.2 Tree testing
@@ -324,7 +324,7 @@ Tree testing (reverse card sorting) gives participants a text-only version of th
 
 ### 5.3 First-click testing
 
-First-click testing shows a screen and a task and records where participants click first. Bob Bailey and Cari Wolfson's study (2009) found that participants whose first click was correct completed the task about 87 per cent of the time, against about 46 per cent when the first click was wrong. Use it on navigation, home screens and campaign landing pages; 20 to 50 participants per screen; tools include Optimal's first-click test (long sold as Chalkmark), Lyssna and Maze. Pair the heatmap with the time-to-first-click: a correct but slow click signals a label that works only on reflection.
+First-click testing shows a screen and a task and records where participants click first. Bob Bailey and Cari Wolfson's study (2009) found that participants whose first click was correct completed the task about 87 percent of the time, against about 46 percent when the first click was wrong. Use it on navigation, home screens and campaign landing pages; 20 to 50 participants per screen; tools include Optimal's first-click test (long sold as Chalkmark), Lyssna and Maze. Pair the heatmap with the time-to-first-click: a correct but slow click signals a label that works only on reflection.
 
 ## 6. Usability testing
 
@@ -356,24 +356,24 @@ Think-aloud asks participants to verbalise their thoughts while working. K. Ande
 
 | Metric | Definition | Reading |
 |---|---|---|
-| Task success (completion) rate | Share of participants who reach the defined end state | Jeff Sauro's analysis of 1,189 tasks from 115 tests (MeasuringU) gives an average of 78 per cent; above 92 per cent is the top quartile, below 49 per cent the bottom quartile |
+| Task success (completion) rate | Share of participants who reach the defined end state | Jeff Sauro's analysis of 1,189 tasks from 115 tests (MeasuringU) gives an average of 78 percent; above 92 percent is the top quartile, below 49 percent the bottom quartile |
 | Time on task | Seconds from task start to success | Report the geometric mean for small samples, because time data is skewed (Sauro and Lewis) |
 | Error rate | Slips and mistakes per task, with severity | Count only errors defined before the session |
 | Single Ease Question (SEQ) | One 7-point item after each task: "Overall, how difficult or easy was the task to complete?" | Average about 5.5 across more than 400 tasks (MeasuringU, 2019 update); below 5 flags a problem task |
 | SUS at the end | Ten-item post-test questionnaire (section 9.1) | Average 68 |
 | Severity rating | Nielsen's 0 to 4 scale: 0 not a problem, 1 cosmetic, 2 minor, 3 major, 4 catastrophe | Combine frequency, impact and persistence |
 
-With small n, report confidence intervals (the range likely to contain the population value at a stated confidence) and say whether each is one- or two-sided. With 10 of 10 successes the two-sided 95 per cent interval is about 68 to 100 per cent by the adjusted Wald method (Alan Agresti and Brent Coull, The American Statistician, 1998), which Sauro and Lewis recommend for small samples; the exact (Clopper-Pearson) lower bound is about 69 and the Wilson about 72. One-sided, you can be 95 per cent confident the rate is at least about 75 per cent. Never print "100 per cent success" from 8 people without the interval.
+With small n, report confidence intervals (the range likely to contain the population value at a stated confidence) and say whether each is one- or two-sided. With 10 of 10 successes the two-sided 95 percent interval is about 68 to 100 percent by the adjusted Wald method (Alan Agresti and Brent Coull, The American Statistician, 1998), which Sauro and Lewis recommend for small samples; the exact (Clopper-Pearson) lower bound is about 69 and the Wilson about 72. One-sided, you can be 95 percent confident the rate is at least about 75 percent. Never print "100 percent success" from 8 people without the interval.
 
 ### 6.5 The five-user rule and its limits
 
-Jakob Nielsen and Thomas Landauer (INTERCHI 1993) modelled problem discovery as 1 minus (1 minus L) to the power n, where L is the probability that one user meets a given problem. With their average L of 0.31, five users find about 84 to 85 per cent of problems; hence "test with five users" (Nielsen, 2000).
+Jakob Nielsen and Thomas Landauer (INTERCHI 1993) modelled problem discovery as 1 minus (1 minus L) to the power n, where L is the probability that one user meets a given problem. With their average L of 0.31, five users find about 84 to 85 percent of problems; hence "test with five users" (Nielsen, 2000).
 
 The limits, with their proponents:
 
-- Jared Spool and Will Schroeder (CHI 2001) found five users revealed about 35 per cent of problems on large e-commerce sites, because L was far below 0.31.
-- Laura Faulkner (Behavior Research Methods, Instruments and Computers, 2003) ran 60 participants and showed that random sets of five found between 55 and 99 per cent of problems; sets of 20 found at least 95 per cent.
-- The arithmetic: a problem affecting 10 per cent of users (L 0.10) has a 41 per cent chance of appearing with five users, 65 per cent with ten and 79 per cent with fifteen.
+- Jared Spool and Will Schroeder (CHI 2001) found five users revealed about 35 percent of problems on large e-commerce sites, because L was far below 0.31.
+- Laura Faulkner (Behavior Research Methods, Instruments and Computers, 2003) ran 60 participants and showed that random sets of five found between 55 and 99 percent of problems; sets of 20 found at least 95 percent.
+- The arithmetic: a problem affecting 10 percent of users (L 0.10) has a 41 percent chance of appearing with five users, 65 percent with ten and 79 percent with fifteen.
 - Five users per distinct user group: a site serving Indian residents and Gulf NRIs is two groups and needs ten.
 - The rule applies to formative problem-finding only. Any number (success rate, SUS, time) needs the sample sizes in section 19.2.
 
@@ -393,7 +393,7 @@ Most traffic to Mask360 client sites is mobile, and some problems appear only on
 
 - Test on participants' own phones wherever possible, so their settings, fonts, language, saved payments and WhatsApp are present.
 - Capture: in person, a document camera or a mobile sled (a rig that holds a camera over the phone), or screen mirroring; remotely, Zoom or Lookback mobile screen share.
-- Devices: always include a mid-range Android on a throttled connection (Chrome DevTools network presets), because Android held 93.9 per cent of India's mobile operating system share in September 2026 (Statcounter). In the UAE, iOS held 26.7 per cent against Android's 73.3 per cent in the same month, more than four times India's iOS share of 6.1 per cent, so test both.
+- Devices: always include a mid-range Android on a throttled connection (Chrome DevTools network presets), because Android held 93.9 percent of India's mobile operating system share in September 2026 (Statcounter). In the UAE, iOS held 26.7 percent against Android's 73.3 percent in the same month, more than four times India's iOS share of 6.1 percent, so test both.
 - Script tasks across handoffs: OTP autofill, UPI intent (the switch to a payment app), WhatsApp deep links, Apple Pay and Google Pay, the maps handoff for a site visit.
 - Test the Arabic build on a real device set to an Arabic system locale; desktop emulation misses mirrored icons and mixed-direction numbers.
 - Patterns: 09-interaction-design-and-ux-patterns.md, sections 11 (mobile conventions) and 16 (India and the Gulf); performance on a mid-range Android: 21-web-design-and-digital-craft.md, section 5.1.
@@ -408,7 +408,7 @@ Inspection methods use experts instead of users. They are cheap and fast and fin
 
 ### 7.1 Heuristic evaluation
 
-Heuristic evaluation has evaluators inspect an interface independently against a set of principles, then merge findings. Jakob Nielsen and Rolf Molich introduced it in 1990; Nielsen refined the ten heuristics in 1994 from a factor analysis of 249 usability problems (NN/g page reviewed January 2024). A single evaluator finds about 35 per cent of the problems and five find about 75 per cent; Nielsen recommends five evaluators, and at least three ("How to Conduct a Heuristic Evaluation").
+Heuristic evaluation has evaluators inspect an interface independently against a set of principles, then merge findings. Jakob Nielsen and Rolf Molich introduced it in 1990; Nielsen refined the ten heuristics in 1994 from a factor analysis of 249 usability problems (NN/g page reviewed January 2024). A single evaluator finds about 35 percent of the problems and five find about 75 percent; Nielsen recommends five evaluators, and at least three ("How to Conduct a Heuristic Evaluation").
 
 | Heuristic (Nielsen's wording) | Current example of a violation, 2026 |
 |---|---|
@@ -455,20 +455,20 @@ The four numbers set before launch:
 | Minimum detectable effect (MDE) | The smallest true change worth detecting, relative or absolute | The smallest lift that would change the business decision |
 | Baseline rate | The current conversion of the metric | From 4 weeks of analytics |
 
-Sample size per variant, by Lehr's approximation for 80 per cent power and alpha 0.05: n is about 16 times p(1 minus p) divided by the square of the absolute difference.
+Sample size per variant, by Lehr's approximation for 80 percent power and alpha 0.05: n is about 16 times p(1 minus p) divided by the square of the absolute difference.
 
 | Baseline | Relative MDE | Absolute difference | n per variant |
 |---|---|---|---|
-| 3 per cent | 10 per cent | 0.3 points | about 51,700 |
-| 3 per cent | 20 per cent | 0.6 points | about 12,900 |
-| 2 per cent | 10 per cent | 0.2 points | about 78,400 |
-| 1 per cent | 20 per cent | 0.2 points | about 39,600 |
+| 3 percent | 10 percent | 0.3 points | about 51,700 |
+| 3 percent | 20 percent | 0.6 points | about 12,900 |
+| 2 percent | 10 percent | 0.2 points | about 78,400 |
+| 1 percent | 20 percent | 0.2 points | about 39,600 |
 
-The consequence for luxury: a villa microsite with 20,000 monthly sessions and a 1 per cent enquiry rate cannot detect a 20 per cent lift in under four months. Most Mask360 clients cannot A/B test small changes; they should test big swings (a different offer, a concierge entry point against a booking engine), test upstream metrics with higher baselines (click-through to the enquiry form), or use qualitative methods.
+The consequence for luxury: a villa microsite with 20,000 monthly sessions and a 1 percent enquiry rate cannot detect a 20 percent lift in under four months. Most Mask360 clients cannot A/B test small changes; they should test big swings (a different offer, a concierge entry point against a booking engine), test upstream metrics with higher baselines (click-through to the enquiry form), or use qualitative methods.
 
 Rules with reasons:
 
-- Do not peek. Checking a fixed-horizon test daily and stopping at the first p below 0.05 inflates the false-positive rate far above 5 per cent; Evan Miller's "How Not To Run an A/B Test" (2010) shows the effect, and Ramesh Johari, Pete Koomen, Leonid Pekelis and David Walsh ("Peeking at A/B Tests", KDD 2017) built the always-valid sequential method that Optimizely's Stats Engine uses. Either fix the sample in advance or use a sequential method built for continuous monitoring.
+- Do not peek. Checking a fixed-horizon test daily and stopping at the first p below 0.05 inflates the false-positive rate far above 5 percent; Evan Miller's "How Not To Run an A/B Test" (2010) shows the effect, and Ramesh Johari, Pete Koomen, Leonid Pekelis and David Walsh ("Peeking at A/B Tests", KDD 2017) built the always-valid sequential method that Optimizely's Stats Engine uses. Either fix the sample in advance or use a sequential method built for continuous monitoring.
 - Run whole weeks, at least two, to cover weekday and weekend behaviour; in the UAE the weekend has been Saturday and Sunday since January 2022, with a Friday half-day for federal government, while Saudi Arabia keeps Friday and Saturday; in India festival weeks (Diwali, Akshaya Tritiya, Dhanteras) distort jewellery and real estate traffic.
 - Check sample ratio mismatch (SRM): if a 50/50 split arrives as 52/48 at scale, the randomisation or tracking is broken and the result is void.
 - One primary metric, declared in advance, plus guardrail metrics (revenue per visitor, page speed, unsubscribes) that must not degrade.
@@ -476,9 +476,9 @@ Rules with reasons:
 - CUPED (Alex Deng and colleagues at Microsoft, WSDM 2013) uses pre-experiment data to cut variance and so the sample needed; ask whether the platform supports it before concluding that traffic is too thin.
 - Google Optimize was shut down on 30 September 2023; current tools include Optimizely, VWO, AB Tasty, Statsig, GrowthBook and PostHog's experiments. Check the platform's statistics method (fixed horizon, sequential or Bayesian) before reading its dashboard.
 - Novelty effect and change aversion: returning users click a new element because it is new, or resist it because it changed. Segment new against returning users and run at least two full weeks so either effect can fade.
-- Multiple comparisons: with four variants against a control at alpha 0.05, the chance of at least one false winner is about 19 per cent (1 minus 0.95 to the power 4). Apply a Holm or Bonferroni correction (Bonferroni divides alpha by the number of comparisons), or test fewer variants.
-- Bayesian dashboards: "probability to beat control" is a posterior probability and answers a different question from a p-value. Set the decision threshold (for example 95 per cent) and the minimum run before launch, or the dashboard invites peeking by another name.
-- Long-term holdout: keep 5 to 10 per cent of users on the old experience for a quarter to measure the cumulative effect of a series of wins, which Kohavi, Tang and Xu warn is usually smaller than the sum of the individual lifts.
+- Multiple comparisons: with four variants against a control at alpha 0.05, the chance of at least one false winner is about 19 percent (1 minus 0.95 to the power 4). Apply a Holm or Bonferroni correction (Bonferroni divides alpha by the number of comparisons), or test fewer variants.
+- Bayesian dashboards: "probability to beat control" is a posterior probability and answers a different question from a p-value. Set the decision threshold (for example 95 percent) and the minimum run before launch, or the dashboard invites peeking by another name.
+- Long-term holdout: keep 5 to 10 percent of users on the old experience for a quarter to measure the cumulative effect of a series of wins, which Kohavi, Tang and Xu warn is usually smaller than the sum of the individual lifts.
 
 ### 8.2 Analytics and funnel analysis
 
@@ -555,8 +555,8 @@ A five-second test shows a design for five seconds, hides it, and asks what part
 
 ### 9.5 Preference and desirability tests
 
-- A preference test shows two or more options and asks which participants prefer and why. The "why" carries the value; the count is weak evidence. With 30 participants, a split of 21 to 9 or wider is significant at 95 per cent (two-sided binomial test); with 50, 33 to 17; with 20, 15 to 5. Anything closer is a tie.
-- The desirability test uses the Microsoft product reaction cards, 118 words (about 60 per cent positive and 40 per cent negative) created by Joey Benedek and Trish Miner (UPA, 2002). Participants choose the five words that best describe the design, then explain each choice. Compare the chosen words against the brand's intended attributes from the brand platform (18-brand-strategy-and-identity-design.md, section 1.2). If the target is "calm, exclusive, personal" and participants pick "busy, impersonal", the design is off-brief whatever the client feels.
+- A preference test shows two or more options and asks which participants prefer and why. The "why" carries the value; the count is weak evidence. With 30 participants, a split of 21 to 9 or wider is significant at 95 percent (two-sided binomial test); with 50, 33 to 17; with 20, 15 to 5. Anything closer is a tie.
+- The desirability test uses the Microsoft product reaction cards, 118 words (about 60 percent positive and 40 percent negative) created by Joey Benedek and Trish Miner (UPA, 2002). Participants choose the five words that best describe the design, then explain each choice. Compare the chosen words against the brand's intended attributes from the brand platform (18-brand-strategy-and-identity-design.md, section 1.2). If the target is "calm, exclusive, personal" and participants pick "busy, impersonal", the design is off-brief whatever the client feels.
 - House position on preference testing for brand work: use it to detect misreadings (a crest that reads as a bank, a colour that reads as a discount retailer). The identity decision stays with the creative director and the brand strategy, because preference tests reward familiarity and distinctive work starts unfamiliar.
 
 ### 9.6 Concept testing
@@ -599,17 +599,17 @@ A screener is the questionnaire that admits or excludes candidate participants.
 - Socio-economic class in India: NCCS (New Consumer Classification System), launched in 2011 by MRUC (Media Research Users Council) and MRSI (Market Research Society of India) to replace the older urban and rural SEC (socio-economic classification) grids, sorts households into 12 grades, A1 to E3, from two questions: the education of the chief earner, and how many of 11 listed durables the household owns (electricity connection, ceiling fan, LPG stove, two-wheeler, colour TV, refrigerator, washing machine, personal computer or laptop, car, jeep or van, air conditioner, agricultural land). Recruiters quote "NCCS A1" by default. A1 is too broad for luxury because it includes the upper middle class, so always add behavioural spend screens (nights above a rate, jewellery spend in the last 12 months, property owned).
 - Access needs: ask every participant whether they use assistive technology or need an adjustment, so sessions can be adapted.
 - Quotas: write the mix (city, age band, new against returning customer, resident against NRI, NCCS band, nationality group in the UAE, section 4.4) before recruiting, so the easy-to-reach group does not fill the study; include disabled participants for any public-facing product (11-accessibility-and-inclusive-design.md, section 16.8).
-- Over-recruit by 20 per cent for no-shows; for unmoderated tests, add attention checks (items with one correct answer that catch inattentive respondents) and discard speeders (anyone finishing in under a third of the median time). Neither stops an AI agent (section 10.9).
+- Over-recruit by 20 percent for no-shows; for unmoderated tests, add attention checks (items with one correct answer that catch inattentive respondents) and discard speeders (anyone finishing in under a third of the median time). Neither stops an AI agent (section 10.9).
 
 ### 10.2 Incentives
 
 An incentive compensates participants for time and expertise; it is paid in full whatever the participant says, so answers carry no financial pressure.
 
-Verified reference points, October 2026: Prolific sets a minimum of £6.00 or US$8.00 an hour and recommends at least £9.00 or US$12.00, with a platform fee usually of 42.8 per cent for corporate customers (33.3 per cent for academic and non-profit); Respondent's product pages illustrate US$100 for a 60-minute professional video call, paid through Tremendous. No published India or UAE incentive benchmark could be verified, so the house builds its own dated rate card:
+Verified reference points, October 2026: Prolific sets a minimum of £6.00 or US$8.00 an hour and recommends at least £9.00 or US$12.00, with a platform fee usually of 42.8 percent for corporate customers (33.3 percent for academic and non-profit); Respondent's product pages illustrate US$100 for a 60-minute professional video call, paid through Tremendous. No published India or UAE incentive benchmark could be verified, so the house builds its own dated rate card:
 
 - Each year, get written quotes from at least two recruiters in Mumbai or Delhi and two in Dubai; record every incentive actually paid in the participant database (section 16); publish the card in rupees and dirhams with its date and review it every six months. Axes: participant tier (consumer NCCS A, affluent, professional, senior professional or CXO, medical professional, HNW gesture) by format (15-minute unmoderated task, 60-minute interview, 90-minute in-home visit, 2-hour group) by market.
-- Incidence rate: the share of screened people who qualify. Recruiters price each recruit by incidence, so a 5 per cent incidence costs several times a 40 per cent one; tighten a screener only where the criterion changes the finding.
-- Budget the recruiting fee separately from the incentive, and add tax on recruiter and research fees: GST (goods and services tax) at 18 per cent in India, VAT (value added tax) at 5 per cent in the UAE.
+- Incidence rate: the share of screened people who qualify. Recruiters price each recruit by incidence, so a 5 percent incidence costs several times a 40 percent one; tighten a screener only where the criterion changes the finding.
+- Budget the recruiting fee separately from the incentive, and add tax on recruiter and research fees: GST (goods and services tax) at 18 percent in India, VAT (value added tax) at 5 percent in the UAE.
 - Price by the participant's hourly value: consumer, professional, senior professional, HNW. Pay professionals and executives a multiple of the consumer rate; a ₹2,000 voucher for an hour of a Mumbai managing director's time reads as an insult and reduces show rates.
 - Form: in India, UPI transfer or Amazon Pay voucher for consumers, a premium voucher (Taj, Tata CLiQ Luxury) for affluent participants; in the UAE, bank transfer or vouchers redeemable at Dubai Mall or Mall of the Emirates retailers. Include in-home and travel time in the hours.
 - HNW participants: cash or vouchers can offend. Offer a gesture tied to the brand: a private preview, a meal at the property, a donation in their name to a cause they choose, early access. Confirm the gesture with the client's relationship manager.
@@ -642,7 +642,7 @@ Personally identifiable information (PII), called personal data in the statutes,
 
 | Regime | Instrument and status as of October 2026 | What it means for research |
 |---|---|---|
-| EU and UK | GDPR, Regulation (EU) 2016/679, applying since 25 May 2018; UK GDPR alongside the Data Protection Act 2018 | Applies when researching people in the EU or UK (European guests of a Goa resort, for instance). Lawful basis needed (consent or legitimate interests); special category data (health, religion, ethnicity) needs explicit consent; Article 89 sets safeguards (minimisation, pseudonymisation) for research and statistical processing; fines up to €20 million or 4 per cent of global annual turnover |
+| EU and UK | GDPR, Regulation (EU) 2016/679, applying since 25 May 2018; UK GDPR alongside the Data Protection Act 2018 | Applies when researching people in the EU or UK (European guests of a Goa resort, for instance). Lawful basis needed (consent or legitimate interests); special category data (health, religion, ethnicity) needs explicit consent; Article 89 sets safeguards (minimisation, pseudonymisation) for research and statistical processing; fines up to €20 million or 4 percent of global annual turnover |
 | India | Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023, assent 11 August 2023); DPDP Rules, 2025, with commencement in three phases: Data Protection Board and definitions from 13 November 2025; registration of consent managers (registered intermediaries through which a person gives, manages and withdraws consent) from 13 November 2026; all remaining obligations from 13 May 2027 | Consent must be free, specific, informed, unconditional and unambiguous with a clear affirmative action; notice itemises the data and purpose; data principals (the individuals whose data is processed) can access, correct, erase and withdraw consent; children's data needs verifiable parental consent and bans tracking and targeted advertising at children. Penalties under the Schedule run up to ₹250 crore for failure to take reasonable security safeguards. Treat May 2027 obligations as live now for new studies, because a study's data outlives the study |
 | UAE (federal) | Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL), in force from 2 January 2022; the UAE Data Office established by Federal Decree-Law No. 44 of 2021. DLA Piper's summary dated January 2025 recorded that the Executive Regulations had not been published, and the government portal u.ae (page updated 4 December 2025) does not mention them; their status in October 2026 was not verified, so check with the UAE Data Office before relying on deadlines | Consent is the default legal basis with listed exceptions; rights of access, correction, erasure, restriction, portability and objection to direct marketing; cross-border transfers restricted to adequate jurisdictions or listed exceptions, which matters when a Dubai study's recordings sit on servers in the US or India |
 | UAE free zones | DIFC (Dubai International Financial Centre) Data Protection Law, DIFC Law No. 5 of 2020; ADGM (Abu Dhabi Global Market) Data Protection Regulations 2021 | Apply to entities in those free zones (many private banks and family offices whose clients are research targets); GDPR-style regimes with their own commissioners |
@@ -687,7 +687,7 @@ Industry codes add a layer the law does not: the ICC/ESOMAR International Code o
 
 ### 10.9 Respondent fraud and AI-generated responses
 
-Sean Westwood of Dartmouth built an autonomous synthetic respondent that passed 99.8 per cent of 6,000 trials of standard attention checks, evaded logic puzzles and "reverse shibboleth" questions designed to catch non-humans, wrote open-ends calibrated to its persona's education, and could be instructed to shift results or to confirm a researcher's inferred hypothesis ("The potential existential threat of large language models to online survey research", PNAS, 20 November 2025). Attention checks and CAPTCHA (challenge tests meant to tell people from machines) no longer do that job, and the house treats every remote B2B participant as unverified until checked. Controls, strongest first:
+Sean Westwood of Dartmouth built an autonomous synthetic respondent that passed 99.8 percent of 6,000 trials of standard attention checks, evaded logic puzzles and "reverse shibboleth" questions designed to catch non-humans, wrote open-ends calibrated to its persona's education, and could be instructed to shift results or to confirm a researcher's inferred hypothesis ("The potential existential threat of large language models to online survey research", PNAS, 20 November 2025). Attention checks and CAPTCHA (challenge tests meant to tell people from machines) no longer do that job, and the house treats every remote B2B participant as unverified until checked. Controls, strongest first:
 
 1. Recruit from client lists and identity-verified panels (Respondent verifies by work email, phone and government ID; section 10.7).
 2. Hold a short camera-on screener call before every moderated session.
@@ -727,11 +727,11 @@ Thematic analysis is the systematic identification of patterns of meaning (theme
 
 - A code is a short label attached to a segment of data that captures one idea. Deductive coding applies a codebook written in advance from the research questions; inductive coding builds codes from the data. Most studies combine them: a starter codebook from the questions, extended as the data surprises you.
 - A codebook lists each code with definition, inclusion and exclusion rules and an example. Without the rules, two coders apply "trust" to different things.
-- Contested point: inter-rater reliability. One position (common in applied research) has two coders code the same 10 to 20 per cent of transcripts and compute Cohen's kappa, with 0.61 to 0.80 read as substantial agreement (Landis and Koch, 1977). Braun and Clarke's later reflexive thematic analysis (2019 onwards: analysis in which the researcher's interpretation is the instrument, made explicit) rejects reliability scores as incoherent for interpretive work and asks instead for a reflexive account of the researcher's position. House position: double-code a sample when findings will drive spend above about ₹50 lakh or will be challenged by a client team; otherwise one coder with a documented codebook and a second researcher reviewing themes against the raw data.
+- Contested point: inter-rater reliability. One position (common in applied research) has two coders code the same 10 to 20 percent of transcripts and compute Cohen's kappa, with 0.61 to 0.80 read as substantial agreement (Landis and Koch, 1977). Braun and Clarke's later reflexive thematic analysis (2019 onwards: analysis in which the researcher's interpretation is the instrument, made explicit) rejects reliability scores as incoherent for interpretive work and asks instead for a reflexive account of the researcher's position. House position: double-code a sample when findings will drive spend above about ₹50 lakh or will be challenged by a client team; otherwise one coder with a documented codebook and a second researcher reviewing themes against the raw data.
 
 ### 11.4 Saturation
 
-Saturation is the point at which new data stops producing new codes or themes. Greg Guest, Arwen Bunce and Laura Johnson (Field Methods, 2006) found 92 per cent of codes emerged within the first 12 of 60 interviews in a fairly homogeneous group, with the basic themes present after 6. Monique Hennink and Bonnie Kaiser's systematic review (Social Science and Medicine, 2022) found saturation at 9 to 17 interviews and 4 to 8 focus groups in empirical studies. Saturation depends on homogeneity: four distinct segments need four sets of interviews. Track it with a running tally of new codes per interview; when two consecutive interviews add nothing material, stop or change the sample.
+Saturation is the point at which new data stops producing new codes or themes. Greg Guest, Arwen Bunce and Laura Johnson (Field Methods, 2006) found 92 percent of codes emerged within the first 12 of 60 interviews in a fairly homogeneous group, with the basic themes present after 6. Monique Hennink and Bonnie Kaiser's systematic review (Social Science and Medicine, 2022) found saturation at 9 to 17 interviews and 4 to 8 focus groups in empirical studies. Saturation depends on homogeneity: four distinct segments need four sets of interviews. Track it with a running tally of new codes per interview; when two consecutive interviews add nothing material, stop or change the sample.
 
 ### 11.5 Insight statements
 
@@ -893,9 +893,9 @@ A North Star metric is the single measure that best captures the value customers
 
 | Method | Mechanics | Strength | Weakness |
 |---|---|---|---|
-| RICE (Sean McBride, Intercom) | Reach (people per period) times Impact (3 massive, 2 high, 1 medium, 0.5 low, 0.25 minimal) times Confidence (100, 80 or 50 per cent) divided by Effort (person-months) | Forces reach and confidence into the conversation | Impact scores are guesses; precision is false |
+| RICE (Sean McBride, Intercom) | Reach (people per period) times Impact (3 massive, 2 high, 1 medium, 0.5 low, 0.25 minimal) times Confidence (100, 80 or 50 percent) divided by Effort (person-months) | Forces reach and confidence into the conversation | Impact scores are guesses; precision is false |
 | ICE (Sean Ellis) | Impact, Confidence and Ease, each 1 to 10, multiplied or averaged | Fast, for growth experiments | Highly subjective; scores drift between scorers |
-| MoSCoW (Dai Clegg, Oracle, 1994; adopted by DSDM, the Dynamic Systems Development Method) | Must have, Should have, Could have, Won't have this time | Clear for fixed-deadline scope | Everything becomes a must; set a cap (DSDM guidance keeps musts to about 60 per cent of effort) |
+| MoSCoW (Dai Clegg, Oracle, 1994; adopted by DSDM, the Dynamic Systems Development Method) | Must have, Should have, Could have, Won't have this time | Clear for fixed-deadline scope | Everything becomes a must; set a cap (DSDM guidance keeps musts to about 60 percent of effort) |
 | Impact against effort | Two-by-two: quick wins, big bets, fill-ins, money pits | Workshop-friendly | Estimates are made in the room without evidence |
 | Kano (section 12.10) | Classify by satisfaction effect | Uses customer data | Says nothing about cost |
 
@@ -904,7 +904,7 @@ House position: score with RICE when evidence exists, and write the evidence bes
 ### 13.9 Roadmaps and OKRs
 
 - Roadmap literacy: a roadmap communicates strategy and sequence; a delivery plan commits to dates. The now, next, later format (Janna Bastow, ProdPad) commits to near-term work and keeps later items as problems to solve. A roadmap of features with dates a year out is a list of promises research has not yet tested. When a client presents one, ask what outcome each item serves and what evidence put it there.
-- OKRs (objectives and key results) originate with Andy Grove at Intel ("High Output Management", 1983) and were spread by John Doerr ("Measure What Matters", 2018). An objective is qualitative and directional; each has three to five key results that are measurable outcomes. A key result that is a task ("launch the app") is an output in disguise; rewrite it as a behaviour ("40 per cent of in-house guests use the app to make one request").
+- OKRs (objectives and key results) originate with Andy Grove at Intel ("High Output Management", 1983) and were spread by John Doerr ("Measure What Matters", 2018). An objective is qualitative and directional; each has three to five key results that are measurable outcomes. A key result that is a task ("launch the app") is an output in disguise; rewrite it as a behaviour ("40 percent of in-house guests use the app to make one request").
 
 ## 14. Metrics
 
@@ -935,7 +935,7 @@ House rule for luxury clients: replace NPS as the headline with a direct-return 
 - Task success rate, time on task, error rate, SEQ and SUS: section 6.4 and 9.1.
 - Conversion rate: share of sessions or users completing a goal (booking, enquiry, purchase). Define the denominator in writing; "conversion" means different things to the client's marketing team and to the e-commerce platform.
 - Activation: the share of new users who reach the first moment of real value (the "aha" moment), defined per product by testing which early behaviour best predicts retention. For a residences portal it might be "viewed the floor plan and booked a site visit within 14 days".
-- Retention curve: the share of a starting cohort still active at each later period. A curve that flattens shows a retained core; one that decays towards zero shows no product-market fit (a product retaining a core of users who need it) for that cohort, whatever the acquisition numbers say. For client apps, add Sean Ellis's product-market-fit question, "How would you feel if you could no longer use [product]?", with 40 per cent or more answering "very disappointed" as his threshold for fit.
+- Retention curve: the share of a starting cohort still active at each later period. A curve that flattens shows a retained core; one that decays towards zero shows no product-market fit (a product retaining a core of users who need it) for that cohort, whatever the acquisition numbers say. For client apps, add Sean Ellis's product-market-fit question, "How would you feel if you could no longer use [product]?", with 40 percent or more answering "very disappointed" as his threshold for fit.
 - Cohort analysis: group users by start date (or by acquisition channel, or by first product bought) and compare their curves; it separates the effect of a change from the effect of who arrived that month. Seasonality in the Gulf (summer exodus, Ramadan, the cooler-season peak from October to April) and in India (wedding seasons, festive quarter) makes cohort comparison essential before crediting a redesign.
 - Funnel metrics: step conversion and cumulative conversion (section 8.2); report both, because a fix at step two that raises step conversion can lower cumulative conversion if it moves the drop downstream.
 - Guardrails: page speed (Core Web Vitals, see 21-web-design-and-digital-craft.md), complaint rate, refund and cancellation rate.
@@ -1086,28 +1086,28 @@ Maria Rosala and Kate Moran's NN/g study (June 2024) compared synthetic users wi
 | Method | Recommended n | Basis |
 |---|---|---|
 | Stakeholder interviews | 6 to 12 | Coverage of functions and levels (2.1) |
-| Generative interviews | 5 to 8 per segment; 10 to 15 total for most studies | Saturation at 9 to 17 (Hennink and Kaiser, 2022); 12 for 92 per cent of codes in a homogeneous group (Guest, Bunce and Johnson, 2006) |
+| Generative interviews | 5 to 8 per segment; 10 to 15 total for most studies | Saturation at 9 to 17 (Hennink and Kaiser, 2022); 12 for 92 percent of codes in a homogeneous group (Guest, Bunce and Johnson, 2006) |
 | HNW interviews | 6 to 10, triangulated | Access ceiling (10.6) |
 | JTBD switch interviews | 10 to 12 | House practice for switch interviews (2.4) |
 | Focus groups | 3 to 4 per segment; 5 to 8 per group | Krueger and Casey (2015); Guest, Namey and McKenna (2017) (2.5) |
 | Contextual inquiry | 4 to 6 per role | Beyer and Holtzblatt (3.1) |
 | Diary study | Recruit 12 to 15 to finish 10 | Dropout allowance (3.3) |
 | Formative usability test | 5 to 8 per segment per round | Nielsen and Landauer (1993) with its limits (6.5) |
-| Quantitative usability benchmark | 40 for binary metrics (95 per cent confidence, 15 per cent margin); 47 for continuous metrics such as time | NN/g sample-size summary |
+| Quantitative usability benchmark | 40 for binary metrics (95 percent confidence, 15 percent margin); 47 for continuous metrics such as time | NN/g sample-size summary |
 | SUS for a formative read | 12 or more | Tullis and Stetson (2004) |
 | Card sort | 15 minimum; 20 to 30 for high-stakes IA | Tullis and Wood (2004): about 0.90 at 15 and 0.95 at 30 against 168; Nielsen interpolates 0.93 at 20 |
 | Tree test | About 50 | Optimal Workshop guidance |
 | First-click test | 20 to 50 per screen | House practice |
 | Five-second test | 20 to 50 per design | House practice |
-| Preference test | 30 or more per comparison | 21 to 9 is the narrowest significant split at 30 (two-sided binomial, 95 per cent) |
+| Preference test | 30 or more per comparison | 21 to 9 is the narrowest significant split at 30 (two-sided binomial, 95 percent) |
 | Eye-tracking heatmaps | About 30 usable, recruit about 39 | Pernice and Nielsen (2009) |
-| Heuristic evaluation | 5 evaluators, at least 3 | One finds about 35 per cent of problems, five about 75 per cent (Nielsen) |
+| Heuristic evaluation | 5 evaluators, at least 3 | One finds about 35 percent of problems, five about 75 percent (Nielsen) |
 | Mystery shopping | 2 to 3 shops per site per scenario | House practice (3.4) |
-| Survey, one headline proportion | 384 for plus or minus 5 points; 1,067 for plus or minus 3 | 95 per cent confidence, p 0.5 |
+| Survey, one headline proportion | 384 for plus or minus 5 points; 1,067 for plus or minus 3 | 95 percent confidence, p 0.5 |
 | Survey subgroups | 100 per subgroup minimum | Plus or minus 9.8 points per subgroup |
 | Kano survey | 20 to 30 per segment for a read; more to quantify | House practice (12.10) |
 | Conjoint analysis | n times tasks times alternatives divided by the largest number of levels, at least 500; at least 300 overall, about 200 per subgroup compared | Johnson's rule of thumb; Orme (4.5) |
-| A/B test | Calculated per test; about 12,900 per variant for a 20 per cent relative lift on a 3 per cent baseline | Lehr's approximation, 80 per cent power, alpha 0.05 (8.1) |
+| A/B test | Calculated per test; about 12,900 per variant for a 20 percent relative lift on a 3 percent baseline | Lehr's approximation, 80 percent power, alpha 0.05 (8.1) |
 
 Every n counts participants after fraud removal (section 10.9); over-recruit by the expected removal rate.
 
@@ -1189,7 +1189,7 @@ Every n counts participants after fraud removal (section 10.9); over-recruit by 
 - First-click testing: recording where participants click first for a task on a screen.
 - Fitzpatrick skin types: the dermatological classification of skin phototypes from I to VI by response to sun.
 - Five-second test: showing a design for five seconds, then asking what participants remember and understood.
-- Five-user rule: Nielsen and Landauer's finding that five users find about 85 per cent of problems when each problem affects 31 per cent of users.
+- Five-user rule: Nielsen and Landauer's finding that five users find about 85 percent of problems when each problem affects 31 percent of users.
 - Five whys: Toyoda's root-cause technique of asking why repeatedly until the cause is reached.
 - Focus group (FGD): a moderated discussion among 5 to 8 similar people on a defined topic.
 - Footfall conversion: the share of store visitors who buy.
@@ -1258,7 +1258,7 @@ Every n counts participants after fraud removal (section 10.9); over-recruit by 
 - Pre-test: measuring an advertisement's branding, attention, emotion and message take-out before it runs.
 - Primacy effect: the pull of options listed first.
 - Problem statement: a framing of a need without a solution.
-- Product-market fit, PMF survey: a product retaining a core of users who need it; Sean Ellis's question, with 40 per cent "very disappointed" as his threshold.
+- Product-market fit, PMF survey: a product retaining a core of users who need it; Sean Ellis's question, with 40 percent "very disappointed" as his threshold.
 - Product trio: a product manager, a designer and a software engineer doing discovery together.
 - Pseudonymisation: replacing identities with codes, with the key held separately.
 - Qualitative research, quantitative research: finding why and how by direct observation; measuring how many and how much.

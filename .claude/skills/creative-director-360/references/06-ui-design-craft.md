@@ -77,7 +77,7 @@ Logical widths are what you design to. Physical widths matter for asset export a
 | MacBook Air 13 | 1280 x 832 pt at exact 2x; the default scaled setting gives more space (1470 x 956 on the M2 and later models) | 2560 x 1664 | 2x or scaled | 13.6 inch, 224 ppi (Apple tech specs); check System Settings, Displays on the review machine |
 | MacBook Air 15 | 1440 x 932 pt at exact 2x | 2880 x 1864 | 2x or scaled | 15.3 inch, 224 ppi |
 | MacBook Pro 14 and 16 | 1512 x 982 pt and 1728 x 1117 pt (the default settings, exact 2x) | 3024 x 1964 and 3456 x 2234 | 2x | 14.2 and 16.2 inch, 254 ppi (Apple tech specs) |
-| Desktop design artboards | 1440 x 900 and 1920 x 1080 | varies | 1x or 2x | 1440 covers scaled MacBook displays and most laptops; 1920 x 1080 has led StatCounter's desktop resolution share for years; 1536 x 864 and 1366 x 768 follow (Windows laptops at 125 per cent scaling) |
+| Desktop design artboards | 1440 x 900 and 1920 x 1080 | varies | 1x or 2x | 1440 covers scaled MacBook displays and most laptops; 1920 x 1080 has led StatCounter's desktop resolution share for years; 1536 x 864 and 1366 x 768 follow (Windows laptops at 125 percent scaling) |
 
 Rules that follow from the table:
 - Design mobile at 390 or 402pt wide and check at 360dp (the floor for cheap Android still common in India, where sub-15,000 rupee phones ship 720 x 1600 panels at 2x, giving 360 x 800dp) and at 440pt. Anything that only works at 393 is untested.
@@ -143,7 +143,7 @@ User settings and build APIs: iOS 26.1 added a Liquid Glass setting with the def
 
 ### 2.2 Material 3 and Material 3 Expressive
 
-Material 3 (M3) is Google's design system; Material 3 Expressive is its 2025 extension, announced at The Android Show on 13 May 2025 and rolled to Pixel with Android 16 QPR1 (the first quarterly platform release after Android 16) in September 2025. In Jetpack Compose the Expressive APIs were removed from the 1.4.0 line at beta01 and continue in 1.5.0, which reached beta in October 2026 (1.5.0-beta02 on 21 October, after 1.5.0-alpha29 on 23 September). Along the way SplitButton left experimental status in alpha20 (19 May 2026), and in alpha22 (17 June 2026) ButtonGroup was promoted to stable and FloatingToolbar left experimental status. 1.4.0 (24 September 2025) remains the latest stable release as of October 2026, so an Android build that wants Expressive components depends on a beta library and the estimate must say so. Google's published research base (design.google): 46 studies, over 18,000 participants, work starting in 2022; key elements spotted up to four times faster in expressive layouts; up to 87 per cent preference among 18 to 24 year olds; users over 45 spotted key interactive elements on par with younger users.
+Material 3 (M3) is Google's design system; Material 3 Expressive is its 2025 extension, announced at The Android Show on 13 May 2025 and rolled to Pixel with Android 16 QPR1 (the first quarterly platform release after Android 16) in September 2025. In Jetpack Compose the Expressive APIs were removed from the 1.4.0 line at beta01 and continue in 1.5.0, which reached beta in October 2026 (1.5.0-beta02 on 21 October, after 1.5.0-alpha29 on 23 September). Along the way SplitButton left experimental status in alpha20 (19 May 2026), and in alpha22 (17 June 2026) ButtonGroup was promoted to stable and FloatingToolbar left experimental status. 1.4.0 (24 September 2025) remains the latest stable release as of October 2026, so an Android build that wants Expressive components depends on a beta library and the estimate must say so. Google's published research base (design.google): 46 studies, over 18,000 participants, work starting in 2022; key elements spotted up to four times faster in expressive layouts; up to 87 percent preference among 18 to 24 year olds; users over 45 spotted key interactive elements on par with younger users.
 
 | System element | Material 3 | Material 3 Expressive additions |
 |---|---|---|
@@ -159,11 +159,11 @@ Dynamic colour (the scheme Android 12 and later derive from the user's wallpaper
 
 ### 2.3 Fluent 2
 
-Fluent 2 is Microsoft's cross-platform system (Windows, web, macOS, iOS, Android). Its four published principles: natural on every platform (native components reused "80 per cent of the time"), built for focus, one for all, unmistakably Microsoft. Values that matter when a client is on Microsoft surfaces:
+Fluent 2 is Microsoft's cross-platform system (Windows, web, macOS, iOS, Android). Its four published principles: natural on every platform (native components reused "80 percent of the time"), built for focus, one for all, unmistakably Microsoft. Values that matter when a client is on Microsoft surfaces:
 
 - Type: Segoe UI Variable on Windows (Caption 12/16, Body 14/20, Subtitle 20/28, Title 28/36, Large Title 40/52, Display 68/92, all px); on web Segoe UI with a 16-step ramp from Caption 2 at 10/14 to Display at 68/92; on macOS and iOS San Francisco; on Android Roboto.
 - Radius tokens (web): 2, 4, 6, 8, 12, 16, 24, 32, 40px and circular (10000px).
-- Elevation: a shadow ramp named by blur, 2, 4, 8, 16, 28, 64, each built from a key shadow (sharp, directional, defines the edge) plus an ambient shadow (soft, implies distance); light mode opacity 14 per cent on the low ramp, dark mode key shadow 28 per cent; the Windows platform replaces key shadows with strokes.
+- Elevation: a shadow ramp named by blur, 2, 4, 8, 16, 28, 64, each built from a key shadow (sharp, directional, defines the edge) plus an ambient shadow (soft, implies distance); light mode opacity 14 percent on the low ramp, dark mode key shadow 28 percent; the Windows platform replaces key shadows with strokes.
 - Shadows on coloured surfaces: opacity derived from luminosity, with Shadow 1 at round(42 minus 0.116 x luminosity) and Shadow 2 at round(34 minus 0.09 x luminosity).
 
 ### 2.4 Web conventions
@@ -224,13 +224,13 @@ State: a named condition of a component that changes its appearance or behaviour
 | State | Trigger | What must change (minimum) | Minimum visible difference | Transition |
 |---|---|---|---|---|
 | default | none | the resting design | the reference every other state is measured against | none: the state every transition returns to |
-| hover | pointer over (fine pointers only; never on touch) | container tone or state layer | state layer at 8 per cent of the content colour (Material 3 value), or a lightness shift of 4 to 6 per cent; cursor pointer on links and buttons | 100 to 150ms ease-out in, 150 to 200ms out |
+| hover | pointer over (fine pointers only; never on touch) | container tone or state layer | state layer at 8 percent of the content colour (Material 3 value), or a lightness shift of 4 to 6 percent; cursor pointer on links and buttons | 100 to 150ms ease-out in, 150 to 200ms out |
 | focus | element receives focus by any means | nothing visible for pointer focus | none after a mouse click, because a ring after every click reads as a glitch; keyboard focus is the next row | none |
 | focus-visible | keyboard or assistive focus (the browser's `:focus-visible` heuristic: focus that should be shown, as after Tab) | a ring outside the container | 2px ring, 2px offset, 3:1 contrast against adjacent colours (WCAG 1.4.11), a 3:1 change against the unfocused state (WCAG 2.4.13, AAA); never remove `outline` without a replacement | 0ms: focus must be instant to track keyboard movement |
-| active and pressed | pointer or finger down | container darkens or scales | state layer at 10 per cent (Material 3), optional scale 0.97 to 0.98 on cards and chips (compact selectable controls, section 3.4); a tactile cue on native (section 17) | 50 to 80ms in, 150 to 200ms release |
-| disabled | not available (read section 4.5 before disabling anything) | content and container fade; pointer events off; still readable | content at 38 per cent opacity, container at 10 to 12 per cent (Material 3: Compose's filled button tokens use 0.10 for the container, 0.38 for label and icon); cursor `not-allowed` only when the control is visible and useless, otherwise hide it | 150ms |
+| active and pressed | pointer or finger down | container darkens or scales | state layer at 10 percent (Material 3), optional scale 0.97 to 0.98 on cards and chips (compact selectable controls, section 3.4); a tactile cue on native (section 17) | 50 to 80ms in, 150 to 200ms release |
+| disabled | not available (read section 4.5 before disabling anything) | content and container fade; pointer events off; still readable | content at 38 percent opacity, container at 10 to 12 percent (Material 3: Compose's filled button tokens use 0.10 for the container, 0.38 for label and icon); cursor `not-allowed` only when the control is visible and useless, otherwise hide it | 150ms |
 | loading | async in flight | spinner replaces or joins the label; width locked | label hidden with `visibility`, width preserved to stop layout shift; control inert | spinner appears after 100 to 300ms delay to avoid flashing on fast responses |
-| selected | item chosen in a set | container or edge tint plus a check or filled icon | state layer at 12 to 16 per cent or a primary container fill; never colour alone (WCAG 1.4.1) | 150ms |
+| selected | item chosen in a set | container or edge tint plus a check or filled icon | state layer at 12 to 16 percent or a primary container fill; never colour alone (WCAG 1.4.1) | 150ms |
 | checked | boolean on | the check or thumb moves and the fill changes | fill plus glyph | 150 to 200ms |
 | indeterminate | mixed children or unknown | a dash in a checkbox, a sweeping bar in progress | distinct from checked and unchecked | 150 to 200ms, the same as checked, because it is the same control |
 | error | validation failed | border, helper text, icon | border colour plus a message plus an icon; 3:1 border contrast | 150ms; shake animations are a cheap tell |
@@ -239,8 +239,8 @@ State: a named condition of a component that changes its appearance or behaviour
 | read-only | shows a value that cannot be edited here | no border or a dashed one; text at full contrast; copyable | must look different from disabled (full contrast) | none, because nothing changes on interaction |
 | empty | no data | a message and an action (section 10.4) | a typographic message with one action, because a blank region reads as broken | cross-fade 150 to 200ms from the skeleton |
 | skeleton | first load | grey blocks in the final layout | blocks at the final sizes: title the thickest line, thinner for body, image blocks at their aspect token; shimmer optional | minimum display 300 to 500ms to avoid a flicker when data arrives fast |
-| dragged | being moved | lifted shadow and a state layer | state layer at 16 per cent (Material 3), elevation up one level | follows the pointer with no easing |
-| drop target | a dragged item hovers over a valid destination | border and fill | 2px dashed accent border plus a state layer at 8 per cent, so the user sees where the item will land before releasing | 100ms in, 0ms out on drop |
+| dragged | being moved | lifted shadow and a state layer | state layer at 16 percent (Material 3), elevation up one level | follows the pointer with no easing |
+| drop target | a dragged item hovers over a valid destination | border and fill | 2px dashed accent border plus a state layer at 8 percent, so the user sees where the item will land before releasing | 100ms in, 0ms out on drop |
 | focus-within | focus is inside a composite field (a phone number with a country picker, a card number with expiry) | one ring around the group | one 2px ring drawn on the group with `:focus-within`, because the group is one field to the user | 0ms |
 | visited | a link the user has opened | link colour only | a muted shade of the link colour; browsers let `:visited` change colour properties only, for privacy, so nothing else will apply | none |
 | pending | submitted and awaiting a server or human decision (booking request, know your customer (KYC) identity review, refund) | a status chip with a timestamp | neutral or amber chip, "Requested 14:05", persisting across sessions; distinct from loading because it can last days | 150ms |
@@ -299,7 +299,7 @@ Padding ratio: horizontal padding equals 1.5x to 2x the vertical padding, becaus
 - Verb plus object: "Save changes", "Add to bag", "Book a viewing", "Send enquiry". "Submit" and "OK" tell the user nothing about the consequence.
 - Sentence case (house rule), no full stop, no exclamation mark, 1 to 3 words. "Confirm booking for 2 nights" is a label that removes the need for a confirmation dialog.
 - Match the button to the sentence the user is completing: a dialog asking "Delete this listing?" has buttons "Delete listing" and "Keep listing"; "Yes" and "No" force a re-read of the question.
-- Bilingual: Hindi and Arabic labels run 20 to 40 per cent longer or shorter; design the medium button to survive a 30 per cent longer label without wrapping; never truncate a button label.
+- Bilingual: Hindi and Arabic labels run 20 to 40 percent longer or shorter; design the medium button to survive a 30 percent longer label without wrapping; never truncate a button label.
 
 ### 4.4 Icon placement, loading, groups
 
@@ -310,7 +310,7 @@ Padding ratio: horizontal padding equals 1.5x to 2x the vertical padding, becaus
 
 ### 4.5 Disabled is a last resort
 
-A disabled primary button gives no reason and no feedback: the user presses, nothing happens, and the form looks broken. The HTML `disabled` attribute also removes the control from the tab order and stops pointer events, so a tooltip explaining why never fires for keyboard or mouse users. WCAG 1.4.3 exempts inactive components from contrast, which is why 38 per cent text is legal and also why a disabled state must never carry information. House rules:
+A disabled primary button gives no reason and no feedback: the user presses, nothing happens, and the form looks broken. The HTML `disabled` attribute also removes the control from the tab order and stops pointer events, so a tooltip explaining why never fires for keyboard or mouse users. WCAG 1.4.3 exempts inactive components from contrast, which is why 38 percent text is legal and also why a disabled state must never carry information. House rules:
 - Keep Submit, Continue and Book enabled; validate on press and focus the first invalid field (section 5.3), so the user learns what is missing at the moment they asked to proceed.
 - When a control must be unavailable, use `aria-disabled="true"` and suppress its handler, so it stays focusable and announced, and state the reason beside it ("Choose dates to see rates").
 - Hide a control the user can never enable in this context (Refund on a non-refundable booking) instead of greying it, because a permanently grey button invites a support call.
@@ -324,7 +324,7 @@ Top-aligned labels win. Matteo Penzo's 2006 eye-tracking study (UXmatters) found
 
 - Label: 13 to 14px, weight 500, 6 to 8px above the field, colour at full text contrast.
 - Help text: 12 to 13px, below the field, persistent, secondary colour at 4.5:1 or better.
-- Required and optional: mark the minority. In a form where most fields are required, mark optional fields "(optional)" in the label; an asterisk legend is a convention users read correctly only when there are few asterisks. Baymard's 2024 checkout benchmark: the average flow carried 11.3 fields (down from 12.7 in 2019), most sites need only 8, and 17 per cent of users had abandoned a checkout because of complexity; the recommendation is to hide optional fields (company, second phone, address line 2, coupon code) behind a link.
+- Required and optional: mark the minority. In a form where most fields are required, mark optional fields "(optional)" in the label; an asterisk legend is a convention users read correctly only when there are few asterisks. Baymard's 2024 checkout benchmark: the average flow carried 11.3 fields (down from 12.7 in 2019), most sites need only 8, and 17 percent of users had abandoned a checkout because of complexity; the recommendation is to hide optional fields (company, second phone, address line 2, coupon code) behind a link.
 
 ### 5.2 Placeholder misuse
 
@@ -332,7 +332,7 @@ Placeholder text: hint text inside an empty field that disappears on input. Niel
 
 ### 5.3 Validation timing and errors
 
-Luke Wroblewski and Etre's 2009 study of inline validation reported a 22 per cent rise in completion success, a 22 per cent fall in errors, a 31 per cent rise in satisfaction, a 42 per cent fall in completion time and a 47 per cent fall in eye fixations against after-submit validation. The timing that produced those gains: validate after the user leaves the field (on blur), never while typing, and after the first error show the field recovering live (so the red clears as soon as the fix is typed). NN/g's error guidelines add: show the error next to the field, in text that says what to do ("Enter the 10-digit mobile number without the country code"), with an icon and colour, never colour alone; a summary at the top of a long form supplements the inline messages and never replaces them. On submit, focus the first invalid field and announce the count to screen readers (`role="alert"` or `aria-live="polite"`).
+Luke Wroblewski and Etre's 2009 study of inline validation reported a 22 percent rise in completion success, a 22 percent fall in errors, a 31 percent rise in satisfaction, a 42 percent fall in completion time and a 47 percent fall in eye fixations against after-submit validation. The timing that produced those gains: validate after the user leaves the field (on blur), never while typing, and after the first error show the field recovering live (so the red clears as soon as the fix is typed). NN/g's error guidelines add: show the error next to the field, in text that says what to do ("Enter the 10-digit mobile number without the country code"), with an icon and colour, never colour alone; a summary at the top of a long form supplements the inline messages and never replaces them. On submit, focus the first invalid field and announce the count to screen readers (`role="alert"` or `aria-live="polite"`).
 
 Error placement: below the field, replacing the help text, 12 to 13px, error colour at 4.5:1 for the text and 3:1 for the border, a 16px icon leading the message.
 
@@ -376,7 +376,7 @@ OTP entry is one input: six separate boxes break iOS autofill, paste and screen 
 
 ### 5.7 Date pickers, file upload, steppers
 
-- Date picker (for near-future dates; known dates use the three fields of section 5.4): show two months on desktop for ranges (hotel check-in and check-out), one month on mobile with vertical scroll; disable unavailable dates with 38 per cent opacity plus a strike or a dot, never colour alone; show the selected range as a connected band; always allow typing.
+- Date picker (for near-future dates; known dates use the three fields of section 5.4): show two months on desktop for ranges (hotel check-in and check-out), one month on mobile with vertical scroll; disable unavailable dates with 38 percent opacity plus a strike or a dot, never colour alone; show the selected range as a connected band; always allow typing.
 - File upload: drag-and-drop zone on desktop plus a Browse button; on mobile a button opens camera or files. Show the accepted types and size limit before the user picks ("JPG or PNG, up to 10 MB"), a thumbnail with a progress bar during upload, and a remove action after. Multiple files list in order added.
 - Stepper: minus, value, plus; 44px targets; the value editable by typing; disable minus at the minimum rather than hiding it.
 
@@ -399,7 +399,7 @@ Split when a form exceeds about 8 fields or mixes topics (details, address, paym
 - App bar (top): title at the left (Android) or centred (iOS, except large titles which are left), one or two actions at the right, overflow in a menu at three or more. Large titles collapse on scroll.
 - Sidebar (desktop): 240 to 280px expanded, 56 to 72px collapsed to icons with tooltips. Collapse automatically below 1200px width; below 840px it becomes a drawer. Group items with 24px section gaps and uppercase 11px tracked labels only when the groups are many; the active item carries either a 3px leading edge (`border-inline-start`) or a tonal fill, never both.
 - Mega menu (marketing sites): opens on click on touch and on hover with a 150 to 300ms intent delay on desktop (so a cursor crossing the bar does not open it); closes on Escape and on focus leaving; columns of 4 to 8 links each with a column heading; one image or promotion at most.
-- Hidden navigation: Kara Pernice and Raluca Budiu's NN/g study ("Hamburger Menus and Hidden Navigation Hurt UX Metrics", 26 June 2016; 179 participants, 6 sites, desktop and mobile) found that on desktop people used hidden navigation in 27 per cent of cases against 48 per cent for visible and 50 per cent for combination navigation (a few visible links plus a menu). Hidden navigation cut content discoverability by more than 20 per cent, made desktop users at least 39 per cent slower and raised perceived difficulty by 21 per cent against visible navigation; on mobile it was used in 57 per cent of cases against 86 per cent for combination navigation, and users were 15 per cent slower. House rule: a desktop menu-icon-only overlay, the luxury marketing-site habit, is allowed only for sites with three or fewer destinations or a single campaign narrative; otherwise show 4 to 6 primary links plus the Book or Enquire action from 1024px. On mobile, keep the primary action visible beside the menu button.
+- Hidden navigation: Kara Pernice and Raluca Budiu's NN/g study ("Hamburger Menus and Hidden Navigation Hurt UX Metrics", 26 June 2016; 179 participants, 6 sites, desktop and mobile) found that on desktop people used hidden navigation in 27 percent of cases against 48 percent for visible and 50 percent for combination navigation (a few visible links plus a menu). Hidden navigation cut content discoverability by more than 20 percent, made desktop users at least 39 percent slower and raised perceived difficulty by 21 percent against visible navigation; on mobile it was used in 57 percent of cases against 86 percent for combination navigation, and users were 15 percent slower. House rule: a desktop menu-icon-only overlay, the luxury marketing-site habit, is allowed only for sites with three or fewer destinations or a single campaign narrative; otherwise show 4 to 6 primary links plus the Book or Enquire action from 1024px. On mobile, keep the primary action visible beside the menu button.
 
 ### 6.3 Breadcrumbs, drawers, sheets, back
 
@@ -440,7 +440,7 @@ Native lists set their own densities, and app screens match them: Material 3 lis
 
 ### 7.2 Zebra striping and lines
 
-Jessica Enders' 2008 A List Apart study (244 participants, a 15 by 9 table, matched questions) found essentially no difference in accuracy (error rates of 12 per cent or less either way), a speed advantage for striping on four of six questions that reached statistical significance on only one, and a preference for stripes among 46 per cent of participants (33 per cent had none); participants also made their own striping by tracking rows with a finger or cursor. House rule from that evidence: hairline row dividers (1px at 8 to 12 per cent of the text colour) plus a hover row highlight on desktop, stripes only when rows are wide (more than 8 columns) and tall text is absent. Vertical lines never; column alignment does the job.
+Jessica Enders' 2008 A List Apart study (244 participants, a 15 by 9 table, matched questions) found essentially no difference in accuracy (error rates of 12 percent or less either way), a speed advantage for striping on four of six questions that reached statistical significance on only one, and a preference for stripes among 46 percent of participants (33 percent had none); participants also made their own striping by tracking rows with a finger or cursor. House rule from that evidence: hairline row dividers (1px at 8 to 12 percent of the text colour) plus a hover row highlight on desktop, stripes only when rows are wide (more than 8 columns) and tall text is absent. Vertical lines never; column alignment does the job.
 
 ### 7.3 Alignment and numerals
 
@@ -496,11 +496,11 @@ Card: a bounded container holding one item's image, title, metadata and action, 
 
 Top to bottom, in the order the eye should land: image (bleed to the card edge, aspect token from section 14), eyebrow (a short category line above the title) or meta in 12px secondary colour, title at 16 to 18px weight 500 clamped to 2 lines, supporting text at 14px clamped to 2 lines, the key datum (price, date) in tabular figures at the bottom edge, one optional secondary action (save, share) as an icon button in a corner with its own 44px target. Padding 16px on mobile and 20 to 24px on desktop; the gap between image and text 12px; between text rows 4px. Text set on the photograph itself (a villa name over the image) follows section 14.5.
 
-Make the whole card one link: a single anchor on the title stretched over the card with a pseudo-element (`a::after { position: absolute; inset: 0 }`), so keyboard users get one tab stop per card rather than five, and the secondary action sits above it with `position: relative; z-index: 1`. Hover on a fine pointer: a 4 to 6 per cent lightness shift or a hairline darkening; the hover lift on every card is listed as a cheap tell in design-taste, section 3.
+Make the whole card one link: a single anchor on the title stretched over the card with a pseudo-element (`a::after { position: absolute; inset: 0 }`), so keyboard users get one tab stop per card rather than five, and the secondary action sits above it with `position: relative; z-index: 1`. Hover on a fine pointer: a 4 to 6 percent lightness shift or a hairline darkening; the hover lift on every card is listed as a cheap tell in design-taste, section 3.
 
 ### 8.3 Hairline against shadow
 
-The house default is white on white with a 1px hairline (design-taste, section 7: cards white with a hairline), because a card in the page plane is at level 0 and a shadow claims a lift that is false. A shadow appears only when the card leaves the plane: a drag, a desktop hover that raises it one level, or a card acting as an overlay (section 12). On dark decks the hairline is white at 10 per cent and the card surface one step lighter than the ground.
+The house default is white on white with a 1px hairline (design-taste, section 7: cards white with a hairline), because a card in the page plane is at level 0 and a shadow claims a lift that is false. A shadow appears only when the card leaves the plane: a drag, a desktop hover that raises it one level, or a card acting as an overlay (section 12). On dark decks the hairline is white at 10 percent and the card surface one step lighter than the ground.
 
 ## 9. Overlays
 
@@ -515,16 +515,16 @@ Modal: an overlay that blocks interaction with the page beneath until it is dism
 | large | 800 to 960px | pickers, previews, comparison | full-screen below 840px |
 
 Rules with reasons:
-- Max height 85 per cent of the viewport with the body scrolling and the title and buttons pinned, so the primary action is never below the fold of the dialog.
+- Max height 85 percent of the viewport with the body scrolling and the title and buttons pinned, so the primary action is never below the fold of the dialog.
 - Focus trap: focus moves into the dialog on open, Tab cycles within it, Escape closes it, and focus returns to the trigger on close; the native `<dialog>` element opened with `showModal()` provides the trap, the Escape handling, the `::backdrop` pseudo-element, placement in the browser's top layer above every z-index and an inert page behind it, which is why the house builds modals on `<dialog>` rather than a div.
 - Dismiss rules: a close button at the top-right with a 44px target, Escape, and a click on the scrim only when nothing has been typed; a dialog holding unsaved input asks before discarding.
-- Scrim: Material 3 uses its scrim colour at 32 per cent; the house uses ink at 40 to 50 per cent on light and 60 per cent on dark, enough to cut the page beneath to secondary status without hiding it (users orient by what they can still see).
+- Scrim: Material 3 uses its scrim colour at 32 percent; the house uses ink at 40 to 50 percent on light and 60 percent on dark, enough to cut the page beneath to secondary status without hiding it (users orient by what they can still see).
 - Content: a title that names the decision, one or two sentences, at most two buttons (section 4.3), the primary at the right on desktop and on top when stacked on mobile; a destructive primary is red and the dialog's text says what will be lost ("This removes the listing and its 14 enquiries").
 - When a modal is wrong: the user needs to compare the overlay with the page (use a side sheet or a split view); the task is long (use a page); the user may want to leave it open while doing something else (nonmodal panel); the trigger was a page load (a modal on arrival is the single most resented pattern on luxury sites and most newsletter pop-ups are exactly this).
 
 ### 9.2 Sheets, popovers, tooltips
 
-- Bottom sheet: rises from the bottom edge, 16 to 24px top radius, a 32 x 4px drag handle at 8px from the top, detents (resting heights) at about 50 per cent and 90 per cent of the screen; dismiss by dragging past half its height or with a fast flick, and the handle also toggles between detents on tap, because WCAG 2.2 success criterion 2.5.7 Dragging Movements (AA) requires a single-pointer alternative to every drag; modal sheets take a scrim, nonmodal sheets (a map's result list) let the page scroll. iOS 26 sheets are system glass; on the web use `<dialog>` with a slide transition and `overscroll-behavior: contain` so the page behind does not scroll when the sheet reaches its end.
+- Bottom sheet: rises from the bottom edge, 16 to 24px top radius, a 32 x 4px drag handle at 8px from the top, detents (resting heights) at about 50 percent and 90 percent of the screen; dismiss by dragging past half its height or with a fast flick, and the handle also toggles between detents on tap, because WCAG 2.2 success criterion 2.5.7 Dragging Movements (AA) requires a single-pointer alternative to every drag; modal sheets take a scrim, nonmodal sheets (a map's result list) let the page scroll. iOS 26 sheets are system glass; on the web use `<dialog>` with a slide transition and `overscroll-behavior: contain` so the page behind does not scroll when the sheet reaches its end.
 - Side sheet (desktop): 400 to 480px from the right (the left in RTL) for filters and detail panels; the page remains interactive; the sheet closes on Escape and on a second click of its trigger.
 - Popover: anchored to its trigger, 8px offset, flips to the opposite side when it would leave the viewport, closes on outside click or Escape (light dismiss) and returns focus. The HTML `popover` attribute (Popover API; Baseline since 2024) gives top-layer placement and light dismiss without script. CSS anchor positioning (`anchor-name`, `position-anchor`, `anchor()`, `position-area`, `@position-try` and `position-try-fallbacks`) places it against its trigger: Chrome 125, Safari 26 and Firefox 147 ship it, so it has been Baseline newly available since January 2026 (MDN, as recorded in 21-web-design-and-digital-craft.md, section 2.9). Build tooltips, menus and popovers on the `popover` attribute plus anchor positioning, with `position-try-fallbacks: flip-block` as the flip rule; Floating UI is the fallback for older browsers only.
 - Tooltip: a short label that appears on hover or keyboard focus. Never for essential information, because touch screens have no hover and some screen readers do not announce title attributes; the icon button must carry `aria-label` and the tooltip merely repeats it. WCAG 2.2 success criterion 1.4.13 Content on Hover or Focus (AA) requires such content to be dismissible (Escape closes it without moving pointer or focus), hoverable (the pointer can travel from the trigger onto the tooltip without it vanishing) and persistent (it stays until hover or focus leaves, the user dismisses it, or it stops being valid). House timing: 300 to 500ms before the first tooltip appears, so a cursor crossing a toolbar does not trigger a cascade; 0ms when moving between adjacent targets within about a second (the warm window); a hide grace period of 100 to 200ms, or an invisible bridge across the 8px gap, so the pointer can cross onto the tooltip; Escape always closes; the tooltip never covers its trigger. One or two lines, no interactive content, 12 to 13px on an ink surface.
@@ -590,7 +590,7 @@ Nielsen's limits (1993, from Robert Miller's 1968 work), confirmed on nngroup.co
 
 Skeleton screen: a placeholder that draws the layout's blocks in neutral grey before content arrives, named by Luke Wroblewski in 2013. The evidence is contested. Viget's 2017 test ("A bone to pick with skeleton screens") found no perceived-speed advantage over a spinner; Bill Chung's 2018 follow-up (UX Collective) found skeletons perceived as faster when they used a slow left-to-right wave and matched the final layout, and slower when the blocks pulsed. NN/g's "Skeleton screens 101" (Samhita Tankala, June 2023, reviewed September 2026) settles the practice: no indicator under 1 second; a skeleton for full-page loads under 10 seconds; a spinner for a single module (a video, a dashboard card); a progress bar for processes (upload, conversion) and anything over 10 seconds; never a skeleton and a spinner for the same wait. House: skeleton with a 1.5 to 2 second wave, blocks at the exact final size (title block the thickest line), no skeleton for text under 2 lines.
 
-Determinate progress (the fraction is known) beats indeterminate every time it can be computed. Harrison, Amento, Kuznetsov and Bell ("Rethinking the progress bar", UIST 2007) found bars that accelerate towards the end are perceived as faster than linear ones and that pauses near the end are punished most; the practical rule is to front-load the honest uncertainty (first 10 per cent fast while connecting) and never let the bar stall at 90. Fake determinate bars that bear no relation to the work are a trust defect once a user notices.
+Determinate progress (the fraction is known) beats indeterminate every time it can be computed. Harrison, Amento, Kuznetsov and Bell ("Rethinking the progress bar", UIST 2007) found bars that accelerate towards the end are perceived as faster than linear ones and that pauses near the end are punished most; the practical rule is to front-load the honest uncertainty (first 10 percent fast while connecting) and never let the bar stall at 90. Fake determinate bars that bear no relation to the work are a trust defect once a user notices.
 
 ### 10.3 Optimistic UI
 
@@ -662,7 +662,7 @@ House levels, light mode, ink at the alphas shown:
 
 | Level | Name | Shadow | Hairline | Used by |
 |---|---|---|---|---|
-| 0 | base | none | 1px at 8 to 12 per cent of ink | page, cards at rest, list rows |
+| 0 | base | none | 1px at 8 to 12 percent of ink | page, cards at rest, list rows |
 | 1 | raised | 0 1px 2px at 0.06, 0 2px 8px at 0.06 | yes | hovered cards, dropdown menus, sticky headers once scrolled |
 | 2 | overlay | 0 1px 2px at 0.06, 0 4px 16px at 0.10 | yes | popovers, tooltips, toasts, date pickers |
 | 3 | modal | 0 16px 48px at 0.16 plus the scrim | optional | dialogs, sheets, command palettes |
@@ -679,11 +679,11 @@ Fluent 2's ramp (section 2.3) and Material's six levels (0, 1, 3, 6, 8, 12dp) ar
 
 `backdrop-filter: blur()` recomposites everything behind the element on every frame, so its cost scales with the element's area times the blur radius times the number of such elements. Rules: radius 8 to 20px, three or four translucent surfaces per viewport at most, never animate the blur radius (animate opacity instead), measure frame rate with the blur on and off in the browser's performance panel rather than trusting a desktop preview, and test on a mid-range Android (the 15,000 to 20,000 rupee Redmi and Realme class that is the Indian median) rather than on a MacBook. Honour `prefers-reduced-transparency` (Chromium since 118; verify Safari and Firefox support before relying on it) by swapping to an opaque surface.
 
-Liquid Glass on Apple platforms is a system material (section 2.1): refraction of the content beneath (lensing), specular highlights that follow device motion, automatic light and dark flipping, and the accessibility behaviours arrive from the OS compositor at no cost to the app. The web cannot reproduce lensing cheaply (SVG displacement filters work and are heavy), so a web glass is a blur, a 1px inner highlight at 20 to 30 per cent white, a tint at 60 to 80 per cent of the surface colour, and a hairline. The house uses it on one navigation surface at most and never on content, matching Apple's own layer rule.
+Liquid Glass on Apple platforms is a system material (section 2.1): refraction of the content beneath (lensing), specular highlights that follow device motion, automatic light and dark flipping, and the accessibility behaviours arrive from the OS compositor at no cost to the app. The web cannot reproduce lensing cheaply (SVG displacement filters work and are heavy), so a web glass is a blur, a 1px inner highlight at 20 to 30 percent white, a tint at 60 to 80 percent of the surface colour, and a hairline. The house uses it on one navigation surface at most and never on content, matching Apple's own layer rule.
 
 ### 12.4 Dark mode elevation via lightness
 
-Shadows barely read on dark grounds (a dark shadow on near-black is invisible), so elevation becomes lightness: the higher the surface, the lighter. Material 2's dark theme table still gives the clearest numbers for a hand-built system: a white overlay on the base surface at 5 per cent for 1dp, 7 for 2dp, 8 for 3dp, 9 for 4dp, 11 for 6dp, 12 for 8dp, 14 for 12dp, 15 for 16dp and 16 for 24dp. Material 3 replaced the overlay with named surface roles (surface container lowest, low, container, high, highest) that are no longer tied to elevation; the migration maps elevation +1 to Surface Container Low, +2 to Surface Container, +3 to Surface Container High and +4 and +5 to Surface Container Highest. House decks on `#0A0A0A` use raised surfaces at `#141414` and `#1C1C1C` with hairlines at 10 per cent white; the colour side is in 04-colour.md.
+Shadows barely read on dark grounds (a dark shadow on near-black is invisible), so elevation becomes lightness: the higher the surface, the lighter. Material 2's dark theme table still gives the clearest numbers for a hand-built system: a white overlay on the base surface at 5 percent for 1dp, 7 for 2dp, 8 for 3dp, 9 for 4dp, 11 for 6dp, 12 for 8dp, 14 for 12dp, 15 for 16dp and 16 for 24dp. Material 3 replaced the overlay with named surface roles (surface container lowest, low, container, high, highest) that are no longer tied to elevation; the migration maps elevation +1 to Surface Container Low, +2 to Surface Container, +3 to Surface Container High and +4 and +5 to Surface Container Highest. House decks on `#0A0A0A` use raised surfaces at `#141414` and `#1C1C1C` with hairlines at 10 percent white; the colour side is in 04-colour.md.
 
 ## 13. Corner radius systems
 
@@ -709,11 +709,11 @@ On Apple platforms the rule is a system API from iOS 26 and the other 26 release
 
 ### 13.3 Squircles and continuous corners
 
-Squircle: a corner drawn as a superellipse rather than a circular arc, so curvature eases in from the straight edge rather than starting abruptly. Apple uses continuous corners on app icons and on `CALayer` with `cornerCurve = .continuous` (iOS 13 and later); Figma exposes it as corner smoothing from 0 to 100 per cent, where about 60 per cent approximates iOS; Flutter has `ContinuousRectangleBorder`. On the web, `corner-shape: squircle` (shorthand for `superellipse(2)`, with `round` being `superellipse(1)`) shipped in Chrome 139 in August 2025 and remains Chromium-only as of a March 2026 Smashing Magazine survey, so it is a progressive enhancement (section 2.4) behind `@supports (corner-shape: squircle)` with `border-radius` as the fallback. The property needs a non-zero `border-radius` to have any effect. House: continuous corners on native iOS and on large shapes (hero tiles, sheets) on the web; plain arcs on controls under 48px where the difference is invisible.
+Squircle: a corner drawn as a superellipse rather than a circular arc, so curvature eases in from the straight edge rather than starting abruptly. Apple uses continuous corners on app icons and on `CALayer` with `cornerCurve = .continuous` (iOS 13 and later); Figma exposes it as corner smoothing from 0 to 100 percent, where about 60 percent approximates iOS; Flutter has `ContinuousRectangleBorder`. On the web, `corner-shape: squircle` (shorthand for `superellipse(2)`, with `round` being `superellipse(1)`) shipped in Chrome 139 in August 2025 and remains Chromium-only as of a March 2026 Smashing Magazine survey, so it is a progressive enhancement (section 2.4) behind `@supports (corner-shape: squircle)` with `border-radius` as the fallback. The property needs a non-zero `border-radius` to have any effect. House: continuous corners on native iOS and on large shapes (hero tiles, sheets) on the web; plain arcs on controls under 48px where the difference is invisible.
 
 ### 13.4 Consistency
 
-One radius token per element class across the product. The "one radius on everything" tell (design-taste, section 3) means a single value applied to every element regardless of size; the cure is the scale above, which keeps the house layer's "curved edges everywhere" (design-taste, section 7) while each size gets its own number. Audit by zooming to 400 per cent on a screen and tracing every corner against the token list.
+One radius token per element class across the product. The "one radius on everything" tell (design-taste, section 3) means a single value applied to every element regardless of size; the cure is the scale above, which keeps the house layer's "curved edges everywhere" (design-taste, section 7) while each size gets its own number. Audit by zooming to 400 percent on a screen and tracing every corner against the token list.
 
 ## 14. Imagery in UI
 
@@ -730,7 +730,7 @@ One radius token per element class across the product. The "one radius on everyt
 | poster | 2:3 | campaign posters, book-like tiles | close to the 27 x 40 inch film one-sheet, so campaign key art reuses without recomposition |
 | banner | 21:9 | desktop promo strips | never on mobile |
 
-CSS `aspect-ratio` on the box reserves the space before the image loads, which removes cumulative layout shift (CLS, Google's measure of unexpected movement of visible content). `object-fit: cover` with `object-position` set from a stored focal point (x and y as percentages saved per image in the CMS; DatoCMS, Sanity and Cloudinary all store a hotspot or gravity) so that faces, hands and the hero object stay in frame across every token; a centred crop loses heads on 4:5 and feet on 16:9. For portraits, eyes in the top third; for jewellery and product on a sweep backdrop, the object centred with 10 per cent margin so the crop never kisses the edge.
+CSS `aspect-ratio` on the box reserves the space before the image loads, which removes cumulative layout shift (CLS, Google's measure of unexpected movement of visible content). `object-fit: cover` with `object-position` set from a stored focal point (x and y as percentages saved per image in the CMS; DatoCMS, Sanity and Cloudinary all store a hotspot or gravity) so that faces, hands and the hero object stay in frame across every token; a centred crop loses heads on 4:5 and feet on 16:9. For portraits, eyes in the top third; for jewellery and product on a sweep backdrop, the object centred with 10 percent margin so the crop never kisses the edge.
 
 ### 14.2 Placeholders and blur-up
 
@@ -756,7 +756,7 @@ Art direction (serving a differently cropped or composed image per viewport, bey
 
 Hero tiles, villa cards and campaign modules set text on photographs every week. WCAG 1.4.3 applies, measured against the lightest pixels behind the glyphs (an average over the image hides them), so a caption that passes over the dark sea fails over the white villa wall in the same photograph. Methods in order of preference:
 1. Choose or crop an image with calm negative space where the type sits, using the stored focal point of section 14.1.
-2. A gradient scrim from 0 to about 50 to 60 per cent ink over the bottom 40 to 50 per cent of the tile, under light type.
+2. A gradient scrim from 0 to about 50 to 60 percent ink over the bottom 40 to 50 percent of the tile, under light type.
 3. A solid caption band below or beside the image.
 
 Text-shadow alone fails on busy areas and reads cheap. Re-check every aspect token, because 4:5 and 16:9 crops move the subject under the type; check in dark mode; and test with the real CMS images as well as the hero shot the layout was drawn around. Scrims over video are in 03-typography.md, section 13.5, and gradient restraint in design-taste, section 3.
@@ -771,11 +771,11 @@ Elevation is lightness (section 12.4). Accents desaturate one or two steps and l
 
 ### 15.2 Text and weight
 
-Light text on dark appears heavier than the same weight dark on light, an effect known as irradiation or halation: the bright strokes bleed outward on the retina (02-perception-and-psychology.md, section 17.7). Three corrections: drop one weight step for body (300 where 400 was used on light), set body at 87 per cent opacity rather than pure white (Material's dark text values: 87 high emphasis, 60 medium, 38 disabled), and increase letter-spacing on small sizes by about 0.01em. Pure `#FFFFFF` body text on `#000000` is the combination that produces the most reported eye strain and is reserved for display sizes.
+Light text on dark appears heavier than the same weight dark on light, an effect known as irradiation or halation: the bright strokes bleed outward on the retina (02-perception-and-psychology.md, section 17.7). Three corrections: drop one weight step for body (300 where 400 was used on light), set body at 87 percent opacity rather than pure white (Material's dark text values: 87 high emphasis, 60 medium, 38 disabled), and increase letter-spacing on small sizes by about 0.01em. Pure `#FFFFFF` body text on `#000000` is the combination that produces the most reported eye strain and is reserved for display sizes.
 
 ### 15.3 Images and media
 
-- Photographs read brighter on dark; dim by 10 to 15 per cent with an overlay or a `brightness()` filter only when they sit beside text; never dim video.
+- Photographs read brighter on dark; dim by 10 to 15 percent with an overlay or a `brightness()` filter only when they sit beside text; never dim video.
 - Product cut-outs on white backgrounds become glowing boxes on dark: supply transparent AVIF or PNG, or a second render on the dark surface colour. Logos need a dark-mode variant; illustrations are re-coloured, never inverted.
 - Dimming against inverting: `filter: invert()` on a page breaks every photograph, every brand colour and every semantic colour (red becomes cyan). Build dark mode as its own second token set.
 
@@ -783,7 +783,7 @@ Light text on dark appears heavier than the same weight dark on light, an effect
 
 1. Set `color-scheme: light dark` on the root so native form controls, scrollbars and the `<dialog>` backdrop switch with the theme.
 2. Follow `prefers-color-scheme` by default; a manual toggle stores the choice in `localStorage` and overrides the system until cleared.
-3. Check on an OLED phone at 10 per cent brightness (smear, black crush, banding: visible steps where a smooth gradient runs out of tonal values) and on a cheap LCD at full brightness (greys where blacks should be).
+3. Check on an OLED phone at 10 percent brightness (smear, black crush, banding: visible steps where a smooth gradient runs out of tonal values) and on a cheap LCD at full brightness (greys where blacks should be).
 4. Walk every screen for white image backgrounds, missing logo variants, shadows that vanished, focus rings and selection colour that lost contrast, and the status bar style (`apple-mobile-web-app-status-bar-style`, Android `windowLightStatusBar` off).
 5. Re-run WCAG contrast in dark; the accent that passed on white often fails on `#1C1C1C`.
 6. Run Windows forced colours (High Contrast) once. Under `@media (forced-colors: active)` the OS replaces author colours with system colours (`Canvas`, `CanvasText`, `LinkText`, `ButtonText`, `Highlight`) and removes `box-shadow`, so focus rings drawn as shadows and shadow-made hairlines vanish. Draw focus with `outline` (a shadow ring needs an `outline: 2px solid transparent` fallback, which becomes visible), make hairlines real borders, keep icons on `currentColor`, and apply `forced-color-adjust: none` only where colour is the information (product colour swatches, brand marks). Emulate it in Chrome DevTools (Rendering, Emulate CSS media feature forced-colors) or test with a Windows contrast theme in Edge; detail in 11-accessibility-and-inclusive-design.md, section 8.7.
@@ -792,7 +792,7 @@ Light text on dark appears heavier than the same weight dark on light, an effect
 
 ### 16.1 Window size classes and breakpoint behaviour per component
 
-Android's window size classes, confirmed on developer.android.com: compact width under 600dp (99.96 per cent of phones in portrait), medium 600 to 840dp (93.73 per cent of tablets in portrait, most unfolded inner displays), expanded 840 to 1200dp (97.22 per cent of tablets in landscape), large 1200 to 1600dp, extra-large 1600dp and above; height classes compact under 480, medium 480 to 900, expanded 900 and above. The house web breakpoints follow them (600, 840, 1200, 1600) with a 1024 step for the desktop navigation switch; grid construction, gutters and container-query breakpoints are in 05-layout-grids-and-composition.md, section 9.
+Android's window size classes, confirmed on developer.android.com: compact width under 600dp (99.96 percent of phones in portrait), medium 600 to 840dp (93.73 percent of tablets in portrait, most unfolded inner displays), expanded 840 to 1200dp (97.22 percent of tablets in landscape), large 1200 to 1600dp, extra-large 1600dp and above; height classes compact under 480, medium 480 to 900, expanded 900 and above. The house web breakpoints follow them (600, 840, 1200, 1600) with a 1024 step for the desktop navigation switch; grid construction, gutters and container-query breakpoints are in 05-layout-grids-and-composition.md, section 9.
 
 | Component | compact (under 600) | medium (600 to 840) | expanded (840 to 1200) | large and above |
 |---|---|---|---|---|
@@ -840,7 +840,7 @@ iOS 26.0 introduced `UINavigationController.interactiveContentPopGestureRecogniz
 
 ### 17.2 Thumb zones and reachability
 
-Steven Hoober's 2013 observations (1,333 observations of people using phones, 780 of them touching the screen): 49 per cent used one hand, 36 per cent cradled the phone and 15 per cent used two hands. Hoober later cautioned that his reach drawings were coarse and that people touch the centre of the screen most, most quickly and most accurately, with corners and edges the slowest. The practical rule survives: primary actions in the bottom 40 per cent and the horizontal centre; rare and destructive actions at the top; nothing essential in the top corners of a 6.9 inch phone (the 17 Pro Max at 440 x 956pt puts the top-left corner about 14cm from a right thumb's pivot). Platforms moved with the data: Safari's address bar went to the bottom in iOS 15, Samsung's One UI split screens into a viewing area above and an interaction area below, and iOS 26 floats search and tab bars at the bottom. Sticky primary calls to action in flows (checkout, booking) sit at the bottom edge above the home indicator and rise with the keyboard.
+Steven Hoober's 2013 observations (1,333 observations of people using phones, 780 of them touching the screen): 49 percent used one hand, 36 percent cradled the phone and 15 percent used two hands. Hoober later cautioned that his reach drawings were coarse and that people touch the centre of the screen most, most quickly and most accurately, with corners and edges the slowest. The practical rule survives: primary actions in the bottom 40 percent and the horizontal centre; rare and destructive actions at the top; nothing essential in the top corners of a 6.9 inch phone (the 17 Pro Max at 440 x 956pt puts the top-left corner about 14cm from a right thumb's pivot). Platforms moved with the data: Safari's address bar went to the bottom in iOS 15, Samsung's One UI split screens into a viewing area above and an interaction area below, and iOS 26 floats search and tab bars at the bottom. Sticky primary calls to action in flows (checkout, booking) sit at the bottom edge above the home indicator and rise with the keyboard.
 
 ### 17.3 Haptics vocabulary
 
@@ -878,7 +878,7 @@ Motion is feedback when it answers one of four questions, and decoration otherwi
 |---|---|---|
 | Did that register? | a state change at the point of touch, 100 to 200ms | button press scale 0.97, toggle thumb slide, checkbox fill, a tick haptic |
 | Where did it come from and where did it go? | spatial continuity, 200 to 400ms | a sheet rising from the bottom edge, a popover growing from its anchor, a tab indicator sliding, a shared-element transition (one element morphing from its place on the old screen to its place on the new) from a list image to the detail hero |
-| What changed? | a single attention cue | a row that was just added settling into place; a value that updated flashing once at 8 per cent of the accent |
+| What changed? | a single attention cue | a row that was just added settling into place; a value that updated flashing once at 8 percent of the accent |
 | What is happening now? | progress and loading (section 10) | a skeleton wave, a determinate bar |
 
 Everything else is decoration: fade-up on every section, hover lift on every card, looping bounces, parallax on everything (design-taste, section 3). The house budget on a product screen is one spatial move per transition and one feedback move per control; on a marketing page one considered move per viewport, which design-taste's "slowness" rule already demands (design-taste, section 2). Exits are shorter than entrances (Material's rule, because the user has already decided to leave). `prefers-reduced-motion` and the iOS and Android reduce-motion settings replace movement with cross-fades of the same duration, never with nothing, because a state change that happens with no transition is disorienting in its own way. Rauno Freiberg's "Invisible details of interaction design" (July 2023) is the reading for the physics: its sections on kinetic physics, responsive gestures, spatial consistency, fluid morphing, scroll landmarks and Fitts's law (the time to hit a target rises with its distance and falls with its size; 02-perception-and-psychology.md, section 8.1) are the vocabulary the house uses in motion critique.
@@ -902,11 +902,11 @@ The design engineer list: the details that separate work that reads as four hund
 
 - Hairlines at 0.5px on 2x: `border-width: 0.5px` renders one device pixel on 2x and 3x screens in Safari and Chrome; on 1x it rounds to 1px; iOS uses `1 / UIScreen.main.scale` points for separators for the same reason. A 1px hairline on a 3x phone is three device pixels thick and reads heavy beside the system's own lines.
 - Pixel snapping and half-pixel blur: elements positioned at fractional coordinates render text and hairlines across two device pixels and look soft. Causes: `translate(-50%, -50%)` on an element of odd size, flex centring of odd heights, a 15px icon, a 0.5 line-height remainder. Cures: even sizes for anything centred, `transform: translate3d` with rounded values, `Math.round` on measured positions, and Figma's snap-to-pixel-grid left on with every frame at a whole-number position.
-- The 2px alignment: an icon vertically centred on a text box sits 1 to 2px low against the x-height; nudge icons up 1px beside lowercase labels or align them to cap height. The cleaner fix is `text-box: trim-both cap alphabetic` (text-box-trim and text-box-edge, Baseline newly available since August 2026 per 03-typography.md, section 5.4), which trims a label's box to cap height and baseline so it centres optically in a 40px button and aligns with a 16px icon without nudges; apply it to buttons, chips, badges and tab labels, keep the 1px nudge as the fallback, and use Figma's vertical trim to match. Check label and icon rows at 400 per cent zoom; the eye reads a 2px misalignment between neighbouring rows as carelessness without naming it.
-- Consistent icon weight against type weight (section 11.1: one set, one stroke, one optical size per text size) and the one radius mismatch (section 13.2's nested rule), both audited at 400 per cent.
+- The 2px alignment: an icon vertically centred on a text box sits 1 to 2px low against the x-height; nudge icons up 1px beside lowercase labels or align them to cap height. The cleaner fix is `text-box: trim-both cap alphabetic` (text-box-trim and text-box-edge, Baseline newly available since August 2026 per 03-typography.md, section 5.4), which trims a label's box to cap height and baseline so it centres optically in a 40px button and aligns with a 16px icon without nudges; apply it to buttons, chips, badges and tab labels, keep the 1px nudge as the fallback, and use Figma's vertical trim to match. Check label and icon rows at 400 percent zoom; the eye reads a 2px misalignment between neighbouring rows as carelessness without naming it.
+- Consistent icon weight against type weight (section 11.1: one set, one stroke, one optical size per text size) and the one radius mismatch (section 13.2's nested rule), both audited at 400 percent.
 - The inconsistent hover: every element of a class gets the same hover (same alpha, same timing); one row that does nothing on hover reads as broken. Test by moving the pointer across every row, button and link on the page.
 - The 4px rhythm: every dimension and space on a 4px grid, spacing from the 8px scale (4, 8, 12, 16, 24, 32, 48, 64), and the audit is a 4px overlay in the browser or Figma's layout grid (grid and spacing theory in 05-layout-grids-and-composition.md, section 8.1).
-- Image compression artefacts: JPEG at quality 80 to 85 through mozjpeg and AVIF at a quality of about 50 to 65 for photography; never re-encode a JPEG from a JPEG; sharpen after downscaling (a Lanczos downscale leaves 2x images soft); check dark gradients for banding at 8 bits and add 1 to 2 per cent film grain or export a 10-bit AVIF; PNG only for flat colour and transparency.
+- Image compression artefacts: JPEG at quality 80 to 85 through mozjpeg and AVIF at a quality of about 50 to 65 for photography; never re-encode a JPEG from a JPEG; sharpen after downscaling (a Lanczos downscale leaves 2x images soft); check dark gradients for banding at 8 bits and add 1 to 2 percent film grain or export a 10-bit AVIF; PNG only for flat colour and transparency.
 - Cursor choices: `pointer` on links and buttons (Material and some desktop OS conventions keep the arrow on buttons; the web's users expect the hand, and the house follows the users), `grab` and `grabbing` on draggable, `text` on inputs, `not-allowed` only on a visible disabled control, resize cursors on resizable edges; a custom image cursor is a marketing-site tension move used once, never in a product.
 - Touch details: `touch-action: manipulation` on controls removes double-tap zoom delay; `-webkit-tap-highlight-color: transparent` paired with a real pressed state, because removing the grey flash without replacing it leaves touch with no feedback; inputs at 16px or larger on iOS so focusing them does not zoom the page; `user-select: none` on labels and controls and never on content; `accent-color` so native checkboxes and radios take the brand colour; `color-scheme` on the root for native controls in dark mode.
 
@@ -945,7 +945,7 @@ The design engineer list: the details that separate work that reads as four hund
 Redlines (annotated measurement overlays drawn on a static export) are dead: measurement is live in Dev Mode and tokens name the values, so a PDF of arrows and numbers is an artefact of 2015. What the house hands over:
 1. Frames marked Ready for dev, one flow per page, at compact, medium and expanded widths, light and dark.
 2. The variant matrix per component with every state of section 3.2.
-3. Annotations for what a frame cannot show: timing and easing, focus order, keyboard behaviour, validation timing, what happens at 200 per cent text size, what happens with a 40 per cent longer Hindi or Arabic label.
+3. Annotations for what a frame cannot show: timing and easing, focus order, keyboard behaviour, validation timing, what happens at 200 percent text size, what happens with a 40 percent longer Hindi or Arabic label.
 4. A prototype for every spatial transition.
 5. Real content: final strings in every locale, real images with focal points, real numbers in rupees and dirhams.
 6. Edge cases: empty, error, loading, long text, zero, one and many items.
@@ -960,7 +960,7 @@ Redlines (annotated measurement overlays drawn on a static export) are dead: mea
 4. Type: size, line height, weight, tracking, features, font loading without a shift.
 5. Spacing against the 4px overlay; radii against the scale; hairlines at 0.5px on 2x.
 6. Motion: timings and easings match 12-motion-principles-and-ui-motion.md; reduced motion honoured.
-7. Widths 360, 390, 402, 440, 768, 1024, 1440, 1920; dark mode; 200 per cent text size; keyboard only; VoiceOver or TalkBack for one full flow.
+7. Widths 360, 390, 402, 440, 768, 1024, 1440, 1920; dark mode; 200 percent text size; keyboard only; VoiceOver or TalkBack for one full flow.
 8. Performance: Core Web Vitals, Google's three field metrics (largest contentful paint, LCP, under 2.5 seconds; interaction to next paint, INP, under 200ms; cumulative layout shift, CLS, under 0.1), on a throttled mid-range Android profile; image bytes per viewport.
 9. Content: real copy, bilingual rendering, number formatting (section 5.5).
 10. Log each defect with the frame link, the build URL, a screenshot and a severity (1 blocks release, 2 fixes before launch, 3 backlog); sign off in the ticket. Once stable, lock the look with visual regression testing (automated screenshot comparison against approved baselines: Storybook with Chromatic, or Playwright screenshots) so later changes diff against the approved pixels.
@@ -993,7 +993,7 @@ Layout and spacing
 4. No horizontal overflow at 360dp; tested at 360, 390, 402, 440, 768, 1024, 1440, 1920; every hero checked in a real browser window at about 780px of visible height.
 5. Alignment: text left, numbers right, one axis per column; no element off-grid by 1 to 2px.
 6. Radii from the scale; nested radii concentric (`ConcentricRectangle` on Apple platforms); one radius token per element class.
-7. Hairlines at 0.5px on 2x screens; dividers at 8 to 12 per cent of ink.
+7. Hairlines at 0.5px on 2x screens; dividers at 8 to 12 percent of ink.
 
 Type
 8. One UI family; weights from the house ladder (design-taste, section 7).
@@ -1001,7 +1001,7 @@ Type
 10. Tabular figures on every number that aligns or changes; slashed zero on codes.
 11. All-caps labels tracked +0.06 to +0.10em; display tracked slightly negative.
 12. Headings balanced, paragraphs pretty-wrapped, titles clamped with a visible ellipsis; labels trimmed with `text-box` where supported.
-13. Hindi and Arabic strings render, wrap and align correctly with `lang` and `dir` set; labels survive a 40 per cent length change; RTL mirroring per section 2.7 checked with `dir="rtl"`, `ar-XB` and the Xcode right-to-left pseudolanguage.
+13. Hindi and Arabic strings render, wrap and align correctly with `lang` and `dir` set; labels survive a 40 percent length change; RTL mirroring per section 2.7 checked with `dir="rtl"`, `ar-XB` and the Xcode right-to-left pseudolanguage.
 14. Fonts load without a layout shift; fallbacks size-adjusted; no synthesised bold or italic; U+20C1 and U+20C3 in the Latin subset of any Gulf pricing face.
 15. A non-breaking space between number and unit ("10 MB"); the ellipsis character, never three full stops.
 
@@ -1011,14 +1011,14 @@ Colour and surfaces
 18. Meaning never carried by colour alone: icon or text accompanies every status colour.
 19. Elevation from the house levels; shadow only on surfaces that float; dark mode elevation by lightness.
 20. Translucency limited to one navigation surface; reduced transparency honoured.
-21. Dark mode: no white image boxes, logo variant present, accents desaturated, body text at 87 per cent, near-black ground.
+21. Dark mode: no white image boxes, logo variant present, accents desaturated, body text at 87 percent, near-black ground.
 22. Forced colours: focus rings and hairlines survive `forced-colors: active`; only swatches and brand marks opt out with `forced-color-adjust: none`.
 23. Android dynamic colour off on brand surfaces; a static scheme generated from the brand seed.
 
 Components and states
 24. Every component has every applicable state from section 3.2 designed and built, including pending, offline or stale and streaming where the product has them.
 25. Hover only on fine pointers and identical across every element of a class; pressed state present on touch; focus-visible ring on every interactive element.
-26. Disabled used as a last resort (section 4.5): submit actions stay enabled and validate on press; unavailable controls use `aria-disabled` with the reason shown; disabled at 38 per cent and distinct from read-only; loading state preserves width.
+26. Disabled used as a last resort (section 4.5): submit actions stay enabled and validate on press; unavailable controls use `aria-disabled` with the reason shown; disabled at 38 percent and distinct from read-only; loading state preserves width.
 27. Touch targets 44pt and 48dp; WCAG 2.5.8 24px minimum met everywhere including dense desktop.
 28. One primary button per view, consent UI excepted (accept and reject at equal weight); labels are verb plus object; destructive actions red and separated.
 29. Icons from one set, one stroke, one optical size per text size; every navigation icon labelled.
@@ -1067,7 +1067,7 @@ Platform and accessibility
 60. Focus never obscured: `scroll-padding` set for sticky headers and bars; banners and toasts never cover the focused element (WCAG 2.4.11).
 61. Every drag has a single-pointer alternative (WCAG 2.5.7): sheet handles toggle on tap; reorderable lists offer Move up and Move down.
 62. Screen reader pass of one full flow per release (VoiceOver and TalkBack); every icon button labelled; headings in order.
-63. 200 per cent text size and Dynamic Type at the largest accessibility setting do not break layout or hide actions.
+63. 200 percent text size and Dynamic Type at the largest accessibility setting do not break layout or hide actions.
 64. Core Web Vitals green on a throttled mid-range Android; cold launch under 2 seconds on native.
 65. Real content in every locale; numbers, dates and currencies formatted for India and the UAE; no lorem ipsum anywhere in the build.
 66. Tested on a real OLED phone in dark mode at low brightness and on a Windows laptop with visible scrollbars.
@@ -1082,7 +1082,7 @@ State audit: a systematic check that every component in a build renders every ap
 1. List: from the design system inventory, every component and its variants (size, emphasis, with or without icon).
 2. Matrix: rows are the 23 states of section 3.2 (default, hover, focus, focus-visible, active, disabled, loading, selected, checked, indeterminate, error, warning, success, read-only, empty, skeleton, dragged, drop target, focus-within, visited, pending, offline or stale, streaming); columns are the variants; cells are marked applicable or not before testing.
 3. Build each applicable cell as a story (Storybook or the native equivalent) so it can be rendered on demand without driving the app into that state by hand.
-4. Walk: Tab through every page (focus-visible), hover every element with a mouse (hover), press and hold (active), throttle the network to 3G (loading, skeleton), go offline (error, offline or stale), clear the data (empty), submit bad data (error, warning), complete a task (success), use a keyboard-only session and a screen reader session, then repeat in dark mode and at 200 per cent text size.
+4. Walk: Tab through every page (focus-visible), hover every element with a mouse (hover), press and hold (active), throttle the network to 3G (loading, skeleton), go offline (error, offline or stale), clear the data (empty), submit bad data (error, warning), complete a task (success), use a keyboard-only session and a screen reader session, then repeat in dark mode and at 200 percent text size.
 5. Record: a screenshot per cell, pass or fail, the token used; fails become tickets with severity.
 6. Lock: approved cells become visual regression baselines (Chromatic or Playwright), so a later change that alters a hover alpha or a radius fails the build before any client sees it.
 7. Repeat the walk on every release; keep the matrix in the repository next to the components so it versions with the code.
