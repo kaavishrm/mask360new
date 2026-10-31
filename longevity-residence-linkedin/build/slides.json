@@ -1,0 +1,102 @@
+{
+  "carousels": [
+    {
+      "id": "01-seven-places",
+      "title": "Your family's health lives in seven places",
+      "slides": [
+        {"type": "cover", "text": "YOUR FAMILY'S HEALTH LIVES IN SEVEN PLACES."},
+        {"type": "text", "text": "I've spent nine years marketing luxury homes, hotels and brands across India and the UAE. Every buyer I meet in Mumbai now asks about the same thing first. Health."},
+        {"type": "text", "text": "Indians live 70.8 years on average. 60.3 of them in good health.", "source": "WHO, World Health Statistics 2021. India, 2019 data."},
+        {"type": "text", "text": "That's about ten years where the body needs help. And in Mumbai, that help is scattered across the city."},
+        {"type": "text", "text": "An air purifier in every room.\nA water filter under the sink.\nA gym membership across town.\nA physio twice a week, in traffic.\nBlood tests at a lab in Andheri.\nA sauna at a spa, by appointment.\nSleep from a white-noise app."},
+        {"type": "text", "text": "Seven places. Seven subscriptions. And the family does the coordinating, while the home, the most expensive thing they own, just sits there."},
+        {"type": "text", "text": "So I was just thinking about what happens when the building does the coordinating."},
+        {"type": "text", "text": "One home. Every system built in. Filtered air and water from one plant in the basement. Bedrooms built for deep sleep. A recovery suite and a movement studio downstairs. A clinic on the fifth floor. One health record for every family."},
+        {"type": "text", "text": "That's a longevity home. It protects the ten years in between. It's designed, run and serviced as one building, so it keeps protecting them."},
+        {"type": "closing", "text": "I'M BUILDING THE FIRST ONE BETWEEN JUHU AND BANDRA WEST. DM ME IF YOU WANT TO BE IN THE ROOM."}
+      ]
+    },
+    {
+      "id": "02-ten-things",
+      "title": "Ten things built into a longevity home",
+      "slides": [
+        {"type": "cover", "text": "TEN THINGS BUILT INTO A LONGEVITY HOME."},
+        {"type": "text", "label": "01 Air", "text": "Filtered fresh air in every room, with PM2.5 and CO2 on a screen."},
+        {"type": "text", "label": "02 Water", "text": "Whole-home micro-filtration. Drinking grade at every kitchen tap."},
+        {"type": "text", "label": "03 Light", "text": "Daylight first. Circadian lighting after dark. Full blackout for sleep."},
+        {"type": "text", "label": "04 Sound", "text": "Acoustic glazing against the flight path and the traffic. Quiet bedroom zoning."},
+        {"type": "text", "label": "05 Materials", "text": "Low-emission paints, glues and finishes, built to resist monsoon damp."},
+        {"type": "text", "label": "06 Amenities", "text": "A recovery suite, a movement studio, a partner clinic and a sky garden."},
+        {"type": "text", "label": "07 Care", "text": "Annual diagnostics, longevity protocols and a health dashboard for each family."},
+        {"type": "text", "label": "08 Ageing", "text": "Step-free floors, wide doors and grab-ready walls, for three generations."},
+        {"type": "text", "label": "09 Upkeep", "text": "Sensors and filters monitored and serviced on schedule, from day one."},
+        {"type": "text", "label": "10 Price", "text": "10 to 20% above the market. Nearly 70% of Mumbai's HNI buyers say they'll pay it.", "source": "Outlook Money, June 2026."},
+        {"type": "closing", "text": "ALL TEN ARE DESIGNED IN BEFORE THE FIRST SLAB IS CAST. DM ME FOR THE FULL PLAN."}
+      ]
+    },
+    {
+      "id": "03-land-paid-in-homes",
+      "title": "The land is paid for in homes",
+      "slides": [
+        {"type": "cover", "text": "THE LAND IS PAID FOR IN HOMES."},
+        {"type": "text", "text": "Everyone who hears this idea asks me the same thing first. Where half an acre between Juhu and Bandra West comes from."},
+        {"type": "text", "text": "A 1,820 sq m plot in Juhu sold for INR 455 crore in December 2024. That's about INR 2.3 lakh per square foot of land.", "source": "Business Standard, 11 December 2024."},
+        {"type": "text", "text": "At an FSI of 3, that's roughly INR 97,000 per square foot of saleable home, before a single brick. New Juhu launches ask INR 65,000 to 90,000."},
+        {"type": "text", "text": "So buying land outright on the western side rarely works today. The land has to be paid for in homes."},
+        {"type": "text", "text": "The plan is a society redevelopment. An older society on 1,500 to 2,500 sq m, on a 12 to 18 m road, within about a kilometre of the sea."},
+        {"type": "text", "text": "The society's 24 families get new homes 35% larger than their old ones, rent for the four years we build, and a corpus."},
+        {"type": "text", "text": "15 new homes of 1,800 to 2,400 sq ft go on sale. Three and four bedrooms, and one duplex penthouse."},
+        {"type": "text", "text": "On a 2,000 sq m plot that's about INR 241 crore of sales and about INR 74 crore of profit, on about INR 46 crore of partner cash before bookings start.", "source": "Base case, plus or minus 15%. A real plot replaces every number."},
+        {"type": "closing", "text": "ONE SOCIETY. 39 HOMES. ONE ADDRESS THAT SETS THE PRICE FOR EVERY ONE AFTER IT."}
+      ]
+    },
+    {
+      "id": "04-layer-pays-for-itself",
+      "title": "The longevity layer pays for itself",
+      "slides": [
+        {"type": "cover", "text": "THE LONGEVITY LAYER PAYS FOR ITSELF FROM INR 75,400 A SQUARE FOOT."},
+        {"type": "text", "text": "Every investor I speak to asks me one thing about wellness homes. Whether buyers actually pay the premium. So here's the base case at three prices."},
+        {"type": "text", "text": "The longevity layer costs about 20% over a standard luxury build. On our 16-floor tower that's about INR 12.8 crore.", "source": "ItaliaOggi, May 2026. InfraLens, Mumbai luxury tier, May 2026."},
+        {"type": "text", "label": "INR 70,000 a sq ft. No premium.", "text": "Profit about INR 48.8 crore. 23% of sales. The same building without the layer makes about INR 62 crore at this price."},
+        {"type": "text", "label": "INR 80,000 a sq ft. A 14% premium.", "text": "Profit about INR 73.7 crore. 31% of sales. This is the base case."},
+        {"type": "text", "label": "INR 90,000 a sq ft. Where new Juhu launches sit.", "text": "Profit about INR 98.7 crore. 36% of sales."},
+        {"type": "text", "text": "The layer pays for itself from about INR 75,400 a square foot. Everything above that is the category being born."},
+        {"type": "text", "text": "The whole build costs about INR 166.8 crore. Partners put in about INR 46 crore before bookings start. After RERA, buyers' payments held in escrow and a construction loan fund the rest."},
+        {"type": "text", "text": "Base case for a 2,000 sq m plot. Approximate, plus or minus 15%. A site feasibility on a real plot replaces every number here."},
+        {"type": "closing", "text": "THE PREMIUM IS THE BUSINESS. DM ME FOR THE FULL MODEL."}
+      ]
+    },
+    {
+      "id": "05-how-it-stacks",
+      "title": "How it stacks",
+      "slides": [
+        {"type": "cover", "text": "SIXTEEN FLOORS. HALF AN ACRE. ONE PLANT IN THE BASEMENT."},
+        {"type": "text", "label": "Basement", "text": "A central fresh-air and water treatment plant. Every room in the building breathes and drinks from here."},
+        {"type": "text", "label": "Ground", "text": "An arrival garden with a reflecting pool, and a double-height lobby."},
+        {"type": "text", "label": "Floors 1 to 4", "text": "A parking podium for about 60 cars, with EV charging and full power backup."},
+        {"type": "text", "label": "Floor 5", "text": "The wellness level, about 2,600 sq ft. Cedar sauna, stone cold plunge, steam, a rain shower and a recovery lounge, open from 6 am, facing the sea. The partner clinic sits beside it."},
+        {"type": "text", "label": "Floors 6 to 15", "text": "39 homes. 15 for sale, 24 for the society's families. Planted west-facing balconies and pale stone fins against the evening sun."},
+        {"type": "text", "label": "Roof", "text": "A sky garden with a lap pool and a sunset deck over the Arabian Sea."},
+        {"type": "text", "text": "The wellness level is free of FSI. Since May 2026, Mumbai allows 4% of built-up area for fitness, meditation and recreation outside FSI, up from 2%.", "source": "DCPR 2034 amendment, notified 6 May 2026."},
+        {"type": "text", "text": "About 9,600 sq m of construction keeps the project under the 20,000 sq m line for state environmental clearance. About 16 floors keeps it inside the airport height limit."},
+        {"type": "closing", "text": "EVERY FLOOR HAS A JOB. DM ME FOR THE FULL STACK."}
+      ]
+    },
+    {
+      "id": "06-build-the-first-one",
+      "title": "Build the first one with us",
+      "slides": [
+        {"type": "cover", "text": "BUILD THE FIRST ONE WITH US."},
+        {"type": "text", "label": "We bring", "text": "The concept and the longevity standard. The brand and the product, from plan to finishes. The launch and the sales engine."},
+        {"type": "text", "label": "We also bring", "text": "Forty years of building luxury homes, through R1 Africa. Verona in Westlands, Nairobi. Rivera in Nanyuki. A wellness resort coming up at Vipingo."},
+        {"type": "text", "label": "Capital partners", "text": "Fund the first project. About INR 46 crore before bookings start, as a joint development, a licence per project or a revenue share, set site by site."},
+        {"type": "text", "label": "Societies and landowners", "text": "Bring the site. An older society of 1,500 to 2,500 sq m between Juhu and Bandra West, on a 12 to 18 m road, within about a kilometre of the sea."},
+        {"type": "text", "label": "Clinic and design partners", "text": "Run it and design it. Care, diagnostics and protocols from a clinic partner. The building and its homes from design partners."},
+        {"type": "text", "label": "About 4 years 9 months", "text": "Society agreement, months 0 to 6. Design and approvals, 6 to 15. Construction, 15 to 51. Handover, 51 to 57."},
+        {"type": "text", "label": "Three risks, handled", "text": "Consent takes time, so talks start with several societies at once. The premium is new, so the plan carries a 5% contingency. A clinic must earn its keep, so a partner runs it on a membership."},
+        {"type": "text", "text": "The first longevity address on the western side will set the price for every one after it."},
+        {"type": "closing", "text": "DM ME, OR SHARE THIS WITH WHOEVER SHOULD BE IN THE ROOM."}
+      ]
+    }
+  ]
+}

@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 ~$*.xlsx
+
+# Rendered carousel slides; rebuilt from longevity-residence-linkedin/build
+longevity-residence-linkedin/carousels/png/
