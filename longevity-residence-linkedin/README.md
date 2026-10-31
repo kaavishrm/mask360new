@@ -2,7 +2,7 @@
 
 A 12-post series on Kaavish's personal LinkedIn, built to bring capital partners, societies and clinic partners into the room for the first longevity homes between Juhu and Bandra West.
 
-Every fact in this folder comes from the Longevity Residence project plan dated 28 October 2026. Nothing has been added. Where the series needs a fact the plan does not hold, the copy says [confirm].
+Every fact in this folder comes from the Longevity Residence project plan dated 28 October 2026, live at https://m360wellnesshomes.netlify.app/ (the room). Nothing has been added. Where the series needs a fact the plan does not hold, the copy says [confirm].
 
 ## What is in this folder
 
@@ -14,6 +14,7 @@ Every fact in this folder comes from the Longevity Residence project plan dated 
 | `previews/` | A contact sheet per carousel, to review on the phone. |
 | `build/slides.json` | The slide copy. Edit this, run `node build/render.js`, and the PNGs rebuild. |
 | `build/kaavish-cover.png` | The portrait on the cover and closing slides. Swap it for any other photo of you at the same name. |
+| `build/og-exterior.jpg` | The 1200 x 630 link preview image for the site, cropped from the exterior render. |
 
 ## 1. The objective
 
@@ -31,7 +32,7 @@ A fourth group matters without being the target: the buyer. Comments from people
 
 **Why this works on LinkedIn for investors.** Investors reply to founders who show judgement in public: a plan with sources, numbers that carry their own caveats, risks named before they are asked, and one clear ask. Every post here does one of those jobs.
 
-**The funnel.** Post, then comment, then DM, then "the room". The room is your private project plan page. You send it after a first reply, never in the post. After the room, the next step is a 20 minute call, and after the call, the 90 day site feasibility you run together.
+**The funnel.** Post, then comment, then DM, then "the room". The room is the plan at https://m360wellnesshomes.netlify.app/. It goes in the first comment of posts 1, 6, 8 and 12 and in the DM after a first reply, never in the post body, because LinkedIn shows a post with a link in its body to fewer people. After the room, the next step is a 20 minute call, and after the call, the 90 day site feasibility you run together.
 
 **The voice.** First person, your own story, the way you'd say it in the car. One idea per post. Numbers in rupees. Brand names in full. No dashes anywhere. No "X, not Y" constructions. Every post ends on the ask, with no sign-off.
 
@@ -63,7 +64,7 @@ One decision to make before week 4: whether the full numbers go in the feed (pos
 ## 4. Before post 1: the profile
 
 - **Headline.** "Founder, Mask360. Building the Longevity Residence, Mumbai's first longevity homes, Juhu to Bandra West."
-- **Featured.** Pin the project plan page once you decide it can be public, or pin post 1 once it is live.
+- **Featured.** Pin https://m360wellnesshomes.netlify.app/ with the exterior render as its thumbnail, then pin post 1 once it is live.
 - **About, first line.** "I'm building about 40 longevity homes between Juhu and Bandra West, and sharing the whole plan on this page, one post a week."
 - **Banner.** The exterior concept render from the plan, with "Concept render" in small type.
 - **Creator mode** on, so the Follow button leads.
@@ -94,7 +95,7 @@ Post 1 of 12.
 
 First comment:
 ```
-Source for the two numbers: WHO, World Health Statistics 2021. India life expectancy 70.8 years, healthy life expectancy 60.3 years, 2019 data.
+Source for the two numbers: WHO, World Health Statistics 2021. India life expectancy 70.8 years, healthy life expectancy 60.3 years, 2019 data. The full plan, with every source: https://m360wellnesshomes.netlify.app/
 ```
 
 ### Post 2, Thursday, week 1. Carousel: Your family's health lives in seven places.
@@ -206,7 +207,7 @@ Post 6 of 12. dm me for the full plan.
 
 First comment:
 ```
-Business Standard, 11 December 2024, for the Juhu plot sale. Square Yards, 2026, for launch prices. ghar.tv and gharkabudget.com, 2026, for redevelopment rent and corpus in the western suburbs. The base case on slide 9 is for a 2,000 sq m plot, approximate, plus or minus 15%. A site feasibility on a real plot replaces every number.
+Business Standard, 11 December 2024, for the Juhu plot sale. Square Yards, 2026, for launch prices. ghar.tv and gharkabudget.com, 2026, for redevelopment rent and corpus in the western suburbs. The base case on slide 9 is for a 2,000 sq m plot, approximate, plus or minus 15%. A site feasibility on a real plot replaces every number. The three plot sizes side by side: https://m360wellnesshomes.netlify.app/
 ```
 
 ### Post 7, Tuesday, week 4. Text.
@@ -249,7 +250,7 @@ Post 8 of 12. dm me for the model.
 
 First comment:
 ```
-Construction: InfraLens, Mumbai luxury tier, May 2026, INR 5,250 to 9,450 per sq ft excluding land. The model uses INR 7,500 on FSI area and INR 4,000 on parking. The longevity layer at about 20% over a standard build: ItaliaOggi, 22 May 2026. Base case for 2,000 sq m, approximate, plus or minus 15%. A site feasibility on a real plot replaces every number here.
+Construction: InfraLens, Mumbai luxury tier, May 2026, INR 5,250 to 9,450 per sq ft excluding land. The model uses INR 7,500 on FSI area and INR 4,000 on parking. The longevity layer at about 20% over a standard build: ItaliaOggi, 22 May 2026. Base case for 2,000 sq m, approximate, plus or minus 15%. A site feasibility on a real plot replaces every number here. The full cost stack: https://m360wellnesshomes.netlify.app/
 ```
 
 If you hold the carousel back, post this text instead:
@@ -260,7 +261,7 @@ So I ran the base case at three prices. At a regular Juhu price with no premium 
 
 The layer pays for itself from about INR 75,400 a square foot. Everything above that is the category being born.
 
-The full model, with the cost stack and the caveats, is in the room. dm me and I'll send it.
+The full model, with the cost stack and the caveats, is in the room. The link is in the first comment, or dm me and I'll walk you through it.
 
 Post 8 of 12.
 ```
@@ -341,7 +342,7 @@ Post 12 of 12. dm me, or share this with whoever should be in the room.
 
 First comment:
 ```
-The structure is set site by site: a joint development, a licence per project or a revenue share. The full plan, with sources and assumptions, goes to anyone who asks for it in a DM.
+The structure is set site by site: a joint development, a licence per project or a revenue share. The full plan, with sources and assumptions: https://m360wellnesshomes.netlify.app/
 ```
 
 ## 6. The carousels, slide by slide
@@ -454,7 +455,7 @@ Hi [Name], good to connect. COMPANY's [verified fact] is the kind of partner the
 
 **E. After they reply, send the room**
 ```
-Here's the room: [link to the project plan page]. Base case for 2,000 sq m, three plot sizes, the cost stack & the three risks. Every number carries plus or minus 15% until a real plot replaces it. If it's a fit, the next step is a 90 day site feasibility we'd run together. Tuesday or Thursday for the call?
+Here's the room: https://m360wellnesshomes.netlify.app/ Base case for 2,000 sq m, three plot sizes, the cost stack & the three risks. Every number carries plus or minus 15% until a real plot replaces it. If it's a fit, the next step is a 90 day site feasibility we'd run together. Tuesday or Thursday for the call?
 ```
 
 **F. Follow-up, 48 hours after sending the room, if quiet**
@@ -469,7 +470,7 @@ Sequence: founder or principal first. Hold DMs to their team for 48 hours so the
 - **Posting.** Tuesday and Thursday, 8:30 to 9:15 am IST. Carousels go up as documents, PDF, 1080 x 1350. Put the sources in the first comment within one minute of posting.
 - **The first hour.** Reply to every comment within 60 minutes. Ask one question back when a comment has substance. Like nothing of your own.
 - **Within 24 hours.** DM anyone who comments twice, anyone who fits one of the three buckets, and anyone who reacts to three posts in a row. Use the scripts above.
-- **The room.** Decide before post 1 whether the project plan page is shareable by link. If yes, it goes out after the first reply, never in the post. If no, make a PDF of it for the same purpose.
+- **The room.** The plan is live at https://m360wellnesshomes.netlify.app/. It goes in the first comment of posts 1, 6, 8 and 12 and in DM E. Keep it out of post bodies. Before post 1, add the link preview tags in section 13 so the card LinkedIn draws for it carries the exterior render.
 - **Images between posts.** The exterior and sky garden renders from the plan can run as image posts on Saturdays if you want a third beat a week. Caption them "Concept render" and keep them to one line of copy. The Pinterest mood images stay out of the feed; their rights belong to their owners.
 - **Hashtags.** Three at most, in the first comment, or none.
 - **Team.** Ask the Mask360 team to comment in their own words inside the first hour on posts 1, 2, 5 and 12. Real sentences, no "Great post".
@@ -522,7 +523,7 @@ Every number the series uses, with its source, so nothing drifts in a reply or a
 ## 11. To confirm before posting
 
 - Post 1 and post 11 describe R1 Africa as your family's company and post 11 says this is the first home you are building yourself. Confirm both, and how you want the family named.
-- Whether the project plan page can be shared by link, and with whom.
+- The site is live and public at https://m360wellnesshomes.netlify.app/, so the room can be shared freely. Its robots tag keeps it out of Google, which suits a plan meant for people you send it to.
 - Whether the full numbers (post 8) go in the feed or stay in the room.
 - Whether the Notandas conversation stays private. Nothing in this series names them.
 - The cover photo. The portrait from your resume site is used. Swap `build/kaavish-cover.png` for any other photo and re-run the render.
@@ -537,3 +538,28 @@ python3 -I make_pdfs.py
 ```
 
 Edit `slides.json` first. Each slide is `cover`, `text` (with an optional `label` and `source`) or `closing`. The renderer shrinks long text to fit, down to 40 px.
+
+## 13. The site, and how it previews on LinkedIn
+
+The plan at https://m360wellnesshomes.netlify.app/ is the room. Checked on 31 October 2026: every figure used in this series appears on it, and it carries no dashes.
+
+Two things to fix on the site before post 1:
+
+**Link preview tags.** The page has a title and a description and no social tags, so LinkedIn draws its card without an image. A 1200 x 630 crop of the exterior render is ready at `build/og-exterior.jpg`. Copy it to the site as `img/og-exterior.jpg`, then add these inside `<head>`:
+
+```html
+<meta property="og:title" content="The Longevity Residence, Juhu to Bandra West">
+<meta property="og:description" content="About 40 homes, a wellness level and a clinic, on half an acre within a kilometre of the sea. The full plan, with sources.">
+<meta property="og:image" content="https://m360wellnesshomes.netlify.app/img/og-exterior.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://m360wellnesshomes.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+```
+
+After deploying, paste the URL into LinkedIn's Post Inspector (linkedin.com/post-inspector) once so it refreshes its cached card.
+
+**The sign-off.** The page ends with "dm me". On a public page that line should carry a link to your LinkedIn profile, so a reader who arrives from a forwarded link can reach you in one tap.
+
+The robots tag (`noindex, nofollow`) can stay. It keeps the plan out of search while every person you send the link to can open it.
