@@ -2,6 +2,27 @@
 
 Internal. All figures INR, estimates, excluding GST. Revisit once the team is contracted.
 
+## Chosen plan (2026-11-03): 3 new people, Rs 18 lakh fixed
+
+| | Amount |
+|---|---|
+| Fixed fee | Rs 18,00,000 |
+| 3 new people, 3 months | (Rs 4,65,000) |
+| Creative team time, film, travel, GujRERA and legal, tools | (Rs 6,90,000) |
+| **Kept from the fixed fee** | **Rs 6,45,000** |
+| Per villa sold: 1% success fee less 15% team bonus | about Rs 2,76,000 |
+
+| Villas sold | Total profit |
+|---|---|
+| 0 (day 60 waiver applies) | Rs 1,95,000 |
+| 2 (waiver applies) | about Rs 7,50,000 |
+| 5 | about Rs 20,30,000 |
+| 10 | about Rs 34,10,000 |
+| 15 | about Rs 47,90,000 |
+| 20 | about Rs 61,70,000 |
+
+The 5-person model below is the fallback if Kaavish cannot run the weekends.
+
 ## Revenue
 
 | Item | Amount |

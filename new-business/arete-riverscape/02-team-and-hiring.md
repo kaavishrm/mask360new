@@ -2,6 +2,22 @@
 
 We do not have most of these people today. Line them up before Arete signs so contracts start on day 1. Costs are estimates, monthly, INR.
 
+## Chosen plan (2026-11-03): 3 new people
+
+| Role | Per month | 3 months |
+|---|---|---|
+| Corporate manager | Rs 60,000 | Rs 1,80,000 |
+| Adviser manager | Rs 60,000 | Rs 1,80,000 |
+| Desk executive | Rs 35,000 | Rs 1,05,000 |
+| **Total** | | **Rs 4,65,000** |
+
+- Kaavish is on site at every Open Weekend with Arete's sales head, in place of a sales director.
+- Arete lends one pre-sales person for the desk (in the proposal's terms).
+- Team bonus pool: 15% of each success fee (corporate manager 6%, adviser manager 6%, desk executive 3%).
+- Add the sales director only if Kaavish cannot attend the weekends.
+
+The full 5-person structure below is the fallback.
+
 ## Structure
 
 | Role | Type | Fixed / month | Success share | Based |
