@@ -6,7 +6,7 @@ Arete already ran ads, email and channel partners. They did not work, because no
 
 - 20 villas relaunched with the post-flood redesign as the news.
 - Launch price for those 20, valid 45 days, then it rises. The deadline is real.
-- Flood cover in the agreement: Arete pays each villa's home insurance, flood included, for 5 years, and repairs flood damage to common areas. See `research/insurance.md`.
+- Flood cover in the agreement: Arete pays each villa's home insurance, flood included, for 5 years from possession (the policy has to be in the owner's name), and repairs flood damage to common areas. Estimated Rs 3.7 to 4.6 lakh for 20 villas over 5 years before any post-flood loading. Get broker quotes in week 1. See `research/insurance.md`.
 - 10:90 payment plan: 10% at booking, 90% at possession.
 - Buyer referral reward for existing Riverscape buyers.
 
@@ -62,7 +62,7 @@ Agenda in `03-scripts-corporate.md`, C6. Key points:
 2. **Recruit (weeks 2 to 5):** call, then a coffee meeting. Script in `04-scripts-advisers.md`.
 3. **Sign up:** 2-page referral agreement, 30 minute briefing on the investor lot note, an adviser site day before they bring clients.
 4. **Introductions:** adviser registers each family by WhatsApp to the desk (name, phone, adviser). Desk replies with a timestamped confirmation. Credit lasts 90 days from registration.
-5. **Payout:** 3 to 4% of agreement value, through a GujRERA-registered entity (Mask360 once registered, or a registered channel partner as paying agent). See `research/gujrera-agent-registration.md`. Settle in week 1.
+5. **Payout:** 3 to 4% of agreement value, under a written agreement. Under the RERA Act anyone paid for introducing buyers is an agent, so **every adviser must hold their own GujRERA agent registration before any fee is paid** (Form G, Rs 10,000 for an individual, Rs 50,000 for a firm, valid 5 years). We help each adviser file in their first week. An adviser who will not register can still introduce, but cannot be paid. Mask360 registers too, for the success fee. See `research/gujrera-agent-registration.md`.
 
 ## 3. Open Weekends
 

@@ -4,10 +4,10 @@ For the adviser manager. Target independent wealth managers, mutual fund distrib
 
 ## A1. First call (2 minutes)
 
-> Hi [Name], this is [your name] from Mask360. We are running the sales relaunch of Riverscape by Arete Group, a riverfront villa project in Tukwada near Vapi. We are bringing in a small group of advisers who look after Gujarati business families, so their clients get first access to 20 relaunched villas at a launch price. There is also a 5-villa investor lot with a corporate lease. Advisers earn 3 to 4% of the agreement value, paid properly through a registered entity, and we host the site day for your clients. Could I buy you a coffee this week and take 20 minutes to walk you through it?
+> Hi [Name], this is [your name] from Mask360. We are running the sales relaunch of Riverscape by Arete Group, a riverfront villa project in Tukwada near Vapi. We are bringing in a small group of advisers who look after Gujarati business families, so their clients get first access to 20 relaunched villas at a launch price. There is also a 5-villa investor lot with a corporate lease. Advisers earn 3 to 4% of the agreement value under a written agreement, and we host the site day for your clients. You will need a GujRERA agent registration to be paid, and we help you file it. Could I buy you a coffee this week and take 20 minutes to walk you through it?
 
 **If they ask "are you a broker?"**
-> We are the agency running the relaunch for Arete. The fee is paid through a GujRERA-registered entity, with a written agreement, so it is clean for you.
+> We are the agency running the relaunch for Arete. Under the RERA Act, anyone paid for introducing buyers has to be registered as an agent, so we help you register with GujRERA. It costs Rs 10,000 for an individual and lasts 5 years. Then the fee is paid under a written agreement, so it is clean for you.
 
 **If they are a SEBI-registered investment adviser**
 > Thank you. SEBI rules do not allow registered advisers to take referral fees, so I will not offer one. If any client asks you about real estate near Vapi, we are happy to host them directly.
@@ -33,7 +33,7 @@ Heads of terms only. Not a contract.
 3. **Fee:** [3 to 4]% of the agreement value of each villa booked by a registered family, excluding taxes, stamp duty and registration charges.
 4. **When paid:** within 30 days of Arete receiving [the booking amount / the first 10%]. Clawed back if the booking cancels within 60 days.
 5. **What the adviser must not do:** quote prices or terms other than Arete's approved sheet; make claims about returns, appreciation or flood safety beyond the proof pack; advertise the project publicly.
-6. **Compliance:** the adviser confirms they are not a SEBI-registered investment adviser and that their employer, if any, permits the arrangement.
+6. **Compliance:** the adviser holds a valid GujRERA agent registration (number stated in the agreement) before any fee is paid, confirms they are not a SEBI-registered investment adviser, and confirms their employer, if any, permits the arrangement.
 7. **Term:** the 90 day mandate, with fees payable on bookings registered within it.
 8. **Confidentiality** of client data, used only for this introduction.
 
@@ -53,7 +53,7 @@ If the family is already registered by someone else, the desk replies:
 - Weekday, 10 am to 2 pm. Cars from Mumbai or Surat.
 - Engineer's walk through the new levels, the villas, the clubhouse, lunch.
 - 20 minutes with Arete's sales head on pricing, plans and how bookings work at Open Weekends.
-- Each adviser leaves with: printed investor notes, proof packs, the Open Weekend dates, the desk's WhatsApp number.
+- Each adviser leaves with: printed investor notes, proof packs, the Open Weekend dates, the desk's WhatsApp number, and their GujRERA registration form, filled with our help.
 
 ## A6. Adviser updates (weekly, Friday)
 

@@ -22,5 +22,5 @@ Send this list at kickoff. Everything marked day 1 to 3 blocks the relaunch kit.
 | 16 | Experience centre timings, site access, lunch space | Open Weekends | Day 3 |
 | 17 | Assets: renders, films, drone footage, site photos after the redesign, logos | Relaunch kit | Day 2 |
 | 18 | Letterhead and booking forms | Invitations and booking desk | Day 5 |
-| 19 | Open Weekend budget approval (about Rs 2.5 lakh per weekend estimate) | Cars, lunch, setup | Day 5 |
+| 19 | Open Weekend budget approval (estimate Rs 4.5 to 6.5 lakh per weekend, about Rs 27 to 39 lakh for six) | Cars, lunch, setup | Day 5 |
 | 20 | One approver who signs off messages, lists and budgets within 24 hours | Speed | Day 1 |

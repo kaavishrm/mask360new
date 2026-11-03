@@ -79,14 +79,20 @@ The 45 day launch price closes 2027-01-08. Decide with Arete at the day 45 revie
 
 ## Budget template (per weekend, paid by Arete at actuals)
 
-| Item | Qty | Rate (estimate) | Amount |
-|---|---|---|---|
-| Cars, Mumbai day return | [6] | Rs [10,000] | Rs [60,000] |
-| Cars, Surat day return | [2] | Rs [6,000] | Rs [12,000] |
-| Lunch and refreshments | [75] guests | Rs [1,500] | Rs [1,12,500] |
-| Setup, signage, printing | 1 | Rs [40,000] | Rs [40,000] |
-| Host and kids area | 1 | Rs [15,000] | Rs [15,000] |
-| Welcome kits | [5] | Rs [3,000] | Rs [15,000] |
-| **Total** | | | **Rs [2,54,500]** |
+Estimates from `research/open-weekend-logistics.md`, assuming 22 families (13 Mumbai, 9 Surat), 80 lunch covers, and the existing experience centre as the venue.
 
-Replace the estimates with quotes from `research/open-weekend-logistics.md` before asking Arete to approve.
+| Item | Basis | Low | High |
+|---|---|---|---|
+| Mumbai transport | Vande Bharat to Vapi plus station shuttles, or one Innova per family at Rs 8,500 to 11,000 | Rs 70,000 | Rs 1,43,000 |
+| Surat transport | Shared vans (Rs 11,000 to 12,000 for 2 to 3 families) or one car per family | Rs 40,000 | Rs 78,300 |
+| Lunch | 80 covers at Rs 1,500 to 2,200 plus GST | Rs 1,26,000 | Rs 2,07,700 |
+| Arrival refreshments | 80 at Rs 250 to 400 | Rs 20,000 | Rs 32,000 |
+| Site setup | At the experience centre; rent any shade structure once for 3 months, not per weekend | Rs 50,000 | Rs 1,00,000 |
+| Hostesses, valet, photographer | 6 to 8 people | Rs 40,000 | Rs 80,000 |
+| Welcome kits | 22 at Rs 1,500 to 3,000 | Rs 33,000 | Rs 66,000 |
+| First aid standby | Day rate | Rs 10,000 | Rs 20,000 |
+| Contingency | About 10% | Rs 39,000 | Rs 73,000 |
+| **Total per weekend** | | **about Rs 4.3 lakh** | **about Rs 8.0 lakh** |
+| **Six weekends** | | **about Rs 26 lakh** | **about Rs 48 lakh** |
+
+Plan on about Rs 4.5 to 6.5 lakh per weekend. At 15 villas booked, six weekends cost Arete well under 1% of sales value. Replace every estimate with a quote before Arete approves the budget.
