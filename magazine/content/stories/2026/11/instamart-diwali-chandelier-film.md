@@ -79,15 +79,17 @@ linkedin: |
   Our read: in a crowded festive break, being the odd film is the cheapest route to attention.
   #advertising #instamart #diwali
 alt: |
-  Cover slide on campaigns red with the headline Instamart's Diwali film is a tired man in a chandelier and a SPILLED pill.
-  Tea slide describing the film, a couple home from a party and a husband wearing a crystal chandelier.
-  Receipt slide, an image from storyboard18.com
-  Receipt slide, an image from afaqs.com
-  Tea slide with Mayur Hola's line on lit-up homes and keeping the decor at the centre.
-  Receipt slide quoting Mayur Hola, a man wearing a chandelier is silly but it makes people look at the category.
-  Receipt slide with the number 2,200 cr and the Datum quick-commerce festive ad estimate.
-  Verdict slide on red with the read on buying one joke and committing to it.
-  Close slide, Steeped by Mask360.
+  Cover slide on campaigns red with the SPILLED pill, the headline Instamart's Diwali film is a tired man in a chandelier, the words chandelier set huge, and the Mask360 masthead.
+  Tea slide with the pull line The film.: A couple comes home from a late Diwali party. The wife wants to call it a.
+  Receipt slide, Instamart Diwali campaign features man wearing chandelier to promote home décor. Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes (Image: storyboard18.com, Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes and the 131 cities figure, 2026-10-31).
+  Receipt slide, Instamart gives Diwali décor a quirky twist in new ad. afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31 (Image: afaqs.com, afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31).
+  Tea slide with the pull line No agency on the slate.: The credit line reads conceptualised and executed by the in-house team. No agency, no director, no.
+  Tea slide with the pull line The category play.: The assortment behind the gag runs six lanes. Linen and furnishings, home decor, cleaning supplies, electronics,.
+  Tea slide with the pull line Everyone else shot the lit-up house.: Mayur Hola, VP Brand at Swiggy, says most Diwali films show lit-up homes and family moments,.
+  Receipt slide quoting A man wearing a chandelier is silly, but it makes people look at the, Mayur Hola, VP Brand, Swiggy, via afaqs, 31 October 2026.
+  Receipt slide with the number 2,200 cr set huge: Datum's estimate for quick-commerce ad spend this festive season, up about 50 percent, per Storyboard18, 12 October 2026..
+  Verdict slide headed The read: Instamart bought one joke and committed to it. No agency, no diya, one tired man in.
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The tea
 

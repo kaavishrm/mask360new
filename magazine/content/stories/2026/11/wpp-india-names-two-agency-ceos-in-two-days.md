@@ -16,9 +16,9 @@ sources:
 - "https://www.storyboard18.com/brand-makers/shouvik-roy-to-take-over-as-ceo-of-grey-82-5-ws-l-113641.htm (Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026)"
 - "https://manifest-media.in/advertising/291026/shouvik-roy-moves-back-to-ogilvy.html (Manifest Media, Shouvik Roy career dates, 29 October 2026)"
 - "https://www.campaignindia.in/article/neville-shah-moves-on-from-kinnect/42j7n9abrd5vg08qypawggtgxs (Campaign India, Neville Shah exits Kinnect, 15 October 2026)"
-- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
+- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
 - "https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks store count, 27 October 2026)"
-- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas name revived as TBWA\\\\\\\\\\\\\\\\Lintas from 1 January 2026, 3 December 2025)"
+- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas name revived as TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas from 1 January 2026, 3 December 2025)"
 - "https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure including Kinnect, 2 December 2025)"
 - "https://www.campaignindia.in/article/aaai-sets-up-indie-council-names-tanya-goyal-chair/4mwxvygf854w8wpbj6dxcqvsn1 (Campaign India, AAAI INDIE Council and Tanya Goyal, 30 October 2026)"
 - "https://www.campaignindia.in/article/media-agency-representatives-unite-under-new-aaai-council/4w32qxp00e92jy22paazefs4c6 (Campaign India, AAAI Media Council first meeting, 3 November 2026)"
@@ -100,16 +100,18 @@ linkedin: |
   Sources: Campaign India, afaqs, Storyboard18. Full round-up on the Mask360 site, link in the comments.
   #advertising #peoplemoves #indianagencies
 alt: |
-  Cover slide on People green with the headline WPP India names two agency CEOs in two days, SPILLED kicker, Mask360 masthead.
-  Item slide: Kiran Ramamurthy, from Grey 82.5 to VML India CEO, effective 1 December, with what it signals.
-  Receipt slide, an image from afaqs.com
-  Receipt slide, an image from storyboard18.com
-  Item slide: TBWA\Lintas wins Starbucks India's creative account after a multi-agency pitch, 505 stores in 81 cities.
-  Item slide: Tanya Goyal of Everest Brand Solutions named chair of AAAI's new INDIE Council.
-  Item slide: Mohit Rathi promoted to chief marketing officer at Porter alongside a new CFO and CTO.
-  Receipt slide: quote from Hephzibah Pathak, CEO of WPP Creative India, on VML entering its next chapter in a position of strength.
-  Verdict slide on green: The read, the holdco reshuffle has stopped talking and started hiring.
-  Close slide: Steeped by Mask360, Three. Six. Tea.
+  Cover slide on people green with the SPILLED pill, the headline WPP India names two agency CEOs in two days, the words two CEOs set huge, and the Mask360 masthead.
+  Item slide for Kiran Ramamurthy, from Grey 82.5 to VML India: Named VML India CEO on 28 October, effective 1 December. Babita Baruah,. The catch: WPP Creative India promotes from inside the group. The man.
+  Receipt slide, VML India appoints Kiran Ramamurthy as CEO. afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026 (Image: afaqs.com, afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026).
+  Receipt slide, Shouvik Roy to take over as CEO of Grey 82.5. Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026 (Image: storyboard18.com, Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026).
+  Item slide for Shouvik Roy, back to Ogilvy Group as Grey 82.5 CEO: Announced 29 October, effective 1 December. He ran Ogilvy Delhi as president,. The catch: Ogilvy Group wants a founder type for its self-described challenger.
+  Item slide for Neville Shah, from Kinnect CCO to next move not known: Campaign India reported on 15 October that he has stepped down as. The catch: Kinnect has sat inside Omnicom Advertising India since 1 January..
+  Item slide for TBWA\Lintas wins Starbucks India: Tata Starbucks named the Omnicom agency creative agency of record on 2. The catch: A pitch win for the revived Lintas name, ten months.
+  Item slide for Tanya Goyal, Everest Brand Solutions, to chair of AAAI's INDIE Council: AAAI set up a council for independent agencies on 30 October and. The catch: The trade body builds a lane for indies while holdcos.
+  Item slide for Mohit Rathi, from Porter VP customer growth to Porter CMO: Promoted on 3 November alongside a new CFO, Gaurav Jain from Amazon,. The catch: Three C-suite seats in one release, two filled from inside..
+  Receipt slide quoting VML enters this next chapter in a position of strength, Hephzibah Pathak, CEO, WPP Creative India, in the VML release, per Campaign India, 28 October 2026.
+  Verdict slide headed The read: WPP India fills one CEO chair from inside and one with a returning alumnus, Omnicom's revived.
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 Moves, week 45. Seven on-the-record moves between 15 October and 3 November, sourced to the trade press or the company's own release.
 

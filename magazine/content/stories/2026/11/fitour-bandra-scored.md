@@ -71,13 +71,15 @@ linkedin: |
   Full scorecard on the site.
   #hospitality #mumbai #restaurants
 alt: |
-  Cover slide on hospitality yellow with 8.4 set huge, the headline Fitour's 18-course basement in Bandra, scored, and the SWEET kicker pill.
-  Tea slide with the pull line Idea 8.5 out of 10 and a paragraph on the 18 verses, the guessing game and the pickle jars.
-  Receipt slide, an image from restaurantindia.in
-  Receipt slide, an image from thenodmag.com
-  Tea slide with the pull line Courage 9 out of 10 and a paragraph on the INR 8,245 price, no signage, no walk-ins and the sea snails.
-  Receipt slide in a black frame with 8,245 set large and a caption listing the tasting menu and pairing prices from Restaurant India.
-  Verdict slide on hospitality yellow reading The read with the 8.4 total and the note that this is scored from coverage, not a visit.
+  Cover slide on hospitality yellow with the SWEET pill, the headline Fitour's 18-course basement in Bandra, scored: 8.4, the words 8.4 set huge, and the Mask360 masthead.
+  Tea slide with the pull line Idea: 8.5/10: Eighteen courses chef Ashwin Singh calls verses, served three or four at a time with no.
+  Receipt slide, Aspect Hospitality Opens FITOUR in Bandra With 14-Seat Indian Dining Format. Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Ke (Image: restaurantindia.in, Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Keswani, 5 October 2026).
+  Receipt slide, In Fitour, Mumbai’s newest XS eatery, last summer’s mangoes get a spotlight. The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, (Image: thenodmag.com, The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, 14 October 2026).
+  Tea slide with the pull line Craft: 8.5/10: Singh cooked at Gaggan in Bangkok and at Masque. The kitchen grinds its own garam, chaat.
+  Tea slide with the pull line Fit: 7.5/10: A basement under House of Akina on Turner Road, the old Privé, rebuilt four times, once.
+  Tea slide with the pull line Courage: 9/10: INR 8,245 a head plus taxes before a drop is poured, with pairings from INR 5,145.
+  Receipt slide with the number 8,245 set huge: INR per person plus taxes for 18 verses. Cocktail pairing INR 5,495, international wine INR 6,495, Indian wine INR 5,145. Restaurant India, 5 October 2026..
+  Verdict slide headed The read: 8.4. Fitour is the most serious new Indian tasting room in Mumbai since Papa's, priced like.
   Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 This is a scorecard of Fitour as it has been presented in public: Aspect Hospitality's launch release, The Nod's review, Esquire India's hotlist entry, and the venue's own published prices. Mask360 has not eaten there. The lines below score the concept, the room, the menu and the price position, not a plate.

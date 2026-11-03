@@ -88,13 +88,15 @@ linkedin: |
   Our booking goes to Nam. Full edit with addresses on the site.
   #hospitality #restaurants #india
 alt: |
-  Cover slide on hospitality yellow with the headline Five new tables, one phone booth, one pending bar licence and the SWEET kicker pill.
-  Edit item slide for Trapdoor in Versova with a T monogram, the six-course cocktail omakase, INR 2,000 for two, and the catch about the booth code.
-  Receipt slide, an image from restaurantindia.in
-  Receipt slide, an image from curlytales.com
-  Edit item slide for Goonj in Indiranagar with a G monogram, 75 seats, INR 2,700 for two, and the catch about the fourth floor and the afternoon break.
-  Edit item slide for Bloody Dangerous in Assagao with a B monogram, 42 seats, INR 4,000 for two, and the catch about 9pm doors and parking.
-  Verdict slide on hospitality yellow reading The read, picking Nam and telling Trapdoor to print a price.
+  Cover slide on hospitality yellow with the SWEET pill, the headline Five new tables, one phone booth, one pending bar licence, the words five tables set huge, and the Mask360 masthead.
+  Item slide for Trapdoor, Versova: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director. The catch: No walk-ins. You get the booth code after booking, and.
+  Receipt slide, Trapdoor Launches in Versova With Six-Course Cocktail Pairing Experience. Restaurant India on Trapdoor's launch, team and format, 30 September 2026 (Image: restaurantindia.in, Restaurant India on Trapdoor's launch, team and format, 30 September 2026).
+  Receipt slide, 11 New Mumbai Restaurants In October You. Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026 (Image: curlytales.com, Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026).
+  Item slide for La Panthera Eros, Churchgate: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the. The catch: Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner..
+  Item slide for Nam, Hauz Khas: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open. The catch: The bar licence was still pending when Time Out visited..
+  Item slide for Goonj, Indiranagar: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal. The catch: Fourth floor, and the kitchen goes dark from 3:30 to.
+  Item slide for Bloody Dangerous, Assagao: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500. The catch: Doors at 9pm, music climbs as the night does, parking.
+  Verdict slide headed The read: Nam. Time Out's five stars, INR 3,000 for two, closed Mondays, and the one catch is.
   Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 Five rooms from the roundups since mid September, one per city, with the price the listings print, which is the cost for two because almost nobody prints a menu, and the catch nobody puts in the release.

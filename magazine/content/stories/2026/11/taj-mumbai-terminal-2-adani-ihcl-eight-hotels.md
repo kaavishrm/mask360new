@@ -71,13 +71,15 @@ linkedin: |
   The airport is turning into the high street. Full story on the site.
   #hospitality #hotels #ihcl
 alt: |
-  Cover slide on hospitality yellow with the headline Taj takes Mumbai's Terminal 2 in an eight-hotel Adani deal and the SPILLED kicker pill.
-  Tea slide with the pull line Eight hotels, one handshake and a paragraph on the 29 October agreement and the brand split.
-  Receipt slide, an image from freepressjournal.in
-  Receipt slide, an image from moodiedavittreport.com
-  Receipt slide in a black frame quoting Puneet Chhatwal on IHCL reaching 25 airport hotels, sourced to the 29 October release.
-  Receipt slide in a black frame with 20,000 cr set large and a caption on phase one of Adani Airport City.
-  Verdict slide on hospitality yellow reading The read, calling the airport the new high street and Taj the anchor store.
+  Cover slide on hospitality yellow with the SPILLED pill, the headline Taj takes Mumbai's Terminal 2 in an eight-hotel Adani deal, the words 2,000 rooms set huge, and the Mask360 masthead.
+  Tea slide with the pull line Eight hotels, one handshake.: Adani Airport Holdings and the Indian Hotels Company sign a multi-hotel operating agreement on 29 October:.
+  Receipt slide, AAHL, IHCL Sign One Of India’s Largest Multi-Hotel Agreements For 8 Hotels With 2,000+ Rooms. Free Press Journal on the agreement, land bank, phase one investme (Image: freepressjournal.in, Free Press Journal on the agreement, land bank, phase one investment and the May IHG deal, 29 October 2026).
+  Receipt slide, Adani Airports and IHCL sign eight-hotel agreement as Airport City strategy accelerates. The Moodie Davitt Report by Mark Lane on the deal, the 25 and 15 hotel (Image: moodiedavittreport.com, The Moodie Davitt Report by Mark Lane on the deal, the 25 and 15 hotel counts and the Jeet Adani quote, 29 October 2026).
+  Tea slide with the pull line T2 gets a Taj.: Mumbai gets the headline: a Taj under construction at Terminal 2 of Chhatrapati Shivaji Maharaj International..
+  Tea slide with the pull line The real estate under the room.: The hotels sit inside a bigger bet. Adani Airport City Limited holds a land bank of.
+  Receipt slide quoting With these additions, IHCL will have 25 hotels across its brandscape at key airports, Puneet Chhatwal, MD and CEO of IHCL, company release via Hospitality Net, 29 October 2026.
+  Receipt slide with the number 20,000 cr set huge: INR, phase one of Adani Airport City, about 22 million sq ft across six airport cities, per Free Press Journal, 29 October.
+  Verdict slide headed The read: the airport is the new high street and Taj just took the anchor store. Fifteen hotel.
   Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The tea

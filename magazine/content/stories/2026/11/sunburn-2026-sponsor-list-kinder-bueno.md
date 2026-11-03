@@ -87,15 +87,17 @@ linkedin: |
   Sources: Time Out Mumbai, sunburn.in, Esquire India, MediaNews4U. Full story on mask360.agency.
   #events #sponsorship #sunburn
 alt: |
-  Cover slide on events pink with "3,500" set huge, the Events label, the SPILLED pill and the Mask360 masthead.
-  White tea slide headed "Fifty acts in one drop." listing the four headliners by day and the size of the 21 October supporting list.
-  Receipt slide, an image from timeout.com
-  Receipt slide, an image from edmhousenetwork.com
-  White tea slide headed "Where is Croma." on the May 2023 four-year title deal and its absence from the 2026 credits.
-  Framed receipt slide comparing the May 2023 Croma Sunburn announcement on the left with the October 2026 partner credits on the right.
-  Framed receipt slide with "3,500" set at 200px and a caption on general access pricing per Esquire India.
-  Events pink verdict slide headed "The read" on the crowded sponsor stack and the missing Croma name.
-  Black close slide reading "Steeped by Mask360", "Three. Six. Tea." and "Send this to the one person who needs it".
+  Cover slide on events pink with the SPILLED pill, the headline Sunburn's sponsor list now has a Kinder Bueno in it, the words 3,500 set huge, and the Mask360 masthead.
+  Tea slide with the pull line Fifty acts in one drop.: Sunburn posts its full Mumbai bill on 21 October. The Chainsmokers and Jason Derulo take 18.
+  Receipt slide, What to look out for in Sunburn Festival 2026&#x27;s lineup beyond the headliners. Time Out Mumbai, full Mumbai line-up, headliners by day, ticket price, partne (Image: timeout.com, Time Out Mumbai, full Mumbai line-up, headliners by day, ticket price, partner credits including Kinder Bueno, 21 October 2026).
+  Receipt slide, Sunburn Festival Reveals Massive Two-Day Lineup for Dec 2026. EDM House Network, line-up breakdown of four headliners, seven supporting acts and 40-plus more, 1 (Image: edmhousenetwork.com, EDM House Network, line-up breakdown of four headliners, seven supporting acts and 40-plus more, 19 October 2026).
+  Tea slide with the pull line 3,500 gets you in.: General access starts at INR 3,500 for a day, on BookMyShow and nowhere else. Esquire India.
+  Tea slide with the pull line A card, a car, a beer, a bar.: Sunburn's own May announcement credits RuPay as presenting partner and Hyundai as "driven by", with Tuborg.
+  Tea slide with the pull line Where is Croma.: In May 2023 Croma signed a four-year title deal meant to rename every Sunburn event Croma.
+  Receipt slide comparing May 2023 (Croma and Sunburn announce a four-year title sponsorship.) with October 2026 (Mumbai credits read presented by RuPay, driven by).
+  Receipt slide with the number 3,500 set huge: rupees for one day of general access, BookMyShow only. Both days sit near 7,000, per Esquire India..
+  Verdict slide headed The read: Sunburn's Mumbai bill carries more headliners than ever and the sponsor stack is just as crowded..
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The tea
 

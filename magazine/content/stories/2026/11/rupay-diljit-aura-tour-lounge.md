@@ -86,14 +86,16 @@ linkedin: |
   Full story on mask360.agency.
   #sponsorship #marketing #rupay
 alt: |
-  Cover slide on culture blue with a SPILLED pill, the headline RuPay owns the priciest seat at every Diljit show, 17,499 set huge, and the Mask360 masthead.
-  White tea slide with the pull line The name is on the tour and text on the seven-city Aura India Tour announcement and ANI calling it the RuPay Aura India Tour.
-  Receipt slide, an image from businesstoday.in
-  Receipt slide, an image from indiatvnews.com
-  Framed receipt slide comparing the 2024 HDFC Bank Pixel presale and INR 500 discount with the 2026 RuPay presale, tour name and lounge.
-  White tea slide with the pull line Delhi almost did not open and text on the police clearance of 23 October and the security bill reported by Outlook India.
-  Framed receipt slide with 17,499 set at 200px and the caption naming the RuPay Lounge at NICE Grounds, Bengaluru.
-  Blue verdict slide headed The read, on RuPay buying the best seat in six cities and its name above the tour.
+  Cover slide on culture blue with the SPILLED pill, the headline RuPay owns the priciest seat at every Diljit show, the words 17,499 set huge, and the Mask360 masthead.
+  Tea slide with the pull line The name is on the tour.: Diljit Dosanjh put the India leg of his Aura World Tour on Instagram in the first.
+  Receipt slide, Diljit Dosanjh brings ‘Aura’ home: 7 city India tour kicks off in Delhi on Nov 1, 7th show announced in Chandigarh - BusinessToday. Business Today on the seven- (Image: businesstoday.in, Business Today on the seven-city India leg, venues, the RuPay presale and BookMyShow, 2026-10-06).
+  Receipt slide, Diljit Dosanjh announces Aura India Tour 2026; check city-wise dates, tickets and venue details - India TV News. India TV on the tour announcement, the 6 Octobe (Image: indiatvnews.com, India TV on the tour announcement, the 6 October RuPay presale and 9 October general sale, 2026-10-04).
+  Tea slide with the pull line The presale is card-only.: Ahmedabad went first. A RuPay credit card presale opened at noon on 28 September and Billboard.
+  Tea slide with the pull line The lounge is the ad.: Every city has a RuPay-named block at the top of the price list. RuPay Lounge in.
+  Receipt slide comparing 2024, Dil-Luminati (HDFC Bank Pixel cardholders got a two-day presale) with 2026, Aura (RuPay credit cardholders get the presale on BookMyShow,).
+  Tea slide with the pull line Delhi almost did not open.: The Delhi show moved from 1 November to 30 October. Then Delhi Police withheld permission in.
+  Receipt slide with the number 17,499 set huge: INR, the RuPay Lounge at NICE Grounds, Bengaluru, 29 November, per Billboard India.
+  Verdict slide headed The read: RuPay did not buy a concert. It bought the best seat in six cities and its.
   Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The tea

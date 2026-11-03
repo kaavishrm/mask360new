@@ -77,14 +77,16 @@ linkedin: |
   The gap: none of the releases name the cast, the music or the cinematographer. In a credit-driven industry, that is a missed opportunity.
   #advertising #orra #scorecard
 alt: |
-  Cover slide on campaigns red with the score 8.0 set huge, the headline ORRA's festive film Truly Hers, scored, and a SWEET pill.
-  Tea slide, Idea 8 out of 10, on a film that celebrates the woman rather than the festival.
-  Receipt slide, an image from afaqs.com
-  Receipt slide, an image from adgully.com
-  Tea slide, Courage 7 out of 10, on dropping the festival and the second title PTI ran.
-  Receipt slide quoting ORRA's statement, Orra wanted to tell her story, not the festival's.
-  Verdict slide on red with the total 8.0 and the read.
-  Close slide, Steeped by Mask360.
+  Cover slide on campaigns red with the SWEET pill, the headline ORRA's festive film Truly Hers, scored: 8.0, the words 8 set huge, and the Mask360 masthead.
+  Tea slide with the pull line Idea: 8/10: Most festive jewellery films celebrate the occasion. Truly Hers celebrates the woman. She chooses her jewellery.
+  Receipt slide, ORRA’s festive film ‘Truly Hers’ puts women at the centre. afaqs report on the film with credits, collections and media plan, 2026-10-21 (Image: afaqs.com, afaqs report on the film with credits, collections and media plan, 2026-10-21).
+  Receipt slide, ORRA unveils festive film ‘Truly Hers’ to spotlight design-led jewellery. Adgully report on the film with credits and the mirror and doorway description, 2026-1 (Image: adgully.com, Adgully report on the film with credits and the mirror and doorway description, 2026-10-21).
+  Tea slide with the pull line Craft: 8/10: Dar Gai directs, Jugaad produces, Spring Capital conceptualises. The camera stays close and slow on the.
+  Tea slide with the pull line Fit: 9/10: The film opens six collections, Shades, Cosmos, Blooms, Mandala, Kalamkari and Waves, each built on one.
+  Tea slide with the pull line Courage: 7/10: It drops the festival from a Diwali film, braver than it sounds in a category that.
+  Receipt slide quoting With Truly Hers, Orra wanted to tell her story, not the festival's., ORRA statement, via MxMIndia, 26 October 2026.
+  Verdict slide headed The read: 8.0. ORRA hands a jewellery film to a feature director and gets a film, not a.
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ORRA's festive film Truly Hers was live on the brand's YouTube and social channels by 21 October, per [afaqs](https://www.afaqs.com/news/advertising/orras-festive-film-truly-hers-puts-women-at-the-centre-12695530). It is conceptualised by Spring Capital, produced by Jugaad and directed by Dar Gai, per afaqs and [Adgully](https://www.adgully.com/post/22599/orra-unveils-festive-film-truly-hers-to-spotlight-design-led-jewellery). Here is how it scores on the four lines.
 

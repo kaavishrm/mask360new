@@ -93,15 +93,17 @@ linkedin: |
   Sources: t2, Indian Retailer, India CSR, Open, Hollywood Reporter India, Khel Now. Full story on mask360.agency.
   #events #lakmefashionweek #sponsorship
 alt: |
-  Cover slide on events pink with the words "a car" set huge, the Events label, the SPILLED pill and the Mask360 masthead.
-  White tea slide headed "The room" with the venue, dates, show count and opening and closing shows of Lakmé Fashion Week Delhi.
-  Receipt slide, an image from t2online.in
-  Receipt slide, an image from t2online.in
-  White item slide with an AA monogram, "House of Lakmé closes with an ice-cream cart", the finale props and the 5PM Glam Reset catch.
-  White item slide with an ER monogram, "Ethnix by Raymond books the T20 captain", the Supla shot and the media plan catch.
-  Framed receipt slide with the Partho Banerjee quote from the NEXA release, sourced to Indian Retailer, 23 October 2026.
-  Events pink verdict slide headed "The read" saying the week ran like a media plan with a runway attached.
-  Black close slide reading "Steeped by Mask360", "Three. Six. Tea." and "Send this to the one person who needs it".
+  Cover slide on events pink with the SPILLED pill, the headline Lakmé Fashion Week drives a car onto the ramp, the words a car set huge, and the Mask360 masthead.
+  Tea slide with the pull line The room: Taj Palace, New Delhi, 13 to 18 October. Six days, over 35 shows, over 30 stalls.
+  Receipt slide, LFW X FDCI 2026 highlights: t2oS picks shows that defined the landscape of modern Indian fashion. t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 (Image: t2online.in, t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 buyer stalls, show by show, 25 October 2026).
+  Receipt slide, Manish Malhotra. t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026 (Image: t2online.in, t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026).
+  Item slide for Maruti Suzuki NEXA presents Manish Malhotra: 17 October. Malhotra's first fashion week in three and a half years. The catch: NEXA presented the show and the release says the collection.
+  Item slide for American Express takes the front row: Experience Partner. Centurion and Platinum card members get front-row seats at select. The catch: Front row used to be the editor's seat. Now it.
+  Item slide for House of Lakmé closes with an ice-cream cart: Amit Aggarwal's AM:IT finale, On a Day Like Today, sends balloons, candyfloss,. The catch: The show is built around Lakmé 9to5's 5PM Glam Reset.
+  Item slide for Ethnix by Raymond books the T20 captain: Suryakumar Yadav's runway debut, 18 October, in an ivory Indo-Western with chintz-style. The catch: A World Cup winning captain in a menswear show is.
+  Receipt slide quoting At NEXA, we believe that true style is an expression of individuality and the, Partho Banerjee, Senior Executive Officer, Marketing and Sales, Maruti Suzuki India, in the NEXA release carried by Indian Retailer, 23 October 2026.
+  Verdict slide headed The read: Lakmé Fashion Week Delhi ran like a media plan with a runway attached. NEXA's car was.
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 Lakmé Fashion Week x FDCI ran at Taj Palace, New Delhi, from 13 to 18 October: six days, over 35 shows and over 30 stalls in the buyers' lounge, per [t2's highlights](https://t2online.in/goodlife/fashion-beauty/lfw-x-fdci-2026-highlights--t2os-picks-shows-that-defined-the-landscape-of-modern-indian-fashion/2008838). Lakmé and Tira presented péro's Spring Summer 2027 as the opening show, per [the release](https://easternherald.com/2026/10/09/lakme-and-tira-come-together-to-present-pero-for-the-opening-show-of-lakme-fashion-week-in-partnership-with-the-fashion-design-council-of-india/). Day one also ran at the Embassy of France, where the R|Elan Circular Design Challenge finale gave Margn by Saurabh Maurya the top prize and USD 16,000, per [FashionUnited](https://fashionunited.uk/news/fashion/r-elan-circular-design-challenge-2026-margn-takes-top-prize/2026101590856). The question is who paid and what they got for it.
 

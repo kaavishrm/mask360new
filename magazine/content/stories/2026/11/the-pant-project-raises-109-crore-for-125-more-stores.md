@@ -80,15 +80,17 @@ linkedin: |
   Sources named in the story. Inc42, Entrepreneur India and Open magazine, 19 October 2026.
   #fashion #retail #d2c
 alt: |
-  Cover slide on fashion violet with 109 cr set huge, the headline The Pant Project raises 109 crore for 125 more stores, and a SPILLED tag.
-  Tea slide, white ground, pull line 109 cr, one line of business, text naming Mirae Asset, Sorin, the angels and Alteria Capital.
-  Receipt slide, an image from inc42.com
-  Receipt slide, an image from india.entrepreneur.com
-  Tea slide, pull line 80 cr in, 160 cr promised, text on FY26 revenue, the FY27 projection, fivefold growth and breakeven.
-  Receipt slide in a black frame, the number 125 set at 200px, caption net new stores in two to three years.
-  Receipt slide in a black frame, the Puneet Kumar quote from Mirae Asset Venture Fund with source and date.
-  Verdict slide on violet, The read, 109 cr buys the stores, not the 160 cr, watch the FY27 number.
-  Close slide, black, Steeped by Mask360, Three. Six. Tea.
+  Cover slide on fashion violet with the SPILLED pill, the headline The Pant Project raises 109 crore for 125 more stores, the words 109 cr set huge, and the Mask360 masthead.
+  Tea slide with the pull line 109 cr, one line of business.: The Pant Project closes a 109 cr Series B, about 11.5 million dollars, led by Mirae.
+  Receipt slide, The Pant Project Raises ₹109 Cr To Expand Store Network & Portfolio. Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-1 (Image: inc42.com, Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-10-19).
+  Receipt slide, The Pant Project Raises INR 109 Cr Series B. Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-1 (Image: india.entrepreneur.com, Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-10-19).
+  Tea slide with the pull line 25 stores today. 150 is the ask.: The money goes offline. The brothers Dhruv and Udit Toshniwal, who started the brand in 2020.
+  Tea slide with the pull line One store every six to nine days.: Open magazine ran the arithmetic. 125 net new stores in two to three years is one.
+  Tea slide with the pull line 80 cr in, 160 cr promised.: The revenue line: 80 cr in FY26, per the company's September disclosure, with 160 cr projected.
+  Receipt slide with the number 125 set huge: net new stores in two to three years, one opening every six to nine days.
+  Receipt slide quoting As premium menswear becomes one of India's most compelling consumer opportunities, The Pant Project, Puneet Kumar, Managing Director, Mirae Asset Venture Fund, via Entrepreneur India, 19 October 2026.
+  Verdict slide headed The read: 109 cr buys the stores, not the 160 cr. Offline bills run 6,000 against 3,000 to.
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The tea
 

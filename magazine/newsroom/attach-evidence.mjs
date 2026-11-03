@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, basename, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseFrontMatter, stringifyFrontMatter } from './yaml.mjs';
+import { fixAlt } from './alt.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -43,6 +44,7 @@ export function attach(storyPath, { max = 2, force = false } = {}) {
   data.slides = slides;
   data.alt = alt.join('\n') + '\n';
   writeFileSync(storyPath, stringifyFrontMatter(data, body));
+  fixAlt(storyPath); // regenerate alt if the writer's lines no longer match the slides
   return { slug, attached: picks.length, picks: picks.map((p) => `${p.kind} ${p.domain}`) };
 }
 

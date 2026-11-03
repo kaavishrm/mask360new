@@ -66,10 +66,12 @@ linkedin: |
   Sources named in the story. ANI via Republic World, t2online, UrbanAsian and Indian Retailer, 17 to 23 October 2026.
   #fashion #lakmefashionweek #manishmalhotra
 alt: |
-  Cover slide on fashion violet with the word Spotted set huge, the headline Spotted, Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi, and a SWEET tag.
-  Tea slide, white ground, pull line Back after three and a half years, text describing the Taj Palace show on 17 October and the two showstopper looks.
-  Receipt slide, an image from republicworld.com
-  Receipt slide, an image from urbanasian.com
+  Cover slide on fashion violet with the SWEET pill, the headline Spotted: Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi, the words Spotted set huge, and the Mask360 masthead.
+  Tea slide with the pull line Back after three and a half years.: Taj Palace, New Delhi, Saturday 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at.
+  Receipt slide, Ayushmann Khurrana, Sara Ali Khan Turn Showstoppers as Manish Malhotra Returns to Lakme Fashion Week 2026. ANI report via Republic World, the looks, Taj Palace, (Image: republicworld.com, ANI report via Republic World, the looks, Taj Palace, three and a half years, Udta Teer, 2026-10-18).
+  Receipt slide, Manish Malhotra Luxury Prêt 2026 at Lakmē Fashion Week. UrbanAsian, collection notes, Menswear Luxe Prêt, fine jewellery, NEXA, FS Media Pro photo credit, 2026- (Image: urbanasian.com, UrbanAsian, collection notes, Menswear Luxe Prêt, fine jewellery, NEXA, FS Media Pro photo credit, 2026-10-17).
+  Receipt slide quoting Luxury Prêt 2026 is about exploring a new expression of glamour, one that feels, Manish Malhotra, via Indian Retailer, 23 October 2026.
+  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The look
 

@@ -73,11 +73,13 @@ linkedin: |
   Full column on mask360.agency.
   #marketing #advertising #diwali
 alt: |
-  Cover slide on culture blue with a BITTER pill, the headline Diwali advertising made one film this year, the prep montage, the words the prep set huge in lower case, and the Mask360 masthead.
-  White tea slide with the pull line Asian Paints sang the prep and text on Ogilvy's Taiyyari Shuru, Tyohaar Shuru musical.
-  Receipt slide, an image from indiantelevision.com
-  Receipt slide, an image from adsoftheworld.com
-  Blue verdict slide signed The Mask, headed The read, on the prep as this year's homecoming and the Cadbury fix.
+  Cover slide on culture blue with the BITTER pill, the headline Diwali advertising made one film this year, the prep montage, the words the prep set huge, and the Mask360 masthead.
+  Tea slide with the pull line Asian Paints sang the prep.: Taiyyari Shuru, Tyohaar Shuru, by Ogilvy, reported 19 October, turns cleaning, decorating and painting into a.
+  Receipt slide, Asian Paints unveils Diwali campaign celebrating the joy of home makeovers. Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit (Image: indiantelevision.com, Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19).
+  Receipt slide, Asian Paints: Taiyyari Shuru, Tyohaar Shuru • Ads of the World | Part of The Clio Network. Ads of the World listing for the Asian Paints film, India, (Image: adsoftheworld.com, Ads of the World listing for the Asian Paints film, India, October 2026).
+  Tea slide with the pull line Spotify made the prep a sitcom.: Three one-minute films with Gullak's Mishra family, reported 30 October. Laddoos to Taambdi Chaamdi, rangoli to.
+  Tea slide with the pull line Nutella made the prep a checklist.: Reported 22 October. Ranveer Singh straightens a cushion, fixes a light, smells mogra, scans the laid.
+  Verdict slide headed The read: the prep is this year's homecoming, warm and interchangeable. Swap the logos and nothing breaks. Ogilvy.
   Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The thesis
