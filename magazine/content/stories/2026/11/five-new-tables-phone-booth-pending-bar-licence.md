@@ -1,6 +1,6 @@
 ---
-title: Five new tables, one phone booth, one pending bar licence
-dek: Versova, Churchgate, Hauz Khas, Indiranagar and Assagao, with prices from INR 2,000 for two to INR 4,000, and one catch each.
+title: Five new tables. One phone booth. One pending bar licence.
+dek: Versova, Churchgate, Hauz Khas, Indiranagar and Assagao, INR 2,000 to INR 4,000 for two, one catch each. We read the listings so you need not.
 section: hospitality
 format: edit
 kicker: SWEET
@@ -31,11 +31,11 @@ paid: false
 partner: ""
 slides:
 - type: cover
-  title: Five new tables, one phone booth, one pending bar licence
+  title: Five new tables. One phone booth. One pending bar licence.
 - type: item
   name: Trapdoor, Versova
   why: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director of mixology Shobith Salian, food by chef Gaurav Gidwani. Curlytales pegs it at INR 2,000 for two.
-  catch: No walk-ins. You get the booth code after booking, and the six-course price is not in any release.
+  catch: No walk-ins. The booth code arrives after booking, and nobody has printed the six-course price. Suno, we looked.
   paid: false
   image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-1.jpg
 - type: receipt
@@ -53,87 +53,88 @@ slides:
 - type: item
   name: La Panthera Eros, Churchgate
   why: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the first floor of the 1930s Eros building. Pintxos, 48-hour fermented pizzas, about INR 3,500 for two.
-  catch: "Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner. No lunch in any listing."
+  catch: "Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner. Lunch appears in no listing we read."
   paid: false
   image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-3.jpg
 - type: item
   name: Nam, Hauz Khas
-  why: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open kitchen. Five Time Out stars on 23 October. About INR 3,000 for two, no alcohol.
-  catch: The bar licence was still pending when Time Out visited. Closed Mondays.
+  why: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open kitchen. Five Time Out stars on 23 October. About INR 3,000 for two, no alcohol. Read that again.
+  catch: The bar licence was still pending when Time Out visited. Paperwork, not cooking. Closed Mondays.
   paid: false
 - type: item
   name: Goonj, Indiranagar
   why: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal Bukhara, Bhutte Ka Kees chaat, cocktails filed under Nostalgia and Colour. About INR 2,700 for two.
-  catch: "Fourth floor, and the kitchen goes dark from 3:30 to 6:30pm."
+  catch: "Fourth floor, and the kitchen goes dark from 3:30 to 6:30pm. Plan the lift and the lunch."
   paid: false
   image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-6.jpg
 - type: item
   name: Bloody Dangerous, Assagao
   why: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500 entry lights, cocktails by Arnold Hou, plates by Priyanka Sardessai and chef Yong. INR 4,000 for two.
-  catch: Doors at 9pm, music climbs as the night does, parking is limited. Time Out, 2 November.
+  catch: Doors at 9pm, the music climbs as the night does, parking is limited. Time Out said so on 2 November.
   paid: false
 - type: verdict
-  text: "The read: Nam. Time Out's five stars, INR 3,000 for two, closed Mondays, and the one catch is a licence that is paperwork, not cooking. Book Trapdoor the week someone prints the price."
+  text: "The read: Nam. Five Time Out stars, INR 3,000 for two, closed Mondays, and the one catch is a licence, which is paperwork, not cooking. Trapdoor gets our booking the week someone prints the price. Who prints it first?"
 - type: close
 caption: |
-  Five openings, five catches, zero press release adjectives.
+  Five new tables. We read every listing. One has a phone booth, one has no bar licence yet.
   Trapdoor hides behind a Versova phone booth, INR 2,000 for two per Curlytales. La Panthera takes the Eros building in Churchgate, evenings only. Nam in Hauz Khas got five Time Out stars on 23 October with the bar licence still pending. Goonj sits four floors up on 100 Feet Road, Indiranagar. Bloody Dangerous in Assagao runs 3,500 lights and INR 4,000 for two, per Time Out, 2 November.
-  Our pick is Nam. The rest are worth the drive once someone prints a price.
-  Send this to the friend who plans Saturday at 6pm on Saturday.
+  Five rooms, five catches, and not one adjective from a press release. We checked.
+  Our pick is Nam. The rest are worth the drive the week someone prints a price.
+  Forward this to the friend who plans Saturday at 6pm on Saturday.
   #hospitality #indianbrands #newrestaurants #mumbai #delhi #bangalore #goa
 linkedin: |
-  Five new openings across Mumbai, Delhi, Bengaluru and Goa, each with the honest downside.
+  Five new openings across Mumbai, Delhi, Bengaluru and Goa, each with the honest downside the release left out.
   Trapdoor, Versova: a six-course cocktail omakase behind a telephone booth, code on booking, no published price for the omakase itself.
   La Panthera Eros, Churchgate: 80 seats in the 1930s Eros building, about INR 3,500 for two, evenings only.
   Nam, Hauz Khas: five stars from Time Out Delhi on 23 October, about INR 3,000 for two, bar licence pending at the time of review.
   Goonj, Indiranagar: 75 seats on the fourth floor of 100 Feet Road, about INR 2,700 for two.
   Bloody Dangerous, Assagao: 42 seats, 3,500 lights, INR 4,000 for two per Time Out, doors at 9pm.
-  Our booking goes to Nam. Full edit with addresses on the site.
+  Our booking goes to Nam, because the only catch on that list is paperwork. Full edit with addresses on the site.
   #hospitality #restaurants #india
 alt: |
-  Cover slide on hospitality yellow with the SWEET pill, the headline Five new tables, one phone booth, one pending bar licence, the words five tables set huge, and the Mask360 masthead.
-  Item slide for Trapdoor, Versova: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director. The catch: No walk-ins. You get the booth code after booking, and.
-  Receipt slide, an image from restaurantindia.in
-  Receipt slide, an image from curlytales.com
+  Cover slide on hospitality yellow with the SWEET pill, the headline Five new tables. One phone booth. One pending bar licence., the words five tables set huge, and the Mask360 masthead.
+  Item slide for Trapdoor, Versova: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director. The catch: No walk-ins. The booth code arrives after booking, and nobody.
+  Receipt slide, Trapdoor Launches in Versova With Six-Course Cocktail Pairing Experience. Restaurant India on Trapdoor's launch, team and format, 30 September 2026 (Image: restaurantindia.in, Restaurant India on Trapdoor's launch, team and format, 30 September 2026).
+  Receipt slide, 11 New Mumbai Restaurants In October You. Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026 (Image: curlytales.com, Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026).
   Item slide for La Panthera Eros, Churchgate: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the. The catch: Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner..
   Item slide for Nam, Hauz Khas: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open. The catch: The bar licence was still pending when Time Out visited..
   Item slide for Goonj, Indiranagar: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal. The catch: Fourth floor, and the kitchen goes dark from 3:30 to.
-  Item slide for Bloody Dangerous, Assagao: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500. The catch: Doors at 9pm, music climbs as the night does, parking.
-  Verdict slide headed The read: Nam. Time Out's five stars, INR 3,000 for two, closed Mondays, and the one catch is.
-  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
+  Item slide for Bloody Dangerous, Assagao: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500. The catch: Doors at 9pm, the music climbs as the night does,.
+  Verdict slide headed The read: Nam. Five Time Out stars, INR 3,000 for two, closed Mondays, and the one catch is.
+  Black close slide reading Forward it to the group. XO, Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
-Five rooms from the roundups since mid September, one per city, with the price the listings print, which is the cost for two because almost nobody prints a menu, and the catch nobody puts in the release.
+Five rooms from the roundups since mid September, one per city, with the price the listings print, which is the cost for two because almost nobody prints a menu, and the catch nobody puts in the release. We read all of it so you can go straight to the booking.
 
 ## Trapdoor, Versova
 
-The entrance is a retro telephone booth at Bungalow 173 and 174, Aram Nagar Part 2. You book, a code arrives, you punch it in and the booth opens on a dark-wood, red-lit room. Founders Gaurav Sharma and Sangeeta Kapura, managing partner Arka Mukherjee, director of mixology Shobith Salian and chef Gaurav Gidwani built the place around a six-course cocktail omakase, [per Restaurant India, 30 September](https://www.restaurantindia.in/news/trapdoor-launches-in-versova-with-six-course-cocktail-pairing-experience.n17347): centrifugal infusions, redistillation, an oyster martini, a secret box that opens on each drink and its raw ingredients. [Curlytales](https://curlytales.com/india/food/new-mumbai-restaurants-in-october-youll-want-to-tell-your-friends-about/amp/) lists it at about INR 2,000 for two, 6pm to 1:30am.
+The entrance is a retro telephone booth at Bungalow 173 and 174, Aram Nagar Part 2. You book, a code arrives, you punch it in and the booth opens on a dark-wood, red-lit room. Yes, really. Founders Gaurav Sharma and Sangeeta Kapura, managing partner Arka Mukherjee, director of mixology Shobith Salian and chef Gaurav Gidwani built the place around a six-course cocktail omakase, [per Restaurant India, 30 September](https://www.restaurantindia.in/news/trapdoor-launches-in-versova-with-six-course-cocktail-pairing-experience.n17347): centrifugal infusions, redistillation, an oyster martini, a secret box that opens on each drink and its raw ingredients. [Curlytales](https://curlytales.com/india/food/new-mumbai-restaurants-in-october-youll-want-to-tell-your-friends-about/amp/) lists it at about INR 2,000 for two, 6pm to 1:30am.
 
-The catch: no walk-ins, a code after booking, and nobody has published what six courses of omakase actually cost.
+The catch: no walk-ins, a code after booking, and nobody has published what six courses of omakase actually cost. We looked twice.
 
 ## La Panthera Eros, Churchgate
 
 Chef Manuel Olveira and founder Mickee Tuljapurkar's second Mumbai room, 80 seats on the first floor of the 1930s Eros building on Maharshi Karve Road. [Restaurant India, 17 September](https://www.restaurantindia.in/news/la-panthera-opens-second-mumbai-outpost-at-eros-building-in-churchgate.n17259): pintxos and tapas, 48-hour fermented pizzas, pastas, mains, an Aperitivo Hour from 5:30 to 7pm and a late menu of Spanish bar bites. [The Nod](https://thenodmag.com/content/india-new-restaurants-and-bars-october-2026) calls it a south Mumbai remix of the BKC original. Curlytales puts it at about INR 3,500 for two.
 
-The catch: evenings only. Every listing starts after 5:30pm and none mentions lunch.
+The catch: evenings only. Every listing starts after 5:30pm and not one mentions lunch, which in Churchgate is a decision.
 
 ## Nam, Hauz Khas
 
 Pratinav Singh, who co-founded NIKO in Gurugram, runs 50 seats and an 18-foot bar facing the open kitchen at E-22, Hauz Khas Main Market. [Time Out Delhi](https://www.timeout.com/delhi/restaurants/nam) gave it five stars on 23 October: money bags of wild mushroom and cream cheese under red curry foam, prawn donuts that look like medu vadas, crab egg fried rice with mala chilli prawns, a black-rice take on mango sticky rice. About INR 3,000 for two without alcohol.
 
-The catch: without alcohol is the operative phrase. The bar licence was still pending when Time Out visited. Closed Mondays.
+The catch: without alcohol is the operative phrase. The bar licence was still pending when Time Out visited. Paperwork, not cooking. Closed Mondays.
 
 ## Goonj, Indiranagar
 
 Kompany Hospitality's Shashaank Shekhar and Siddharth Kumar Gupta opened a 75-seat, 2,500 sq ft Indian food house on the fourth floor of 100 Feet Road, [per Restaurant India, 18 September](https://www.restaurantindia.in/news/goonj-opens-in-bengaluru-with-indian-cuisine-and-contemporary-cocktail-programme.n17263). R&D chef Pratik Sharma does an overnight Dal Bukhara, Indore's Bhutte Ka Kees chaat and a Kashmiri nadru yakhni; beverage head Manjunath U Gouda files the cocktails under Nostalgia and Colour. [Curlytales](https://curlytales.com/india/food/new-restaurants-in-bengaluru-this-october-for-fruit-sandos-handmade-pasta-more/) lists about INR 2,700 for two.
 
-The catch: fourth floor, and the kitchen goes dark from 3:30 to 6:30pm.
+The catch: fourth floor, and the kitchen goes dark from 3:30 to 6:30pm. Plan the lift and the lunch.
 
 ## Bloody Dangerous, Assagao
 
 Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas, the team behind Room One and Drop Dead Sexy, have built a 42-seat bar about fear: a deathbed, a beating heart in the middle of the room, a butcher's shop above the bar, and 3,500 lights down the entry tunnel. Arnold Hou's cocktails (The Jigsaw is tequila, mezcal, strawberry and tomato), small plates by Priyanka Sardessai of Larder & Folk and chef Yong of Dali & Gala. [Time Out India](https://www.timeout.com/india/restaurants/bloody-dangerous) gave it four stars on 2 November at INR 4,000 for two. 544/2, Mapusa Road, opposite Sublime Goa.
 
-The catch: doors open at 9pm, the music climbs as the night does, and parking is limited, valet or not.
+The catch: doors open at 9pm, the music climbs as the night does, and parking is limited, valet or not. A bar about fear with a parking problem is at least on theme.
 
 ## The read
 
-Nam. Five Time Out stars, INR 3,000 for two, cooking a reviewer could fault only on a gyoza, and a catch that is paperwork rather than kitchen. Trapdoor is the one we most want to try, and the one whose price we most want to see.
+Nam. Five Time Out stars, INR 3,000 for two, cooking a reviewer could fault only on a gyoza, and a catch that is paperwork rather than kitchen. Trapdoor is the one we most want to try, and the one whose price we most want to see. Who prints it first gets our Saturday.

@@ -1,6 +1,6 @@
 ---
-title: "Spotted: Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi"
-dek: Showstoppers for Luxury Prêt 2026 at Lakmé x FDCI, Taj Palace, 17 October. His first Lakmé show in nearly three and a half years.
+title: "Spotted: Sara Ali Khan, Ayushmann Khurrana, and Manish Malhotra's comeback"
+dek: Luxury Prêt showstoppers at Lakmé x FDCI, 17 October. His first Lakmé show in nearly three and a half years. A car went first.
 section: fashion
 format: spotted
 kicker: SWEET
@@ -29,10 +29,10 @@ paid: false
 partner: ""
 slides:
 - type: cover
-  title: "Spotted: Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi"
+  title: "Spotted: Sara Ali Khan, Ayushmann Khurrana, and Manish Malhotra's comeback"
 - type: tea
-  pull: Back after three and a half years.
-  text: Taj Palace, New Delhi, Saturday 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at Lakmé Fashion Week x FDCI, ends with Sara Ali Khan in a black strapless corset bodice with metallic floral embellishment, a flowing skirt and a sheer drape, and Ayushmann Khurrana in a black jacket embroidered in silver at the shoulders and lapels.
+  pull: Look who came back.
+  text: Taj Palace, 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at Lakmé Fashion Week x FDCI, ends with Sara Ali Khan in a black strapless corset bodice with metallic florals, a flowing skirt and a sheer drape, and Ayushmann Khurrana in a black jacket embroidered in silver at the shoulders and lapels. The car came first.
 - type: receipt
   kind: image
   image: assets/img/stories/spotted-sara-ali-khan-ayushmann-manish-malhotra-lakme-2026/ev-1.jpg
@@ -51,27 +51,26 @@ slides:
   source: Manish Malhotra, via Indian Retailer, 23 October 2026
 - type: close
 caption: |
-  Three and a half years off the Lakmé runway. He came back with a car and two showstoppers.
+  Arre, three and a half years off the Lakmé runway. He came back with a car and two showstoppers.
   Manish Malhotra showed Luxury Prêt 2026 at Taj Palace, New Delhi on Saturday 17 October, at Lakmé Fashion Week x FDCI, presented by Maruti Suzuki NEXA.
-  Sara Ali Khan closed in a black strapless corset bodice with metallic florals, a flowing skirt and a sheer drape. Ayushmann Khurrana wore a black jacket with silver embroidery at the shoulders and lapels.
-  The show also launched Manish Malhotra Menswear Luxe Prêt and put the house's fine jewellery on the runway. Show direction by Lubna Adams, live percussion over a Donn Bhat set.
-  Per ANI, t2online and UrbanAsian, 17 and 18 October. Photographs by PTI's Rushikesh More, Pabitra Das and FS Media Pro.
-  Send this to the person who says fashion week is only for the front row.
+  Sara Ali Khan closed in a black strapless corset bodice with metallic florals, a flowing skirt and a sheer drape. Ayushmann Khurrana wore a black jacket with silver embroidery at the shoulders and lapels. We read every caption so you could skip to the clothes.
+  The show also launched Manish Malhotra Menswear Luxe Prêt and put the house's fine jewellery on the runway. Show direction by Lubna Adams, live percussion over a Donn Bhat set. Per ANI, t2online and UrbanAsian, 17 and 18 October. Photographs by PTI's Rushikesh More, Pabitra Das and FS Media Pro, and they earned the credit.
+  Forward this to the person who says fashion week is only for the front row.
   #fashion #indianbrands #manishmalhotra #lakmefashionweek #saraalikhan #ayushmannkhurrana #fdci
 linkedin: |
   Manish Malhotra returned to Lakmé Fashion Week in partnership with FDCI on 17 October at Taj Palace, New Delhi, after nearly three and a half years away from the platform.
   Luxury Prêt 2026, presented by Maruti Suzuki NEXA, closed with Sara Ali Khan and Ayushmann Khurrana as showstoppers and introduced Manish Malhotra Menswear Luxe Prêt alongside the house's fine jewellery and accessories line.
   Show direction by Lubna Adams, music by Donn Bhat with live percussion. Wire photography by PTI's Rushikesh More, runway images by FS Media Pro for FDCI x Lakmé Fashion Week.
-  Credit where it is due. The designer, the show director and the photographers are named here because that is how this industry keeps score.
   Sources named in the story. ANI via Republic World, t2online, UrbanAsian and Indian Retailer, 17 to 23 October 2026.
+  Credit where it is due. The designer, the show director and the photographers are named here because that is how this industry keeps score, and we keep it.
   #fashion #lakmefashionweek #manishmalhotra
 alt: |
-  Cover slide on fashion violet with the SWEET pill, the headline Spotted: Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi, the words Spotted set huge, and the Mask360 masthead.
-  Tea slide with the pull line Back after three and a half years.: Taj Palace, New Delhi, Saturday 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at.
-  Receipt slide, an image from republicworld.com
-  Receipt slide, an image from aninews.in
+  Cover slide on fashion violet with the SWEET pill, the headline Spotted: Sara Ali Khan, Ayushmann Khurrana, and Manish Malhotra's comeback, the words Spotted set huge, and the Mask360 masthead.
+  Tea slide with the pull line Look who came back.: Taj Palace, 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at Lakmé Fashion Week.
+  Receipt slide, Ayushmann Khurrana, Sara Ali Khan Turn Showstoppers as Manish Malhotra Returns to Lakme Fashion Week 2026. ANI report via Republic World, the looks, Taj Palace, (Image: republicworld.com, ANI report via Republic World, the looks, Taj Palace, three and a half years, Udta Teer, 2026-10-18).
+  Receipt slide, Ayushmann Khurrana, Sara Ali Khan turn showstoppers as Manish Malhotra returns to Lakme Fashion Week 2026. ANI, showstoppers report, 2026-10-18 (Image: aninews.in, ANI, showstoppers report, 2026-10-18).
   Receipt slide quoting Luxury Prêt 2026 is about exploring a new expression of glamour, one that feels, Manish Malhotra, via Indian Retailer, 23 October 2026.
-  Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
+  Black close slide reading Forward it to the group. XO, Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---
 ## The look
 

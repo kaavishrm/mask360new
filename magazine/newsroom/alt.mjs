@@ -31,7 +31,7 @@ export function fixAlt(path, { always = false } = {}) {
   const lines = String(data.alt || '').split('\n').map((l) => l.trim()).filter(Boolean);
   if (lines.length === data.slides.length && !always) return { changed: false };
   // keep the writer's lines where they still line up by type order, regenerate the rest
-  const out = data.slides.map((s, i) => (lines.length === data.slides.length ? lines[i] : clean(altFor(s, data))));
+  const out = data.slides.map((s, i) => (lines.length === data.slides.length && !always ? lines[i] : clean(altFor(s, data))));
   data.alt = out.join('\n') + '\n';
   writeFileSync(path, stringifyFrontMatter(data, body));
   return { changed: true, lines: out.length };
