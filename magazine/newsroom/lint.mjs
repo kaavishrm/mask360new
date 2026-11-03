@@ -71,6 +71,7 @@ export function lintStory(path) {
   if (cover.startsWith('photo:') && !data.credit) E('photo cover needs a credit line');
   if (cover === 'generated' && !data.coverText) W('generated cover without coverText (the renderer will set the headline)');
 
+  if (data.clip && !existsSync(join(ROOT, 'public', String(data.clip)))) E(`clip file not found at public/${data.clip}`);
   // paid
   const paid = data.paid === true;
   if (paid) {
@@ -117,7 +118,12 @@ export function lintStory(path) {
     }
     if (s.type === 'verdict') { const w = words(s.text); if (!s.text) E(`slide ${n} (verdict): missing text`); else if (w > 45) E(`slide ${n} (verdict): ${w} words, maximum 45`); }
     if (s.type === 'receipt') {
-      if (!['quote', 'number', 'compare', 'image'].includes(s.kind)) E(`slide ${n} (receipt): kind must be quote, number, compare or image`);
+      if (!['quote', 'number', 'compare', 'image', 'frames'].includes(s.kind)) E(`slide ${n} (receipt): kind must be quote, number, compare, image or frames`);
+      if (s.kind === 'frames') {
+        const fr = Array.isArray(s.frames) ? s.frames : [];
+        if (fr.length < 2 || fr.length > 4 || !s.caption || !s.credit) E(`slide ${n} (receipt frames): needs 2 to 4 frames, caption and credit`);
+        for (const f of fr) if (!existsSync(join(ROOT, 'public', String(f)))) E(`slide ${n} (receipt frames): file not found at public/${f}`);
+      }
       if (s.kind === 'image') {
         if (!s.image || !s.caption || !s.credit) E(`slide ${n} (receipt image): needs image, caption and credit`);
         else if (!existsSync(join(ROOT, 'public', String(s.image)))) E(`slide ${n} (receipt image): file not found at public/${s.image}`);
@@ -139,7 +145,7 @@ export function lintStory(path) {
     for (const [k, v] of Object.entries(s)) if (typeof v === 'string' && /!/.test(v)) E(`slide ${n}: exclamation mark in ${k}`);
     for (const [k, v] of Object.entries(s)) if (typeof v === 'string' && EMOJI_RE.test(v)) E(`slide ${n}: emoji in ${k}`);
   });
-  const mediaReceipts = slides.filter((s) => s.type === 'receipt' && s.kind === 'image').length + (cover.startsWith('photo:') ? 1 : 0);
+  const mediaReceipts = slides.filter((s) => s.type === 'receipt' && (s.kind === 'image' || s.kind === 'frames')).length + (cover.startsWith('photo:') ? 1 : 0);
   if (slides.length && mediaReceipts === 0) E('no media receipt: every story carries at least one receipt slide of kind image (a screenshot of the post, article or release, a still from the film, the menu, the invite) or a photo cover');
   const paidItems = slides.filter((s) => s.type === 'item' && s.paid === true).length;
   if (paidItems > 2) E('more than two paid items in one story');

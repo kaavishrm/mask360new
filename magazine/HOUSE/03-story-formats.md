@@ -128,7 +128,9 @@ format: tea
 kicker: BITTER
 date: 2026-11-03
 desk: Campaigns Desk
-cover: generated            # generated | photo:assets/img/stories/slug/cover.jpg
+cover: generated            # generated (the art desk picks from the evidence) | type | photo:assets/img/stories/slug/ev-3.jpg
+film: https://www.youtube.com/watch?v=...   # the campaign film, or a search phrase starting with the brand; the collector pulls stills and a 12 second clip
+clip:                       # set by the collector when a clip was cut: assets/img/stories/slug/clip.mp4; rides as the second carousel item
 coverText: the font         # the word or number set huge on a generated cover
 credit:                     # image credit when cover is a photo
 sources:
@@ -144,8 +146,9 @@ slides:
     pull: The idea lands.
     text: ...
   - type: receipt
-    kind: quote | number | compare | image
+    kind: quote | number | compare | image | frames
     ...                     # image: image (path under public/), caption, credit, source
+    ...                     # frames: frames [4 stills], times [timestamps], caption, credit, source
   - type: verdict
     text: ...
   - type: close

@@ -7,7 +7,7 @@ The cover is photo-led, built from the story's lead media receipt; Scorecards ca
 evidence the cover is typographic on ink. Only Pillow is required.
 """
 import json, os, sys, re
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.path.join(HERE, 'fonts')
@@ -146,11 +146,33 @@ def load_photo(st, rel):
     try: return Image.open(p).convert('RGB')
     except Exception as e: print('photo failed:', e, file=sys.stderr); return None
 
+def sharpen(im):
+    return im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=55, threshold=2))
+
 def cover_crop(ph, tw, th):
+    """Fill the box. Used only when the aspect ratios are close (nothing meaningful is lost)."""
     r = max(tw / ph.width, th / ph.height)
     im = ph.resize((max(tw, int(ph.width * r) + 1), max(th, int(ph.height * r) + 1)), Image.LANCZOS)
-    l, t = (im.width - tw) // 2, max(0, (im.height - th) // 3)  # favour the upper part of the frame
-    return im.crop((l, t, l + tw, t + th))
+    l, t = (im.width - tw) // 2, max(0, (im.height - th) // 3)
+    return sharpen(im.crop((l, t, l + tw, t + th)))
+
+def fit_photo(ph, tw, th, max_up=1.25):
+    """Fit the whole photograph into the box: crop only when the aspects are within 8 percent, otherwise contain it over a
+    blurred, darkened fill of itself so creatives with words in them are never cut. Never upscale past max_up."""
+    ar_src, ar_box = ph.width / ph.height, tw / th
+    if abs(ar_src - ar_box) / ar_box <= 0.08 and ph.width >= tw * 0.8:
+        return cover_crop(ph, tw, th)
+    # background: the same image, filled, blurred and darkened
+    bg = ph.resize((max(tw, int(ph.width * max(tw / ph.width, th / ph.height)) + 1), max(th, int(ph.height * max(tw / ph.width, th / ph.height)) + 1)), Image.BILINEAR)
+    l, t = (bg.width - tw) // 2, (bg.height - th) // 2
+    bg = bg.crop((l, t, l + tw, t + th)).filter(ImageFilter.GaussianBlur(28))
+    bg = Image.blend(bg, Image.new('RGB', (tw, th), INK()), 0.55)
+    # foreground: contain, capped upscale
+    r = min(tw / ph.width, th / ph.height, max_up)
+    fw, fh = max(1, int(ph.width * r)), max(1, int(ph.height * r))
+    fg = sharpen(ph.resize((fw, fh), Image.LANCZOS)) if r != 1 else ph
+    bg.paste(fg, ((tw - fw) // 2, (th - fh) // 2))
+    return bg
 
 def top_scrim(im, height=260, strength=150):
     scrim = Image.new('L', (W, height), 0); sd = ImageDraw.Draw(scrim)
@@ -170,19 +192,18 @@ def slide_cover(s, st):
     score = str(st.get('score') or '').strip()
     im = ground(INK()); draw = ImageDraw.Draw(im)
     if ph is not None:
-        panel = 540 if score else 500
-        im.paste(cover_crop(ph, W, H - panel), (0, 0))
-        top_scrim(im)
+        panel = 600 if score else 560
+        im.paste(fit_photo(ph, W, H - panel), (0, 0))
         draw = ImageDraw.Draw(im)
         y0 = H - panel
         draw.rectangle([0, y0, W, H], fill=INK())
-        label(draw, sec['name'], PAPER())
-        pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True)
-        y = y0 + 56
+        label(draw, sec['name'], PAPER(), y=y0 + 44)
+        pill(draw, (W - SAFE, y0 + 36), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True)
+        y = y0 + 110
         if score:
-            f = font('serif', 230); draw_text(draw, (SAFE, y - 30), score, f, TEA(), -0.05 * 230)
-            draw_text(draw, (SAFE + text_width(draw, score, f, -0.05 * 230) + 18, y + 150), '/10', font('sans', 30), GREY())
-            y += 230
+            f = font('serif', 210); draw_text(draw, (SAFE, y - 30), score, f, TEA(), -0.05 * 210)
+            draw_text(draw, (SAFE + text_width(draw, score, f, -0.05 * 210) + 18, y + 136), '/10', font('sans', 30), GREY())
+            y += 210
             block(draw, (SAFE, y), title, 'serif', 56, 36, W - 2 * SAFE, 3, PAPER(), 1.04, -0.03)
         else:
             block(draw, (SAFE, y), title, 'serif', 80, 48, W - 2 * SAFE, 4, PAPER(), 1.02, -0.035)
@@ -226,14 +247,29 @@ def slide_receipt(s, st, i, n):
         box_top, box_h = SAFE + 80, 780
         ph = load_photo(st, s.get('image'))
         if ph is not None:
-            r = min(maxw / ph.width, box_h / ph.height)
-            ph = ph.resize((max(1, int(ph.width * r)), max(1, int(ph.height * r))), Image.LANCZOS)
+            r = min(maxw / ph.width, box_h / ph.height, 1.25)
+            ph = sharpen(ph.resize((max(1, int(ph.width * r)), max(1, int(ph.height * r))), Image.LANCZOS))
             x = SAFE + (maxw - ph.width) // 2
             im.paste(ph, (x, box_top)); draw.rectangle([x, box_top, x + ph.width, box_top + ph.height], outline=INK(), width=1)
             box_h = ph.height
         else:
             draw.rectangle([SAFE, box_top, W - SAFE, box_top + box_h], outline=INK(), width=1)
         y = box_top + box_h + 30
+        y = block(draw, (SAFE, y), s.get('caption', ''), 'sans', 34, 26, maxw, 4, INK(), 1.3, -0.02) + 12
+        block(draw, (SAFE, y), s.get('credit', ''), 'sans', 22, 18, maxw, 2, GREY(), 1.3, 0)
+    elif kind == 'frames':
+        files = s.get('frames') if isinstance(s.get('frames'), list) else [x.strip() for x in str(s.get('frames', '')).split(',') if x.strip()]
+        times = s.get('times') if isinstance(s.get('times'), list) else [x.strip() for x in str(s.get('times', '')).split(',') if x.strip()]
+        gap = 16; cw = (maxw - gap) // 2; chh = int(cw * 9 / 16)
+        y = SAFE + 80
+        for k, rel in enumerate(files[:4]):
+            ph = load_photo(st, rel)
+            x = SAFE + (k % 2) * (cw + gap); yy = y + (k // 2) * (chh + gap)
+            if ph is not None: im.paste(fit_photo(ph, cw, chh), (x, yy))
+            else: draw.rectangle([x, yy, x + cw, yy + chh], fill=hexrgb('#1a1917'))
+            draw.rectangle([x, yy, x + cw, yy + chh], outline=INK(), width=1)
+            if k < len(times): draw_text(draw, (x + 14, yy + chh - 40), str(times[k]), font('sansm', 22), PAPER(), 0.04 * 22)
+        y = y + 2 * chh + gap + 30
         y = block(draw, (SAFE, y), s.get('caption', ''), 'sans', 34, 26, maxw, 4, INK(), 1.3, -0.02) + 12
         block(draw, (SAFE, y), s.get('credit', ''), 'sans', 22, 18, maxw, 2, GREY(), 1.3, 0)
     elif kind == 'number':
@@ -292,7 +328,7 @@ def slide_item(s, st, i, n, idx):
     draw_text(draw, (SAFE, y - 10), num, font('serif', 96), TEA(), -0.04 * 96)
     y = SAFE + 140
     if ph is not None and box_h:
-        im.paste(cover_crop(ph, maxw, box_h), (SAFE, y)); draw.rectangle([SAFE, y, W - SAFE, y + box_h], outline=INK(), width=1)
+        im.paste(fit_photo(ph, maxw, box_h), (SAFE, y)); draw.rectangle([SAFE, y, W - SAFE, y + box_h], outline=INK(), width=1)
         y += box_h + 40
     y = paint(draw, (SAFE, y), nm[0], INK()) + 18
     y = paint(draw, (SAFE, y), wm[0], INK()) + 22
@@ -319,7 +355,7 @@ def tile(st, size, kind):
     tw, th = size
     sec = st['section']
     ph = cover_photo_for(st)
-    if ph is not None: return cover_crop(ph, tw, th)
+    if ph is not None: return fit_photo(ph, tw, th)
     im = Image.new('RGB', (tw, th), INK()); draw = ImageDraw.Draw(im)
     pad = int(tw * 0.066)
     ms = int(min(tw, th) * 0.05)
@@ -337,7 +373,7 @@ def og_image(st):
     textw = 1200 - 2 * 56
     ph = cover_photo_for(st)
     if ph is not None:
-        im.paste(cover_crop(ph, 504, 630), (696, 0)); textw = 696 - 56 - 40
+        im.paste(fit_photo(ph, 504, 630), (696, 0)); textw = 696 - 56 - 40
     draw_text(draw, (56, 48), sec['name'].upper(), font('sansm', 20), PAPER(), 0.08 * 20)
     pill(draw, (56 + text_width(draw, sec['name'].upper(), font('sansm', 20), 0.08 * 20) + 24, 40), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], size=16, pad=(14, 8))
     block(draw, (56, 110), st['title'], 'serif', 96, 48, textw, 4, PAPER(), 1.0, -0.03)
@@ -361,15 +397,15 @@ def main():
         elif t == 'item': item_index += 1; im = slide_item(s, st, i, n, item_index)
         elif t == 'close': im = slide_close(s, st, i, n)
         else: raise SystemExit(f'unknown slide type {t}')
-        im.save(os.path.join(out, f'{i:02d}.jpg'), 'JPEG', quality=90, optimize=True)
+        im.save(os.path.join(out, f'{i:02d}.jpg'), 'JPEG', quality=93, optimize=True, subsampling=0)
         images.append(im)
     cover = images[0]
-    cover.save(os.path.join(out, 'cover.webp'), 'WEBP', quality=84)
+    cover.save(os.path.join(out, 'cover.webp'), 'WEBP', quality=88)
     card = tile(st, (864, 1080), 'card')
-    card.save(os.path.join(out, 'card.webp'), 'WEBP', quality=82)
+    card.save(os.path.join(out, 'card.webp'), 'WEBP', quality=86)
     card.resize((216, 270), Image.LANCZOS).save(os.path.join(out, 'thumb.webp'), 'WEBP', quality=80)
-    tile(st, (1920, 1080), 'hero').save(os.path.join(out, 'hero.webp'), 'WEBP', quality=82)
-    og_image(st).save(os.path.join(out, 'og.jpg'), 'JPEG', quality=86)
+    tile(st, (1920, 1080), 'hero').save(os.path.join(out, 'hero.webp'), 'WEBP', quality=86)
+    og_image(st).save(os.path.join(out, 'og.jpg'), 'JPEG', quality=90)
     pdf = [im.convert('RGB') for im in images]
     pdf[0].save(os.path.join(out, 'carousel.pdf'), save_all=True, append_images=pdf[1:], resolution=144)
     print(json.dumps({'slug': st['slug'], 'slides': n, 'outDir': out}))

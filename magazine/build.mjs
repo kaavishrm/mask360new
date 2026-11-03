@@ -43,7 +43,7 @@ function loadStories() {
       date: String(data.date), time: data.time ? String(data.time) : '09:00', dateShort: fmtShort(String(data.date)), dateLong: fmtLong(String(data.date)),
       read, bodyWords, tags: Array.isArray(data.tags) ? data.tags.map(String) : [], paid: data.paid === true, partner: data.partner || '',
       card: `/carousels/${slug}/card.webp`, thumb: `/carousels/${slug}/thumb.webp`, cover: `/carousels/${slug}/cover.webp`, hero: `/carousels/${slug}/hero.webp`, og: `/carousels/${slug}/og.jpg`,
-      slides: data.slides, sources: Array.isArray(data.sources) ? data.sources.map(String) : [], credit: data.credit || '', post: data.post || null, corrections: data.corrections || null, sponsor: data.sponsor || '',
+      slides: data.slides, sources: Array.isArray(data.sources) ? data.sources.map(String) : [], credit: data.credit || '', post: data.post || null, corrections: data.corrections || null, sponsor: data.sponsor || '', clip: data.clip || '',
     });
   }
   if (failures.length) {
@@ -210,7 +210,7 @@ function buildStories(stories) {
   stories.forEach((s, i) => {
     const sec = SECTIONS[s.section];
     const latest = stories.filter((x) => x.slug !== s.slug).slice(0, 5);
-    const slidesHtml = s.slides.map((sl, k) => `<img src="${B(`/carousels/${s.slug}/${String(k + 1).padStart(2, '0')}.jpg`)}" alt="${esc(String(s.data.alt || '').split('\n').filter(Boolean)[k] || '')}" width="1080" height="1350" loading="lazy" decoding="async">`).join('');
+    const slidesHtml = s.slides.map((sl, k) => `<img src="${B(`/carousels/${s.slug}/${String(k + 1).padStart(2, '0')}.jpg`)}" alt="${esc(String(s.data.alt || '').split('\n').filter(Boolean)[k] || '')}" width="1080" height="1350" loading="lazy" decoding="async">`).join('') + (s.clip ? `<video src="${B('/' + s.clip)}" width="1080" height="1350" controls muted playsinline preload="metadata" poster="${B(s.cover)}" aria-label="A 12 second clip from the film"></video>` : '');
     const paidBox = s.paid ? `<div class="paidbox">Paid partnership with ${esc(s.partner)}. This story is sponsored. It is labelled on every slide and in the caption, per ASCI guidelines. The kicker and the format are not for sale.</div>` : s.sponsor ? `<div class="paidbox">Presented by ${esc(s.sponsor)}. The sponsor bought the position on the cover and the close slide, labelled per ASCI guidelines. The ${esc(s.formatName)} itself, its content and its verdict are editorial and were not shown to the sponsor before publication.</div>` : '';
     const corr = s.corrections ? `<p class="corr">Correction: ${esc(s.corrections)}</p>` : '';
     const ig = s.post && s.post.ig ? `<a href="${esc(s.post.ig)}" rel="noopener">Open on Instagram</a>` : '';

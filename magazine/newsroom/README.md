@@ -17,7 +17,7 @@ An office that runs itself. The desks and the day are described in `../HOUSE/07-
 | 3 | Add `IG_USER_ID` and `IG_ACCESS_TOKEN` (a Meta Business Suite System User token with `instagram_basic`, `instagram_content_publish`, `pages_read_engagement`; the Instagram account must be Business or Creator and linked to a Facebook Page) | GitHub secrets | Instagram carousels post themselves |
 | 4 | Add `LINKEDIN_ACCESS_TOKEN` (Community Management API, `w_organization_social`) and `LINKEDIN_AUTHOR_URN` (`urn:li:organization:<id>`) | GitHub secrets | LinkedIn document posts post themselves |
 
-Optional: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` secrets make the engine deploy directly after each run instead of waiting for the host's git build. `NEWSROOM_MODEL` overrides the model (default `claude-opus-5-5`).
+Optional: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` secrets make the engine deploy directly after each run instead of waiting for the host's git build. `NEWSROOM_MODEL` overrides the model (default `claude-opus-5-5`). `YT_COOKIES` (a YouTube cookies.txt export) lets the collector download campaign films for stills and 12 second clips; without it YouTube usually refuses datacenter downloads and the collector falls back to the film's thumbnail.
 
 Until 3 and 4 exist, every story's ready-to-post package (caption, slide URLs, PDF path, LinkedIn text) is written to `outbox/<slug>.md`.
 
@@ -36,7 +36,7 @@ cd magazine && node newsroom/post.mjs content/stories/2026/11/slug.md           
 
 - `run.mjs` the editorial day; `llm.mjs` the Claude client (web search for research, structured outputs for drafts, prompt caching on the house docs, server-side refusal fallbacks); `schemas.mjs` the desk output shapes; `prompts/` the desk briefs (the same briefs the agents in `.claude/agents/` carry).
 - `lint.mjs` every machine-checkable house rule; `yaml.mjs` the front matter parser; `md.mjs` the web body renderer; `story-json.mjs` the renderer payload.
-- `evidence.mjs` the media receipt collector: the page's own image, YouTube stills and a Playwright screenshot for every source URL, into `public/assets/img/stories/<slug>/` with `evidence.json`; `attach-evidence.mjs` puts the best two on receipt slides. No story passes lint without a media receipt.
+- `evidence.mjs` the media receipt collector: the page's own image and the largest image the page declares, embedded or named films (`film:`) as stills and a clip via yt-dlp and ffmpeg, and a 2x Playwright screenshot for every source URL, into `public/assets/img/stories/<slug>/` with `evidence.json`; `attach-evidence.mjs` puts the filmstrip and the best receipts on slides, matches Edit and Moves items to their images, and sets `clip:`. No story passes lint without a media receipt.
 - `render.py` the carousel, card, hero, OG and PDF renderer (Pillow only); `fonts/` the TTFs it uses.
 - `sources.mjs` the feed list the scout reads first (failures are skipped; web search is the primary path).
 - `post.mjs` Instagram Graph API carousel publishing and LinkedIn document posts; `posted.json` the log; `outbox/` the queue.

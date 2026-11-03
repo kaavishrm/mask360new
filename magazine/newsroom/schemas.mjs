@@ -29,7 +29,7 @@ export const Story = z.object({
   format: z.enum(['tea', 'scorecard', 'guestlist', 'moves', 'edit', 'spotted', 'branddrop', 'deeppour', 'hottake', 'receipts']),
   kicker: z.enum(['SPILLED', 'BREWING', 'SWEET', 'BITTER', 'PAID']),
   desk: S, coverText: S, score: N, sources: z.array(S), tags: z.array(S),
-  paid: z.boolean(), partner: N, sponsor: N, slides: z.array(Slide), caption: S, linkedin: S, alt: z.array(S), body: S,
+  paid: z.boolean(), partner: N, sponsor: N, film: N, slides: z.array(Slide), caption: S, linkedin: S, alt: z.array(S), body: S,
   askedForComment: N,
 });
 

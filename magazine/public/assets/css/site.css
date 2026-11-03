@@ -182,7 +182,7 @@ button,input{font:inherit;color:inherit}
 .swipe .head a{font-size:14px;font-weight:500;border-bottom:1px solid #000}
 .swipe .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:8px}
 .swipe .track::-webkit-scrollbar{display:none}
-.swipe .track img{width:300px;flex:none;scroll-snap-align:start;background:var(--field)}
+.swipe .track img,.swipe .track video{width:300px;flex:none;scroll-snap-align:start;background:var(--field)}
 .sources{margin-top:48px;border-top:1px solid var(--ink);padding-top:20px}
 .sources h2{font-family:var(--serif);font-weight:400;font-size:32px;letter-spacing:-.03em;margin-bottom:12px}
 .sources li{font-size:14px;letter-spacing:-.01em;margin-bottom:8px;word-break:break-word}

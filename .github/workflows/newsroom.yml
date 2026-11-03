@@ -37,10 +37,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pillow
+      - run: pip install pillow yt-dlp
       - run: npm ci --no-audit --no-fund
         working-directory: magazine/newsroom
       - run: npx playwright install --with-deps chromium
+      - name: YouTube cookies (optional, lets the collector cut film stills and clips)
+        if: ${{ secrets.YT_COOKIES != '' }}
+        run: printf '%s' "${{ secrets.YT_COOKIES }}" > /tmp/yt-cookies.txt && echo "YT_COOKIES_FILE=/tmp/yt-cookies.txt" >> $GITHUB_ENV
         working-directory: magazine/newsroom
       - name: Run the editorial day
         env:

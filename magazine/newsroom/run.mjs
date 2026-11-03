@@ -78,6 +78,7 @@ function toFile(st, legal) {
   };
   if (st.score) data.score = st.score;
   if (st.sponsor) data.sponsor = st.sponsor;
+  if (st.film) data.film = st.film;
   if (legal) { data.legal = legal.verdict; data.legalNote = legal.legalNote; }
   data.slides = st.slides.map(slideDefaults);
   data.caption = st.caption.trim() + '\n';

@@ -30,13 +30,20 @@ async function graph(path, params) {
   return j;
 }
 
-export async function postInstagram({ slug, caption, slideUrls, alt }) {
+export async function postInstagram({ slug, caption, slideUrls, alt, clipUrl }) {
   const { IG_USER_ID: uid, IG_ACCESS_TOKEN: tok } = process.env;
   if (!uid || !tok) return null;
   const children = [];
   for (const [i, url] of slideUrls.entries()) {
     const j = await graph(`${uid}/media`, { image_url: url, is_carousel_item: 'true', access_token: tok, ...(alt[i] ? { alt_text: alt[i] } : {}) });
     children.push(j.id);
+    // the film clip rides as the second item, after the cover
+    if (i === 0 && clipUrl && children.length < 10) {
+      const v = await graph(`${uid}/media`, { media_type: 'VIDEO', video_url: clipUrl, is_carousel_item: 'true', access_token: tok });
+      for (let k = 0; k < 20; k++) { const st = await fetch(`${GRAPH}/${v.id}?fields=status_code&access_token=${tok}`).then((r) => r.json()); if (st.status_code === 'FINISHED') break; if (st.status_code === 'ERROR') throw new Error('Instagram video item error'); await sleep(6000); }
+      children.push(v.id);
+    }
+    if (children.length >= 10) break;
   }
   const c = await graph(`${uid}/media`, { media_type: 'CAROUSEL', children: children.join(','), caption, access_token: tok });
   // the container needs a moment to be ready
@@ -73,7 +80,8 @@ export async function postStory(path) {
   if (log[slug]?.ig && log[slug]?.li) return { slug, ig: log[slug].ig, li: log[slug].li };
   const base = site.url.replace(/\/$/, '');
   const n = data.slides.length;
-  const slideUrls = Array.from({ length: n }, (_, i) => `${base}/carousels/${slug}/${String(i + 1).padStart(2, '0')}.jpg`);
+  const slideUrls = Array.from({ length: Math.min(n, data.clip ? 9 : 10) }, (_, i) => `${base}/carousels/${slug}/${String(i + 1).padStart(2, '0')}.jpg`);
+  const clipUrl = data.clip ? `${base}/${data.clip}` : null;
   const storyUrl = `${base}/${data.section}/${slug}/`;
   const alt = String(data.alt || '').split('\n').filter(Boolean);
   const caption = String(data.caption || '').trim();
@@ -89,7 +97,7 @@ export async function postStory(path) {
   }
   if (!(await liveUrl(slideUrls[0]))) throw new Error(`slides not live yet at ${slideUrls[0]}`);
   const rec = log[slug] || {};
-  if (haveIg && !rec.ig) { const r = await postInstagram({ slug, caption, slideUrls, alt }); if (r) { rec.ig = r.id; rec.igUrl = r.url; out.ig = r.id; } }
+  if (haveIg && !rec.ig) { const r = await postInstagram({ slug, caption, slideUrls, alt, clipUrl }); if (r) { rec.ig = r.id; rec.igUrl = r.url; out.ig = r.id; } }
   if (haveLi && !rec.li) { try { const r = await postLinkedIn({ text: li, pdfPath: pdf, title: data.title }); if (r) { rec.li = r.id; rec.liUrl = r.url; out.li = r.id; } } catch (e) { rec.liError = e.message; out.liError = e.message; } }
   rec.at = new Date().toISOString();
   log[slug] = rec; savePosted(log);
