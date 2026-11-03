@@ -72,7 +72,7 @@ Use at most three per story. Never the same three two days running.
 
 ## Captions (Instagram, LinkedIn)
 
-- First line is the whisper: a hook under 100 characters that works before "more". The aunty leaning in. Not the headline; the sharper cousin of it. "Beta, Starbucks India changed agencies. The brief says tier two, not Bandra."
+- First line is the whisper: a hook under 100 characters that works before "more". The aunty leaning in. Not the headline; the sharper cousin of it. "Starbucks India changed agencies. The brief says tier two, not Bandra. We checked." The Hinglish budget counts the caption too: if a pull line already spent it ("Tier two, beta"), the hook stays in English.
 - Second block: the story in 3 to 5 lines, the facts, one line of take, the narrator present ("we read the release twice").
 - Third block: the forward line, a sentence, not a command: "Forward this to the person who approved the font." "Send this to whoever still thinks coffee is a metro story."
 - Sources named in words ("per the ASCI order of 29 October") because links do not click in IG captions. Web link in bio, story link in the LinkedIn post body.
@@ -109,7 +109,7 @@ The same story, the Starbucks India account move of 2 November 2026, in the old 
 | Tea slide | Tata Starbucks named TBWA\Lintas, part of Omnicom Advertising India, its creative agency of record on 2 November after a multi-agency pitch. The mandate: brand campaigns, social media, digital activations and consumer engagement. No incumbent is named in the release. | Tata Starbucks named TBWA\Lintas, part of Omnicom Advertising India, creative agency of record on 2 November after a multi-agency pitch. Brand campaigns, social, digital activations, consumer engagement, all of it. No incumbent is named in the release. Which is a choice, and we noticed. |
 | Pull line | Lintas, ten months old again. | Remember when Lintas was dead? |
 | Verdict | The read: Starbucks India bought a pitch-winning agency with a revived name and a brief about the cities where it is still new. Watch whether the first campaign runs in Indore before it runs in Mumbai. That is the test. | The read: Starbucks India bought a revived name and a brief about cities where it is still new. If the first campaign runs in Indore before Mumbai, the brief was real. If it opens with a celebrity on Linking Road, it was a paragraph. |
-| Caption hook | Starbucks India has a new agency, and the brief says tier two. | Beta, Starbucks India changed agencies. The brief says tier two, not Bandra. |
+| Caption hook | Starbucks India has a new agency, and the brief says tier two. | Starbucks India changed agencies. The brief says tier two, not Bandra. We checked. |
 | Forward line | Send this to the person who still thinks coffee is a metro story. | Forward this to whoever still thinks coffee is a metro story. |
 | Close | Steeped by Mask360. | Forward it to the group. XO, Mask360 |
 
