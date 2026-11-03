@@ -6,9 +6,9 @@ format: tea
 kicker: SPILLED
 date: 2026-11-02
 desk: People Desk
-cover: generated
+cover: photo:assets/img/stories/starbucks-india-hires-tbwa-lintas-to-sell-coffee-past-the-metros/ev-6.jpg
 coverText: 505 stores
-credit: ""
+credit: "Image: afaqs.com, the Tata Starbucks campaign still"
 sources:
 - "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
 - "https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205 (afaqs, TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas bags Starbucks India mandate with quotes, 2 November 2026)"

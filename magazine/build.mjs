@@ -164,7 +164,7 @@ ${list.map((s, i) => `<div class="copy"${i ? ' hidden' : ''}><div><div class="la
 </div><div class="arrows"><button type="button" data-dir="prev" aria-label="Previous">${ICON_ARROW('prev')}</button><button type="button" data-dir="next" aria-label="Next">${ICON_ARROW('next')}</button></div></div>`;
 }
 function promoBand() {
-  return `<section class="promo-wrap">${rowHead(promo.kind === 'house' ? 'This space is for sale' : 'Presented by', null)}<a class="promo" href="${/^https?:/.test(promo.href) ? promo.href : B(promo.href)}"><div class="big">${esc(promo.headline)}</div><div class="copy"><div class="eyebrow">${esc(promo.eyebrow)}</div>${promo.lines.map((l) => `<div>${esc(l)}</div>`).join('')}<span class="cta">${esc(promo.cta)}</span></div><div class="tag">${esc(promo.tag)}</div><div class="bar" aria-hidden="true"></div></a></section>`;
+  return `<section class="promo-wrap">${rowHead(promo.kind === 'house' ? 'This space is for sale' : 'Presented by', null)}<a class="promo" href="${/^https?:/.test(promo.href) ? promo.href : B(promo.href)}"><div class="big">${esc(promo.headline)}</div><div class="copy"><div class="eyebrow">${esc(promo.eyebrow)}</div>${promo.lines.map((l) => `<div>${esc(l)}</div>`).join('')}<span class="cta">${esc(promo.cta)}</span></div><div class="tag">${esc(promo.tag)}</div></a></section>`;
 }
 function watchBand() {
   if (!watch.items.length) return '';
@@ -178,9 +178,8 @@ function watchlistBand(stories) {
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 9);
   if (top.length < 3) return '';
   const display = (k) => { const raw = names[k] || k; const acr = new Set(['fdci', 'wpp', 'asci', 'ihcl', 'nexa', 'vml', 'lfw', 'aaai', 'orra', 'tbwa', 'bbdo', 'ddb', 'ipg', 'hul', 'itc', 'nmacc', 'ccpa', 'rupay']); if (acr.has(k)) return k === 'rupay' ? 'RuPay' : k.toUpperCase(); return /[A-Z]/.test(raw.slice(1)) ? raw : titleCase(raw); };
-  const who = (k, n) => { const label = display(k); const ini = label.split(/[\s\\]+/).map((w) => w[0]).slice(0, 2).join('').toUpperCase(); return `<span class="who"><span class="mono">${esc(ini)}</span>${esc(label)}<span class="n">${n}</span></span>`; };
-  const rows = [top.slice(0, 3), top.slice(3, 6), top.slice(6, 9)].filter((r) => r.length);
-  return `<section>${rowHead('On the watchlist', { href: '/search/', label: 'Explore all' })}<div class="watchlist">${rows.map((r) => `<div class="line">${r.map(([t, n]) => who(t, n)).join('')}${r.map(([t, n]) => who(t, n)).join('')}</div>`).join('')}</div></section>`;
+  const who = (k, n) => `<span class="who">${esc(display(k))}<span class="n">${n} ${n === 1 ? 'story' : 'stories'}</span></span>`;
+  return `<section>${rowHead('On the watchlist', { href: '/search/', label: 'Explore all' })}<div class="watchlist">${top.map(([t, n]) => who(t, n)).join('')}</div></section>`;
 }
 
 // ---------- pages ----------
@@ -267,9 +266,9 @@ function brandAssets() {
   if (!existsSync(join(dir, 'og.jpg'))) {
     try { execFileSync('python3', ['-I', '-c', `
 from PIL import Image, ImageDraw, ImageFont
-im=Image.new('RGB',(1200,630),(255,51,50)); d=ImageDraw.Draw(im)
-f=ImageFont.truetype('${join(ROOT, 'newsroom', 'fonts', 'InstrumentSerif-Regular.ttf')}',300); d.text((80,120),'Mask360',font=f,fill=(255,255,255))
-f2=ImageFont.truetype('${join(ROOT, 'newsroom', 'fonts', 'InstrumentSerif-Regular.ttf')}',56); d.text((88,470),'Three. Six. Tea.',font=f2,fill=(255,255,255))
+im=Image.new('RGB',(1200,630),(14,13,11)); d=ImageDraw.Draw(im)
+f=ImageFont.truetype('${join(ROOT, 'newsroom', 'fonts', 'InstrumentSerif-Regular.ttf')}',300); d.text((80,120),'Mask360',font=f,fill=(243,239,231))
+f2=ImageFont.truetype('${join(ROOT, 'newsroom', 'fonts', 'InstrumentSerif-Regular.ttf')}',56); d.text((88,470),'Three. Six. Tea.',font=f2,fill=(180,83,42))
 im.save('${join(dir, 'og.jpg')}','JPEG',quality=88)`]); } catch (e) { console.warn('og.jpg not generated:', e.message); }
   }
 }

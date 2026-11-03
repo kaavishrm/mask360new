@@ -29,23 +29,24 @@ Mobile scale: masthead 96px, nav 26px, section head 40px, card title 28px, artic
 
 ## Colour
 
+Colour is a label, never a ground. Grounds are paper and ink. The photograph is the colour.
+
 | Token | Hex | Use |
 |---|---|---|
-| ink | #000000 | text, rules, masthead |
-| white | #FFFFFF | page ground |
-| grey | #808080 | tagline, secondary meta |
-| line | #000000 at 100 percent, 1px | the hairlines above and below nav and under section heads |
-| field | #EAEAEA | input fields, image placeholders |
-| campaigns | #FF3332 | section colour, footer ground |
-| events | #FF00B7 | section colour |
-| hospitality | #F9C728 | section colour, watchlist band |
-| fashion | #6E2CF4 | section colour |
-| people | #3FAD57 | section colour |
-| culture | #0000EE | section colour |
+| ink | #0E0D0B | text, rules, the masthead, cover panels, verdict and close slides, the footer and promo band |
+| paper | #F3EFE7 | the page ground, tea, receipt and item slides, type on ink |
+| white | #FFFFFF | inputs, nothing else |
+| tea | #B4532A | the one accent: the tagline, kicker pills, "The read" and "The receipt" labels, the rule under a pull line, item numerals, Scorecard totals, link underlines, "Presented by" |
+| grey | #6F6A62 | meta, credits, page numbers |
+| line | ink at 100 percent, 1px | the hairlines; secondary rules at 18 percent |
+| campaigns | #8B1E1E | section label and spine only |
+| events | #5A2D5C | section label and spine only |
+| hospitality | #9A6A12 | section label and spine only |
+| fashion | #1E2A57 | section label and spine only |
+| people | #2F5A3F | section label and spine only |
+| culture | #1F5A63 | section label and spine only |
 
-Rule: a section colour appears only on the section label, the carousel ground, the generated cover ground and the spine stripe. Never on body text, never as a tint. Page chrome is black on white, always.
-
-The spine: the five short colour strokes centred at the very top of every page (the reference has three). We show six, one per section, in nav order.
+The section inks are six muted printing inks. They never fill a slide, a card, a band or a button. The spine at the top of every page shows the six in nav order.
 
 ## Layout
 
@@ -67,27 +68,30 @@ Image scale on hover. Hero crossfade every 6 seconds. The footer reveal. Nothing
 
 ## Carousel (the product)
 
-Canvas 1080 x 1350 (4:5). Safe area 72px on all sides. Six slide types, all rendered by `newsroom/render.py` from the story file. The grounds alternate so a swipe reads as a rhythm: colour, white, colour, white.
+Canvas 1080 x 1350 (4:5). Safe area 72px on all sides. Seven slide types, all rendered by `newsroom/render.py` from the story file. Grounds alternate paper and ink; the photograph does the colour work.
 
 | Slide | Ground | Content |
 |---|---|---|
-| Cover | section colour | section label top left in Amulya 500 28px uppercase; title in Instrument Serif 120px (auto shrinks to fit 6 lines); "Mask360" masthead 56px bottom left; a swipe arrow bottom right; the kicker tag (BREWING, SPILLED, SWEET, BITTER) top right in a black pill |
-| Tea | white | one claim per slide: a 36px Amulya paragraph (max 60 words) with an Instrument Serif 88px pull line above it; slide number bottom left as "02 / 07" |
-| Receipt | white with 2px black frame | the evidence: a quote with source and date, or a number set at 200px with a one-line caption, or a side by side (two columns, labels above) |
-| Verdict | section colour | "The read" label and a 64px serif paragraph, max 45 words; this is the slide people screenshot |
-| Edit item | white | for The Edit and The Guest List: a 1:1 photo or monogram top, name 56px serif, one-line why 32px, "the catch" 28px grey; PAID PARTNERSHIP label where applicable |
-| Close | black | "Steeped by Mask360" 72px serif white, "Three. Six. Tea." 36px, handle, "Send this to the one person who needs it" 28px, the spine stripe |
+| Cover (photo-led, the default) | the lead media receipt photograph top 63 percent, an ink panel below | section label top left in paper, kicker pill top right in tea, a soft ink scrim over the top of the photo; headline in Instrument Serif 80px (shrinks to 48) in paper on the ink panel; masthead 44px bottom left; swipe arrow bottom right; "Presented by" above the masthead when sponsored |
+| Cover (Scorecard) | the same, panel taller | the total in tea at 230px with "/10", the headline under it |
+| Cover (typographic, only when no evidence exists) | ink | headline in paper serif 124px (shrinks to 72), the coverText as an italic tea line above it |
+| Tea | paper | section label in the section ink; a pull line in ink serif 104px (max 3 lines); a 120px tea rule; the text in Amulya 42px, ink; the block anchored to the middle; page number bottom right |
+| Receipt, image (mandatory, at least one per story) | paper | "THE RECEIPT" in tea; the screenshot, still, release or menu inside a 1px ink frame; caption in Amulya 34px; credit in grey 22px |
+| Receipt, number, quote, compare | paper | the number in ink serif 360px over a tea rule; the quote in italic 76px with a tea open quote; the comparison in two serif columns with a hairline |
+| Verdict | ink | "THE READ" in tea; the text in paper serif 92px (shrinks to 52), anchored to the middle; the Scorecard total bottom right in tea |
+| Item (The Edit, The Guest List, Moves) | paper | the index numeral in tea serif 96px; the item's evidence photograph in a 1px frame when one exists; name in ink serif 72px; why in Amulya 36px; "The catch" in grey 30px; PAID PARTNERSHIP pill when paid |
+| Close | ink | the spine; "Steeped by Mask360." in paper serif 104px; "Three. Six. Tea." in tea 48px; the send line in paper 36px; the handle and the site; "Presented by" when sponsored |
 
-Sponsored variants: `sponsor:` sets "PRESENTED BY BRAND" in Amulya 500 24px uppercase under the kicker pill on the cover and above the handle on the close slide; a paid item slide carries the PAID PARTNERSHIP pill top right; a Brand Drop carries the pill on every slide. The sponsor never gets the colour, the type or the order: the placement is a position, not a redesign.
+Masthead on every slide bottom left so a screenshot still carries the brand. Page numbers on every inner slide. Type never smaller than 22px on a carousel (credits), 30px for anything a reader must read. Maximum 12 slides, minimum 5. Alt text written per slide.
 
-Masthead on every slide bottom left at 40px so a screenshot still carries the brand. Page numbers on every inner slide. Type never smaller than 28px on a carousel. Maximum 10 slides, minimum 5. Alt text written per slide.
+Sponsored variants: `sponsor:` sets "PRESENTED BY BRAND" in Amulya 500 22px uppercase above the masthead on the cover and the close; a paid item slide carries the PAID PARTNERSHIP pill; a Brand Drop carries the pill on every slide. The sponsor never gets the colour, the type or the order: the placement is a position, not a redesign.
 
-LinkedIn: the same slides exported as a PDF document post. The cover slide doubles as the website card image and the OG image at 1200 x 630 (cropped, title re-set at 72px).
+LinkedIn: the same slides exported as a PDF document post. The cover photograph (or the ink tile) is the web card at 4:5 and the hero at 16:9; the OG image is 1200 x 630 on ink with the photograph on the right.
 
-## Generated covers
+## Covers
 
-When a story has no rights-cleared photograph, the cover is typographic: section colour ground, the title or a number or a single word set huge in Instrument Serif, one small object (a circle, a rule, a monogram) and the label. This is the reference's "40,000,00" and "broccoli on yellow" cards made systematic. Photos only when licensed (brand-supplied under a written release, Wikimedia Commons under CC BY, CC BY-SA or CC0 with credit, or Unsplash under its licence with credit). Credit appears under the image on the web story and on the Receipt slide that uses it.
+The cover is the story's lead media receipt: the actual campaign still, the room, the ramp, the signing, the announcement as published, cropped 4:5 with the headline on an ink panel below. The art desk picks it (a vision pass ranks the evidence; logos, logo walls and stock art rank last; a person, a place or the work itself ranks first) and may override with `cover: photo:<path>`. `cover: type` forces the typographic cover on ink; it is the fallback, not a style. The Scorecard cover carries the total.
 
 ## What we refuse
 
-Rounded cards, drop shadows, gradients outside the hero scrim, stock photography of people laughing at salads, emoji in headlines, more than one typeface per role, centred body text, carousels with more than 60 words a slide, any slide without the masthead.
+Rounded cards, drop shadows, gradients outside the hero and cover scrims, a section colour as a ground, a giant word as a cover, monogram circles, stock photography of people laughing at salads, logos as covers when a photograph exists, emoji in headlines, more than one typeface per role, centred body text, carousels with more than 60 words a slide, any slide without the masthead.

@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { basename, join, resolve } from 'node:path';
 import { parseFrontMatter } from './yaml.mjs';
-import { SECTIONS, ROOT } from './lint.mjs';
+import { SECTIONS, PALETTE, ROOT } from './lint.mjs';
 import { site } from '../config.mjs';
 
 export function storyPayload(file, outDir) {
@@ -26,6 +26,8 @@ export function storyPayload(file, outDir) {
     credit: data.credit || '',
     score: data.score === undefined || data.score === null ? '' : String(data.score),
     slides: data.slides,
+    palette: PALETTE,
+    leadImage: (Array.isArray(data.slides) ? data.slides.find((s) => s && s.type === 'receipt' && s.kind === 'image' && s.image) : null)?.image || '',
     handle: site.handle,
     site: site.short,
     root: ROOT,

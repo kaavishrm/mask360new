@@ -1,32 +1,40 @@
 #!/usr/bin/env python3
-"""Carousel renderer. Reads one story as JSON on stdin, writes slides, cover, card, OG image and a PDF.
+"""Carousel renderer. Reads one story as JSON on stdin, writes slides, cover, card, hero, OG image and a PDF.
 
 Usage: node newsroom/story-json.mjs content/stories/2026/11/slug.md | python3 -I newsroom/render.py
-Input JSON: {slug, title, dek, section:{slug,name,color,ink}, kicker, date, desk, paid, partner, coverText,
-             cover ("generated" | "photo:<path relative to magazine/public>"), credit, slides:[...], handle, outDir, root}
-Tokens come from HOUSE/02-design-system.md. Only Pillow is required.
+Design: HOUSE/02-design-system.md. Grounds are paper and ink only. Section inks label, never fill.
+The cover is photo-led, built from the story's lead media receipt; Scorecards carry the score; with no
+evidence the cover is typographic on ink. Only Pillow is required.
 """
-import json, os, sys, math, re
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+import json, os, sys, re
+from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.path.join(HERE, 'fonts')
 W, H = 1080, 1350
 SAFE = 72
-BLACK, WHITE, GREY, FIELD = (0, 0, 0), (255, 255, 255), (128, 128, 128), (234, 234, 234)
-SPINE = ['#FF3332', '#FF00B7', '#F9C728', '#6E2CF4', '#3FAD57', '#0000EE']
 
 _fonts = {}
 def font(kind, size):
     key = (kind, int(size))
     if key not in _fonts:
         name = {'serif': 'InstrumentSerif-Regular.ttf', 'italic': 'InstrumentSerif-Italic.ttf', 'sans': 'Amulya-Regular.ttf', 'sansm': 'Amulya-Medium.ttf'}[kind]
-        _fonts[key] = ImageFont.truetype(os.path.join(FONTS, name), int(size))
+        _fonts[key] = ImageFont.truetype(os.path.join(FONTS, name), max(8, int(size)))
     return _fonts[key]
 
 def hexrgb(h):
     h = h.lstrip('#'); return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 
+# ---------- palette (overridden by the payload) ----------
+P = {'ink': '#0E0D0B', 'paper': '#F3EFE7', 'white': '#FFFFFF', 'tea': '#B4532A', 'grey': '#6F6A62'}
+SPINE = ['#8B1E1E', '#5A2D5C', '#9A6A12', '#1E2A57', '#2F5A3F', '#1F5A63']
+def INK(): return hexrgb(P['ink'])
+def PAPER(): return hexrgb(P['paper'])
+def TEA(): return hexrgb(P['tea'])
+def GREY(): return hexrgb(P['grey'])
+
+# ---------- text ----------
+_broke = False
 def text_width(draw, s, f, tracking=0):
     if not s: return 0
     return draw.textlength(s, font=f) + tracking * (len(s) - 1)
@@ -40,6 +48,8 @@ def draw_text(draw, xy, s, f, fill, tracking=0):
         x += draw.textlength(ch, font=f) + tracking
 
 def wrap(draw, s, f, maxw, tracking=0):
+    global _broke
+    _broke = False
     words = str(s).split()
     lines, cur = [], ''
     for w in words:
@@ -47,10 +57,7 @@ def wrap(draw, s, f, maxw, tracking=0):
         if text_width(draw, t, f, tracking) <= maxw or not cur: cur = t
         else: lines.append(cur); cur = w
     if cur: lines.append(cur)
-    # a single word wider than maxw gets hard-broken; fit_text treats that as not fitting and shrinks first
     out = []
-    global _broke
-    _broke = False
     for ln in lines:
         while text_width(draw, ln, f, tracking) > maxw and len(ln) > 1:
             cut = len(ln) - 1
@@ -58,39 +65,48 @@ def wrap(draw, s, f, maxw, tracking=0):
             out.append(ln[:cut]); ln = ln[cut:]; _broke = True
         out.append(ln)
     return out
-_broke = False
 
 def fit_text(draw, s, kind, size, minsize, maxw, maxlines, leading=1.0, tracking_em=0.0):
-    """Shrink the size until the wrapped text fits in maxlines. Returns (font, lines, line_height, tracking)."""
     size = int(size)
     while True:
         f = font(kind, size)
         tr = tracking_em * size
         lines = wrap(draw, s, f, maxw, tr)
-        fits = len(lines) <= maxlines and not _broke
-        if fits or size <= minsize:
+        if (len(lines) <= maxlines and not _broke) or size <= minsize:
             return f, lines, int(size * leading), tr
         size = max(minsize, int(size * 0.92))
 
-def block(draw, xy, s, kind, size, minsize, maxw, maxlines, fill, leading=1.0, tracking_em=0.0, align='left'):
+def block(draw, xy, s, kind, size, minsize, maxw, maxlines, fill, leading=1.0, tracking_em=0.0):
     f, lines, lh, tr = fit_text(draw, s, kind, size, minsize, maxw, maxlines, leading, tracking_em)
     x, y = xy
     for ln in lines:
-        lx = x
-        if align == 'center': lx = x + (maxw - text_width(draw, ln, f, tr)) / 2
-        draw_text(draw, (lx, y), ln, f, fill, tr)
-        y += lh
+        draw_text(draw, (x, y), ln, f, fill, tr); y += lh
     return y
 
-def pill(draw, xy, s, size=24, fg=WHITE, bg=BLACK, pad=(22, 12), right=False):
+def measure(draw, s, kind, size, minsize, maxw, maxlines, leading=1.0, tracking_em=0.0):
+    f, lines, lh, tr = fit_text(draw, s, kind, size, minsize, maxw, maxlines, leading, tracking_em)
+    return (f, lines, lh, tr), lh * len(lines)
+
+def paint(draw, xy, m, fill):
+    f, lines, lh, tr = m
+    x, y = xy
+    for ln in lines: draw_text(draw, (x, y), ln, f, fill, tr); y += lh
+    return y
+
+# ---------- furniture ----------
+def pill(draw, xy, s, size=22, fg=None, bg=None, pad=(20, 11), right=False):
+    fg = fg or PAPER(); bg = bg or TEA()
     f = font('sansm', size)
-    tw = text_width(draw, s, f, 0.04 * size)
+    tw = text_width(draw, s, f, 0.06 * size)
     w, h = tw + pad[0] * 2, size + pad[1] * 2
     x, y = xy
     if right: x = x - w
     draw.rounded_rectangle([x, y, x + w, y + h], radius=h / 2, fill=bg)
-    draw_text(draw, (x + pad[0], y + pad[1] - size * 0.12), s, f, fg, 0.04 * size)
+    draw_text(draw, (x + pad[0], y + pad[1] - size * 0.12), s, f, fg, 0.06 * size)
     return w, h
+
+def label(draw, s, fill, y=SAFE, x=SAFE):
+    draw_text(draw, (x, y), s.upper(), font('sansm', 26), fill, 0.08 * 26)
 
 def masthead(draw, fill, size=40, x=SAFE, y=None):
     f = font('serif', size)
@@ -98,12 +114,12 @@ def masthead(draw, fill, size=40, x=SAFE, y=None):
     draw_text(draw, (x, y), 'Mask360', f, fill, -0.04 * size)
 
 def page_no(draw, i, n, fill):
-    f = font('sans', 26)
+    f = font('sans', 24)
     s = f'{i:02d} / {n:02d}'
-    draw_text(draw, (W - SAFE - text_width(draw, s, f), H - SAFE - 26), s, f, fill)
+    draw_text(draw, (W - SAFE - text_width(draw, s, f), H - SAFE - 24), s, f, fill)
 
-def label(draw, s, fill, y=SAFE):
-    draw_text(draw, (SAFE, y), s.upper(), font('sansm', 28), fill, -0.04 * 28)
+def rule(draw, x, y, w=120, h=3, fill=None):
+    draw.rectangle([x, y, x + w, y + h], fill=fill or TEA())
 
 def spine(draw, cx, y, w=16, gap=8, h=4):
     total = 6 * w + 5 * gap
@@ -115,271 +131,245 @@ def arrow(draw, x, y, fill, size=36):
     draw.line([(x, y + size / 2), (x + size, y + size / 2)], fill=fill, width=4)
     draw.line([(x + size * 0.6, y + size * 0.15), (x + size, y + size / 2), (x + size * 0.6, y + size * 0.85)], fill=fill, width=4, joint='curve')
 
-def ground(color):
-    return Image.new('RGB', (W, H), color)
-
-def presented_by(draw, st, ink, y=None):
+def presented_by(draw, st, fill, y):
     sp = str(st.get('sponsor') or '').strip()
     if not sp: return
-    f = font('sansm', 24); t = f'PRESENTED BY {sp.upper()}'
-    if y is None: y = SAFE + 56
-    draw_text(draw, (W - SAFE - text_width(draw, t, f, -0.02 * 24), y), t, f, ink, -0.02 * 24)
+    f = font('sansm', 22); t = f'PRESENTED BY {sp.upper()}'
+    draw_text(draw, (W - SAFE - text_width(draw, t, f, 0.06 * 22), y), t, f, fill, 0.06 * 22)
 
-def cover_photo(path, title, sec, kicker, paid, st=None):
-    st = st or {}
-    im = Image.open(path).convert('RGB')
-    # cover crop to 4:5
-    r = max(W / im.width, H / im.height)
-    im = im.resize((max(W, int(im.width * r)), max(H, int(im.height * r))), Image.LANCZOS)
-    left, top = (im.width - W) // 2, (im.height - H) // 2
-    im = im.crop((left, top, left + W, top + H))
-    scrim = Image.new('L', (W, H), 0)
-    sd = ImageDraw.Draw(scrim)
-    for yy in range(H):
-        k = max(0, (yy - H * 0.35) / (H * 0.65))
-        sd.line([(0, yy), (W, yy)], fill=int(190 * k))
-    im.paste(Image.new('RGB', (W, H), BLACK), (0, 0), scrim)
-    draw = ImageDraw.Draw(im)
-    label(draw, sec['name'], WHITE)
-    pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if paid else kicker, right=True)
-    presented_by(draw, st, WHITE)
-    f, lines, lh, tr = fit_text(draw, title, 'serif', 104, 64, W - 2 * SAFE, 5, 1.0, -0.03)
-    y = H - SAFE - 56 - 40 - lh * len(lines)
-    for ln in lines: draw_text(draw, (SAFE, y), ln, f, WHITE, tr); y += lh
-    masthead(draw, WHITE, 56)
-    arrow(draw, W - SAFE - 40, H - SAFE - 44, WHITE)
-    return im
+def ground(color): return Image.new('RGB', (W, H), color)
 
+def load_photo(st, rel):
+    if not rel: return None
+    p = os.path.join(st['root'], 'public', rel)
+    if not os.path.exists(p): return None
+    try: return Image.open(p).convert('RGB')
+    except Exception as e: print('photo failed:', e, file=sys.stderr); return None
+
+def cover_crop(ph, tw, th):
+    r = max(tw / ph.width, th / ph.height)
+    im = ph.resize((max(tw, int(ph.width * r) + 1), max(th, int(ph.height * r) + 1)), Image.LANCZOS)
+    l, t = (im.width - tw) // 2, max(0, (im.height - th) // 3)  # favour the upper part of the frame
+    return im.crop((l, t, l + tw, t + th))
+
+def top_scrim(im, height=260, strength=150):
+    scrim = Image.new('L', (W, height), 0); sd = ImageDraw.Draw(scrim)
+    for yy in range(height):
+        sd.line([(0, yy), (W, yy)], fill=int(strength * (1 - yy / height)))
+    im.paste(Image.new('RGB', (W, height), INK()), (0, 0), scrim)
+
+def cover_photo_for(st):
+    if str(st.get('cover', '')).startswith('photo:'): return load_photo(st, st['cover'][6:])
+    if st.get('cover') == 'type': return None
+    return load_photo(st, st.get('leadImage'))
+
+# ---------- slides ----------
 def slide_cover(s, st):
-    sec, ink = st['section'], hexrgb(st['section']['ink'])
-    bg = hexrgb(sec['color'])
-    title = s.get('title') or st['title']
-    if str(st.get('cover', 'generated')).startswith('photo:'):
-        p = os.path.join(st['root'], 'public', st['cover'][6:])
-        if os.path.exists(p):
-            try: return cover_photo(p, title, sec, st['kicker'], st.get('paid'))
-            except Exception as e: print('photo cover failed, generated instead:', e, file=sys.stderr)
-    im = ground(bg); draw = ImageDraw.Draw(im)
-    label(draw, sec['name'], ink)
-    pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True)
-    presented_by(draw, st, ink)
-    ct = str(st.get('coverText') or '').strip()
-    top = SAFE + 90
-    if ct and len(ct) <= 14:
-        # the word or number set huge, the headline under it
-        f, lines, lh, tr = fit_text(draw, ct, 'serif', 400 if len(ct) <= 6 else 300, 140, W - 2 * SAFE, 2, 0.9, -0.05)
-        y = top + 60
-        for ln in lines: draw_text(draw, (SAFE, y), ln, f, ink, tr); y += lh
-        y += 48
-        block(draw, (SAFE, y), title, 'serif', 76, 44, W - 2 * SAFE, 5, ink, 1.04, -0.03)
+    sec = st['section']; title = s.get('title') or st['title']
+    ph = cover_photo_for(st)
+    score = str(st.get('score') or '').strip()
+    im = ground(INK()); draw = ImageDraw.Draw(im)
+    if ph is not None:
+        panel = 540 if score else 500
+        im.paste(cover_crop(ph, W, H - panel), (0, 0))
+        top_scrim(im)
+        draw = ImageDraw.Draw(im)
+        y0 = H - panel
+        draw.rectangle([0, y0, W, H], fill=INK())
+        label(draw, sec['name'], PAPER())
+        pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True)
+        y = y0 + 56
+        if score:
+            f = font('serif', 230); draw_text(draw, (SAFE, y - 30), score, f, TEA(), -0.05 * 230)
+            draw_text(draw, (SAFE + text_width(draw, score, f, -0.05 * 230) + 18, y + 150), '/10', font('sans', 30), GREY())
+            y += 230
+            block(draw, (SAFE, y), title, 'serif', 56, 36, W - 2 * SAFE, 3, PAPER(), 1.04, -0.03)
+        else:
+            block(draw, (SAFE, y), title, 'serif', 80, 48, W - 2 * SAFE, 4, PAPER(), 1.02, -0.035)
     else:
-        f, lines, lh, tr = fit_text(draw, title, 'serif', 132, 80, W - 2 * SAFE, 6, 1.0, -0.035)
-        y = top + 60
-        for ln in lines: draw_text(draw, (SAFE, y), ln, f, ink, tr); y += lh
-    masthead(draw, ink, 56)
-    arrow(draw, W - SAFE - 40, H - SAFE - 44, ink)
+        label(draw, sec['name'], PAPER())
+        pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True)
+        y = SAFE + 170
+        if score:
+            f = font('serif', 420); draw_text(draw, (SAFE, y - 60), score, f, TEA(), -0.06 * 420); y += 400
+            block(draw, (SAFE, y), title, 'serif', 64, 40, W - 2 * SAFE, 4, PAPER(), 1.04, -0.03)
+        else:
+            ct = str(st.get('coverText') or '').strip()
+            if ct and ct.lower() not in title.lower():
+                draw_text(draw, (SAFE, y), ct, font('italic', 48), TEA(), -0.02 * 48); y += 80
+            block(draw, (SAFE, y), title, 'serif', 124, 72, W - 2 * SAFE, 6, PAPER(), 1.0, -0.035)
+    presented_by(draw, st, PAPER(), H - SAFE - 104)
+    masthead(draw, PAPER(), 44)
+    arrow(draw, W - SAFE - 40, H - SAFE - 42, PAPER())
     return im
 
 def slide_tea(s, st, i, n):
-    sec = st['section']; im = ground(WHITE); draw = ImageDraw.Draw(im)
+    sec = st['section']; im = ground(PAPER()); draw = ImageDraw.Draw(im)
     label(draw, sec['name'], hexrgb(sec['color']))
     maxw = W - 2 * SAFE
-    pf = fit_text(draw, s['pull'], 'serif', 104, 64, maxw, 3, 1.0, -0.03) if s.get('pull') else None
-    tf = fit_text(draw, s.get('text', ''), 'sans', 42, 30, maxw, 13, 1.32, -0.02)
-    total = (pf[2] * len(pf[1]) + 44 if pf else 0) + tf[2] * len(tf[1])
-    y = max(SAFE + 110, min((H - total) / 2 - 30, H - SAFE - 120 - total))
-    if pf:
-        for ln in pf[1]: draw_text(draw, (SAFE, y), ln, pf[0], BLACK, pf[3]); y += pf[2]
-        y += 44
-    for ln in tf[1]: draw_text(draw, (SAFE, y), ln, tf[0], BLACK, tf[3]); y += tf[2]
-    masthead(draw, BLACK); page_no(draw, i, n, BLACK)
+    pm = measure(draw, s['pull'], 'serif', 104, 64, maxw, 3, 1.0, -0.03) if s.get('pull') else None
+    tm = measure(draw, s.get('text', ''), 'sans', 42, 30, maxw, 13, 1.34, -0.02)
+    total = (pm[1] + 56 if pm else 0) + tm[1]
+    y = max(SAFE + 120, min((H - total) / 2 - 30, H - SAFE - 120 - total))
+    if pm:
+        y = paint(draw, (SAFE, y), pm[0], INK()) + 20
+        rule(draw, SAFE, y); y += 36
+    paint(draw, (SAFE, y), tm[0], INK())
+    masthead(draw, INK()); page_no(draw, i, n, GREY())
     return im
 
 def slide_receipt(s, st, i, n):
-    sec = st['section']; im = ground(WHITE); draw = ImageDraw.Draw(im)
-    draw.rectangle([SAFE - 24, SAFE - 24, W - SAFE + 24, H - SAFE + 24], outline=BLACK, width=2)
-    label(draw, 'The receipt', hexrgb(sec['color']))
-    kind = s.get('kind')
+    im = ground(PAPER()); draw = ImageDraw.Draw(im)
+    label(draw, 'The receipt', TEA())
+    kind = s.get('kind'); maxw = W - 2 * SAFE
     if kind == 'image':
-        # the media receipt: the actual post, article, still or release, with caption and credit
-        box_top, box_h = SAFE + 90, 760
-        placed = False
-        img = s.get('image')
-        if img:
-            p = os.path.join(st['root'], 'public', img)
-            if os.path.exists(p):
-                try:
-                    ph = Image.open(p).convert('RGB'); bw = W - 2 * SAFE
-                    r = min(bw / ph.width, box_h / ph.height)
-                    ph = ph.resize((max(1, int(ph.width * r)), max(1, int(ph.height * r))), Image.LANCZOS)
-                    x = SAFE + (bw - ph.width) // 2
-                    im.paste(ph, (x, box_top)); draw.rectangle([x, box_top, x + ph.width, box_top + ph.height], outline=BLACK, width=2)
-                    box_h = ph.height; placed = True
-                except Exception as e: print('receipt image failed:', e, file=sys.stderr)
-        if not placed:
-            draw.rectangle([SAFE, box_top, W - SAFE, box_top + box_h], fill=FIELD)
-        y = box_top + box_h + 32
-        y = block(draw, (SAFE, y), s.get('caption', ''), 'sans', 34, 26, W - 2 * SAFE, 4, BLACK, 1.3, -0.02) + 14
-        block(draw, (SAFE, y), s.get('credit', ''), 'sans', 24, 20, W - 2 * SAFE, 2, GREY, 1.3, -0.01)
+        box_top, box_h = SAFE + 80, 780
+        ph = load_photo(st, s.get('image'))
+        if ph is not None:
+            r = min(maxw / ph.width, box_h / ph.height)
+            ph = ph.resize((max(1, int(ph.width * r)), max(1, int(ph.height * r))), Image.LANCZOS)
+            x = SAFE + (maxw - ph.width) // 2
+            im.paste(ph, (x, box_top)); draw.rectangle([x, box_top, x + ph.width, box_top + ph.height], outline=INK(), width=1)
+            box_h = ph.height
+        else:
+            draw.rectangle([SAFE, box_top, W - SAFE, box_top + box_h], outline=INK(), width=1)
+        y = box_top + box_h + 30
+        y = block(draw, (SAFE, y), s.get('caption', ''), 'sans', 34, 26, maxw, 4, INK(), 1.3, -0.02) + 12
+        block(draw, (SAFE, y), s.get('credit', ''), 'sans', 22, 18, maxw, 2, GREY(), 1.3, 0)
     elif kind == 'number':
-        f, lines, lh, tr = fit_text(draw, str(s.get('number', '')), 'serif', 360, 140, W - 2 * SAFE, 2, 0.95, -0.05)
-        y = SAFE + 260
-        for ln in lines: draw_text(draw, (SAFE, y), ln, f, BLACK, tr); y += lh
-        block(draw, (SAFE, y + 40), s.get('caption', ''), 'sans', 40, 28, W - 2 * SAFE, 6, BLACK, 1.3, -0.02)
+        f, lines, lh, tr = fit_text(draw, str(s.get('number', '')), 'serif', 360, 140, maxw, 2, 0.95, -0.05)
+        y = SAFE + 240
+        for ln in lines: draw_text(draw, (SAFE, y), ln, f, INK(), tr); y += lh
+        rule(draw, SAFE, y + 10); y += 50
+        block(draw, (SAFE, y), s.get('caption', ''), 'sans', 40, 28, maxw, 6, INK(), 1.3, -0.02)
     elif kind == 'quote':
-        y = SAFE + 140
-        draw_text(draw, (SAFE, y - 40), '“', font('serif', 160), BLACK)
-        y = block(draw, (SAFE, y + 80), s.get('quote', ''), 'italic', 64, 40, W - 2 * SAFE, 9, BLACK, 1.06, -0.02)
-        block(draw, (SAFE, y + 36), s.get('source', ''), 'sans', 28, 24, W - 2 * SAFE, 3, GREY, 1.3, -0.02)
-    else:  # compare
-        colw = (W - 2 * SAFE - 48) / 2
+        y = SAFE + 180
+        draw_text(draw, (SAFE, y - 60), '“', font('serif', 200), TEA())
+        y = block(draw, (SAFE, y + 110), s.get('quote', ''), 'italic', 76, 44, maxw, 9, INK(), 1.06, -0.02)
+        block(draw, (SAFE, y + 40), s.get('source', ''), 'sans', 30, 24, maxw, 3, GREY(), 1.3, -0.02)
+    else:
+        colw = (maxw - 48) / 2
         for k, (lab, txt) in enumerate([(s.get('leftLabel', ''), s.get('leftText', '')), (s.get('rightLabel', ''), s.get('rightText', ''))]):
             x = SAFE + k * (colw + 48)
-            draw_text(draw, (x, SAFE + 200), str(lab).upper(), font('sansm', 30), GREY, -0.02 * 30)
-            block(draw, (x, SAFE + 260), txt, 'serif', 64, 40, colw, 10, BLACK, 1.08, -0.02)
-        draw.line([(W / 2, SAFE + 200), (W / 2, H - SAFE - 120)], fill=BLACK, width=1)
-    masthead(draw, BLACK); page_no(draw, i, n, BLACK)
+            draw_text(draw, (x, SAFE + 200), str(lab).upper(), font('sansm', 26), GREY(), 0.08 * 26)
+            block(draw, (x, SAFE + 260), txt, 'serif', 64, 40, colw, 10, INK(), 1.08, -0.02)
+        draw.line([(W / 2, SAFE + 200), (W / 2, H - SAFE - 120)], fill=INK(), width=1)
+    masthead(draw, INK()); page_no(draw, i, n, GREY())
     return im
 
 def slide_verdict(s, st, i, n):
-    sec = st['section']; ink = hexrgb(sec['ink']); im = ground(hexrgb(sec['color'])); draw = ImageDraw.Draw(im)
-    label(draw, 'The read', ink)
+    im = ground(INK()); draw = ImageDraw.Draw(im)
+    label(draw, 'The read', TEA())
     txt = re.sub(r'^\s*the read:\s*', '', s.get('text', ''), flags=re.I)
-    f, lines, lh, tr = fit_text(draw, txt, 'serif', 92, 52, W - 2 * SAFE, 11, 1.06, -0.03)
-    total = lh * len(lines)
-    y = max(SAFE + 110, min((H - total) / 2 - 40, H - SAFE - 240 - total))
-    for ln in lines: draw_text(draw, (SAFE, y), ln, f, ink, tr); y += lh
-    if st.get('score') not in (None, ''):
-        sc = str(st['score'])
+    m, total = measure(draw, txt, 'serif', 92, 52, W - 2 * SAFE, 11, 1.06, -0.03)
+    y = max(SAFE + 120, min((H - total) / 2 - 40, H - SAFE - 240 - total))
+    paint(draw, (SAFE, y), m, PAPER())
+    sc = str(st.get('score') or '').strip()
+    if sc:
         f = font('serif', 180)
-        draw_text(draw, (W - SAFE - text_width(draw, sc, f, -0.05 * 180), H - SAFE - 300), sc, f, ink, -0.05 * 180)
-        draw_text(draw, (W - SAFE - text_width(draw, '/10', font('sans', 32)), H - SAFE - 110 - 32), '/10', font('sans', 32), ink)
-    masthead(draw, ink); page_no(draw, i, n, ink)
+        draw_text(draw, (W - SAFE - text_width(draw, sc, f, -0.05 * 180), H - SAFE - 300), sc, f, TEA(), -0.05 * 180)
+        draw_text(draw, (W - SAFE - text_width(draw, '/10', font('sans', 30)), H - SAFE - 110 - 30), '/10', font('sans', 30), PAPER())
+    masthead(draw, PAPER()); page_no(draw, i, n, GREY())
     return im
 
-def monogram(draw, cx, cy, r, name, color, ink):
-    draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=BLACK)
-    parts = [p for p in re.split(r'[\s,]+', str(name)) if p]
-    initials = ''.join(p[0] for p in parts[:2]).upper() or 'M'
-    f = font('serif', int(r * 1.1))
-    tw = text_width(draw, initials, f, -0.04 * r)
-    draw_text(draw, (cx - tw / 2, cy - r * 0.68), initials, f, WHITE, -0.04 * r)
-
-def slide_item(s, st, i, n):
-    sec = st['section']; im = ground(WHITE); draw = ImageDraw.Draw(im)
+def slide_item(s, st, i, n, idx):
+    sec = st['section']; im = ground(PAPER()); draw = ImageDraw.Draw(im)
     label(draw, sec['name'], hexrgb(sec['color']))
     if s.get('paid'): pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP', right=True)
     maxw = W - 2 * SAFE
+    ph = load_photo(st, s.get('image'))
     catch = 'The catch: ' + str(s.get('catch', ''))
-    # measure the text at a scale that fits under the image box; shrink the box before the type
+    num = f'{idx:02d}'
     bottom_limit = H - SAFE - 60
-    for box_h, scale in ((560, 1.0), (480, 1.0), (440, 0.92), (400, 0.85), (360, 0.78)):
-        nf = fit_text(draw, s.get('name', ''), 'serif', int(68 * scale), 40, maxw, 2, 1.02, -0.03)
-        wf = fit_text(draw, s.get('why', ''), 'sans', int(36 * scale), 26, maxw, 5, 1.3, -0.02)
-        cf = fit_text(draw, catch, 'sans', int(32 * scale), 24, maxw, 4, 1.3, -0.02)
-        total = nf[2] * len(nf[1]) + 18 + wf[2] * len(wf[1]) + 22 + cf[2] * len(cf[1])
-        if SAFE + 80 + box_h + 40 + total <= bottom_limit: break
-    box = (SAFE, SAFE + 80, W - SAFE, SAFE + 80 + box_h)
-    img = s.get('image')
-    placed = False
-    if img:
-        p = os.path.join(st['root'], 'public', img)
-        if os.path.exists(p):
-            try:
-                ph = Image.open(p).convert('RGB'); bw, bh = box[2] - box[0], box[3] - box[1]
-                r = max(bw / ph.width, bh / ph.height); ph = ph.resize((int(ph.width * r) + 1, int(ph.height * r) + 1), Image.LANCZOS)
-                l, t = (ph.width - bw) // 2, (ph.height - bh) // 2; im.paste(ph.crop((l, t, l + bw, t + bh)), (box[0], box[1])); placed = True
-            except Exception as e: print('item image failed:', e, file=sys.stderr)
-    if not placed:
-        draw.rectangle(box, fill=hexrgb(sec['color']))
-        monogram(draw, (box[0] + box[2]) / 2, (box[1] + box[3]) / 2, int(box_h * 0.3), s.get('name', 'M'), sec['color'], sec['ink'])
-    y = box[3] + 40
-    for f, lines, lh, tr, fill, gap in ((nf[0], nf[1], nf[2], nf[3], BLACK, 18), (wf[0], wf[1], wf[2], wf[3], BLACK, 22), (cf[0], cf[1], cf[2], cf[3], GREY, 0)):
-        for ln in lines: draw_text(draw, (SAFE, y), ln, f, fill, tr); y += lh
-        y += gap
-    masthead(draw, BLACK); page_no(draw, i, n, BLACK)
+    for box_h, scale in ((520, 1.0), (440, 1.0), (380, 0.92), (320, 0.85), (0, 0.8)):
+        nm = measure(draw, s.get('name', ''), 'serif', int(72 * scale), 40, maxw, 2, 1.02, -0.03)
+        wm = measure(draw, s.get('why', ''), 'sans', int(36 * scale), 26, maxw, 5, 1.3, -0.02)
+        cm = measure(draw, catch, 'sans', int(30 * scale), 24, maxw, 4, 1.3, -0.02)
+        top = SAFE + 140
+        total = (box_h + 40 if (ph is not None and box_h) else 0) + nm[1] + 18 + wm[1] + 22 + cm[1]
+        if top + total <= bottom_limit: break
+    y = SAFE + 60
+    draw_text(draw, (SAFE, y - 10), num, font('serif', 96), TEA(), -0.04 * 96)
+    y = SAFE + 140
+    if ph is not None and box_h:
+        im.paste(cover_crop(ph, maxw, box_h), (SAFE, y)); draw.rectangle([SAFE, y, W - SAFE, y + box_h], outline=INK(), width=1)
+        y += box_h + 40
+    y = paint(draw, (SAFE, y), nm[0], INK()) + 18
+    y = paint(draw, (SAFE, y), wm[0], INK()) + 22
+    paint(draw, (SAFE, y), cm[0], GREY())
+    masthead(draw, INK()); page_no(draw, i, n, GREY())
     return im
 
 def slide_close(s, st, i, n):
-    im = ground(BLACK); draw = ImageDraw.Draw(im)
+    im = ground(INK()); draw = ImageDraw.Draw(im)
     spine(draw, W / 2, SAFE + 10)
     y = H * 0.36
-    y = block(draw, (SAFE, y), 'Steeped by Mask360.', 'serif', 104, 64, W - 2 * SAFE, 2, WHITE, 1.0, -0.03) + 24
-    draw_text(draw, (SAFE, y), 'Three. Six. Tea.', font('serif', 48), GREY, -0.02 * 48); y += 110
-    block(draw, (SAFE, y), s.get('text') or 'Send this to the one person who needs it.', 'sans', 36, 28, W - 2 * SAFE, 3, WHITE, 1.3, -0.02)
-    handle = st.get('handle') or '@mask360'
-    if str(st.get('sponsor') or '').strip():
-        presented_by(draw, st, WHITE, y=H - SAFE - 100)
-    draw_text(draw, (SAFE, H - SAFE - 30), handle, font('sansm', 28), WHITE, -0.02 * 28)
-    sitef = font('sans', 26); site = st.get('site', 'mask360.agency/magazine')
-    draw_text(draw, (W - SAFE - text_width(draw, site, sitef), H - SAFE - 28), site, sitef, GREY)
+    y = block(draw, (SAFE, y), 'Steeped by Mask360.', 'serif', 104, 64, W - 2 * SAFE, 2, PAPER(), 1.0, -0.03) + 24
+    draw_text(draw, (SAFE, y), 'Three. Six. Tea.', font('serif', 48), TEA(), -0.02 * 48); y += 110
+    block(draw, (SAFE, y), s.get('text') or 'Send this to the one person who needs it.', 'sans', 36, 28, W - 2 * SAFE, 3, PAPER(), 1.3, -0.02)
+    presented_by(draw, st, PAPER(), H - SAFE - 100)
+    draw_text(draw, (SAFE, H - SAFE - 30), st.get('handle') or '@mask360', font('sansm', 28), PAPER(), -0.02 * 28)
+    sitef = font('sans', 24); site = st.get('site', 'mask360.agency/magazine')
+    draw_text(draw, (W - SAFE - text_width(draw, site, sitef), H - SAFE - 26), site, sitef, GREY())
     return im
 
-def og_image(st, cover):
-    """1200 x 630: section colour ground, headline re-set, masthead. Photo covers show the photo left."""
-    sec = st['section']; ink = hexrgb(sec['ink'])
-    im = Image.new('RGB', (1200, 630), hexrgb(sec['color'])); draw = ImageDraw.Draw(im)
-    textw = 1200 - 2 * 56
-    if str(st.get('cover', '')).startswith('photo:'):
-        ph = cover.crop((0, 0, W, H)).resize((504, 630), Image.LANCZOS); im.paste(ph, (696, 0)); textw = 696 - 56 - 40
-    draw_text(draw, (56, 48), sec['name'].upper(), font('sansm', 22), ink, -0.04 * 22)
-    pill(draw, (56 + text_width(draw, sec['name'].upper(), font('sansm', 22), -0.04 * 22) + 24, 40), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], size=18, pad=(16, 8))
-    block(draw, (56, 110), st['title'], 'serif', 100, 52, textw, 4, ink, 1.0, -0.03)
-    f = font('serif', 44); draw_text(draw, (56, 630 - 48 - 44), 'Mask360', f, ink, -0.04 * 44)
-    tag = 'Three. Six. Tea.'; ft = font('sans', 20)
-    draw_text(draw, (56 + text_width(draw, 'Mask360', f, -0.04 * 44) + 24, 630 - 48 - 26), tag, ft, ink)
-    return im
-
-def tile(st, size, cover):
-    """Card or hero image without the headline: the coverText set huge on the section colour, or the photo cropped."""
+# ---------- tiles ----------
+def tile(st, size, kind):
+    """card (4:5), hero (16:9): the cover photograph cropped, else an ink tile with the headline (card) or quiet (hero)."""
     tw, th = size
-    sec = st['section']; ink = hexrgb(sec['ink'])
-    if str(st.get('cover', '')).startswith('photo:'):
-        p = os.path.join(st['root'], 'public', st['cover'][6:])
-        if os.path.exists(p):
-            ph = Image.open(p).convert('RGB'); r = max(tw / ph.width, th / ph.height)
-            ph = ph.resize((int(ph.width * r) + 1, int(ph.height * r) + 1), Image.LANCZOS)
-            l, t = (ph.width - tw) // 2, (ph.height - th) // 2
-            return ph.crop((l, t, l + tw, t + th))
-    im = Image.new('RGB', (tw, th), hexrgb(sec['color'])); draw = ImageDraw.Draw(im)
+    sec = st['section']
+    ph = cover_photo_for(st)
+    if ph is not None: return cover_crop(ph, tw, th)
+    im = Image.new('RGB', (tw, th), INK()); draw = ImageDraw.Draw(im)
     pad = int(tw * 0.066)
-    if tw > th:  # hero: tone on tone, the headline is overlaid on the web
-        base = hexrgb(sec['color']); ink = tuple(int(base[k] * 0.78 + ink[k] * 0.22) for k in range(3))
-    ct = str(st.get('coverText') or '').strip() or st['title']
-    big = len(ct) <= 14
-    size0 = int(min(tw, th) * (0.42 if len(ct) <= 6 else 0.3)) if big else int(min(tw, th) * 0.11)
-    f, lines, lh, tr = fit_text(draw, ct, 'serif', size0, int(size0 * 0.4), tw - 2 * pad, 2 if big else 6, 0.92, -0.05 if big else -0.035)
-    total = lh * len(lines)
-    y = (th - total) / 2 - (th * 0.04)
-    for ln in lines: draw_text(draw, (pad, y), ln, f, ink, tr); y += lh
     ms = int(min(tw, th) * 0.05)
-    draw_text(draw, (pad, th - pad - ms), 'Mask360', font('serif', ms), ink, -0.04 * ms)
-    draw_text(draw, (pad, pad), sec['name'].upper(), font('sansm', int(ms * 0.55)), ink, -0.04 * ms * 0.55)
+    draw_text(draw, (pad, pad), sec['name'].upper(), font('sansm', int(ms * 0.55)), PAPER(), 0.08 * ms * 0.55)
+    if kind == 'card':
+        f, lines, lh, tr = fit_text(draw, st['title'], 'serif', int(tw * 0.1), int(tw * 0.05), tw - 2 * pad, 6, 1.0, -0.035)
+        total = lh * len(lines); y = (th - total) / 2 - th * 0.04
+        for ln in lines: draw_text(draw, (pad, y), ln, f, PAPER(), tr); y += lh
+    draw_text(draw, (pad, th - pad - ms), 'Mask360', font('serif', ms), PAPER(), -0.04 * ms)
+    return im
+
+def og_image(st):
+    sec = st['section']
+    im = Image.new('RGB', (1200, 630), INK()); draw = ImageDraw.Draw(im)
+    textw = 1200 - 2 * 56
+    ph = cover_photo_for(st)
+    if ph is not None:
+        im.paste(cover_crop(ph, 504, 630), (696, 0)); textw = 696 - 56 - 40
+    draw_text(draw, (56, 48), sec['name'].upper(), font('sansm', 20), PAPER(), 0.08 * 20)
+    pill(draw, (56 + text_width(draw, sec['name'].upper(), font('sansm', 20), 0.08 * 20) + 24, 40), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], size=16, pad=(14, 8))
+    block(draw, (56, 110), st['title'], 'serif', 96, 48, textw, 4, PAPER(), 1.0, -0.03)
+    f = font('serif', 44); draw_text(draw, (56, 630 - 48 - 44), 'Mask360', f, PAPER(), -0.04 * 44)
+    draw_text(draw, (56 + text_width(draw, 'Mask360', f, -0.04 * 44) + 24, 630 - 48 - 26), 'Three. Six. Tea.', font('sans', 20), TEA())
     return im
 
 def main():
+    global P
     st = json.load(sys.stdin)
+    P.update(st.get('palette') or {})
     out = st['outDir']; os.makedirs(out, exist_ok=True)
     slides = st['slides']; n = len(slides)
-    images = []
+    images = []; item_index = 0
     for i, s in enumerate(slides, 1):
         t = s.get('type')
         if t == 'cover': im = slide_cover(s, st)
         elif t == 'tea': im = slide_tea(s, st, i, n)
         elif t == 'receipt': im = slide_receipt(s, st, i, n)
         elif t == 'verdict': im = slide_verdict(s, st, i, n)
-        elif t == 'item': im = slide_item(s, st, i, n)
+        elif t == 'item': item_index += 1; im = slide_item(s, st, i, n, item_index)
         elif t == 'close': im = slide_close(s, st, i, n)
         else: raise SystemExit(f'unknown slide type {t}')
         im.save(os.path.join(out, f'{i:02d}.jpg'), 'JPEG', quality=90, optimize=True)
         images.append(im)
     cover = images[0]
     cover.save(os.path.join(out, 'cover.webp'), 'WEBP', quality=84)
-    card = tile(st, (864, 1080), cover)
+    card = tile(st, (864, 1080), 'card')
     card.save(os.path.join(out, 'card.webp'), 'WEBP', quality=82)
     card.resize((216, 270), Image.LANCZOS).save(os.path.join(out, 'thumb.webp'), 'WEBP', quality=80)
-    tile(st, (1920, 1080), cover).save(os.path.join(out, 'hero.webp'), 'WEBP', quality=82)
-    og_image(st, cover).save(os.path.join(out, 'og.jpg'), 'JPEG', quality=86)
+    tile(st, (1920, 1080), 'hero').save(os.path.join(out, 'hero.webp'), 'WEBP', quality=82)
+    og_image(st).save(os.path.join(out, 'og.jpg'), 'JPEG', quality=86)
     pdf = [im.convert('RGB') for im in images]
     pdf[0].save(os.path.join(out, 'carousel.pdf'), save_all=True, append_images=pdf[1:], resolution=144)
     print(json.dumps({'slug': st['slug'], 'slides': n, 'outDir': out}))

@@ -6,9 +6,9 @@ format: moves
 kicker: SPILLED
 date: 2026-11-03
 desk: People Desk
-cover: generated
+cover: photo:assets/img/stories/wpp-india-names-two-agency-ceos-in-two-days/ev-3.jpg
 coverText: two CEOs
-credit: ""
+credit: "Image: manifest-media.in, Shouvik Roy, 29 October 2026"
 sources:
 - "https://www.campaignindia.in/article/kiran-ramamurthy-to-succeed-babita-baruah-as-vml-india-ceo/4y8cd5s5sk77h08ns86a1ve9nt (Campaign India, VML India CEO change, 28 October 2026)"
 - "https://www.afaqs.com/people-spotting/vml-india-appoints-kiran-ramamurthy-as-ceo-12761362 (afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026)"
@@ -16,9 +16,9 @@ sources:
 - "https://www.storyboard18.com/brand-makers/shouvik-roy-to-take-over-as-ceo-of-grey-82-5-ws-l-113641.htm (Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026)"
 - "https://manifest-media.in/advertising/291026/shouvik-roy-moves-back-to-ogilvy.html (Manifest Media, Shouvik Roy career dates, 29 October 2026)"
 - "https://www.campaignindia.in/article/neville-shah-moves-on-from-kinnect/42j7n9abrd5vg08qypawggtgxs (Campaign India, Neville Shah exits Kinnect, 15 October 2026)"
-- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
+- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
 - "https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks store count, 27 October 2026)"
-- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas name revived as TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas from 1 January 2026, 3 December 2025)"
+- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas name revived as TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas from 1 January 2026, 3 December 2025)"
 - "https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure including Kinnect, 2 December 2025)"
 - "https://www.campaignindia.in/article/aaai-sets-up-indie-council-names-tanya-goyal-chair/4mwxvygf854w8wpbj6dxcqvsn1 (Campaign India, AAAI INDIE Council and Tanya Goyal, 30 October 2026)"
 - "https://www.campaignindia.in/article/media-agency-representatives-unite-under-new-aaai-council/4w32qxp00e92jy22paazefs4c6 (Campaign India, AAAI Media Council first meeting, 3 November 2026)"
@@ -41,6 +41,7 @@ slides:
   why: Named VML India CEO on 28 October, effective 1 December. Babita Baruah, CEO since 2024, moves to a regional role running the Ford business.
   catch: WPP Creative India promotes from inside the group. The man who merged Grey and 82.5 now gets the bigger shop.
   paid: false
+  image: assets/img/stories/wpp-india-names-two-agency-ceos-in-two-days/ev-1.jpg
 - type: receipt
   kind: image
   image: assets/img/stories/wpp-india-names-two-agency-ceos-in-two-days/ev-1.jpg
@@ -58,6 +59,7 @@ slides:
   why: Announced 29 October, effective 1 December. He ran Ogilvy Delhi as president, co-founded the agency behind Paperboat and helped build G.O.A.T Brand Labs. He replaces Ramamurthy.
   catch: Ogilvy Group wants a founder type for its self-described challenger shop. VR Rajesh said as much in the release.
   paid: false
+  image: assets/img/stories/wpp-india-names-two-agency-ceos-in-two-days/ev-2.jpg
 - type: item
   name: Neville Shah, from Kinnect CCO to next move not known
   why: Campaign India reported on 15 October that he has stepped down as chief creative officer and is serving notice. He joined in May 2024 after ten years at Ogilvy.

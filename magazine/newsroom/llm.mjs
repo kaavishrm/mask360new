@@ -69,6 +69,19 @@ export async function draft({ role, user, schema, effort = 'medium', maxTokens =
   return { data: msg.parsed_output, usage: msg.usage };
 }
 
+/** Look at images and answer with a structured object. `images` are base64 JPEG strings (keep them under 800px). */
+export async function look({ role, user, images, schema, effort = 'low', maxTokens = 2000 }) {
+  const c = anthropic();
+  const content = [...images.map((data) => ({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data } })), { type: 'text', text: user }];
+  const msg = await c.beta.messages.parse({
+    model: MODEL, max_tokens: maxTokens, system: system(role), messages: [{ role: 'user', content }],
+    output_config: { effort, format: zodOutputFormat(schema) }, betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default',
+  });
+  guard(msg, role);
+  if (!msg.parsed_output) throw new Error(`${role}: structured output did not parse`);
+  return { data: msg.parsed_output, usage: msg.usage };
+}
+
 /** Plain text answer, no tools. */
 export async function say({ role, user, effort = 'low', maxTokens = 4000 }) {
   const c = anthropic();

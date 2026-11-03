@@ -18,8 +18,18 @@ export function attach(storyPath, { max = 2, force = false } = {}) {
   const manifestPath = join(ROOT, 'public', 'assets', 'img', 'stories', slug, 'evidence.json');
   if (!existsSync(manifestPath)) return { slug, attached: 0, reason: 'no evidence.json' };
   const ev = JSON.parse(readFileSync(manifestPath, 'utf8')).filter((e) => e.w >= 600);
+  // item slides (The Edit, The Guest List, Moves): give each item the evidence image whose page title names it
+  let itemImages = 0;
+  for (const sl of data.slides || []) {
+    if (sl.type !== 'item' || sl.image) continue;
+    const key = String(sl.name || '').split(/[,:]/)[0].trim().split(/\s+/).filter((w) => w.length >= 4)[0];
+    if (!key) continue;
+    const re = new RegExp(`\\b${key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+    const hit = ev.find((e) => re.test(String(e.title || '')) && e.kind !== 'screenshot');
+    if (hit) { sl.image = hit.file; itemImages++; }
+  }
   const hasImage = (data.slides || []).some((s) => s.type === 'receipt' && s.kind === 'image');
-  if (hasImage && !force) return { slug, attached: 0, reason: 'already has a media receipt' };
+  if (hasImage && !force) { if (itemImages) { writeFileSync(storyPath, stringifyFrontMatter(data, body)); } return { slug, attached: 0, itemImages, reason: 'already has a media receipt' }; }
   // rank: film stills first, then the page's own image in the order the writer listed the sources (primary sources come
   // first), then screenshots; one per source; reference sites that never show the thing itself are skipped
   const rank = { thumbnail: 0, image: 1, screenshot: 2 };
@@ -45,7 +55,7 @@ export function attach(storyPath, { max = 2, force = false } = {}) {
   data.alt = alt.join('\n') + '\n';
   writeFileSync(storyPath, stringifyFrontMatter(data, body));
   fixAlt(storyPath); // regenerate alt if the writer's lines no longer match the slides
-  return { slug, attached: picks.length, picks: picks.map((p) => `${p.kind} ${p.domain}`) };
+  return { slug, attached: picks.length, itemImages, picks: picks.map((p) => `${p.kind} ${p.domain}`) };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {

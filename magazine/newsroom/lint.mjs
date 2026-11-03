@@ -7,13 +7,15 @@ import { parseFrontMatter } from './yaml.mjs';
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT = join(HERE, '..');
 
+export const PALETTE = { ink: '#0E0D0B', paper: '#F3EFE7', white: '#FFFFFF', tea: '#B4532A', grey: '#6F6A62', line: '#0E0D0B' };
+// Section inks: label text, small rules and the spine only. Never a ground.
 export const SECTIONS = {
-  campaigns: { name: 'Campaigns', color: '#FF3332', desk: 'Campaigns Desk', ink: '#FFFFFF' },
-  events: { name: 'Events', color: '#FF00B7', desk: 'Events Desk', ink: '#FFFFFF' },
-  hospitality: { name: 'Hospitality', color: '#F9C728', desk: 'Hospitality Desk', ink: '#000000' },
-  fashion: { name: 'Fashion', color: '#6E2CF4', desk: 'Fashion Desk', ink: '#FFFFFF' },
-  people: { name: 'People', color: '#3FAD57', desk: 'People Desk', ink: '#000000' },
-  culture: { name: 'Culture', color: '#0000EE', desk: 'Culture Desk', ink: '#FFFFFF' },
+  campaigns: { name: 'Campaigns', color: '#8B1E1E', desk: 'Campaigns Desk', ink: '#F3EFE7' },
+  events: { name: 'Events', color: '#5A2D5C', desk: 'Events Desk', ink: '#F3EFE7' },
+  hospitality: { name: 'Hospitality', color: '#9A6A12', desk: 'Hospitality Desk', ink: '#F3EFE7' },
+  fashion: { name: 'Fashion', color: '#1E2A57', desk: 'Fashion Desk', ink: '#F3EFE7' },
+  people: { name: 'People', color: '#2F5A3F', desk: 'People Desk', ink: '#F3EFE7' },
+  culture: { name: 'Culture', color: '#1F5A63', desk: 'Culture Desk', ink: '#F3EFE7' },
 };
 export const FORMATS = {
   tea: { name: 'The Tea', words: [350, 600], slides: [7, 11] },
@@ -65,7 +67,7 @@ export function lintStory(path) {
 
   // cover
   const cover = String(data.cover || 'generated');
-  if (!(cover === 'generated' || cover.startsWith('photo:'))) E('cover must be "generated" or "photo:<path>"');
+  if (!(cover === 'generated' || cover === 'type' || cover.startsWith('photo:'))) E('cover must be "generated" (the renderer uses the lead media receipt), "type" (typographic) or "photo:<path>"');
   if (cover.startsWith('photo:') && !data.credit) E('photo cover needs a credit line');
   if (cover === 'generated' && !data.coverText) W('generated cover without coverText (the renderer will set the headline)');
 

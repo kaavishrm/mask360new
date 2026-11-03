@@ -60,6 +60,7 @@ slides:
   why: Experience Partner. Centurion and Platinum card members get front-row seats at select shows, a VIP lounge and card member hospitality. Everyone else gets a brand experience zone at Taj Palace.
   catch: Front row used to be the editor's seat. Now it is a card tier, subject to terms and conditions.
   paid: false
+  image: assets/img/stories/lakme-fashion-week-delhi-car-on-the-ramp/ev-5.jpg
 - type: item
   name: House of Lakmé closes with an ice-cream cart
   why: "Amit Aggarwal's AM:IT finale, On a Day Like Today, sends balloons, candyfloss, an auto rickshaw and an ice-cream cart down the runway. Aneet Padda, Lakmé's ambassador, closes it."

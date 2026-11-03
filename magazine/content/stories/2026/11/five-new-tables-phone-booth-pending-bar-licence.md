@@ -37,6 +37,7 @@ slides:
   why: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director of mixology Shobith Salian, food by chef Gaurav Gidwani. Curlytales pegs it at INR 2,000 for two.
   catch: No walk-ins. You get the booth code after booking, and the six-course price is not in any release.
   paid: false
+  image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-1.jpg
 - type: receipt
   kind: image
   image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-1.jpg
@@ -54,6 +55,7 @@ slides:
   why: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the first floor of the 1930s Eros building. Pintxos, 48-hour fermented pizzas, about INR 3,500 for two.
   catch: "Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner. No lunch in any listing."
   paid: false
+  image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-3.jpg
 - type: item
   name: Nam, Hauz Khas
   why: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open kitchen. Five Time Out stars on 23 October. About INR 3,000 for two, no alcohol.
@@ -64,6 +66,7 @@ slides:
   why: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal Bukhara, Bhutte Ka Kees chaat, cocktails filed under Nostalgia and Colour. About INR 2,700 for two.
   catch: "Fourth floor, and the kitchen goes dark from 3:30 to 6:30pm."
   paid: false
+  image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-6.jpg
 - type: item
   name: Bloody Dangerous, Assagao
   why: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500 entry lights, cocktails by Arnold Hou, plates by Priyanka Sardessai and chef Yong. INR 4,000 for two.

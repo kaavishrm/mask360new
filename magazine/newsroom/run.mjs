@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rename
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { research, draft, cost, MODEL } from './llm.mjs';
+import { research, draft, look, cost, MODEL } from './llm.mjs';
 import { fetchFeeds } from './sources.mjs';
 import { ScoutOut, EditorOut, Story, FactsOut, CopyOut, LegalOut } from './schemas.mjs';
 import { parseFrontMatter, stringifyFrontMatter } from './yaml.mjs';
@@ -13,7 +13,7 @@ import { lintStory, allStoryFiles, SECTIONS, FORMATS, ROOT } from './lint.mjs';
 import { storyPayload } from './story-json.mjs';
 import { collect } from './evidence.mjs';
 import { attach } from './attach-evidence.mjs';
-import { ArtOut } from './schemas.mjs';
+import { ArtOut, CoverPick } from './schemas.mjs';
 import { site } from '../config.mjs';
 import { postStory } from './post.mjs';
 
@@ -144,6 +144,28 @@ async function produce(pick, cand) {
       writeFileSync(path, stringifyFrontMatter(cur.data, cur.body));
     } catch (e) { log(`art caption pass skipped: ${e.message}`); }
   }
+  // the art desk looks at the evidence and picks the cover: a person, a place or the work itself over a logo wall
+  try {
+    const cands = ev.filter((e) => e.kind !== 'screenshot' && e.w >= 600).slice(0, 6);
+    if (cands.length > 1) {
+      const thumbs = cands.map((e) => execFileSync('python3', ['-I', '-c', `import sys,base64,io
+from PIL import Image
+im=Image.open(sys.argv[1]).convert('RGB'); im.thumbnail((800,800)); b=io.BytesIO(); im.save(b,'JPEG',quality=78); print(base64.b64encode(b.getvalue()).decode())`, join(ROOT, 'public', e.file)]).toString().trim());
+      const pick = await look({ role: 'art', schema: CoverPick, images: thumbs, user: `These ${cands.length} images are the evidence collected for the story "${st.title}" (${st.dek}). They are numbered 1 to ${cands.length} in order. Pick the one that works as the magazine cover: the work itself, a person or a place, well lit, not a logo, not a logo wall, not a stock image, not a screenshot of text. Return best (1 to ${cands.length}), a one-line reason, and reject (the numbers that are logos, logo walls or stock and must not be used as receipts either).` });
+      usages.push(pick.usage);
+      const chosen = cands[pick.data.best - 1];
+      if (chosen) {
+        const cur = parseFrontMatter(readFileSync(path, 'utf8'));
+        cur.data.cover = `photo:${chosen.file}`;
+        cur.data.credit = chosen.credit;
+        const bad = new Set(pick.data.reject.map((n) => cands[n - 1]?.file).filter(Boolean));
+        const keep = cur.data.slides.filter((sl) => !(sl.type === 'receipt' && sl.kind === 'image' && bad.has(sl.image) && cur.data.slides.filter((x) => x.type === 'receipt' && x.kind === 'image').length > 1));
+        if (keep.length !== cur.data.slides.length) { const altLines = String(cur.data.alt || '').split('\n').filter(Boolean); cur.data.alt = altLines.filter((_, i) => keep.includes(cur.data.slides[i])).join('\n') + '\n'; cur.data.slides = keep; }
+        writeFileSync(path, stringifyFrontMatter(cur.data, cur.body));
+        log(`art: cover ${chosen.file.split('/').pop()} (${pick.data.reason})`);
+      }
+    }
+  } catch (e) { log(`art cover pick skipped: ${e.message}`); }
   let r = lintStory(path);
   if (r.errors.length) {
     log(`lint: ${r.errors.length} errors, repairing`);
