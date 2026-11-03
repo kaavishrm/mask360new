@@ -1,0 +1,73 @@
+name: Mask360 newsroom
+# Lane A, the engine. Runs the editorial day three times a day (07:30, 13:30, 19:30 IST), commits new stories to main,
+# and posts them once the host has deployed. Needs the ANTHROPIC_API_KEY secret; posting needs the Instagram and LinkedIn secrets.
+on:
+  schedule:
+    - cron: "0 2 * * *"   # 07:30 IST
+    - cron: "0 8 * * *"   # 13:30 IST
+    - cron: "0 14 * * *"  # 19:30 IST
+  workflow_dispatch:
+    inputs:
+      slots:
+        description: "Stories to publish this run"
+        default: "2"
+      section:
+        description: "Restrict to one section (optional)"
+        default: ""
+      dry:
+        description: "Dry run: no commit, no post"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: newsroom
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: npm ci --no-audit --no-fund
+        working-directory: magazine/newsroom
+      - name: Run the editorial day
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          NEWSROOM_SLOTS: ${{ github.event.inputs.slots || '2' }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: |
+          cd magazine
+          ARGS=""
+          if [ -n "${{ github.event.inputs.section }}" ]; then ARGS="$ARGS --section ${{ github.event.inputs.section }}"; fi
+          if [ "${{ github.event.inputs.dry }}" = "true" ]; then ARGS="$ARGS --dry"; fi
+          node newsroom/run.mjs $ARGS
+      - name: Deploy to Netlify (only when a token is configured)
+        if: ${{ secrets.NETLIFY_AUTH_TOKEN != '' }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: npx --yes netlify-cli deploy --prod --dir=magazine/public --site "$NETLIFY_SITE_ID" --message "newsroom $(date -u +%FT%TZ)"
+      - name: Upload the run's output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-${{ github.run_id }}
+          path: |
+            magazine/newsroom/STATE.json
+            magazine/newsroom/outbox
+            magazine/OPS
+          if-no-files-found: ignore

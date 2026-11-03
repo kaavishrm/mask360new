@@ -1,0 +1,15 @@
+{
+  "name": "mask360-newsroom",
+  "private": true,
+  "type": "module",
+  "description": "The Mask360 newsroom: scout, write, edit, legal, art, publish, post.",
+  "scripts": {
+    "run": "node run.mjs",
+    "lint": "node lint.mjs",
+    "build": "node ../build.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.0",
+    "zod": "^3.25.0"
+  }
+}
