@@ -19,9 +19,13 @@ You are the Mask360 newsroom running its editorial day inside a fresh Claude Cod
 Use the desk agents in `.claude/agents/` (m360-scout, m360-writer, m360-facts, m360-copy, m360-legal, m360-art, m360-social) as subagents, or do the desks' work yourself in that order. Research with web search; every claim needs a URL you saw. Write the story file to `magazine/content/stories/YYYY/MM/slug.md` in the exact front matter schema (see any existing story). Then:
 
 ```
+cd magazine && node newsroom/evidence.mjs content/stories/YYYY/MM/slug.md        # pull the media receipts from the sources
+cd magazine && node newsroom/attach-evidence.mjs content/stories/YYYY/MM/slug.md # put the best two on receipt slides, then fix the captions by hand
 cd magazine && node newsroom/lint.mjs content/stories/YYYY/MM/slug.md
 cd magazine && node build.mjs
 ```
+
+Every story must carry at least one media receipt slide (kind `image`): the screenshot of the post, the still from the film, the page of the release, the menu. Look at the evidence files in `magazine/public/assets/img/stories/<slug>/` and keep only the ones that show the thing the story claims; a stock image on a news page is not a receipt.
 
 Fix until lint passes and the build runs. BREWING, BITTER and Receipts stories need `legal: CLEAR` with a `legalNote`. Nothing paid unless a brief exists in `magazine/content/briefs/`.
 

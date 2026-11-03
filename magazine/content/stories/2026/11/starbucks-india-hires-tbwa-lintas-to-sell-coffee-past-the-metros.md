@@ -8,47 +8,65 @@ date: 2026-11-02
 desk: People Desk
 cover: generated
 coverText: 505 stores
-credit:
+credit: ""
 sources:
-  - https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\Lintas, 2 November 2026)
-  - https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205 (afaqs, TBWA\Lintas bags Starbucks India mandate with quotes, 2 November 2026)
-  - https://www.storyboard18.com/amp/agency-news/starbucks-india-appoints-tbwalintas-as-creative-agency-of-record-ws-l-113900.htm (Storyboard18, Starbucks India appoints TBWA\Lintas, 2 November 2026)
-  - https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks numbers, 27 October 2026)
-  - https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas survives as TBWA\Lintas, Sandeep Goyal quote, 3 December 2025)
-  - https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure effective 1 January 2026, 2 December 2025)
-  - https://www.afaqs.com/news/advertising/tata-starbucks-launches-a-new-campaign-itstartswithyourname (afaqs, Edelman India conceptualised #ItStartsWithYourName, 11 May 2023)
-  - https://campaignbriefasia.com/?p=165223 (Campaign Brief Asia, Edelman India made the 2024 Diwali film #MeriSpecialJagah, 16 October 2024)
-  - https://www.campaignindia.in/video/starbucks-bets-on-togetherness-one-saffron-latte-at-a-time/505216 (Campaign India, 2025 Diwali film #HumariSpecialJagah with Edelman quoted, 13 October 2025)
-  - https://www.campaignindia.in/article/tata-starbucks-makes-room-for-romance-at-diwali/47ng9advjtp7byn5tgebb4w443 (Campaign India, Diwali 2026 work Special Diwali ki Special Jagah, no agency credited, October 2026)
-tags: [starbucks, tbwa lintas, omnicom, edelman, pitch, coffee]
+- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
+- "https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205 (afaqs, TBWA\\\\\\\\\\\\\\\\Lintas bags Starbucks India mandate with quotes, 2 November 2026)"
+- "https://www.storyboard18.com/amp/agency-news/starbucks-india-appoints-tbwalintas-as-creative-agency-of-record-ws-l-113900.htm (Storyboard18, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
+- "https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks numbers, 27 October 2026)"
+- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas survives as TBWA\\\\\\\\\\\\\\\\Lintas, Sandeep Goyal quote, 3 December 2025)"
+- "https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure effective 1 January 2026, 2 December 2025)"
+- "https://www.afaqs.com/news/advertising/tata-starbucks-launches-a-new-campaign-itstartswithyourname (afaqs, Edelman India conceptualised #ItStartsWithYourName, 11 May 2023)"
+- "https://campaignbriefasia.com/?p=165223 (Campaign Brief Asia, Edelman India made the 2024 Diwali film #MeriSpecialJagah, 16 October 2024)"
+- "https://www.campaignindia.in/video/starbucks-bets-on-togetherness-one-saffron-latte-at-a-time/505216 (Campaign India, 2025 Diwali film #HumariSpecialJagah with Edelman quoted, 13 October 2025)"
+- "https://www.campaignindia.in/article/tata-starbucks-makes-room-for-romance-at-diwali/47ng9advjtp7byn5tgebb4w443 (Campaign India, Diwali 2026 work Special Diwali ki Special Jagah, no agency credited, October 2026)"
+tags:
+- starbucks
+- tbwa lintas
+- omnicom
+- edelman
+- pitch
+- coffee
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: Starbucks India hires TBWA\Lintas to sell coffee past the metros
-  - type: tea
-    pull: The pitch is over.
-    text: "Tata Starbucks named TBWA\Lintas, part of Omnicom Advertising India, its creative agency of record on 2 November after a multi-agency pitch. The mandate: brand campaigns, social media, digital activations and consumer engagement, run on what both sides call an integrated, media-agnostic approach. No incumbent is named in the release."
-  - type: tea
-    pull: The brief says tier two.
-    text: "The release talks about a growing base of coffee drinkers in tier two and tier three cities, young consumers and first-time coffee drinkers. Mitali Maheshwari, head of product and marketing at Tata Starbucks, wants locally relevant, digital and experiential storytelling. Translation: the growth is not in Bandra."
-  - type: tea
-    pull: Lintas, ten months old again.
-    text: TBWA\Lintas exists because Omnicom retired MullenLowe after buying IPG and kept the Lintas name on its merged TBWA shop in India from 1 January 2026, reporting to Aditya Kanthy. Russell Barrett, chief creative experience officer, says the plan is ideas that go beyond the cup and give people something to do.
-  - type: tea
-    pull: 505 stores, 81 cities.
-    text: "Tata Consumer's Q2 FY27 numbers, out 27 October: Tata Starbucks revenue up 15 percent on strong same-store sales, seven net new stores including two Reserve outlets, 505 stores in 81 cities. The 2023 and 2024 campaigns carried Edelman India's name in the trade press, and an Edelman adviser was quoted on the 2025 Diwali film."
-  - type: receipt
-    kind: number
-    number: "505"
-    caption: Tata Starbucks stores across 81 cities at the end of September 2026, per Tata Consumer's Q2 FY27 results
-  - type: receipt
-    kind: quote
-    quote: ...an exciting opportunity to deepen that connection through locally relevant, digital and experiential storytelling
-    source: Mitali Maheshwari, head of product and marketing, Tata Starbucks, in the appointment release, per afaqs, 2 November 2026
-  - type: verdict
-    text: "The read: Starbucks India bought a pitch-winning agency with a revived name and a brief about the cities where it is still new. Watch whether the first campaign runs in Indore before it runs in Mumbai. That is the test."
-  - type: close
+- type: cover
+  title: Starbucks India hires TBWA\Lintas to sell coffee past the metros
+- type: tea
+  pull: The pitch is over.
+  text: "Tata Starbucks named TBWA\\\\\\\\\\\\\\\\Lintas, part of Omnicom Advertising India, its creative agency of record on 2 November after a multi-agency pitch. The mandate: brand campaigns, social media, digital activations and consumer engagement, run on what both sides call an integrated, media-agnostic approach. No incumbent is named in the release."
+- type: receipt
+  kind: image
+  image: assets/img/stories/starbucks-india-hires-tbwa-lintas-to-sell-coffee-past-the-metros/ev-1.jpg
+  caption: TBWA\Lintas bags creative mandate for Starbucks India. afaqs, TBWA\Lintas bags Starbucks India mandate with quotes, 2 November 2026
+  credit: "Image: afaqs.com, afaqs, TBWA\\Lintas bags Starbucks India mandate with quotes, 2 November 2026"
+  source: https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205
+- type: receipt
+  kind: image
+  image: assets/img/stories/starbucks-india-hires-tbwa-lintas-to-sell-coffee-past-the-metros/ev-2.jpg
+  caption: Starbucks India appoints TBWA\Lintas as creative agency of record. Storyboard18, Starbucks India appoints TBWA\Lintas, 2 November 2026
+  credit: "Image: storyboard18.com, Storyboard18, Starbucks India appoints TBWA\\Lintas, 2 November 2026"
+  source: https://www.storyboard18.com/amp/agency-news/starbucks-india-appoints-tbwalintas-as-creative-agency-of-record-ws-l-113900.htm
+- type: tea
+  pull: The brief says tier two.
+  text: "The release talks about a growing base of coffee drinkers in tier two and tier three cities, young consumers and first-time coffee drinkers. Mitali Maheshwari, head of product and marketing at Tata Starbucks, wants locally relevant, digital and experiential storytelling. Translation: the growth is not in Bandra."
+- type: tea
+  pull: Lintas, ten months old again.
+  text: TBWA\Lintas exists because Omnicom retired MullenLowe after buying IPG and kept the Lintas name on its merged TBWA shop in India from 1 January 2026, reporting to Aditya Kanthy. Russell Barrett, chief creative experience officer, says the plan is ideas that go beyond the cup and give people something to do.
+- type: tea
+  pull: 505 stores, 81 cities.
+  text: "Tata Consumer's Q2 FY27 numbers, out 27 October: Tata Starbucks revenue up 15 percent on strong same-store sales, seven net new stores including two Reserve outlets, 505 stores in 81 cities. The 2023 and 2024 campaigns carried Edelman India's name in the trade press, and an Edelman adviser was quoted on the 2025 Diwali film."
+- type: receipt
+  kind: number
+  number: 505
+  caption: Tata Starbucks stores across 81 cities at the end of September 2026, per Tata Consumer's Q2 FY27 results
+- type: receipt
+  kind: quote
+  quote: ...an exciting opportunity to deepen that connection through locally relevant, digital and experiential storytelling
+  source: Mitali Maheshwari, head of product and marketing, Tata Starbucks, in the appointment release, per afaqs, 2 November 2026
+- type: verdict
+  text: "The read: Starbucks India bought a pitch-winning agency with a revived name and a brief about the cities where it is still new. Watch whether the first campaign runs in Indore before it runs in Mumbai. That is the test."
+- type: close
 caption: |
   Starbucks India has a new agency, and the brief says tier two.
   Tata Starbucks named TBWA\Lintas, part of Omnicom Advertising India, creative agency of record on 2 November after a multi-agency pitch. Scope: brand campaigns, social, digital activations, consumer engagement.
@@ -69,8 +87,8 @@ linkedin: |
 alt: |
   Cover slide on People green with the headline Starbucks India hires TBWA\Lintas to sell coffee past the metros, SPILLED kicker, Mask360 masthead.
   Tea slide: the win, Tata Starbucks names TBWA\Lintas creative agency of record after a multi-agency pitch, with the mandate scope.
-  Tea slide: the brief, tier two and tier three cities, young consumers and first-time coffee drinkers.
-  Tea slide: the agency, how TBWA\Lintas came to exist under Omnicom Advertising India from 1 January 2026.
+  Receipt slide, an image from afaqs.com
+  Receipt slide, an image from storyboard18.com
   Tea slide: the numbers from Tata Consumer's Q2 FY27 results and the Edelman India campaign history.
   Receipt slide: the number 505 set large, Tata Starbucks stores across 81 cities.
   Receipt slide: quote from Mitali Maheshwari of Tata Starbucks on locally relevant, digital and experiential storytelling.

@@ -200,7 +200,28 @@ def slide_receipt(s, st, i, n):
     draw.rectangle([SAFE - 24, SAFE - 24, W - SAFE + 24, H - SAFE + 24], outline=BLACK, width=2)
     label(draw, 'The receipt', hexrgb(sec['color']))
     kind = s.get('kind')
-    if kind == 'number':
+    if kind == 'image':
+        # the media receipt: the actual post, article, still or release, with caption and credit
+        box_top, box_h = SAFE + 90, 760
+        placed = False
+        img = s.get('image')
+        if img:
+            p = os.path.join(st['root'], 'public', img)
+            if os.path.exists(p):
+                try:
+                    ph = Image.open(p).convert('RGB'); bw = W - 2 * SAFE
+                    r = min(bw / ph.width, box_h / ph.height)
+                    ph = ph.resize((max(1, int(ph.width * r)), max(1, int(ph.height * r))), Image.LANCZOS)
+                    x = SAFE + (bw - ph.width) // 2
+                    im.paste(ph, (x, box_top)); draw.rectangle([x, box_top, x + ph.width, box_top + ph.height], outline=BLACK, width=2)
+                    box_h = ph.height; placed = True
+                except Exception as e: print('receipt image failed:', e, file=sys.stderr)
+        if not placed:
+            draw.rectangle([SAFE, box_top, W - SAFE, box_top + box_h], fill=FIELD)
+        y = box_top + box_h + 32
+        y = block(draw, (SAFE, y), s.get('caption', ''), 'sans', 34, 26, W - 2 * SAFE, 4, BLACK, 1.3, -0.02) + 14
+        block(draw, (SAFE, y), s.get('credit', ''), 'sans', 24, 20, W - 2 * SAFE, 2, GREY, 1.3, -0.01)
+    elif kind == 'number':
         f, lines, lh, tr = fit_text(draw, str(s.get('number', '')), 'serif', 360, 140, W - 2 * SAFE, 2, 0.95, -0.05)
         y = SAFE + 260
         for ln in lines: draw_text(draw, (SAFE, y), ln, f, BLACK, tr); y += lh
@@ -231,8 +252,8 @@ def slide_verdict(s, st, i, n):
     if st.get('score') not in (None, ''):
         sc = str(st['score'])
         f = font('serif', 180)
-        draw_text(draw, (W - SAFE - text_width(draw, sc, f, -0.05 * 180), H - SAFE - 200), sc, f, ink, -0.05 * 180)
-        draw_text(draw, (W - SAFE - text_width(draw, '/10', font('sans', 32)), H - SAFE - 10 - 32), '/10', font('sans', 32), ink)
+        draw_text(draw, (W - SAFE - text_width(draw, sc, f, -0.05 * 180), H - SAFE - 300), sc, f, ink, -0.05 * 180)
+        draw_text(draw, (W - SAFE - text_width(draw, '/10', font('sans', 32)), H - SAFE - 110 - 32), '/10', font('sans', 32), ink)
     masthead(draw, ink); page_no(draw, i, n, ink)
     return im
 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.100.0",
-    "zod": "^3.25.0"
+    "zod": "^3.25.0",
+    "playwright": "^1.50.0"
   }
 }

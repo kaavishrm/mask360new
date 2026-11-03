@@ -8,65 +8,83 @@ date: 2026-11-03
 desk: People Desk
 cover: generated
 coverText: two CEOs
-credit:
+credit: ""
 sources:
-  - https://www.campaignindia.in/article/kiran-ramamurthy-to-succeed-babita-baruah-as-vml-india-ceo/4y8cd5s5sk77h08ns86a1ve9nt (Campaign India, VML India CEO change, 28 October 2026)
-  - https://www.afaqs.com/people-spotting/vml-india-appoints-kiran-ramamurthy-as-ceo-12761362 (afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026)
-  - https://www.campaignindia.in/article/shouvik-roy-returns-to-ogilvy-group-as-ceo-of-grey-82-5/4876ezsfx9pv63v3h72ff8jedx (Campaign India, Shouvik Roy named Grey 82.5 CEO, 29 October 2026)
-  - https://www.storyboard18.com/brand-makers/shouvik-roy-to-take-over-as-ceo-of-grey-82-5-ws-l-113641.htm (Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026)
-  - https://manifest-media.in/advertising/291026/shouvik-roy-moves-back-to-ogilvy.html (Manifest Media, Shouvik Roy career dates, 29 October 2026)
-  - https://www.campaignindia.in/article/neville-shah-moves-on-from-kinnect/42j7n9abrd5vg08qypawggtgxs (Campaign India, Neville Shah exits Kinnect, 15 October 2026)
-  - https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\Lintas, 2 November 2026)
-  - https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks store count, 27 October 2026)
-  - https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas name revived as TBWA\Lintas from 1 January 2026, 3 December 2025)
-  - https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure including Kinnect, 2 December 2025)
-  - https://www.campaignindia.in/article/aaai-sets-up-indie-council-names-tanya-goyal-chair/4mwxvygf854w8wpbj6dxcqvsn1 (Campaign India, AAAI INDIE Council and Tanya Goyal, 30 October 2026)
-  - https://www.campaignindia.in/article/media-agency-representatives-unite-under-new-aaai-council/4w32qxp00e92jy22paazefs4c6 (Campaign India, AAAI Media Council first meeting, 3 November 2026)
-  - https://www.afaqs.com/people-spotting/porter-appoints-elevates-mohit-rathi-to-chief-marketing-officer-12779093 (afaqs, Porter promotes Mohit Rathi to CMO, 3 November 2026)
-  - https://www.afaqs.com/people-spotting/apollo-tyres-appoints-kanika-juneja-as-head-of-marketing-india-south-east-asia-12780001 (afaqs, Kanika Juneja to Apollo Tyres, 3 November 2026)
-tags: [vml, ogilvy, wpp, kinnect, tbwa lintas, aaai]
+- "https://www.campaignindia.in/article/kiran-ramamurthy-to-succeed-babita-baruah-as-vml-india-ceo/4y8cd5s5sk77h08ns86a1ve9nt (Campaign India, VML India CEO change, 28 October 2026)"
+- "https://www.afaqs.com/people-spotting/vml-india-appoints-kiran-ramamurthy-as-ceo-12761362 (afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026)"
+- "https://www.campaignindia.in/article/shouvik-roy-returns-to-ogilvy-group-as-ceo-of-grey-82-5/4876ezsfx9pv63v3h72ff8jedx (Campaign India, Shouvik Roy named Grey 82.5 CEO, 29 October 2026)"
+- "https://www.storyboard18.com/brand-makers/shouvik-roy-to-take-over-as-ceo-of-grey-82-5-ws-l-113641.htm (Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026)"
+- "https://manifest-media.in/advertising/291026/shouvik-roy-moves-back-to-ogilvy.html (Manifest Media, Shouvik Roy career dates, 29 October 2026)"
+- "https://www.campaignindia.in/article/neville-shah-moves-on-from-kinnect/42j7n9abrd5vg08qypawggtgxs (Campaign India, Neville Shah exits Kinnect, 15 October 2026)"
+- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
+- "https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks store count, 27 October 2026)"
+- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas name revived as TBWA\\\\\\\\\\\\\\\\Lintas from 1 January 2026, 3 December 2025)"
+- "https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure including Kinnect, 2 December 2025)"
+- "https://www.campaignindia.in/article/aaai-sets-up-indie-council-names-tanya-goyal-chair/4mwxvygf854w8wpbj6dxcqvsn1 (Campaign India, AAAI INDIE Council and Tanya Goyal, 30 October 2026)"
+- "https://www.campaignindia.in/article/media-agency-representatives-unite-under-new-aaai-council/4w32qxp00e92jy22paazefs4c6 (Campaign India, AAAI Media Council first meeting, 3 November 2026)"
+- "https://www.afaqs.com/people-spotting/porter-appoints-elevates-mohit-rathi-to-chief-marketing-officer-12779093 (afaqs, Porter promotes Mohit Rathi to CMO, 3 November 2026)"
+- "https://www.afaqs.com/people-spotting/apollo-tyres-appoints-kanika-juneja-as-head-of-marketing-india-south-east-asia-12780001 (afaqs, Kanika Juneja to Apollo Tyres, 3 November 2026)"
+tags:
+- vml
+- ogilvy
+- wpp
+- kinnect
+- tbwa lintas
+- aaai
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: WPP India names two agency CEOs in two days
-  - type: item
-    name: Kiran Ramamurthy, from Grey 82.5 to VML India
-    why: Named VML India CEO on 28 October, effective 1 December. Babita Baruah, CEO since 2024, moves to a regional role running the Ford business.
-    catch: WPP Creative India promotes from inside the group. The man who merged Grey and 82.5 now gets the bigger shop.
-    paid: false
-  - type: item
-    name: Shouvik Roy, back to Ogilvy Group as Grey 82.5 CEO
-    why: Announced 29 October, effective 1 December. He ran Ogilvy Delhi as president, co-founded the agency behind Paperboat and helped build G.O.A.T Brand Labs. He replaces Ramamurthy.
-    catch: Ogilvy Group wants a founder type for its self-described challenger shop. VR Rajesh said as much in the release.
-    paid: false
-  - type: item
-    name: Neville Shah, from Kinnect CCO to next move not known
-    why: Campaign India reported on 15 October that he has stepped down as chief creative officer and is serving notice. He joined in May 2024 after ten years at Ogilvy.
-    catch: Kinnect has sat inside Omnicom Advertising India since 1 January. Campaign India says his next move is not known. We leave it there.
-    paid: false
-  - type: item
-    name: TBWA\Lintas wins Starbucks India
-    why: Tata Starbucks named the Omnicom agency creative agency of record on 2 November after a multi-agency pitch. Brand campaigns, social, digital activations. 505 stores in 81 cities.
-    catch: A pitch win for the revived Lintas name, ten months after the rebrand. The brief says tier two and three.
-    paid: false
-  - type: item
-    name: Tanya Goyal, Everest Brand Solutions, to chair of AAAI's INDIE Council
-    why: "AAAI set up a council for independent agencies on 30 October and named her chair. First job: an AI boot camp after Diwali, starting with prompt engineering basics."
-    catch: The trade body builds a lane for indies while holdcos consolidate. Prompt engineering as opening act says where the anxiety is.
-    paid: false
-  - type: item
-    name: Mohit Rathi, from Porter VP customer growth to Porter CMO
-    why: Promoted on 3 November alongside a new CFO, Gaurav Jain from Amazon, and CTO Shubham Gupta. Rathi joined Porter over a decade ago as an expansion manager.
-    catch: Three C-suite seats in one release, two filled from inside. The CMO chair went to a ten-year operator, not an FMCG hire.
-    paid: false
-  - type: receipt
-    kind: quote
-    quote: VML enters this next chapter in a position of strength
-    source: Hephzibah Pathak, CEO, WPP Creative India, in the VML release, per Campaign India, 28 October 2026
-  - type: verdict
-    text: "The read: WPP India fills one CEO chair from inside and one with a returning alumnus, Omnicom's revived Lintas wins a pitch, and the trade body builds a lane for indies. The holdco reshuffle has stopped talking and started hiring."
-  - type: close
+- type: cover
+  title: WPP India names two agency CEOs in two days
+- type: item
+  name: Kiran Ramamurthy, from Grey 82.5 to VML India
+  why: Named VML India CEO on 28 October, effective 1 December. Babita Baruah, CEO since 2024, moves to a regional role running the Ford business.
+  catch: WPP Creative India promotes from inside the group. The man who merged Grey and 82.5 now gets the bigger shop.
+  paid: false
+- type: receipt
+  kind: image
+  image: assets/img/stories/wpp-india-names-two-agency-ceos-in-two-days/ev-1.jpg
+  caption: VML India appoints Kiran Ramamurthy as CEO. afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026
+  credit: "Image: afaqs.com, afaqs, VML India appoints Kiran Ramamurthy, 28 October 2026"
+  source: https://www.afaqs.com/people-spotting/vml-india-appoints-kiran-ramamurthy-as-ceo-12761362
+- type: receipt
+  kind: image
+  image: assets/img/stories/wpp-india-names-two-agency-ceos-in-two-days/ev-2.jpg
+  caption: Shouvik Roy to take over as CEO of Grey 82.5. Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026
+  credit: "Image: storyboard18.com, Storyboard18, Shouvik Roy to Grey 82.5, 29 October 2026"
+  source: https://www.storyboard18.com/brand-makers/shouvik-roy-to-take-over-as-ceo-of-grey-82-5-ws-l-113641.htm
+- type: item
+  name: Shouvik Roy, back to Ogilvy Group as Grey 82.5 CEO
+  why: Announced 29 October, effective 1 December. He ran Ogilvy Delhi as president, co-founded the agency behind Paperboat and helped build G.O.A.T Brand Labs. He replaces Ramamurthy.
+  catch: Ogilvy Group wants a founder type for its self-described challenger shop. VR Rajesh said as much in the release.
+  paid: false
+- type: item
+  name: Neville Shah, from Kinnect CCO to next move not known
+  why: Campaign India reported on 15 October that he has stepped down as chief creative officer and is serving notice. He joined in May 2024 after ten years at Ogilvy.
+  catch: Kinnect has sat inside Omnicom Advertising India since 1 January. Campaign India says his next move is not known. We leave it there.
+  paid: false
+- type: item
+  name: TBWA\Lintas wins Starbucks India
+  why: Tata Starbucks named the Omnicom agency creative agency of record on 2 November after a multi-agency pitch. Brand campaigns, social, digital activations. 505 stores in 81 cities.
+  catch: A pitch win for the revived Lintas name, ten months after the rebrand. The brief says tier two and three.
+  paid: false
+- type: item
+  name: Tanya Goyal, Everest Brand Solutions, to chair of AAAI's INDIE Council
+  why: "AAAI set up a council for independent agencies on 30 October and named her chair. First job: an AI boot camp after Diwali, starting with prompt engineering basics."
+  catch: The trade body builds a lane for indies while holdcos consolidate. Prompt engineering as opening act says where the anxiety is.
+  paid: false
+- type: item
+  name: Mohit Rathi, from Porter VP customer growth to Porter CMO
+  why: Promoted on 3 November alongside a new CFO, Gaurav Jain from Amazon, and CTO Shubham Gupta. Rathi joined Porter over a decade ago as an expansion manager.
+  catch: Three C-suite seats in one release, two filled from inside. The CMO chair went to a ten-year operator, not an FMCG hire.
+  paid: false
+- type: receipt
+  kind: quote
+  quote: VML enters this next chapter in a position of strength
+  source: Hephzibah Pathak, CEO, WPP Creative India, in the VML release, per Campaign India, 28 October 2026
+- type: verdict
+  text: "The read: WPP India fills one CEO chair from inside and one with a returning alumnus, Omnicom's revived Lintas wins a pitch, and the trade body builds a lane for indies. The holdco reshuffle has stopped talking and started hiring."
+- type: close
 caption: |
   Two CEO chairs in two days, both WPP. Also, Lintas is winning again.
   VML India hands the CEO seat to Grey 82.5's Kiran Ramamurthy from 1 December, with Babita Baruah moving to run Ford regionally. A day later Shouvik Roy comes back to Ogilvy Group to run Grey 82.5.
@@ -84,8 +102,8 @@ linkedin: |
 alt: |
   Cover slide on People green with the headline WPP India names two agency CEOs in two days, SPILLED kicker, Mask360 masthead.
   Item slide: Kiran Ramamurthy, from Grey 82.5 to VML India CEO, effective 1 December, with what it signals.
-  Item slide: Shouvik Roy, back to The Ogilvy Group as CEO of Grey 82.5, with what it signals.
-  Item slide: Neville Shah, stepped down as CCO of Kinnect per Campaign India, next move not known.
+  Receipt slide, an image from afaqs.com
+  Receipt slide, an image from storyboard18.com
   Item slide: TBWA\Lintas wins Starbucks India's creative account after a multi-agency pitch, 505 stores in 81 cities.
   Item slide: Tanya Goyal of Everest Brand Solutions named chair of AAAI's new INDIE Council.
   Item slide: Mohit Rathi promoted to chief marketing officer at Porter alongside a new CFO and CTO.

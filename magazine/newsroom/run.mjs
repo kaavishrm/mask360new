@@ -11,6 +11,9 @@ import { ScoutOut, EditorOut, Story, FactsOut, CopyOut, LegalOut } from './schem
 import { parseFrontMatter, stringifyFrontMatter } from './yaml.mjs';
 import { lintStory, allStoryFiles, SECTIONS, FORMATS, ROOT } from './lint.mjs';
 import { storyPayload } from './story-json.mjs';
+import { collect } from './evidence.mjs';
+import { attach } from './attach-evidence.mjs';
+import { ArtOut } from './schemas.mjs';
 import { site } from '../config.mjs';
 import { postStory } from './post.mjs';
 
@@ -126,6 +129,21 @@ async function produce(pick, cand) {
   if (!st.coverText) st.coverText = st.title.split(' ').slice(0, 3).join(' ');
   if (st.alt.length !== st.slides.length) st.alt = st.slides.map((s, i) => st.alt[i] || `${s.type} slide ${i + 1}`);
   let { path, slug } = toFile(st, legal);
+  // evidence: the media receipts, pulled from the story's own sources, then captioned by the art desk
+  log('evidence: collecting');
+  const ev = await collect(path, { max: 6 });
+  const att = attach(path, { max: 2 });
+  log(`evidence: ${ev.length} files, ${att.attached} attached${att.reason ? ` (${att.reason})` : ''}`);
+  if (att.attached) {
+    try {
+      const cur = parseFrontMatter(readFileSync(path, 'utf8'));
+      const imgs = cur.data.slides.map((s, i) => ({ i, s })).filter((x) => x.s.type === 'receipt' && x.s.kind === 'image');
+      const a = await draft({ role: 'art', schema: ArtOut, effort: 'low', user: `Caption these media receipts for the story. Story title: ${cur.data.title}. Dek: ${cur.data.dek}.\n\nReceipts:\n${imgs.map((x) => `slide ${x.i + 1}: kind ${ev.find((e) => e.file === x.s.image)?.kind || 'image'}, from ${x.s.source}, page title "${ev.find((e) => e.file === x.s.image)?.title || ''}", current caption "${x.s.caption}", credit "${x.s.credit}"`).join('\n')}\n\nReturn one caption per slide (under 25 words, what the picture shows and why it matters to the claim) and keep or tighten the credit.` });
+      usages.push(a.usage);
+      for (const c of a.data.captions) { const sl = cur.data.slides[c.slide - 1]; if (sl && sl.type === 'receipt' && sl.kind === 'image') { sl.caption = c.caption; if (c.credit) sl.credit = c.credit; } }
+      writeFileSync(path, stringifyFrontMatter(cur.data, cur.body));
+    } catch (e) { log(`art caption pass skipped: ${e.message}`); }
+  }
   let r = lintStory(path);
   if (r.errors.length) {
     log(`lint: ${r.errors.length} errors, repairing`);

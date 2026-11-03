@@ -144,8 +144,8 @@ slides:
     pull: The idea lands.
     text: ...
   - type: receipt
-    kind: quote | number | compare
-    ...
+    kind: quote | number | compare | image
+    ...                     # image: image (path under public/), caption, credit, source
   - type: verdict
     text: ...
   - type: close
@@ -157,4 +157,4 @@ alt: |
 Web body in Markdown. Headings with ##. Sources as links in the text.
 ```
 
-The build refuses a story that is missing title, dek, section, format, kicker, date, slides, caption or alt, that has an em dash anywhere, or that breaks the voice rules the linter checks.
+The build refuses a story that is missing title, dek, section, format, kicker, date, slides, caption or alt, that has an em dash anywhere, that breaks the voice rules the linter checks, or that has **no media receipt**: at least one receipt slide of kind `image` (a screenshot of the post, the article or the release, a still from the film, the menu, the invite, the price list) or a photo cover. A claim without a picture of the thing is a tweet, not a Mask360 story. The slide ceilings in the table above allow up to two media receipts on top of the format's text slides.

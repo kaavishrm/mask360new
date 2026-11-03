@@ -7,43 +7,60 @@ kicker: SWEET
 date: 2026-10-27
 desk: Campaigns Desk
 cover: generated
-coverText: "8.0"
-credit:
+coverText: 8
+credit: ""
 sources:
-  - https://www.afaqs.com/news/advertising/orras-festive-film-truly-hers-puts-women-at-the-centre-12695530 (afaqs report on the film with credits, collections and media plan, 2026-10-21)
-  - https://www.adgully.com/post/22599/orra-unveils-festive-film-truly-hers-to-spotlight-design-led-jewellery (Adgully report on the film with credits and the mirror and doorway description, 2026-10-21)
-  - https://www.mxmindia.com/marketing/orra-launches-truly-hers-festive-campaign (MxMIndia report carrying the ORRA statement, 2026-10-26)
-  - https://www.medianews4u.com/orra-unveils-festive-film-truly-hers-to-push-design-led-positioning/ (Medianews4u report on the film, 2026-10-21)
-  - https://creativebrandsmag.com/orra-puts-women-at-the-heart-of-the-festive-season-with-truly-hers-campaign/ (Creative Brands Mag report on the film, 2026-10-24)
-  - https://www.tribuneindia.com/news/business/orra-unveils-iss-diwali-bann-thann-kego-all-out-this-diwali-a-festive-film-that-enhances-its-design-led-journey-2-2 (PTI release via The Tribune, carries the alternate title and the 96 stores in 40 cities figure, 2026-10-23)
-  - https://en.wikipedia.org/wiki/Dar_Gai (Wikipedia profile of director Dar Gai)
-  - https://en.wikipedia.org/wiki/Dheer_Momaya (Wikipedia profile of Jugaad Motion Pictures co-founder Dheer Momaya)
-tags: [orra, dar gai, jugaad, spring capital, diwali]
+- "https://www.afaqs.com/news/advertising/orras-festive-film-truly-hers-puts-women-at-the-centre-12695530 (afaqs report on the film with credits, collections and media plan, 2026-10-21)"
+- "https://www.adgully.com/post/22599/orra-unveils-festive-film-truly-hers-to-spotlight-design-led-jewellery (Adgully report on the film with credits and the mirror and doorway description, 2026-10-21)"
+- "https://www.mxmindia.com/marketing/orra-launches-truly-hers-festive-campaign (MxMIndia report carrying the ORRA statement, 2026-10-26)"
+- "https://www.medianews4u.com/orra-unveils-festive-film-truly-hers-to-push-design-led-positioning/ (Medianews4u report on the film, 2026-10-21)"
+- "https://creativebrandsmag.com/orra-puts-women-at-the-heart-of-the-festive-season-with-truly-hers-campaign/ (Creative Brands Mag report on the film, 2026-10-24)"
+- "https://www.tribuneindia.com/news/business/orra-unveils-iss-diwali-bann-thann-kego-all-out-this-diwali-a-festive-film-that-enhances-its-design-led-journey-2-2 (PTI release via The Tribune, carries the alternate title and the 96 stores in 40 cities figure, 2026-10-23)"
+- "https://en.wikipedia.org/wiki/Dar_Gai (Wikipedia profile of director Dar Gai)"
+- "https://en.wikipedia.org/wiki/Dheer_Momaya (Wikipedia profile of Jugaad Motion Pictures co-founder Dheer Momaya)"
+tags:
+- orra
+- dar gai
+- jugaad
+- spring capital
+- diwali
 paid: false
-partner:
-score: "8.0"
+partner: ""
+score: 8
 slides:
-  - type: cover
-    title: "ORRA's festive film Truly Hers, scored: 8.0"
-  - type: tea
-    pull: "Idea: 8/10"
-    text: Most festive jewellery films celebrate the occasion. Truly Hers celebrates the woman. She chooses her jewellery at her mirror while her daughter watches from the doorway, then heads out to friends, elders and family. The jewellery is hers before it is Diwali's. One clean idea, and the film stays on it.
-  - type: tea
-    pull: "Craft: 8/10"
-    text: Dar Gai directs, Jugaad produces, Spring Capital conceptualises. The camera stays close and slow on the pieces, which is how you sell craftsmanship without a voiceover saying craftsmanship. Two points off because no release we read names the cast, the music or the cinematographer, and in this industry credit is the currency.
-  - type: tea
-    pull: "Fit: 9/10"
-    text: The film opens six collections, Shades, Cosmos, Blooms, Mandala, Kalamkari and Waves, each built on one design idea, with product films to follow. It runs on digital, OTT, connected TV and cinema through the season. For a 96-store brand in 40 cities pushing design-led, the film does the job a catalogue cannot.
-  - type: tea
-    pull: "Courage: 7/10"
-    text: It drops the festival from a Diwali film, braver than it sounds in a category that sells on occasion. But a woman at a mirror with diamonds is still the category's home ground. And PTI ran the same film as Iss Diwali, Bann-Thann Ke, so the brand had two titles for one idea.
-  - type: receipt
-    kind: quote
-    quote: With Truly Hers, Orra wanted to tell her story, not the festival's.
-    source: ORRA statement, via MxMIndia, 26 October 2026
-  - type: verdict
-    text: "The read: 8.0. ORRA hands a jewellery film to a feature director and gets a film, not a catalogue. Credit to Spring Capital, Jugaad and Dar Gai. Next time, put the cast and the music on the release. They earned it too."
-  - type: close
+- type: cover
+  title: "ORRA's festive film Truly Hers, scored: 8.0"
+- type: tea
+  pull: "Idea: 8/10"
+  text: Most festive jewellery films celebrate the occasion. Truly Hers celebrates the woman. She chooses her jewellery at her mirror while her daughter watches from the doorway, then heads out to friends, elders and family. The jewellery is hers before it is Diwali's. One clean idea, and the film stays on it.
+- type: receipt
+  kind: image
+  image: assets/img/stories/orra-truly-hers-scored/ev-1.jpg
+  caption: ORRA’s festive film ‘Truly Hers’ puts women at the centre. afaqs report on the film with credits, collections and media plan, 2026-10-21
+  credit: "Image: afaqs.com, afaqs report on the film with credits, collections and media plan, 2026-10-21"
+  source: https://www.afaqs.com/news/advertising/orras-festive-film-truly-hers-puts-women-at-the-centre-12695530
+- type: receipt
+  kind: image
+  image: assets/img/stories/orra-truly-hers-scored/ev-2.jpg
+  caption: ORRA unveils festive film ‘Truly Hers’ to spotlight design-led jewellery. Adgully report on the film with credits and the mirror and doorway description, 2026-1
+  credit: "Image: adgully.com, Adgully report on the film with credits and the mirror and doorway description, 2026-10-21"
+  source: https://www.adgully.com/post/22599/orra-unveils-festive-film-truly-hers-to-spotlight-design-led-jewellery
+- type: tea
+  pull: "Craft: 8/10"
+  text: Dar Gai directs, Jugaad produces, Spring Capital conceptualises. The camera stays close and slow on the pieces, which is how you sell craftsmanship without a voiceover saying craftsmanship. Two points off because no release we read names the cast, the music or the cinematographer, and in this industry credit is the currency.
+- type: tea
+  pull: "Fit: 9/10"
+  text: The film opens six collections, Shades, Cosmos, Blooms, Mandala, Kalamkari and Waves, each built on one design idea, with product films to follow. It runs on digital, OTT, connected TV and cinema through the season. For a 96-store brand in 40 cities pushing design-led, the film does the job a catalogue cannot.
+- type: tea
+  pull: "Courage: 7/10"
+  text: It drops the festival from a Diwali film, braver than it sounds in a category that sells on occasion. But a woman at a mirror with diamonds is still the category's home ground. And PTI ran the same film as Iss Diwali, Bann-Thann Ke, so the brand had two titles for one idea.
+- type: receipt
+  kind: quote
+  quote: With Truly Hers, Orra wanted to tell her story, not the festival's.
+  source: ORRA statement, via MxMIndia, 26 October 2026
+- type: verdict
+  text: "The read: 8.0. ORRA hands a jewellery film to a feature director and gets a film, not a catalogue. Credit to Spring Capital, Jugaad and Dar Gai. Next time, put the cast and the music on the release. They earned it too."
+- type: close
 caption: |
   ORRA made a Diwali film and left Diwali out of it. Scored 8.0.
   Truly Hers follows a woman from her mirror, daughter watching from the doorway, to an evening with friends and family. The jewellery is hers before it is the festival's.
@@ -62,8 +79,8 @@ linkedin: |
 alt: |
   Cover slide on campaigns red with the score 8.0 set huge, the headline ORRA's festive film Truly Hers, scored, and a SWEET pill.
   Tea slide, Idea 8 out of 10, on a film that celebrates the woman rather than the festival.
-  Tea slide, Craft 8 out of 10, crediting Dar Gai, Jugaad and Spring Capital and noting the missing cast and music credits.
-  Tea slide, Fit 9 out of 10, on the six collections, the media plan and ORRA's 96 stores in 40 cities.
+  Receipt slide, an image from afaqs.com
+  Receipt slide, an image from adgully.com
   Tea slide, Courage 7 out of 10, on dropping the festival and the second title PTI ran.
   Receipt slide quoting ORRA's statement, Orra wanted to tell her story, not the festival's.
   Verdict slide on red with the total 8.0 and the read.

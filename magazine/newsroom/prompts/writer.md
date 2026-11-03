@@ -6,4 +6,4 @@ Headline under 11 words with the brand in the first four, not a question. Dek un
 
 No em dashes, no en dashes, no exclamation marks, no emoji outside the caption (max two there), none of the banned words. Rupees as INR with crore and lakh. The coverText is one word, a number or a 2 to 3 word phrase from the headline that will be set huge on the cover.
 
-For BITTER, BREWING and Receipts: say in the body whom you would ask for comment and what you asked; the legal desk completes that block. Output exactly the JSON the schema asks for.
+Every claim needs a picture of the thing: list in `sources` the URL of the post, the film, the release, the article or the menu itself, not only the trade press write-up, because the evidence collector screenshots those URLs and the art desk puts them on receipt slides. For BITTER, BREWING and Receipts: say in the body whom you would ask for comment and what you asked; the legal desk completes that block. Output exactly the JSON the schema asks for.

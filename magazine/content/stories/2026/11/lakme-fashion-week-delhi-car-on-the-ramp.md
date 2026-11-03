@@ -8,57 +8,75 @@ date: 2026-10-29
 desk: Events Desk
 cover: generated
 coverText: a car
-credit:
+credit: ""
 sources:
-  - https://t2online.in/goodlife/fashion-beauty/lfw-x-fdci-2026-highlights--t2os-picks-shows-that-defined-the-landscape-of-modern-indian-fashion/2008838 (t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 buyer stalls, show by show, 25 October 2026)
-  - https://t2online.in/goodlife/fashion-beauty/manish-malhotra-s-menswear-luxe-pret-launches-with-sara-ali-khan-and-ayushmann-khurrana-as-showstoppers--at-lfw-x-fdci/2008722 (t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026)
-  - https://indianretailer.com/brandlicense/archives/news/nexa-partners-manish-malhotra-luxury-pret-2026-lakme-fashion-week.n6130 (Indian Retailer on the NEXA release, Partho Banerjee quote, Baleno inspiration, 23 October 2026)
-  - https://www.republicworld.com/entertainment/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-2026-2026-10-18-139172 (Republic World with ANI, showstopper looks and the Udta Teer release date, 18 October 2026)
-  - https://indiacsr.in/?p=202051 (American Express Experience Partner release as carried by India CSR, Centurion and Platinum benefits, Jaspreet Chandok quote, October 2026)
-  - https://easternherald.com/2026/10/17/american-express-comes-on-board-as-experience-partner-for-lakme-fashion-week-in-partnership-with-fashion-design-council-of-india-fdci/ (Eastern Herald carrying the American Express release, 17 October 2026)
-  - https://easternherald.com/2026/10/09/lakme-and-tira-come-together-to-present-pero-for-the-opening-show-of-lakme-fashion-week-in-partnership-with-the-fashion-design-council-of-india/ (Eastern Herald carrying the Lakmé and Tira release on the péro opening show, 9 October 2026)
-  - https://openthemagazine.com/art-culture/amit-aggarwal-brings-balloons-ice-cream-carts-and-a-burst-of-colour-to-the-lakmé-fashion-week-grand-finale (Open on the AM:IT grand finale, props and the 5PM Glam Reset tie-in, 19 October 2026)
-  - https://www.hollywoodreporterindia.com/lifestyle/fashion/aneet-padda-closes-lakmē-fashion-week-x-fdci-grand-finale-with-amit (Hollywood Reporter India on the finale, auto rickshaw on the ramp, Lakmé 9to5 HYA Glam range, 19 October 2026)
-  - https://www.newkerala.com/news/a/kept-her-small-toys-my-wardrobe-suryakumar-yadav-522.htm (ANI via newkerala, Suryakumar Yadav as showstopper for Ethnix by Raymond on 18 October, 20 October 2026)
-  - https://khelnow.com/cricket/suryakumar-yadav-recreates-supla-shot-202610 (Khel Now on the Supla shot on the ramp and the outfit, 19 October 2026)
-  - https://www.outlookindia.com/art-entertainment/in-photos-stars-dazzle-at-delhi-lakme-fashion-week-2026 (Outlook India PTI photo gallery with dated captions for 15 to 18 October, 19 October 2026)
-  - https://fashionunited.uk/news/fashion/r-elan-circular-design-challenge-2026-margn-takes-top-prize/2026101590856 (FashionUnited on the R|Elan Circular Design Challenge finale at the Embassy of France, 15 October 2026)
-tags: [lakme fashion week, fdci, nexa, american express, manish malhotra, amit aggarwal]
+- "https://t2online.in/goodlife/fashion-beauty/lfw-x-fdci-2026-highlights--t2os-picks-shows-that-defined-the-landscape-of-modern-indian-fashion/2008838 (t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 buyer stalls, show by show, 25 October 2026)"
+- "https://t2online.in/goodlife/fashion-beauty/manish-malhotra-s-menswear-luxe-pret-launches-with-sara-ali-khan-and-ayushmann-khurrana-as-showstoppers--at-lfw-x-fdci/2008722 (t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026)"
+- "https://indianretailer.com/brandlicense/archives/news/nexa-partners-manish-malhotra-luxury-pret-2026-lakme-fashion-week.n6130 (Indian Retailer on the NEXA release, Partho Banerjee quote, Baleno inspiration, 23 October 2026)"
+- "https://www.republicworld.com/entertainment/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-2026-2026-10-18-139172 (Republic World with ANI, showstopper looks and the Udta Teer release date, 18 October 2026)"
+- "https://indiacsr.in/?p=202051 (American Express Experience Partner release as carried by India CSR, Centurion and Platinum benefits, Jaspreet Chandok quote, October 2026)"
+- "https://easternherald.com/2026/10/17/american-express-comes-on-board-as-experience-partner-for-lakme-fashion-week-in-partnership-with-fashion-design-council-of-india-fdci/ (Eastern Herald carrying the American Express release, 17 October 2026)"
+- "https://easternherald.com/2026/10/09/lakme-and-tira-come-together-to-present-pero-for-the-opening-show-of-lakme-fashion-week-in-partnership-with-the-fashion-design-council-of-india/ (Eastern Herald carrying the Lakmé and Tira release on the péro opening show, 9 October 2026)"
+- "https://openthemagazine.com/art-culture/amit-aggarwal-brings-balloons-ice-cream-carts-and-a-burst-of-colour-to-the-lakmé-fashion-week-grand-finale (Open on the AM:IT grand finale, props and the 5PM Glam Reset tie-in, 19 October 2026)"
+- "https://www.hollywoodreporterindia.com/lifestyle/fashion/aneet-padda-closes-lakmē-fashion-week-x-fdci-grand-finale-with-amit (Hollywood Reporter India on the finale, auto rickshaw on the ramp, Lakmé 9to5 HYA Glam range, 19 October 2026)"
+- "https://www.newkerala.com/news/a/kept-her-small-toys-my-wardrobe-suryakumar-yadav-522.htm (ANI via newkerala, Suryakumar Yadav as showstopper for Ethnix by Raymond on 18 October, 20 October 2026)"
+- "https://khelnow.com/cricket/suryakumar-yadav-recreates-supla-shot-202610 (Khel Now on the Supla shot on the ramp and the outfit, 19 October 2026)"
+- "https://www.outlookindia.com/art-entertainment/in-photos-stars-dazzle-at-delhi-lakme-fashion-week-2026 (Outlook India PTI photo gallery with dated captions for 15 to 18 October, 19 October 2026)"
+- "https://fashionunited.uk/news/fashion/r-elan-circular-design-challenge-2026-margn-takes-top-prize/2026101590856 (FashionUnited on the R|Elan Circular Design Challenge finale at the Embassy of France, 15 October 2026)"
+tags:
+- lakme fashion week
+- fdci
+- nexa
+- american express
+- manish malhotra
+- amit aggarwal
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: Lakmé Fashion Week drives a car onto the ramp
-  - type: tea
-    pull: The room
-    text: Taj Palace, New Delhi, 13 to 18 October. Six days, over 35 shows, over 30 stalls in the buyers' lounge, per t2. Lakmé and Tira open with péro's Spring Summer 2027. House of Lakmé closes with AM:IT. Day one's other stage is the Embassy of France, where R|Elan's Circular Design Challenge hands Margn USD 16,000.
-  - type: item
-    name: Maruti Suzuki NEXA presents Manish Malhotra
-    why: 17 October. Malhotra's first fashion week in three and a half years launches menswear Luxe Prêt. A car makes a grand entry before Sara Ali Khan and Ayushmann Khurrana do.
-    catch: NEXA presented the show and the release says the collection drew inspiration from the New Age Baleno. The sponsor was in the clothes.
-    paid: false
-  - type: item
-    name: American Express takes the front row
-    why: Experience Partner. Centurion and Platinum card members get front-row seats at select shows, a VIP lounge and card member hospitality. Everyone else gets a brand experience zone at Taj Palace.
-    catch: Front row used to be the editor's seat. Now it is a card tier, subject to terms and conditions.
-    paid: false
-  - type: item
-    name: House of Lakmé closes with an ice-cream cart
-    why: Amit Aggarwal's AM:IT finale, On a Day Like Today, sends balloons, candyfloss, an auto rickshaw and an ice-cream cart down the runway. Aneet Padda, Lakmé's ambassador, closes it.
-    catch: The show is built around Lakmé 9to5's 5PM Glam Reset range. A product launch with better choreography than most.
-    paid: false
-  - type: item
-    name: Ethnix by Raymond books the T20 captain
-    why: Suryakumar Yadav's runway debut, 18 October, in an ivory Indo-Western with chintz-style embroidery. He turns to the crowd, recreates the Supla shot and mimes a guitar.
-    catch: A World Cup winning captain in a menswear show is a media plan, and a good one.
-    paid: false
-  - type: receipt
-    kind: quote
-    quote: At NEXA, we believe that true style is an expression of individuality and the confidence to stand apart.
-    source: Partho Banerjee, Senior Executive Officer, Marketing and Sales, Maruti Suzuki India, in the NEXA release carried by Indian Retailer, 23 October 2026
-  - type: verdict
-    text: "The read: Lakmé Fashion Week Delhi ran like a media plan with a runway attached. NEXA's car was the main character, Amex owned the front row, Lakmé 9to5 got the finale. Fine. The clothes still had to earn the room, and Malhotra's menswear did."
-  - type: close
+- type: cover
+  title: Lakmé Fashion Week drives a car onto the ramp
+- type: tea
+  pull: The room
+  text: "Taj Palace, New Delhi, 13 to 18 October. Six days, over 35 shows, over 30 stalls in the buyers' lounge, per t2. Lakmé and Tira open with péro's Spring Summer 2027. House of Lakmé closes with AM:IT. Day one's other stage is the Embassy of France, where R|Elan's Circular Design Challenge hands Margn USD 16,000."
+- type: receipt
+  kind: image
+  image: assets/img/stories/lakme-fashion-week-delhi-car-on-the-ramp/ev-1.jpg
+  caption: "LFW X FDCI 2026 highlights: t2oS picks shows that defined the landscape of modern Indian fashion. t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30"
+  credit: "Image: t2online.in, t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 buyer stalls, show by show, 25 October 2026"
+  source: https://t2online.in/goodlife/fashion-beauty/lfw-x-fdci-2026-highlights--t2os-picks-shows-that-defined-the-landscape-of-modern-indian-fashion/2008838
+- type: receipt
+  kind: image
+  image: assets/img/stories/lakme-fashion-week-delhi-car-on-the-ramp/ev-2.jpg
+  caption: Manish Malhotra. t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026
+  credit: "Image: t2online.in, t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026"
+  source: https://t2online.in/goodlife/fashion-beauty/manish-malhotra-s-menswear-luxe-pret-launches-with-sara-ali-khan-and-ayushmann-khurrana-as-showstoppers--at-lfw-x-fdci/2008722
+- type: item
+  name: Maruti Suzuki NEXA presents Manish Malhotra
+  why: 17 October. Malhotra's first fashion week in three and a half years launches menswear Luxe Prêt. A car makes a grand entry before Sara Ali Khan and Ayushmann Khurrana do.
+  catch: NEXA presented the show and the release says the collection drew inspiration from the New Age Baleno. The sponsor was in the clothes.
+  paid: false
+- type: item
+  name: American Express takes the front row
+  why: Experience Partner. Centurion and Platinum card members get front-row seats at select shows, a VIP lounge and card member hospitality. Everyone else gets a brand experience zone at Taj Palace.
+  catch: Front row used to be the editor's seat. Now it is a card tier, subject to terms and conditions.
+  paid: false
+- type: item
+  name: House of Lakmé closes with an ice-cream cart
+  why: "Amit Aggarwal's AM:IT finale, On a Day Like Today, sends balloons, candyfloss, an auto rickshaw and an ice-cream cart down the runway. Aneet Padda, Lakmé's ambassador, closes it."
+  catch: The show is built around Lakmé 9to5's 5PM Glam Reset range. A product launch with better choreography than most.
+  paid: false
+- type: item
+  name: Ethnix by Raymond books the T20 captain
+  why: Suryakumar Yadav's runway debut, 18 October, in an ivory Indo-Western with chintz-style embroidery. He turns to the crowd, recreates the Supla shot and mimes a guitar.
+  catch: A World Cup winning captain in a menswear show is a media plan, and a good one.
+  paid: false
+- type: receipt
+  kind: quote
+  quote: At NEXA, we believe that true style is an expression of individuality and the confidence to stand apart.
+  source: Partho Banerjee, Senior Executive Officer, Marketing and Sales, Maruti Suzuki India, in the NEXA release carried by Indian Retailer, 23 October 2026
+- type: verdict
+  text: "The read: Lakmé Fashion Week Delhi ran like a media plan with a runway attached. NEXA's car was the main character, Amex owned the front row, Lakmé 9to5 got the finale. Fine. The clothes still had to earn the room, and Malhotra's menswear did."
+- type: close
 caption: |
   A car got a runway entrance before Sara Ali Khan did.
   Lakmé Fashion Week x FDCI, Taj Palace, 13 to 18 October: over 35 shows in six days. Manish Malhotra returned after three and a half years with a menswear line, presented by Maruti Suzuki NEXA, and a car rolled out ahead of his showstoppers. American Express took the front row for Centurion and Platinum members as Experience Partner. Lakmé and Tira opened with péro, Lakmé 9to5 closed with Amit Aggarwal and an ice-cream cart.
@@ -77,8 +95,8 @@ linkedin: |
 alt: |
   Cover slide on events pink with the words "a car" set huge, the Events label, the SPILLED pill and the Mask360 masthead.
   White tea slide headed "The room" with the venue, dates, show count and opening and closing shows of Lakmé Fashion Week Delhi.
-  White item slide with an MM monogram, "Maruti Suzuki NEXA presents Manish Malhotra", the car entry and the Baleno catch.
-  White item slide with an AE monogram, "American Express takes the front row", the Centurion and Platinum perks and the catch.
+  Receipt slide, an image from t2online.in
+  Receipt slide, an image from t2online.in
   White item slide with an AA monogram, "House of Lakmé closes with an ice-cream cart", the finale props and the 5PM Glam Reset catch.
   White item slide with an ER monogram, "Ethnix by Raymond books the T20 captain", the Supla shot and the media plan catch.
   Framed receipt slide with the Partho Banerjee quote from the NEXA release, sourced to Indian Retailer, 23 October 2026.

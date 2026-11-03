@@ -8,45 +8,62 @@ date: 2026-10-30
 desk: Campaigns Desk
 cover: generated
 coverText: 60 of 61
-credit:
+credit: ""
 sources:
-  - https://indiantelevision.com/mam/60-of-61-nutraceutical-ads-breach-asci-code-report-finds/ (Indian Television report on the ASCI study, with the quoted claims, the 61, 60, 29 and 31 figures and Manisha Kapoor quotes, 2026-10-28)
-  - https://www.mediainfoline.com/advertising/ascis-a-pill-for-thought-report-flags-gaps-in-evidence-backing-nutraceutical-advertising-claims (Mediainfoline report on the study with the quoted claims and the USD 38.77 billion market figure, 2026-10-28)
-  - https://mediabrief.com/asci-flags-60-nutraceutical-ads-for-misleading-claims/ (MediaBrief report on the study with the contested and uncontested counts, 2026-10-28)
-  - https://www.mxmindia.com/advertising/asci-report-flags-evidence-gaps-in-nutraceutical-advertising-claims (MxMIndia report on the study with Manisha Kapoor quotes, 2026-10-30)
-  - https://openthemagazine.com/branding-marketing-and-advertising/misleading-health-ads-the-watchdog-barks-who-bites (Open column on ASCI enforcement limits, CCPA penalty ceilings and the missing referral detail, 2026-10-29)
-  - https://www.medianama.com/2026/10/223-asci-flags-60-misleading-nutraceutical-ads/ (Medianama report on the study, October 2026)
-  - https://www.business-standard.com/india-news/nutraceutical-ads-lack-scientific-proof-for-health-claims-asci-report-126102801440_1.html (Business Standard report on the study, 2026-10-28)
-  - https://www.exchange4media.com/advertising-news/weight-loss-promises-anti-ageing-claims-under-asci-scanner-in-nutraceutical-ads-159589.html (exchange4media report on the study, October 2026)
-tags: [asci, nutraceuticals, manisha kapoor, ccpa, health claims]
+- "https://indiantelevision.com/mam/60-of-61-nutraceutical-ads-breach-asci-code-report-finds/ (Indian Television report on the ASCI study, with the quoted claims, the 61, 60, 29 and 31 figures and Manisha Kapoor quotes, 2026-10-28)"
+- "https://www.mediainfoline.com/advertising/ascis-a-pill-for-thought-report-flags-gaps-in-evidence-backing-nutraceutical-advertising-claims (Mediainfoline report on the study with the quoted claims and the USD 38.77 billion market figure, 2026-10-28)"
+- "https://mediabrief.com/asci-flags-60-nutraceutical-ads-for-misleading-claims/ (MediaBrief report on the study with the contested and uncontested counts, 2026-10-28)"
+- "https://www.mxmindia.com/advertising/asci-report-flags-evidence-gaps-in-nutraceutical-advertising-claims (MxMIndia report on the study with Manisha Kapoor quotes, 2026-10-30)"
+- "https://openthemagazine.com/branding-marketing-and-advertising/misleading-health-ads-the-watchdog-barks-who-bites (Open column on ASCI enforcement limits, CCPA penalty ceilings and the missing referral detail, 2026-10-29)"
+- "https://www.medianama.com/2026/10/223-asci-flags-60-misleading-nutraceutical-ads/ (Medianama report on the study, October 2026)"
+- "https://www.business-standard.com/india-news/nutraceutical-ads-lack-scientific-proof-for-health-claims-asci-report-126102801440_1.html (Business Standard report on the study, 2026-10-28)"
+- "https://www.exchange4media.com/advertising-news/weight-loss-promises-anti-ageing-claims-under-asci-scanner-in-nutraceutical-ads-159589.html (exchange4media report on the study, October 2026)"
+tags:
+- asci
+- nutraceuticals
+- manisha kapoor
+- ccpa
+- health claims
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: ASCI checks 61 supplement ads and fails 60
-  - type: tea
-    pull: The sweep.
-    text: ASCI ran a suo motu review of nutraceutical ads published between July and September 2026 and put the results in a report called A Pill for Thought, out on 28 October. 61 ads evaluated. One still in process. All 60 completed cases in violation of the ASCI Code. A 100 percent hit rate.
-  - type: tea
-    pull: The claims.
-    text: ASCI pulled the lines. 'Lose 6 kgs in 60 days.' 'Your thigh fat will be gone in 12 weeks.' 'Your skin, but 7 years younger.' '300% stronger skin defence against UV damage.' A lung cleanse for smokers. A product to reverse PCOD. Asthma, COPD, blood pressure, cholesterol. Before-and-after visuals doing the heavy lifting throughout.
-  - type: tea
-    pull: Nobody could show the proof.
-    text: 29 advertisers did not contest and modified or withdrew the ad. 31 contested and, per ASCI, none produced adequate substantiation. The report's line is that research on an individual ingredient cannot prove a finished product works. Manisha Kapoor, ASCI CEO, wants the evidence before the ad runs, not after the complaint.
-  - type: tea
-    pull: The money and the teeth.
-    text: Grand View Research puts India's nutraceuticals market at USD 38.77 billion in 2025. ASCI is self-regulatory and cannot fine. The CCPA can, up to INR 10 lakh and INR 50 lakh on repeat, per Open. The report does not say whether a single case was referred on. No brand is named.
-  - type: receipt
-    kind: number
-    number: 60 of 61
-    caption: Nutraceutical ads found in violation of the ASCI Code, July to September 2026, per ASCI's A Pill for Thought report, 28 October.
-  - type: receipt
-    kind: quote
-    quote: Research on an individual ingredient cannot automatically be used to substantiate the efficacy of a finished product.
-    source: Manisha Kapoor, CEO and Secretary General, ASCI, via Indian Television, 28 October 2026
-  - type: verdict
-    text: "The read: a 100 percent failure rate is not a few bad actors, it is how the category advertises. ASCI published the pattern and no names. Until a fine lands, 6 kgs in 60 days is a cost of doing business."
-  - type: close
+- type: cover
+  title: ASCI checks 61 supplement ads and fails 60
+- type: tea
+  pull: The sweep.
+  text: ASCI ran a suo motu review of nutraceutical ads published between July and September 2026 and put the results in a report called A Pill for Thought, out on 28 October. 61 ads evaluated. One still in process. All 60 completed cases in violation of the ASCI Code. A 100 percent hit rate.
+- type: receipt
+  kind: image
+  image: assets/img/stories/asci-supplement-ads-60-of-61-fail/ev-1.jpg
+  caption: 60 of 61 nutraceutical ads breach ASCI Code, report finds. Indian Television report on the ASCI study, with the quoted claims, the 61, 60, 29 and 31 figures
+  credit: "Image: indiantelevision.com, Indian Television report on the ASCI study, with the quoted claims, the 61, 60, 29 and 31 figures and Manisha Kapoor quotes, 2026-10-28"
+  source: https://indiantelevision.com/mam/60-of-61-nutraceutical-ads-breach-asci-code-report-finds/
+- type: receipt
+  kind: image
+  image: assets/img/stories/asci-supplement-ads-60-of-61-fail/ev-2.jpg
+  caption: ASCI’s ‘A Pill for Thought’ report flags gaps in evidence backing. Mediainfoline report on the study with the quoted claims and the USD 38.77 billion market fig
+  credit: "Image: mediainfoline.com, Mediainfoline report on the study with the quoted claims and the USD 38.77 billion market figure, 2026-10-28"
+  source: https://www.mediainfoline.com/advertising/ascis-a-pill-for-thought-report-flags-gaps-in-evidence-backing-nutraceutical-advertising-claims
+- type: tea
+  pull: The claims.
+  text: ASCI pulled the lines. 'Lose 6 kgs in 60 days.' 'Your thigh fat will be gone in 12 weeks.' 'Your skin, but 7 years younger.' '300% stronger skin defence against UV damage.' A lung cleanse for smokers. A product to reverse PCOD. Asthma, COPD, blood pressure, cholesterol. Before-and-after visuals doing the heavy lifting throughout.
+- type: tea
+  pull: Nobody could show the proof.
+  text: 29 advertisers did not contest and modified or withdrew the ad. 31 contested and, per ASCI, none produced adequate substantiation. The report's line is that research on an individual ingredient cannot prove a finished product works. Manisha Kapoor, ASCI CEO, wants the evidence before the ad runs, not after the complaint.
+- type: tea
+  pull: The money and the teeth.
+  text: Grand View Research puts India's nutraceuticals market at USD 38.77 billion in 2025. ASCI is self-regulatory and cannot fine. The CCPA can, up to INR 10 lakh and INR 50 lakh on repeat, per Open. The report does not say whether a single case was referred on. No brand is named.
+- type: receipt
+  kind: number
+  number: 60 of 61
+  caption: Nutraceutical ads found in violation of the ASCI Code, July to September 2026, per ASCI's A Pill for Thought report, 28 October.
+- type: receipt
+  kind: quote
+  quote: Research on an individual ingredient cannot automatically be used to substantiate the efficacy of a finished product.
+  source: Manisha Kapoor, CEO and Secretary General, ASCI, via Indian Television, 28 October 2026
+- type: verdict
+  text: "The read: a 100 percent failure rate is not a few bad actors, it is how the category advertises. ASCI published the pattern and no names. Until a fine lands, 6 kgs in 60 days is a cost of doing business."
+- type: close
 caption: |
   ASCI looked at 61 supplement ads this quarter. It could not pass one.
   The report is called A Pill for Thought, out 28 October. It covers nutraceutical ads from July to September. 61 evaluated, one still in process, all 60 completed cases in violation of the ASCI Code.
@@ -66,8 +83,8 @@ linkedin: |
 alt: |
   Cover slide on campaigns red with 60 of 61 set huge, the headline ASCI checks 61 supplement ads and fails 60, and a SPILLED pill.
   Tea slide on the sweep, 61 ads reviewed July to September 2026, 60 completed, all in violation.
-  Tea slide listing the claims ASCI pulled, from 6 kgs in 60 days to 300 percent stronger UV defence.
-  Tea slide on the 29 uncontested and 31 contested cases and Manisha Kapoor's line on evidence before the ad.
+  Receipt slide, an image from indiantelevision.com
+  Receipt slide, an image from mediainfoline.com
   Tea slide on the USD 38.77 billion market, ASCI's lack of fining power and the CCPA's penalty ceilings.
   Receipt slide with the number 60 of 61 and a caption naming the report and date.
   Receipt slide quoting Manisha Kapoor on ingredient research and finished products.

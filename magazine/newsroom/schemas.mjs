@@ -39,6 +39,7 @@ export const FactsOut = z.object({
 });
 export const CopyOut = z.object({ story: Story, changes: z.array(S) });
 export const LegalOut = z.object({ verdict: z.enum(['CLEAR', 'HOLD']), checklist: z.array(z.object({ point: z.number(), ok: z.boolean(), evidence: S })), legalNote: S, fixRequired: N, story: Story });
+export const ArtOut = z.object({ captions: z.array(z.object({ slide: z.number(), caption: S, credit: N })) });
 export const SocialOut = z.object({ caption: S, tags: z.array(S), linkedin: S, time: z.enum(['08:00', '12:30', '19:30']), reason: S });
 export const NewsletterOut = z.object({ subject: S, opener: S, items: z.array(z.object({ title: S, line: S, url: S })), watchlist: z.array(S), signoff: S, seo: z.array(z.object({ slug: S, title: S, description: S })) });
 export const SalesOut = z.object({ prospects: z.array(z.object({ brand: S, story: S, product: S, price: S, note: S, top: z.boolean() })) });

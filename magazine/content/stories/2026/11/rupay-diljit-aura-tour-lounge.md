@@ -8,49 +8,67 @@ date: 2026-10-31
 desk: Culture Desk
 cover: generated
 coverText: 17,499
-credit:
+credit: ""
 sources:
-  - https://www.businesstoday.in/india/story/diljit-dosanjh-brings-aura-home-7-city-india-tour-kicks-off-in-delhi-on-nov-1-7th-show-announced-in-chandigarh-559716-2026-10-06 (Business Today on the seven-city India leg, venues, the RuPay presale and BookMyShow, 2026-10-06)
-  - https://www.indiatvnews.com/entertainment/news/diljit-dosanjh-announces-aura-india-tour-2026-check-city-wise-dates-tickets-and-venue-details-2026-10-04-1056045 (India TV on the tour announcement, the 6 October RuPay presale and 9 October general sale, 2026-10-04)
-  - https://billboardind.com/diljit-dosanjh-aura-tour-ahmedabad-tickets/ (Billboard India city-by-city price list with RuPay Lounge and RuPay Presidential Gallery tiers and presale dates, 2026-09-29)
-  - https://www.esquireindia.co.in/culture/books-and-music/diljit-dosanjh-aura-india-tour-2026-ahmedabad-concert-ticket-sale-date-prices-how-to-book-and-more (Esquire India on the Ahmedabad RuPay presale and the INR 999 floor, updated 2026-09-25)
-  - https://www.esquireindia.co.in/culture/books-and-music/diljit-dosanjh-concert-in-delhi-ticket-price-date-time-venue-jawaharlal-nehru-stadium (Esquire India on the Delhi date, venue and INR 1,999 stand floor, updated 2026-10-24)
-  - https://www.aninews.in/news/entertainment/bollywood/diljit-dosanjh8217s-delhi-show-preponed-to-october-30-at-jln-stadium20261012155913/ (ANI on the Delhi show moving to 30 October, reported as the RuPay Aura India Tour, 2026-10-12)
-  - https://www.republicworld.com/entertainment/diljit-dosanjhs-delhi-concert-gets-police-nod-october-30-show-to-go-ahead-2026-10-23-139511 (Republic World on the Delhi Police clearance and the BookMyShow Live statement, 2026-10-23)
-  - https://theprint.in/india/delhi-police-clears-diljit-dosanjhs-30-october-concert-at-jln-stadium-after-security-review/3079793/ (ThePrint carrying ANI on the clearance after the security review, 2026-10-23)
-  - https://www.outlookindia.com/art-entertainment/diljit-dosanjhs-delhi-show-gets-massive-security-overhaul-2000-guards-and-no-drive-zones-enforced (Outlook India on the guard count, 55,000 capacity and pedestrian perimeter, 2026-10-28)
-  - https://cardinsider.com/blog/exclusive-pre-sale-tickets-discount-dil-luminati-tour-hdfc-pixel-credit-cards/ (CardInsider on the 2024 HDFC Bank Pixel presale, 10 percent off capped at INR 500, Zomato Live, 2024-09-09)
-tags: [rupay, diljit dosanjh, bookmyshow, aura tour, concerts, sponsorship]
+- "https://www.businesstoday.in/india/story/diljit-dosanjh-brings-aura-home-7-city-india-tour-kicks-off-in-delhi-on-nov-1-7th-show-announced-in-chandigarh-559716-2026-10-06 (Business Today on the seven-city India leg, venues, the RuPay presale and BookMyShow, 2026-10-06)"
+- "https://www.indiatvnews.com/entertainment/news/diljit-dosanjh-announces-aura-india-tour-2026-check-city-wise-dates-tickets-and-venue-details-2026-10-04-1056045 (India TV on the tour announcement, the 6 October RuPay presale and 9 October general sale, 2026-10-04)"
+- "https://billboardind.com/diljit-dosanjh-aura-tour-ahmedabad-tickets/ (Billboard India city-by-city price list with RuPay Lounge and RuPay Presidential Gallery tiers and presale dates, 2026-09-29)"
+- "https://www.esquireindia.co.in/culture/books-and-music/diljit-dosanjh-aura-india-tour-2026-ahmedabad-concert-ticket-sale-date-prices-how-to-book-and-more (Esquire India on the Ahmedabad RuPay presale and the INR 999 floor, updated 2026-09-25)"
+- "https://www.esquireindia.co.in/culture/books-and-music/diljit-dosanjh-concert-in-delhi-ticket-price-date-time-venue-jawaharlal-nehru-stadium (Esquire India on the Delhi date, venue and INR 1,999 stand floor, updated 2026-10-24)"
+- "https://www.aninews.in/news/entertainment/bollywood/diljit-dosanjh8217s-delhi-show-preponed-to-october-30-at-jln-stadium20261012155913/ (ANI on the Delhi show moving to 30 October, reported as the RuPay Aura India Tour, 2026-10-12)"
+- "https://www.republicworld.com/entertainment/diljit-dosanjhs-delhi-concert-gets-police-nod-october-30-show-to-go-ahead-2026-10-23-139511 (Republic World on the Delhi Police clearance and the BookMyShow Live statement, 2026-10-23)"
+- "https://theprint.in/india/delhi-police-clears-diljit-dosanjhs-30-october-concert-at-jln-stadium-after-security-review/3079793/ (ThePrint carrying ANI on the clearance after the security review, 2026-10-23)"
+- "https://www.outlookindia.com/art-entertainment/diljit-dosanjhs-delhi-show-gets-massive-security-overhaul-2000-guards-and-no-drive-zones-enforced (Outlook India on the guard count, 55,000 capacity and pedestrian perimeter, 2026-10-28)"
+- "https://cardinsider.com/blog/exclusive-pre-sale-tickets-discount-dil-luminati-tour-hdfc-pixel-credit-cards/ (CardInsider on the 2024 HDFC Bank Pixel presale, 10 percent off capped at INR 500, Zomato Live, 2024-09-09)"
+tags:
+- rupay
+- diljit dosanjh
+- bookmyshow
+- aura tour
+- concerts
+- sponsorship
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: RuPay owns the priciest seat at every Diljit show
-  - type: tea
-    pull: The name is on the tour.
-    text: Diljit Dosanjh put the India leg of his Aura World Tour on Instagram in the first week of October, seven cities from Delhi to Lucknow, BookMyShow as the only seller. By 12 October, ANI's report on the Delhi date change was calling it the RuPay Aura India Tour. The card network is in the title.
-  - type: tea
-    pull: The presale is card-only.
-    text: Ahmedabad went first. A RuPay credit card presale opened at noon on 28 September and Billboard India reports it sold out by 29 September, two days before general sale. The other cities got their RuPay-only window on 6 October at noon, general sale on 9 October. Own the card or wait three days.
-  - type: tea
-    pull: The lounge is the ad.
-    text: Every city has a RuPay-named block at the top of the price list. RuPay Lounge in Delhi at INR 12,499 and 14,999, Indore, Mumbai and Lucknow at 14,999, Bengaluru at 17,499. Ahmedabad gets a RuPay Presidential Gallery at 9,999 to 12,999 with its own F&B, restrooms and drop-off.
-  - type: receipt
-    kind: compare
-    leftLabel: 2024, Dil-Luminati
-    leftText: HDFC Bank Pixel cardholders got a two-day presale on Zomato Live and 10 percent off, capped at INR 500. The bank bought the queue.
-    rightLabel: 2026, Aura
-    rightText: RuPay credit cardholders get the presale on BookMyShow, the network's name on the tour, and a RuPay Lounge or Presidential Gallery at the top of every city's price list. The card bought the room.
-  - type: tea
-    pull: Delhi almost did not open.
-    text: The Delhi show moved from 1 November to 30 October. Then Delhi Police withheld permission in festive week. BookMyShow Live called the cancellation reports inaccurate, filed security plans and got clearance on 23 October. Outlook India counted the cost. Private guards up from 400 to as many as 2,000, a 55,000 capacity, a 500 to 700 metre pedestrian-only perimeter.
-  - type: receipt
-    kind: number
-    number: 17,499
-    caption: INR, the RuPay Lounge at NICE Grounds, Bengaluru, 29 November, per Billboard India
-  - type: verdict
-    text: "The read: RuPay did not buy a concert. It bought the best seat in six cities and its name above the tour. The lounge is the main character. The real test is whether anyone got a RuPay credit card just for the presale."
-  - type: close
+- type: cover
+  title: RuPay owns the priciest seat at every Diljit show
+- type: tea
+  pull: The name is on the tour.
+  text: Diljit Dosanjh put the India leg of his Aura World Tour on Instagram in the first week of October, seven cities from Delhi to Lucknow, BookMyShow as the only seller. By 12 October, ANI's report on the Delhi date change was calling it the RuPay Aura India Tour. The card network is in the title.
+- type: receipt
+  kind: image
+  image: assets/img/stories/rupay-diljit-aura-tour-lounge/ev-1.jpg
+  caption: "Diljit Dosanjh brings ‘Aura’ home: 7 city India tour kicks off in Delhi on Nov 1, 7th show announced in Chandigarh - BusinessToday. Business Today on the seven-"
+  credit: "Image: businesstoday.in, Business Today on the seven-city India leg, venues, the RuPay presale and BookMyShow, 2026-10-06"
+  source: https://www.businesstoday.in/india/story/diljit-dosanjh-brings-aura-home-7-city-india-tour-kicks-off-in-delhi-on-nov-1-7th-show-announced-in-chandigarh-559716-2026-10-06
+- type: receipt
+  kind: image
+  image: assets/img/stories/rupay-diljit-aura-tour-lounge/ev-2.jpg
+  caption: Diljit Dosanjh announces Aura India Tour 2026; check city-wise dates, tickets and venue details - India TV News. India TV on the tour announcement, the 6 Octobe
+  credit: "Image: indiatvnews.com, India TV on the tour announcement, the 6 October RuPay presale and 9 October general sale, 2026-10-04"
+  source: https://www.indiatvnews.com/entertainment/news/diljit-dosanjh-announces-aura-india-tour-2026-check-city-wise-dates-tickets-and-venue-details-2026-10-04-1056045
+- type: tea
+  pull: The presale is card-only.
+  text: Ahmedabad went first. A RuPay credit card presale opened at noon on 28 September and Billboard India reports it sold out by 29 September, two days before general sale. The other cities got their RuPay-only window on 6 October at noon, general sale on 9 October. Own the card or wait three days.
+- type: tea
+  pull: The lounge is the ad.
+  text: Every city has a RuPay-named block at the top of the price list. RuPay Lounge in Delhi at INR 12,499 and 14,999, Indore, Mumbai and Lucknow at 14,999, Bengaluru at 17,499. Ahmedabad gets a RuPay Presidential Gallery at 9,999 to 12,999 with its own F&B, restrooms and drop-off.
+- type: receipt
+  kind: compare
+  leftLabel: 2024, Dil-Luminati
+  leftText: HDFC Bank Pixel cardholders got a two-day presale on Zomato Live and 10 percent off, capped at INR 500. The bank bought the queue.
+  rightLabel: 2026, Aura
+  rightText: RuPay credit cardholders get the presale on BookMyShow, the network's name on the tour, and a RuPay Lounge or Presidential Gallery at the top of every city's price list. The card bought the room.
+- type: tea
+  pull: Delhi almost did not open.
+  text: The Delhi show moved from 1 November to 30 October. Then Delhi Police withheld permission in festive week. BookMyShow Live called the cancellation reports inaccurate, filed security plans and got clearance on 23 October. Outlook India counted the cost. Private guards up from 400 to as many as 2,000, a 55,000 capacity, a 500 to 700 metre pedestrian-only perimeter.
+- type: receipt
+  kind: number
+  number: 17,499
+  caption: INR, the RuPay Lounge at NICE Grounds, Bengaluru, 29 November, per Billboard India
+- type: verdict
+  text: "The read: RuPay did not buy a concert. It bought the best seat in six cities and its name above the tour. The lounge is the main character. The real test is whether anyone got a RuPay credit card just for the presale."
+- type: close
 caption: |
   The best seat at every Diljit show has a card network's name on it.
   Diljit's seven-city Aura India Tour opened at JLN Stadium on 30 October with a RuPay credit card presale, RuPay in the tour name and a RuPay Lounge at the top of every city's price list, per Business Today, 6 October, and Billboard India's section-by-section list.
@@ -70,8 +88,8 @@ linkedin: |
 alt: |
   Cover slide on culture blue with a SPILLED pill, the headline RuPay owns the priciest seat at every Diljit show, 17,499 set huge, and the Mask360 masthead.
   White tea slide with the pull line The name is on the tour and text on the seven-city Aura India Tour announcement and ANI calling it the RuPay Aura India Tour.
-  White tea slide with the pull line The presale is card-only and text on the Ahmedabad RuPay presale selling out and the 6 October window for the other cities.
-  White tea slide with the pull line The lounge is the ad and text listing the RuPay Lounge and RuPay Presidential Gallery prices by city.
+  Receipt slide, an image from businesstoday.in
+  Receipt slide, an image from indiatvnews.com
   Framed receipt slide comparing the 2024 HDFC Bank Pixel presale and INR 500 discount with the 2026 RuPay presale, tour name and lounge.
   White tea slide with the pull line Delhi almost did not open and text on the police clearance of 23 October and the security bill reported by Outlook India.
   Framed receipt slide with 17,499 set at 200px and the caption naming the RuPay Lounge at NICE Grounds, Bengaluru.

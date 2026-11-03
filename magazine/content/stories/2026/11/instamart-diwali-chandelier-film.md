@@ -8,43 +8,60 @@ date: 2026-11-03
 desk: Campaigns Desk
 cover: generated
 coverText: chandelier
-credit:
+credit: ""
 sources:
-  - https://www.storyboard18.com/brand-marketing/instamart-diwali-campaign-features-man-wearing-chandelier-to-promote-home-decor-113768.htm (Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes and the 131 cities figure, 2026-10-31)
-  - https://www.afaqs.com/news/advertising/instamart-gives-diwali-d%C3%A9cor-a-quirky-twist-in-new-ad-12770456 (afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31)
-  - https://www.adgully.com/post/23292/instamarts-latest-diwali-film-turns-festive-dcor-into-literal-outfits (Adgully report on the film, in-house credit and quotes, 2026-11-03)
-  - https://www.impactonnet.com/more-from-impact/instamart-uses-a-chandelier-clad-man-to-sell-its-diwali-dcor-assortment-17380.html (Impact report on the film, October 2026)
-  - https://mediabrief.com/instamarts-diwali-film-turns-a-chandelier-into-an-outfit/ (MediaBrief report on the film, October 2026)
-  - https://www.storyboard18.com/brand-marketing/festive-demand-drives-ctv-ad-prices-up-as-audience-reach-doubles-ws-l-112363.htm (Storyboard18 on festive CTV rates, carries Datum's INR 2,200 crore quick-commerce festive ad estimate, 2026-10-12)
-tags: [instamart, swiggy, diwali, mayur hola, quick commerce]
+- "https://www.storyboard18.com/brand-marketing/instamart-diwali-campaign-features-man-wearing-chandelier-to-promote-home-decor-113768.htm (Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes and the 131 cities figure, 2026-10-31)"
+- "https://www.afaqs.com/news/advertising/instamart-gives-diwali-d%C3%A9cor-a-quirky-twist-in-new-ad-12770456 (afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31)"
+- "https://www.adgully.com/post/23292/instamarts-latest-diwali-film-turns-festive-dcor-into-literal-outfits (Adgully report on the film, in-house credit and quotes, 2026-11-03)"
+- "https://www.impactonnet.com/more-from-impact/instamart-uses-a-chandelier-clad-man-to-sell-its-diwali-dcor-assortment-17380.html (Impact report on the film, October 2026)"
+- "https://mediabrief.com/instamarts-diwali-film-turns-a-chandelier-into-an-outfit/ (MediaBrief report on the film, October 2026)"
+- "https://www.storyboard18.com/brand-marketing/festive-demand-drives-ctv-ad-prices-up-as-audience-reach-doubles-ws-l-112363.htm (Storyboard18 on festive CTV rates, carries Datum's INR 2,200 crore quick-commerce festive ad estimate, 2026-10-12)"
+tags:
+- instamart
+- swiggy
+- diwali
+- mayur hola
+- quick commerce
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: Instamart's Diwali film is a tired man in a chandelier
-  - type: tea
-    pull: The film.
-    text: A couple comes home from a late Diwali party. The wife wants to call it a night. The husband is wearing a crystal chandelier as an outfit and running on low battery. Deadpan performances, restrained camera, one gag. It ends on a delivery and the line, Diwali decor and more, only on Instamart.
-  - type: tea
-    pull: No agency on the slate.
-    text: The credit line reads conceptualised and executed by the in-house team. No agency, no director, no production house named by Storyboard18, afaqs or Adgully. For a festive film from a Swiggy brand in the most crowded ad week of the year, that is the visible decision.
-  - type: tea
-    pull: The category play.
-    text: The assortment behind the gag runs six lanes. Linen and furnishings, home decor, cleaning supplies, electronics, home appliances, beauty and personal care hampers. Instamart launched in August 2020 and is in more than 131 cities. The film sells the breadth of the basket, not one product.
-  - type: tea
-    pull: Everyone else shot the lit-up house.
-    text: Mayur Hola, VP Brand at Swiggy, says most Diwali films show lit-up homes and family moments, so Instamart kept the decor at the centre and let the humour do the rest. That is the whole strategy, said plainly. Be the odd one in the break, and let the chandelier be the main character.
-  - type: receipt
-    kind: quote
-    quote: A man wearing a chandelier is silly, but it makes people look at the category.
-    source: Mayur Hola, VP Brand, Swiggy, via afaqs, 31 October 2026
-  - type: receipt
-    kind: number
-    number: 2,200 cr
-    caption: Datum's estimate for quick-commerce ad spend this festive season, up about 50 percent, per Storyboard18, 12 October 2026.
-  - type: verdict
-    text: "The read: Instamart bought one joke and committed to it. No agency, no diya, one tired man in a chandelier. In a festive break where every film looks like the same lit-up house, odd is the cheapest way to be seen."
-  - type: close
+- type: cover
+  title: Instamart's Diwali film is a tired man in a chandelier
+- type: tea
+  pull: The film.
+  text: A couple comes home from a late Diwali party. The wife wants to call it a night. The husband is wearing a crystal chandelier as an outfit and running on low battery. Deadpan performances, restrained camera, one gag. It ends on a delivery and the line, Diwali decor and more, only on Instamart.
+- type: receipt
+  kind: image
+  image: assets/img/stories/instamart-diwali-chandelier-film/ev-1.jpg
+  caption: Instamart Diwali campaign features man wearing chandelier to promote home décor. Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes
+  credit: "Image: storyboard18.com, Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes and the 131 cities figure, 2026-10-31"
+  source: https://www.storyboard18.com/brand-marketing/instamart-diwali-campaign-features-man-wearing-chandelier-to-promote-home-decor-113768.htm
+- type: receipt
+  kind: image
+  image: assets/img/stories/instamart-diwali-chandelier-film/ev-2.jpg
+  caption: Instamart gives Diwali décor a quirky twist in new ad. afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31
+  credit: "Image: afaqs.com, afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31"
+  source: https://www.afaqs.com/news/advertising/instamart-gives-diwali-d%C3%A9cor-a-quirky-twist-in-new-ad-12770456
+- type: tea
+  pull: No agency on the slate.
+  text: The credit line reads conceptualised and executed by the in-house team. No agency, no director, no production house named by Storyboard18, afaqs or Adgully. For a festive film from a Swiggy brand in the most crowded ad week of the year, that is the visible decision.
+- type: tea
+  pull: The category play.
+  text: The assortment behind the gag runs six lanes. Linen and furnishings, home decor, cleaning supplies, electronics, home appliances, beauty and personal care hampers. Instamart launched in August 2020 and is in more than 131 cities. The film sells the breadth of the basket, not one product.
+- type: tea
+  pull: Everyone else shot the lit-up house.
+  text: Mayur Hola, VP Brand at Swiggy, says most Diwali films show lit-up homes and family moments, so Instamart kept the decor at the centre and let the humour do the rest. That is the whole strategy, said plainly. Be the odd one in the break, and let the chandelier be the main character.
+- type: receipt
+  kind: quote
+  quote: A man wearing a chandelier is silly, but it makes people look at the category.
+  source: Mayur Hola, VP Brand, Swiggy, via afaqs, 31 October 2026
+- type: receipt
+  kind: number
+  number: 2,200 cr
+  caption: Datum's estimate for quick-commerce ad spend this festive season, up about 50 percent, per Storyboard18, 12 October 2026.
+- type: verdict
+  text: "The read: Instamart bought one joke and committed to it. No agency, no diya, one tired man in a chandelier. In a festive break where every film looks like the same lit-up house, odd is the cheapest way to be seen."
+- type: close
 caption: |
   Instamart's Diwali film has no diyas. It has a man dressed as a chandelier.
   A couple comes home from a party, she wants to sleep, he is wearing a crystal chandelier and running on empty. It ends on a delivery and the line Diwali decor and more, only on Instamart.
@@ -64,8 +81,8 @@ linkedin: |
 alt: |
   Cover slide on campaigns red with the headline Instamart's Diwali film is a tired man in a chandelier and a SPILLED pill.
   Tea slide describing the film, a couple home from a party and a husband wearing a crystal chandelier.
-  Tea slide noting the film was made in-house with no agency, director or production house credited.
-  Tea slide listing the six festive categories and the 131 cities figure.
+  Receipt slide, an image from storyboard18.com
+  Receipt slide, an image from afaqs.com
   Tea slide with Mayur Hola's line on lit-up homes and keeping the decor at the centre.
   Receipt slide quoting Mayur Hola, a man wearing a chandelier is silly but it makes people look at the category.
   Receipt slide with the number 2,200 cr and the Datum quick-commerce festive ad estimate.

@@ -1,5 +1,5 @@
 // Story linter: every rule a machine can check from HOUSE/03 and HOUSE/04. Run: node newsroom/lint.mjs [files...]
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseFrontMatter } from './yaml.mjs';
@@ -16,16 +16,16 @@ export const SECTIONS = {
   culture: { name: 'Culture', color: '#0000EE', desk: 'Culture Desk', ink: '#FFFFFF' },
 };
 export const FORMATS = {
-  tea: { name: 'The Tea', words: [350, 600], slides: [7, 9] },
-  scorecard: { name: 'Scorecard', words: [400, 700], slides: [7, 9] },
-  guestlist: { name: 'The Guest List', words: [300, 500], slides: [7, 10] },
-  moves: { name: 'Moves', words: [250, 700], slides: [6, 10] },
-  edit: { name: 'The Edit', words: [400, 600], slides: [7, 9] },
-  spotted: { name: 'Spotted', words: [120, 200], slides: [3, 4] },
-  branddrop: { name: 'Brand Drop', words: [250, 400], slides: [5, 8] },
-  deeppour: { name: 'Deep Pour', words: [1200, 2000], slides: [8, 10] },
-  hottake: { name: 'Hot Take', words: [500, 800], slides: [5, 7] },
-  receipts: { name: 'Receipts', words: [300, 500], slides: [6, 9] },
+  tea: { name: 'The Tea', words: [350, 600], slides: [7, 11] },
+  scorecard: { name: 'Scorecard', words: [400, 700], slides: [7, 11] },
+  guestlist: { name: 'The Guest List', words: [300, 500], slides: [7, 12] },
+  moves: { name: 'Moves', words: [250, 700], slides: [6, 12] },
+  edit: { name: 'The Edit', words: [400, 600], slides: [7, 11] },
+  spotted: { name: 'Spotted', words: [120, 200], slides: [3, 6] },
+  branddrop: { name: 'Brand Drop', words: [250, 400], slides: [5, 10] },
+  deeppour: { name: 'Deep Pour', words: [1200, 2000], slides: [8, 12] },
+  hottake: { name: 'Hot Take', words: [500, 800], slides: [5, 9] },
+  receipts: { name: 'Receipts', words: [300, 500], slides: [6, 11] },
 };
 export const KICKERS = ['SPILLED', 'BREWING', 'SWEET', 'BITTER', 'PAID'];
 export const SLIDE_TYPES = ['cover', 'tea', 'receipt', 'verdict', 'item', 'close'];
@@ -115,7 +115,12 @@ export function lintStory(path) {
     }
     if (s.type === 'verdict') { const w = words(s.text); if (!s.text) E(`slide ${n} (verdict): missing text`); else if (w > 45) E(`slide ${n} (verdict): ${w} words, maximum 45`); }
     if (s.type === 'receipt') {
-      if (!['quote', 'number', 'compare'].includes(s.kind)) E(`slide ${n} (receipt): kind must be quote, number or compare`);
+      if (!['quote', 'number', 'compare', 'image'].includes(s.kind)) E(`slide ${n} (receipt): kind must be quote, number, compare or image`);
+      if (s.kind === 'image') {
+        if (!s.image || !s.caption || !s.credit) E(`slide ${n} (receipt image): needs image, caption and credit`);
+        else if (!existsSync(join(ROOT, 'public', String(s.image)))) E(`slide ${n} (receipt image): file not found at public/${s.image}`);
+        if (words(s.caption) > 30) E(`slide ${n} (receipt image): caption over 30 words`);
+      }
       if (s.kind === 'quote' && (!s.quote || !s.source)) E(`slide ${n} (receipt quote): needs quote and source`);
       if (s.kind === 'quote' && words(s.quote) > 45) E(`slide ${n} (receipt quote): over 45 words`);
       if (s.kind === 'number' && (!s.number || !s.caption)) E(`slide ${n} (receipt number): needs number and caption`);
@@ -132,6 +137,8 @@ export function lintStory(path) {
     for (const [k, v] of Object.entries(s)) if (typeof v === 'string' && /!/.test(v)) E(`slide ${n}: exclamation mark in ${k}`);
     for (const [k, v] of Object.entries(s)) if (typeof v === 'string' && EMOJI_RE.test(v)) E(`slide ${n}: emoji in ${k}`);
   });
+  const mediaReceipts = slides.filter((s) => s.type === 'receipt' && s.kind === 'image').length + (cover.startsWith('photo:') ? 1 : 0);
+  if (slides.length && mediaReceipts === 0) E('no media receipt: every story carries at least one receipt slide of kind image (a screenshot of the post, article or release, a still from the film, the menu, the invite) or a photo cover');
   const paidItems = slides.filter((s) => s.type === 'item' && s.paid === true).length;
   if (paidItems > 2) E('more than two paid items in one story');
 

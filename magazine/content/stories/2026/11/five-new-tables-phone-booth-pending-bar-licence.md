@@ -8,52 +8,70 @@ date: 2026-11-03
 desk: Hospitality Desk
 cover: generated
 coverText: five tables
-credit:
+credit: ""
 sources:
-  - https://www.restaurantindia.in/news/trapdoor-launches-in-versova-with-six-course-cocktail-pairing-experience.n17347 (Restaurant India on Trapdoor's launch, team and format, 30 September 2026)
-  - https://curlytales.com/india/food/new-mumbai-restaurants-in-october-youll-want-to-tell-your-friends-about/amp/ (Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026)
-  - https://www.restaurantindia.in/news/la-panthera-opens-second-mumbai-outpost-at-eros-building-in-churchgate.n17259 (Restaurant India on La Panthera Eros, 80 seats, aperitivo hour, 17 September 2026)
-  - https://thenodmag.com/content/india-new-restaurants-and-bars-october-2026 (The Nod October openings roundup by Roshni Bajaj Sanghvi, 9 October 2026)
-  - https://www.timeout.com/delhi/restaurants/nam (Time Out Delhi review of Nam by Geetika Sachdev, five stars, cost for two, pending bar licence, 23 October 2026)
-  - https://www.restaurantindia.in/news/goonj-opens-in-bengaluru-with-indian-cuisine-and-contemporary-cocktail-programme.n17263 (Restaurant India on Goonj, founders, chef, beverage head, fourth floor, 18 September 2026)
-  - https://curlytales.com/india/food/new-restaurants-in-bengaluru-this-october-for-fruit-sandos-handmade-pasta-more/ (Curlytales Bengaluru October openings with cost for two, hours and addresses, 1 October 2026)
-  - https://www.timeout.com/india/restaurants/bloody-dangerous (Time Out India review of Bloody Dangerous by Joanna Lobo, four stars, cost for two, hours, 2 November 2026)
-  - https://www.esquireindia.co.in/food-and-drinks/what-to-eat/esquire-india-october-hotlist-new-restaurants-and-bars-across-india-fitour-nām-chor-bizarre-and-more (Esquire India October 2026 hotlist with Goonj cocktails and Bloody Dangerous dishes, updated 14 October 2026)
-  - https://www.esquireindia.co.in/food-and-drinks/what-to-eat/the-best-new-restaurants-and-bars-to-know-in-bengaluru-delhi-and-mumbai-this-october-2026 (Esquire India on new openings in Bengaluru, Delhi and Mumbai, 5 October 2026)
-tags: [trapdoor, la panthera, nam, goonj, bloody dangerous, assagao]
+- "https://www.restaurantindia.in/news/trapdoor-launches-in-versova-with-six-course-cocktail-pairing-experience.n17347 (Restaurant India on Trapdoor's launch, team and format, 30 September 2026)"
+- "https://curlytales.com/india/food/new-mumbai-restaurants-in-october-youll-want-to-tell-your-friends-about/amp/ (Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026)"
+- "https://www.restaurantindia.in/news/la-panthera-opens-second-mumbai-outpost-at-eros-building-in-churchgate.n17259 (Restaurant India on La Panthera Eros, 80 seats, aperitivo hour, 17 September 2026)"
+- "https://thenodmag.com/content/india-new-restaurants-and-bars-october-2026 (The Nod October openings roundup by Roshni Bajaj Sanghvi, 9 October 2026)"
+- "https://www.timeout.com/delhi/restaurants/nam (Time Out Delhi review of Nam by Geetika Sachdev, five stars, cost for two, pending bar licence, 23 October 2026)"
+- "https://www.restaurantindia.in/news/goonj-opens-in-bengaluru-with-indian-cuisine-and-contemporary-cocktail-programme.n17263 (Restaurant India on Goonj, founders, chef, beverage head, fourth floor, 18 September 2026)"
+- "https://curlytales.com/india/food/new-restaurants-in-bengaluru-this-october-for-fruit-sandos-handmade-pasta-more/ (Curlytales Bengaluru October openings with cost for two, hours and addresses, 1 October 2026)"
+- "https://www.timeout.com/india/restaurants/bloody-dangerous (Time Out India review of Bloody Dangerous by Joanna Lobo, four stars, cost for two, hours, 2 November 2026)"
+- "https://www.esquireindia.co.in/food-and-drinks/what-to-eat/esquire-india-october-hotlist-new-restaurants-and-bars-across-india-fitour-nām-chor-bizarre-and-more (Esquire India October 2026 hotlist with Goonj cocktails and Bloody Dangerous dishes, updated 14 October 2026)"
+- "https://www.esquireindia.co.in/food-and-drinks/what-to-eat/the-best-new-restaurants-and-bars-to-know-in-bengaluru-delhi-and-mumbai-this-october-2026 (Esquire India on new openings in Bengaluru, Delhi and Mumbai, 5 October 2026)"
+tags:
+- trapdoor
+- la panthera
+- nam
+- goonj
+- bloody dangerous
+- assagao
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: Five new tables, one phone booth, one pending bar licence
-  - type: item
-    name: Trapdoor, Versova
-    why: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director of mixology Shobith Salian, food by chef Gaurav Gidwani. Curlytales pegs it at INR 2,000 for two.
-    catch: No walk-ins. You get the booth code after booking, and the six-course price is not in any release.
-    paid: false
-  - type: item
-    name: La Panthera Eros, Churchgate
-    why: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the first floor of the 1930s Eros building. Pintxos, 48-hour fermented pizzas, about INR 3,500 for two.
-    catch: "Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner. No lunch in any listing."
-    paid: false
-  - type: item
-    name: Nam, Hauz Khas
-    why: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open kitchen. Five Time Out stars on 23 October. About INR 3,000 for two, no alcohol.
-    catch: The bar licence was still pending when Time Out visited. Closed Mondays.
-    paid: false
-  - type: item
-    name: Goonj, Indiranagar
-    why: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal Bukhara, Bhutte Ka Kees chaat, cocktails filed under Nostalgia and Colour. About INR 2,700 for two.
-    catch: "Fourth floor, and the kitchen goes dark from 3:30 to 6:30pm."
-    paid: false
-  - type: item
-    name: Bloody Dangerous, Assagao
-    why: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500 entry lights, cocktails by Arnold Hou, plates by Priyanka Sardessai and chef Yong. INR 4,000 for two.
-    catch: Doors at 9pm, music climbs as the night does, parking is limited. Time Out, 2 November.
-    paid: false
-  - type: verdict
-    text: "The read: Nam. Time Out's five stars, INR 3,000 for two, closed Mondays, and the one catch is a licence that is paperwork, not cooking. Book Trapdoor the week someone prints the price."
-  - type: close
+- type: cover
+  title: Five new tables, one phone booth, one pending bar licence
+- type: item
+  name: Trapdoor, Versova
+  why: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director of mixology Shobith Salian, food by chef Gaurav Gidwani. Curlytales pegs it at INR 2,000 for two.
+  catch: No walk-ins. You get the booth code after booking, and the six-course price is not in any release.
+  paid: false
+- type: receipt
+  kind: image
+  image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-1.jpg
+  caption: Trapdoor Launches in Versova With Six-Course Cocktail Pairing Experience. Restaurant India on Trapdoor's launch, team and format, 30 September 2026
+  credit: "Image: restaurantindia.in, Restaurant India on Trapdoor's launch, team and format, 30 September 2026"
+  source: https://www.restaurantindia.in/news/trapdoor-launches-in-versova-with-six-course-cocktail-pairing-experience.n17347
+- type: receipt
+  kind: image
+  image: assets/img/stories/five-new-tables-phone-booth-pending-bar-licence/ev-2.jpg
+  caption: 11 New Mumbai Restaurants In October You. Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026
+  credit: "Image: curlytales.com, Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026"
+  source: https://curlytales.com/india/food/new-mumbai-restaurants-in-october-youll-want-to-tell-your-friends-about/amp/
+- type: item
+  name: La Panthera Eros, Churchgate
+  why: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the first floor of the 1930s Eros building. Pintxos, 48-hour fermented pizzas, about INR 3,500 for two.
+  catch: "Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner. No lunch in any listing."
+  paid: false
+- type: item
+  name: Nam, Hauz Khas
+  why: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open kitchen. Five Time Out stars on 23 October. About INR 3,000 for two, no alcohol.
+  catch: The bar licence was still pending when Time Out visited. Closed Mondays.
+  paid: false
+- type: item
+  name: Goonj, Indiranagar
+  why: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal Bukhara, Bhutte Ka Kees chaat, cocktails filed under Nostalgia and Colour. About INR 2,700 for two.
+  catch: "Fourth floor, and the kitchen goes dark from 3:30 to 6:30pm."
+  paid: false
+- type: item
+  name: Bloody Dangerous, Assagao
+  why: Siddharth Kerkar, Vipin Raman and Bonita Mascarenhas' 42-seat bar about fear. 3,500 entry lights, cocktails by Arnold Hou, plates by Priyanka Sardessai and chef Yong. INR 4,000 for two.
+  catch: Doors at 9pm, music climbs as the night does, parking is limited. Time Out, 2 November.
+  paid: false
+- type: verdict
+  text: "The read: Nam. Time Out's five stars, INR 3,000 for two, closed Mondays, and the one catch is a licence that is paperwork, not cooking. Book Trapdoor the week someone prints the price."
+- type: close
 caption: |
   Five openings, five catches, zero press release adjectives.
   Trapdoor hides behind a Versova phone booth, INR 2,000 for two per Curlytales. La Panthera takes the Eros building in Churchgate, evenings only. Nam in Hauz Khas got five Time Out stars on 23 October with the bar licence still pending. Goonj sits four floors up on 100 Feet Road, Indiranagar. Bloody Dangerous in Assagao runs 3,500 lights and INR 4,000 for two, per Time Out, 2 November.
@@ -72,8 +90,8 @@ linkedin: |
 alt: |
   Cover slide on hospitality yellow with the headline Five new tables, one phone booth, one pending bar licence and the SWEET kicker pill.
   Edit item slide for Trapdoor in Versova with a T monogram, the six-course cocktail omakase, INR 2,000 for two, and the catch about the booth code.
-  Edit item slide for La Panthera Eros in Churchgate with an L monogram, 80 seats, INR 3,500 for two, and the catch that it is evenings only.
-  Edit item slide for Nam in Hauz Khas with an N monogram, five Time Out stars, INR 3,000 for two, and the catch about the pending bar licence.
+  Receipt slide, an image from restaurantindia.in
+  Receipt slide, an image from curlytales.com
   Edit item slide for Goonj in Indiranagar with a G monogram, 75 seats, INR 2,700 for two, and the catch about the fourth floor and the afternoon break.
   Edit item slide for Bloody Dangerous in Assagao with a B monogram, 42 seats, INR 4,000 for two, and the catch about 9pm doors and parking.
   Verdict slide on hospitality yellow reading The read, picking Nam and telling Trapdoor to print a price.

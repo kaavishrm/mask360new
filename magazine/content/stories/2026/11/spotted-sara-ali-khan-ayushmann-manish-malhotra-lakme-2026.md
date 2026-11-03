@@ -8,30 +8,48 @@ date: 2026-10-29
 desk: Fashion Desk
 cover: generated
 coverText: Spotted
-credit:
+credit: ""
 sources:
-  - https://www.republicworld.com/entertainment/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-2026-2026-10-18-139172 (ANI report via Republic World, the looks, Taj Palace, three and a half years, Udta Teer, 2026-10-18)
-  - https://www.aninews.in/news/entertainment/bollywood/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-202620261018023910/ (ANI, showstoppers report, 2026-10-18)
-  - https://urbanasian.com/lifestyle/fashion/2026/10/manish-malhotra-luxury-pret-2026-lakme-fashion-week/ (UrbanAsian, collection notes, Menswear Luxe Prêt, fine jewellery, NEXA, FS Media Pro photo credit, 2026-10-17)
-  - https://t2online.in/goodlife/fashion-beauty/manish-malhotra-s-menswear-luxe-pret-launches-with-sara-ali-khan-and-ayushmann-khurrana-as-showstoppers--at-lfw-x-fdci/2008722 (t2online, 17 October date, live percussion, Donn Bhat set, car entry, photographs by Pabitra Das, 2026-10-18)
-  - https://t2online.in/goodlife/fashion-beauty/-exclusive--show-director-lubna-adams-shares-what-goes-behind-putting-a-manish-malhotra-show-together--ahead-of-the-luxury-pret-menswear-showcase-at-lakme-fashion-week--partnered-with-fdci--/2008701 (t2online, show director Lubna Adams, 2026-10-17)
-  - https://www.outlookindia.com/art-entertainment/in-photos-stars-dazzle-at-delhi-lakme-fashion-week-2026 (Outlook India photo gallery, PTI captions dated Saturday 17 October, photo credit PTI/Rushikesh More, 2026-10-18)
-  - https://indianretailer.com/brandlicense/archives/news/nexa-partners-manish-malhotra-luxury-pret-2026-lakme-fashion-week.n6130 (Indian Retailer, NEXA partnership release with the Manish Malhotra quote, 2026-10-23)
-  - https://www.newkerala.com/news/a/lakme-fashion-week-fdcis-delhi-2026-edition-begin-915.htm (newkerala, LFW x FDCI Delhi edition dates 13 to 18 October, 2026-10-04)
-tags: [manish malhotra, sara ali khan, ayushmann khurrana, lakme fashion week, fdci, nexa]
+- "https://www.republicworld.com/entertainment/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-2026-2026-10-18-139172 (ANI report via Republic World, the looks, Taj Palace, three and a half years, Udta Teer, 2026-10-18)"
+- "https://www.aninews.in/news/entertainment/bollywood/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-202620261018023910/ (ANI, showstoppers report, 2026-10-18)"
+- "https://urbanasian.com/lifestyle/fashion/2026/10/manish-malhotra-luxury-pret-2026-lakme-fashion-week/ (UrbanAsian, collection notes, Menswear Luxe Prêt, fine jewellery, NEXA, FS Media Pro photo credit, 2026-10-17)"
+- "https://t2online.in/goodlife/fashion-beauty/manish-malhotra-s-menswear-luxe-pret-launches-with-sara-ali-khan-and-ayushmann-khurrana-as-showstoppers--at-lfw-x-fdci/2008722 (t2online, 17 October date, live percussion, Donn Bhat set, car entry, photographs by Pabitra Das, 2026-10-18)"
+- "https://t2online.in/goodlife/fashion-beauty/-exclusive--show-director-lubna-adams-shares-what-goes-behind-putting-a-manish-malhotra-show-together--ahead-of-the-luxury-pret-menswear-showcase-at-lakme-fashion-week--partnered-with-fdci--/2008701 (t2online, show director Lubna Adams, 2026-10-17)"
+- "https://www.outlookindia.com/art-entertainment/in-photos-stars-dazzle-at-delhi-lakme-fashion-week-2026 (Outlook India photo gallery, PTI captions dated Saturday 17 October, photo credit PTI/Rushikesh More, 2026-10-18)"
+- "https://indianretailer.com/brandlicense/archives/news/nexa-partners-manish-malhotra-luxury-pret-2026-lakme-fashion-week.n6130 (Indian Retailer, NEXA partnership release with the Manish Malhotra quote, 2026-10-23)"
+- "https://www.newkerala.com/news/a/lakme-fashion-week-fdcis-delhi-2026-edition-begin-915.htm (newkerala, LFW x FDCI Delhi edition dates 13 to 18 October, 2026-10-04)"
+tags:
+- manish malhotra
+- sara ali khan
+- ayushmann khurrana
+- lakme fashion week
+- fdci
+- nexa
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: "Spotted: Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi"
-  - type: tea
-    pull: Back after three and a half years.
-    text: Taj Palace, New Delhi, Saturday 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at Lakmé Fashion Week x FDCI, ends with Sara Ali Khan in a black strapless corset bodice with metallic floral embellishment, a flowing skirt and a sheer drape, and Ayushmann Khurrana in a black jacket embroidered in silver at the shoulders and lapels.
-  - type: receipt
-    kind: quote
-    quote: "Luxury Prêt 2026 is about exploring a new expression of glamour, one that feels effortless, contemporary and deeply personal."
-    source: Manish Malhotra, via Indian Retailer, 23 October 2026
-  - type: close
+- type: cover
+  title: "Spotted: Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi"
+- type: tea
+  pull: Back after three and a half years.
+  text: Taj Palace, New Delhi, Saturday 17 October. Manish Malhotra's Luxury Prêt 2026, presented by NEXA at Lakmé Fashion Week x FDCI, ends with Sara Ali Khan in a black strapless corset bodice with metallic floral embellishment, a flowing skirt and a sheer drape, and Ayushmann Khurrana in a black jacket embroidered in silver at the shoulders and lapels.
+- type: receipt
+  kind: image
+  image: assets/img/stories/spotted-sara-ali-khan-ayushmann-manish-malhotra-lakme-2026/ev-1.jpg
+  caption: Ayushmann Khurrana, Sara Ali Khan Turn Showstoppers as Manish Malhotra Returns to Lakme Fashion Week 2026. ANI report via Republic World, the looks, Taj Palace,
+  credit: "Image: republicworld.com, ANI report via Republic World, the looks, Taj Palace, three and a half years, Udta Teer, 2026-10-18"
+  source: https://www.republicworld.com/entertainment/ayushmann-khurrana-sara-ali-khan-turn-showstoppers-as-manish-malhotra-returns-to-lakme-fashion-week-2026-2026-10-18-139172
+- type: receipt
+  kind: image
+  image: assets/img/stories/spotted-sara-ali-khan-ayushmann-manish-malhotra-lakme-2026/ev-2.jpg
+  caption: Manish Malhotra Luxury Prêt 2026 at Lakmē Fashion Week. UrbanAsian, collection notes, Menswear Luxe Prêt, fine jewellery, NEXA, FS Media Pro photo credit, 2026-
+  credit: "Image: urbanasian.com, UrbanAsian, collection notes, Menswear Luxe Prêt, fine jewellery, NEXA, FS Media Pro photo credit, 2026-10-17"
+  source: https://urbanasian.com/lifestyle/fashion/2026/10/manish-malhotra-luxury-pret-2026-lakme-fashion-week/
+- type: receipt
+  kind: quote
+  quote: Luxury Prêt 2026 is about exploring a new expression of glamour, one that feels effortless, contemporary and deeply personal.
+  source: Manish Malhotra, via Indian Retailer, 23 October 2026
+- type: close
 caption: |
   Three and a half years off the Lakmé runway. He came back with a car and two showstoppers.
   Manish Malhotra showed Luxury Prêt 2026 at Taj Palace, New Delhi on Saturday 17 October, at Lakmé Fashion Week x FDCI, presented by Maruti Suzuki NEXA.
@@ -50,8 +68,8 @@ linkedin: |
 alt: |
   Cover slide on fashion violet with the word Spotted set huge, the headline Spotted, Sara Ali Khan and Ayushmann in Manish Malhotra, Delhi, and a SWEET tag.
   Tea slide, white ground, pull line Back after three and a half years, text describing the Taj Palace show on 17 October and the two showstopper looks.
-  Receipt slide in a black frame, the Manish Malhotra quote on Luxury Prêt 2026 with source and date.
-  Close slide, black, Steeped by Mask360, Three. Six. Tea.
+  Receipt slide, an image from republicworld.com
+  Receipt slide, an image from urbanasian.com
 ---
 ## The look
 

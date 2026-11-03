@@ -36,6 +36,7 @@ cd magazine && node newsroom/post.mjs content/stories/2026/11/slug.md           
 
 - `run.mjs` the editorial day; `llm.mjs` the Claude client (web search for research, structured outputs for drafts, prompt caching on the house docs, server-side refusal fallbacks); `schemas.mjs` the desk output shapes; `prompts/` the desk briefs (the same briefs the agents in `.claude/agents/` carry).
 - `lint.mjs` every machine-checkable house rule; `yaml.mjs` the front matter parser; `md.mjs` the web body renderer; `story-json.mjs` the renderer payload.
+- `evidence.mjs` the media receipt collector: the page's own image, YouTube stills and a Playwright screenshot for every source URL, into `public/assets/img/stories/<slug>/` with `evidence.json`; `attach-evidence.mjs` puts the best two on receipt slides. No story passes lint without a media receipt.
 - `render.py` the carousel, card, hero, OG and PDF renderer (Pillow only); `fonts/` the TTFs it uses.
 - `sources.mjs` the feed list the scout reads first (failures are skipped; web search is the primary path).
 - `post.mjs` Instagram Graph API carousel publishing and LinkedIn document posts; `posted.json` the log; `outbox/` the queue.
@@ -44,7 +45,7 @@ cd magazine && node newsroom/post.mjs content/stories/2026/11/slug.md           
 
 ## Cost
 
-At two stories a run, three runs a day, a run is roughly 10 to 14 model calls and 40 to 60 web searches. Expect USD 3 to 6 a day on Claude Opus 5.5, under INR 15,000 a month. `STATE.json` records the spend per run.
+At two stories a run, three runs a day, a run is roughly 12 to 16 model calls and 40 to 60 web searches. Expect USD 3 to 6 a day on Claude Opus 5.5, under INR 15,000 a month. `STATE.json` records the spend per run.
 
 ## What is not automated yet
 

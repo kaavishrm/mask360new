@@ -8,43 +8,61 @@ date: 2026-10-28
 desk: Fashion Desk
 cover: generated
 coverText: 109 cr
-credit:
+credit: ""
 sources:
-  - https://inc42.com/?p=576745 (Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-10-19)
-  - https://india.entrepreneur.com/?p=100607 (Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-10-19)
-  - https://openthemagazine.com/business/the-pant-project-wants-150-stores-will-the-numbers-fit (Open magazine, analysis of the store maths, FY26 revenue, FY27 projection, store size and cost, order values, breakeven, 2026-10-19)
-  - https://indianretailer.com/news/pant-project-raises-rs-109-cr-expand-150-stores (Indian Retailer, funding report, 25 stores and 150 target, categories added, 2026-10-19)
-  - https://yourstory.com/2026/10/the-pant-project-bags-rs-109-cr-to-accelerate-retail-expansion (YourStory, funding report, use of funds, 2026-10-19)
-  - https://india.entrepreneur.com/news-and-trends/d2c-fashion-brand-the-pant-project-raises-usd-425-mn-in/475812 (Entrepreneur India, Series A report, Mumbai base, founders and roles, 2024-06)
-tags: [pant project, mirae asset, sorin investments, menswear, d2c, retail]
+- "https://inc42.com/?p=576745 (Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-10-19)"
+- "https://india.entrepreneur.com/?p=100607 (Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-10-19)"
+- "https://openthemagazine.com/business/the-pant-project-wants-150-stores-will-the-numbers-fit (Open magazine, analysis of the store maths, FY26 revenue, FY27 projection, store size and cost, order values, breakeven, 2026-10-19)"
+- "https://indianretailer.com/news/pant-project-raises-rs-109-cr-expand-150-stores (Indian Retailer, funding report, 25 stores and 150 target, categories added, 2026-10-19)"
+- "https://yourstory.com/2026/10/the-pant-project-bags-rs-109-cr-to-accelerate-retail-expansion (YourStory, funding report, use of funds, 2026-10-19)"
+- "https://india.entrepreneur.com/news-and-trends/d2c-fashion-brand-the-pant-project-raises-usd-425-mn-in/475812 (Entrepreneur India, Series A report, Mumbai base, founders and roles, 2024-06)"
+tags:
+- pant project
+- mirae asset
+- sorin investments
+- menswear
+- d2c
+- retail
 paid: false
-partner:
+partner: ""
 slides:
-  - type: cover
-    title: The Pant Project raises 109 crore for 125 more stores
-  - type: tea
-    pull: 109 cr, one line of business.
-    text: The Pant Project closes a 109 cr Series B, about 11.5 million dollars, led by Mirae Asset Venture Investments (India). Sorin Investments, the Series A lead, comes back in, with family offices and angels including Anisha Saraf, B&K Securities, MGA Ventures and B2V Ventures. Alteria Capital adds venture debt, amount undisclosed.
-  - type: tea
-    pull: 25 stores today. 150 is the ask.
-    text: The money goes offline. The brothers Dhruv and Udit Toshniwal, who started the brand in 2020 selling custom-made trousers online, now run 25 exclusive brand stores. The target is more than 150 in two to three years. The range widens too, with jeans, athleisure and casualwear joining the 300-plus bottomwear SKUs.
-  - type: tea
-    pull: One store every six to nine days.
-    text: Open magazine ran the arithmetic. 125 net new stores in two to three years is one opening every six to nine days. At 700 to 800 sq ft and 30 to 40 lakh a store, the founder's own March numbers, the build-out alone is 37.5 to 50 cr. Roughly a third to half of the round.
-  - type: tea
-    pull: 80 cr in, 160 cr promised.
-    text: "The revenue line: 80 cr in FY26, per the company's September disclosure, with 160 cr projected for FY27. Sorin's Mandar Dandekar says revenue is up more than fivefold since the 2024 Series A. Dhruv Toshniwal said in March that every store is profitable and EBITDA breakeven sits near 150 to 160 cr. FY27 is the whole bet."
-  - type: receipt
-    kind: number
-    number: "125"
-    caption: net new stores in two to three years, one opening every six to nine days
-  - type: receipt
-    kind: quote
-    quote: "As premium menswear becomes one of India's most compelling consumer opportunities, The Pant Project is well positioned to lead it."
-    source: Puneet Kumar, Managing Director, Mirae Asset Venture Fund, via Entrepreneur India, 19 October 2026
-  - type: verdict
-    text: "The read: 109 cr buys the stores, not the 160 cr. Offline bills run 6,000 against 3,000 to 4,000 online, so the maths works only if 125 new rooms fill as fast as the first 25. Watch the FY27 number, not the ribbon cuttings."
-  - type: close
+- type: cover
+  title: The Pant Project raises 109 crore for 125 more stores
+- type: tea
+  pull: 109 cr, one line of business.
+  text: The Pant Project closes a 109 cr Series B, about 11.5 million dollars, led by Mirae Asset Venture Investments (India). Sorin Investments, the Series A lead, comes back in, with family offices and angels including Anisha Saraf, B&K Securities, MGA Ventures and B2V Ventures. Alteria Capital adds venture debt, amount undisclosed.
+- type: receipt
+  kind: image
+  image: assets/img/stories/the-pant-project-raises-109-crore-for-125-more-stores/ev-1.jpg
+  caption: The Pant Project Raises ₹109 Cr To Expand Store Network & Portfolio. Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-1
+  credit: "Image: inc42.com, Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-10-19"
+  source: https://inc42.com/?p=576745
+- type: receipt
+  kind: image
+  image: assets/img/stories/the-pant-project-raises-109-crore-for-125-more-stores/ev-2.jpg
+  caption: The Pant Project Raises INR 109 Cr Series B. Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-1
+  credit: "Image: india.entrepreneur.com, Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-10-19"
+  source: https://india.entrepreneur.com/?p=100607
+- type: tea
+  pull: 25 stores today. 150 is the ask.
+  text: The money goes offline. The brothers Dhruv and Udit Toshniwal, who started the brand in 2020 selling custom-made trousers online, now run 25 exclusive brand stores. The target is more than 150 in two to three years. The range widens too, with jeans, athleisure and casualwear joining the 300-plus bottomwear SKUs.
+- type: tea
+  pull: One store every six to nine days.
+  text: Open magazine ran the arithmetic. 125 net new stores in two to three years is one opening every six to nine days. At 700 to 800 sq ft and 30 to 40 lakh a store, the founder's own March numbers, the build-out alone is 37.5 to 50 cr. Roughly a third to half of the round.
+- type: tea
+  pull: 80 cr in, 160 cr promised.
+  text: "The revenue line: 80 cr in FY26, per the company's September disclosure, with 160 cr projected for FY27. Sorin's Mandar Dandekar says revenue is up more than fivefold since the 2024 Series A. Dhruv Toshniwal said in March that every store is profitable and EBITDA breakeven sits near 150 to 160 cr. FY27 is the whole bet."
+- type: receipt
+  kind: number
+  number: 125
+  caption: net new stores in two to three years, one opening every six to nine days
+- type: receipt
+  kind: quote
+  quote: As premium menswear becomes one of India's most compelling consumer opportunities, The Pant Project is well positioned to lead it.
+  source: Puneet Kumar, Managing Director, Mirae Asset Venture Fund, via Entrepreneur India, 19 October 2026
+- type: verdict
+  text: "The read: 109 cr buys the stores, not the 160 cr. Offline bills run 6,000 against 3,000 to 4,000 online, so the maths works only if 125 new rooms fill as fast as the first 25. Watch the FY27 number, not the ribbon cuttings."
+- type: close
 caption: |
   The Pant Project's offline hard launch has a price. 109 crore.
   Mirae Asset Venture Investments (India) leads the Series B, Sorin Investments returns, Alteria Capital adds venture debt. 25 stores today, more than 150 promised in two to three years.
@@ -64,8 +82,8 @@ linkedin: |
 alt: |
   Cover slide on fashion violet with 109 cr set huge, the headline The Pant Project raises 109 crore for 125 more stores, and a SPILLED tag.
   Tea slide, white ground, pull line 109 cr, one line of business, text naming Mirae Asset, Sorin, the angels and Alteria Capital.
-  Tea slide, pull line 25 stores today, 150 is the ask, text on the founders, the store count, the target and the new categories.
-  Tea slide, pull line One store every six to nine days, text on Open magazine's store maths and the 37.5 to 50 cr build-out.
+  Receipt slide, an image from inc42.com
+  Receipt slide, an image from india.entrepreneur.com
   Tea slide, pull line 80 cr in, 160 cr promised, text on FY26 revenue, the FY27 projection, fivefold growth and breakeven.
   Receipt slide in a black frame, the number 125 set at 200px, caption net new stores in two to three years.
   Receipt slide in a black frame, the Puneet Kumar quote from Mirae Asset Venture Fund with source and date.

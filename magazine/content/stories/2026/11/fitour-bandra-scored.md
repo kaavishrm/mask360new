@@ -8,38 +8,55 @@ date: 2026-10-28
 desk: Hospitality Desk
 cover: generated
 coverText: 8.4
-credit:
+credit: ""
 sources:
-  - https://www.restaurantindia.in/news/aspect-hospitality-opens-fitour-in-bandra-with-14-seat-indian-dining-format.n17383 (Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Keswani, 5 October 2026)
-  - https://thenodmag.com/content/in-mumbai-s-newest-xs-eatery-last-summer-s-mangoes-get-the-spotlight (The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, 14 October 2026)
-  - https://www.esquireindia.co.in/food-and-drinks/what-to-eat/esquire-india-october-hotlist-new-restaurants-and-bars-across-india-fitour-nām-chor-bizarre-and-more (Esquire India October 2026 hotlist entry on Fitour, 18 verses, unmarked door, updated 14 October 2026)
-  - https://thenodmag.com/content/india-new-restaurants-and-bars-october-2026 (The Nod October openings roundup with Fitour's one seating, no signage, no walk-ins, 9 October 2026)
-tags: [fitour, aspect hospitality, ashwin singh, bandra, house of akina]
+- "https://www.restaurantindia.in/news/aspect-hospitality-opens-fitour-in-bandra-with-14-seat-indian-dining-format.n17383 (Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Keswani, 5 October 2026)"
+- "https://thenodmag.com/content/in-mumbai-s-newest-xs-eatery-last-summer-s-mangoes-get-the-spotlight (The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, 14 October 2026)"
+- "https://www.esquireindia.co.in/food-and-drinks/what-to-eat/esquire-india-october-hotlist-new-restaurants-and-bars-across-india-fitour-nām-chor-bizarre-and-more (Esquire India October 2026 hotlist entry on Fitour, 18 verses, unmarked door, updated 14 October 2026)"
+- "https://thenodmag.com/content/india-new-restaurants-and-bars-october-2026 (The Nod October openings roundup with Fitour's one seating, no signage, no walk-ins, 9 October 2026)"
+tags:
+- fitour
+- aspect hospitality
+- ashwin singh
+- bandra
+- house of akina
 paid: false
-partner:
+partner: ""
 score: 8.4
 slides:
-  - type: cover
-    title: "Fitour's 18-course basement in Bandra, scored: 8.4"
-  - type: tea
-    pull: "Idea: 8.5/10"
-    text: Eighteen courses chef Ashwin Singh calls verses, served three or four at a time with no introduction, so you guess the dish before he explains it. Pani puri under marigold petals with karela and amla. Litti chokha shaped like a Jim Jam. The pickle jars are lessons from his grandmother in Meerut. The gimmick has a spine.
-  - type: tea
-    pull: "Craft: 8.5/10"
-    text: Singh cooked at Gaggan in Bangkok and at Masque. The kitchen grinds its own garam, chaat and meat masalas and buys in only salt, turmeric, chilli and coriander. Nothing is frozen. A pork course uses three cuts cooked 12 to 14 hours. Shrineet Sonsurkar, ex Naar and Masque, runs the pairings and is told not to upstage the plate.
-  - type: tea
-    pull: "Fit: 7.5/10"
-    text: "A basement under House of Akina on Turner Road, the old Privé, rebuilt four times, once after the monsoon and once because the ceiling was too low. Designer Mahek Kapoor's terracotta tiles and a Nostalgia Wall. Bandra's tasting-menu crowd already has Papa's 12 seats upstairs from Veronica's. Fourteen seats, four nights, one 7:30pm sitting is a narrow door."
-  - type: tea
-    pull: "Courage: 9/10"
-    text: INR 8,245 a head plus taxes before a drop is poured, with pairings from INR 5,145 to INR 6,495. No sign on the street, no walk-ins, dishes explained only after you have eaten them, and sea snails inside a Mangalore bun that The Nod's reviewer says she would have hesitated over. A menu that flips every three months. Nerve.
-  - type: receipt
-    kind: number
-    number: 8,245
-    caption: INR per person plus taxes for 18 verses. Cocktail pairing INR 5,495, international wine INR 6,495, Indian wine INR 5,145. Restaurant India, 5 October 2026.
-  - type: verdict
-    text: "The read: 8.4. Fitour is the most serious new Indian tasting room in Mumbai since Papa's, priced like it knows. Scored on what Aspect and the press have shown, not a visit. We go the week the January menu lands."
-  - type: close
+- type: cover
+  title: "Fitour's 18-course basement in Bandra, scored: 8.4"
+- type: tea
+  pull: "Idea: 8.5/10"
+  text: Eighteen courses chef Ashwin Singh calls verses, served three or four at a time with no introduction, so you guess the dish before he explains it. Pani puri under marigold petals with karela and amla. Litti chokha shaped like a Jim Jam. The pickle jars are lessons from his grandmother in Meerut. The gimmick has a spine.
+- type: receipt
+  kind: image
+  image: assets/img/stories/fitour-bandra-scored/ev-1.jpg
+  caption: Aspect Hospitality Opens FITOUR in Bandra With 14-Seat Indian Dining Format. Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Ke
+  credit: "Image: restaurantindia.in, Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Keswani, 5 October 2026"
+  source: https://www.restaurantindia.in/news/aspect-hospitality-opens-fitour-in-bandra-with-14-seat-indian-dining-format.n17383
+- type: receipt
+  kind: image
+  image: assets/img/stories/fitour-bandra-scored/ev-2.jpg
+  caption: In Fitour, Mumbai’s newest XS eatery, last summer’s mangoes get a spotlight. The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings,
+  credit: "Image: thenodmag.com, The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, 14 October 2026"
+  source: https://thenodmag.com/content/in-mumbai-s-newest-xs-eatery-last-summer-s-mangoes-get-the-spotlight
+- type: tea
+  pull: "Craft: 8.5/10"
+  text: Singh cooked at Gaggan in Bangkok and at Masque. The kitchen grinds its own garam, chaat and meat masalas and buys in only salt, turmeric, chilli and coriander. Nothing is frozen. A pork course uses three cuts cooked 12 to 14 hours. Shrineet Sonsurkar, ex Naar and Masque, runs the pairings and is told not to upstage the plate.
+- type: tea
+  pull: "Fit: 7.5/10"
+  text: "A basement under House of Akina on Turner Road, the old Privé, rebuilt four times, once after the monsoon and once because the ceiling was too low. Designer Mahek Kapoor's terracotta tiles and a Nostalgia Wall. Bandra's tasting-menu crowd already has Papa's 12 seats upstairs from Veronica's. Fourteen seats, four nights, one 7:30pm sitting is a narrow door."
+- type: tea
+  pull: "Courage: 9/10"
+  text: INR 8,245 a head plus taxes before a drop is poured, with pairings from INR 5,145 to INR 6,495. No sign on the street, no walk-ins, dishes explained only after you have eaten them, and sea snails inside a Mangalore bun that The Nod's reviewer says she would have hesitated over. A menu that flips every three months. Nerve.
+- type: receipt
+  kind: number
+  number: 8,245
+  caption: INR per person plus taxes for 18 verses. Cocktail pairing INR 5,495, international wine INR 6,495, Indian wine INR 5,145. Restaurant India, 5 October 2026.
+- type: verdict
+  text: "The read: 8.4. Fitour is the most serious new Indian tasting room in Mumbai since Papa's, priced like it knows. Scored on what Aspect and the press have shown, not a visit. We go the week the January menu lands."
+- type: close
 caption: |
   INR 8,245 a head, 14 seats, 18 courses, and you guess every one before the chef tells you.
   Fitour opened on 4 October in the basement of House of Akina on Turner Road, Bandra West. Chef Ashwin Singh, ex Gaggan and Masque, serves 18 verses in one 7:30pm sitting, Thursday to Sunday. Pairings run INR 5,145 to INR 6,495 on top, per Restaurant India, 5 October. The Nod's review of 14 October found house-ground masalas, a pork course cooked 14 hours and sea snails in a Mangalore bun. We score it 8.4 on the idea, the craft, the fit and the courage, from the coverage and Aspect Hospitality's own numbers, not a visit.
@@ -56,8 +73,8 @@ linkedin: |
 alt: |
   Cover slide on hospitality yellow with 8.4 set huge, the headline Fitour's 18-course basement in Bandra, scored, and the SWEET kicker pill.
   Tea slide with the pull line Idea 8.5 out of 10 and a paragraph on the 18 verses, the guessing game and the pickle jars.
-  Tea slide with the pull line Craft 8.5 out of 10 and a paragraph on Ashwin Singh's Gaggan and Masque background, house-ground masalas and the pairings.
-  Tea slide with the pull line Fit 7.5 out of 10 and a paragraph on the rebuilt basement, Mahek Kapoor's design and the narrow door of 14 seats.
+  Receipt slide, an image from restaurantindia.in
+  Receipt slide, an image from thenodmag.com
   Tea slide with the pull line Courage 9 out of 10 and a paragraph on the INR 8,245 price, no signage, no walk-ins and the sea snails.
   Receipt slide in a black frame with 8,245 set large and a caption listing the tasting menu and pairing prices from Restaurant India.
   Verdict slide on hospitality yellow reading The read with the 8.4 total and the note that this is scored from coverage, not a visit.

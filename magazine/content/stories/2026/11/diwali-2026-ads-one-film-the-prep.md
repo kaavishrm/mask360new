@@ -8,37 +8,55 @@ date: 2026-11-01
 desk: The Mask
 cover: generated
 coverText: the prep
-credit:
+credit: ""
 sources:
-  - https://indiantelevision.com/mam/asian-paints-unveils-diwali-campaign-celebrating-the-joy-of-home-makeovers/ (Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19)
-  - https://www.adsoftheworld.com/campaigns/taiyyari-shuru-tyohaar-shuru (Ads of the World listing for the Asian Paints film, India, October 2026)
-  - https://www.mediainfoline.com/advertising/spotifys-diwali-campaign-turns-festive-chores-into-family-fun (MediaInfoline on Spotify's three Gullak films and the Shipra Srivastava quote, 2026-10-30)
-  - https://www.mediainfoline.com/advertising/nutella-and-ranveer-singh-come-together-to-add-more-deliciousness-to-diwali (MediaInfoline on the Nutella Diwali film with Ranveer Singh and the Ferrero India quote, 2026-10-22)
-  - https://www.mediainfoline.com/advertising/this-diwali-cadbury-celebrations-nudges-you-to-celebrate-the-sweetness-behind-every-nok-jhok (MediaInfoline on Cadbury Celebrations' neighbours film by Ogilvy India, with pricing and media plan, 2026-10-12)
-  - https://www.medianews4u.com/supertails-puts-humans-under-the-table-to-show-how-pets-experience-diwali/ (Medianews4u on Supertails' No Bang Diwali film on Instagram, 2026-10-23)
-  - https://openthemagazine.com/branding-marketing-and-advertising/supertails-diwali-ad-finds-the-family-under-the-table (Open magazine on the Supertails film and its on-screen line, updated 2026-10-24)
-  - https://www.exchange4media.com/festive-season-news/who-owns-diwali-the-brands-the-culture-or-the-consumer-159612.html (exchange4media on Diwali ads repeating the same festive symbols, cites 2026 adex projections)
-  - https://www.socialsamosa.com/topical-spot/memorable-diwali-campaigns-redefined-the-festive-narrative-10564668 (Social Samosa on brands widening the Diwali story from the day to the prep rituals, 2025)
-tags: [diwali, asian paints, spotify, nutella, cadbury, ogilvy]
+- "https://indiantelevision.com/mam/asian-paints-unveils-diwali-campaign-celebrating-the-joy-of-home-makeovers/ (Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19)"
+- "https://www.adsoftheworld.com/campaigns/taiyyari-shuru-tyohaar-shuru (Ads of the World listing for the Asian Paints film, India, October 2026)"
+- "https://www.mediainfoline.com/advertising/spotifys-diwali-campaign-turns-festive-chores-into-family-fun (MediaInfoline on Spotify's three Gullak films and the Shipra Srivastava quote, 2026-10-30)"
+- "https://www.mediainfoline.com/advertising/nutella-and-ranveer-singh-come-together-to-add-more-deliciousness-to-diwali (MediaInfoline on the Nutella Diwali film with Ranveer Singh and the Ferrero India quote, 2026-10-22)"
+- "https://www.mediainfoline.com/advertising/this-diwali-cadbury-celebrations-nudges-you-to-celebrate-the-sweetness-behind-every-nok-jhok (MediaInfoline on Cadbury Celebrations' neighbours film by Ogilvy India, with pricing and media plan, 2026-10-12)"
+- "https://www.medianews4u.com/supertails-puts-humans-under-the-table-to-show-how-pets-experience-diwali/ (Medianews4u on Supertails' No Bang Diwali film on Instagram, 2026-10-23)"
+- "https://openthemagazine.com/branding-marketing-and-advertising/supertails-diwali-ad-finds-the-family-under-the-table (Open magazine on the Supertails film and its on-screen line, updated 2026-10-24)"
+- "https://www.exchange4media.com/festive-season-news/who-owns-diwali-the-brands-the-culture-or-the-consumer-159612.html (exchange4media on Diwali ads repeating the same festive symbols, cites 2026 adex projections)"
+- "https://www.socialsamosa.com/topical-spot/memorable-diwali-campaigns-redefined-the-festive-narrative-10564668 (Social Samosa on brands widening the Diwali story from the day to the prep rituals, 2025)"
+tags:
+- diwali
+- asian paints
+- spotify
+- nutella
+- cadbury
+- ogilvy
 paid: false
-partner:
+partner: ""
 legal: CLEAR
 legalNote: Checklist in HOUSE/04 run by the Culture Desk editor on 2026-11-01. Checked that every claim about the three films and the two counter-examples traces to the trade reports listed in sources, that opinion is written as opinion under The read, that only companies, agencies and their work are critiqued, that the executives named are quoted on the record from trade press and not criticised, that no allegation of any kind is made against a person, that no campaign imagery is reproduced, and that nothing here is paid. Comment invited via tea@mask360.agency.
 slides:
-  - type: cover
-    title: Diwali advertising made one film this year, the prep montage
-  - type: tea
-    pull: Asian Paints sang the prep.
-    text: Taiyyari Shuru, Tyohaar Shuru, by Ogilvy, reported 19 October, turns cleaning, decorating and painting into a musical with cousins, relatives and friends joining in. Sukesh Nayak says the chaos of preparation has its own rhythm. It does. The next two films found the same rhythm, and here the product is a wall.
-  - type: tea
-    pull: Spotify made the prep a sitcom.
-    text: Three one-minute films with Gullak's Mishra family, reported 30 October. Laddoos to Taambdi Chaamdi, rangoli to Chaiya Chaiya, untangling lights to Badan Pe Sitare. The family bickers through the chore until someone presses play. Tagline, Diwali ki taiyaari fun banao, Spotify chalao. Same week, same chores, better casting.
-  - type: tea
-    pull: Nutella made the prep a checklist.
-    text: Reported 22 October. Ranveer Singh straightens a cushion, fixes a light, smells mogra, scans the laid table and finds the Nutella missing. Jar at the head of the table, guests chorus that Diwali tastes better with Nutella. The prep as a product-placement audit, which Ferrero India calls effortless.
-  - type: verdict
-    text: "The read: the prep is this year's homecoming, warm and interchangeable. Swap the logos and nothing breaks. Ogilvy showed the fix the same month, Cadbury went to the neighbours. Pick a ritual nobody owns, give it a conflict, let the product end it."
-  - type: close
+- type: cover
+  title: Diwali advertising made one film this year, the prep montage
+- type: tea
+  pull: Asian Paints sang the prep.
+  text: Taiyyari Shuru, Tyohaar Shuru, by Ogilvy, reported 19 October, turns cleaning, decorating and painting into a musical with cousins, relatives and friends joining in. Sukesh Nayak says the chaos of preparation has its own rhythm. It does. The next two films found the same rhythm, and here the product is a wall.
+- type: receipt
+  kind: image
+  image: assets/img/stories/diwali-2026-ads-one-film-the-prep/ev-1.jpg
+  caption: Asian Paints unveils Diwali campaign celebrating the joy of home makeovers. Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit
+  credit: "Image: indiantelevision.com, Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19"
+  source: https://indiantelevision.com/mam/asian-paints-unveils-diwali-campaign-celebrating-the-joy-of-home-makeovers/
+- type: receipt
+  kind: image
+  image: assets/img/stories/diwali-2026-ads-one-film-the-prep/ev-2.jpg
+  caption: "Asian Paints: Taiyyari Shuru, Tyohaar Shuru • Ads of the World | Part of The Clio Network. Ads of the World listing for the Asian Paints film, India,"
+  credit: "Image: adsoftheworld.com, Ads of the World listing for the Asian Paints film, India, October 2026"
+  source: https://www.adsoftheworld.com/campaigns/taiyyari-shuru-tyohaar-shuru
+- type: tea
+  pull: Spotify made the prep a sitcom.
+  text: Three one-minute films with Gullak's Mishra family, reported 30 October. Laddoos to Taambdi Chaamdi, rangoli to Chaiya Chaiya, untangling lights to Badan Pe Sitare. The family bickers through the chore until someone presses play. Tagline, Diwali ki taiyaari fun banao, Spotify chalao. Same week, same chores, better casting.
+- type: tea
+  pull: Nutella made the prep a checklist.
+  text: Reported 22 October. Ranveer Singh straightens a cushion, fixes a light, smells mogra, scans the laid table and finds the Nutella missing. Jar at the head of the table, guests chorus that Diwali tastes better with Nutella. The prep as a product-placement audit, which Ferrero India calls effortless.
+- type: verdict
+  text: "The read: the prep is this year's homecoming, warm and interchangeable. Swap the logos and nothing breaks. Ogilvy showed the fix the same month, Cadbury went to the neighbours. Pick a ritual nobody owns, give it a conflict, let the product end it."
+- type: close
 caption: |
   Three Diwali ads, one week before the festival, one script.
   Asian Paints turned the cleaning into a musical (Ogilvy, per Indiantelevision, 19 October). Spotify gave Gullak's Mishra family three chores and three songs (per MediaInfoline, 30 October). Nutella sent Ranveer Singh to check the table and find the jar missing (per MediaInfoline, 22 October).
@@ -57,8 +75,8 @@ linkedin: |
 alt: |
   Cover slide on culture blue with a BITTER pill, the headline Diwali advertising made one film this year, the prep montage, the words the prep set huge in lower case, and the Mask360 masthead.
   White tea slide with the pull line Asian Paints sang the prep and text on Ogilvy's Taiyyari Shuru, Tyohaar Shuru musical.
-  White tea slide with the pull line Spotify made the prep a sitcom and text on the three Gullak films and their songs.
-  White tea slide with the pull line Nutella made the prep a checklist and text on the Ranveer Singh film and the missing jar.
+  Receipt slide, an image from indiantelevision.com
+  Receipt slide, an image from adsoftheworld.com
   Blue verdict slide signed The Mask, headed The read, on the prep as this year's homecoming and the Cadbury fix.
   Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle and the spine stripe.
 ---

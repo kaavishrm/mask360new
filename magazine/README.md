@@ -14,16 +14,17 @@ HOUSE/              the house system, binding on every desk and on the build
   06-visual-direction.md  covers, receipts as images, licensed photos, video
   07-newsroom.md    the twelve desks, the two lanes, the editorial day, gates, severities
   08-growth-and-monetization.md  the 1M impressions math, channels, the rate card
+  09-inventory.md   every format is a placement: the inventory map, the phases, the reach-based price logic, the proof deck
 content/
   stories/YYYY/MM/slug.md   one Markdown file per story (front matter + web body)
   pages/            about.md, advertise.md
   briefs/           paid briefs drop here (Brand Drops) and run labelled PAID
   newsletters/      Sunday Steep drafts
-newsroom/           the engine: run.mjs (the editorial day), lint.mjs, render.py (carousels), post.mjs (Instagram, LinkedIn),
+newsroom/           the engine: run.mjs (the editorial day), lint.mjs, evidence.mjs and attach-evidence.mjs (media receipts), render.py (carousels), post.mjs (Instagram, LinkedIn),
                     llm.mjs (Claude), schemas.mjs, sources.mjs (feeds), prompts/ (desk briefs), SESSION.md (Lane B prompt),
                     STATE.json, posted.json, queue/held/, outbox/, fonts/
 OPS/                INBOX/YYYY-MM-DD.md (one line per run), INCIDENTS/, SALES/
-public/             the built site; assets/ (css, js, fonts) are committed, everything else is build output
+public/             the built site; assets/ (css, js, fonts, the evidence images under assets/img/stories/) are committed, everything else is build output
 build.mjs           the static site generator: lint, render missing carousels, write every page, feeds, sitemap
 config.mjs          the publication config: name, URL, handle, newsletter, promo band, analytics ids
 ```

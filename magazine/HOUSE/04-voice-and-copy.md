@@ -4,7 +4,7 @@ The voice is **corporate goss**: the tone of the sharpest person at the agency o
 
 ## The five rules
 
-1. **Receipts or it did not happen.** Every claim has a source: a filing, a post, a release, a menu, a photo, a person on the record, or "Mask360 has seen". No source, no claim. If we are guessing, we say BREWING and we say what we asked.
+1. **Receipts or it did not happen, and the receipt is a picture.** Every claim has a source: a filing, a post, a release, a menu, a photo, a person on the record, or "Mask360 has seen". No source, no claim. And every story shows the thing itself on a slide: the screenshot of the post, the still from the film, the page of the release, the menu with the price, the invite. A number on a coloured slide is an assertion; the screenshot next to it is the receipt. If we are guessing, we say BREWING and we say what we asked.
 2. **Roast the work, respect the human.** Campaigns, menus, events, decks, fonts, pricing, press releases: fair game. Individuals below the top table (CMO, founder, agency CEO, creative head): never named in a critique. Appearance, family, health, religion, sexuality, private life: never, for anyone.
 3. **Specific beats clever.** "The campaign is bad" is a tweet. "The campaign uses the same stock font as a Kurla real estate hoarding" is Mask360. Numbers, names, dates, places, prices.
 4. **Praise louder than you roast.** SWEET stories are not filler. Good work gets named credit (agency, director, photographer, chef, producer). Brands buy from a publication that can tell the difference.

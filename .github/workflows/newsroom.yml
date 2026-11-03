@@ -40,6 +40,8 @@ jobs:
       - run: pip install pillow
       - run: npm ci --no-audit --no-fund
         working-directory: magazine/newsroom
+      - run: npx playwright install --with-deps chromium
+        working-directory: magazine/newsroom
       - name: Run the editorial day
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
