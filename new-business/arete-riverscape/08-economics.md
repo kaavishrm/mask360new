@@ -14,14 +14,14 @@ Internal. All figures INR, estimates, excluding GST. Revisit once the team is co
 
 | Villas sold | Total profit |
 |---|---|
-| 0 (day 60 waiver applies) | Rs 1,95,000 |
-| 2 (waiver applies) | about Rs 7,50,000 |
+| 0 | Rs 6,45,000 |
+| 2 | about Rs 12,00,000 |
 | 5 | about Rs 20,30,000 |
 | 10 | about Rs 34,10,000 |
 | 15 | about Rs 47,90,000 |
 | 20 | about Rs 61,70,000 |
 
-The 5-person model below is the fallback if Kaavish cannot run the weekends.
+No guarantees and no fee waiver: the proposal makes no sales commitment (changed 2026-11-03). The 5-person model below is the fallback if Kaavish cannot run the weekends; ignore its waiver rows, they are from the earlier draft.
 
 ## Revenue
 
