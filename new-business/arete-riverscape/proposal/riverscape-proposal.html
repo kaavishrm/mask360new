@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Riverscape Commercial Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* A4 print document, four pages: cover (dark), method (paper), commercials (paper), team and terms (dark) */
+:root{
+  --night:#0B0B0B; --night-card:#171716; --night-ink:#F2EFEA; --night-mute:#9C9890; --night-line:rgba(255,255,255,.14);
+  --paper:#ECE8E2; --paper-card:#DFDAD3; --ink:#111111; --mute:#5F5B55; --line:rgba(17,17,17,.16);
+  --flame-dark:#E8794A; --flame-light:#C8461E;
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono','DejaVu Sans Mono',ui-monospace,monospace;
+}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#777}
+body{font-family:var(--sans);font-weight:300;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;margin:0 auto}
+.page:last-child{page-break-after:auto;break-after:auto}
+.dark{background:var(--night);color:var(--night-ink)}
+.light{background:var(--paper);color:var(--ink)}
+.in{position:absolute;inset:0;padding:18mm 20mm 0 20mm;display:flex;flex-direction:column}
+.mono{font-family:var(--mono);font-weight:400}
+.track{font-family:var(--mono);font-size:6.6pt;letter-spacing:.42em;text-transform:uppercase}
+.dark .track{color:var(--night-mute)}
+.light .track{color:var(--mute)}
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.logo{height:9mm;width:auto;display:block}
+h1,h2{font-weight:300;letter-spacing:-.025em;line-height:1.04}
+h2{font-size:27pt;margin-top:8mm}
+.dark em{font-style:normal;color:var(--flame-dark)}
+.light em{font-style:normal;color:var(--flame-light)}
+.sub{font-size:10pt;margin-top:4mm;line-height:1.5}
+.light .sub{color:var(--mute)}
+.dark .sub{color:var(--night-mute)}
+.foot{position:absolute;left:20mm;right:20mm;bottom:12mm;border-top:1px solid var(--line);padding-top:4mm;display:flex;justify-content:space-between;font-family:var(--mono);font-size:6.6pt}
+.dark .foot{border-color:var(--night-line);color:var(--night-mute)}
+.light .foot{color:var(--mute)}
+.foot a{color:inherit;text-decoration:none}
+
+/* cover */
+.cover-photo{position:absolute;left:0;right:0;top:0;height:168mm;background:url(assets/cover.jpg) center 62%/cover no-repeat}
+.cover-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:40mm;background:linear-gradient(to bottom,rgba(11,11,11,0),var(--night))}
+.cover-photo::before{content:"";position:absolute;inset:0 0 auto 0;height:58mm;background:linear-gradient(to top,rgba(11,11,11,0),rgba(11,11,11,.82));z-index:1}
+.cover-top{position:absolute;left:20mm;right:20mm;top:16mm;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.lockup{display:flex;align-items:center;gap:5mm}
+.lockup .x{color:var(--night-ink);opacity:.7;font-size:10pt}
+.lockup .rs{height:16mm;width:auto;filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
+.cover-top .track{color:var(--night-ink)}
+.cover-body{position:absolute;left:20mm;right:20mm;top:166mm}
+.cover-body h1{font-size:35pt;margin-top:7mm}
+.cover-body .sub{font-size:10.4pt;max-width:150mm;color:#D9D5CE;margin-top:6mm;line-height:1.55}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;margin-top:9mm;border-top:1px solid var(--night-line);padding-top:5mm}
+.stats b{display:block;font-weight:300;font-size:15pt;letter-spacing:-.02em}
+.stats span{display:block;font-size:6.8pt;color:var(--night-mute);margin-top:1.6mm;line-height:1.45}
+.cover .foot{border-top:1px solid var(--night-line)}
+.cover .foot a{color:var(--flame-dark);border-bottom:1px solid var(--flame-dark)}
+
+/* in three lines */
+.three{list-style:none;margin-top:11mm;border-top:1.5px solid var(--ink)}
+.three li{display:grid;grid-template-columns:14mm 1fr;gap:4mm;padding:6.5mm 0 7mm;border-bottom:1px solid var(--line)}
+.three .no{font-family:var(--mono);font-size:8pt;color:var(--flame-light);padding-top:2.2mm}
+.three .lab{display:block;font-family:var(--mono);font-size:6.2pt;letter-spacing:.36em;text-transform:uppercase;color:var(--mute);margin-bottom:2.6mm}
+.three p{font-size:17pt;line-height:1.25;letter-spacing:-.015em;font-weight:300}
+.three p b{font-weight:500}
+.photo{margin-top:10mm;height:70mm;border-radius:3.5mm;background:url(assets/promenade.jpg) center 55%/cover no-repeat}
+/* method */
+.moves{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:7mm}
+.move{border-top:1.5px solid var(--ink);padding-top:4mm}
+.move .track{font-size:5.8pt;letter-spacing:.26em;color:var(--flame-light);white-space:nowrap}
+.move h3{font-weight:500;font-size:12pt;margin:2.5mm 0 3mm;letter-spacing:-.01em}
+.move ul{list-style:none;display:flex;flex-direction:column;gap:1.8mm}
+.move li{font-size:7.6pt;line-height:1.42;padding-left:3.2mm;position:relative}
+.move li::before{content:"";position:absolute;left:0;top:1.7mm;width:1.2mm;height:1.2mm;border-radius:50%;background:var(--mute)}
+.move .why{font-size:7.4pt;color:var(--mute);margin-top:3.5mm;padding-top:3mm;border-top:1px solid var(--line);line-height:1.45}
+.band{margin-top:6mm;height:30mm;border-radius:3.5mm;background:url(assets/pool.jpg) center 55%/cover no-repeat}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:8mm;margin-top:6mm}
+.two .track{white-space:nowrap;letter-spacing:.3em;font-size:6pt}
+.cal{list-style:none;border-top:1px solid var(--ink);margin-top:2.5mm}
+.cal li{display:grid;grid-template-columns:22mm 1fr;gap:3mm;padding:1.45mm 0;border-bottom:1px solid var(--line);font-size:7.6pt;line-height:1.4}
+.cal .d{font-family:var(--mono);font-size:6.8pt;padding-top:.3mm}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:0 5mm;border-top:1px solid var(--ink);margin-top:2.5mm}
+.tg div{padding:2.6mm 0 2.8mm;border-bottom:1px solid var(--line)}
+.tg b{display:block;font-weight:300;font-size:17pt;letter-spacing:-.02em;line-height:1}
+.tg span{display:block;font-size:6.8pt;color:var(--mute);margin-top:1.2mm}
+.promise{margin-top:3.5mm;background:var(--ink);color:var(--paper);border-radius:3mm;padding:3.6mm 4mm;font-size:7.8pt;line-height:1.45}
+.promise b{font-weight:500}
+
+/* commercials */
+table{width:100%;border-collapse:collapse}
+.fees{margin-top:5mm}
+.fees th{font-family:var(--mono);font-weight:400;font-size:6.2pt;letter-spacing:.38em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 0 2.4mm;border-bottom:1px solid var(--ink)}
+.fees th.r,.fees td.r{text-align:right}
+.fees td{padding:1.2mm 0 1.3mm;border-bottom:1px solid var(--line);vertical-align:top}
+.fees td.n{width:60%}
+.fees td.q{width:26%;font-family:var(--mono);font-size:6.4pt;padding-top:1.85mm;white-space:nowrap;color:#2A2825}
+.fees td.r{font-family:var(--mono);font-size:9.6pt;white-space:nowrap}
+.fees .t{font-weight:500;font-size:9.4pt;letter-spacing:-.005em}
+.fees .d{display:block;font-size:6.3pt;color:var(--mute);margin-top:.35mm;line-height:1.3}
+.fees tr.grp td{border-bottom:1px solid var(--ink);padding:3.4mm 0 1.4mm;font-family:var(--mono);font-size:6.2pt;letter-spacing:.36em;text-transform:uppercase;color:var(--flame-light)}
+.fees tr.grp.first td{padding-top:2.6mm}
+.fees tr.tot td{border-bottom:1px solid var(--ink);padding:2.4mm 0 2.4mm}
+.fees tr.tot .t{font-size:11pt}
+.fees tr.tot td.r{font-size:12pt;color:var(--flame-light);font-family:var(--sans);font-weight:400}
+.fees tr.alt td.r{font-family:var(--sans);font-weight:400;font-size:11pt;color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:4mm}
+.card{border-radius:3.5mm;padding:4mm 5mm 4.2mm;background:var(--paper-card)}
+.card.k{background:var(--night);color:var(--night-ink)}
+.card .track{font-size:5.8pt;letter-spacing:.38em}
+.card.k .track{color:var(--night-mute)}
+.card b{display:block;font-weight:300;font-size:17pt;letter-spacing:-.02em;margin-top:2.8mm;line-height:1}
+.card span{display:block;font-size:6.8pt;line-height:1.45;margin-top:2.6mm;color:var(--mute)}
+.card.k span{color:#BDB9B1}
+
+/* team and terms */
+.team{margin-top:7mm}
+.team th{font-family:var(--mono);font-weight:400;font-size:6.2pt;letter-spacing:.38em;text-transform:uppercase;color:var(--night-mute);text-align:left;padding:0 0 2.6mm;border-bottom:1px solid var(--night-ink)}
+.team td{padding:2.7mm 3mm 2.8mm 0;border-bottom:1px solid var(--night-line);font-size:7.6pt;line-height:1.45;vertical-align:top;color:#D9D5CE}
+.team td:first-child{font-weight:500;color:var(--night-ink);width:31%}
+.team td:nth-child(2){width:28%}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:0 8mm;margin-top:6mm}
+.terms > div{display:flex;flex-direction:column}
+.terms p{font-size:7.2pt;line-height:1.5;color:#CFCBC4;padding:2.4mm 0 2.6mm;border-bottom:1px solid var(--night-line)}
+.terms p b{font-weight:500;color:var(--night-ink)}
+.contact{position:absolute;left:20mm;right:20mm;bottom:22mm;background:var(--night-card);border-radius:3.5mm;padding:6mm 9mm;display:flex;justify-content:space-between;align-items:center}
+.contact .nm{font-size:17pt;font-weight:300;margin-top:3mm}
+.contact .co{font-size:8pt;color:var(--night-mute);margin-top:1mm}
+.contact .ln{font-family:var(--mono);font-size:7.4pt;color:var(--flame-dark);margin-top:4mm;line-height:1.7}
+.contact .pf{text-align:center}
+.contact .pf img{height:17mm;width:auto;margin-top:3mm}
+</style>
+</head>
+<body>
+
+<!-- 1. cover -->
+<section class="page dark cover">
+  <div class="cover-photo"></div>
+  <div class="cover-top">
+    <div class="lockup"><img class="logo" src="assets/m360-light.svg" alt="m360"><span class="x">×</span><img class="rs" src="assets/riverscape-logo.png" alt="Riverscape by Arete"></div>
+    <span class="track">Commercial proposal</span>
+  </div>
+  <div class="cover-body">
+    <p class="track">For Arete Group . Riverscape, Tukwada, Vapi</p>
+    <h1>A 90 day relaunch<br><em>for Riverscape.</em></h1>
+    <p class="sub">A 90 day sales mandate for Riverscape: a relaunch offer for 20 villas, block sales pitched to companies and investors, and six Open Weekends that bring buyers to the site. A fixed fee to run it, and a success fee only on villas sold. By the team behind work for Lodha, Sobha and Rustomjee.</p>
+    <div class="stats">
+      <div><b>20 villas</b><span>Relaunched at a launch price, valid for 45 days</span></div>
+      <div><b>6 weekends</b><span>Open Weekends that close sales at the site</span></div>
+      <div><b>20 companies</b><span>The largest employers in Vapi, Daman and Silvassa, pitched directly</span></div>
+      <div><b>1%</b><span>Success fee, paid only on villas sold</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Prepared for Arete Group . 3 November 2026</span><a>mask360.work</a></div>
+</section>
+
+<!-- 2. in three lines -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">In three lines</span></div>
+    <h2>If we had to tell you <em>in three lines,</em> this is what we are doing.</h2>
+    <ol class="three">
+      <li><span class="no">01</span><div><span class="lab">The offer</span><p><b>We relaunch 20 villas with an offer that answers the flood:</b> a 45-day launch price, flood insurance paid by Arete for 5 years, and only 10% at booking.</p></div></li>
+      <li><span class="no">02</span><div><span class="lab">The buyers</span><p><b>We pitch them in blocks:</b> villas to the largest companies in Vapi, Daman and Silvassa for their directors, and lots of 5 villas to investors through their wealth managers.</p></div></li>
+      <li><span class="no">03</span><div><span class="lab">The close</span><p><b>We bring buyers to the site every second weekend,</b> where Arete's sales head can take a booking on the spot: a fixed fee to run it, and 1% only on villas sold.</p></div></li>
+    </ol>
+    <div class="photo" role="img" aria-label="The Riverscape promenade, artist's impression"></div>
+  </div>
+  <div class="foot"><span>Images: Riverscape by Arete, artist's impressions</span><span>01</span></div>
+</section>
+
+<!-- 3. method -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">01 . The method</span></div>
+    <h2>Three moves, <em>in this order.</em></h2>
+    <p class="sub">Arete has run ads, email and channel partners. More of the same will not move a project after the July flood. We change the offer, pitch villas in blocks, and bring every buyer to the site.</p>
+
+    <div class="moves">
+      <div class="move">
+        <span class="track">Move 1 . Weeks 1 to 2</span>
+        <h3>Change the offer</h3>
+        <ul>
+          <li>Relaunch 20 villas only, with the post-flood redesign as the news.</li>
+          <li>A launch price for those 20, valid for 45 days, then it rises.</li>
+          <li>Flood cover in the agreement: Arete pays each villa's home insurance, flood included, for 5 years, and repairs flood damage to common areas.</li>
+          <li>A 10:90 plan: 10% at booking, 90% at possession.</li>
+        </ul>
+        <p class="why">The buyer's fear and the first cheque both shrink, and the deadline gives a reason to act now.</p>
+      </div>
+      <div class="move">
+        <span class="track">Move 2 . Weeks 3 to 12</span>
+        <h3>Pitch in blocks</h3>
+        <ul>
+          <li>Corporate deals: 3 to 10 villas per company as director residences and guest houses, pitched to the 20 largest employers in Vapi, Daman and Silvassa.</li>
+          <li>Investor lots of 5 villas through wealth managers, with a corporate lease signed now that starts at possession.</li>
+          <li>Advisers earn 3 to 4%, above channel partner rates, paid through a GujRERA-registered entity.</li>
+        </ul>
+        <p class="why">One company or investor that signs can take several villas at once.</p>
+      </div>
+      <div class="move">
+        <span class="track">Move 3 . Weeks 3 to 12</span>
+        <h3>Meet at the site</h3>
+        <ul>
+          <li>Six Riverscape Open Weekends: cars from Mumbai and Surat, lunch at the experience centre, the engineer walking the new levels.</li>
+          <li>The launch price is honoured only for bookings made that weekend, cheque on the spot.</li>
+          <li>Every adviser and corporate contact brings families to one weekend.</li>
+        </ul>
+        <p class="why">At ₹2.5 to 4 Cr, the sale happens at the site, with the family there and a deadline in front of them.</p>
+      </div>
+    </div>
+
+    <div class="band" role="img" aria-label="Riverscape pool deck, artist's impression"></div>
+
+    <div class="two">
+      <div>
+        <span class="track">Calendar . Signed by 10 Nov</span>
+        <ul class="cal">
+          <li><span class="d">10 Nov</span><span>Sign. Arete sends sales data, drawings and the price sheet.</span></li>
+          <li><span class="d">13 Nov</span><span>Arete approves the launch price, payment plan and flood cover.</span></li>
+          <li><span class="d">16 to 17 Nov</span><span>Film shoot at Riverscape.</span></li>
+          <li><span class="d">24 Nov</span><span>Relaunch kit live. Corporate pitches and adviser sign-ups begin.</span></li>
+          <li><span class="d">28 to 29 Nov</span><span>Open Weekend 1.</span></li>
+          <li><span class="d">Dec to Jan</span><span>Open Weekends 2 to 5, timed for NRI families home for the wedding season.</span></li>
+          <li><span class="d">8 Jan</span><span>The launch price closes. Day 45 review.</span></li>
+          <li><span class="d">8 Feb</span><span>Day 90. Final report and the plan for the remaining villas.</span></li>
+        </ul>
+      </div>
+      <div>
+        <span class="track">Reported every Monday</span>
+        <div class="tg">
+          <div><b>Meetings</b><span>corporate meetings held, by company</span></div>
+          <div><b>Introductions</b><span>families introduced, by adviser</span></div>
+          <div><b>Visits</b><span>families at each Open Weekend</span></div>
+          <div><b>Bookings</b><span>by channel, with reasons for every no</span></div>
+        </div>
+        <p class="promise"><b>No guarantees.</b> We run the programme. Bookings depend on Arete's pricing and approvals and on the market. The success fee is paid only on villas that actually book.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Images: Riverscape by Arete, artist's impressions</span><span>02</span></div>
+</section>
+
+<!-- 3. commercials -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">02 . The commercials</span></div>
+    <h2>One fixed fee, <em>line by line.</em></h2>
+    <p class="sub">Ninety days, no retainer after. INR plus GST. A success fee only on villas sold.</p>
+
+    <table class="fees">
+      <thead><tr><th>Deliverable</th><th>Qty</th><th class="r">₹ + GST</th></tr></thead>
+      <tbody>
+        <tr class="grp first"><td colspan="3">The relaunch kit . Ready by day 14</td></tr>
+        <tr><td class="n"><span class="t">Relaunch offer and price sheet</span><span class="d">20-villa launch price, 45-day window, 10:90 plan, flood cover terms, buyer referral reward</span></td><td class="q">1 offer, 2 languages</td><td class="r">₹80,000</td></tr>
+        <tr><td class="n"><span class="t">Flood proof pack</span><span class="d">July water level, new finished levels, the second road at the gate, drainage, engineer's letter</span></td><td class="q">6 pages + 1 WhatsApp page</td><td class="r">₹1,00,000</td></tr>
+        <tr><td class="n"><span class="t">Relaunch film</span><span class="d">The redesigned site, the promenade and the new levels, shot on location</span></td><td class="q">1 film, 3 cuts, 2 shoot days</td><td class="r">₹1,90,000</td></tr>
+        <tr><td class="n"><span class="t">Corporate proposal and term sheet</span><span class="d">Villas as director residences and guest houses; block pricing and lease terms</span></td><td class="q">1 deck, 1 term sheet</td><td class="r">₹85,000</td></tr>
+        <tr><td class="n"><span class="t">Investor lot note</span><span class="d">A 5-villa lot with lease, price, payment plan and exit, written for wealth managers</span></td><td class="q">4 pages</td><td class="r">₹60,000</td></tr>
+        <tr><td class="n"><span class="t">Target lists</span><span class="d">Top 20 employers in Vapi, Daman and Silvassa with named decision makers</span></td><td class="q">20 companies, 40 advisers</td><td class="r">₹85,000</td></tr>
+
+        <tr class="grp"><td colspan="3">The sales engine . Day 15 to day 90</td></tr>
+        <tr><td class="n"><span class="t">Corporate meetings</span><span class="d">All 20 companies pitched; meetings attended with Arete's sales head</span></td><td class="q">20 companies pitched</td><td class="r">₹2,50,000</td></tr>
+        <tr><td class="n"><span class="t">Wealth manager network</span><span class="d">Approached, signed to referral agreements and briefed on the investor lot</span></td><td class="q">Up to 40 approached</td><td class="r">₹2,50,000</td></tr>
+        <tr><td class="n"><span class="t">Open Weekends, run end to end</span><span class="d">Invitations, cars from Mumbai and Surat, lunch, the engineer's walk, a booking desk</span></td><td class="q">6 weekends</td><td class="r">₹4,50,000</td></tr>
+        <tr><td class="n"><span class="t">Follow-up desk</span><span class="d">Every visitor contacted within 24 hours, until they book or decline</span></td><td class="q">Every visitor</td><td class="r">₹1,25,000</td></tr>
+        <tr><td class="n"><span class="t">Live tracker and Monday reports</span><span class="d">Every company, adviser, family and booking in one view; a day 45 review</span></td><td class="q">12 reports, 1 review</td><td class="r">₹1,25,000</td></tr>
+        <tr class="tot"><td class="n" colspan="2"><span class="t">Fixed fee</span></td><td class="r">₹18,00,000</td></tr>
+
+        <tr class="grp"><td colspan="3">On results . Paid only on villas sold</td></tr>
+        <tr><td class="n"><span class="t">Success fee</span><span class="d">Every villa booked through a Mask360 channel; about ₹2.5 to 4 lakh per villa</span></td><td class="q">Per villa</td><td class="r">1% of value</td></tr>
+      </tbody>
+    </table>
+
+    <div class="cards">
+      <div class="card k"><span class="track">Fixed fee</span><b>₹18,00,000</b><span>Plus GST, 90 days, no retainer</span></div>
+      <div class="card"><span class="track">Payment</span><b>50 / 25 / 25</b><span>₹9,00,000 on signing, ₹4,50,000 on day 30, ₹4,50,000 on day 60</span></div>
+      <div class="card"><span class="track">Success fee</span><b>1%</b><span>₹2.5 to 4 lakh per villa, paid only on bookings</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>All fees in INR, exclusive of GST at 18%. Valid for 14 days from 3 November 2026.</span><span>03</span></div>
+</section>
+
+<!-- 4. team and terms -->
+<section class="page dark">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-light.svg" alt="m360"><span class="track">03 . Team and terms</span></div>
+    <h2>The team and <em>the terms.</em></h2>
+
+    <table class="team">
+      <thead><tr><th>Role</th><th>Name</th><th>Owns</th></tr></thead>
+      <tbody>
+        <tr><td>Engagement lead</td><td>Kaavish Ramchandani, Founder</td><td>Single point of contact; the offer, every corporate pitch, on site at every Open Weekend</td></tr>
+        <tr><td>Corporate partnerships manager</td><td>Assigned at kickoff</td><td>Target list, meeting bookings, corporate follow-through</td></tr>
+        <tr><td>Adviser network manager</td><td>Assigned at kickoff</td><td>Wealth manager sign-ups, briefings, introductions logged</td></tr>
+        <tr><td>Follow-up desk executive</td><td>Assigned at kickoff</td><td>Every visitor within 24 hours; Open Weekend logistics; the live tracker</td></tr>
+        <tr><td>Creative lead</td><td>Assigned at kickoff</td><td>Offer sheet, proof pack, decks, investor note</td></tr>
+        <tr><td>Video editor and motion designer</td><td>Assigned at kickoff</td><td>Relaunch film and cuts</td></tr>
+      </tbody>
+    </table>
+
+    <div class="terms">
+      <div>
+        <p><b>Billing.</b> 50% on signing, before work begins; 25% on day 30; 25% on day 60. Invoices payable within 7 days.</p>
+        <p><b>Duration.</b> 90 days from signing and receipt of the advance.</p>
+        <p><b>Success fee.</b> 1% of agreement value on every villa booked through a Mask360 channel. A booking is a signed booking form with the booking amount received. Credited back if it cancels within 60 days. Structure confirmed with Arete's legal team before the first booking.</p>
+        <p><b>Taxes.</b> All fees in INR, exclusive of GST at 18%.</p>
+        <p><b>No guarantee of sales.</b> Mask360 runs the programme described here. Bookings depend on Arete's pricing, approvals and inventory, and on the market. The fixed fee is for the work, not for a number of sales.</p>
+      </div>
+      <div>
+        <p><b>At actuals.</b> Media spend, Open Weekend cars, food and setup, flood insurance premiums, adviser and channel partner commissions, and travel outside Mumbai, Surat and Vapi, shared for approval before booking.</p>
+        <p><b>Inputs.</b> Work starts once Arete shares its break-even number, sales and lead data, drawings and the July flood data, and approves the launch offer within 3 days. Arete provides one pre-sales person for the follow-up desk, and its sales head at every Open Weekend and corporate meeting.</p>
+        <p><b>Not in scope.</b> Construction or engineering changes, the engineer's fee, legal drafting of sale and lease agreements, and new performance campaigns.</p>
+        <p><b>Changes.</b> Extra work is quoted and started only after written approval. Overdue invoices may pause work. Agency T&amp;Cs and the services agreement apply.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div>
+      <span class="track">Talk to us</span>
+      <p class="nm">Kaavish Ramchandani</p>
+      <p class="co">Mask360</p>
+      <p class="ln">kaavish@mask360.agency<br>mask360.work</p>
+    </div>
+    <div class="pf">
+      <span class="track">Prepared for</span><br>
+      <img src="assets/riverscape-logo.png" alt="Riverscape by Arete">
+    </div>
+  </div>
+  <div class="foot"><span>Mask360 . Commercial proposal for Riverscape by Arete Group . 3 November 2026</span><span>04</span></div>
+</section>
+
+</body>
+</html>
