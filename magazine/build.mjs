@@ -43,7 +43,7 @@ function loadStories() {
       date: String(data.date), time: data.time ? String(data.time) : '09:00', dateShort: fmtShort(String(data.date)), dateLong: fmtLong(String(data.date)),
       read, bodyWords, tags: Array.isArray(data.tags) ? data.tags.map(String) : [], paid: data.paid === true, partner: data.partner || '',
       card: `/carousels/${slug}/card.webp`, thumb: `/carousels/${slug}/thumb.webp`, cover: `/carousels/${slug}/cover.webp`, hero: `/carousels/${slug}/hero.webp`, og: `/carousels/${slug}/og.jpg`,
-      slides: data.slides, sources: Array.isArray(data.sources) ? data.sources.map(String) : [], credit: data.credit || '', post: data.post || null, corrections: data.corrections || null,
+      slides: data.slides, sources: Array.isArray(data.sources) ? data.sources.map(String) : [], credit: data.credit || '', post: data.post || null, corrections: data.corrections || null, sponsor: data.sponsor || '',
     });
   }
   if (failures.length) {
@@ -212,12 +212,12 @@ function buildStories(stories) {
     const sec = SECTIONS[s.section];
     const latest = stories.filter((x) => x.slug !== s.slug).slice(0, 5);
     const slidesHtml = s.slides.map((sl, k) => `<img src="${B(`/carousels/${s.slug}/${String(k + 1).padStart(2, '0')}.jpg`)}" alt="${esc(String(s.data.alt || '').split('\n').filter(Boolean)[k] || '')}" width="1080" height="1350" loading="lazy" decoding="async">`).join('');
-    const paidBox = s.paid ? `<div class="paidbox">Paid partnership with ${esc(s.partner)}. This story is sponsored. It is labelled on every slide and in the caption, per ASCI guidelines. The kicker and the format are not for sale.</div>` : '';
+    const paidBox = s.paid ? `<div class="paidbox">Paid partnership with ${esc(s.partner)}. This story is sponsored. It is labelled on every slide and in the caption, per ASCI guidelines. The kicker and the format are not for sale.</div>` : s.sponsor ? `<div class="paidbox">Presented by ${esc(s.sponsor)}. The sponsor bought the position on the cover and the close slide, labelled per ASCI guidelines. The ${esc(s.formatName)} itself, its content and its verdict are editorial and were not shown to the sponsor before publication.</div>` : '';
     const corr = s.corrections ? `<p class="corr">Correction: ${esc(s.corrections)}</p>` : '';
     const ig = s.post && s.post.ig ? `<a href="${esc(s.post.ig)}" rel="noopener">Open on Instagram</a>` : '';
     const body = `<article class="story">
 <div class="main">
-  <div class="kline"><span class="c-${s.section}">${esc(s.sectionName)}</span>${kick(s)}<span>${esc(s.formatName)}</span></div>
+  <div class="kline"><span class="c-${s.section}">${esc(s.sectionName)}</span>${kick(s)}<span>${esc(s.formatName)}</span>${s.sponsor ? `<span class="kick paid">Presented by ${esc(s.sponsor)}</span>` : ''}</div>
   <h1>${esc(s.title)}</h1>
   <p class="dek">${esc(s.dek)}</p>
   <div class="date"><span>${esc(s.dateLong)}</span><span>${esc(s.desk)}</span><span>${esc(s.read)}</span></div>

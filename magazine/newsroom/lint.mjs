@@ -77,6 +77,11 @@ export function lintStory(path) {
     if (!/^Paid partnership with /i.test(String(data.caption || '').trim())) E('paid caption must open with "Paid partnership with [Brand]"');
     if (!/#ad\b/i.test(String(data.caption || ''))) E('paid caption must include #ad');
   } else if (data.kicker === 'PAID') E('PAID kicker on a story that is not paid: true');
+  if (data.sponsor) {
+    if (!['scorecard', 'moves', 'deeppour'].includes(data.format)) E('sponsor: (presented by) is allowed only on scorecard, moves and deeppour');
+    if (!/#ad\b/i.test(String(data.caption || ''))) E('sponsored (presented by) caption must include #ad');
+    if (!new RegExp('presented by ' + String(data.sponsor).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').test(String(data.caption || ''))) E('sponsored caption must say "Presented by [Brand]"');
+  }
 
   // sources
   const sources = Array.isArray(data.sources) ? data.sources : [];

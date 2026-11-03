@@ -19,6 +19,7 @@ The core format. Something happened in the industry and here is what it means.
 - Web: 350 to 600 words. Title, dek, "The tea" section with the developments, "The receipts" with sources linked, "The read".
 - Headline rule: a person, brand or thing plus a verb in the present tense plus the twist. Under 11 words. "Zomato's new campaign has one problem, and it is the font."
 - Sellable: no. Trust format.
+- Placement: none. The Tea is never inventory.
 
 ## 2. Scorecard
 
@@ -27,6 +28,7 @@ A campaign, launch, menu, opening or event rated out of 10 on four lines: the id
 - Web: 400 to 700 words plus a score table.
 - Headline rule: brand plus work plus score. "Tanishq's wedding film, scored: 8.5."
 - Sellable: the format can be sponsored ("Scorecard, presented by"), the score cannot. A brand can request to be scored and pay for the production; the score is ours and they sign that in advance.
+- Placement: `sponsor:` on the story puts "Presented by Brand" under the kicker on the cover and on the close slide. Runs with the house badge until sold.
 
 ## 3. The Guest List
 
@@ -35,6 +37,7 @@ Event coverage. Who threw it, who came, what was served, what was said, the one 
 - Web: 300 to 500 words, the list as a list.
 - Headline rule: the event plus the detail that tells you everything. "The Dior dinner served dal. Everyone noticed."
 - Sellable: yes. Paid coverage is PAID. Unpaid coverage of a paid-for event (we were invited) says "invited" in the caption.
+- Placement: the whole format, bought by the host. Runs on invitations until sold.
 
 ## 4. Moves
 
@@ -43,6 +46,7 @@ People and account moves. The purest industry goss.
 - Web: a dated list, one paragraph per move, source linked.
 - Headline rule: the biggest move of the week as the headline. "Ogilvy loses its Mumbai CCO to a startup nobody has heard of."
 - Sellable: the weekly format can be sponsored by a recruiter, a tool, a business school. Never an individual move.
+- Placement: `sponsor:` as on the Scorecard. The moves themselves are never touched.
 
 ## 5. The Edit
 
@@ -51,6 +55,7 @@ The monetizable curation, done with a point of view. Five places, drops, menus, 
 - Web: 400 to 600 words, each item with name, why, the catch, address or link.
 - Headline rule: the theme plus a constraint. "Five Bandra bars where the drink costs less than the valet."
 - Sellable: yes. Up to two of five items can be PAID placements, labelled on the item slide and in the caption. The order is editorial, never bought. The catch is written for paid items too; brands are told this before they buy.
+- Placement: items 2 to 4. Five editorial items run every week so the slot is proven before it is sold.
 
 ## 6. Spotted
 
@@ -58,7 +63,8 @@ Short. A celebrity in a brand's clothes, a billboard that says the quiet part, a
 - Slides: Cover (the image or the quote), one Tea slide, Close. 3 to 4 slides.
 - Web: 120 to 200 words.
 - Headline rule: starts with "Spotted:".
-- Sellable: no.
+- Sellable: as "Spotted, courtesy of": a brand supplies the sighting and pays; labelled PAID, the kicker is never promised.
+- Placement: the whole format when supplied. Editorial sightings run until then.
 
 ## 7. Brand Drop
 
@@ -67,6 +73,7 @@ Sponsored launch content. The brand supplies the assets, including video. We sup
 - Web: 250 to 400 words, labelled, with the brand's links.
 - Headline rule: the brand, the thing, one true adjective. No superlatives we did not verify.
 - Sellable: entirely. Rate card line one.
+- Placement: the whole format. It does not run until bought; the house band on the site sells it meanwhile.
 
 ## 8. Deep Pour
 
@@ -75,6 +82,7 @@ The weekly long read. One subject, reported.
 - Web: 1,200 to 2,000 words with sections, pull quotes, a sources list.
 - Headline rule: a claim, not a topic. "Mumbai's restaurant boom is a real estate story."
 - Sellable: the series can be sponsored. The reporting cannot.
+- Placement: `sponsor:` on the summary carousel and the web story.
 
 ## 9. Hot Take
 
@@ -82,6 +90,7 @@ The column. Signed "The Mask". An argument about the industry.
 - Slides: Cover (the thesis in 10 words), 3 Tea slides (three reasons), Verdict, Close.
 - Web: 500 to 800 words.
 - Sellable: no.
+- Placement: none.
 
 ## 10. Receipts
 
@@ -90,6 +99,7 @@ The call-out format. A claim versus the evidence. Used for plagiarised campaigns
 - Web: 300 to 500 words with the evidence embedded.
 - Rule: right of reply is sought before publishing and the reply or the silence is printed. Legal checklist in `04-voice-and-copy.md` runs before this format goes out, every time.
 - Sellable: never.
+- Placement: none, and a brand in a Receipts story cannot buy any slot for 90 days.
 
 ## Cadence (the floor)
 
@@ -103,7 +113,7 @@ The call-out format. A claim versus the evidence. Used for plagiarised campaigns
 | Saturday | 1 | Deep Pour summary |
 | Sunday | 1 | Hot Take, plus the newsletter |
 
-12 carousels a week minimum, 72 slides and 12 web stories. Brand Drops are added on top of the floor, never instead of it, and never more than two a day.
+12 carousels a week minimum, 72 slides and 12 web stories. Brand Drops are added on top of the floor, never instead of it, and never more than two a day. Every slot in the cadence is also a placement (`09-inventory.md`): the week is built so that a brand can buy into it without the week changing shape.
 
 ## The story file
 
@@ -126,6 +136,7 @@ sources:
 tags: [zomato, outdoor, typography]
 paid: false
 partner:                    # brand name when paid
+sponsor:                    # "presented by" brand on scorecard, moves and deeppour only; labelled, the content is untouched
 slides:
   - type: cover
     title: Zomato's new campaign has one problem, and it is the font

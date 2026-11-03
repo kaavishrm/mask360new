@@ -78,6 +78,8 @@ Canvas 1080 x 1350 (4:5). Safe area 72px on all sides. Six slide types, all rend
 | Edit item | white | for The Edit and The Guest List: a 1:1 photo or monogram top, name 56px serif, one-line why 32px, "the catch" 28px grey; PAID PARTNERSHIP label where applicable |
 | Close | black | "Steeped by Mask360" 72px serif white, "Three. Six. Tea." 36px, handle, "Send this to the one person who needs it" 28px, the spine stripe |
 
+Sponsored variants: `sponsor:` sets "PRESENTED BY BRAND" in Amulya 500 24px uppercase under the kicker pill on the cover and above the handle on the close slide; a paid item slide carries the PAID PARTNERSHIP pill top right; a Brand Drop carries the pill on every slide. The sponsor never gets the colour, the type or the order: the placement is a position, not a redesign.
+
 Masthead on every slide bottom left at 40px so a screenshot still carries the brand. Page numbers on every inner slide. Type never smaller than 28px on a carousel. Maximum 10 slides, minimum 5. Alt text written per slide.
 
 LinkedIn: the same slides exported as a PDF document post. The cover slide doubles as the website card image and the OG image at 1200 x 630 (cropped, title re-set at 72px).

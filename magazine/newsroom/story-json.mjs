@@ -20,6 +20,7 @@ export function storyPayload(file, outDir) {
     desk: data.desk,
     paid: data.paid === true,
     partner: data.partner || '',
+    sponsor: data.sponsor || '',
     coverText: data.coverText === undefined || data.coverText === null ? '' : String(data.coverText),
     cover: data.cover || 'generated',
     credit: data.credit || '',

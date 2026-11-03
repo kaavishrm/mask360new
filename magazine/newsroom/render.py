@@ -118,7 +118,15 @@ def arrow(draw, x, y, fill, size=36):
 def ground(color):
     return Image.new('RGB', (W, H), color)
 
-def cover_photo(path, title, sec, kicker, paid):
+def presented_by(draw, st, ink, y=None):
+    sp = str(st.get('sponsor') or '').strip()
+    if not sp: return
+    f = font('sansm', 24); t = f'PRESENTED BY {sp.upper()}'
+    if y is None: y = SAFE + 56
+    draw_text(draw, (W - SAFE - text_width(draw, t, f, -0.02 * 24), y), t, f, ink, -0.02 * 24)
+
+def cover_photo(path, title, sec, kicker, paid, st=None):
+    st = st or {}
     im = Image.open(path).convert('RGB')
     # cover crop to 4:5
     r = max(W / im.width, H / im.height)
@@ -134,6 +142,7 @@ def cover_photo(path, title, sec, kicker, paid):
     draw = ImageDraw.Draw(im)
     label(draw, sec['name'], WHITE)
     pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if paid else kicker, right=True)
+    presented_by(draw, st, WHITE)
     f, lines, lh, tr = fit_text(draw, title, 'serif', 104, 64, W - 2 * SAFE, 5, 1.0, -0.03)
     y = H - SAFE - 56 - 40 - lh * len(lines)
     for ln in lines: draw_text(draw, (SAFE, y), ln, f, WHITE, tr); y += lh
@@ -152,7 +161,8 @@ def slide_cover(s, st):
             except Exception as e: print('photo cover failed, generated instead:', e, file=sys.stderr)
     im = ground(bg); draw = ImageDraw.Draw(im)
     label(draw, sec['name'], ink)
-    pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True, fg=WHITE if ink == WHITE or True else BLACK, bg=BLACK if ink == WHITE else BLACK)
+    pill(draw, (W - SAFE, SAFE - 8), 'PAID PARTNERSHIP' if st.get('paid') else st['kicker'], right=True)
+    presented_by(draw, st, ink)
     ct = str(st.get('coverText') or '').strip()
     top = SAFE + 90
     if ct and len(ct) <= 14:
@@ -277,6 +287,8 @@ def slide_close(s, st, i, n):
     draw_text(draw, (SAFE, y), 'Three. Six. Tea.', font('serif', 48), GREY, -0.02 * 48); y += 110
     block(draw, (SAFE, y), s.get('text') or 'Send this to the one person who needs it.', 'sans', 36, 28, W - 2 * SAFE, 3, WHITE, 1.3, -0.02)
     handle = st.get('handle') or '@mask360'
+    if str(st.get('sponsor') or '').strip():
+        presented_by(draw, st, WHITE, y=H - SAFE - 100)
     draw_text(draw, (SAFE, H - SAFE - 30), handle, font('sansm', 28), WHITE, -0.02 * 28)
     sitef = font('sans', 26); site = st.get('site', 'mask360.agency/magazine')
     draw_text(draw, (W - SAFE - text_width(draw, site, sitef), H - SAFE - 28), site, sitef, GREY)

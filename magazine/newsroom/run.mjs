@@ -74,6 +74,7 @@ function toFile(st, legal) {
     cover: 'generated', coverText: st.coverText, credit: '', sources: st.sources, tags: st.tags.map((t) => t.toLowerCase()), paid: st.paid, partner: st.partner || '',
   };
   if (st.score) data.score = st.score;
+  if (st.sponsor) data.sponsor = st.sponsor;
   if (legal) { data.legal = legal.verdict; data.legalNote = legal.legalNote; }
   data.slides = st.slides.map(slideDefaults);
   data.caption = st.caption.trim() + '\n';

@@ -26,26 +26,21 @@ Assumptions: 12 carousels a week, an average of 1,500 impressions per carousel i
 7. **Seeding.** The first 60 days: the publisher and the Mask360 team follow, like and reply from personal accounts; every agency and brand WhatsApp group the team is in gets the Scorecard on Tuesday. This is the one human lever and it is optional.
 8. **Paid boost.** From month 3, the Meta Ads account the agency already has boosts the week's best carousel to a lookalike of agency and brand people, INR 5,000 a week. Measured by cost per follow.
 
-## Monetization (rate card v1, INR, exclusive of GST)
+## Monetization: build the numbers, then charge what they allow
 
-Opens in month 4 (10,000 followers, proof of forwarding). The sales desk drafts outreach to every brand we covered SWEET the week before; the Mask360 sales fleet sends it.
+The order is fixed: engagement first, pricing second, and every engagement activity runs inside a placement a brand will later buy. The full inventory map, the phase thresholds and the price formulas are in `09-inventory.md`. The short version:
 
-| Line | What it is | Price | Notes |
-|---|---|---|---|
-| Brand Drop | sponsored carousel or video post, IG + LinkedIn + web story, labelled | 75,000 | brand supplies assets, we design and write; 2 revisions |
-| The Edit placement | one labelled item in a five-item Edit, with the catch | 25,000 | max 2 per Edit; order is editorial |
-| Guest List coverage | paid event coverage, 1 carousel + web story, within 48 hours | 60,000 | plus travel outside Mumbai |
-| Scorecard, presented by | sponsor badge on the week's two Scorecards | 50,000 a week | the score is never for sale, signed |
-| Moves, presented by | sponsor badge on the weekly Moves | 40,000 a week | recruiters, tools, business schools |
-| Sunday Steep sponsor | one sponsor block in the newsletter | 30,000 an issue | from 3,000 subscribers |
-| Site takeover | the home page band (the reference's "Ads space") for a week | 50,000 | one brand, one creative, house-designed |
-| Mask360 Studio | the agency's content, events and systems services, sold off the back of the publication | rate card at mask360.agency | the publication is the top of the agency funnel |
+- **Phase 1, Build (months 1 to 3):** no outreach. Every format runs on the cadence with its slot in place: the Edit carries five editorial items where two will be sold, the Scorecard and Moves carry the house badge where "presented by" will sit, the home page band says "This space is for sale". The proof deck is compiled monthly.
+- **Phase 2, Price (from the thresholds, target month 4):** the rate card goes live with the numbers behind it. Prices are computed from trailing 30 day reach (`09-inventory.md`, price logic) with rate card v1 as the floor. The sales desk drafts outreach every Monday to brands we covered SWEET or SPILLED; the Mask360 sales fleet sends.
+- **Phase 3, Scale (month 7 onwards):** annual partners, category exclusivity, Mask360 Studio bundles.
+
+Rate card v1 (the floors, INR, exclusive of GST): Brand Drop 75,000; Edit placement 25,000; Guest List coverage 60,000; Scorecard presented by 50,000 a week; Moves presented by 40,000 a week; Spotted courtesy of 30,000; Watchlist sponsor 40,000 a month; Sunday Steep block 30,000 an issue; site takeover 50,000 a week; Mask360 Studio at the agency rate card. Above the floor the formula decides.
 
 Month 6 target: INR 6 to 8 lakh a month in run rate across 4 to 6 brands. Month 12: INR 15 lakh a month. Costs: API spend under INR 40,000 a month at 12 stories a week, hosting under INR 2,000, fonts and tools zero.
 
 ## What we will not sell
 
-A rating. A kicker. Silence on a story. An unlabelled post. Coverage of a brand we are in a dispute with. More than two paid items in any Edit. More than two Brand Drops a day.
+A rating. A kicker. Silence on a story. An unlabelled post. Coverage of a brand we are in a dispute with. More than two paid items in any Edit. More than two Brand Drops a day. Anything to a brand in a Receipts story for 90 days. Any slot before the Phase 2 thresholds.
 
 ## Measurement
 
