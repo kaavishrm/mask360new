@@ -6,15 +6,15 @@ format: tea
 kicker: SPILLED
 date: 2026-11-02
 desk: People Desk
-cover: generated
+cover: photo:assets/img/stories/starbucks-india-hires-tbwa-lintas-to-sell-coffee-past-the-metros/ev-6.jpg
 coverText: 505 stores
-credit: "Image: afaqs.com, the Tata Starbucks campaign still"
+credit: "Image: afaqs.com, Tata Starbucks #ItStartsWithYourName campaign still by Edelman India, 2023"
 sources:
-- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
-- "https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205 (afaqs, TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas bags Starbucks India mandate with quotes, 2 November 2026)"
-- "https://www.storyboard18.com/amp/agency-news/starbucks-india-appoints-tbwalintas-as-creative-agency-of-record-ws-l-113900.htm (Storyboard18, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026)"
+- "https://www.campaignindia.in/article/starbucks-india-appoints-tbwa-lintas-as-its-creative-agency-of-record/4qssv4hqsxma0sr8bn68mvb3x2 (Campaign India, Starbucks India appoints TBWA\\Lintas, 2 November 2026)"
+- "https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205 (afaqs, TBWA\\Lintas bags Starbucks India mandate with quotes, 2 November 2026)"
+- "https://www.storyboard18.com/amp/agency-news/starbucks-india-appoints-tbwalintas-as-creative-agency-of-record-ws-l-113900.htm (Storyboard18, Starbucks India appoints TBWA\\Lintas, 2 November 2026)"
 - "https://www.indianretailer.com/news/tata-consumer-products-q2-results-show-strong-growth-india-business (Indian Retailer, Tata Consumer Q2 FY27 results with Tata Starbucks numbers, 27 October 2026)"
-- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas survives as TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, Sandeep Goyal quote, 3 December 2025)"
+- "https://www.storyboard18.com/advertising/ddb-fcb-mullenlowe-are-dead-somehow-lintas-lives-85199.htm (Storyboard18, Lintas survives as TBWA\\Lintas, Sandeep Goyal quote, 3 December 2025)"
 - "https://www.afaqs.com/news/advertising/aditya-kanthy-and-prasoon-joshi-to-steer-omnicoms-india-reboot-10829934 (afaqs, Omnicom Advertising India structure effective 1 January 2026, 2 December 2025)"
 - "https://www.afaqs.com/news/advertising/tata-starbucks-launches-a-new-campaign-itstartswithyourname (afaqs, Edelman India conceptualised #ItStartsWithYourName, 11 May 2023)"
 - "https://campaignbriefasia.com/?p=165223 (Campaign Brief Asia, Edelman India made the 2024 Diwali film #MeriSpecialJagah, 16 October 2024)"
@@ -34,18 +34,18 @@ slides:
   title: Starbucks India hires TBWA\Lintas to sell coffee past the metros
 - type: tea
   pull: The pitch is over.
-  text: "Tata Starbucks named TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, part of Omnicom Advertising India, its creative agency of record on 2 November after a multi-agency pitch. The mandate: brand campaigns, social media, digital activations and consumer engagement, run on what both sides call an integrated, media-agnostic approach. No incumbent is named in the release."
+  text: "Tata Starbucks named TBWA\\Lintas, part of Omnicom Advertising India, its creative agency of record on 2 November after a multi-agency pitch. The mandate: brand campaigns, social media, digital activations and consumer engagement, run on what both sides call an integrated, media-agnostic approach. No incumbent is named in the release."
 - type: receipt
   kind: image
   image: assets/img/stories/starbucks-india-hires-tbwa-lintas-to-sell-coffee-past-the-metros/ev-1.jpg
-  caption: TBWA\Lintas bags creative mandate for Starbucks India. afaqs, TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas bags Starbucks India mandate with quotes, 2 November 20
-  credit: "Image: afaqs.com, afaqs, TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas bags Starbucks India mandate with quotes, 2 November 2026"
+  caption: TBWA\Lintas bags creative mandate for Starbucks India. afaqs, TBWA\Lintas bags Starbucks India mandate with quotes, 2 November 2026
+  credit: "Image: afaqs.com, afaqs, TBWA\\Lintas bags Starbucks India mandate with quotes, 2 November 2026"
   source: https://www.afaqs.com/news/newbizwins/tbwalintas-bags-creative-mandate-for-starbucks-india-12776205
 - type: receipt
   kind: image
   image: assets/img/stories/starbucks-india-hires-tbwa-lintas-to-sell-coffee-past-the-metros/ev-2.jpg
-  caption: Starbucks India appoints TBWA\Lintas as creative agency of record. Storyboard18, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November
-  credit: "Image: storyboard18.com, Storyboard18, Starbucks India appoints TBWA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Lintas, 2 November 2026"
+  caption: Starbucks India appoints TBWA\Lintas as creative agency of record. Storyboard18, Starbucks India appoints TBWA\Lintas, 2 November 2026
+  credit: "Image: storyboard18.com, Storyboard18, Starbucks India appoints TBWA\\Lintas, 2 November 2026"
   source: https://www.storyboard18.com/amp/agency-news/starbucks-india-appoints-tbwalintas-as-creative-agency-of-record-ws-l-113900.htm
 - type: tea
   pull: The brief says tier two.
@@ -86,7 +86,7 @@ linkedin: |
   #advertising #starbucks #agencypitch
 alt: |
   Cover slide on people green with the SPILLED pill, the headline Starbucks India hires TBWA\Lintas to sell coffee past the metros, the words 505 stores set huge, and the Mask360 masthead.
-  Tea slide with the pull line The pitch is over.: Tata Starbucks named TBWA\\\\\\\\\\\\\\\\Lintas, part of Omnicom Advertising India, its creative agency of record on 2.
+  Tea slide with the pull line The pitch is over.: Tata Starbucks named TBWA\Lintas, part of Omnicom Advertising India, its creative agency of record on 2.
   Receipt slide, an image from afaqs.com
   Receipt slide, an image from storyboard18.com
   Tea slide with the pull line The brief says tier two.: The release talks about a growing base of coffee drinkers in tier two and tier three.

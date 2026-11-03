@@ -26,7 +26,12 @@ export function parseYaml(text) {
 function scalar(v) {
   v = v.trim();
   if (v === '') return '';
-  if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) return v.slice(1, -1).replace(/\\"/g, '"');
+  // Double-quoted scalars are written with JSON escaping (see stringifyFrontMatter), so decode them the same way.
+  // The fallback keeps a lone backslash as it is (TBWA\Lintas) so a hand-written file still reads correctly.
+  if (v.startsWith('"') && v.endsWith('"') && v.length >= 2) {
+    try { return JSON.parse(v); } catch { return v.slice(1, -1).replace(/\\\\/g, '\\').replace(/\\"/g, '"'); }
+  }
+  if (v.startsWith("'") && v.endsWith("'") && v.length >= 2) return v.slice(1, -1).replace(/''/g, "'");
   if (v === 'true') return true;
   if (v === 'false') return false;
   if (v === 'null' || v === '~') return null;

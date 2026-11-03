@@ -43,15 +43,15 @@ slides:
 - type: receipt
   kind: image
   image: assets/img/stories/diwali-2026-ads-one-film-the-prep/ev-1.jpg
-  caption: Asian Paints unveils Diwali campaign celebrating the joy of home makeovers. Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit
-  credit: "Image: indiantelevision.com, Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19"
-  source: https://indiantelevision.com/mam/asian-paints-unveils-diwali-campaign-celebrating-the-joy-of-home-makeovers/
+  caption: The film, as published. Asian Paints Diwali 2026 | Tayyari Shuru, Tyohaar Shuru, Asian Paints
+  credit: "Still: YouTube, https://www.youtube.com/watch?v=8PydI89NrhA"
+  source: https://www.youtube.com/watch?v=8PydI89NrhA
 - type: receipt
   kind: image
   image: assets/img/stories/diwali-2026-ads-one-film-the-prep/ev-2.jpg
-  caption: "Asian Paints: Taiyyari Shuru, Tyohaar Shuru • Ads of the World | Part of The Clio Network. Ads of the World listing for the Asian Paints film, India,"
-  credit: "Image: adsoftheworld.com, Ads of the World listing for the Asian Paints film, India, October 2026"
-  source: https://www.adsoftheworld.com/campaigns/taiyyari-shuru-tyohaar-shuru
+  caption: The film, as published. Lights lagana fun banao, Spotify chalao, Spotify India
+  credit: "Still: YouTube, Spotify India x TVF, Lights lagana fun banao, the film on YouTube, October 2026"
+  source: https://www.youtube.com/watch?v=LxK1G7hnbZE
 - type: tea
   pull: Spotify made the prep a sitcom.
   text: Three one-minute films with Gullak's Mishra family, reported 30 October. Laddoos to Taambdi Chaamdi, rangoli to Chaiya Chaiya, untangling lights to Badan Pe Sitare. The family bickers through the chore until someone presses play. Tagline, Diwali ki taiyaari fun banao, Spotify chalao. Same week, same chores, better casting.
@@ -79,8 +79,8 @@ linkedin: |
 alt: |
   Cover slide on culture blue with the BITTER pill, the headline Diwali advertising made one film this year, the prep montage, the words the prep set huge, and the Mask360 masthead.
   Tea slide with the pull line Asian Paints sang the prep.: Taiyyari Shuru, Tyohaar Shuru, by Ogilvy, reported 19 October, turns cleaning, decorating and painting into a.
-  Receipt slide, Asian Paints unveils Diwali campaign celebrating the joy of home makeovers. Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit (Image: indiantelevision.com, Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19).
-  Receipt slide, Asian Paints: Taiyyari Shuru, Tyohaar Shuru • Ads of the World | Part of The Clio Network. Ads of the World listing for the Asian Paints film, India, (Image: adsoftheworld.com, Ads of the World listing for the Asian Paints film, India, October 2026).
+  Receipt slide, a still from the film
+  Receipt slide, a still from the film
   Tea slide with the pull line Spotify made the prep a sitcom.: Three one-minute films with Gullak's Mishra family, reported 30 October. Laddoos to Taambdi Chaamdi, rangoli to.
   Tea slide with the pull line Nutella made the prep a checklist.: Reported 22 October. Ranveer Singh straightens a cushion, fixes a light, smells mogra, scans the laid.
   Verdict slide headed The read: the prep is this year's homecoming, warm and interchangeable. Swap the logos and nothing breaks. Ogilvy.

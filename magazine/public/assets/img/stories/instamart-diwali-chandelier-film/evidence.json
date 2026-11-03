@@ -34,6 +34,18 @@
   },
   {
     "file": "assets/img/stories/instamart-diwali-chandelier-film/ev-4.jpg",
+    "kind": "thumbnail",
+    "source": "https://www.youtube.com/watch?v=_u8fqzgxY-c",
+    "note": "Adgully report on the film, in-house credit and quotes, 2026-11-03",
+    "title": "Ye Diwali Suraksha wali, Suroj Buildcon Pvt. Ltd.",
+    "domain": "youtube.com",
+    "credit": "Still: YouTube, Adgully report on the film, in-house credit and quotes, 2026-11-03",
+    "youtube": "_u8fqzgxY-c",
+    "w": 1280,
+    "h": 720
+  },
+  {
+    "file": "assets/img/stories/instamart-diwali-chandelier-film/ev-5.jpg",
     "kind": "image",
     "source": "https://mediabrief.com/instamarts-diwali-film-turns-a-chandelier-into-an-outfit/",
     "note": "MediaBrief report on the film, October 2026",
@@ -44,7 +56,7 @@
     "h": 343
   },
   {
-    "file": "assets/img/stories/instamart-diwali-chandelier-film/ev-5.jpg",
+    "file": "assets/img/stories/instamart-diwali-chandelier-film/ev-6.jpg",
     "kind": "image",
     "source": "https://www.storyboard18.com/brand-marketing/festive-demand-drives-ctv-ad-prices-up-as-audience-reach-doubles-ws-l-112363.htm",
     "note": "Storyboard18 on festive CTV rates, carries Datum's INR 2,200 crore quick-commerce festive ad estimate, 2026-10-12",
