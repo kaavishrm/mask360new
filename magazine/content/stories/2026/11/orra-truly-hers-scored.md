@@ -7,6 +7,7 @@ kicker: SWEET
 date: 2026-10-27
 desk: Campaigns Desk
 cover: generated
+film: https://www.youtube.com/watch?v=FcUqRfakpRo
 coverText: 8
 credit: ""
 sources:
@@ -36,15 +37,15 @@ slides:
 - type: receipt
   kind: image
   image: assets/img/stories/orra-truly-hers-scored/ev-1.jpg
-  caption: ORRA’s festive film ‘Truly Hers’ puts women at the centre. afaqs report on the film with credits, collections and media plan, 2026-10-21
-  credit: "Image: afaqs.com, afaqs report on the film with credits, collections and media plan, 2026-10-21"
-  source: https://www.afaqs.com/news/advertising/orras-festive-film-truly-hers-puts-women-at-the-centre-12695530
+  caption: The film, as published. ORRA Festive 2026 | A celebration of her, and the jewellery that's truly hers., ORRA Jewellery
+  credit: "Still: YouTube, https://www.youtube.com/watch?v=FcUqRfakpRo"
+  source: https://www.youtube.com/watch?v=FcUqRfakpRo
 - type: receipt
   kind: image
-  image: assets/img/stories/orra-truly-hers-scored/ev-2.jpg
-  caption: ORRA unveils festive film ‘Truly Hers’ to spotlight design-led jewellery. Adgully report on the film with credits and the mirror and doorway description, 2026-1
-  credit: "Image: adgully.com, Adgully report on the film with credits and the mirror and doorway description, 2026-10-21"
-  source: https://www.adgully.com/post/22599/orra-unveils-festive-film-truly-hers-to-spotlight-design-led-jewellery
+  image: assets/img/stories/orra-truly-hers-scored/ev-4.jpg
+  caption: The film, as published. Ye Diwali Suraksha wali, Suroj Buildcon Pvt. Ltd.
+  credit: "Still: YouTube, Adgully report on the film with credits and the mirror and doorway description, 2026-10-21"
+  source: https://www.youtube.com/watch?v=_u8fqzgxY-c
 - type: tea
   pull: "Craft: 8/10"
   text: Dar Gai directs, Jugaad produces, Spring Capital conceptualises. The camera stays close and slow on the pieces, which is how you sell craftsmanship without a voiceover saying craftsmanship. Two points off because no release we read names the cast, the music or the cinematographer, and in this industry credit is the currency.
@@ -79,8 +80,8 @@ linkedin: |
 alt: |
   Cover slide on campaigns red with the SWEET pill, the headline ORRA's festive film Truly Hers, scored: 8.0, the words 8 set huge, and the Mask360 masthead.
   Tea slide with the pull line Idea: 8/10: Most festive jewellery films celebrate the occasion. Truly Hers celebrates the woman. She chooses her jewellery.
-  Receipt slide, ORRA’s festive film ‘Truly Hers’ puts women at the centre. afaqs report on the film with credits, collections and media plan, 2026-10-21 (Image: afaqs.com, afaqs report on the film with credits, collections and media plan, 2026-10-21).
-  Receipt slide, ORRA unveils festive film ‘Truly Hers’ to spotlight design-led jewellery. Adgully report on the film with credits and the mirror and doorway description, 2026-1 (Image: adgully.com, Adgully report on the film with credits and the mirror and doorway description, 2026-10-21).
+  Receipt slide, a still from the film
+  Receipt slide, a still from the film
   Tea slide with the pull line Craft: 8/10: Dar Gai directs, Jugaad produces, Spring Capital conceptualises. The camera stays close and slow on the.
   Tea slide with the pull line Fit: 9/10: The film opens six collections, Shades, Cosmos, Blooms, Mandala, Kalamkari and Waves, each built on one.
   Tea slide with the pull line Courage: 7/10: It drops the festival from a Diwali film, braver than it sounds in a category that.

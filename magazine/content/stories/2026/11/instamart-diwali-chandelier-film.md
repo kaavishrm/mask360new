@@ -32,16 +32,16 @@ slides:
   text: A couple comes home from a late Diwali party. The wife wants to call it a night. The husband is wearing a crystal chandelier as an outfit and running on low battery. Deadpan performances, restrained camera, one gag. It ends on a delivery and the line, Diwali decor and more, only on Instamart.
 - type: receipt
   kind: image
+  image: assets/img/stories/instamart-diwali-chandelier-film/ev-4.jpg
+  caption: The film, as published. Ye Diwali Suraksha wali, Suroj Buildcon Pvt. Ltd.
+  credit: "Still: YouTube, Adgully report on the film, in-house credit and quotes, 2026-11-03"
+  source: https://www.youtube.com/watch?v=_u8fqzgxY-c
+- type: receipt
+  kind: image
   image: assets/img/stories/instamart-diwali-chandelier-film/ev-1.jpg
   caption: Instamart Diwali campaign features man wearing chandelier to promote home décor. Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes
   credit: "Image: storyboard18.com, Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes and the 131 cities figure, 2026-10-31"
   source: https://www.storyboard18.com/brand-marketing/instamart-diwali-campaign-features-man-wearing-chandelier-to-promote-home-decor-113768.htm
-- type: receipt
-  kind: image
-  image: assets/img/stories/instamart-diwali-chandelier-film/ev-2.jpg
-  caption: Instamart gives Diwali décor a quirky twist in new ad. afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31
-  credit: "Image: afaqs.com, afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31"
-  source: https://www.afaqs.com/news/advertising/instamart-gives-diwali-d%C3%A9cor-a-quirky-twist-in-new-ad-12770456
 - type: tea
   pull: No agency on the slate.
   text: The credit line reads conceptualised and executed by the in-house team. No agency, no director, no production house named by Storyboard18, afaqs or Adgully. For a festive film from a Swiggy brand in the most crowded ad week of the year, that is the visible decision.
@@ -81,8 +81,8 @@ linkedin: |
 alt: |
   Cover slide on campaigns red with the SPILLED pill, the headline Instamart's Diwali film is a tired man in a chandelier, the words chandelier set huge, and the Mask360 masthead.
   Tea slide with the pull line The film.: A couple comes home from a late Diwali party. The wife wants to call it a.
-  Receipt slide, Instamart Diwali campaign features man wearing chandelier to promote home décor. Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes (Image: storyboard18.com, Storyboard18 report on the film, with Mayur Hola quotes, the six category lanes and the 131 cities figure, 2026-10-31).
-  Receipt slide, Instamart gives Diwali décor a quirky twist in new ad. afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31 (Image: afaqs.com, afaqs report on the film, in-house credit line and Mayur Hola quotes, 2026-10-31).
+  Receipt slide, a still from the film
+  Receipt slide, an image from storyboard18.com
   Tea slide with the pull line No agency on the slate.: The credit line reads conceptualised and executed by the in-house team. No agency, no director, no.
   Tea slide with the pull line The category play.: The assortment behind the gag runs six lanes. Linen and furnishings, home decor, cleaning supplies, electronics,.
   Tea slide with the pull line Everyone else shot the lit-up house.: Mayur Hola, VP Brand at Swiggy, says most Diwali films show lit-up homes and family moments,.

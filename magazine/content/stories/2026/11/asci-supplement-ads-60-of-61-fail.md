@@ -83,8 +83,8 @@ linkedin: |
 alt: |
   Cover slide on campaigns red with the SPILLED pill, the headline ASCI checks 61 supplement ads and fails 60, the words 60 of 61 set huge, and the Mask360 masthead.
   Tea slide with the pull line The sweep.: ASCI ran a suo motu review of nutraceutical ads published between July and September 2026 and.
-  Receipt slide, 60 of 61 nutraceutical ads breach ASCI Code, report finds. Indian Television report on the ASCI study, with the quoted claims, the 61, 60, 29 and 31 figures (Image: indiantelevision.com, Indian Television report on the ASCI study, with the quoted claims, the 61, 60, 29 and 31 figures and Manisha Kapoor quotes, 2026-10-28).
-  Receipt slide, ASCI’s ‘A Pill for Thought’ report flags gaps in evidence backing. Mediainfoline report on the study with the quoted claims and the USD 38.77 billion market fig (Image: mediainfoline.com, Mediainfoline report on the study with the quoted claims and the USD 38.77 billion market figure, 2026-10-28).
+  Receipt slide, an image from indiantelevision.com
+  Receipt slide, an image from mediainfoline.com
   Tea slide with the pull line The claims.: ASCI pulled the lines. 'Lose 6 kgs in 60 days.' 'Your thigh fat will be gone.
   Tea slide with the pull line Nobody could show the proof.: 29 advertisers did not contest and modified or withdrew the ad. 31 contested and, per ASCI,.
   Tea slide with the pull line The money and the teeth.: Grand View Research puts India's nutraceuticals market at USD 38.77 billion in 2025. ASCI is self-regulatory.

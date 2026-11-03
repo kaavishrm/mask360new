@@ -82,8 +82,8 @@ linkedin: |
 alt: |
   Cover slide on fashion violet with the SPILLED pill, the headline The Pant Project raises 109 crore for 125 more stores, the words 109 cr set huge, and the Mask360 masthead.
   Tea slide with the pull line 109 cr, one line of business.: The Pant Project closes a 109 cr Series B, about 11.5 million dollars, led by Mirae.
-  Receipt slide, The Pant Project Raises ₹109 Cr To Expand Store Network & Portfolio. Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-1 (Image: inc42.com, Inc42, funding report with investor list, store count and the Dhruv Toshniwal quote, 2026-10-19).
-  Receipt slide, The Pant Project Raises INR 109 Cr Series B. Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-1 (Image: india.entrepreneur.com, Entrepreneur India, funding report with the Puneet Kumar and Udit Toshniwal quotes and IndigoEdge as banker, 2026-10-19).
+  Receipt slide, an image from inc42.com
+  Receipt slide, an image from india.entrepreneur.com
   Tea slide with the pull line 25 stores today. 150 is the ask.: The money goes offline. The brothers Dhruv and Udit Toshniwal, who started the brand in 2020.
   Tea slide with the pull line One store every six to nine days.: Open magazine ran the arithmetic. 125 net new stores in two to three years is one.
   Tea slide with the pull line 80 cr in, 160 cr promised.: The revenue line: 80 cr in FY26, per the company's September disclosure, with 160 cr projected.

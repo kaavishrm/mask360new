@@ -3,7 +3,7 @@
 // Files land in public/assets/img/stories/<slug>/ with evidence.json describing each one. Nothing is invented: every
 // file is a copy of something at a URL in the story's sources, kept for criticism and review, and credited.
 // Usage: node newsroom/evidence.mjs <story.md> [more stories...]   (env EVIDENCE_SCREENSHOTS=0 to skip Playwright)
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, renameSync } from 'node:fs';
 import { join, basename, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -60,12 +60,18 @@ async function youtubeTitle(id) {
 }
 
 /** Download a film and cut four stills and a 12 second clip. Returns null when YouTube refuses (datacenter IPs often need cookies). */
+let ytBlocked = false;
 function filmAssets(id, dir, n) {
+  if (ytBlocked) return null;
   const tmp = join(dir, `film-${id}.mp4`);
-  const args = ['-f', 'bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b', '--no-playlist', '--quiet', '-o', tmp, `https://www.youtube.com/watch?v=${id}`];
+  const args = ['-f', 'bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b', '--no-playlist', '--quiet', '--no-warnings', '--socket-timeout', '20', '--retries', '1', '-o', tmp, `https://www.youtube.com/watch?v=${id}`];
   if (process.env.YT_COOKIES_FILE) args.push('--cookies', process.env.YT_COOKIES_FILE);
-  const dl = spawnSync('yt-dlp', args, { encoding: 'utf8', timeout: 180000 });
-  if (dl.status !== 0 || !existsSync(tmp)) return null;
+  const dl = spawnSync('yt-dlp', args, { encoding: 'utf8', timeout: 120000 });
+  if (dl.status !== 0 || !existsSync(tmp)) {
+    if (/sign in to confirm|not a bot|429/i.test(dl.stderr || '')) { ytBlocked = true; console.error('youtube refuses downloads from this address; using thumbnails for the rest of the run'); }
+    try { execFileSync('sh', ['-c', `rm -f "${tmp}"* `]); } catch { /* fine */ }
+    return null;
+  }
   const probe = spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', tmp], { encoding: 'utf8' });
   const dur = parseFloat(probe.stdout) || 30;
   const frames = [], times = [];
@@ -160,11 +166,12 @@ export async function collect(storyPath, { max = 6 } = {}) {
       // the page's own image, then the largest image the page declares, keep whichever is bigger
       let best = null;
       const og = meta(html, 'og:image') || meta(html, 'twitter:image');
-      const tryImg = async (abs) => { const buf = await fetchBuffer(abs); if (!buf || buf.length < 8000) return; const f = join(dir, `ev-${n + 1}.jpg`); writeFileSync(f, buf); const sz = fit(f); if (!sz || sz.w < 600) { try { execFileSync('rm', ['-f', f]); } catch { /* fine */ } return; } if (!best || sz.w * sz.h > best.w * best.h * 1.3) { if (best) { try { execFileSync('rm', ['-f', best.f]); } catch { /* fine */ } } best = { f, ...sz }; } else { try { execFileSync('rm', ['-f', f]); } catch { /* fine */ } } };
+      let cand = 0;
+      const tryImg = async (abs) => { const buf = await fetchBuffer(abs); if (!buf || buf.length < 8000) return; const f = join(dir, `cand-${n + 1}-${++cand}.jpg`); writeFileSync(f, buf); const sz = fit(f); if (!sz || sz.w < 600) { try { execFileSync('rm', ['-f', f]); } catch { /* fine */ } return; } if (!best || sz.w * sz.h > best.w * best.h * 1.3) { if (best) { try { execFileSync('rm', ['-f', best.f]); } catch { /* fine */ } } best = { f, ...sz }; } else { try { execFileSync('rm', ['-f', f]); } catch { /* fine */ } } };
       if (og && !have.has(url + '|image')) {
         await tryImg(og.startsWith('http') ? og : new URL(og, url).href);
         for (const c of largestImage(html, url)) await tryImg(c.url);
-        if (best) add({ file: rel(best.f), kind: 'image', source: url, note, title, domain, credit: `Image: ${domain}, ${note || title}`, w: best.w, h: best.h });
+        if (best) { const f = join(dir, `ev-${n + 1}.jpg`); renameSync(best.f, f); add({ file: rel(f), kind: 'image', source: url, note, title, domain, credit: `Image: ${domain}, ${note || title}`, w: best.w, h: best.h }); }
       }
       // films embedded on the page
       for (const id of youtubeEmbeds(html).slice(0, 2)) { if (n >= max) break; await film(id, note || title, title, true); }

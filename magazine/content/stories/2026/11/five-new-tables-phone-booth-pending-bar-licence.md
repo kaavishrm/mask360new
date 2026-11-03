@@ -93,8 +93,8 @@ linkedin: |
 alt: |
   Cover slide on hospitality yellow with the SWEET pill, the headline Five new tables, one phone booth, one pending bar licence, the words five tables set huge, and the Mask360 masthead.
   Item slide for Trapdoor, Versova: A speakeasy behind a retro telephone booth. Six-course cocktail omakase by director. The catch: No walk-ins. You get the booth code after booking, and.
-  Receipt slide, Trapdoor Launches in Versova With Six-Course Cocktail Pairing Experience. Restaurant India on Trapdoor's launch, team and format, 30 September 2026 (Image: restaurantindia.in, Restaurant India on Trapdoor's launch, team and format, 30 September 2026).
-  Receipt slide, 11 New Mumbai Restaurants In October You. Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026 (Image: curlytales.com, Curlytales Mumbai October openings with cost for two, hours and addresses, 29 September 2026).
+  Receipt slide, an image from restaurantindia.in
+  Receipt slide, an image from curlytales.com
   Item slide for La Panthera Eros, Churchgate: Manuel Olveira and Mickee Tuljapurkar's second Mumbai room, 80 seats on the. The catch: Evenings only. Aperitivo hour runs 5:30 to 7pm, then dinner..
   Item slide for Nam, Hauz Khas: Pratinav Singh's modern Thai, 50 seats, an 18-foot bar on the open. The catch: The bar licence was still pending when Time Out visited..
   Item slide for Goonj, Indiranagar: Kompany Hospitality's 75-seat Indian food house on 100 Feet Road. Overnight Dal. The catch: Fourth floor, and the kitchen goes dark from 3:30 to.

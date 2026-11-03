@@ -21,7 +21,9 @@ export function attach(storyPath, { max = 2, force = false } = {}) {
   // item slides (The Edit, The Guest List, Moves): give each item the evidence image whose page title names it
   let itemImages = 0;
   for (const sl of data.slides || []) {
-    if (sl.type !== 'item' || sl.image) continue;
+    if (sl.type !== 'item') continue;
+    if (force) delete sl.image;
+    if (sl.image) continue;
     const key = String(sl.name || '').split(/[,:]/)[0].trim().split(/\s+/).filter((w) => w.length >= 4)[0];
     if (!key) continue;
     const re = new RegExp(`\\b${key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');

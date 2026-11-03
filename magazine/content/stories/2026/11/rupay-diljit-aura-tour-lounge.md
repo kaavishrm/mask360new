@@ -88,8 +88,8 @@ linkedin: |
 alt: |
   Cover slide on culture blue with the SPILLED pill, the headline RuPay owns the priciest seat at every Diljit show, the words 17,499 set huge, and the Mask360 masthead.
   Tea slide with the pull line The name is on the tour.: Diljit Dosanjh put the India leg of his Aura World Tour on Instagram in the first.
-  Receipt slide, Diljit Dosanjh brings ‘Aura’ home: 7 city India tour kicks off in Delhi on Nov 1, 7th show announced in Chandigarh - BusinessToday. Business Today on the seven- (Image: businesstoday.in, Business Today on the seven-city India leg, venues, the RuPay presale and BookMyShow, 2026-10-06).
-  Receipt slide, Diljit Dosanjh announces Aura India Tour 2026; check city-wise dates, tickets and venue details - India TV News. India TV on the tour announcement, the 6 Octobe (Image: indiatvnews.com, India TV on the tour announcement, the 6 October RuPay presale and 9 October general sale, 2026-10-04).
+  Receipt slide, an image from businesstoday.in
+  Receipt slide, an image from indiatvnews.com
   Tea slide with the pull line The presale is card-only.: Ahmedabad went first. A RuPay credit card presale opened at noon on 28 September and Billboard.
   Tea slide with the pull line The lounge is the ad.: Every city has a RuPay-named block at the top of the price list. RuPay Lounge in.
   Receipt slide comparing 2024, Dil-Luminati (HDFC Bank Pixel cardholders got a two-day presale) with 2026, Aura (RuPay credit cardholders get the presale on BookMyShow,).

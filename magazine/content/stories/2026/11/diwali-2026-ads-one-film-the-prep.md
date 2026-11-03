@@ -7,9 +7,13 @@ kicker: BITTER
 date: 2026-11-01
 desk: The Mask
 cover: generated
+film: https://www.youtube.com/watch?v=8PydI89NrhA
 coverText: the prep
 credit: ""
 sources:
+- "https://www.youtube.com/watch?v=8PydI89NrhA (Asian Paints, Tayyari Shuru Tyohaar Shuru, the film on YouTube, October 2026)"
+- "https://www.youtube.com/watch?v=LxK1G7hnbZE (Spotify India x TVF, Lights lagana fun banao, the film on YouTube, October 2026)"
+- "https://www.youtube.com/watch?v=Pke93mvUBcI (Nutella India, Nutella wali Diwali with Ranveer Singh, the film on YouTube, October 2026)"
 - "https://indiantelevision.com/mam/asian-paints-unveils-diwali-campaign-celebrating-the-joy-of-home-makeovers/ (Indiantelevision on Asian Paints' Taiyyari Shuru, Tyohaar Shuru by Ogilvy, with Amit Syngle and Sukesh Nayak, 2026-10-19)"
 - "https://www.adsoftheworld.com/campaigns/taiyyari-shuru-tyohaar-shuru (Ads of the World listing for the Asian Paints film, India, October 2026)"
 - "https://www.mediainfoline.com/advertising/spotifys-diwali-campaign-turns-festive-chores-into-family-fun (MediaInfoline on Spotify's three Gullak films and the Shipra Srivastava quote, 2026-10-30)"

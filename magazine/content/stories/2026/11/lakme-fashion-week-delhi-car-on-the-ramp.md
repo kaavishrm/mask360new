@@ -96,8 +96,8 @@ linkedin: |
 alt: |
   Cover slide on events pink with the SPILLED pill, the headline Lakmé Fashion Week drives a car onto the ramp, the words a car set huge, and the Mask360 masthead.
   Tea slide with the pull line The room: Taj Palace, New Delhi, 13 to 18 October. Six days, over 35 shows, over 30 stalls.
-  Receipt slide, LFW X FDCI 2026 highlights: t2oS picks shows that defined the landscape of modern Indian fashion. t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 (Image: t2online.in, t2 highlights of LFW x FDCI Delhi, six days, 35 shows, 30 buyer stalls, show by show, 25 October 2026).
-  Receipt slide, Manish Malhotra. t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026 (Image: t2online.in, t2 report on the Manish Malhotra show, NEXA presenting, Donn Bhat set, car entry, 18 October 2026).
+  Receipt slide, an image from t2online.in
+  Receipt slide, an image from t2online.in
   Item slide for Maruti Suzuki NEXA presents Manish Malhotra: 17 October. Malhotra's first fashion week in three and a half years. The catch: NEXA presented the show and the release says the collection.
   Item slide for American Express takes the front row: Experience Partner. Centurion and Platinum card members get front-row seats at select. The catch: Front row used to be the editor's seat. Now it.
   Item slide for House of Lakmé closes with an ice-cream cart: Amit Aggarwal's AM:IT finale, On a Day Like Today, sends balloons, candyfloss,. The catch: The show is built around Lakmé 9to5's 5PM Glam Reset.

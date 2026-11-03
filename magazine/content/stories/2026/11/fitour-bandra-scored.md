@@ -73,8 +73,8 @@ linkedin: |
 alt: |
   Cover slide on hospitality yellow with the SWEET pill, the headline Fitour's 18-course basement in Bandra, scored: 8.4, the words 8.4 set huge, and the Mask360 masthead.
   Tea slide with the pull line Idea: 8.5/10: Eighteen courses chef Ashwin Singh calls verses, served three or four at a time with no.
-  Receipt slide, Aspect Hospitality Opens FITOUR in Bandra With 14-Seat Indian Dining Format. Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Ke (Image: restaurantindia.in, Restaurant India on the opening, prices, pairings, Aspect Hospitality and Hitesh Keswani, 5 October 2026).
-  Receipt slide, In Fitour, Mumbai’s newest XS eatery, last summer’s mangoes get a spotlight. The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, (Image: thenodmag.com, The Nod review of Fitour by Sheree Gomes Gupta with dishes, team, room and timings, 14 October 2026).
+  Receipt slide, an image from restaurantindia.in
+  Receipt slide, an image from thenodmag.com
   Tea slide with the pull line Craft: 8.5/10: Singh cooked at Gaggan in Bangkok and at Masque. The kitchen grinds its own garam, chaat.
   Tea slide with the pull line Fit: 7.5/10: A basement under House of Akina on Turner Road, the old Privé, rebuilt four times, once.
   Tea slide with the pull line Courage: 9/10: INR 8,245 a head plus taxes before a drop is poured, with pairings from INR 5,145.

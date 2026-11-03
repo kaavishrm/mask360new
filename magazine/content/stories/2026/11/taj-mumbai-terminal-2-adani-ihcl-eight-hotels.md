@@ -73,8 +73,8 @@ linkedin: |
 alt: |
   Cover slide on hospitality yellow with the SPILLED pill, the headline Taj takes Mumbai's Terminal 2 in an eight-hotel Adani deal, the words 2,000 rooms set huge, and the Mask360 masthead.
   Tea slide with the pull line Eight hotels, one handshake.: Adani Airport Holdings and the Indian Hotels Company sign a multi-hotel operating agreement on 29 October:.
-  Receipt slide, AAHL, IHCL Sign One Of India’s Largest Multi-Hotel Agreements For 8 Hotels With 2,000+ Rooms. Free Press Journal on the agreement, land bank, phase one investme (Image: freepressjournal.in, Free Press Journal on the agreement, land bank, phase one investment and the May IHG deal, 29 October 2026).
-  Receipt slide, Adani Airports and IHCL sign eight-hotel agreement as Airport City strategy accelerates. The Moodie Davitt Report by Mark Lane on the deal, the 25 and 15 hotel (Image: moodiedavittreport.com, The Moodie Davitt Report by Mark Lane on the deal, the 25 and 15 hotel counts and the Jeet Adani quote, 29 October 2026).
+  Receipt slide, an image from freepressjournal.in
+  Receipt slide, an image from moodiedavittreport.com
   Tea slide with the pull line T2 gets a Taj.: Mumbai gets the headline: a Taj under construction at Terminal 2 of Chhatrapati Shivaji Maharaj International..
   Tea slide with the pull line The real estate under the room.: The hotels sit inside a bigger bet. Adani Airport City Limited holds a land bank of.
   Receipt slide quoting With these additions, IHCL will have 25 hotels across its brandscape at key airports, Puneet Chhatwal, MD and CEO of IHCL, company release via Hospitality Net, 29 October 2026.
