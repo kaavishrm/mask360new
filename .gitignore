@@ -2,3 +2,25 @@ __pycache__/
 *.pyc
 .DS_Store
 ~$*.xlsx
+node_modules/
+# Rendered carousels, cards and OG images are build output: the host renders them from the story files.
+magazine/public/carousels/
+magazine/public/assets/brand/og.jpg
+magazine/public/index.json
+magazine/public/search.json
+magazine/public/feed.xml
+magazine/public/sitemap.xml
+magazine/public/robots.txt
+magazine/public/site.webmanifest
+magazine/public/index.html
+magazine/public/404.html
+magazine/public/campaigns/
+magazine/public/events/
+magazine/public/hospitality/
+magazine/public/fashion/
+magazine/public/people/
+magazine/public/culture/
+magazine/public/about/
+magazine/public/advertise/
+magazine/public/newsletter/
+magazine/public/search/

@@ -1,0 +1,40 @@
+name: Merge newsroom PRs
+# Lane B lands here. A PR titled "newsroom: ..." that only touches magazine content and OPS, and passes lint and build, is merged.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  check-and-merge:
+    if: startsWith(github.event.pull_request.title, 'newsroom:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Only content paths may change
+        run: |
+          git fetch origin ${{ github.event.pull_request.base.sha }}
+          CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          echo "$CHANGED"
+          BAD=$(echo "$CHANGED" | grep -vE '^(magazine/content/|magazine/OPS/|magazine/newsroom/(STATE|posted)\.json$|magazine/newsroom/outbox/|magazine/newsroom/queue/)' || true)
+          if [ -n "$BAD" ]; then echo "Refusing: files outside the content paths changed:"; echo "$BAD"; exit 1; fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Lint and build
+        run: |
+          cd magazine
+          node newsroom/lint.mjs
+          node build.mjs
+      - name: Merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge ${{ github.event.pull_request.number }} --squash --delete-branch --repo ${{ github.repository }}
