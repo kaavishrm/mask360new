@@ -56,6 +56,8 @@ Agenda in `03-scripts-corporate.md`, C6. Key points:
 ### Who
 - Target: independent wealth managers, mutual fund distributors, boutique family offices, CAs serving business families.
 - Do not target: bank private banking relationship managers (their employers usually bar personal referral fees) and SEBI-registered investment advisers (SEBI bars them from referral fees). A bank can only be a head-office tie-up, which takes months.
+- Check before paying CAs: a fee to a practising CA for a referral may conflict with the ICAI Code of Ethics. Take advice before offering fees to the CA firms on the list. CAs can still introduce clients unpaid.
+- Start with the A and B rows in `research/adviser-targets.csv`. Confirm every distributor's ARN on AMFI before onboarding. Many surnames from Apollo are masked: check LinkedIn, or approve Apollo enrichment credits.
 
 ### Steps
 1. **List (days 1 to 7):** start from `research/adviser-targets.csv`. Extend with AMFI's distributor search, LinkedIn, ICAI branches and BNI-type chapters (method in `research/adviser-targets-notes.md`).
