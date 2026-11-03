@@ -1,6 +1,6 @@
 # Mask360, the magazine
 
-Said *three six tea*. A social-first Indian magazine that spills corporate goss on the business of brands: campaigns, events, hospitality, fashion, agency people moves and the culture brands touch. Instagram carousels are the product; this site is the archive, the search asset and the rate card. Design: the MAGAZIN editorial template (Instrument Serif and Amulya, black on white, section colours), used as is.
+Said *three six tea*. A social-first Indian magazine that narrates the business of brands in one voice (Gossip Girl's narrator who was in the room, with the aunties' memory, and a receipt under every line): campaigns, events, hospitality, fashion, agency people moves and the culture brands touch. Instagram carousels are the product; this site is the archive, the search asset and the rate card. Design: the MAGAZIN editorial template (Instrument Serif and Amulya, black on white, section colours), used as is.
 
 ## Map
 
@@ -9,7 +9,7 @@ HOUSE/              the house system, binding on every desk and on the build
   01-identity.md    the name, the positioning, who reads, who pays
   02-design-system.md  type, colour, layout, the carousel slide spec
   03-story-formats.md  the ten formats, the kickers, the cadence, the story file schema
-  04-voice-and-copy.md the corporate goss voice, captions, the legal checklist, banned words
+  04-voice-and-copy.md the narrator voice, captions, the legal checklist, banned words
   05-sections.md    six sections, desks, colours, the daily source list
   06-visual-direction.md  covers, receipts as images, licensed photos, video
   07-newsroom.md    the twelve desks, the two lanes, the editorial day, gates, severities

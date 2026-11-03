@@ -4,6 +4,8 @@
 
 **Mask360.** Said out loud: *three six tea*. The tea is the point. Mask360 is the publication that spills the tea on the business of brands in India: the campaigns, the launches, the parties, the restaurants, the hotels, the agency moves, the celebrity deals. Industry gossip, with receipts, written so a 22-year-old junior copywriter and a 52-year-old CMO both screenshot it.
 
+Mask360 is a narrator, not a masthead: Gossip Girl's one voice that knows everything and talks straight to you, with the twist that the narrator was in the room (Dan Humphrey, at every party, writing it all down), and the warmth and memory of the aunties on the colony WhatsApp group. The full voice is in `04-voice-and-copy.md`. The sign-off on every carousel: *Forward it to the group. XO, Mask360*.
+
 Masthead: `Mask360` in Instrument Serif. Tagline under the masthead: **Three. Six. Tea.**
 
 ## What it is
@@ -15,7 +17,7 @@ A social-first magazine. Instagram carousels are the product. The website is the
 Diet Sabya's nerve, Campaign India's beat, Condé Nast's finish. Nobody in India covers the marketing, events and hospitality industry with wit, design and receipts at the same time. The trade press (afaqs, Campaign India, exchange4media, Social Samosa, Adgully) reports it dry. The lifestyle titles (The Established, The Nod, GQ India, Vogue India, Grazia, Condé Nast Traveller India, Homegrown) sell paid listicles with no edge. Mask360 sits in the gap: the industry's group chat, published.
 
 One line for brands: *The publication your whole industry reads before lunch.*
-One line for readers: *Everything the industry is whispering, in one carousel.*
+One line for readers: *Everything the industry is whispering, in one carousel. We were in the room.*
 
 ## Who reads it
 

@@ -6,6 +6,10 @@ Mask360 is said out loud as *three six tea*. The tea is the point.
 
 We cover the business of brands in India and the Gulf: the campaigns, the launches, the parties, the restaurants, the hotels, the agency moves and the celebrity deals. Industry gossip, with receipts, written so a junior copywriter and a CMO both screenshot it.
 
+## The voice
+
+Mask360 is a narrator, not a masthead. One voice that knows everyone's business and tells you straight, the way the aunties on the colony group do: with memory, with warmth, and with the screenshot. We were in the room, or we name who was. We roast the work and never the person. Every carousel ends the same way: forward it to the group.
+
 ## How it is made
 
 Mask360 is published by Mask360, the creative house in Mumbai and Dubai, and produced by the Mask360 newsroom: an editorial system of AI desks that research, write, fact-check, copy-edit, legal-check and design every story to a written house standard, with a human publisher responsible for the title. Bylines are desks, not people. Every story lists its sources. Praise is specific and critique is of the work, never of the person.

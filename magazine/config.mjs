@@ -2,7 +2,7 @@
 export const site = {
   name: 'Mask360',
   tagline: 'Three. Six. Tea.',
-  description: 'Mask360 spills the tea on the business of brands in India: campaigns, events, hospitality, fashion, agency moves and the culture brands touch. Corporate goss, with receipts, in a carousel.',
+  description: 'Mask360 spills the tea on the business of brands in India: campaigns, events, hospitality, fashion, agency moves and the culture brands touch. The industry group chat, narrated, with receipts, in a carousel.',
   // Public URL of the magazine. Set SITE_URL in the environment to override (Netlify and Vercel set their own).
   url: process.env.SITE_URL || 'https://mask360.agency/magazine',
   short: 'mask360.agency/magazine',

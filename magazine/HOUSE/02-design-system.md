@@ -80,7 +80,7 @@ Canvas 1080 x 1350 (4:5). Safe area 72px on all sides. Seven slide types, all re
 | Receipt, number, quote, compare | paper | the number in ink serif 360px over a tea rule; the quote in italic 76px with a tea open quote; the comparison in two serif columns with a hairline |
 | Verdict | ink | "THE READ" in tea; the text in paper serif 92px (shrinks to 52), anchored to the middle; the Scorecard total bottom right in tea |
 | Item (The Edit, The Guest List, Moves) | paper | the index numeral in tea serif 96px; the item's evidence photograph in a 1px frame when one exists; name in ink serif 72px; why in Amulya 36px; "The catch" in grey 30px; PAID PARTNERSHIP pill when paid |
-| Close | ink | the spine; "Steeped by Mask360." in paper serif 104px; "Three. Six. Tea." in tea 48px; the send line in paper 36px; the handle and the site; "Presented by" when sponsored |
+| Close | ink | the spine; "Forward it to the group." in paper serif 104px; "XO, Mask360" in tea 48px; "Three. Six. Tea." in paper 36px; the handle and the site; "Presented by" when sponsored |
 
 Masthead on every slide bottom left so a screenshot still carries the brand. Page numbers on every inner slide. Type never smaller than 22px on a carousel (credits), 30px for anything a reader must read. Maximum 12 slides, minimum 5. Alt text written per slide.
 

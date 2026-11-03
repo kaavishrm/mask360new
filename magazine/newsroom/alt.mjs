@@ -21,7 +21,7 @@ export function altFor(slide, data) {
       return `Receipt slide comparing ${slide.leftLabel} (${first(slide.leftText, 8)}) with ${slide.rightLabel} (${first(slide.rightText, 8)}).`;
     case 'item': return `Item slide for ${slide.name}: ${first(slide.why, 12)}. The catch: ${first(slide.catch, 10)}.`;
     case 'verdict': return `Verdict slide headed The read: ${first(String(slide.text || '').replace(/^\s*the read:\s*/i, ''), 16)}.`;
-    case 'close': return `Black close slide reading Steeped by Mask360, Three. Six. Tea., the handle${data.sponsor ? `, presented by ${data.sponsor}` : ''} and the spine stripe.`;
+    case 'close': return `Black close slide reading Forward it to the group. XO, Mask360, Three. Six. Tea., the handle${data.sponsor ? `, presented by ${data.sponsor}` : ''} and the spine stripe.`;
     default: return `${slide.type} slide.`;
   }
 }

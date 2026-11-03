@@ -340,9 +340,9 @@ def slide_close(s, st, i, n):
     im = ground(INK()); draw = ImageDraw.Draw(im)
     spine(draw, W / 2, SAFE + 10)
     y = H * 0.36
-    y = block(draw, (SAFE, y), 'Steeped by Mask360.', 'serif', 104, 64, W - 2 * SAFE, 2, PAPER(), 1.0, -0.03) + 24
-    draw_text(draw, (SAFE, y), 'Three. Six. Tea.', font('serif', 48), TEA(), -0.02 * 48); y += 110
-    block(draw, (SAFE, y), s.get('text') or 'Send this to the one person who needs it.', 'sans', 36, 28, W - 2 * SAFE, 3, PAPER(), 1.3, -0.02)
+    y = block(draw, (SAFE, y), 'Forward it to the group.', 'serif', 104, 64, W - 2 * SAFE, 2, PAPER(), 1.0, -0.03) + 24
+    draw_text(draw, (SAFE, y), 'XO, Mask360', font('serif', 48), TEA(), -0.02 * 48); y += 110
+    block(draw, (SAFE, y), s.get('text') or 'Three. Six. Tea.', 'sans', 36, 28, W - 2 * SAFE, 3, PAPER(), 1.3, -0.02)
     presented_by(draw, st, PAPER(), H - SAFE - 100)
     draw_text(draw, (SAFE, H - SAFE - 30), st.get('handle') or '@mask360', font('sansm', 28), PAPER(), -0.02 * 28)
     sitef = font('sans', 24); site = st.get('site', 'mask360.agency/magazine')

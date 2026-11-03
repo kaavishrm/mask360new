@@ -32,7 +32,11 @@ export const FORMATS = {
 export const KICKERS = ['SPILLED', 'BREWING', 'SWEET', 'BITTER', 'PAID'];
 export const SLIDE_TYPES = ['cover', 'tea', 'receipt', 'verdict', 'item', 'close'];
 
-export const BANNED = ['elevate', 'seamless', 'journey', 'unlock', 'curated', 'bespoke', 'iconic', 'game-changer', 'game changer', 'disrupt', 'synergy', 'delve', 'tapestry', 'testament', 'vibrant', 'nestled', 'boasts', 'stunning', 'must-visit', 'hidden gem', 'foodie', 'guilty pleasure', 'treat yourself', 'netizens', 'slams', 'breaks the internet', 'slay', 'periodt', 'no cap', 'bestie', 'bussin', "it's giving", 'fam'];
+export const BANNED = ['elevate', 'seamless', 'journey', 'unlock', 'curated', 'bespoke', 'iconic', 'game-changer', 'game changer', 'disrupt', 'synergy', 'delve', 'tapestry', 'testament', 'vibrant', 'nestled', 'boasts', 'stunning', 'must-visit', 'hidden gem', 'foodie', 'guilty pleasure', 'treat yourself', 'netizens', 'slams', 'breaks the internet', 'slay', 'periodt', 'no cap', 'bestie', 'bussin', "it's giving", 'fam', 'spill the tea', 'spills the tea', 'spilling the tea'];
+// The narrator's budgets (HOUSE/04): one Hinglish word, one Gen Z phrase, two rhetorical questions per carousel; none of the first two on LinkedIn.
+export const HINGLISH = ['beta', 'arre', 'suno', 'haan', 'chalo', 'bas', 'matlab', 'sach bolu toh', 'kya baat', 'sahi hai', 'bilkul'];
+export const GENZ = ['the tea', 'receipts', 'main character', 'soft launch', 'hard launch', 'the ick', 'era', 'rent free', 'delulu', 'lowkey'];
+const countOf = (list, text) => list.reduce((n, w) => n + (String(text).match(new RegExp(`(^|[^\\w'])${w}(?=$|[^\\w])`, 'gi')) || []).length, 0);
 const BANNED_RE = BANNED.map((w) => new RegExp(`(^|[^\\w'])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?=$|[^\\w])`, 'i'));
 const EMOJI_RE = /\p{Extended_Pictographic}/gu;
 const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length;
@@ -183,6 +187,17 @@ export function lintStory(path) {
   for (const f of [title, data.dek]) if (f && EMOJI_RE.test(String(f))) E('emoji in headline or dek');
   if (/!/.test(title + ' ' + (data.dek || ''))) E('exclamation mark in headline or dek');
   if (/\b(amazing|incredible|unbelievable)\b/i.test(title + ' ' + (data.dek || ''))) W('"amazing/incredible/unbelievable" in headline or dek; allowed only when quoting');
+
+  // the narrator's budgets (warnings: the copy desk fixes them, the build does not refuse them)
+  const carousel = slides.filter((s) => ['tea', 'verdict', 'item', 'cover'].includes(s.type)).flatMap((s) => [s.pull, s.text, s.why, s.catch, s.title]).filter(Boolean).join('\n') + '\n' + cap;
+  const hing = countOf(HINGLISH, carousel), genz = countOf(GENZ, carousel), qs = (carousel.match(/\?/g) || []).length;
+  if (hing > 1) W(`${hing} Hinglish words across the carousel and caption, the budget is one`);
+  if (genz > 1) W(`${genz} Gen Z phrases across the carousel and caption, the budget is one`);
+  if (qs > 2) W(`${qs} rhetorical questions across the carousel and caption, the budget is two`);
+  if (countOf(HINGLISH, title + ' ' + (data.dek || '')) || /\?/.test(title)) W('Hinglish or a question in the headline or dek; the headline is the aunty across the table, in English, not a question');
+  if (data.linkedin && (countOf(HINGLISH, data.linkedin) || countOf(GENZ, data.linkedin))) W('Hinglish or a Gen Z phrase in the LinkedIn text; the narrator takes off the dupatta there');
+  const firstPerson = slides.filter((s) => ['tea', 'verdict', 'item'].includes(s.type)).map((s) => [s.pull, s.text, s.why, s.catch].filter(Boolean).join(' ')).join('\n');
+  if (/(^|[^\w])I(?=\s|'|$)/m.test(firstPerson)) W('first person singular on a slide; the narrator is "we"');
 
   return { errors, warnings, data, body, slug };
 }
