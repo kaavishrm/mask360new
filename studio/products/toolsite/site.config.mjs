@@ -3,8 +3,8 @@ export default {
   url: 'https://hisaabtools.in',
   contactEmail: 'hello@hisaabtools.in',
   tagline: 'Free calculators and documents for money matters in India',
-  heroText: 'Income tax, GST, EMI, SIP, HRA, gratuity, rent receipts, salary slips and GST invoices. Everything runs in your browser. No signup, no watermark, nothing stored.',
-  description: 'Free Indian finance tools: income tax calculator for FY 2026-27, GST calculator, EMI, SIP, FD and PPF calculators, HRA and gratuity calculators, plus rent receipt, salary slip and GST invoice generators. No signup.',
+  heroText: 'Income tax, in-hand salary, TDS, GST, EMI, SIP, HRA, gratuity, rent receipts, salary slips and GST invoices. Everything runs in your browser. No signup, no watermark, nothing stored.',
+  description: 'Free Indian finance tools: income tax, in-hand salary and TDS calculators for FY 2026-27, GST calculator, EMI, SIP, FD and PPF calculators, HRA and gratuity calculators, plus rent receipt, salary slip and GST invoice generators. No signup.',
   updated: '2026-11-11',
   categories: {
     tax: 'Tax',

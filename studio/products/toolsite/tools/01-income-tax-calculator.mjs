@@ -5,7 +5,7 @@ export default {
   summary: 'New vs old regime, side by side, with rebate, surcharge and cess.',
   description: 'Free income tax calculator for FY 2026-27 (AY 2027-28). Compare the new and old tax regimes side by side with standard deduction, Section 87A rebate, surcharge, marginal relief and 4% cess.',
   category: 'tax',
-  related: ['hra-calculator', 'gratuity-calculator', 'salary-slip-generator'],
+  related: ['in-hand-salary-calculator', 'tds-on-salary-calculator', 'hra-calculator', 'gratuity-calculator'],
   intro: 'Enter your salary and deductions once. The calculator works out tax under both regimes for FY 2026-27 and tells you which one leaves more in your hand.',
   tool: `
 <form id="f">

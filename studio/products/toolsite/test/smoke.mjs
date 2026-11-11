@@ -22,7 +22,7 @@ const base = `http://127.0.0.1:${port}`;
 await mkdir(shots, { recursive: true });
 
 const checks = [
-  ['/', async (p) => { const n = await p.locator('.card').count(); if (n < 11) throw new Error('home cards ' + n); }],
+  ['/', async (p) => { const n = await p.locator('.card').count(); if (n < 13) throw new Error('home cards ' + n); }],
   ['/income-tax-calculator/', async (p) => { const t = await p.locator('#out .stat b').first().innerText(); if (!t.startsWith('₹')) throw new Error(t); const rows = await p.locator('#out table tr').count(); if (rows < 8) throw new Error('rows ' + rows); return t; }],
   ['/gst-calculator/', async (p) => { await p.fill('input[name=amt]', '11800'); await p.click('label[for=m2]'); const t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹11,800.00') throw new Error(t); const base = await p.locator('#out .stat b').first().innerText(); if (base !== '₹10,000.00') throw new Error(base); return base + ' / ' + t; }],
   ['/emi-calculator/', async (p) => { const t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹26,035') throw new Error(t); return t; }],
@@ -32,8 +32,10 @@ const checks = [
   ['/gratuity-calculator/', async (p) => { const t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹2,42,308') throw new Error(t); return t; }],
   ['/hra-calculator/', async (p) => { const t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹1,56,000') throw new Error(t); return t; }],
   ['/rent-receipt-generator/', async (p) => { await p.fill('input[name=tenant]', 'Rahul Sharma'); await p.fill('input[name=landlord]', 'Sunita Verma'); await p.click('#go'); const n = await p.locator('.receipt').count(); if (n !== 12) throw new Error('receipts ' + n); const w = await p.locator('.receipt').first().innerText(); if (!w.includes('Eighteen Thousand')) throw new Error(w.slice(0, 200)); return n + ' receipts'; }],
-  ['/salary-slip-generator/', async (p) => { const w = await p.locator('#sheet').innerText(); if (!w.includes('₹68,000.00')) throw new Error(w.slice(0, 300)); return 'net 68,000'; }],
+  ['/salary-slip-generator/', async (p) => { const w = await p.locator('#sheet').innerText(); if (!w.includes('₹66,800.00')) throw new Error(w.slice(0, 300)); return 'net 66,800'; }],
   ['/gst-invoice-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('₹29,500.00') || !w.includes('CGST')) throw new Error(w.slice(0, 300)); await p.selectOption('#pos', '07'); w = await p.locator('#sheet').innerText(); if (!w.includes('IGST') || !w.includes('₹4,500.00')) throw new Error(w.slice(0, 300)); return 'intra + inter ok'; }],
+  ['/in-hand-salary-calculator/', async (p) => { let t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹90,200') throw new Error('MH full ' + t); await p.selectOption('select[name=state]', 'NONE'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹90,400') throw new Error('no PT ' + t); await p.selectOption('select[name=pf]', 'cap'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹94,000') throw new Error('cap ' + t); await p.fill('input[name=ctc]', '2400000'); await p.selectOption('select[name=pf]', 'full'); await p.selectOption('select[name=state]', 'KA'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹1,58,721') throw new Error('24L KA ' + t); return 'MH 90,200 / none 90,400 / cap 94,000 / 24L 1,58,721'; }],
+  ['/tds-on-salary-calculator/', async (p) => { let t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹8,125') throw new Error('base ' + t); await p.fill('input[name=done]', '20000'); await p.fill('input[name=months]', '10'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹7,750') throw new Error('mid-year ' + t); await p.selectOption('select[name=regime]', 'old'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹18,982') throw new Error('old ' + t); return 'new 8,125 / mid-year 7,750 / old 18,982'; }],
   ['/about/', async () => 'ok'], ['/privacy/', async () => 'ok'], ['/terms/', async () => 'ok'],
 ];
 
@@ -59,6 +61,10 @@ const mp = await mob.newPage();
 await mp.goto(base + '/gst-invoice-generator/');
 const overflow = await mp.evaluate(() => { const w = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter((el) => el.getBoundingClientRect().right > w + 1).map((el) => el.tagName + '.' + el.className).slice(0, 5); return document.documentElement.scrollWidth > w + 1 ? bad : null; });
 if (overflow) { failed++; console.log('FAIL mobile overflow on invoice page', overflow); } else console.log('PASS mobile no horizontal overflow');
+await mp.goto(base + '/in-hand-salary-calculator/');
+const overflow2 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+if (overflow2) { failed++; console.log('FAIL mobile overflow on in-hand salary page'); } else console.log('PASS mobile no horizontal overflow on in-hand salary page');
+await mp.screenshot({ path: path.join(shots, '_mobile_inhand.png'), fullPage: false });
 await mp.goto(base + '/rent-receipt-generator/'); await mp.fill('input[name=tenant]', 'A'); await mp.fill('input[name=landlord]', 'B'); await mp.click('#go');
 await mp.emulateMedia({ media: 'print' });
 const printOk = await mp.evaluate(() => getComputedStyle(document.querySelector('.nav')).display === 'none' && getComputedStyle(document.querySelector('#sheet')).display !== 'none' && document.querySelectorAll('.receipt').length === 12);
