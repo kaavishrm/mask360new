@@ -1,0 +1,515 @@
+<title>Mask360 OS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: a chrome strip with the two cities' clocks, then the floor (the agency's desks in the order work flows, lead to cash) beside a rail of what needs the founder. */
+:root{
+  --bg:#ffffff; --paper:#f3f2ee; --card:#f3f2ee; --card-hi:#ffffff; --ink:#0a0a0a;
+  --mute:rgba(10,10,10,.56); --faint:rgba(10,10,10,.34); --hair:rgba(10,10,10,.12);
+  --flame:#f53901; --flame-soft:rgba(245,57,1,.14); --alert:#c4122f; --alert-soft:rgba(196,18,47,.1);
+  --display:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --mono:'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --r:20px; --ri:12px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0a0a0a; --paper:#111111; --card:#161616; --card-hi:#1f1f1f; --ink:#f5f4f0;
+  --mute:rgba(245,244,240,.62); --faint:rgba(245,244,240,.36); --hair:rgba(245,244,240,.14);
+  --flame:#ff4d17; --flame-soft:rgba(255,77,23,.18); --alert:#ff5a76; --alert-soft:rgba(255,90,118,.14);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0a0a0a; --paper:#111111; --card:#161616; --card-hi:#1f1f1f; --ink:#f5f4f0;
+  --mute:rgba(245,244,240,.62); --faint:rgba(245,244,240,.36); --hair:rgba(245,244,240,.14);
+  --flame:#ff4d17; --flame-soft:rgba(255,77,23,.18); --alert:#ff5a76; --alert-soft:rgba(255,90,118,.14);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--display);font-weight:400;font-size:14px;line-height:1.45;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 40px;
+  font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--flame);outline-offset:2px}
+.micro{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:400}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:0}
+
+/* chrome */
+.chrome{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-block:14px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.mark{display:flex;align-items:baseline;gap:10px}
+.mark b{font-weight:700;font-size:17px;letter-spacing:-.02em}
+.mark span{color:var(--mute);font-size:13px}
+.clocks{display:flex;gap:18px}
+.clock{display:flex;gap:8px;align-items:baseline}
+.clock .mono{font-size:13px}
+.state{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--hair);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:500;white-space:nowrap}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--faint)}
+.pill.live .dot{background:var(--flame);animation:breathe 2.4s ease-in-out infinite}
+.pill.mode{border-color:var(--ink)}
+.iconbtn{border:1px solid var(--hair);background:transparent;border-radius:999px;padding:5px 11px;font-size:12px;cursor:pointer}
+.iconbtn:hover{border-color:var(--ink)}
+
+/* head */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-block:28px 18px}
+.head h1{margin:0;font-weight:700;font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;line-height:.95;text-wrap:balance}
+.head h1 em{font-style:italic;color:var(--flame);font-weight:500}
+.head p{margin:8px 0 0;color:var(--mute);max-width:58ch}
+.stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--hair);border-radius:var(--ri);overflow:hidden}
+.stat{padding:10px 14px;border-right:1px solid var(--hair);min-width:96px}
+.stat:last-child{border-right:0}
+.stat .v{font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.stat.hot .v{color:var(--flame)}
+.stat.red .v{color:var(--alert)}
+
+.banner{display:none;margin-bottom:16px;border:1px solid var(--hair);border-left:3px solid var(--flame);border-radius:var(--ri);padding:12px 14px;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.banner.show{display:flex}
+.banner.warn{border-left-color:var(--alert)}
+.banner p{margin:0;max-width:80ch}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:999px;padding:8px 14px;font-weight:500;cursor:pointer;font-size:13px}
+
+/* grid */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start}
+@media (max-width:1080px){.layout{grid-template-columns:minmax(0,1fr)}}
+.floor{display:grid;gap:12px;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:14px;align-items:center;color:var(--mute);font-size:12px;padding-bottom:4px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.lane-label{display:flex;justify-content:space-between;align-items:baseline;padding:10px 2px 0}
+.flow{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:12px;align-items:start}
+.support{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:12px;align-items:start}
+
+.desk{background:var(--card);border-radius:var(--r);padding:14px 10px 10px;min-width:0;display:flex;flex-direction:column;gap:6px;border:1px solid transparent;transition:border-color .4s}
+.desk.busy{border-color:var(--flame-soft)}
+.desk-h{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:0 6px 6px;border-bottom:1px solid var(--hair)}
+.desk-h .t{display:flex;gap:8px;align-items:baseline}
+.desk-h .n{font-family:var(--mono);font-size:11px;color:var(--faint)}
+.desk-h h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.desk-h .c{font-size:12px;color:var(--mute)}
+.command .agents{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px 12px}
+.agents{display:grid;gap:2px}
+
+.agent{display:grid;grid-template-columns:minmax(0,1fr) auto 34px;align-items:center;gap:10px;width:100%;text-align:left;background:transparent;border:0;border-radius:10px;padding:7px 6px;cursor:pointer}
+.agent:hover{background:var(--card-hi)}
+.agent[aria-pressed="true"]{background:var(--card-hi);box-shadow:inset 0 0 0 1px var(--ink)}
+.agent .nm{font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--mute)}
+.agent.on .nm{color:var(--ink)}
+.agent .ago{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:right}
+.agent.flash{animation:flash 1.4s ease-out}
+
+.pips{display:flex;gap:4px}
+.pip{width:11px;height:11px;border-radius:3px;border:1px solid var(--faint);background:transparent;display:inline-block;flex:none}
+.pip.s-running,.pip.s-queued{background:var(--flame);border-color:var(--flame);animation:pulse 1.6s ease-out infinite}
+.pip.s-done,.pip.s-passed{background:var(--ink);border-color:var(--ink)}
+.pip.s-fixed{border:2px solid var(--flame)}
+.pip.s-blocked{border-color:var(--ink);background:repeating-linear-gradient(135deg,var(--ink) 0 2px,transparent 2px 4px)}
+.pip.s-skipped{background:var(--hair);border-color:transparent}
+.pip.s-failed,.pip.s-killed{background:var(--alert);border-color:var(--alert)}
+
+/* rail */
+.rail{display:grid;gap:12px;min-width:0;position:sticky;top:calc(env(safe-area-inset-top, 0px) + 64px);max-height:calc(100vh - 80px);overflow:auto;padding-bottom:8px}
+@media (max-width:1080px){.rail{position:static;max-height:none;overflow:visible}}
+.panel{border:1px solid var(--hair);border-radius:var(--r);padding:14px 16px;min-width:0}
+.panel h2{margin:0 0 10px;display:flex;justify-content:space-between;align-items:baseline}
+.detail .who{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.detail .job{color:var(--mute);margin:4px 0 12px}
+.role{display:grid;grid-template-columns:62px minmax(0,1fr);gap:4px 10px;padding:9px 0;border-top:1px solid var(--hair)}
+.role .rl{display:flex;align-items:center;gap:7px;font-weight:600;font-size:13px}
+.role .tx{color:var(--mute);font-size:13px;overflow-wrap:anywhere}
+.role .st{font-size:12px;color:var(--ink);font-weight:500}
+.empty{color:var(--mute);font-size:13px;margin:0}
+.list{list-style:none;margin:0;padding:0;display:grid}
+.list li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;padding:8px 0;border-top:1px solid var(--hair);font-size:13px}
+.list li:first-child{border-top:0}
+.list .k{font-family:var(--mono);font-size:11.5px;color:var(--mute);white-space:nowrap}
+.list .k.code{color:var(--flame);font-weight:700}
+.list .b{overflow-wrap:anywhere}
+.list .s{display:block;color:var(--mute);font-size:12px}
+.feed li.esc{box-shadow:inset 2px 0 0 var(--alert);padding-left:8px}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--hair);border-radius:999px;padding:1px 7px;margin-right:6px;color:var(--mute)}
+.tag.think{border-color:var(--faint)}
+.tag.verify{border-color:var(--ink);color:var(--ink)}
+.tag.do{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tag.approval{border-color:var(--flame);color:var(--flame)}
+.tag.escalation{border-color:var(--alert);color:var(--alert)}
+.how{margin:10px 0 0;color:var(--mute);font-size:12px}
+.how .mono{color:var(--ink)}
+.blocked li{grid-template-columns:minmax(0,1fr)}
+.blocked b{font-weight:600}
+
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--flame-soft)}70%{box-shadow:0 0 0 6px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes flash{0%{background:var(--flame-soft)}100%{background:transparent}}
+@media (prefers-reduced-motion: reduce){.pip,.pill .dot,.agent.flash{animation:none!important}}
+@media (max-width:520px){.clocks{display:none}.stat{min-width:0;flex:1 1 30%}.stat .v{font-size:19px}}
+</style>
+
+<header class="chrome">
+  <div class="mark"><b>Mask360 OS</b><span>the floor</span></div>
+  <div class="clocks" aria-label="Local times">
+    <div class="clock"><span class="micro">Mumbai</span><span class="mono" id="clk-mum">--:--</span></div>
+    <div class="clock"><span class="micro">Dubai</span><span class="mono" id="clk-dxb">--:--</span></div>
+  </div>
+  <div class="state">
+    <span class="pill mode" id="mode" title="Shadow: everything outward is drafted and waits for your yes">Mode --</span>
+    <span class="pill" id="sync"><span class="dot"></span><span id="sync-t">Connecting</span></span>
+    <button class="iconbtn" id="refresh" type="button">Refresh</button>
+  </div>
+</header>
+
+<section class="head">
+  <div>
+    <h1>59 agents. Each one <em>thinks, checks, then acts.</em></h1>
+    <p>Every agent below is a cluster of three: a thinker writes the plan, a verifier tries to break it, and a doer acts only on a plan that passed. The squares show each role's latest state in the last 24 hours.</p>
+  </div>
+  <div class="stats" id="stats" aria-live="polite">
+    <div class="stat hot"><div class="micro">Needs you</div><div class="v" id="st-approvals">0</div></div>
+    <div class="stat red"><div class="micro">Red</div><div class="v" id="st-red">0</div></div>
+    <div class="stat"><div class="micro">Steps today</div><div class="v" id="st-steps">0</div></div>
+    <div class="stat"><div class="micro">Live deals</div><div class="v" id="st-deals">0</div></div>
+    <div class="stat"><div class="micro">Gone quiet</div><div class="v" id="st-stale">0</div></div>
+    <div class="stat"><div class="micro">Prime targets</div><div class="v" id="st-prime">0</div></div>
+  </div>
+</section>
+
+<div class="banner" id="banner" role="status"><p id="banner-t"></p><button class="btn" id="banner-b" type="button" hidden>Allow</button></div>
+
+<div class="layout">
+  <main class="floor" id="floor">
+    <div class="legend" aria-label="Legend">
+      <span><i class="pip"></i>idle</span>
+      <span><i class="pip s-running"></i>working</span>
+      <span><i class="pip s-done"></i>done or passed</span>
+      <span><i class="pip s-fixed"></i>sent back to rethink</span>
+      <span><i class="pip s-blocked"></i>waiting</span>
+      <span><i class="pip s-killed"></i>stopped</span>
+      <span class="mono">T V D = think, verify, do</span>
+    </div>
+    <div id="command"></div>
+    <div class="lane-label"><span class="micro">Lead to cash, in order</span><span class="micro" id="flow-count"></span></div>
+    <div class="flow" id="flow"></div>
+    <div class="lane-label"><span class="micro">Behind the floor</span></div>
+    <div class="support" id="support"></div>
+  </main>
+
+  <aside class="rail">
+    <section class="panel detail" id="detail" aria-live="polite"></section>
+    <section class="panel">
+      <h2><span class="micro">Needs you</span><span class="micro" id="ap-n"></span></h2>
+      <ul class="list" id="approvals"></ul>
+      <p class="how">Approve by replying to the brief email: <span class="mono">yes A0012</span>, <span class="mono">no A0013</span>, <span class="mono">change A0014: ...</span></p>
+    </section>
+    <section class="panel">
+      <h2><span class="micro">Live feed</span><span class="micro">last 40</span></h2>
+      <ul class="list feed" id="feed"></ul>
+    </section>
+    <section class="panel">
+      <h2><span class="micro">Routines</span></h2>
+      <ul class="list" id="runs"></ul>
+    </section>
+    <section class="panel">
+      <h2><span class="micro">Blocked</span></h2>
+      <ul class="list blocked" id="blocked"></ul>
+    </section>
+  </aside>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var SERVER = "Supabase", TOOL = "execute_sql", PROJECT = "fqhmszoclzfwzttvrwng", EVERY = 30000;
+  var QUERY = "with o as (select id, mode, settings from os.orgs where slug = 'mask360') select json_build_object(" +
+    "'at', now(), 'mode', (select mode from o), 'blocked', (select settings->'blocked' from o)," +
+    "'agents', (select coalesce(json_agg(json_build_object('n', v.name, 'd', v.desk, 'do', v.desk_order, 'p', v.position, 'job', v.job," +
+    " 'ts', v.think_status, 'tt', left(v.think_title, 140), 'ta', v.think_at, 'vs', v.verify_status, 'vv', left(v.verify_verdict, 220), 'va', v.verify_at," +
+    " 'ds', v.do_status, 'dout', left(v.do_output, 220), 'da', v.do_at) order by v.desk_order, v.position), '[]'::json) from os.v_agent_live v, o where v.org_id = o.id)," +
+    "'feed', (select coalesce(json_agg(f), '[]'::json) from (select at, kind, agent, detail_kind, left(text, 160) as text, status from os.v_feed v, o where v.org_id = o.id order by at desc limit 40) f)," +
+    "'approvals', (select coalesce(json_agg(a), '[]'::json) from (select code, action, agent, left(title, 120) as title, requested_at from os.v_approvals_pending v, o where v.org_id = o.id limit 25) a)," +
+    "'runs', (select coalesce(json_agg(r), '[]'::json) from (select routine, status, started_at, finished_at, left(summary, 160) as summary from os.runs r, o where r.org_id = o.id order by started_at desc limit 8) r)," +
+    "'counts', (select json_build_object('accounts', (select count(*) from os.accounts a where a.org_id = o.id)," +
+    " 'prime', (select count(*) from os.accounts a where a.org_id = o.id and a.tier = 'Prime' and a.status = 'target')," +
+    " 'clients', (select count(*) from os.accounts a where a.org_id = o.id and a.status = 'client')," +
+    " 'deals', (select count(*) from os.deals d where d.org_id = o.id and d.stage not in ('won','lost'))," +
+    " 'stale', (select count(*) from os.v_stale_deals s where s.org_id = o.id)," +
+    " 'approvals', (select count(*) from os.approvals x where x.org_id = o.id and x.status = 'pending')," +
+    " 'red', (select count(*) from os.escalations e where e.org_id = o.id and e.status <> 'resolved' and e.severity = 'red')," +
+    " 'overdue', (select count(*) from os.v_ar_aging g where g.org_id = o.id and g.days_overdue > 0)," +
+    " 'steps_today', (select count(*) from os.steps s where s.org_id = o.id and s.started_at > date_trunc('day', now() at time zone 'Asia/Kolkata') at time zone 'Asia/Kolkata')) from o)" +
+    ") as snapshot;";
+  var INPUT = {project_id: PROJECT, query: QUERY};
+
+  // The system's own structure (from the repository), so the floor draws before live data arrives.
+  var DESKS = [
+    ["Command","support0",[["os-chief","Chief of staff of the Agency OS"],["os-gatekeeper","Turns Kaavish's replies into approved actions"],["os-auditor","Checks every outward word before it leaves"]]],
+    ["Inbox","flow",[["os-inbox","Triages Kaavish's Gmail"],["os-calendar","Owns Kaavish's Google Calendar"]]],
+    ["Hunt","flow",[["os-scout","Finds buying signals"],["os-scorer","Scores and tiers accounts"],["os-finder","Finds the right people at a target account"],["os-enricher","Turns found people into contactable people"]]],
+    ["Reach","flow",[["os-apollo","Runs Apollo outreach"],["os-linkedin","Runs LinkedIn outreach through Aimfox"],["os-whatsapp","Writes personal WhatsApp messages as tap-to-send drafts"],["os-rooms","Fills rooms"],["os-consultants","Works pitch consultants, RFPs and tenders"],["os-referrals","Runs the referral engine"]]],
+    ["Convert","flow",[["os-responder","Answers every reply and inbound lead, fast"],["os-qualifier","Qualifies every live lead"],["os-booker","Books discovery calls"],["os-dossier","Prepares Kaavish for every external meeting"],["os-diagnostic","Sells the paid diagnostic"],["os-proposer","Writes proposals"],["os-pricer","Prices every deal from the rate card"],["os-negotiator","Handles pushback on price and terms"],["os-pitch","Runs pitches once Kaavish says go"]]],
+    ["Contract","flow",[["os-contracts","Drafts, sends and tracks paper"],["os-empanel","Gets Mask360 registered as a vendor"]]],
+    ["Deliver","flow",[["os-onboarder","Onboards a new client in 14 days"],["os-planner","Plans each client's content"],["os-copywriter","Writes client copy"],["os-designer","Produces and briefs visuals"],["os-publisher","Publishes approved content"],["os-community","Manages client community"],["os-performance","Runs paid media"],["os-reporter","Builds client reports"],["os-pr","Runs PR for clients"],["os-creators","Runs creator work"],["os-producer","Produces shoots and films"],["os-events","Produces experiential"],["os-guestlist","Owns the Circle and guest lists"],["os-vendors","Manages suppliers"]]],
+    ["Client","flow",[["os-status","Keeps every client informed"],["os-chaser","Chases client approvals"],["os-ideas","Sends one proactive idea a month"],["os-health","Scores client health weekly"],["os-scope","Guards scope"],["os-qbr","Runs quarterly outcome reviews"],["os-growth","Grows existing accounts"]]],
+    ["Money","flow",[["os-invoicer","Raises invoices"],["os-collector","Collects money"],["os-payables","Prepares what Mask360 owes"],["os-bookkeeper","Keeps the books true"],["os-tax","Keeps the statutory calendar"],["os-cfo","The numbers"]]],
+    ["People","support",[["os-capacity","Matches work to people"],["os-recruiter","Runs hiring"]]],
+    ["Agency","support",[["os-founder","Builds Kaavish's visibility"],["os-cases","Turns finished work into proof"],["os-awards","Plans award entries"],["os-admin","Keeps the company running"]]]
+  ];
+
+  var snap = null, selected = "os-chief", lastAt = {}, updatedAt = 0, polling = false, pollTimer = null, mcp = null, unwatch = null;
+  var $ = function(id){ return document.getElementById(id); };
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function short(n){ return String(n || "").replace(/^os-/, ""); }
+  function ms(ts){ var t = ts ? Date.parse(ts) : NaN; return isNaN(t) ? 0 : t; }
+  function ago(ts){
+    var t = ms(ts); if (!t) return "";
+    var s = Math.max(0, Math.round((Date.now() - t) / 1000));
+    if (s < 60) return "now"; if (s < 3600) return Math.round(s / 60) + "m"; if (s < 86400) return Math.round(s / 3600) + "h"; return Math.round(s / 86400) + "d";
+  }
+  var fmtTime = new Intl.DateTimeFormat("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+  var fmtDay = new Intl.DateTimeFormat("en-GB", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+  function when(ts){ var t = ms(ts); if (!t) return ""; return (Date.now() - t < 86400000 ? fmtTime : fmtDay).format(new Date(t)); }
+
+  function tickClocks(){
+    var now = new Date();
+    $("clk-mum").textContent = new Intl.DateTimeFormat("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"}).format(now);
+    $("clk-dxb").textContent = new Intl.DateTimeFormat("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Dubai"}).format(now);
+    if (updatedAt) {
+      var s = Math.round((Date.now() - updatedAt) / 1000);
+      $("sync-t").textContent = "Live, updated " + (s < 5 ? "just now" : s < 60 ? s + "s ago" : Math.round(s / 60) + "m ago");
+    }
+  }
+
+  function agentMap(){
+    var m = {};
+    if (snap && snap.agents) snap.agents.forEach(function(a){ m[a.n] = a; });
+    return m;
+  }
+  var ROLE_WORD = {running:"working", queued:"queued", done:"done", passed:"passed", fixed:"sent back", failed:"failed", killed:"stopped", blocked:"waiting", skipped:"skipped"};
+  function pip(status, label){ var p = el("i", "pip" + (status ? " s-" + status : "")); p.title = label + ": " + (status ? (ROLE_WORD[status] || status) : "idle"); return p; }
+
+  function renderFloor(){
+    var live = agentMap(), totalOn = 0;
+    var targets = {flow: $("flow"), support: $("support"), support0: $("command")};
+    Object.keys(targets).forEach(function(k){ targets[k].textContent = ""; });
+    var seq = 0;
+    DESKS.forEach(function(desk){
+      var name = desk[0], lane = desk[1], agents = desk[2];
+      var card = el("section", "desk" + (lane === "support0" ? " command" : ""));
+      card.setAttribute("aria-label", name + " desk");
+      var h = el("div", "desk-h"), t = el("div", "t");
+      if (lane === "flow") { seq += 1; t.appendChild(el("span", "n", (seq < 10 ? "0" : "") + seq)); }
+      t.appendChild(el("h3", null, name));
+      h.appendChild(t);
+      var count = el("span", "c"); h.appendChild(count);
+      card.appendChild(h);
+      var list = el("div", "agents"), on = 0;
+      agents.forEach(function(a){
+        var d = live[a[0]] || {}, isOn = !!(d.ta || d.va || d.da);
+        if (isOn) on += 1;
+        var b = el("button", "agent" + (isOn ? " on" : ""));
+        b.type = "button";
+        b.setAttribute("aria-pressed", String(selected === a[0]));
+        b.setAttribute("aria-label", short(a[0]) + ", think " + (d.ts || "idle") + ", verify " + (d.vs || "idle") + ", do " + (d.ds || "idle"));
+        b.appendChild(el("span", "nm", short(a[0])));
+        var pips = el("span", "pips"); pips.setAttribute("aria-hidden", "true");
+        pips.appendChild(pip(d.ts, "Think")); pips.appendChild(pip(d.vs, "Verify")); pips.appendChild(pip(d.ds, "Do"));
+        b.appendChild(pips);
+        var last = d.da || d.va || d.ta;
+        b.appendChild(el("span", "ago", ago(last)));
+        var key = ms(last);
+        if (key && lastAt[a[0]] && key > lastAt[a[0]]) b.classList.add("flash");
+        if (key) lastAt[a[0]] = key;
+        b.addEventListener("click", function(){ selected = a[0]; renderFloor(); renderDetail(); });
+        list.appendChild(b);
+      });
+      if (d_running(agents, live)) card.classList.add("busy");
+      count.textContent = on ? on + " of " + agents.length + " active" : agents.length + " agents";
+      totalOn += on;
+      card.appendChild(list);
+      targets[lane].appendChild(card);
+    });
+    $("flow-count").textContent = totalOn ? totalOn + " agents active in 24h" : "all quiet in the last 24h";
+  }
+  function d_running(agents, live){
+    return agents.some(function(a){ var d = live[a[0]] || {}; return [d.ts, d.vs, d.ds].some(function(s){ return s === "running" || s === "queued"; }); });
+  }
+
+  function jobOf(name){
+    var live = agentMap()[name];
+    if (live && live.job) return live.job;
+    for (var i = 0; i < DESKS.length; i++) for (var j = 0; j < DESKS[i][2].length; j++) if (DESKS[i][2][j][0] === name) return DESKS[i][2][j][1];
+    return "";
+  }
+  function deskOf(name){ for (var i = 0; i < DESKS.length; i++) for (var j = 0; j < DESKS[i][2].length; j++) if (DESKS[i][2][j][0] === name) return DESKS[i][0]; return ""; }
+
+  function renderDetail(){
+    var box = $("detail"), d = agentMap()[selected] || {};
+    box.textContent = "";
+    var h = el("h2"); h.appendChild(el("span", "micro", deskOf(selected) + " desk")); h.appendChild(el("span", "micro", "selected"));
+    box.appendChild(h);
+    box.appendChild(el("div", "who", short(selected)));
+    box.appendChild(el("p", "job", jobOf(selected)));
+    [["Think", d.ts, d.tt, d.ta, "Writes the plan, changes nothing"], ["Verify", d.vs, d.vv, d.va, "Tries to refute the plan"], ["Do", d.ds, d.dout, d.da, "Acts only on a plan that passed"]].forEach(function(r){
+      var row = el("div", "role"), lab = el("div", "rl");
+      lab.appendChild(pip(r[1], r[0])); lab.appendChild(document.createTextNode(r[0]));
+      row.appendChild(lab);
+      var body = el("div");
+      body.appendChild(el("div", "st", (r[1] ? (ROLE_WORD[r[1]] || r[1]) : "idle") + (r[3] ? "  ·  " + when(r[3]) : "")));
+      body.appendChild(el("div", "tx", r[2] || r[4]));
+      row.appendChild(body);
+      box.appendChild(row);
+    });
+  }
+
+  function renderRail(){
+    var ap = $("approvals"), feed = $("feed"), runs = $("runs"), blocked = $("blocked");
+    [ap, feed, runs, blocked].forEach(function(x){ x.textContent = ""; });
+    var s = snap || {};
+    var apps = s.approvals || [];
+    $("ap-n").textContent = apps.length ? apps.length + " waiting" : "";
+    if (!apps.length) ap.appendChild(emptyLi(snap ? "Nothing is waiting for you." : "Waiting for live data."));
+    apps.forEach(function(a){
+      var li = el("li"); li.appendChild(el("span", "k code", a.code));
+      var b = el("span", "b", a.title); b.appendChild(el("span", "s", short(a.agent) + "  ·  " + a.action + "  ·  " + ago(a.requested_at)));
+      li.appendChild(b); ap.appendChild(li);
+    });
+    var items = s.feed || [];
+    if (!items.length) feed.appendChild(emptyLi(snap ? "Nothing has run in the last 24 hours." : "Waiting for live data."));
+    items.forEach(function(f){
+      var li = el("li", f.kind === "escalation" ? "esc" : null);
+      li.appendChild(el("span", "k", when(f.at)));
+      var b = el("span", "b");
+      var tagWord = f.kind === "step" ? f.detail_kind : f.kind;
+      b.appendChild(el("span", "tag " + tagWord, tagWord));
+      b.appendChild(document.createTextNode(f.text || ""));
+      b.appendChild(el("span", "s", short(f.agent) + (f.status ? "  ·  " + f.status : "")));
+      li.appendChild(b); feed.appendChild(li);
+    });
+    var rs = s.runs || [];
+    if (!rs.length) runs.appendChild(emptyLi(snap ? "No routine has run yet." : "Waiting for live data."));
+    rs.forEach(function(r){
+      var li = el("li"); li.appendChild(el("span", "k", when(r.started_at)));
+      var b = el("span", "b"); b.appendChild(el("span", "tag", r.status)); b.appendChild(document.createTextNode(r.routine));
+      if (r.summary) b.appendChild(el("span", "s", r.summary));
+      li.appendChild(b); runs.appendChild(li);
+    });
+    var bl = s.blocked || {};
+    var keys = Object.keys(bl);
+    if (!keys.length) blocked.appendChild(emptyLi(snap ? "Nothing is blocked." : "Waiting for live data."));
+    keys.forEach(function(k){
+      var li = el("li"), b = el("span", "b"); b.appendChild(el("b", null, k.replace(/_/g, " ")));
+      b.appendChild(el("span", "s", String(bl[k]))); li.appendChild(b); blocked.appendChild(li);
+    });
+  }
+  function emptyLi(t){ var li = el("li"); li.style.gridTemplateColumns = "1fr"; li.appendChild(el("p", "empty", t)); return li; }
+
+  function renderStats(){
+    var c = (snap && snap.counts) || {};
+    $("st-approvals").textContent = c.approvals || 0;
+    $("st-red").textContent = c.red || 0;
+    $("st-steps").textContent = c.steps_today || 0;
+    $("st-deals").textContent = c.deals || 0;
+    $("st-stale").textContent = c.stale || 0;
+    $("st-prime").textContent = c.prime || 0;
+    var mode = snap && snap.mode;
+    $("mode").textContent = mode ? "Mode " + mode : "Mode --";
+  }
+
+  function renderAll(){ renderStats(); renderFloor(); renderDetail(); renderRail(); }
+
+  function banner(text, kind, button){
+    var b = $("banner"); b.className = "banner" + (text ? " show" : "") + (kind === "warn" ? " warn" : "");
+    $("banner-t").textContent = text || "";
+    var btn = $("banner-b"); btn.hidden = !button; if (button) btn.textContent = button;
+  }
+  function setSync(live, text){ var s = $("sync"); s.className = "pill" + (live ? " live" : ""); if (text) $("sync-t").textContent = text; }
+
+  function parse(result){
+    var p = result && result.payload, s = null;
+    if (typeof p === "string") s = p;
+    else if (p && typeof p.result === "string") s = p.result;
+    if (!s && result && result.content) {
+      var t = result.content.filter(function(c){ return c.type === "text"; })[0];
+      if (t) { s = t.text; try { var j = JSON.parse(s); if (j && typeof j.result === "string") s = j.result; } catch (e) {} }
+    }
+    if (!s) throw new Error("The database answered with nothing.");
+    var m = s.match(/<untrusted-data-[^>]*>([\s\S]*?)<\/untrusted-data-/);
+    var body = (m ? m[1] : s).trim();
+    var rows = JSON.parse(body.slice(body.indexOf("["), body.lastIndexOf("]") + 1));
+    if (!rows.length || !rows[0].snapshot) throw new Error("The snapshot was empty.");
+    return rows[0].snapshot;
+  }
+
+  function onData(result){
+    try { snap = parse(result); }
+    catch (e) { banner("The live data came back in a shape this page does not understand: " + e.message, "warn"); return; }
+    updatedAt = (result && result.cache && result.cache.storedAt) || Date.now();
+    banner(""); setSync(true); renderAll(); tickClocks();
+  }
+
+  function retract(msg, button){ snap = null; updatedAt = 0; setSync(false, "Not connected"); banner(msg, "warn", button); renderAll(); }
+
+  function onError(err){
+    var code = err && err.code;
+    switch (code) {
+      case "needs_reauth": retract("Your Supabase connector needs reconnecting. Reconnect Supabase in claude.ai Settings, Connectors."); break;
+      case "server_not_connected": retract("This page reads the OS database through your Supabase connector. Add Supabase in claude.ai Settings, Connectors."); break;
+      case "selection_required": retract("You have more than one Supabase connector. Choose which one this page should use when claude.ai asks."); break;
+      case "server_not_found": retract("The Supabase connector this page used no longer exists. Add it again in claude.ai Settings, Connectors."); break;
+      case "blocked_by_policy": retract("Your organisation's policy blocks this page from reading Supabase."); break;
+      case "approval_required": case "not_in_manifest": case "consent_required":
+        retract("This page needs your permission to read the OS database through Supabase. It only runs one read query every 30 seconds.", "Allow"); break;
+      case "not_granted": case "capability_disabled": case "capability_removed":
+        retract("Live data is not available in this view. Open the page in claude.ai to see the floor live."); break;
+      case "bad_request":
+        if (!polling) { startPolling(); return; }
+        setSync(!!snap, snap ? null : "Not connected"); banner("The page could not ask the database: " + (err.message || "bad request"), "warn"); break;
+      case "tool_error":
+        setSync(!!snap); banner("The database refused the query: " + (err.message || "tool error") + (snap ? " Showing the last good data." : ""), "warn"); break;
+      default:
+        setSync(!!snap, snap ? null : "Waiting"); banner("Supabase did not answer just now" + (snap ? ". Showing the last good data, it will retry." : ". It will retry."), null);
+    }
+  }
+
+  function poll(){
+    clearTimeout(pollTimer);
+    if (!mcp) return;
+    mcp.callTool(SERVER, TOOL, INPUT, {cache:false}).then(onData, onError).then(function(){
+      if (polling && document.visibilityState === "visible") pollTimer = setTimeout(poll, EVERY);
+    });
+  }
+  function startPolling(){
+    polling = true;
+    if (unwatch) { try { unwatch(); } catch (e) {} unwatch = null; }
+    poll();
+  }
+
+  $("refresh").addEventListener("click", function(){
+    if (!mcp) return;
+    mcp.callTool(SERVER, TOOL, INPUT, {cache:false}).then(onData, onError);
+  });
+  $("banner-b").addEventListener("click", function(){
+    if (!mcp) return;
+    banner("Asking for permission...", null);
+    mcp.callTool(SERVER, TOOL, INPUT, {cache:false}).then(function(r){ onData(r); if (!polling && !unwatch) startPolling(); }, onError);
+  });
+  document.addEventListener("visibilitychange", function(){ if (polling && document.visibilityState === "visible") poll(); });
+
+  renderAll(); tickClocks(); setInterval(tickClocks, 1000);
+  setInterval(function(){ if (snap) renderFloor(); }, 30000);
+
+  if (!window.claude || typeof window.claude.use !== "function") {
+    setSync(false, "Offline");
+    banner("This copy is not connected. Open Mask360 OS in claude.ai to see the floor live.", "warn");
+    return;
+  }
+  window.claude.use("mcp").then(function(ns){
+    if (!ns) { setSync(false, "Offline"); banner("Live data is not available in this view. Open the page in claude.ai with your Supabase connector to see the floor live.", "warn"); return; }
+    mcp = ns;
+    try {
+      unwatch = mcp.watchTool(SERVER, TOOL, INPUT, function(ev){
+        if (ev.type === "data") onData(ev.result); else onError(ev.error);
+      }, {refetchInterval: EVERY, cache: {staleTime: 20000, gcTime: 300000}});
+    } catch (e) { startPolling(); }
+  });
+})();
+</script>
