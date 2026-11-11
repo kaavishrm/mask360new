@@ -2,6 +2,8 @@
 
 Last run: 2026-11-11 (initial build, interactive session)
 
+Pull request for the studio branch: #3, open as a draft. Do not open another; push to the branch and the PR updates. The scheduled task is named "Studio operator" and fires daily at 02:45 IST.
+
 ## Products
 
 | Product | Status | Live URL | Notes |
