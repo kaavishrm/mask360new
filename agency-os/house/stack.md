@@ -5,9 +5,9 @@ Every tool the OS touches and its state. Identifiers live in the database at `os
 | Tool | Used by | Identifiers | State (11 Nov 2026) |
 |---|---|---|---|
 | Supabase | everything | project `fqhmszoclzfwzttvrwng` (m360-os-store, Mumbai), schema `os`. Do not touch `public.m360_blobs` | Live |
-| Gmail | inbox, responder, briefs, client and finance agents | `settings.stack.gmail`. OS labels live under `M360 OS/`. Existing labels to respect: Active Lead, Cold Lead, Closed Lead, 4 Week Follow Up, Agency Intro, Funding, Hiring, Notes, Apollo Mailwarming | Live. 2,453 unread inbox threads at boot |
+| Gmail | inbox, responder, briefs, client and finance agents | `settings.stack.gmail`. OS labels live under `M360 OS/`. Existing labels to respect: Active Lead, Cold Lead, Closed Lead, 4 Week Follow Up, Agency Intro, Funding, Hiring, Notes, Apollo Mailwarming | Read and draft work. Label creation failed at boot (connector missing the label permission): reconnect Gmail to allow labels. 2,453 unread inbox threads at boot |
 | Google Calendar | calendar, booker, dossier | `settings.stack.calendar_id`, Asia/Kolkata | Live |
-| Google Drive and Sheets | documents, reports | OS root folder `M360 OS` (created at boot; id recorded in os.orgs.settings.drive_root) | Live |
+| Google Drive and Sheets | documents, reports | OS root folder `M360 OS` with Clients, Proposals, Contracts, Invoices, Briefs, Dossiers (ids in `settings.drive_root` and `settings.drive`) | Live, created at boot |
 | Apollo | finder, enricher, apollo | `settings.stack.apollo_user_id`, `settings.stack.apollo_team_id` | Live. 40 of 4,000 lead credits left this cycle |
 | Aimfox (LinkedIn) | linkedin | `settings.stack.aimfox_workspaces`: mask360 (no LinkedIn account connected) and personal (2 accounts, outreach plan cancelled) | Blocked until a plan is active and the account is connected. Until then the linkedin agent queues DMs for Kaavish to send by hand |
 | WhatsApp | whatsapp | none | No API. Drafts carry a wa.me tap-to-send link |
