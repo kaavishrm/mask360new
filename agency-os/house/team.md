@@ -4,11 +4,11 @@ The capacity agent keeps `os.team` in sync with this file. The boot routine infe
 
 | Name | Email | Role | Unit | Owns |
 |---|---|---|---|---|
-| Kaavish Ramchandani | kaavish@mask360.agency | Founder and Chief Alchemist | all | Taste, rooms, pricing calls, signatures, hires and exits, crisis |
+| Kaavish Ramchandani | `os.orgs.owner_email` | Founder and Chief Alchemist | all | Taste, rooms, pricing calls, signatures, hires and exits, crisis |
 
 ## To confirm at boot
 - Team members named in earlier planning notes (May 2026): Kashish, Pankti, Shreyansh. Status unknown.
-- Mailboxes whose calendars were transferred to Kaavish (likely former staff): accounts@, apollo@, pooja@, yashi@, abhilasha@, aisha@, hr@, ekta@.
+- Mailboxes whose calendars were transferred to Kaavish (likely former staff): listed in `os.orgs.settings.stack.former_mailboxes`.
 
 ## Ownership rules
 - Every active client has a named account owner who is not Kaavish within 90 days of onboarding.

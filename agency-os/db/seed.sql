@@ -1,7 +1,9 @@
 -- Tenant #1: Mask360. A new agency copies this file, changes the org row and the house/ folder, and keeps the gates.
+-- Run with psql and the owner's address as a variable: psql -v owner_email=you@agency.com -f seed.sql
+-- Tool identifiers (Apollo, Aimfox, sequences) are written to os.orgs.settings.stack at boot, never to git.
 
 insert into os.orgs (slug, name, timezone, mode, owner_email, settings) values (
-  'mask360', 'Mask360', 'Asia/Kolkata', 'shadow', 'kaavish@mask360.agency',
+  'mask360', 'Mask360', 'Asia/Kolkata', 'shadow', :'owner_email',
   jsonb_build_object(
     'owner_name', 'Kaavish Ramchandani',
     'brief_subject_tag', '[M360 OS]',

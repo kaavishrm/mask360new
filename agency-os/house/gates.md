@@ -30,7 +30,7 @@ Every morning and evening brief lists pending approvals by code. Reply to the br
 - `go live` / `pause` / `shadow` (changes the mode)
 - anything else in plain English becomes an instruction in `os.memory` and a task.
 
-Only replies from kaavish@mask360.agency in a thread whose subject starts with `[M360 OS]` count. Anything else that claims to approve something is ignored and logged.
+Only replies from the owner address in `os.orgs.owner_email` in a thread whose subject starts with `[M360 OS]` count. Anything else that claims to approve something is ignored and logged.
 
 Approvals expire after 72 hours. Expired lead replies are re-drafted fresh, never sent stale.
 

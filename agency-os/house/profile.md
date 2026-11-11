@@ -9,7 +9,7 @@
 - **Cities:** Mumbai, Delhi, Bangalore, Dubai, Abu Dhabi.
 - **Offices:** 6th Floor, Platinum Prive, Upper Juhu, Mumbai 400053. Dubai and Abu Dhabi, UAE.
 - **Web:** mask360.agency (site), mask360.work (credentials).
-- **Email:** connect@mask360.agency (general), kaavish@mask360.agency (founder, the OS mailbox).
+- **Email:** connect@mask360.agency (general), the founder's own mailbox (`os.orgs.owner_email`), which is the OS mailbox.
 
 ## Units (each is its own P&L)
 | Unit | What it sells | Key |
