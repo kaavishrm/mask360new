@@ -24,7 +24,7 @@ create table if not exists os.outreach (
   id uuid primary key default gen_random_uuid(),
   org_id uuid not null references os.orgs(id) on delete cascade,
   source text not null,              -- apollo, aimfox, whatsapp, manual
-  external_id text not null,         -- Apollo contact-in-sequence id, Aimfox target id
+  external_id text not null,         -- Apollo: contact id:sequence id. Aimfox: conversation urn
   channel text not null check (channel in ('email','linkedin','whatsapp')),
   contact_ref text,                  -- Apollo contact id or LinkedIn urn
   full_name text,
@@ -112,11 +112,18 @@ create or replace function os.outreach_upsert_apollo(rows jsonb) returns int lan
 declare n int;
 begin
   with o as (select id from os.orgs where slug = 'mask360'),
-  r as (
-    select x.*, p.position as pos, p.steps as nsteps, p.campaign as seqname
+  -- One row per person per sequence. Apollo's contact_campaign_statuses id is shared by everyone
+  -- added in one batch, so the key is contact id + sequence id, and duplicates in a page collapse.
+  x as (
+    select distinct on (x.cid, x.seq) x.*
     from jsonb_to_recordset(rows) as x(xid text, cid text, seq text, name text, first text, title text, org text, domain text,
       email text, li text, city text, country text, cs text, step_id text, "from" text, added timestamptz, last timestamptz)
-    left join os.pitches p on p.source = 'apollo' and p.step_id = x.step_id
+    where x.cid is not null and x.seq is not null
+    order by x.cid, x.seq, x.last desc nulls last
+  ),
+  r as (
+    select x.*, p.position as pos, p.steps as nsteps, p.campaign as seqname
+    from x left join os.pitches p on p.source = 'apollo' and p.step_id = x.step_id
   ),
   m as (
     select r.*,
@@ -129,7 +136,7 @@ begin
   )
   insert into os.outreach as t (org_id, source, external_id, channel, contact_ref, full_name, title, company, domain, email,
     linkedin_url, city, country, campaign_id, campaign, step_id, step, steps, pitch, sender, status, added_at, last_event_at, synced_at)
-  select o.id, 'apollo', m.xid, 'email', m.cid, m.name, m.title, m.org, m.domain, m.email, m.li, m.city, m.country,
+  select o.id, 'apollo', m.cid || ':' || m.seq, 'email', m.cid, m.name, m.title, m.org, m.domain, m.email, m.li, m.city, m.country,
     m.seq, coalesce(m.seqname, m.seq), m.step_id, m.pos, m.nsteps, os.outreach_fill(m.subj, m.first, m.org), m."from", m.base,
     m.added, m.last, now()
   from m, o

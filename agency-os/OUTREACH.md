@@ -18,8 +18,8 @@ Database: Supabase project `fqhmszoclzfwzttvrwng`, schema `os`, org slug `mask36
 4. **Who is in each sequence.** `apollo_contacts_search` with `emailer_campaign_ids: [id]`, `sort_by_field: contact_last_activity_date`, `per_page: 100` and
    `fields: [{"contacts": ["id","name","first_name","title","organization_name","email","linkedin_url","city","country","last_activity_date","contact_campaign_statuses",{"account":["domain"]}]}]`.
    For each contact take its `contact_campaign_statuses` entry for this sequence and build
-   `{xid: entry.id, cid: contact.id, seq, name, first, title, org, domain, email, li, city, country, cs: entry.status, step_id: entry.current_step_id, from: entry.send_email_from_email_address, added: entry.added_at, last: contact.last_activity_date}`.
-   Write each page with `select os.outreach_upsert_apollo($j$[...]$j$::jsonb)`. A full sync reads every page. An incremental sync stops at the first contact older than its start time.
+   `{cid: contact.id, seq, name, first, title, org, domain, email, li, city, country, cs: entry.status, step_id: entry.current_step_id, from: entry.send_email_from_email_address, added: entry.added_at, last: contact.last_activity_date}`.
+   Write each page with `select os.outreach_upsert_apollo($j$[...]$j$::jsonb)`. The database keys each row on contact id plus sequence id (Apollo's own status id is shared by everyone added in one batch, so it cannot be the key). A full sync reads every page. An incremental sync stops at the first contact older than its start time.
 
 5. **Opens, replies, bounces.** `apollo_emailer_messages_search` for the sequence, `per_page` 100, every page:
    - `emailer_message_stats: ["replied"]` gives kind `replied`
