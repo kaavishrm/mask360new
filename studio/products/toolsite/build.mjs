@@ -93,7 +93,7 @@ async function build() {
       site: esc(site.name),
       nav, footer, body,
       head: ld.join('\n'),
-      scripts: `<script src="/assets/js/common.js"></script><script>(${t.script.toString()})();</script>`,
+      scripts: `<script src="/assets/js/common.js"></script>${(t.lib || []).map((fn) => `<script>${fn.toString()}</script>`).join('')}<script>(${t.script.toString()})();</script>`,
     });
     await mkdir(path.join(out, t.slug), { recursive: true });
     await writeFile(path.join(out, t.slug, 'index.html'), lint(t.slug, html));

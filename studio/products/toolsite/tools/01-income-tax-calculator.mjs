@@ -1,11 +1,14 @@
+import taxEngine from './lib/income-tax.mjs';
+
 export default {
   slug: 'income-tax-calculator',
+  lib: [taxEngine],
   title: 'Income Tax Calculator FY 2026-27',
   h1: 'Income Tax Calculator for FY 2026-27 (AY 2027-28)',
   summary: 'New vs old regime, side by side, with rebate, surcharge and cess.',
   description: 'Free income tax calculator for FY 2026-27 (AY 2027-28). Compare the new and old tax regimes side by side with standard deduction, Section 87A rebate, surcharge, marginal relief and 4% cess.',
   category: 'tax',
-  related: ['in-hand-salary-calculator', 'tds-on-salary-calculator', 'hra-calculator', 'gratuity-calculator'],
+  related: ['income-tax-calculator-fy-2025-26', 'in-hand-salary-calculator', 'tds-on-salary-calculator', 'hra-calculator'],
   intro: 'Enter your salary and deductions once. The calculator works out tax under both regimes for FY 2026-27 and tells you which one leaves more in your hand.',
   tool: `
 <form id="f">
@@ -27,30 +30,9 @@ export default {
   <div class="result" id="out"></div>
 </form>`,
   script: function () {
-    const H = window.H;
-    const NEW = [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]];
-    function oldSlabs(age) { const ex = age === 2 ? 500000 : age === 1 ? 300000 : 250000; return [[ex, 0], [500000, 0.05], [1000000, 0.20], [Infinity, 0.30]]; }
-    function slabTax(inc, slabs) { let t = 0, prev = 0; for (const [upto, r] of slabs) { if (inc > prev) t += (Math.min(inc, upto) - prev) * r; prev = upto; if (inc <= upto) break; } return t; }
-    function surchargeRate(inc, isNew) { if (inc > 5e7) return isNew ? 0.25 : 0.37; if (inc > 2e7) return 0.25; if (inc > 1e7) return 0.15; if (inc > 5e6) return 0.10; return 0; }
-    function thresholdBelow(inc) { const th = [5e6, 1e7, 2e7, 5e7]; let t = 0; for (const x of th) if (inc > x) t = x; return t; }
-    function compute(taxable, isNew, age) {
-      const slabs = isNew ? NEW : oldSlabs(age);
-      let tax = slabTax(taxable, slabs);
-      let rebate = 0;
-      if (isNew) { if (taxable <= 1200000) rebate = tax; else { const cap = taxable - 1200000; if (tax > cap) rebate = tax - cap; } }
-      else if (taxable <= 500000) rebate = Math.min(tax, 12500);
-      tax -= rebate;
-      let sur = tax * surchargeRate(taxable, isNew);
-      // Marginal relief on surcharge
-      const th = thresholdBelow(taxable);
-      if (sur > 0 && th > 0) {
-        const taxAtTh = slabTax(th, slabs) * (1 + surchargeRate(th, isNew));
-        const maxAllowed = taxAtTh + (taxable - th);
-        if (tax + sur > maxAllowed) sur = Math.max(0, maxAllowed - tax);
-      }
-      const cess = (tax + sur) * 0.04;
-      return { tax, rebate, sur, cess, total: tax + sur + cess };
-    }
+    const H = window.H, T = taxEngine();
+    const FY = '2026-27';
+    function compute(taxable, isNew, age) { return T.compute(taxable, isNew, age, FY); }
     H.bind('f', (f) => {
       const age = H.val(f, 'age');
       const gross = H.val(f, 'salary') + H.val(f, 'other');
@@ -61,7 +43,8 @@ export default {
       const n = compute(newTaxable, true, age), o = compute(oldTaxable, false, age);
       const better = n.total <= o.total ? 'new' : 'old';
       const diff = Math.abs(n.total - o.total);
-      const row = (k, a, b) => '<tr><td>' + k + '</td><td>' + H.inr(a) + '</td><td>' + H.inr(b) + '</td></tr>';
+      const fmt = (v) => (Math.round(v) < 0 ? '-' : '') + H.inr(Math.abs(v));
+      const row = (k, a, b) => '<tr><td>' + k + '</td><td>' + fmt(a) + '</td><td>' + fmt(b) + '</td></tr>';
       document.getElementById('out').innerHTML =
         '<div class="big"><div class="stat' + (better === 'new' ? ' best' : '') + '"><b>' + H.inr(n.total) + '</b><span>Tax under new regime</span></div>' +
         '<div class="stat' + (better === 'old' ? ' best' : '') + '"><b>' + H.inr(o.total) + '</b><span>Tax under old regime</span></div>' +
@@ -86,7 +69,7 @@ export default {
 <p>Surcharge applies on tax when taxable income crosses ₹50 lakh: 10% up to ₹1 crore, 15% up to ₹2 crore, 25% up to ₹5 crore, and 37% above ₹5 crore under the old regime (capped at 25% under the new regime). Marginal relief ensures the extra tax never exceeds the extra income. A 4% health and education cess is added on tax plus surcharge in both regimes.</p>
 <h3>Which regime should you pick?</h3>
 <p>The old regime only wins when your deductions are large: typically a full 80C, a sizeable HRA exemption, home loan interest and health insurance together. For most salaried people with deductions under about ₹3.75 lakh, the new regime is lower. Run both here with your real numbers rather than relying on a rule of thumb.</p>
-<p class="tiny">Capital gains taxed at special rates, agricultural income, and relief under Section 89 are outside this calculator. The slabs shown are those in force when the page was last updated and will be revised if a Budget changes them.</p>`,
+<p class="tiny">Filing a late return for the previous year? Use the <a href="/income-tax-calculator-fy-2025-26/">FY 2025-26 calculator</a>, which also works out the late fee and interest. Capital gains taxed at special rates, agricultural income, and relief under Section 89 are outside this calculator. The slabs shown are those in force when the page was last updated and will be revised if a Budget changes them.</p>`,
   faq: [
     { q: 'Is the new tax regime the default for FY 2026-27?', a: '<p>Yes. The new regime applies unless you opt for the old one. Salaried taxpayers can switch every year when filing their return. Those with business income can opt out of the new regime only once.</p>' },
     { q: 'What is the maximum salary with zero tax in the new regime?', a: '<p>A gross salary of ₹12,75,000. After the ₹75,000 standard deduction, taxable income is ₹12,00,000, and the Section 87A rebate cancels the tax on it.</p>' },

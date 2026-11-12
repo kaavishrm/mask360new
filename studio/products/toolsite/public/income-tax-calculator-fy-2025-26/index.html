@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Income Tax Calculator FY 2025-26 (AY 2026-27) | Hisaab Tools</title>
+<meta name="description" content="Free income tax calculator for FY 2025-26 (AY 2026-27) for belated returns filed by 31 December 2026. Compares the new and old regimes with rebate, surcharge and cess, and adds the Section 234F late fee and Section 234A interest for the filing date you choose.">
+<link rel="canonical" href="https://hisaabtools.in/income-tax-calculator-fy-2025-26/">
+<meta property="og:title" content="Income Tax Calculator FY 2025-26 (AY 2026-27) | Hisaab Tools">
+<meta property="og:description" content="Free income tax calculator for FY 2025-26 (AY 2026-27) for belated returns filed by 31 December 2026. Compares the new and old regimes with rebate, surcharge and cess, and adds the Section 234F late fee and Section 234A interest for the filing date you choose.">
+<meta property="og:url" content="https://hisaabtools.in/income-tax-calculator-fy-2025-26/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hisaab Tools">
+<meta name="theme-color" content="#faf8f3">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Income Tax Calculator FY 2025-26 (AY 2026-27)","url":"https://hisaabtools.in/income-tax-calculator-fy-2025-26/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"description":"Free income tax calculator for FY 2025-26 (AY 2026-27) for belated returns filed by 31 December 2026. Compares the new and old regimes with rebate, surcharge and cess, and adds the Section 234F late fee and Section 234A interest for the filing date you choose."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hisaabtools.in/"},{"@type":"ListItem","position":2,"name":"Income Tax Calculator FY 2025-26 (AY 2026-27)","item":"https://hisaabtools.in/income-tax-calculator-fy-2025-26/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the last date to file the return for FY 2025-26?","acceptedAnswer":{"@type":"Answer","text":"31 December 2026 for a belated return, or the date the assessment is completed if earlier. The original due date for individuals without audit was 31 July 2026."}},{"@type":"Question","name":"Is the late fee ₹5,000 even if I have no tax to pay?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your total income is above the basic exemption limit you must file, and a late filing attracts the fee regardless of tax due: ₹1,000 up to ₹5 lakh of total income, ₹5,000 above it. Below the exemption limit there is no obligation to file and no fee."}},{"@type":"Question","name":"Can I choose the old regime in a belated return?","acceptedAnswer":{"@type":"Answer","text":"No. The option to use the old regime must be exercised in a return filed by the due date. A belated return is assessed under the new regime, and a revised return cannot switch to the old regime unless the original return was filed on time. Those with business income also needed Form 10-IEA by the due date."}},{"@type":"Question","name":"Does interest run on the whole tax or only on what is unpaid?","acceptedAnswer":{"@type":"Answer","text":"Only on what remains after TDS, TCS and advance tax. If your employer deducted the full amount, the interest is nil and only the fee applies."}},{"@type":"Question","name":"Why are the slabs the same as FY 2026-27?","acceptedAnswer":{"@type":"Answer","text":"Budget 2025 set these slabs for FY 2025-26 and Budget 2026 left them unchanged, so both years use the same rates. The late-filing rules and due dates are what differ."}}]}</script>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="/">Hisaab Tools</a><div class="nav-links"><a href="/#tax">Tax</a><a href="/#salary">Salary</a><a href="/#loans">Loans</a><a href="/#investments">Investments</a><a href="/#documents">Documents</a></div></nav>
+
+<main class="page tool-page">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/#tax">Tax</a></p>
+  <h1>Income Tax Calculator for FY 2025-26 (AY 2026-27), with late filing fee and interest</h1>
+  <p class="lede">Still to file your return for the year ended 31 March 2026? Enter your income and deductions, pick the date you will file, and see the tax under both regimes together with what being late adds.</p>
+  <div class="ad-slot" data-slot="top"></div>
+  <section class="tool" id="tool">
+<form id="f">
+  <div class="grid">
+    <label>Age on 31 March 2026<select name="age"><option value="0">Below 60</option><option value="1">60 to 79 (senior citizen)</option><option value="2">80 or above (super senior)</option></select></label>
+    <label>Gross salary for FY 2025-26 (₹)<input type="number" name="salary" value="1200000" min="0" step="1000"></label>
+    <label>Other income (₹) <span class="hint">interest, rent, freelance, etc.</span><input type="number" name="other" value="0" min="0" step="1000"></label>
+    <label>Employer NPS contribution, 80CCD(2) (₹) <span class="hint">allowed in both regimes</span><input type="number" name="nps2" value="0" min="0" step="1000"></label>
+  </div>
+  <fieldset><legend>Deductions and exemptions (old regime only)</legend>
+  <div class="grid">
+    <label>HRA exemption (₹)<input type="number" name="hra" value="0" min="0" step="1000"></label>
+    <label>Section 80C (₹) <span class="hint">Max 1,50,000</span><input type="number" name="c80" value="150000" min="0" max="150000" step="1000"></label>
+    <label>Section 80D health insurance (₹)<input type="number" name="d80" value="25000" min="0" step="1000"></label>
+    <label>NPS own contribution, 80CCD(1B) (₹) <span class="hint">Max 50,000</span><input type="number" name="nps1b" value="0" min="0" max="50000" step="1000"></label>
+    <label>Home loan interest, Section 24(b) (₹) <span class="hint">Max 2,00,000 for self-occupied</span><input type="number" name="hl" value="0" min="0" max="200000" step="1000"></label>
+    <label>Other deductions (₹) <span class="hint">80E, 80G, 80TTA, LTA, professional tax</span><input type="number" name="oth" value="0" min="0" step="1000"></label>
+  </div></fieldset>
+  <fieldset><legend>Late filing</legend>
+  <div class="grid">
+    <label>Tax already paid: TDS, TCS and advance tax (₹)<input type="number" name="paid" value="0" min="0" step="1000"></label>
+    <label>Due date that applied to you<select name="due"><option value="2026-07-31">31 July 2026 (no audit)</option><option value="2026-10-31">31 October 2026 (audit cases)</option></select></label>
+    <label>Date you will file<input type="date" name="filed" value="2026-11-30" min="2026-04-01" max="2026-12-31"></label>
+  </div></fieldset>
+  <div class="result" id="out"></div>
+</form></section>
+  <div class="ad-slot" data-slot="mid"></div>
+  <article class="explainer">
+<h2>Who this page is for</h2>
+<p>FY 2025-26 ran from 1 April 2025 to 31 March 2026 and is assessed in AY 2026-27. The due date for most individuals was 31 July 2026. If you missed it, you can still file a belated return under Section 139(4) of the Income-tax Act, 1961 until 31 December 2026, or until the assessment is completed if that is earlier. After that the only route is an updated return with additional tax. This page computes the tax itself and then what being late adds, so the amount you pay before filing is right the first time.</p>
+<h3>The slabs for FY 2025-26</h3>
+<p>Budget 2025 rewrote the new regime for this year: nil up to ₹4,00,000, then 5% to ₹8,00,000, 10% to ₹12,00,000, 15% to ₹16,00,000, 20% to ₹20,00,000, 25% to ₹24,00,000 and 30% above that. The Section 87A rebate of up to ₹60,000 removes all tax when taxable income is ₹12,00,000 or less, and marginal relief applies just above it. The standard deduction is ₹75,000 for salary and pension. The old regime kept its slabs: nil up to ₹2,50,000 (₹3,00,000 for senior citizens, ₹5,00,000 above 80), 5% to ₹5,00,000, 20% to ₹10,00,000 and 30% beyond, with a ₹12,500 rebate up to ₹5,00,000 of taxable income and a ₹50,000 standard deduction. These are the same figures as FY 2026-27, so the two calculators share one engine; what differs is the year, the due dates and the late-filing arithmetic.</p>
+<h3>What being late costs</h3>
+<span class="formula">Fee u/s 234F       = ₹5,000, or ₹1,000 if total income is ₹5,00,000 or less
+Interest u/s 234A  = 1% × unpaid tax × months from the day after the due date to the filing date
+                     (part of a month counts as a full month)</span>
+<p>The fee applies to anyone who was required to file and files after the due date. If your income is within the basic exemption limit and none of the other filing triggers apply (foreign assets, large bank deposits, high electricity or travel spending), you are not required to file and the fee does not apply, though you may still want to file for a refund or a loan application. The interest is simple, not compounded, and is charged only on tax still unpaid: tax deducted at source, tax collected at source and advance tax come off first. Filing on 30 November against a 31 July due date is four months late: August, September, October and November. Filing on 1 December makes it five.</p>
+<h3>What else to expect</h3>
+<p>A belated return goes in under the new regime. Section 115BAC lets a taxpayer without business income opt for the old regime only in a return filed by the due date under Section 139(1), so once the due date has passed the old regime is off the table, and the calculator locks it when your filing date is late. The old regime column stays visible so you can see what the delay cost you in deductions. Losses other than house property loss cannot be carried forward from a belated return. Interest under Sections 234B and 234C applies separately if advance tax was short, and is not included here.</p>
+<h3>Which Act</h3>
+<p>Returns for AY 2026-27 are filed under the Income-tax Act, 1961, so the section numbers on this page are the familiar ones. The Income-tax Act, 2025 applies from tax year 2026-27 onwards; use the <a href="/income-tax-calculator/">FY 2026-27 calculator</a> for the current year.</p>
+<p class="tiny">Capital gains at special rates, agricultural income, relief under Section 89, and penalty for under-reporting are outside this calculator. Figures are those in force on the date shown at the bottom of the page.</p></article>
+  <section class="faqs"><h2>Questions people ask</h2><details class="faq"><summary>What is the last date to file the return for FY 2025-26?</summary><div><p>31 December 2026 for a belated return, or the date the assessment is completed if earlier. The original due date for individuals without audit was 31 July 2026.</p></div></details><details class="faq"><summary>Is the late fee ₹5,000 even if I have no tax to pay?</summary><div><p>Yes, if your total income is above the basic exemption limit you must file, and a late filing attracts the fee regardless of tax due: ₹1,000 up to ₹5 lakh of total income, ₹5,000 above it. Below the exemption limit there is no obligation to file and no fee.</p></div></details><details class="faq"><summary>Can I choose the old regime in a belated return?</summary><div><p>No. The option to use the old regime must be exercised in a return filed by the due date. A belated return is assessed under the new regime, and a revised return cannot switch to the old regime unless the original return was filed on time. Those with business income also needed Form 10-IEA by the due date.</p></div></details><details class="faq"><summary>Does interest run on the whole tax or only on what is unpaid?</summary><div><p>Only on what remains after TDS, TCS and advance tax. If your employer deducted the full amount, the interest is nil and only the fee applies.</p></div></details><details class="faq"><summary>Why are the slabs the same as FY 2026-27?</summary><div><p>Budget 2025 set these slabs for FY 2025-26 and Budget 2026 left them unchanged, so both years use the same rates. The late-filing rules and due dates are what differ.</p></div></details></section>
+  <section class="related"><h2>Related tools</h2><div class="cards"><a class="card" href="/income-tax-calculator/"><span class="card-cat">Tax</span><strong>Income Tax Calculator FY 2026-27</strong><span>New vs old regime, side by side, with rebate, surcharge and cess.</span></a><a class="card" href="/in-hand-salary-calculator/"><span class="card-cat">Salary</span><strong>In-Hand Salary Calculator from CTC</strong><span>What actually lands in your bank each month after PF, professional tax, ESI and TDS.</span></a><a class="card" href="/tds-on-salary-calculator/"><span class="card-cat">Salary</span><strong>TDS on Salary Calculator FY 2026-27</strong><span>How much tax your employer should deduct each month, and how it changes mid-year.</span></a><a class="card" href="/hra-calculator/"><span class="card-cat">Salary</span><strong>HRA Exemption Calculator</strong><span>How much of your house rent allowance is tax free.</span></a></div></section>
+  <div class="ad-slot" data-slot="bottom"></div>
+</main>
+<footer class="footer"><div><strong>Hisaab Tools</strong> is a set of free calculators and document generators for India. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Figures are for guidance. Confirm anything that matters with a chartered accountant. Updated 2026-11-11.</div></footer>
+<script src="/assets/js/common.js"></script><script>function taxEngine() {
+  // Slabs announced in Budget 2025. They apply to FY 2025-26 (AY 2026-27) and continue unchanged for FY 2026-27 (tax year 2026-27).
+  const YEARS = {
+    '2025-26': { label: 'FY 2025-26 (AY 2026-27)', newSlabs: [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]], newRebateLimit: 1200000, oldRebateLimit: 500000, oldRebateMax: 12500, stdNew: 75000, stdOld: 50000 },
+    '2026-27': { label: 'FY 2026-27 (AY 2027-28)', newSlabs: [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]], newRebateLimit: 1200000, oldRebateLimit: 500000, oldRebateMax: 12500, stdNew: 75000, stdOld: 50000 },
+  };
+  function rules(fy) { return YEARS[fy] || YEARS['2026-27']; }
+  function oldSlabs(age) { const ex = age === 2 ? 500000 : age === 1 ? 300000 : 250000; return [[ex, 0], [500000, 0.05], [1000000, 0.20], [Infinity, 0.30]]; }
+  function slabTax(inc, slabs) { let t = 0, prev = 0; for (const [upto, r] of slabs) { if (inc > prev) t += (Math.min(inc, upto) - prev) * r; prev = upto; if (inc <= upto) break; } return t; }
+  function surchargeRate(inc, isNew) { if (inc > 5e7) return isNew ? 0.25 : 0.37; if (inc > 2e7) return 0.25; if (inc > 1e7) return 0.15; if (inc > 5e6) return 0.10; return 0; }
+  function thresholdBelow(inc) { let t = 0; for (const x of [5e6, 1e7, 2e7, 5e7]) if (inc > x) t = x; return t; }
+  // Returns tax after rebate, surcharge after marginal relief, cess and total for a taxable income.
+  function compute(taxable, isNew, age, fy) {
+    const R = rules(fy);
+    const slabs = isNew ? R.newSlabs : oldSlabs(age);
+    let tax = slabTax(taxable, slabs), rebate = 0;
+    if (isNew) { if (taxable <= R.newRebateLimit) rebate = tax; else { const cap = taxable - R.newRebateLimit; if (tax > cap) rebate = tax - cap; } }
+    else if (taxable <= R.oldRebateLimit) rebate = Math.min(tax, R.oldRebateMax);
+    tax -= rebate;
+    let sur = tax * surchargeRate(taxable, isNew);
+    const th = thresholdBelow(taxable);
+    if (sur > 0 && th > 0) {
+      const maxAllowed = slabTax(th, slabs) * (1 + surchargeRate(th, isNew)) + (taxable - th);
+      if (tax + sur > maxAllowed) sur = Math.max(0, maxAllowed - tax);
+    }
+    const cess = (tax + sur) * 0.04;
+    return { tax, rebate, sur, cess, total: tax + sur + cess };
+  }
+  return { rules, oldSlabs, slabTax, surchargeRate, compute };
+}</script><script>(function () {
+    const H = window.H, T = taxEngine();
+    const FY = '2025-26';
+    function monthsLate(due, filed) {
+      // Interest under 234A runs from the day after the due date to the filing date, counting any part of a month as a month.
+      if (!(filed > due)) return 0;
+      const s = new Date(due.getTime() + 86400000);
+      return (filed.getFullYear() - s.getFullYear()) * 12 + (filed.getMonth() - s.getMonth()) + (filed.getDate() >= s.getDate() ? 1 : 0);
+    }
+    H.bind('f', (f) => {
+      const age = H.val(f, 'age');
+      const gross = H.val(f, 'salary') + H.val(f, 'other');
+      const nps2 = H.val(f, 'nps2');
+      const newTaxable = Math.max(0, gross - 75000 - nps2);
+      const oldDed = 50000 + Math.min(150000, H.val(f, 'c80')) + H.val(f, 'd80') + Math.min(50000, H.val(f, 'nps1b')) + Math.min(200000, H.val(f, 'hl')) + H.val(f, 'oth') + H.val(f, 'hra') + nps2;
+      const oldTaxable = Math.max(0, gross - oldDed);
+      const n = T.compute(newTaxable, true, age, FY), o = T.compute(oldTaxable, false, age, FY);
+      // Late filing. A belated return under 139(4) can only be filed under the new regime for taxpayers without business income.
+      const due = new Date(H.str(f, 'due') + 'T00:00:00'), filedStr = H.str(f, 'filed');
+      const filed = filedStr ? new Date(filedStr + 'T00:00:00') : null;
+      const late = !!(filed && filed > due);
+      const better = late ? 'new' : n.total <= o.total ? 'new' : 'old';
+      const best = better === 'new' ? n : o, bestTaxable = better === 'new' ? newTaxable : oldTaxable;
+      const exempt = age === 2 ? 500000 : age === 1 ? 300000 : 250000;
+      const mustFile = gross > exempt;
+      const fee = late && mustFile ? (gross <= 500000 ? 1000 : 5000) : 0;
+      const unpaid = Math.max(0, Math.round(best.total) - H.val(f, 'paid'));
+      const months = late ? monthsLate(due, filed) : 0;
+      const interest = Math.round(unpaid * 0.01 * months);
+      const payable = unpaid + fee + interest;
+      const fmt = (v) => (Math.round(v) < 0 ? '-' : '') + H.inr(Math.abs(v));
+      const row = (k, a, b) => '<tr><td>' + k + '</td><td>' + fmt(a) + '</td><td>' + fmt(b) + '</td></tr>';
+      document.getElementById('out').innerHTML =
+        '<div class="big"><div class="stat' + (better === 'new' ? ' best' : '') + '"><b>' + H.inr(n.total) + '</b><span>Tax under new regime</span></div>' +
+        '<div class="stat' + (better === 'old' ? ' best' : '') + '"><b>' + H.inr(o.total) + '</b><span>Tax under old regime' + (late ? ', not available in a belated return' : '') + '</span></div>' +
+        '<div class="stat' + (fee + interest ? ' warn' : '') + '" id="late"><b>' + H.inr(fee + interest) + '</b><span>Late fee and interest' + (late ? ', filing ' + months + ' month' + (months === 1 ? '' : 's') + ' late' : '') + '</span></div>' +
+        '<div class="stat"><b>' + H.inr(payable) + '</b><span>To pay before filing, ' + better + ' regime</span></div></div>' +
+        '<div class="tbl-wrap"><table><thead><tr><th>Line</th><th>New regime</th><th>Old regime</th></tr></thead><tbody>' +
+        row('Gross income', gross, gross) + row('Deductions', 75000 + nps2, oldDed) + row('Taxable income', newTaxable, oldTaxable) +
+        row('Tax on slabs', n.tax + n.rebate, o.tax + o.rebate) + row('Rebate u/s 87A', -n.rebate, -o.rebate) + row('Surcharge (after marginal relief)', n.sur, o.sur) + row('Health and education cess 4%', n.cess, o.cess) + row('Total tax', n.total, o.total) + '</tbody></table></div>' +
+        '<div class="tbl-wrap"><table><thead><tr><th>Late filing, ' + better + ' regime</th><th>Amount</th></tr></thead><tbody>' +
+        '<tr><td>Tax for the year</td><td>' + H.inr(best.total) + '</td></tr><tr><td>Less TDS, TCS and advance tax</td><td>' + fmt(-H.val(f, 'paid')) + '</td></tr><tr><td>Self-assessment tax</td><td>' + H.inr(unpaid) + '</td></tr>' +
+        '<tr><td>Fee u/s 234F' + (late && !mustFile ? ' (not charged: income within the exemption limit)' : '') + '</td><td>' + H.inr(fee) + '</td></tr><tr><td>Interest u/s 234A, 1% × ' + months + ' month' + (months === 1 ? '' : 's') + '</td><td>' + H.inr(interest) + '</td></tr><tr><td><strong>Total to pay</strong></td><td><strong>' + H.inr(payable) + '</strong></td></tr></tbody></table></div>' +
+        '<p class="note">' + (late ? 'Filing after the due date: the return goes in under the new regime, and the belated return for AY 2026-27 can be filed until 31 December 2026. ' : 'Filing on or before the due date: no fee or interest under 234A, and either regime can be chosen. ') + 'Taxable income under the ' + better + ' regime is ' + H.inr(bestTaxable) + '. Interest under 234B and 234C for short payment of advance tax is not included.</p>';
+    });
+  })();</script>
+</body>
+</html>
