@@ -45,6 +45,8 @@ Fix the draft, or pull it and say why.
 ## 4. Send
 
 Kaavish gave standing permission on 12 Nov 2026, so in `live` mode every email draft that passes the audit is sent without asking him. Use `send_message` with its `draftId` so it goes exactly as audited.
+
+The background workflow only prepares and audits. It returns the draft ids, and the main session sends them, because sends from background agents are refused. If a send is refused, do not retry it: leave the draft in Gmail and set its `next_action` to `Not sent: blocked by the safety check. The draft is in Gmail for Kaavish to send.`
 - Send only between 09:00 and 21:00 IST. Outside that window, hold the drafts until 10:07 IST on the next working day.
 - Send at most 60 new emails a day.
 - After each send:
