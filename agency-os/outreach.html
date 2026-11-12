@@ -127,6 +127,7 @@ select.field{max-width:260px}
 .st.opened{border-color:var(--flame);color:var(--flame)}
 .st.sent{border-color:var(--ink)}
 .st.queued,.st.finished,.st.paused{color:var(--mute)}
+.st.draft{border-style:dashed;border-color:var(--flame);color:var(--flame)}
 .st.bounced,.st.stopped{border-color:var(--alert);color:var(--alert)}
 .more{color:var(--mute);font-size:13px;padding:12px 6px}
 @media (max-width:820px){
@@ -186,6 +187,7 @@ select.field{max-width:260px}
     <div class="stat"><div class="micro">Opened</div><div class="v" id="st-opened">0</div></div>
     <div class="stat hot"><div class="micro">Replied</div><div class="v" id="st-replied">0</div></div>
     <div class="stat hot"><div class="micro">Meetings</div><div class="v" id="st-meetings">0</div></div>
+    <div class="stat hot"><div class="micro">Drafts ready</div><div class="v" id="st-drafts">0</div></div>
     <div class="stat"><div class="micro">In queue</div><div class="v" id="st-queued">0</div></div>
     <div class="stat"><div class="micro">Moved today</div><div class="v" id="st-today">0</div></div>
   </div>
@@ -235,8 +237,8 @@ select.field{max-width:260px}
 (function(){
   "use strict";
   var SERVER = "Supabase", TOOL = "execute_sql", PROJECT = "fqhmszoclzfwzttvrwng", EVERY = 30000;
-  var LABEL = {queued:"In queue", sent:"Sent", opened:"Opened", replied:"Replied", meeting:"Meeting", bounced:"Bounced", paused:"Paused", finished:"No reply", stopped:"Stopped"};
-  var CHIPS = [["", "All"], ["replied", "Replied"], ["opened", "Opened"], ["sent", "Sent"], ["queued", "In queue"], ["finished", "No reply"], ["bounced", "Bounced"]];
+  var LABEL = {draft:"Draft ready", queued:"In queue", sent:"Sent", opened:"Opened", replied:"Replied", meeting:"Meeting", bounced:"Bounced", paused:"Paused", finished:"No reply", stopped:"Stopped"};
+  var CHIPS = [["", "All"], ["draft", "Draft ready"], ["replied", "Replied"], ["opened", "Opened"], ["sent", "Sent"], ["queued", "In queue"], ["finished", "No reply"], ["bounced", "Bounced"]];
   var KIND = {interested:"Interested", later:"Later", redirect:"Pointed us elsewhere", objection:"Objection", ooo:"Out of office", unsubscribe:"Unsubscribe", hostile:"Not interested"};
   var filt = {status: "", camp: "", q: ""};
   var snap = null, mcp = null, updatedAt = 0, timer = null, seenReplies = null, openId = null;
@@ -328,6 +330,7 @@ select.field{max-width:260px}
     $("st-replied").textContent = c.replied || 0;
     $("st-meetings").textContent = c.meetings || 0;
     $("st-queued").textContent = (c.queued || 0).toLocaleString("en-IN");
+    $("st-drafts").textContent = (c.drafts || 0).toLocaleString("en-IN");
     $("st-today").textContent = (c.moved_today || 0).toLocaleString("en-IN");
     var m = snap && snap.mode, mode = $("mode");
     mode.textContent = m === "live" ? "Sending" : m === "paused" ? "Paused" : m ? "Drafts only" : "Mode --";
@@ -399,7 +402,7 @@ select.field{max-width:260px}
       a.appendChild(el("div", "nm", r.full_name || "Unknown"));
       a.appendChild(el("div", "sub", [r.title, r.company].filter(Boolean).join(", ")));
       var p = el("div", "cell c-pitch");
-      p.appendChild(el("div", "pitch", r.pitch || "Not sent yet"));
+      p.appendChild(el("div", "pitch", r.pitch || (r.status === "draft" ? "Draft written" : "Not sent yet")));
       p.appendChild(el("div", "sub", (r.channel === "linkedin" ? "LinkedIn" : r.channel === "whatsapp" ? "WhatsApp" : "Email") + (r.steps ? ", step " + (r.step || 1) + " of " + r.steps : "") + (r.opens ? ", opened " + r.opens + "x" : "")));
       var c = el("div", "cell c-camp sub", r.campaign || "");
       var s = el("div", "cell c-st"); s.appendChild(stPill(r.status));
