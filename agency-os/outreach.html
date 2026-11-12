@@ -1,0 +1,560 @@
+<title>Mask360 Outreach</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* One page: who is being pitched, what they were sent, where it stands, what they replied. Replies first, then everyone. */
+:root{
+  --bg:#ffffff; --paper:#f3f2ee; --card:#f3f2ee; --card-hi:#ffffff; --ink:#0a0a0a;
+  --mute:rgba(10,10,10,.58); --faint:rgba(10,10,10,.34); --hair:rgba(10,10,10,.12);
+  --flame:#f53901; --flame-soft:rgba(245,57,1,.12); --alert:#c4122f; --alert-soft:rgba(196,18,47,.1);
+  --display:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --mono:'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --r:18px; --ri:12px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0a0a0a; --paper:#111111; --card:#161616; --card-hi:#1f1f1f; --ink:#f5f4f0;
+  --mute:rgba(245,244,240,.62); --faint:rgba(245,244,240,.36); --hair:rgba(245,244,240,.14);
+  --flame:#ff4d17; --flame-soft:rgba(255,77,23,.16); --alert:#ff5a76; --alert-soft:rgba(255,90,118,.14);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0a0a0a; --paper:#111111; --card:#161616; --card-hi:#1f1f1f; --ink:#f5f4f0;
+  --mute:rgba(245,244,240,.62); --faint:rgba(245,244,240,.36); --hair:rgba(245,244,240,.14);
+  --flame:#ff4d17; --flame-soft:rgba(255,77,23,.16); --alert:#ff5a76; --alert-soft:rgba(255,90,118,.14);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--display);font-size:14px;line-height:1.45;margin:0;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-bottom:48px;
+  font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--flame);outline-offset:2px}
+.micro{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.mono{font-family:var(--mono);font-size:12px}
+.wrap{max-width:1280px;margin:0 auto}
+
+.chrome{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding-block:14px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.mark{display:flex;align-items:baseline;gap:10px}
+.mark b{font-weight:700;font-size:17px;letter-spacing:-.02em}
+.mark span{color:var(--mute);font-size:13px}
+.state{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--hair);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:500;white-space:nowrap}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--faint)}
+.pill.live .dot{background:var(--flame);animation:breathe 2.4s ease-in-out infinite}
+.iconbtn{border:1px solid var(--hair);background:transparent;border-radius:999px;padding:5px 11px;font-size:12px;cursor:pointer}
+.iconbtn:hover{border-color:var(--ink)}
+
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-block:26px 18px}
+.head h1{margin:0;font-weight:700;font-size:clamp(28px,4.4vw,46px);letter-spacing:-.03em;line-height:.95}
+.head h1 em{font-style:italic;color:var(--flame);font-weight:500}
+.head p{margin:10px 0 0;color:var(--mute);max-width:60ch}
+.stats{display:flex;flex-wrap:wrap;border:1px solid var(--hair);border-radius:var(--ri);overflow:hidden}
+.stat{padding:10px 14px;border-right:1px solid var(--hair);min-width:92px;flex:1 1 auto}
+.stat:last-child{border-right:0}
+.stat .v{font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.stat.hot .v{color:var(--flame)}
+
+.banner{display:none;margin-bottom:16px;border:1px solid var(--hair);border-left:3px solid var(--flame);border-radius:var(--ri);padding:12px 14px;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.banner.show{display:flex}
+.banner.warn{border-left-color:var(--alert)}
+.banner p{margin:0;max-width:80ch}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:999px;padding:8px 14px;font-weight:500;cursor:pointer;font-size:13px}
+
+/* target */
+.goal{border:1px solid var(--hair);border-radius:var(--r);padding:16px 18px;margin-bottom:18px;display:grid;gap:12px}
+.g-top{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.g-big{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.g-big .of{font-size:15px;font-weight:400;color:var(--mute);letter-spacing:0}
+.g-side{display:flex;gap:18px;flex-wrap:wrap}
+.g-side .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.g-side .v{font-size:17px;font-weight:600}
+.g-side .v.gap{color:var(--flame)}
+.bar{position:relative;height:12px;border-radius:999px;background:var(--card);overflow:hidden}
+.bar i{position:absolute;top:0;bottom:0;left:0;display:block}
+.bar .b-sec{background:var(--flame)}
+.bar .b-pipe{background:var(--flame-soft);border-left:1px solid var(--bg)}
+.g-note{color:var(--mute);font-size:12.5px;margin:0}
+.week{display:flex;flex-wrap:wrap;gap:8px}
+.wk{border:1px solid var(--hair);border-radius:var(--ri);padding:8px 12px;min-width:118px;flex:1 1 118px}
+.wk .v{font-size:18px;font-weight:600}
+.wk .v small{font-size:12px;font-weight:400;color:var(--mute)}
+.wk.hit{border-color:var(--flame)}
+h2.sec{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:22px 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
+h2.sec .micro{font-weight:400}
+
+/* replies */
+.replies{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.rcard{background:var(--card);border-radius:var(--r);padding:14px 16px;display:grid;gap:8px;border:1px solid transparent;cursor:pointer;text-align:left;width:100%}
+.rcard:hover{border-color:var(--hair)}
+.rcard.fresh{border-color:var(--flame)}
+.rcard .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.rcard .who{font-weight:600;font-size:15px}
+.rcard .org{color:var(--mute);font-size:13px}
+.rcard q{display:block;quotes:none;border-left:2px solid var(--flame);padding-left:10px;font-size:14px;overflow-wrap:anywhere}
+.rcard .none{color:var(--mute);font-size:13px}
+.rcard .next{font-size:13px}
+.rcard .next b{font-weight:600}
+.empty{color:var(--mute);margin:0;padding:14px 16px;border:1px dashed var(--hair);border-radius:var(--r)}
+
+/* toolbar */
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--hair);background:transparent;border-radius:999px;padding:5px 11px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{font-family:var(--mono);font-size:11px;opacity:.7;margin-left:4px}
+.field{border:1px solid var(--hair);background:transparent;border-radius:999px;padding:6px 12px;font-size:13px;min-width:0}
+input.field{flex:1 1 220px}
+select.field{max-width:260px}
+
+/* everyone */
+.list{border-top:1px solid var(--hair)}
+.row{display:grid;grid-template-columns:minmax(150px,1.2fr) minmax(0,1.6fr) minmax(110px,.8fr) 96px 70px;gap:14px;align-items:center;
+  padding:10px 6px;border-bottom:1px solid var(--hair);cursor:pointer;width:100%;background:transparent;border-left:0;border-right:0;border-top:0;text-align:left}
+.row:hover{background:var(--card)}
+.row.hdr{cursor:default;color:var(--mute);padding-block:8px}
+.row.hdr:hover{background:transparent}
+.cell{min-width:0}
+.nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub{color:var(--mute);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pitch{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.when{font-family:var(--mono);font-size:11.5px;color:var(--mute);text-align:right;white-space:nowrap}
+.st{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--hair);border-radius:999px;padding:2px 9px;font-size:12px;font-weight:500;white-space:nowrap}
+.st.replied,.st.meeting{background:var(--flame);border-color:var(--flame);color:#fff}
+.st.opened{border-color:var(--flame);color:var(--flame)}
+.st.sent{border-color:var(--ink)}
+.st.queued,.st.finished,.st.paused{color:var(--mute)}
+.st.bounced,.st.stopped{border-color:var(--alert);color:var(--alert)}
+.more{color:var(--mute);font-size:13px;padding:12px 6px}
+@media (max-width:820px){
+  .row{grid-template-columns:minmax(0,1fr) auto;gap:2px 12px}
+  .row.hdr{display:none}
+  .row > .cell:first-child{grid-column:1;grid-row:1 / span 2}
+  .row .c-st{grid-column:2;grid-row:1;justify-self:end}
+  .row .c-when{grid-column:2;grid-row:2}
+  .row .c-pitch{grid-column:1 / -1;grid-row:3;margin-top:4px}
+  .row .c-camp{display:none}
+}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:20;display:none}
+.scrim.show{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100vw);background:var(--bg);z-index:21;border-left:1px solid var(--hair);
+  transform:translateX(100%);transition:transform .22s ease;overflow:auto;padding:18px max(18px, env(safe-area-inset-right, 0px)) 40px 18px}
+.drawer.show{transform:none}
+.drawer .x{float:right}
+.drawer h3{margin:4px 0 2px;font-size:22px;letter-spacing:-.02em}
+.drawer .meta{color:var(--mute);margin:0 0 12px}
+.kv{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 12px;font-size:13px;padding:12px 0;border-top:1px solid var(--hair)}
+.kv dt{color:var(--mute)}
+.kv dd{margin:0;overflow-wrap:anywhere}
+.kv a{color:inherit}
+.said{border-left:2px solid var(--flame);padding-left:12px;margin:10px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.steps li{border:1px solid var(--hair);border-radius:var(--ri);padding:10px 12px}
+.steps li.done{background:var(--card)}
+.steps li.now{border-color:var(--flame)}
+.steps .sh{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--mute)}
+.steps .sj{font-weight:600;margin-top:4px}
+.steps .bd{color:var(--mute);font-size:13px;margin-top:6px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:220px;overflow:auto}
+
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion: reduce){.pill .dot{animation:none!important}.drawer{transition:none}}
+@media (max-width:520px){.stat{min-width:0;flex:1 1 30%;padding:8px 10px}.stat .v{font-size:19px}.mark span{display:none}}
+</style>
+
+<div class="wrap">
+<header class="chrome">
+  <div class="mark"><b>Mask360</b><span>outreach, live</span></div>
+  <div class="state">
+    <span class="pill" id="mode" title="Drafts only: replies are written as Gmail drafts and nothing new is sent until you say go live">Mode --</span>
+    <span class="pill" id="sync"><span class="dot"></span><span id="sync-t">Connecting</span></span>
+    <button class="iconbtn" id="refresh" type="button">Refresh</button>
+  </div>
+</header>
+
+<section class="head">
+  <div>
+    <h1>Who we're pitching, <em>right now.</em></h1>
+    <p id="sub">Everyone in every live campaign: what they were sent, where it stands, and what they said back.</p>
+  </div>
+  <div class="stats" aria-live="polite">
+    <div class="stat"><div class="micro">Pitched</div><div class="v" id="st-pitched">0</div></div>
+    <div class="stat"><div class="micro">Opened</div><div class="v" id="st-opened">0</div></div>
+    <div class="stat hot"><div class="micro">Replied</div><div class="v" id="st-replied">0</div></div>
+    <div class="stat hot"><div class="micro">Meetings</div><div class="v" id="st-meetings">0</div></div>
+    <div class="stat"><div class="micro">In queue</div><div class="v" id="st-queued">0</div></div>
+    <div class="stat"><div class="micro">Moved today</div><div class="v" id="st-today">0</div></div>
+  </div>
+</section>
+
+<section class="goal" aria-label="Revenue target">
+  <div class="g-top">
+    <div>
+      <div class="micro" id="g-label">Revenue target</div>
+      <div class="g-big"><span id="g-secured">--</span> <span class="of">secured of <span id="g-target">6.00 Cr</span></span></div>
+    </div>
+    <div class="g-side">
+      <div><div class="k">Weighted pipeline</div><div class="v" id="g-weighted">--</div></div>
+      <div><div class="k">Gap</div><div class="v gap" id="g-gap">--</div></div>
+      <div><div class="k">Open deals</div><div class="v" id="g-open">--</div></div>
+    </div>
+  </div>
+  <div class="bar" role="img" id="g-bar" aria-label="Progress to target"><i class="b-pipe" id="b-pipe"></i><i class="b-sec" id="b-sec"></i></div>
+  <p class="g-note" id="g-note"></p>
+  <div class="micro">This week</div>
+  <div class="week" id="week"></div>
+</section>
+
+<div class="banner" id="banner" role="status"><p id="banner-t"></p><button class="btn" id="banner-b" type="button" hidden>Allow</button></div>
+
+<h2 class="sec">Who replied <span class="micro" id="r-count"></span></h2>
+<div class="replies" id="replies"><p class="empty">Waiting for the first pull.</p></div>
+
+<h2 class="sec">Everyone being pitched <span class="micro" id="e-count"></span></h2>
+<div class="tools">
+  <div class="chips" id="chips" role="group" aria-label="Filter by status"></div>
+  <select class="field" id="camp" aria-label="Campaign"><option value="">All campaigns</option></select>
+  <input class="field" id="q" type="search" placeholder="Search name, company, email" aria-label="Search">
+</div>
+<div class="list" id="list">
+  <div class="row hdr"><div class="micro">Person</div><div class="micro">What they were sent</div><div class="micro c-camp">Campaign</div><div class="micro">Status</div><div class="micro when">Last move</div></div>
+</div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Person" role="dialog" aria-modal="true">
+  <button class="iconbtn x" id="close" type="button">Close</button>
+  <div id="d-body"></div>
+</aside>
+
+<script>
+(function(){
+  "use strict";
+  var SERVER = "Supabase", TOOL = "execute_sql", PROJECT = "fqhmszoclzfwzttvrwng", EVERY = 30000;
+  var LABEL = {queued:"In queue", sent:"Sent", opened:"Opened", replied:"Replied", meeting:"Meeting", bounced:"Bounced", paused:"Paused", finished:"No reply", stopped:"Stopped"};
+  var CHIPS = [["", "All"], ["replied", "Replied"], ["opened", "Opened"], ["sent", "Sent"], ["queued", "In queue"], ["finished", "No reply"], ["bounced", "Bounced"]];
+  var KIND = {interested:"Interested", later:"Later", redirect:"Pointed us elsewhere", objection:"Objection", ooo:"Out of office", unsubscribe:"Unsubscribe", hostile:"Not interested"};
+  var filt = {status: "", camp: "", q: ""};
+  var snap = null, mcp = null, updatedAt = 0, timer = null, seenReplies = null, openId = null;
+  var $ = function(id){ return document.getElementById(id); };
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function ms(ts){ var t = ts ? Date.parse(ts) : NaN; return isNaN(t) ? 0 : t; }
+  var fT = new Intl.DateTimeFormat("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+  var fD = new Intl.DateTimeFormat("en-GB", {day:"numeric", month:"short", timeZone:"Asia/Kolkata"});
+  var fY = new Intl.DateTimeFormat("en-GB", {day:"numeric", month:"short", year:"numeric", timeZone:"Asia/Kolkata"});
+  var fDT = new Intl.DateTimeFormat("en-GB", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+  function when(ts){ var t = ms(ts); if (!t) return ""; var d = Date.now() - t; return d < 86400000 ? fT.format(new Date(t)) : fD.format(new Date(t)); }
+  function whenLong(ts){ var t = ms(ts); return t ? fDT.format(new Date(t)) + " IST" : ""; }
+  function lit(s){ return "'" + String(s).replace(/'/g, "''") + "'"; }
+  function clean(s){ return String(s || "").replace(/[^\p{L}\p{N}@.'\-_ ]/gu, " ").replace(/\s+/g, " ").trim().slice(0, 60); }
+  function fill(t, r){
+    return String(t || "").replace(/\{\{\s*first_name\s*\}\}/gi, (r.full_name || "").split(" ")[0] || "there")
+      .replace(/\{\{\s*(company|company_name|account_name)\s*\}\}/gi, r.company || "your company").replace(/\{\{[^}]*\}\}/g, "");
+  }
+  function textOf(html){
+    if (!html) return "";
+    var s = String(html).replace(/<\s*br\s*\/?>/gi, "\n").replace(/<\/(p|div|li)>/gi, "\n");
+    var d = new DOMParser().parseFromString(s, "text/html");
+    return (d.body.textContent || "").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
+  function where(){
+    var w = "";
+    if (filt.status) w += " and t.status = " + lit(filt.status);
+    if (filt.camp) w += " and t.campaign = " + lit(filt.camp);
+    var q = clean(filt.q);
+    if (q) { var p = lit("%" + q + "%"); w += " and (t.full_name ilike " + p + " or t.company ilike " + p + " or t.email ilike " + p + " or t.title ilike " + p + ")"; }
+    return w;
+  }
+  function boardQuery(){
+    var w = where();
+    return "with o as (select id, mode from os.orgs where slug = 'mask360') select json_build_object(" +
+      "'at', now(), 'mode', (select mode from o)," +
+      "'goal', (select row_to_json(g) from os.v_goal g, o where g.org_id = o.id)," +
+      "'counts', (select row_to_json(c) from os.v_outreach_counts c, o where c.org_id = o.id)," +
+      "'status', (select coalesce(json_object_agg(s, n), '{}'::json) from (select status s, count(*) n from os.outreach t, o where t.org_id = o.id group by status) x)," +
+      "'sync', (select row_to_json(s) from (select started_at, finished_at, rows, note from os.syncs s, o where s.org_id = o.id order by started_at desc limit 1) s)," +
+      "'camps', (select coalesce(json_agg(x), '[]'::json) from (select campaign, count(*) n from os.outreach t, o where t.org_id = o.id group by campaign order by count(*) desc) x)," +
+      "'replies', (select coalesce(json_agg(r), '[]'::json) from (select t.id, full_name, title, company, campaign, left(pitch, 140) pitch, left(reply, 600) reply, reply_kind, reply_at, next_action, sender, status, last_event_at, channel from os.outreach t, o where t.org_id = o.id and t.status in ('replied','meeting') order by coalesce(t.reply_at, t.last_event_at) desc nulls last limit 60) r)," +
+      "'rows', (select coalesce(json_agg(r), '[]'::json) from (select t.id, full_name, title, company, campaign, step, steps, left(pitch, 160) pitch, status, opens, last_event_at, channel from os.outreach t, o where t.org_id = o.id" + w + " order by t.last_event_at desc nulls last, t.full_name limit 200) r)," +
+      "'matched', (select count(*) from os.outreach t, o where t.org_id = o.id" + w + ")" +
+      ") as snapshot;";
+  }
+  function personQuery(id){
+    var i = lit(id);
+    return "select json_build_object(" +
+      "'row', (select row_to_json(t) from (select id, full_name, title, company, domain, email, linkedin_url, city, country, campaign, campaign_id, step, steps, pitch, sender, status, opens, reply, reply_kind, reply_at, next_action, added_at, last_event_at, channel, source from os.outreach where id = " + i + "::uuid) t)," +
+      "'steps', (select coalesce(json_agg(p order by p.position), '[]'::json) from (select position, step_type, wait_days, subject, left(body, 2500) body from os.pitches where campaign_id = (select campaign_id from os.outreach where id = " + i + "::uuid)) p)" +
+      ") as snapshot;";
+  }
+
+  function parse(result){
+    var p = result && result.payload, s = null;
+    if (typeof p === "string") s = p; else if (p && typeof p.result === "string") s = p.result;
+    if (!s && result && result.content) {
+      var t = result.content.filter(function(c){ return c.type === "text"; })[0];
+      if (t) { s = t.text; try { var j = JSON.parse(s); if (j && typeof j.result === "string") s = j.result; } catch (e) {} }
+    }
+    if (!s) throw new Error("the database answered with nothing");
+    var m = s.match(/<untrusted-data-[^>]*>([\s\S]*?)<\/untrusted-data-/);
+    var body = (m ? m[1] : s).trim();
+    var rows = JSON.parse(body.slice(body.indexOf("["), body.lastIndexOf("]") + 1));
+    if (!rows.length || !rows[0].snapshot) throw new Error("the answer was empty");
+    return rows[0].snapshot;
+  }
+
+  function banner(text, kind, button){
+    var b = $("banner"); b.className = "banner" + (text ? " show" : "") + (kind === "warn" ? " warn" : "");
+    $("banner-t").textContent = text || "";
+    var btn = $("banner-b"); btn.hidden = !button; if (button) btn.textContent = button;
+  }
+  function setSync(live, text){ $("sync").className = "pill" + (live ? " live" : ""); if (text) $("sync-t").textContent = text; }
+  function tick(){
+    if (!updatedAt) return;
+    var s = Math.round((Date.now() - updatedAt) / 1000);
+    $("sync-t").textContent = "Live, " + (s < 5 ? "just now" : s < 60 ? s + "s ago" : Math.round(s / 60) + "m ago");
+  }
+
+  function stPill(s){ return el("span", "st " + (s || "queued"), LABEL[s] || s || ""); }
+
+  function renderStats(){
+    var c = (snap && snap.counts) || {};
+    $("st-pitched").textContent = (c.pitched || 0).toLocaleString("en-IN");
+    $("st-opened").textContent = (c.opened || 0).toLocaleString("en-IN");
+    $("st-replied").textContent = c.replied || 0;
+    $("st-meetings").textContent = c.meetings || 0;
+    $("st-queued").textContent = (c.queued || 0).toLocaleString("en-IN");
+    $("st-today").textContent = (c.moved_today || 0).toLocaleString("en-IN");
+    var m = snap && snap.mode, mode = $("mode");
+    mode.textContent = m === "live" ? "Sending" : m === "paused" ? "Paused" : m ? "Drafts only" : "Mode --";
+    var sy = snap && snap.sync, sub = "Everyone in every live campaign: what they were sent, where it stands, and what they said back.";
+    if (sy) sub += " Last pull from Apollo " + whenLong(sy.finished_at || sy.started_at) + (sy.finished_at ? "" : " (running)") + (sy.note ? ": " + sy.note : ".");
+    $("sub").textContent = sub;
+  }
+
+  function renderReplies(){
+    var box = $("replies"); box.textContent = "";
+    var list = (snap && snap.replies) || [];
+    $("r-count").textContent = list.length ? list.length + (list.length === 1 ? " person" : " people") : "";
+    if (!list.length) { box.appendChild(el("p", "empty", snap ? "No replies yet. The moment someone answers, they show up here." : "Waiting for the first pull.")); return; }
+    var first = seenReplies === null; if (first) seenReplies = {};
+    list.forEach(function(r){
+      var c = el("button", "rcard" + (!first && !seenReplies[r.id] ? " fresh" : ""));
+      c.type = "button"; seenReplies[r.id] = 1;
+      var top = el("div", "top"), l = el("div");
+      l.appendChild(el("div", "who", r.full_name || "Unknown"));
+      l.appendChild(el("div", "org", [r.title, r.company].filter(Boolean).join(", ")));
+      top.appendChild(l);
+      var rt = el("div"); rt.style.textAlign = "right";
+      rt.appendChild(stPill(r.status));
+      rt.appendChild(el("div", "mono", when(r.reply_at || r.last_event_at)));
+      top.appendChild(rt); c.appendChild(top);
+      if (r.reply) { var q = el("q", null, r.reply.length > 260 ? r.reply.slice(0, 260) + "..." : r.reply); c.appendChild(q); }
+      else c.appendChild(el("div", "none", "Replied to: " + (r.pitch || r.campaign || "the email")));
+      var n = el("div", "next");
+      if (r.reply_kind) { n.appendChild(el("b", null, (KIND[r.reply_kind] || r.reply_kind) + ". ")); }
+      n.appendChild(document.createTextNode(r.next_action || "Read the reply and answer it"));
+      c.appendChild(n);
+      c.addEventListener("click", function(){ openPerson(r.id); });
+      box.appendChild(c);
+    });
+  }
+
+  function renderTools(){
+    var st = (snap && snap.status) || {}, all = 0;
+    Object.keys(st).forEach(function(k){ all += st[k]; });
+    var chips = $("chips"); chips.textContent = "";
+    CHIPS.forEach(function(c){
+      var n = c[0] ? (c[0] === "replied" ? (st.replied || 0) + (st.meeting || 0) : (st[c[0]] || 0)) : all;
+      if (c[0] && !n && filt.status !== c[0]) return;
+      var b = el("button", "chip", c[1]); b.type = "button";
+      b.setAttribute("aria-pressed", String(filt.status === c[0]));
+      b.appendChild(el("span", "n", n.toLocaleString("en-IN")));
+      b.addEventListener("click", function(){ filt.status = c[0]; refresh(); });
+      chips.appendChild(b);
+    });
+    var sel = $("camp"), cur = filt.camp, camps = (snap && snap.camps) || [];
+    var key = camps.map(function(c){ return c.campaign + c.n; }).join("|");
+    if (sel.dataset.key !== key) {
+      sel.dataset.key = key; sel.textContent = "";
+      var o0 = el("option", null, "All campaigns"); o0.value = ""; sel.appendChild(o0);
+      camps.forEach(function(c){ var o = el("option", null, (c.campaign || "No campaign") + " (" + c.n + ")"); o.value = c.campaign || ""; sel.appendChild(o); });
+      sel.value = cur;
+    }
+  }
+
+  function renderList(){
+    var box = $("list"), hdr = box.firstElementChild;
+    box.textContent = ""; box.appendChild(hdr);
+    var rows = (snap && snap.rows) || [], matched = (snap && snap.matched) || 0;
+    $("e-count").textContent = matched ? (rows.length < matched ? "showing " + rows.length + " of " + matched.toLocaleString("en-IN") : matched.toLocaleString("en-IN") + " people") : "";
+    if (!rows.length) { box.appendChild(el("p", "more", snap ? "Nobody matches." : "Waiting for the first pull.")); return; }
+    rows.forEach(function(r){
+      var b = el("button", "row"); b.type = "button";
+      var a = el("div", "cell");
+      a.appendChild(el("div", "nm", r.full_name || "Unknown"));
+      a.appendChild(el("div", "sub", [r.title, r.company].filter(Boolean).join(", ")));
+      var p = el("div", "cell c-pitch");
+      p.appendChild(el("div", "pitch", r.pitch || "Not sent yet"));
+      p.appendChild(el("div", "sub", (r.channel === "linkedin" ? "LinkedIn" : r.channel === "whatsapp" ? "WhatsApp" : "Email") + (r.steps ? ", step " + (r.step || 1) + " of " + r.steps : "") + (r.opens ? ", opened " + r.opens + "x" : "")));
+      var c = el("div", "cell c-camp sub", r.campaign || "");
+      var s = el("div", "cell c-st"); s.appendChild(stPill(r.status));
+      var w = el("div", "cell c-when when", when(r.last_event_at));
+      b.appendChild(a); b.appendChild(p); b.appendChild(c); b.appendChild(s); b.appendChild(w);
+      b.addEventListener("click", function(){ openPerson(r.id); });
+      box.appendChild(b);
+    });
+    if (rows.length < matched) box.appendChild(el("p", "more", "Showing the " + rows.length + " most recently active. Search or filter to find anyone else."));
+  }
+
+  function inr(n){
+    n = Number(n) || 0; var a = Math.abs(n);
+    if (a >= 1e7) return "\u20b9" + (n / 1e7).toFixed(2) + " Cr";
+    if (a >= 1e5) return "\u20b9" + (n / 1e5).toFixed(1) + " L";
+    return "\u20b9" + Math.round(n).toLocaleString("en-IN");
+  }
+  function renderGoal(){
+    var g = snap && snap.goal;
+    if (!g) { $("g-note").textContent = snap ? "No target set yet." : ""; return; }
+    var target = Number(g.target) || 0, secured = (Number(g.baseline) || 0) + (Number(g.won) || 0), weighted = Number(g.weighted) || 0;
+    var gap = Math.max(0, target - secured - weighted);
+    $("g-label").textContent = (g.label || "Revenue target") + ", " + fY.format(new Date(g.starts_on)) + " to " + fY.format(new Date(g.ends_on));
+    $("g-secured").textContent = inr(secured);
+    $("g-target").textContent = inr(target);
+    $("g-weighted").textContent = inr(weighted);
+    $("g-gap").textContent = inr(gap);
+    $("g-open").textContent = String(g.open_deals || 0);
+    var ps = target ? Math.min(100, secured / target * 100) : 0, pp = target ? Math.min(100, (secured + weighted) / target * 100) : 0;
+    $("b-sec").style.width = ps + "%"; $("b-pipe").style.width = pp + "%";
+    $("g-bar").setAttribute("aria-label", inr(secured) + " secured and " + inr(weighted) + " weighted pipeline of " + inr(target));
+    var note = "Secured is what existing clients bill inside the window plus deals won. Weighted pipeline is each open deal times its chance of closing.";
+    if (g.unvalued) note += " " + g.unvalued + " of " + g.open_deals + " open deals have no value yet, so the pipeline reads low until they are priced.";
+    $("g-note").textContent = note;
+    var t = g.weekly || {}, wk = $("week"); wk.textContent = "";
+    [["Replies", g.replies_week, t.replies], ["Meetings", g.meetings_week, t.meetings], ["Proposals sent", g.proposals_week, t.proposals], ["New deals", g.new_deals_week, t.new_deals], ["Won", g.won_week, t.won_inr, true]].forEach(function(m){
+      var box = el("div", "wk"), have = Number(m[1]) || 0, want = m[2] != null ? Number(m[2]) : null;
+      if (want != null && have >= want && want > 0) box.className = "wk hit";
+      box.appendChild(el("div", "micro", m[0]));
+      var v = el("div", "v", m[3] ? inr(have) : String(have));
+      if (want != null) v.appendChild(el("small", null, " / " + (m[3] ? inr(want) : want)));
+      box.appendChild(v); wk.appendChild(box);
+    });
+  }
+
+  function renderAll(){ renderGoal(); renderStats(); renderReplies(); renderTools(); renderList(); }
+
+  function openPerson(id){
+    openId = id;
+    $("scrim").className = "scrim show"; $("drawer").className = "drawer show";
+    var body = $("d-body"); body.textContent = ""; body.appendChild(el("p", "meta", "Loading..."));
+    $("close").focus();
+    if (!mcp) return;
+    mcp.callTool(SERVER, TOOL, {project_id: PROJECT, query: personQuery(id)}, {cache:false}).then(function(res){
+      if (openId !== id) return;
+      var d; try { d = parse(res); } catch (e) { body.textContent = ""; body.appendChild(el("p", "meta", "Could not read this person: " + e.message)); return; }
+      drawPerson(d);
+    }, function(err){ if (openId === id) { body.textContent = ""; body.appendChild(el("p", "meta", "Could not read this person just now.")); } });
+  }
+  function drawPerson(d){
+    var r = d.row || {}, body = $("d-body"); body.textContent = "";
+    body.appendChild(stPill(r.status));
+    body.appendChild(el("h3", null, r.full_name || "Unknown"));
+    body.appendChild(el("p", "meta", [r.title, r.company, [r.city, r.country].filter(Boolean).join(", ")].filter(Boolean).join("  /  ")));
+    if (r.reply || r.status === "replied" || r.status === "meeting") {
+      var h = el("div", "micro", "What they said" + (r.reply_at ? ", " + whenLong(r.reply_at) : ""));
+      body.appendChild(h);
+      body.appendChild(el("div", "said", r.reply || "They replied, but the reply landed in " + (r.sender || "a teammate's inbox") + ", which this OS cannot read. Open it there."));
+    }
+    var kv = el("dl", "kv");
+    function add(k, v, href){ if (!v) return; kv.appendChild(el("dt", null, k)); var dd = el("dd"); if (href) { var a = el("a", null, v); a.href = href; a.target = "_blank"; a.rel = "noopener"; dd.appendChild(a); } else dd.textContent = v; kv.appendChild(dd); }
+    add("Next", r.next_action || (r.status === "queued" ? "First email goes out when the sequence reaches them" : r.status === "sent" || r.status === "opened" ? "Next step goes out on schedule" : ""));
+    add("Campaign", r.campaign);
+    add("Step", r.steps ? (r.step || 1) + " of " + r.steps : "");
+    add("Opens", r.opens ? String(r.opens) : "");
+    add("Sent from", r.sender);
+    add("Email", r.email, r.email ? "mailto:" + r.email : null);
+    add("LinkedIn", r.linkedin_url ? "Profile" : "", r.linkedin_url && /^https?:\/\//.test(r.linkedin_url) ? r.linkedin_url : null);
+    add("In since", r.added_at ? whenLong(r.added_at) : "");
+    add("Last move", r.last_event_at ? whenLong(r.last_event_at) : "");
+    body.appendChild(kv);
+    var steps = d.steps || [];
+    if (steps.length) {
+      body.appendChild(el("div", "micro", "What this campaign sends them"));
+      var ol = el("ol", "steps"), cur = r.step || 1, finished = r.status === "finished" || r.status === "replied" || r.status === "meeting";
+      steps.forEach(function(s){
+        var done = finished ? s.position <= cur : s.position < cur, now = !finished && s.position === cur;
+        var li = el("li", done ? "done" : now ? "now" : "");
+        var sh = el("div", "sh");
+        var type = {auto_email:"Email", manual_email:"Email", linkedin_step_connect:"LinkedIn connect", linkedin_step_message:"LinkedIn message", call:"Call", action_item:"Task"}[s.step_type] || s.step_type || "Step";
+        sh.appendChild(el("span", null, "Step " + s.position + ": " + type + (s.wait_days ? ", " + s.wait_days + (s.wait_days === 1 ? " day" : " days") + " after the last" : "")));
+        sh.appendChild(el("span", null, done ? "Done" : now ? "Next" : "Later"));
+        li.appendChild(sh);
+        if (s.subject) li.appendChild(el("div", "sj", fill(s.subject, r)));
+        var t = textOf(fill(s.body, r)); if (t) li.appendChild(el("div", "bd", t));
+        ol.appendChild(li);
+      });
+      body.appendChild(ol);
+    }
+  }
+  function closePerson(){ openId = null; $("scrim").className = "scrim"; $("drawer").className = "drawer"; }
+  $("close").addEventListener("click", closePerson);
+  $("scrim").addEventListener("click", closePerson);
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closePerson(); });
+
+  function onData(result){
+    try { snap = parse(result); }
+    catch (e) { banner("The live data came back in a shape this page does not understand: " + e.message, "warn"); return; }
+    updatedAt = Date.now(); banner(""); setSync(true); renderAll(); tick();
+  }
+  function retract(msg, button){ setSync(false, "Not connected"); banner(msg, "warn", button); }
+  function onError(err){
+    var code = err && err.code;
+    switch (code) {
+      case "needs_reauth": retract("Your Supabase connector needs reconnecting. Reconnect Supabase in claude.ai Settings, Connectors."); break;
+      case "server_not_connected": retract("This page reads the outreach board through your Supabase connector. Add Supabase in claude.ai Settings, Connectors."); break;
+      case "selection_required": retract("You have more than one Supabase connector. Choose which one this page should use when claude.ai asks."); break;
+      case "server_not_found": retract("The Supabase connector this page used no longer exists. Add it again in claude.ai Settings, Connectors."); break;
+      case "blocked_by_policy": retract("Your organisation's policy blocks this page from reading Supabase."); break;
+      case "approval_required": case "not_in_manifest": case "consent_required":
+        retract("This page needs your permission to read the outreach board through Supabase. It only reads, every 30 seconds.", "Allow"); break;
+      case "not_granted": case "capability_disabled": case "capability_removed":
+        retract("Live data is not available in this view. Open the page in claude.ai to see it live."); break;
+      case "tool_error":
+        setSync(!!snap); banner("The database refused the query: " + (err.message || "tool error") + (snap ? " Showing the last good data." : ""), "warn"); break;
+      default:
+        setSync(!!snap, snap ? null : "Waiting"); banner("Supabase did not answer just now" + (snap ? ". Showing the last good data, it will retry." : ". It will retry."), null);
+    }
+  }
+  var gen = 0;
+  function refresh(){
+    clearTimeout(timer);
+    if (!mcp) { renderAll(); return; }
+    var g = ++gen;
+    mcp.callTool(SERVER, TOOL, {project_id: PROJECT, query: boardQuery()}, {cache:false})
+      .then(function(r){ if (g === gen) onData(r); }, function(e){ if (g === gen) onError(e); })
+      .then(function(){
+        if (g !== gen) return;
+        timer = setTimeout(function(){ if (document.visibilityState === "visible") refresh(); else timer = null; }, EVERY);
+      });
+  }
+  var qT = null;
+  $("q").addEventListener("input", function(){ clearTimeout(qT); qT = setTimeout(function(){ filt.q = $("q").value; refresh(); }, 350); });
+  $("camp").addEventListener("change", function(){ filt.camp = $("camp").value; refresh(); });
+  $("refresh").addEventListener("click", refresh);
+  $("banner-b").addEventListener("click", function(){ banner("Asking for permission...", null); refresh(); });
+  document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "visible" && mcp) refresh(); });
+
+  renderAll(); setInterval(tick, 1000);
+  if (!window.claude || typeof window.claude.use !== "function") {
+    setSync(false, "Offline"); banner("This copy is not connected. Open it in claude.ai to see your outreach live.", "warn"); return;
+  }
+  window.claude.use("mcp").then(function(ns){
+    if (!ns) { setSync(false, "Offline"); banner("Live data is not available in this view. Open the page in claude.ai with your Supabase connector.", "warn"); return; }
+    mcp = ns; refresh();
+  });
+})();
+</script>
