@@ -5,12 +5,12 @@ All times Asia/Kolkata. Working days Monday to Saturday, 09:00 to 21:00. Nothing
 ## Routines (scheduled tasks)
 | Routine | When | What |
 |---|---|---|
-| pulse | Hourly, 09:07 to 20:07, Mon to Sat | Inbox, replies, approvals from Kaavish, escalations |
+| pulse | Hourly, 09:07 to 20:07, Mon to Sat | Inbox, replies, approvals from Kaavish, escalations, task queue, held sends |
 | dawn | 06:43 daily | Signals, scoring, today's named accounts, outreach queue |
-| morning | 08:23 Mon to Sat | Brief to Kaavish, meeting prep, client day plan |
+| morning | 08:23 Mon to Sat | Brief to Kaavish, meeting prep, client day plan; outward sends before 09:00 held to 09:00 |
 | evening | 19:37 Mon to Sat | Closeout brief, follow-ups, collections, tomorrow prep |
 | weekly | Monday 07:53 | Pipeline, client health, ideas, capacity, payables, deliverability, founder content |
-| monthly | 1st of the month 09:17 | Invoicing, tax prep, P&L, concentration, renewals, quarterly items in Jan, Apr, Jul, Oct |
+| monthly | 1st of the month 09:17 (a Sunday 1st runs; outward sends held to Monday 09:00) | Invoicing, tax prep, P&L, concentration, renewals, quarterly items in Jan, Apr, Jul, Oct |
 
 ## India statutory deadlines (confirm with the CA)
 | What | When |

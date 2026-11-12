@@ -67,7 +67,8 @@ select o.id, g.action, g.gate, g.outward, g.limit_value, g.note from os.orgs o,
   ('payables.list','notify',false,null,'Prepare the weekly payables list'),
   ('payables.pay','never',true,null,'No bank access. The owner or finance pays'),
   -- agency brand and people
-  ('social.post','approve',true,null,'Post on agency or founder channels'),
+  ('social.post','approve',true,null,'Post on Kaavish''s own channels (founder posts, posted by hand)'),
+  ('client.post','approve',true,null,'Schedule or publish a client-approved post on a client channel'),
   ('press.reply','approve',true,null,'Reply to journalists'),
   ('hiring.reply','approve',true,null,'Reply to candidates'),
   -- hard stops

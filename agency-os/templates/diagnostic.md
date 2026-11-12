@@ -18,8 +18,8 @@
 
 ## Time and fee
 - {{2 to 3}} weeks from kickoff.
-- {{Fee and currency}}, 100% on confirmation, plus applicable tax.
+- {{Fee and currency}}: 50% on confirmation, 50% on delivery of the findings, plus applicable tax.
 - Credited in full against the first three months if you sign a subscription within 30 days of the findings.
 
 ## Next step
-Reply "go" and we send the invoice and two kickoff slots.
+Reply "go" and we send the advance invoice. Kickoff slots follow once it is paid.

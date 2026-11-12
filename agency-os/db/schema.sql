@@ -50,6 +50,7 @@ create table os.accounts (
   lane text,
   category text,
   market text,
+  city text,
   brand_tier text check (brand_tier in ('Luxury','Premium','Mass') or brand_tier is null),
   tier text not null default 'Volume' check (tier in ('Prime','Premium','Volume')),
   fit int, timing int, score int,
@@ -227,6 +228,7 @@ create table os.engagements (
   health_note text,
   status text not null default 'onboarding' check (status in ('onboarding','active','paused','ending','ended')),
   drive_folder text,
+  source text,
   created_at timestamptz not null default now()
 );
 
@@ -250,9 +252,11 @@ create table os.events (
   id uuid primary key default gen_random_uuid(),
   org_id uuid not null references os.orgs(id) on delete cascade,
   engagement_id uuid references os.engagements(id) on delete set null,
+  account_id uuid references os.accounts(id) on delete set null,
   name text not null,
   kind text check (kind in ('salon','dinner','launch','retail_weekend','festival','preview','shoot','other')),
   starts_at timestamptz,
+  ends_at timestamptz,
   city text,
   venue text,
   capacity int,
@@ -283,14 +287,19 @@ create table os.circle (
   created_at timestamptz not null default now()
 );
 
+-- A guest is a Circle member (circle_id) or a prospect or client guest (person_id).
 create table os.guests (
+  id uuid primary key default gen_random_uuid(),
   event_id uuid not null references os.events(id) on delete cascade,
-  circle_id uuid not null references os.circle(id) on delete cascade,
+  circle_id uuid references os.circle(id) on delete cascade,
+  person_id uuid references os.people(id) on delete cascade,
   rsvp text not null default 'invited' check (rsvp in ('shortlist','invited','yes','no','maybe','attended','no_show')),
   plus_ones int default 0,
   notes text,
-  primary key (event_id, circle_id)
+  constraint guests_who_check check (circle_id is not null or person_id is not null)
 );
+create unique index guests_event_circle on os.guests (event_id, circle_id) where circle_id is not null;
+create unique index guests_event_person on os.guests (event_id, person_id) where circle_id is null and person_id is not null;
 
 -- ---------- supply ----------
 create table os.vendors (
@@ -316,6 +325,7 @@ create table os.invoices (
   org_id uuid not null references os.orgs(id) on delete cascade,
   account_id uuid references os.accounts(id) on delete set null,
   engagement_id uuid references os.engagements(id) on delete set null,
+  event_id uuid references os.events(id) on delete set null,
   number text,
   entity text not null default 'india' check (entity in ('india','uae')),
   kind text not null default 'fee' check (kind in ('fee','advance','milestone','media','passthrough','reimbursement','credit_note')),
@@ -355,6 +365,8 @@ create table os.payables (
   org_id uuid not null references os.orgs(id) on delete cascade,
   vendor_id uuid references os.vendors(id) on delete set null,
   engagement_id uuid references os.engagements(id) on delete set null,
+  event_id uuid references os.events(id) on delete set null,
+  po_number text,
   description text not null,
   amount numeric not null,
   currency text not null default 'INR',
@@ -377,6 +389,7 @@ create table os.team (
   capacity_hours_week numeric,
   day_rate numeric,
   active boolean not null default true,
+  source text,
   notes text
 );
 
@@ -474,6 +487,7 @@ create index on os.touches (org_id, person_id, at desc);
 create index on os.deals (org_id, stage, next_step_due);
 create index on os.deliverables (org_id, status, due_on);
 create index on os.invoices (org_id, status, due_on);
+create index payables_org_po on os.payables (org_id, po_number) where po_number is not null;
 create index on os.approvals (org_id, status, requested_at);
 create index on os.tasks (org_id, status, due_on);
 create index on os.actions (org_id, at desc);

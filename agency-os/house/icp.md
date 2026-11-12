@@ -49,4 +49,4 @@ India (Mumbai, Delhi NCR, Bangalore, Hyderabad, Pune, Goa, Jaipur), UAE (Dubai, 
 - Competitor agencies' staff, except as partners or hires.
 - Anyone already touched in the last 30 days on another channel, unless replying to them.
 - People who asked not to be contacted, people below manager level with no named senior, students, job seekers with no fit.
-- Brands in conflict with a current client in the same category and city (check `os.accounts` status 'client' and the engagement scope).
+- Brands in conflict with a current client in the same normalised category and the same city (os.accounts.city of both accounts; null means unknown). Prospecting agents (scorer, finder) keep an unknown-city match as a flagged possible conflict, never suppress on market; pitch, proposal and onboarding agents escalate amber before committing on a possible conflict.
