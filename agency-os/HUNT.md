@@ -52,6 +52,18 @@ Before the run ends, check every draft it made:
 
 Fix the draft, or pull it and say why.
 
+## 5. Send
+
+Kaavish gave standing permission on 12 Nov 2026, so in `live` mode every email draft that passes the audit is sent without asking him. Use `send_message` with its `draftId` so it goes exactly as audited.
+- Send only between 09:00 and 21:00 IST. Outside that window, hold the drafts until 10:07 IST on the next working day.
+- Send at most 60 new emails a day.
+- After each send:
+  - set the `os.outreach` row to `sent` with `next_action` `Sent, waiting for them`
+  - add an `os.touches` row (channel `email`, direction `out`, kind `pitch` or `follow_up`)
+  - move a hunted deal from `signal` to `contacted`
+
+LinkedIn DMs wait until the Aimfox plan is active again.
+
 ## Finish
 
-One line to Kaavish: how many deals were followed up, how many companies were found, how many pitches are waiting, and the credits spent.
+One line to Kaavish: how many deals were followed up, how many companies were found and pitched, how many emails were sent, and the credits spent.
