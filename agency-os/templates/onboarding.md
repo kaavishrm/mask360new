@@ -20,6 +20,10 @@
 7. **AI rules:** allowed uses, never (people, likeness, product changes), labelling.
 8. **Do and don't list** from the founder or CMO.
 9. **Seasons and moments** that matter to them.
+10. **Content pillars:** three to five, each with one line.
+11. **FAQ with approved answers:** the client signs off each answer.
+12. **Holding line for a crisis:** signed by the client.
+13. **Moderation policy:** hide, delete and block rules, signed by the client.
 
 ## 3. KPIs and cadence
 | KPI | Baseline | Target | Source |
