@@ -422,7 +422,7 @@ select.field{max-width:260px}
     if (!g) { $("g-note").textContent = snap ? "No target set yet." : ""; return; }
     var target = Number(g.target) || 0, secured = (Number(g.baseline) || 0) + (Number(g.won) || 0), weighted = Number(g.weighted) || 0;
     var gap = Math.max(0, target - secured - weighted);
-    $("g-label").textContent = (g.label || "Revenue target") + ", " + fY.format(new Date(g.starts_on)) + " to " + fY.format(new Date(g.ends_on));
+    $("g-label").textContent = (g.label || "Revenue target") + (g.days_left != null ? ", " + g.days_left + " days left" : ", to " + fY.format(new Date(g.ends_on)));
     $("g-secured").textContent = inr(secured);
     $("g-target").textContent = inr(target);
     $("g-weighted").textContent = inr(weighted);
@@ -431,7 +431,7 @@ select.field{max-width:260px}
     var ps = target ? Math.min(100, secured / target * 100) : 0, pp = target ? Math.min(100, (secured + weighted) / target * 100) : 0;
     $("b-sec").style.width = ps + "%"; $("b-pipe").style.width = pp + "%";
     $("g-bar").setAttribute("aria-label", inr(secured) + " secured and " + inr(weighted) + " weighted pipeline of " + inr(target));
-    var note = "Secured is what existing clients bill inside the window plus deals won. Weighted pipeline is each open deal times its chance of closing.";
+    var note = "Counts only what bills by " + fY.format(new Date(g.ends_on)) + ". Secured is what existing clients bill by then plus deals won. Weighted pipeline is each open deal times its chance of closing, counting only the months it can bill before the deadline.";
     if (g.unvalued) note += " " + g.unvalued + " of " + g.open_deals + " open deals have no value yet, so the pipeline reads low until they are priced.";
     $("g-note").textContent = note;
     var t = g.weekly || {}, wk = $("week"); wk.textContent = "";
