@@ -5,7 +5,7 @@ export default {
   summary: 'What a monthly SIP grows to, with optional yearly step-up.',
   description: 'Free SIP calculator for mutual funds in India. See what a monthly SIP grows to over time, add a yearly step-up, or compare with a one-time lumpsum investment.',
   category: 'investments',
-  related: ['ppf-calculator', 'fd-calculator', 'emi-calculator'],
+  related: ['ppf-calculator', 'fd-calculator', 'emi-calculator', 'capital-gains-calculator-shares'],
   intro: 'Enter the monthly amount, expected return and how long you will invest. Add a yearly step-up to see how raising the SIP each year changes the result.',
   tool: `
 <form id="f">
