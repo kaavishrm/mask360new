@@ -90,7 +90,7 @@ th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;l
 .right{text-align:right}
 @media print{
   body{background:#fff;color:#000}
-  .nav,.footer,.crumbs,.lede,h1,.tool > :not(.sheet),.explainer,.faqs,.related,.ad-slot,.actions,.tool-note{display:none !important}
+  .nav,.footer,.crumbs,.lede,h1,.tool > :not(.sheet):not(form),.tool form > :not(.sheet),.explainer,.faqs,.related,.ad-slot,.actions,.tool-note{display:none !important}
   .page{padding:0;max-width:none}
   .tool{border:0;padding:0;margin:0}
   .sheet{border:0;border-radius:0;padding:0;margin:0;font-size:12pt}

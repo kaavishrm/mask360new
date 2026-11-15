@@ -1,11 +1,14 @@
+import invoiceDoc from './lib/invoice-doc.mjs';
+
 export default {
   slug: 'gst-invoice-generator',
+  lib: [invoiceDoc],
   title: 'GST Invoice Generator',
   h1: 'GST Invoice Generator: tax invoice with CGST, SGST or IGST',
   summary: 'A compliant tax invoice with HSN codes and automatic tax split.',
   description: 'Free GST invoice generator for India. Create a tax invoice with GSTIN, HSN or SAC codes, place of supply and automatic CGST, SGST or IGST calculation, then print or save as PDF. No signup, no watermark.',
   category: 'documents',
-  related: ['gst-calculator', 'salary-slip-generator', 'rent-receipt-generator'],
+  related: ['bill-of-supply-generator', 'quotation-generator', 'delivery-challan-generator', 'gst-calculator'],
   print: true,
   intro: 'Fill in seller, buyer and line items. The invoice picks CGST plus SGST or IGST from the place of supply and totals everything, including the amount in words.',
   tool: `
@@ -43,49 +46,25 @@ export default {
   <div class="sheet" id="sheet"></div>
 </form>`,
   script: function () {
-    const H = window.H;
-    const STATES = [['01', 'Jammu and Kashmir'], ['02', 'Himachal Pradesh'], ['03', 'Punjab'], ['04', 'Chandigarh'], ['05', 'Uttarakhand'], ['06', 'Haryana'], ['07', 'Delhi'], ['08', 'Rajasthan'], ['09', 'Uttar Pradesh'], ['10', 'Bihar'], ['11', 'Sikkim'], ['12', 'Arunachal Pradesh'], ['13', 'Nagaland'], ['14', 'Manipur'], ['15', 'Mizoram'], ['16', 'Tripura'], ['17', 'Meghalaya'], ['18', 'Assam'], ['19', 'West Bengal'], ['20', 'Jharkhand'], ['21', 'Odisha'], ['22', 'Chhattisgarh'], ['23', 'Madhya Pradesh'], ['24', 'Gujarat'], ['26', 'Dadra and Nagar Haveli and Daman and Diu'], ['27', 'Maharashtra'], ['29', 'Karnataka'], ['30', 'Goa'], ['31', 'Lakshadweep'], ['32', 'Kerala'], ['33', 'Tamil Nadu'], ['34', 'Puducherry'], ['35', 'Andaman and Nicobar Islands'], ['36', 'Telangana'], ['37', 'Andhra Pradesh'], ['38', 'Ladakh']];
+    const H = window.H, D = invoiceDoc();
     const f = document.getElementById('f'), items = document.getElementById('items'), sheet = document.getElementById('sheet');
-    const opts = STATES.map(([c, n]) => '<option value="' + c + '">' + c + ' ' + n + '</option>').join('');
-    document.getElementById('sstate').innerHTML = opts; document.getElementById('pos').innerHTML = opts;
-    f.elements.sstate.value = '27'; f.elements.pos.value = '27';
+    D.fillStates(f.elements.sstate, '27'); D.fillStates(f.elements.pos, '27');
     f.elements.date.value = H.today();
-    function addRow(d) {
-      d = d || {};
-      const row = document.createElement('div'); row.className = 'item';
-      row.innerHTML = '<label>Description<input type="text" class="i-desc" value="' + H.esc(d.desc || '') + '" placeholder="Website design services"></label>' +
-        '<label>HSN / SAC<input type="text" class="i-hsn" value="' + H.esc(d.hsn || '') + '" placeholder="998314"></label>' +
-        '<label>Qty<input type="number" class="i-qty" value="' + (d.qty || 1) + '" min="0" step="any"></label>' +
-        '<label>Unit<input type="text" class="i-unit" value="' + H.esc(d.unit || 'nos') + '"></label>' +
-        '<label>Rate (₹)<input type="number" class="i-rate" value="' + (d.rate || 0) + '" min="0" step="any"></label>' +
-        '<label>GST %<select class="i-gst"><option value="0">0</option><option value="5">5</option><option value="12">12</option><option value="18" selected>18</option><option value="28">28</option></select></label>' +
-        '<button type="button" class="btn small secondary i-del" title="Remove line">×</button>';
-      if (d.gst !== undefined) row.querySelector('.i-gst').value = String(d.gst);
-      row.querySelector('.i-del').addEventListener('click', () => { row.remove(); render(); });
-      items.appendChild(row);
-    }
+    const addRow = (d) => D.addRow(items, d, { tax: true, onChange: render });
     addRow({ desc: 'Consulting services', hsn: '998311', qty: 1, unit: 'nos', rate: 25000, gst: 18 });
     document.getElementById('add').addEventListener('click', () => { addRow(); render(); });
     function render() {
       const sState = f.elements.sstate.value, pos = f.elements.pos.value, inter = sState !== pos;
-      const sname = f.elements.sstate.options[f.elements.sstate.selectedIndex].text.slice(3), pname = f.elements.pos.options[f.elements.pos.selectedIndex].text.slice(3);
-      let taxable = 0, tax = 0, rows = '';
-      items.querySelectorAll('.item').forEach((r, i) => {
-        const qty = H.num(r.querySelector('.i-qty').value), rate = H.num(r.querySelector('.i-rate').value), g = H.num(r.querySelector('.i-gst').value);
-        const amt = qty * rate, t = amt * g / 100; taxable += amt; tax += t;
-        rows += '<tr><td>' + (i + 1) + '</td><td style="text-align:left">' + H.esc(r.querySelector('.i-desc').value) + '</td><td>' + H.esc(r.querySelector('.i-hsn').value) + '</td><td>' + qty + ' ' + H.esc(r.querySelector('.i-unit').value) + '</td><td>' + H.inr(rate, 2) + '</td><td>' + H.inr(amt, 2) + '</td><td>' + g + '%</td><td>' + H.inr(t, 2) + '</td></tr>';
-      });
-      const total = taxable + tax, rounded = Math.round(total), roundOff = rounded - total;
-      const taxRows = inter ? '<tr><td>IGST</td><td>' + H.inr(tax, 2) + '</td></tr>' : '<tr><td>CGST</td><td>' + H.inr(tax / 2, 2) + '</td></tr><tr><td>SGST / UTGST</td><td>' + H.inr(tax / 2, 2) + '</td></tr>';
-      const dmy = (s) => s ? s.split('-').reverse().join('/') : '';
-      sheet.innerHTML = '<div class="row"><div><h2>Tax Invoice</h2><div class="muted">Invoice no. <strong>' + H.esc(H.str(f, 'no')) + '</strong><br>Date: ' + dmy(H.str(f, 'date')) + (H.str(f, 'due') ? '<br>Due: ' + dmy(H.str(f, 'due')) : '') + '</div></div>' +
-        '<div class="right"><strong>' + (H.esc(H.str(f, 'sname')) || 'Seller name') + '</strong><br><span class="muted">' + H.nl(H.str(f, 'saddr')) + (H.str(f, 'sgst') ? '<br>GSTIN: ' + H.esc(H.str(f, 'sgst').toUpperCase()) : '') + '<br>State: ' + sname + ' (' + sState + ')' + (H.str(f, 'scontact') ? '<br>' + H.esc(H.str(f, 'scontact')) : '') + '</span></div></div>' +
-        '<div class="row" style="margin:14px 0"><div><strong>Bill to</strong><br>' + (H.esc(H.str(f, 'bname')) || 'Buyer name') + '<br><span class="muted">' + H.nl(H.str(f, 'baddr')) + (H.str(f, 'bgst') ? '<br>GSTIN: ' + H.esc(H.str(f, 'bgst').toUpperCase()) : '') + '</span></div><div><strong>Place of supply</strong><br>' + pname + ' (' + pos + ')<br><span class="muted">' + (inter ? 'Inter-state supply: IGST' : 'Intra-state supply: CGST + SGST') + '</span></div></div>' +
-        '<div class="tbl-wrap"><table><thead><tr><th>#</th><th style="text-align:left">Description</th><th>HSN/SAC</th><th>Qty</th><th>Rate</th><th>Taxable</th><th>GST</th><th>Tax</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-        '<div class="row" style="align-items:flex-start"><div style="flex:1;min-width:200px">' + (H.str(f, 'bank') ? '<strong>Payment</strong><br><span class="muted">' + H.nl(H.str(f, 'bank')) + '</span>' : '') + (H.str(f, 'terms') ? '<br><span class="muted">' + H.esc(H.str(f, 'terms')) + '</span>' : '') + (H.str(f, 'notes') ? '<p class="muted">' + H.nl(H.str(f, 'notes')) + '</p>' : '') + '</div>' +
-        '<table style="width:auto;min-width:260px"><tbody><tr><td>Taxable value</td><td>' + H.inr(taxable, 2) + '</td></tr>' + taxRows + (Math.abs(roundOff) >= 0.005 ? '<tr><td>Round off</td><td>' + (roundOff >= 0 ? '' : '-') + H.inr(Math.abs(roundOff), 2) + '</td></tr>' : '') + '<tr><td><strong>Total</strong></td><td><strong>' + H.inr(rounded, 2) + '</strong></td></tr></tbody></table></div>' +
-        '<p><span class="muted">Amount in words:</span> ' + H.words(rounded) + '</p>' +
-        '<div class="sig"><div class="muted">Whether tax is payable on reverse charge: No</div><div>For ' + (H.esc(H.str(f, 'sname')) || 'Seller') + '<br><br><br>Authorised signatory</div></div>';
+      const sname = D.stateName(f.elements.sstate), pname = D.stateName(f.elements.pos);
+      const it = D.readItems(items, true);
+      const tot = D.totals('Taxable value', it.taxable, D.taxRows(it.tax, inter), it.taxable + it.tax);
+      sheet.innerHTML = '<div class="row"><div><h2>Tax Invoice</h2><div class="muted">Invoice no. <strong>' + H.esc(H.str(f, 'no')) + '</strong><br>Date: ' + D.dmy(H.str(f, 'date')) + (H.str(f, 'due') ? '<br>Due: ' + D.dmy(H.str(f, 'due')) : '') + '</div></div>' +
+        '<div class="right">' + D.party(H.str(f, 'sname'), 'Seller name', H.str(f, 'saddr'), H.str(f, 'sgst'), '<br>State: ' + sname + ' (' + sState + ')' + (H.str(f, 'scontact') ? '<br>' + H.esc(H.str(f, 'scontact')) : '')) + '</div></div>' +
+        '<div class="row" style="margin:14px 0"><div><strong>Bill to</strong><br>' + D.party(H.str(f, 'bname'), 'Buyer name', H.str(f, 'baddr'), H.str(f, 'bgst')) + '</div><div><strong>Place of supply</strong><br>' + pname + ' (' + pos + ')<br><span class="muted">' + (inter ? 'Inter-state supply: IGST' : 'Intra-state supply: CGST + SGST') + '</span></div></div>' +
+        it.table +
+        '<div class="row" style="align-items:flex-start"><div style="flex:1;min-width:200px">' + (H.str(f, 'bank') ? '<strong>Payment</strong><br><span class="muted">' + H.nl(H.str(f, 'bank')) + '</span>' : '') + (H.str(f, 'terms') ? '<br><span class="muted">' + H.esc(H.str(f, 'terms')) + '</span>' : '') + (H.str(f, 'notes') ? '<p class="muted">' + H.nl(H.str(f, 'notes')) + '</p>' : '') + '</div>' + tot.html + '</div>' +
+        '<p><span class="muted">Amount in words:</span> ' + H.words(tot.rounded) + '</p>' +
+        D.signature('Whether tax is payable on reverse charge: No', H.str(f, 'sname'));
     }
     H.bind(f, render);
     items.addEventListener('input', render); items.addEventListener('change', render);
