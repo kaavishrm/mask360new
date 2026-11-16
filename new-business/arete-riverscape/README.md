@@ -4,8 +4,8 @@ Everything Mask360 needs to start selling Riverscape villas on day 1 after Arete
 
 - **Client:** Arete Group. **Project:** Riverscape, Tukwada, Vapi. 195 villas, 4 and 5 BHK, Rs 2.5 to 4 Cr.
 - **Mandate:** 90 days. Relaunch 20 villas, sell in blocks to companies and investors, close at six Open Weekends.
-- **Commercials pitched:** Rs 18,00,000 fixed (50/25/25: Rs 9 lakh, Rs 4.5 lakh, Rs 4.5 lakh) plus 1% of agreement value per villa sold. Proposal sent as `M360-Riverscape-Commercial-Proposal.pdf` (2026-11-03).
-- **Status (2026-11-03):** PITCHED. Waiting for Arete to sign and to share the break-even number.
+- **Commercials pitched (revised 2026-11-16):** Rs 16,00,000 fixed in 3 payments (Rs 6 lakh on signing, Rs 5 lakh day 30, Rs 5 lakh day 60) plus 2% of agreement value per villa sold. Proposal: `proposal/M360-Riverscape-Commercial-Proposal.pdf`.
+- **Status (2026-11-16):** NEGOTIATING. Call with Moni Vora on 2026-11-13; revised proposal due 2026-11-16. Arete may visit Mumbai on 17 or 18 November. Life sciences project (PIP) decision after their directors meet on 18 and 19 November.
 
 ## Files
 

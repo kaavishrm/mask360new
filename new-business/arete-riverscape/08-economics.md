@@ -2,26 +2,27 @@
 
 Internal. All figures INR, estimates, excluding GST. Revisit once the team is contracted.
 
-## Chosen plan (2026-11-03): 3 new people, Rs 18 lakh fixed
+## Current deal (2026-11-16): Rs 16 lakh fixed in 3 payments, plus 2%
+
+Revised after the 2026-11-13 call with Moni Vora (Arete): management would not approve Rs 18 lakh in one go while construction is on hold, and offered 2% per villa in exchange for a lower fixed fee.
 
 | | Amount |
 |---|---|
-| Fixed fee | Rs 18,00,000 |
+| Fixed fee: Rs 6,00,000 on signing, Rs 5,00,000 day 30, Rs 5,00,000 day 60 | Rs 16,00,000 |
 | 3 new people, 3 months | (Rs 4,65,000) |
 | Creative team time, film, travel, GujRERA and legal, tools | (Rs 6,90,000) |
-| **Kept from the fixed fee** | **Rs 6,45,000** |
-| Per villa sold: 1% success fee less 15% team bonus | about Rs 2,76,000 |
+| **Kept from the fixed fee** | **Rs 4,45,000** |
+| Per villa sold: 2% success fee (about Rs 6,50,000) less 15% team bonus | about Rs 5,52,500 |
 
 | Villas sold | Total profit |
 |---|---|
-| 0 | Rs 6,45,000 |
-| 2 | about Rs 12,00,000 |
-| 5 | about Rs 20,30,000 |
-| 10 | about Rs 34,10,000 |
-| 15 | about Rs 47,90,000 |
-| 20 | about Rs 61,70,000 |
+| 0 | Rs 4,45,000 |
+| 2 | about Rs 15,50,000 |
+| 5 | about Rs 32,10,000 |
+| 10 | about Rs 59,70,000 |
+| 15 | about Rs 87,30,000 |
 
-No guarantees and no fee waiver: the proposal makes no sales commitment (changed 2026-11-03). The 5-person model below is the fallback if Kaavish cannot run the weekends; ignore its waiver rows, they are from the earlier draft.
+No guarantees and no fee waiver. At 2% Mask360 is clearly acting as a selling agent: file the GujRERA agent registration before the first booking. Sections below are the earlier Rs 18 lakh plus 1% model, kept for reference.
 
 ## Revenue
 
