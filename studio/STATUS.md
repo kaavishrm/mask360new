@@ -1,6 +1,6 @@
 # Status
 
-Last run: 2026-11-15 (fifth scheduled operator run)
+Last run: 2026-11-16 (sixth scheduled operator run)
 
 Pull request for the studio branch: #3, open as a draft. Do not open another; push to the branch and the PR updates. The scheduled task is named "Studio operator" and fires daily at 02:45 IST.
 
@@ -15,14 +15,14 @@ Pull request for the studio branch: #3, open as a draft. Do not open another; pu
 
 ## Backlog, in priority order
 
-1. P1 content accuracy: confirm against official state notifications the professional tax points where secondary sources conflicted on 11 Nov 2026: Karnataka (whether ₹300 applies in February), Maharashtra (women's exemption up to ₹25,000), Gujarat threshold (₹12,000), Tamil Nadu and Kerala half-yearly slabs, and whether Odisha abolished the tax from 1 Apr 2026. Update the in-hand salary calculator if any differ.
-2. P1 housekeeping: move the in-hand salary and TDS calculators onto the shared engine in tools/lib/income-tax.mjs (they still carry their own copy of the slab code). Smoke test values must not change.
-3. P2: milestone 1, the extension skeleton with a conversation list read from the page's own links, tested against saved fixtures.
-4. P4: demand scan for a USD tool cluster; write the findings to reports/ and pick one.
-5. P3: first weekly shot.
-6. P1: capital gains for property (Section 112, indexation choice for property bought before 23 Jul 2024) and for debt funds; verify rates first.
-7. P1: retirement corpus and inflation calculators; home loan eligibility; loan prepayment vs invest.
-8. P1: credit note, purchase order and cash receipt generators on the shared invoice library in tools/lib/invoice-doc.mjs; then the letter generators (offer, experience, NOC, rent agreement).
+1. P1 housekeeping: move the in-hand salary and TDS calculators onto the shared engine in tools/lib/income-tax.mjs (they still carry their own copy of the slab code). Smoke test values must not change.
+2. P2: milestone 1, the extension skeleton with a conversation list read from the page's own links, tested against saved fixtures.
+3. P4: demand scan for a USD tool cluster; write the findings to reports/ and pick one.
+4. P3: first weekly shot.
+5. P1: capital gains for property (Section 112, indexation choice for property bought before 23 Jul 2024) and for debt funds; verify rates first.
+6. P1: retirement corpus and inflation calculators; home loan eligibility; loan prepayment vs invest.
+7. P1: credit note, purchase order and cash receipt generators on the shared invoice library in tools/lib/invoice-doc.mjs; then the letter generators (offer, experience, NOC, rent agreement).
+8. P1 content accuracy, due April 2027: re-verify professional tax schedules after the state budgets (verified 16 Nov 2026; Telangana, Andhra Pradesh and Madhya Pradesh were not re-checked against official texts), the EPF rate for FY 2026-27, the PPF rate for Jan to Mar 2027, and any Budget 2027 slab change.
 
 ## Blocked on owner
 

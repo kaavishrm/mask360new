@@ -35,7 +35,7 @@
     <label>Variable pay or bonus inside CTC (₹ per year) <span class="hint">Paid separately, not monthly</span><input type="number" name="vp" value="0" min="0" step="5000"></label>
     <label>Employer PF contribution<select name="pf"><option value="full">12% of full basic</option><option value="cap">12% of basic, capped at the ₹25,000 wage ceiling</option><option value="none">No PF</option></select></label>
     <label>State for professional tax<select name="state">
-      <option value="MH">Maharashtra</option><option value="KA">Karnataka</option><option value="WB">West Bengal</option><option value="TG">Telangana</option><option value="AP">Andhra Pradesh</option><option value="GJ">Gujarat</option><option value="MP">Madhya Pradesh</option><option value="TN">Tamil Nadu (Chennai)</option><option value="KL">Kerala</option><option value="NONE">No professional tax (Delhi, UP, Haryana, Rajasthan, Punjab, Goa and others)</option><option value="MANUAL">Enter the monthly amount myself</option>
+      <option value="MH">Maharashtra</option><option value="KA">Karnataka</option><option value="WB">West Bengal</option><option value="TG">Telangana</option><option value="AP">Andhra Pradesh</option><option value="GJ">Gujarat</option><option value="MP">Madhya Pradesh</option><option value="TN">Tamil Nadu (Chennai)</option><option value="KL">Kerala</option><option value="NONE">No professional tax (Delhi, UP, Haryana, Rajasthan, Punjab, Goa, Odisha and others)</option><option value="MANUAL">Enter the monthly amount myself</option>
     </select></label>
     <label>Professional tax per month if entered manually (₹)<input type="number" name="ptm" value="200" min="0" step="1"></label>
     <label>Tax regime<select name="regime"><option value="new">New regime (default)</option><option value="old">Old regime</option></select></label>
@@ -44,6 +44,7 @@
     <label class="chk"><input type="checkbox" name="incpf" checked> CTC includes the employer's PF and ESI share</label>
     <label class="chk"><input type="checkbox" name="grat"> CTC includes a gratuity provision (4.81% of basic)</label>
     <label class="chk"><input type="checkbox" name="esi" checked> Employer is covered under ESI (applies only if gross is ₹21,000 a month or less)</label>
+    <label class="chk"><input type="checkbox" name="woman"> Woman employee (Maharashtra exempts women earning up to ₹25,000 a month)</label>
   </div></fieldset>
   <fieldset><legend>Old regime only</legend><div class="grid">
     <label>Rent you pay per month (₹) <span class="hint">For the HRA exemption</span><input type="number" name="rent" value="0" min="0" step="500"></label>
@@ -63,7 +64,7 @@ In-hand       = Gross minus employee PF minus professional tax minus ESI minus T
 <p><strong>Gratuity.</strong> Some offer letters add 4.81% of basic as a gratuity provision. It is paid only if you complete five years, and it is calculated on your last drawn basic, so the provision in your CTC is an estimate, not money set aside for you.</p>
 <p><strong>Variable pay.</strong> Performance bonus, retention bonus and joining bonus are part of CTC but are paid separately, often once a year and not in full. The calculator removes them from the monthly figure and adds them back to the annual total, taxed.</p>
 <h3>What comes off your payslip</h3>
-<p><strong>Employee PF</strong> is 12% of PF wages, on the same base the employer uses. <strong>Professional tax</strong> is a state levy with a ceiling of ₹2,500 a year. Maharashtra charges ₹200 a month and ₹300 in February for anyone above ₹10,000 a month. Karnataka charges ₹200 a month from ₹25,000. West Bengal, Telangana, Andhra Pradesh, Gujarat and Madhya Pradesh have their own slabs, and Tamil Nadu and Kerala collect half-yearly. Delhi, Uttar Pradesh, Haryana, Rajasthan, Punjab and Goa levy none. <strong>ESI</strong> applies at 0.75% of gross when gross is ₹21,000 a month or less and the establishment is covered. <strong>TDS</strong> is your estimated income tax for the year, deducted in equal monthly instalments by the employer.</p>
+<p><strong>Employee PF</strong> is 12% of PF wages, on the same base the employer uses. <strong>Professional tax</strong> is a state levy with a ceiling of ₹2,500 a year. Maharashtra charges ₹175 a month between ₹7,500 and ₹10,000, then ₹200 a month and ₹300 in February, and since April 2023 exempts women earning up to ₹25,000. Karnataka charges ₹200 a month and ₹300 in February from ₹25,000, the February figure since April 2025 under Karnataka Act 33 of 2025. West Bengal's new schedule from 1 October 2026 exempts salaries up to ₹20,000 and tops out at ₹208 a month. Telangana, Andhra Pradesh, Gujarat (₹200 above ₹12,000) and Madhya Pradesh have their own slabs. Chennai and Kerala collect half-yearly on schedules revised from October 2024. Delhi, Uttar Pradesh, Haryana, Rajasthan, Punjab and Goa levy none, and Odisha abolished its tax from 1 April 2026. <strong>ESI</strong> applies at 0.75% of gross when gross is ₹21,000 a month or less and the establishment is covered. <strong>TDS</strong> is your estimated income tax for the year, deducted in equal monthly instalments by the employer.</p>
 <h3>New regime or old</h3>
 <p>Under the new regime the only deduction is the ₹75,000 standard deduction, and tax is nil when taxable income is ₹12 lakh or less, which for a salaried person means a gross salary of up to ₹12.75 lakh. Under the old regime you get a ₹50,000 standard deduction, the HRA exemption, professional tax and whatever you claim under 80C, 80D and the rest. Switch the regime above and the TDS line changes; the <a href="/income-tax-calculator/">income tax calculator</a> shows the full comparison.</p>
 <h3>Where this calculator simplifies</h3>
@@ -94,15 +95,16 @@ In-hand       = Gross minus employee PF minus professional tax minus ESI minus T
     }
     // Professional tax: g is gross salary per month. Returns [typical month, annual].
     const PT = {
-      MH: (g) => { const m = g <= 7500 ? 0 : g <= 10000 ? 175 : 200; return [m, m === 200 ? 2500 : m * 12]; },
-      KA: (g) => { const m = g >= 25000 ? 200 : 0; return [m, m * 12]; },
-      WB: (g) => { const m = g <= 10000 ? 0 : g <= 15000 ? 110 : g <= 25000 ? 130 : g <= 40000 ? 150 : 200; return [m, m * 12]; },
+      // Verified against official texts and current notifications on 16 Nov 2026; see the explainer for dates.
+      MH: (g, woman) => { if (woman && g <= 25000) return [0, 0]; const m = g <= 7500 ? 0 : g <= 10000 ? 175 : 200; return [m, m === 200 ? 2500 : m * 12]; },
+      KA: (g) => { const m = g >= 25000 ? 200 : 0; return [m, m === 200 ? 2500 : 0]; },
+      WB: (g) => { const m = g <= 20000 ? 0 : g <= 30000 ? 100 : g <= 50000 ? 140 : g <= 100000 ? 170 : 208; return [m, m * 12]; },
       TG: (g) => { const m = g <= 15000 ? 0 : g <= 20000 ? 150 : 200; return [m, m * 12]; },
       AP: (g) => { const m = g <= 15000 ? 0 : g <= 20000 ? 150 : 200; return [m, m * 12]; },
       GJ: (g) => { const m = g <= 12000 ? 0 : 200; return [m, m * 12]; },
       MP: (g) => { const y = g * 12; const a = y <= 225000 ? 0 : y <= 300000 ? 1500 : y <= 400000 ? 2000 : 2500; return [Math.round(a / 12), a]; },
-      TN: (g) => { const h = g * 6; const s = h <= 21000 ? 0 : h <= 30000 ? 135 : h <= 45000 ? 315 : h <= 60000 ? 690 : h <= 75000 ? 1025 : 1250; return [Math.round(s / 6), s * 2]; },
-      KL: (g) => { const h = g * 6; const s = h < 12000 ? 0 : h < 18000 ? 120 : h < 30000 ? 180 : h < 45000 ? 300 : h < 60000 ? 450 : h < 75000 ? 600 : h < 100000 ? 750 : h < 125000 ? 1000 : 1250; return [Math.round(s / 6), s * 2]; },
+      TN: (g) => { const h = g * 6; const s = h <= 21000 ? 0 : h <= 30000 ? 180 : h <= 45000 ? 425 : h <= 60000 ? 930 : h <= 75000 ? 1025 : 1250; return [Math.round(s / 6), s * 2]; },
+      KL: (g) => { const h = g * 6; const s = h < 12000 ? 0 : h < 18000 ? 320 : h < 30000 ? 450 : h < 45000 ? 600 : h < 100000 ? 750 : h < 125000 ? 1000 : 1250; return [Math.round(s / 6), s * 2]; },
       NONE: () => [0, 0],
     };
     H.bind('f', (f) => {
@@ -127,7 +129,7 @@ In-hand       = Gross minus employee PF minus professional tax minus ESI minus T
       let splM = grossM - basicM - hraM;
       if (splM < 0) { hraM = Math.max(0, grossM - basicM); splM = 0; }
       const st = f.elements.state.value;
-      const [ptM, ptY] = st === 'MANUAL' ? [H.val(f, 'ptm'), H.val(f, 'ptm') * 12] : PT[st](grossM);
+      const [ptM, ptY] = st === 'MANUAL' ? [H.val(f, 'ptm'), H.val(f, 'ptm') * 12] : PT[st](grossM, f.elements.woman.checked);
       const isNew = f.elements.regime.value === 'new';
       const rentY = H.val(f, 'rent') * 12, metro = H.val(f, 'metro') === 1;
       const hraEx = !isNew && rentY > 0 ? Math.max(0, Math.min(hraM * 12, rentY - 0.1 * basicM * 12, (metro ? 0.5 : 0.4) * basicM * 12)) : 0;
@@ -157,7 +159,7 @@ In-hand       = Gross minus employee PF minus professional tax minus ESI minus T
         row(b('Gross salary'), grossM, grossY) +
         row('of which basic', basicM, basicM * 12) + row('of which HRA', hraM, hraM * 12) + row('of which special and other allowances', splM, splM * 12) +
         row('Employee PF, 12%' + (pfMode === 'cap' ? ' of basic up to ₹25,000' : pfMode === 'full' ? ' of basic' : ''), -pfM, -pfY) +
-        row('Professional tax' + (st === 'MH' && ptM === 200 ? ' (₹300 in February)' : ''), -ptM, -ptY) +
+        row('Professional tax' + (ptM === 200 && ptY === 2500 ? ' (₹300 in February)' : ''), -ptM, -ptY) +
         (esiEmpY ? row('ESI, employee share 0.75%', -esiM, -esiEmpY) : '') +
         row('Income tax deducted at source, ' + (isNew ? 'new' : 'old') + ' regime', -tdsM, -taxY) +
         row(b('In hand'), inHandM, inHandY) + '</tbody></table></div>' +
