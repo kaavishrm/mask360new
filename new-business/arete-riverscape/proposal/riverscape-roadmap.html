@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Riverscape Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* A4 print document, four pages: cover (dark), method (paper), commercials (paper), team and terms (dark) */
+:root{
+  --night:#0B0B0B; --night-card:#171716; --night-ink:#F2EFEA; --night-mute:#9C9890; --night-line:rgba(255,255,255,.14);
+  --paper:#ECE8E2; --paper-card:#DFDAD3; --ink:#111111; --mute:#5F5B55; --line:rgba(17,17,17,.16);
+  --flame-dark:#E8794A; --flame-light:#C8461E;
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono','DejaVu Sans Mono',ui-monospace,monospace;
+}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#777}
+body{font-family:var(--sans);font-weight:300;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;margin:0 auto}
+.page:last-child{page-break-after:auto;break-after:auto}
+.dark{background:var(--night);color:var(--night-ink)}
+.light{background:var(--paper);color:var(--ink)}
+.in{position:absolute;inset:0;padding:18mm 20mm 0 20mm;display:flex;flex-direction:column}
+.mono{font-family:var(--mono);font-weight:400}
+.track{font-family:var(--mono);font-size:6.6pt;letter-spacing:.42em;text-transform:uppercase}
+.dark .track{color:var(--night-mute)}
+.light .track{color:var(--mute)}
+.top{display:flex;justify-content:space-between;align-items:flex-start}
+.logo{height:9mm;width:auto;display:block}
+h1,h2{font-weight:300;letter-spacing:-.025em;line-height:1.04}
+h2{font-size:27pt;margin-top:8mm}
+.dark em{font-style:normal;color:var(--flame-dark)}
+.light em{font-style:normal;color:var(--flame-light)}
+.sub{font-size:10pt;margin-top:4mm;line-height:1.5}
+.light .sub{color:var(--mute)}
+.dark .sub{color:var(--night-mute)}
+.foot{position:absolute;left:20mm;right:20mm;bottom:12mm;border-top:1px solid var(--line);padding-top:4mm;display:flex;justify-content:space-between;font-family:var(--mono);font-size:6.6pt}
+.dark .foot{border-color:var(--night-line);color:var(--night-mute)}
+.light .foot{color:var(--mute)}
+.foot a{color:inherit;text-decoration:none}
+
+/* cover */
+.cover-photo{position:absolute;left:0;right:0;top:0;height:168mm;background:url(assets/cover.jpg) center 62%/cover no-repeat}
+.cover-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:40mm;background:linear-gradient(to bottom,rgba(11,11,11,0),var(--night))}
+.cover-photo::before{content:"";position:absolute;inset:0 0 auto 0;height:58mm;background:linear-gradient(to top,rgba(11,11,11,0),rgba(11,11,11,.82));z-index:1}
+.cover-top{position:absolute;left:20mm;right:20mm;top:16mm;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.lockup{display:flex;align-items:center;gap:5mm}
+.lockup .x{color:var(--night-ink);opacity:.7;font-size:10pt}
+.lockup .rs{height:16mm;width:auto;filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
+.cover-top .track{color:var(--night-ink)}
+.cover-body{position:absolute;left:20mm;right:20mm;top:166mm}
+.cover-body h1{font-size:35pt;margin-top:7mm}
+.cover-body .sub{font-size:10.4pt;max-width:150mm;color:#D9D5CE;margin-top:6mm;line-height:1.55}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;margin-top:9mm;border-top:1px solid var(--night-line);padding-top:5mm}
+.stats b{display:block;font-weight:300;font-size:15pt;letter-spacing:-.02em}
+.stats span{display:block;font-size:6.8pt;color:var(--night-mute);margin-top:1.6mm;line-height:1.45}
+.cover .foot{border-top:1px solid var(--night-line)}
+.cover .foot a{color:var(--flame-dark);border-bottom:1px solid var(--flame-dark)}
+
+/* in three lines */
+.three{list-style:none;margin-top:11mm;border-top:1.5px solid var(--ink)}
+.three li{display:grid;grid-template-columns:14mm 1fr;gap:4mm;padding:6.5mm 0 7mm;border-bottom:1px solid var(--line)}
+.three .no{font-family:var(--mono);font-size:8pt;color:var(--flame-light);padding-top:2.2mm}
+.three .lab{display:block;font-family:var(--mono);font-size:6.2pt;letter-spacing:.36em;text-transform:uppercase;color:var(--mute);margin-bottom:2.6mm}
+.three p{font-size:17pt;line-height:1.25;letter-spacing:-.015em;font-weight:300}
+.three p b{font-weight:500}
+.photo{margin-top:10mm;height:70mm;border-radius:3.5mm;background:url(assets/promenade.jpg) center 55%/cover no-repeat}
+/* method */
+.moves{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:7mm}
+.move{border-top:1.5px solid var(--ink);padding-top:4mm}
+.move .track{font-size:5.8pt;letter-spacing:.26em;color:var(--flame-light);white-space:nowrap}
+.move h3{font-weight:500;font-size:12pt;margin:2.5mm 0 3mm;letter-spacing:-.01em}
+.move ul{list-style:none;display:flex;flex-direction:column;gap:1.8mm}
+.move li{font-size:7.6pt;line-height:1.42;padding-left:3.2mm;position:relative}
+.move li::before{content:"";position:absolute;left:0;top:1.7mm;width:1.2mm;height:1.2mm;border-radius:50%;background:var(--mute)}
+.move .why{font-size:7.4pt;color:var(--mute);margin-top:3.5mm;padding-top:3mm;border-top:1px solid var(--line);line-height:1.45}
+.band{margin-top:5mm;height:24mm;border-radius:3.5mm;background:url(assets/pool.jpg) center 55%/cover no-repeat}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:8mm;margin-top:6mm}
+.two .track{white-space:nowrap;letter-spacing:.3em;font-size:6pt}
+.cal{list-style:none;border-top:1px solid var(--ink);margin-top:2.5mm}
+.cal li{display:grid;grid-template-columns:22mm 1fr;gap:3mm;padding:1.2mm 0;border-bottom:1px solid var(--line);font-size:7.6pt;line-height:1.4}
+.cal .d{font-family:var(--mono);font-size:6.8pt;padding-top:.3mm}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:0 5mm;border-top:1px solid var(--ink);margin-top:2.5mm}
+.tg div{padding:2.6mm 0 2.8mm;border-bottom:1px solid var(--line)}
+.tg b{display:block;font-weight:300;font-size:17pt;letter-spacing:-.02em;line-height:1}
+.tg span{display:block;font-size:6.8pt;color:var(--mute);margin-top:1.2mm}
+.promise{margin-top:3.5mm;background:var(--ink);color:var(--paper);border-radius:3mm;padding:3.6mm 4mm;font-size:7.8pt;line-height:1.45}
+.promise b{font-weight:500}
+
+/* commercials */
+table{width:100%;border-collapse:collapse}
+.fees{margin-top:4mm}
+.fees th{font-family:var(--mono);font-weight:400;font-size:6.2pt;letter-spacing:.38em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 0 2.4mm;border-bottom:1px solid var(--ink)}
+.fees th.r,.fees td.r{text-align:right}
+.fees td{padding:.8mm 0 .9mm;border-bottom:1px solid var(--line);vertical-align:top}
+.fees td.n{width:60%}
+.fees td.q{width:26%;font-family:var(--mono);font-size:6.4pt;padding-top:1.85mm;white-space:nowrap;color:#2A2825}
+.fees td.r{font-family:var(--mono);font-size:9.6pt;white-space:nowrap}
+.fees .t{font-weight:500;font-size:9.4pt;letter-spacing:-.005em}
+.fees .d{display:block;font-size:6.3pt;color:var(--mute);margin-top:.35mm;line-height:1.3}
+.fees tr.grp td{border-bottom:1px solid var(--ink);padding:2.6mm 0 1.2mm;font-family:var(--mono);font-size:6.2pt;letter-spacing:.36em;text-transform:uppercase;color:var(--flame-light)}
+.fees tr.grp.first td{padding-top:2.2mm}
+.fees tr.grp td.ph{font-family:var(--sans);font-size:10pt;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:500}
+.fees tr.tot td{border-bottom:1px solid var(--ink);padding:2.4mm 0 2.4mm}
+.fees tr.tot .t{font-size:11pt}
+.fees tr.tot td.r{font-size:12pt;color:var(--flame-light);font-family:var(--sans);font-weight:400}
+.fees tr.sub td{padding:1.6mm 0 1.8mm;border-bottom:1px solid var(--ink)}
+.fees tr.sub .t{font-size:8.6pt;color:var(--mute);font-weight:500}
+.fees tr.sub td.r{font-size:9.4pt;font-weight:500}
+.fees tr.alt td.r{font-family:var(--sans);font-weight:400;font-size:11pt;color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:3.5mm}
+.card{border-radius:3.5mm;padding:3mm 5mm 3.2mm;background:var(--paper-card)}
+.card.k{background:var(--night);color:var(--night-ink)}
+.card .track{font-size:5.8pt;letter-spacing:.38em}
+.card.k .track{color:var(--night-mute)}
+.card b{display:block;font-weight:300;font-size:15pt;letter-spacing:-.02em;margin-top:2mm;line-height:1}
+.card span{display:block;font-size:6.6pt;line-height:1.4;margin-top:1.8mm;color:var(--mute)}
+.card.k span{color:#BDB9B1}
+
+/* team and terms */
+.team{margin-top:7mm}
+.team th{font-family:var(--mono);font-weight:400;font-size:6.2pt;letter-spacing:.38em;text-transform:uppercase;color:var(--night-mute);text-align:left;padding:0 0 2.6mm;border-bottom:1px solid var(--night-ink)}
+.team td{padding:2.7mm 3mm 2.8mm 0;border-bottom:1px solid var(--night-line);font-size:7.6pt;line-height:1.45;vertical-align:top;color:#D9D5CE}
+.team td:first-child{font-weight:500;color:var(--night-ink);width:31%}
+.team td:nth-child(2){width:28%}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:0 8mm;margin-top:6mm}
+.terms > div{display:flex;flex-direction:column}
+.terms p{font-size:7.2pt;line-height:1.5;color:#CFCBC4;padding:2.4mm 0 2.6mm;border-bottom:1px solid var(--night-line)}
+.terms p b{font-weight:500;color:var(--night-ink)}
+.contact{position:absolute;left:20mm;right:20mm;bottom:22mm;background:var(--night-card);border-radius:3.5mm;padding:6mm 9mm;display:flex;justify-content:space-between;align-items:center}
+.contact .nm{font-size:17pt;font-weight:300;margin-top:3mm}
+.contact .co{font-size:8pt;color:var(--night-mute);margin-top:1mm}
+.contact .ln{font-family:var(--mono);font-size:7.4pt;color:var(--flame-dark);margin-top:4mm;line-height:1.7}
+.contact .pf{text-align:center}
+.contact .pf img{height:17mm;width:auto;margin-top:3mm}
+
+/* roadmap additions */
+.idea{display:grid;grid-template-columns:1.1fr 1fr;gap:9mm;margin-top:8mm;align-items:start}
+.idea .big{font-size:15pt;line-height:1.3;letter-spacing:-.01em}
+.idea .big b{font-weight:500}
+.covered{list-style:none;border-top:1.5px solid var(--ink)}
+.covered li{display:grid;grid-template-columns:30mm 1fr;gap:3mm;padding:2.4mm 0;border-bottom:1px solid var(--line);font-size:7.8pt;line-height:1.45}
+.covered .k{font-family:var(--mono);font-size:6.4pt;letter-spacing:.2em;text-transform:uppercase;color:var(--flame-light);padding-top:.4mm}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:1mm 3mm;font-family:var(--mono);font-size:6.4pt;margin:0 1.5mm 1.5mm 0}
+.three-moves{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:7mm}
+.three-moves div{border-top:1.5px solid var(--ink);padding-top:3.5mm}
+.three-moves .track{font-size:5.8pt;letter-spacing:.26em;color:var(--flame-light)}
+.three-moves h3{font-weight:500;font-size:11.5pt;margin:2mm 0 2mm}
+.three-moves p{font-size:7.6pt;line-height:1.45}
+
+/* gantt */
+.gantt{margin-top:8mm;display:flex;flex-direction:column;gap:3.2mm;font-size:6.8pt}
+.gantt .grow{display:grid;grid-template-columns:40mm repeat(12,1fr);align-items:center;min-height:5.6mm}
+.gantt .grow.head{align-items:end}
+.gantt .wk{font-family:var(--mono);font-size:5.6pt;color:var(--mute);text-align:center;border-left:1px solid var(--line);padding-bottom:1mm;line-height:1.3}
+.gantt .wk b{display:block;color:var(--ink);font-weight:500;font-size:6.4pt}
+.gantt .ph{font-family:var(--mono);font-size:5.6pt;letter-spacing:.26em;text-transform:uppercase;color:#fff;background:var(--ink);padding:1.4mm 2mm;border-radius:1.5mm;margin:0 .6mm;white-space:nowrap;overflow:hidden}
+.gantt .ph.p2{background:#3A3835}
+.gantt .ph.p3{background:var(--flame-light)}
+.gantt .lab{grid-column:1;font-weight:500;font-size:7pt;padding-right:2mm;line-height:1.25}
+.gantt .bar{grid-row:1;height:4.8mm;border-radius:1.2mm;background:var(--ink);margin:0 .6mm}
+.gantt .bar.soft{background:#9B958C}
+.gantt .bar.fl{background:var(--flame-light)}
+.gantt .dot{grid-row:1;width:3.4mm;height:3.4mm;border-radius:50%;background:var(--flame-light);justify-self:center}
+.gantt .ms{grid-row:1;font-family:var(--mono);font-size:5.6pt;color:var(--flame-light);padding-left:1mm;white-space:nowrap}
+.gantt .grow > .lab{grid-row:1}
+.gantt .rule{border-top:1px solid var(--line);height:0;margin:.6mm 0}
+.legend{display:flex;gap:6mm;margin-top:4mm;font-size:6.6pt;color:var(--mute);align-items:center;flex-wrap:wrap}
+.legend i{display:inline-block;width:6mm;height:2.6mm;border-radius:1mm;background:var(--ink);margin-right:1.5mm;vertical-align:middle}
+.legend i.soft{background:#9B958C}.legend i.fl{background:var(--flame-light)}
+.legend i.d{width:2.6mm;height:2.6mm;border-radius:50%;background:var(--flame-light)}
+.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:9mm}
+.checks div{background:var(--paper-card);border-radius:3mm;padding:3.6mm 4mm}
+.checks .track{font-size:5.8pt;letter-spacing:.32em}
+.checks b{display:block;font-weight:500;font-size:10pt;margin:1.6mm 0 1.2mm}
+.checks span{font-size:6.8pt;line-height:1.4;color:var(--mute);display:block}
+
+/* weeks */
+.weeks{list-style:none;margin-top:6mm;border-top:1.5px solid var(--ink)}
+.weeks > li{display:grid;grid-template-columns:30mm 1fr;gap:5mm;padding:3.2mm 0 3.4mm;border-bottom:1px solid var(--line)}
+.weeks .when{font-family:var(--mono);font-size:6.6pt;line-height:1.5}
+.weeks .when b{display:block;font-family:var(--sans);font-size:10.5pt;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.weeks h4{font-size:9.6pt;font-weight:500;margin-bottom:1.4mm}
+.weeks ul{list-style:none;display:flex;flex-direction:column;gap:1.1mm}
+.weeks ul li{font-size:7.5pt;line-height:1.42;padding-left:3.2mm;position:relative}
+.weeks ul li::before{content:"";position:absolute;left:0;top:1.6mm;width:1.2mm;height:1.2mm;border-radius:50%;background:var(--mute)}
+.weeks .tag{font-family:var(--mono);font-size:5.8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--flame-light);margin-left:2mm}
+.outcome{margin-top:4.5mm;background:var(--ink);color:var(--paper);border-radius:3mm;padding:3.6mm 4.5mm;display:grid;grid-template-columns:30mm 1fr;gap:5mm;font-size:7.8pt;line-height:1.45}
+.outcome .track{color:#BDB9B1;font-size:5.8pt;letter-spacing:.32em;padding-top:.6mm}
+.phasehead{display:flex;justify-content:space-between;align-items:baseline;margin-top:7mm;border-bottom:1.5px solid var(--ink);padding-bottom:2mm}
+.phasehead h3{font-weight:500;font-size:13pt;letter-spacing:-.01em}
+.phasehead .track{color:var(--flame-light)}
+.phasehead + .weeks{margin-top:0;border-top:0}
+
+/* channels */
+.chan{display:grid;grid-template-columns:repeat(2,1fr);gap:4mm 6mm;margin-top:7mm}
+.chan > div{border-top:1.5px solid var(--night-ink);padding-top:3.4mm}
+.chan .track{color:var(--flame-dark);font-size:5.8pt;letter-spacing:.3em}
+.chan h3{font-weight:500;font-size:11pt;margin:1.8mm 0 2mm}
+.chan p{font-size:7.4pt;line-height:1.48;color:#D9D5CE}
+.chan p + p{margin-top:1.4mm}
+.chan p b{color:var(--night-ink);font-weight:500}
+.geo{margin-top:6mm;background:var(--night-card);border-radius:3.5mm;padding:4.5mm 5mm;display:grid;grid-template-columns:34mm 1fr;gap:5mm;align-items:start}
+.geo .track{color:var(--night-mute);font-size:5.8pt;letter-spacing:.32em}
+.geo .cities{display:flex;flex-wrap:wrap;gap:2mm}
+.geo .city{border:1px solid var(--night-line);border-radius:999px;padding:1.2mm 3.2mm;font-size:7.2pt}
+.geo .city.hot{border-color:var(--flame-dark);color:var(--flame-dark)}
+.geo p{font-size:7.2pt;line-height:1.5;color:#CFCBC4;margin-top:2.4mm}
+
+/* roles */
+.roles{margin-top:6mm}
+.roles th{font-family:var(--mono);font-weight:400;font-size:6pt;letter-spacing:.34em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 0 2.2mm;border-bottom:1px solid var(--ink)}
+.roles td{padding:2mm 3mm 2.1mm 0;border-bottom:1px solid var(--line);font-size:7.4pt;line-height:1.42;vertical-align:top}
+.roles td:first-child{font-weight:500;width:28%}
+.roles td:nth-child(2){width:38%}
+.two2{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:6mm}
+.need{list-style:none;border-top:1px solid var(--ink);margin-top:2.4mm}
+.need li{display:grid;grid-template-columns:17mm 1fr;gap:3mm;padding:1.8mm 0;border-bottom:1px solid var(--line);font-size:7.3pt;line-height:1.4}
+.need .d{font-family:var(--mono);font-size:6.4pt;padding-top:.3mm;color:var(--flame-light)}
+.track-list{list-style:none;border-top:1px solid var(--ink);margin-top:2.4mm}
+.track-list li{padding:1.8mm 0;border-bottom:1px solid var(--line);font-size:7.3pt;line-height:1.4}
+.track-list b{font-weight:500}
+.role-note{margin-top:5mm;background:var(--ink);color:var(--paper);border-radius:3mm;padding:3.6mm 4.5mm;font-size:7.8pt;line-height:1.5}
+.role-note b{font-weight:500}
+</style>
+</head>
+<body>
+
+<!-- 1. cover -->
+<section class="page dark cover">
+  <div class="cover-photo"></div>
+  <div class="cover-top">
+    <div class="lockup"><img class="logo" src="assets/m360-light.svg" alt="m360"><span class="x">×</span><img class="rs" src="assets/riverscape-logo.png" alt="Riverscape by Arete"></div>
+    <span class="track">The roadmap</span>
+  </div>
+  <div class="cover-body">
+    <p class="track">For Arete Group . Riverscape, Tukwada, Vapi</p>
+    <h1>Riverscape, <em>week by week.</em></h1>
+    <p class="sub">How we relaunch Riverscape and put it in front of the right buyers over 90 days: what happens each week, who does it, how each channel works, and how Arete sees progress. Prepared for the meeting on Wednesday 18 November 2026.</p>
+    <div class="stats">
+      <div><b>12 weeks</b><span>23 November 2026 to 18 February 2027</span></div>
+      <div><b>3 phases</b><span>Relaunch, outreach, closing. One payment each</span></div>
+      <div><b>5 channels</b><span>Corporates, wealth managers, HNI hosts, channel partners, the campaign</span></div>
+      <div><b>3 reviews</b><span>Day 30, day 60 and day 90, each with a decision</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Prepared for Arete Group . 16 November 2026</span><a>mask360.work</a></div>
+</section>
+
+<!-- 2. the idea -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">01 . The idea</span></div>
+    <h2>Everything runs on <em>one promise.</em></h2>
+    <div class="idea">
+      <div>
+        <p class="big">When you buy a BMW, the service package is part of what you are buying: <b>someone has already thought about what could go wrong, and covered it.</b></p>
+        <p class="big" style="margin-top:4mm">Riverscape does the same with the <b>Flood Cover pack.</b> Buyers already know about July. Instead of hoping they don't ask, we lead with the answer.</p>
+        <p class="sub" style="margin-top:5mm">The pack is the theme of the film, the key visuals, the brochure and every conversation. It raises trust in Arete as a developer that stands behind its project. It is included for the first 20 relaunch villas, and Arete can offer it as a paid add-on after that.</p>
+      </div>
+      <div>
+        <span class="track">What the Flood Cover pack holds</span>
+        <ul class="covered" style="margin-top:2.4mm">
+          <li><span class="k">The facts</span><span>The July water level at the site, and the new finished levels of villas, promenade and parking, on one drawing.</span></li>
+          <li><span class="k">The access</span><span>The new ramp beside the gate: a second road for emergencies and parking.</span></li>
+          <li><span class="k">The signature</span><span>A letter from an independent engineer on the redesign.</span></li>
+          <li><span class="k">The cover</span><span>Home insurance with flood cover for 5 years, paid by Arete, and a repair commitment for common areas.</span></li>
+          <li><span class="k">The terms</span><span>A 45-day launch price for 20 villas, and 10% at booking, 90% at possession.</span></li>
+        </ul>
+        <p class="small" style="margin-top:3mm">Arete decides the cover and the price. We design the pack and build the campaign around it. We never call the site flood-proof: we show the facts.</p>
+      </div>
+    </div>
+    <div class="three-moves">
+      <div><span class="track">Then . Move 1</span><h3>Relaunch the offer</h3><p>A new campaign around the Flood Cover pack, built from the architect's renders, in English, Gujarati and Marathi.</p></div>
+      <div><span class="track">Then . Move 2</span><h3>Reach buyers through people</h3><p>HR heads and CXOs, wealth managers, HNI evening hosts and channel partners: people buyers already trust.</p></div>
+      <div><span class="track">Then . Move 3</span><h3>Bring them to the site</h3><p>Open Weekends where Arete's sales team meets families and takes bookings on the spot.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Mask360 . Riverscape roadmap</span><span>01</span></div>
+</section>
+
+<!-- 3. at a glance -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">02 . At a glance</span></div>
+    <h2>Twelve weeks <em>on one page.</em></h2>
+    <p class="sub">If signed by Friday 20 November, work starts Monday 23 November. Each phase is one month and one payment.</p>
+
+    <div class="gantt">
+      <div class="grow head"><div></div><div class="wk" style="grid-column:2"><b>W1</b>23 Nov</div><div class="wk" style="grid-column:3"><b>W2</b>30 Nov</div><div class="wk" style="grid-column:4"><b>W3</b>7 Dec</div><div class="wk" style="grid-column:5"><b>W4</b>14 Dec</div><div class="wk" style="grid-column:6"><b>W5</b>21 Dec</div><div class="wk" style="grid-column:7"><b>W6</b>28 Dec</div><div class="wk" style="grid-column:8"><b>W7</b>4 Jan</div><div class="wk" style="grid-column:9"><b>W8</b>11 Jan</div><div class="wk" style="grid-column:10"><b>W9</b>18 Jan</div><div class="wk" style="grid-column:11"><b>W10</b>25 Jan</div><div class="wk" style="grid-column:12"><b>W11</b>1 Feb</div><div class="wk" style="grid-column:13"><b>W12</b>8 Feb</div></div>
+      <div class="grow"><div></div><div class="ph" style="grid-column:2 / span 4">Phase 1 . Relaunch</div><div class="ph p2" style="grid-column:6 / span 4">Phase 2 . Outreach</div><div class="ph p3" style="grid-column:10 / span 4">Phase 3 . Closing</div></div>
+      <div class="grow"><div class="lab">Offer and Flood Cover pack</div><div class="bar " style="grid-column:2 / span 1"></div></div>
+      <div class="grow"><div class="lab">Creative map, key visuals, film</div><div class="bar " style="grid-column:2 / span 2"></div></div>
+      <div class="grow"><div class="lab">Languages, cut-downs, dossiers</div><div class="bar " style="grid-column:3 / span 2"></div></div>
+      <div class="grow"><div class="lab">Target lists, 20 to 40 companies</div><div class="bar soft" style="grid-column:3 / span 2"></div><div class="bar soft" style="grid-column:6 / span 2"></div></div>
+      <div class="rule"></div>
+      <div class="grow"><div class="lab">Corporates: HR heads and CXOs</div><div class="bar fl" style="grid-column:5 / span 8"></div></div>
+      <div class="grow"><div class="lab">Wealth managers</div><div class="bar fl" style="grid-column:5 / span 7"></div></div>
+      <div class="grow"><div class="lab">HNI evenings, Mumbai and Surat</div><div class="bar fl" style="grid-column:6 / span 4"></div></div>
+      <div class="grow"><div class="lab">Channel partners</div><div class="bar fl" style="grid-column:4 / span 10"></div></div>
+      <div class="grow"><div class="lab">City heat map, digital test</div><div class="bar soft" style="grid-column:5 / span 9"></div></div>
+      <div class="rule"></div>
+      <div class="grow"><div class="lab">Open Weekends at the site</div><div class="dot" style="grid-column:8"></div><div class="dot" style="grid-column:9"></div><div class="dot" style="grid-column:10"></div><div class="dot" style="grid-column:11"></div></div>
+      <div class="grow"><div class="lab">Follow-up desk</div><div class="bar " style="grid-column:8 / span 6"></div></div>
+      <div class="grow"><div class="lab">Payments and reviews</div><div class="dot" style="grid-column:2;background:var(--ink)"></div><div class="dot" style="grid-column:6;background:var(--ink)"></div><div class="dot" style="grid-column:10;background:var(--ink)"></div><div class="ms" style="grid-column:11 / span 2;text-align:right">Day 90 report, 18 Feb</div></div>
+    </div>
+    <div class="legend"><span><i></i>We build</span><span><i class="fl"></i>We reach out</span><span><i class="soft"></i>Research and testing</span><span><i class="d"></i>Open Weekend</span><span><i class="d" style="background:var(--ink)"></i>Payment and review</span></div>
+
+    <div class="checks">
+      <div><span class="track">Day 30 . 20 Dec</span><b>Relaunch is live</b><span>Campaign out in three languages, every channel briefed, first 20 companies contacted. Payment 2.</span></div>
+      <div><span class="track">Day 60 . 19 Jan</span><b>Buyers are meeting us</b><span>Corporate meetings, adviser introductions, first Open Weekends. Decide on the launch price. Payment 3.</span></div>
+      <div><span class="track">Day 90 . 18 Feb</span><b>The full picture</b><span>What booked, what did not and why, and the plan for the remaining villas.</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Mask360 . Riverscape roadmap</span><span>02</span></div>
+</section>
+
+<!-- 4. phase 1 -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">03 . Phase 1</span></div>
+    <h2>Month 1: <em>the relaunch.</em></h2>
+    <p class="sub">23 November to 20 December. Nothing waits on the site: the campaign is built from the architect's renders and walkthroughs, the way we are building the Nandi Hills launch in Bengaluru before groundbreaking.</p>
+    <ul class="weeks">
+      <li><div class="when"><b>Week 1</b>23 to 29 Nov</div><div><h4>Kickoff and the offer</h4><ul>
+        <li>Kickoff with Arete's marketing and sales teams. Arete shares renders, walkthroughs, drawings, the price sheet, past sales and lead data.</li>
+        <li>We study what the first launch spent and what it brought in, so we do not repeat what did not work.</li>
+        <li>Flood Cover pack defined with Arete: what is covered, insurer quotes, the engineer's letter. Launch price and payment plan approved by 25 November.</li></ul></div></li>
+      <li><div class="when"><b>Week 2</b>30 Nov to 4 Dec</div><div><h4>The campaign is built <span class="tag">Relaunch live 4 Dec</span></h4><ul>
+        <li>Creative map: every asset, every channel, every week, in one sheet Arete can see.</li>
+        <li>Key visuals and the relaunch film, built from renders with AI. The Flood Cover pack is the lead message.</li>
+        <li>Flood Cover brochure and the financial dossier, laid out like a premium car brochure: price, plan, cover, in one document.</li></ul></div></li>
+      <li><div class="when"><b>Week 3</b>7 to 13 Dec</div><div><h4>Every channel gets armed</h4><ul>
+        <li>Gujarati and Marathi versions of every buyer piece. Cut-downs for LinkedIn, WhatsApp and Instagram, vertical and landscape.</li>
+        <li>Investor lot notes: a custom 4-page note per investor, named for them, with the lots and terms they asked about.</li>
+        <li>The first 20 companies with named HR and CXO contacts. Arete's channel partners briefed on the new offer.</li></ul></div></li>
+      <li><div class="when"><b>Week 4</b>14 to 20 Dec</div><div><h4>First outreach <span class="tag">Day 30 review</span></h4><ul>
+        <li>The first 20 companies approached through their HR heads, with the dossier and an offer for their senior people.</li>
+        <li>The first 10 to 15 wealth managers met and briefed. The first HNI evening host confirmed.</li>
+        <li>A small, tight-budget digital test across the target cities and 100 km around them, to see where the response comes from.</li></ul></div></li>
+    </ul>
+    <div class="outcome"><span class="track">By day 30</span><span>The relaunch is live in three languages, every channel has material to use, the first 20 companies and 10 to 15 advisers have been approached, and Arete has a first read on which cities respond.</span></div>
+  </div>
+  <div class="foot"><span>Mask360 . Riverscape roadmap</span><span>03</span></div>
+</section>
+
+<!-- 5. phases 2 and 3 -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">04 . Phases 2 and 3</span></div>
+    <h2>Months 2 and 3: <em>buyers, then the site.</em></h2>
+
+    <div class="phasehead"><h3>Phase 2 . Outreach</h3><span class="track">21 Dec to 17 Jan</span></div>
+    <ul class="weeks">
+      <li><div class="when"><b>Weeks 5 and 6</b>21 Dec to 3 Jan</div><div><h4>Meetings and evenings</h4><ul>
+        <li>Corporate meetings with HR heads and CXOs, attended with Arete's sales head. The list grows from 20 to 40 companies.</li>
+        <li>Private HNI evenings in Mumbai and Surat. NRI families home for the holidays are invited through advisers and channel partners.</li></ul></div></li>
+      <li><div class="when"><b>Weeks 7 and 8</b>4 to 17 Jan</div><div><h4>First families at the site <span class="tag">Open Weekends 1 and 2</span></h4><ul>
+        <li>Open Weekends on 9 and 10 January and 16 and 17 January, once Arete has the sample villa and experience centre ready.</li>
+        <li>Wealth managers signed and bringing clients. Effort and budget move to the cities on the heat map that respond.</li></ul></div></li>
+    </ul>
+
+    <div class="phasehead"><h3>Phase 3 . Closing</h3><span class="track">18 Jan to 14 Feb</span></div>
+    <ul class="weeks">
+      <li><div class="when"><b>Week 9</b>18 to 24 Jan</div><div><h4>Day 60 review <span class="tag">Open Weekend 3</span></h4><ul>
+        <li>Review on 19 January: what is converting, and whether to extend the launch price for the remaining weekends. Open Weekend on 23 and 24 January.</li></ul></div></li>
+      <li><div class="when"><b>Weeks 10 to 12</b>25 Jan to 14 Feb</div><div><h4>Closing and follow-up <span class="tag">Open Weekend 4</span></h4><ul>
+        <li>Open Weekend on 30 and 31 January. Every visitor followed up within 24 hours, then on day 3, 7 and 14, until they book or decline.</li>
+        <li>Term sheets with companies interested in blocks. Investor lots closed with their wealth managers.</li></ul></div></li>
+      <li><div class="when"><b>Day 90</b>18 Feb</div><div><h4>The day 90 report</h4><ul>
+        <li>What booked, through which channel, what did not and why, and the plan for the remaining villas, with an optional monthly retainer to keep it running.</li></ul></div></li>
+    </ul>
+    <div class="outcome"><span class="track">Every Monday</span><span>A one-page report: companies met, advisers active, families introduced, visits, bookings by channel, and the reasons behind every no.</span></div>
+  </div>
+  <div class="foot"><span>Mask360 . Riverscape roadmap</span><span>04</span></div>
+</section>
+
+<!-- 6. channels -->
+<section class="page dark">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-light.svg" alt="m360"><span class="track">05 . The channels</span></div>
+    <h2>How we reach <em>the buyer.</em></h2>
+    <p class="sub">Arete's earlier launch reached people. These channels reach them through someone they already trust.</p>
+    <div class="chan">
+      <div><span class="track">Channel 1</span><h3>Corporates, through HR heads and CXOs</h3>
+        <p>We list the large companies and MNCs in Gujarat and Mumbai, starting with 20 and growing to 40. The HR head is the way in: they look after senior staff, relocations and guest houses.</p>
+        <p><b>What they get:</b> the dossier and a Riverscape offer for their senior people, with a structured, written incentive for every booking that comes through them.</p></div>
+      <div><span class="track">Channel 2</span><h3>Wealth managers</h3>
+        <p>Private wealth teams and independent advisers who look after Gujarati business families. Their clients ask them before buying.</p>
+        <p><b>What they get:</b> a custom investor lot note per client, a referral agreement, and a site day for their clients. Paid only when a villa books.</p></div>
+      <div><span class="track">Channel 3</span><h3>HNI evening hosts</h3>
+        <p>Hosts in Mumbai who run curated evenings for high net worth guests, such as wine and whisky tastings, 16 to 18 a year with around 50 guests each.</p>
+        <p><b>What we do:</b> place Riverscape at these evenings, in front of exactly the buyer Arete wants, in a setting where they listen.</p></div>
+      <div><span class="track">Channel 4</span><h3>Channel partners</h3>
+        <p>Arete's existing partners keep selling, now with a new offer and new material. We add a wider group of partners in Gujarat and Mumbai.</p>
+        <p><b>What they get:</b> the Flood Cover pack, the film and the dossiers, in their clients' language.</p></div>
+    </div>
+    <div class="geo">
+      <div><span class="track">Channel 5 . The campaign</span></div>
+      <div>
+        <div class="cities"><span class="city hot">Mumbai</span><span class="city hot">Surat</span><span class="city hot">Ahmedabad</span><span class="city">Gandhinagar</span><span class="city">Saurashtra</span><span class="city">Vapi, Daman, Silvassa</span><span class="city">+100 km test</span></div>
+        <p>The Flood Cover campaign runs where buyers are within easy reach of Vapi. We start with a small, tight budget across these cities and 100 km around them, read the response every week as a heat map, and move money to the places that answer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Mask360 . Riverscape roadmap</span><span>05</span></div>
+</section>
+
+<!-- 7. who does what -->
+<section class="page light">
+  <div class="in">
+    <div class="top"><img class="logo" src="assets/m360-dark.svg" alt="m360"><span class="track">06 . Working together</span></div>
+    <h2>Who does what, <em>and how you see it.</em></h2>
+    <table class="roles">
+      <thead><tr><th>Work</th><th>Mask360</th><th>Arete</th></tr></thead>
+      <tbody>
+        <tr><td>Offer and Flood Cover pack</td><td>Designs the pack and the offer, sources insurer quotes</td><td>Decides the cover, the price and the payment plan</td></tr>
+        <tr><td>Campaign and film</td><td>Builds everything from renders, in three languages</td><td>Shares renders and walkthroughs, approves within 24 hours</td></tr>
+        <tr><td>Corporates</td><td>Lists, contacts and books the meetings</td><td>Sales head attends, drafts term sheets</td></tr>
+        <tr><td>Wealth managers and HNI hosts</td><td>Finds, signs, briefs and tracks them</td><td>Pays referral fees on bookings</td></tr>
+        <tr><td>Open Weekends</td><td>Runs the day: invitations, cars, the programme, the desk</td><td>Readies the sample villa and experience centre, takes bookings</td></tr>
+        <tr><td>Follow-up</td><td>Every visitor within 24 hours, on Arete's WhatsApp number</td><td>Lends one pre-sales person to the desk</td></tr>
+        <tr><td>Closing</td><td>Brings the buyer to the table</td><td>Arete's sales team closes the sale</td></tr>
+      </tbody>
+    </table>
+    <div class="two2">
+      <div>
+        <span class="track">What we need, by when</span>
+        <ul class="need">
+          <li><span class="d">23 Nov</span><span>Renders, walkthroughs, drawings, price sheet, sales and lead data</span></li>
+          <li><span class="d">23 Nov</span><span>July flood data and the engineer's contact</span></li>
+          <li><span class="d">25 Nov</span><span>Launch price, payment plan and Flood Cover approved</span></li>
+          <li><span class="d">7 Dec</span><span>Channel partner list and Arete's own contacts to invite</span></li>
+          <li><span class="d">5 Jan</span><span>Sample villa and experience centre ready for visitors</span></li>
+          <li><span class="d">Always</span><span>One approver on Arete's side, replying within 24 hours</span></li>
+        </ul>
+      </div>
+      <div>
+        <span class="track">How you see progress</span>
+        <ul class="track-list">
+          <li><b>A live tracker</b> with every company, adviser, family and booking, open to Arete at any time.</li>
+          <li><b>A Monday report</b> on one page: meetings, introductions, visits, bookings, by channel.</li>
+          <li><b>Reviews on day 30, 60 and 90</b>, each ending with a decision on where effort and budget go next.</li>
+          <li><b>The creative map</b> showing every asset and where it runs.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="role-note"><b>Our role, plainly.</b> We bring the right buyers to the table and make sure none of them is forgotten. Arete's sales team closes the sale. We do not guarantee a number of bookings: we run the whole system, report on it every week, and earn our success fee only on villas that actually book.</div>
+  </div>
+  <div class="foot"><span>Mask360 . Riverscape roadmap . 16 November 2026</span><span>06</span></div>
+</section>
+
+</body>
+</html>

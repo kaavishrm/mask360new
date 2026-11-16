@@ -21,7 +21,7 @@ Everything Mask360 needs to start selling Riverscape villas on day 1 after Arete
 | `08-economics.md` | What the mandate costs us, break-even, team success share | Kaavish |
 | `tracker/Riverscape-Sales-Tracker.xlsx` | The one tracker: companies, contacts, advisers, families, weekends, bookings, weekly report | Desk executives |
 | `research/` | Target lists and groundwork research (corporates, advisers, associations, insurance, GujRERA, logistics) | Corporate and adviser managers |
-| `proposal/` | The commercial proposal PDF sent to Arete and its HTML source (re-render with Chromium, A4) | Kaavish |
+| `proposal/` | The commercial proposal PDF and the 90 day roadmap PDF (`M360-Riverscape-Roadmap.pdf`, for the Arete meeting on 2026-11-18), with HTML sources (re-render with Chromium, A4) | Kaavish |
 
 ## Day 1 in one line
 
