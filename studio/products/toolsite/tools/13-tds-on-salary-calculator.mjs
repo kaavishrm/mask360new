@@ -1,5 +1,8 @@
+import taxEngine from './lib/income-tax.mjs';
+
 export default {
   slug: 'tds-on-salary-calculator',
+  lib: [taxEngine],
   title: 'TDS on Salary Calculator FY 2026-27',
   h1: 'TDS on Salary Calculator: monthly deduction under Section 392 for FY 2026-27',
   summary: 'How much tax your employer should deduct each month, and how it changes mid-year.',
@@ -28,23 +31,8 @@ export default {
 </form>`,
   script: function () {
     const H = window.H;
-    const NEW = [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]];
-    function oldSlabs(age) { const ex = age === 2 ? 500000 : age === 1 ? 300000 : 250000; return [[ex, 0], [500000, 0.05], [1000000, 0.20], [Infinity, 0.30]]; }
-    function slabTax(inc, slabs) { let t = 0, prev = 0; for (const [upto, r] of slabs) { if (inc > prev) t += (Math.min(inc, upto) - prev) * r; prev = upto; if (inc <= upto) break; } return t; }
-    function surchargeRate(inc, isNew) { if (inc > 5e7) return isNew ? 0.25 : 0.37; if (inc > 2e7) return 0.25; if (inc > 1e7) return 0.15; if (inc > 5e6) return 0.10; return 0; }
-    function thresholdBelow(inc) { let t = 0; for (const x of [5e6, 1e7, 2e7, 5e7]) if (inc > x) t = x; return t; }
-    function compute(taxable, isNew, age) {
-      const slabs = isNew ? NEW : oldSlabs(age);
-      let tax = slabTax(taxable, slabs), rebate = 0;
-      if (isNew) { if (taxable <= 1200000) rebate = tax; else { const cap = taxable - 1200000; if (tax > cap) rebate = tax - cap; } }
-      else if (taxable <= 500000) rebate = Math.min(tax, 12500);
-      const gross = tax; tax -= rebate;
-      let sur = tax * surchargeRate(taxable, isNew);
-      const th = thresholdBelow(taxable);
-      if (sur > 0 && th > 0) { const maxAllowed = slabTax(th, slabs) * (1 + surchargeRate(th, isNew)) + (taxable - th); if (tax + sur > maxAllowed) sur = Math.max(0, maxAllowed - tax); }
-      const cess = (tax + sur) * 0.04;
-      return { gross, rebate, sur, cess, total: Math.round(tax + sur + cess) };
-    }
+    const T = taxEngine();
+    function compute(taxable, isNew, age) { const r = T.compute(taxable, isNew, age, '2026-27'); return { gross: r.tax + r.rebate, rebate: r.rebate, sur: r.sur, cess: r.cess, total: Math.round(r.total) }; }
     H.bind('f', (f) => {
       const age = H.val(f, 'age'), isNew = f.elements.regime.value === 'new';
       const salary = H.val(f, 'salary'), nps2 = H.val(f, 'nps2'), other = H.val(f, 'other');

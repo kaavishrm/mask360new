@@ -1,5 +1,8 @@
+import taxEngine from './lib/income-tax.mjs';
+
 export default {
   slug: 'in-hand-salary-calculator',
+  lib: [taxEngine],
   title: 'In-Hand Salary Calculator from CTC',
   h1: 'In-Hand Salary Calculator: CTC to monthly take-home for FY 2026-27',
   summary: 'What actually lands in your bank each month after PF, professional tax, ESI and TDS.',
@@ -28,6 +31,7 @@ export default {
     <label class="chk"><input type="checkbox" name="woman"> Woman employee (Maharashtra exempts women earning up to ₹25,000 a month)</label>
   </div></fieldset>
   <fieldset><legend>Old regime only</legend><div class="grid">
+    <label>Age on 31 March 2027 <span class="hint">Sets the old regime exemption limit</span><select name="age"><option value="0">Below 60</option><option value="1">60 to 79</option><option value="2">80 or above</option></select></label>
     <label>Rent you pay per month (₹) <span class="hint">For the HRA exemption</span><input type="number" name="rent" value="0" min="0" step="500"></label>
     <label>City<select name="metro"><option value="0">Non-metro (40% of basic)</option><option value="1">Metro: Delhi, Mumbai, Kolkata, Chennai (50%)</option></select></label>
     <label>Deductions you will claim (₹ per year) <span class="hint">80C, 80D, 80CCD(1B), home loan interest, etc.</span><input type="number" name="ded" value="150000" min="0" step="5000"></label>
@@ -37,22 +41,8 @@ export default {
   script: function () {
     const H = window.H;
     const CEIL = 25000, ESI_CEIL = 21000;
-    const NEW = [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]];
-    const OLD = [[250000, 0], [500000, 0.05], [1000000, 0.20], [Infinity, 0.30]];
-    function slabTax(inc, slabs) { let t = 0, prev = 0; for (const [upto, r] of slabs) { if (inc > prev) t += (Math.min(inc, upto) - prev) * r; prev = upto; if (inc <= upto) break; } return t; }
-    function surchargeRate(inc, isNew) { if (inc > 5e7) return isNew ? 0.25 : 0.37; if (inc > 2e7) return 0.25; if (inc > 1e7) return 0.15; if (inc > 5e6) return 0.10; return 0; }
-    function thresholdBelow(inc) { let t = 0; for (const x of [5e6, 1e7, 2e7, 5e7]) if (inc > x) t = x; return t; }
-    function incomeTax(taxable, isNew) {
-      const slabs = isNew ? NEW : OLD;
-      let tax = slabTax(taxable, slabs), rebate = 0;
-      if (isNew) { if (taxable <= 1200000) rebate = tax; else { const cap = taxable - 1200000; if (tax > cap) rebate = tax - cap; } }
-      else if (taxable <= 500000) rebate = Math.min(tax, 12500);
-      tax -= rebate;
-      let sur = tax * surchargeRate(taxable, isNew);
-      const th = thresholdBelow(taxable);
-      if (sur > 0 && th > 0) { const maxAllowed = slabTax(th, slabs) * (1 + surchargeRate(th, isNew)) + (taxable - th); if (tax + sur > maxAllowed) sur = Math.max(0, maxAllowed - tax); }
-      return (tax + sur) * 1.04;
-    }
+    const T = taxEngine();
+    function incomeTax(taxable, isNew, age) { return T.compute(taxable, isNew, age, '2026-27').total; }
     // Professional tax: g is gross salary per month. Returns [typical month, annual].
     const PT = {
       // Verified against official texts and current notifications on 16 Nov 2026; see the explainer for dates.
@@ -96,7 +86,7 @@ export default {
       const totalIncome = grossY + vp;
       const dedY = isNew ? 75000 : 50000 + ptY + hraEx + H.val(f, 'ded');
       const taxable = Math.max(0, totalIncome - dedY);
-      const taxY = Math.round(incomeTax(taxable, isNew));
+      const taxY = Math.round(incomeTax(taxable, isNew, H.val(f, 'age')));
       const tdsM = taxY / 12;
       const pfM = pfY / 12, esiM = esiEmpY / 12;
       const dedM = pfM + ptM + esiM + tdsM;
