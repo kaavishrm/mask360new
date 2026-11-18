@@ -9,7 +9,7 @@ The owner's involvement is limited to the one-time steps in `SETUP.md` and to gr
 | # | Product | Folder | Status |
 |---|---|---|---|
 | 1 | Hisaab Tools: free Indian finance calculators and document generators, monetised by ads and later a paid clean-PDF option | `products/toolsite/` | Built and tested. Waiting on domain and hosting. |
-| 2 | Browser extension for the AI chat interfaces (folders, search, export), paid tier via Paddle | `products/chat-extension/` | Not started. Unlocks after the Chrome developer registration. |
+| 2 | Browser extension for the AI chat interfaces (folders, search, export), paid tier via Paddle | `products/chat-extension/` | Milestone 1 done (conversation list, tested against fixtures). Publishing unlocks after the Chrome developer registration. |
 | 3 | Weekly shareable tool (a lottery ticket on virality), each one small, watermarked, linking back | `products/shots/` | Not started. |
 | 4 | A second tool cluster aimed at a USD market with high ad rates | to be chosen by demand scan | Not started. |
 
