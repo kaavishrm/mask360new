@@ -18,6 +18,7 @@ The operator asks for things here, once each. The owner answers in chat; the nex
 | Email forwarding for hello@hisaabtools.in to an inbox the owner reads rarely | AdSense and users have a working contact; required by the privacy policy | ₹0 with the registrar's forwarding or a free forwarding service | Needs the domain's DNS |
 | Chrome Web Store developer registration | Product 2 can be published | About ₹450 one time | Needs a Google account and a payment |
 | Paddle seller account (merchant of record; pays USD to an Indian bank, shows UPI to Indian buyers) | Paid features on any product; money lands in the owner's bank monthly | ₹0 to open; Paddle takes a cut per sale | Needs identity and bank details |
+| Register a .com for product 4, the US landlord and tenant toolkit (unregistered on 19 Nov 2026 per RDAP: tenantcalc.com, noticecalc.com, tenantmath.com); not urgent until its first milestone is built | Product 4 goes live in the US market, where ad rates are several times India's | About $10 to $15 a year | Needs a registrar account and a payment |
 
 ## Declined
 
