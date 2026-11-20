@@ -87,6 +87,17 @@ th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;l
 .item-rows .item label{font-size:.75rem}
 @media (max-width:720px){.item-rows .item{grid-template-columns:1fr 1fr;}.item-rows .item label:first-child{grid-column:1/-1}}
 .tiny{font-size:.78rem;color:var(--muted)}
+.quiz-head{display:flex;justify-content:space-between;align-items:center}
+.options{display:grid;gap:10px;margin-top:12px}
+.options .opt{text-align:left;padding:12px 14px}
+.options .opt.right{background:var(--green-soft);border-color:var(--green)}
+.options .opt.wrong{background:var(--amber-soft);border-color:var(--amber);color:var(--amber)}
+.options .opt:disabled{cursor:default;opacity:.9}
+.explain{margin-top:14px;padding:12px 14px;background:var(--green-soft);border-radius:12px;font-size:.95rem}
+.review{padding-left:20px;margin-top:16px}
+.review li{margin:8px 0}
+.review li.miss{color:var(--amber)}
+.review li.miss .tiny{color:var(--amber)}
 .right{text-align:right}
 @media print{
   body{background:#fff;color:#000}

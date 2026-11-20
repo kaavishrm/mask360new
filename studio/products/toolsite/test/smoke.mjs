@@ -43,6 +43,18 @@ const checks = [
   ['/bill-of-supply-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Bill of Supply') || !w.includes('not eligible to collect tax on supplies') || !w.includes('₹25,000.00') || w.includes('CGST')) throw new Error(w.slice(0, 300)); await p.selectOption('select[name=reason]', 'unreg'); w = await p.locator('#sheet').innerText(); if (!w.includes('not registered under GST')) throw new Error(w.slice(0, 200)); return 'composition + unregistered ok'; }],
   ['/quotation-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Quotation') || !w.includes('₹29,500.00') || !w.includes('CGST') || !w.includes('not a tax invoice')) throw new Error(w.slice(0, 300)); await p.selectOption('#pos', '07'); w = await p.locator('#sheet').innerText(); if (!w.includes('IGST') || !w.includes('₹4,500.00')) throw new Error(w.slice(0, 300)); return 'intra + inter ok'; }],
   ['/delivery-challan-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Delivery Challan') || !w.includes('ORIGINAL FOR CONSIGNEE') || !w.includes('₹25,000.00') || w.includes('CGST') || w.includes('IGST')) throw new Error(w.slice(0, 300)); await p.selectOption('select[name=purpose]', 'supply'); await p.selectOption('#pos', '27'); await p.selectOption('select[name=copy]', 'DUPLICATE FOR TRANSPORTER'); w = await p.locator('#sheet').innerText(); if (!w.includes('IGST') || !w.includes('₹4,500.00') || !w.includes('DUPLICATE FOR TRANSPORTER') || !w.includes('₹29,500.00')) throw new Error(w.slice(0, 400)); return 'job work + supply ok'; }],
+  ['/shots/', async (p) => { const n = await p.locator('.card').count(); if (n < 1) throw new Error('no shots'); return n + ' shot(s)'; }],
+  ['/shots/money-rules-quiz-fy-2026-27/', async (p) => {
+    const KEY = ['₹12,75,000', '₹25,000', '7.1%', '20%', '₹1,25,000', '₹75,000', '31 December 2026', '₹5,000', '70', 'Odisha'];
+    const play = async (wrongFirst) => { for (let i = 0; i < KEY.length; i++) { if (i === 0 && wrongFirst) { await p.locator('.opt').filter({ hasNotText: KEY[0] }).first().click(); } else await p.locator('.opt', { hasText: KEY[i] }).first().click(); if (await p.locator('#q-explain').isHidden()) throw new Error('no explanation after answer ' + (i + 1)); await p.click('#q-next'); } return p.locator('#r-score').innerText(); };
+    let s = await play(false); if (s !== '10') throw new Error('perfect run scored ' + s);
+    const t = await p.locator('#r-title').innerText(); if (t !== 'CA material') throw new Error('verdict ' + t);
+    const href = await p.locator('#r-download').getAttribute('href'); if (!href || !href.startsWith('data:image/png') || href.length < 5000) throw new Error('score card image missing');
+    const dims = await p.locator('#r-img').evaluate((img) => [img.naturalWidth, img.naturalHeight]); if (dims[0] !== 1200 || dims[1] !== 630) throw new Error('card size ' + dims);
+    await p.click('#r-again'); s = await play(true); if (s !== '9') throw new Error('one wrong scored ' + s);
+    const misses = await p.locator('#r-review li.miss').count(); if (misses !== 1) throw new Error('misses ' + misses);
+    return 'perfect 10, one wrong 9, card 1200x630';
+  }],
   ['/about/', async () => 'ok'], ['/privacy/', async () => 'ok'], ['/terms/', async () => 'ok'],
 ];
 
@@ -68,6 +80,9 @@ const mp = await mob.newPage();
 await mp.goto(base + '/gst-invoice-generator/');
 const overflow = await mp.evaluate(() => { const w = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter((el) => el.getBoundingClientRect().right > w + 1).map((el) => el.tagName + '.' + el.className).slice(0, 5); return document.documentElement.scrollWidth > w + 1 ? bad : null; });
 if (overflow) { failed++; console.log('FAIL mobile overflow on invoice page', overflow); } else console.log('PASS mobile no horizontal overflow');
+await mp.goto(base + '/shots/money-rules-quiz-fy-2026-27/');
+const overflow4 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+if (overflow4) { failed++; console.log('FAIL mobile overflow on the quiz page'); } else console.log('PASS mobile no horizontal overflow on the quiz page');
 await mp.goto(base + '/delivery-challan-generator/');
 const overflow3 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
 if (overflow3) { failed++; console.log('FAIL mobile overflow on delivery challan page'); } else console.log('PASS mobile no horizontal overflow on delivery challan page');

@@ -21,6 +21,17 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+async function loadShots() {
+  const dir = path.join(root, '..', 'shots');
+  if (!existsSync(dir)) return [];
+  const shots = [];
+  for (const entry of (await readdir(dir, { withFileTypes: true })).filter((d) => d.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const file = path.join(dir, entry.name, 'shot.mjs');
+    if (existsSync(file)) shots.push((await import(file)).default);
+  }
+  return shots.reverse();
+}
+
 async function loadTools() {
   const files = (await readdir(path.join(root, 'tools'))).filter((f) => f.endsWith('.mjs')).sort();
   const tools = [];
@@ -59,7 +70,7 @@ async function build() {
     .map(([k, v]) => `<a href="/#${k}">${esc(v)}</a>`)
     .join('')}</div></nav>`;
 
-  const footer = `<footer class="footer"><div><strong>${esc(site.name)}</strong> is a set of free calculators and document generators for India. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Figures are for guidance. Confirm anything that matters with a chartered accountant. Updated ${site.updated}.</div></footer>`;
+  const footer = `<footer class="footer"><div><strong>${esc(site.name)}</strong> is a set of free calculators and document generators for India. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/shots/">Shots</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Figures are for guidance. Confirm anything that matters with a chartered accountant. Updated ${site.updated}.</div></footer>`;
 
   // Tool pages
   for (const t of tools) {
@@ -122,15 +133,43 @@ async function build() {
     await writeFile(path.join(out, p.slug, 'index.html'), lint(p.slug, layout(base, { lang: 'en-IN', title: `${p.title} | ${site.name}`, description: p.description, canonical: `${site.url}/${p.slug}/`, site: esc(site.name), nav, footer, body, head: '', scripts: '' })));
   }
 
+  // Weekly shots: authored in ../shots, published under /shots/<slug>/ with the site chrome
+  const shots = await loadShots();
+  const shotCard = (sh) => `<a class="card" href="/shots/${sh.slug}/"><span class="card-cat">Shot, ${esc(sh.published)}</span><strong>${esc(sh.title)}</strong><span>${esc(sh.summary)}</span></a>`;
+  for (const sh of shots) {
+    const body = `
+<main class="page tool-page shot-page">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/shots/">Shots</a></p>
+  <h1>${esc(sh.title)}</h1>
+  <p class="lede">${sh.intro}</p>
+  ${sh.body}
+  <div class="ad-slot" data-slot="bottom"></div>
+  <p class="tiny">Published ${esc(sh.published)}. <a href="/shots/">All shots</a>.</p>
+</main>`;
+    await mkdir(path.join(out, 'shots', sh.slug), { recursive: true });
+    await writeFile(path.join(out, 'shots', sh.slug, 'index.html'), lint('shot ' + sh.slug, layout(base, {
+      lang: 'en-IN', title: `${sh.title} | ${site.name}`, description: sh.description, canonical: `${site.url}/shots/${sh.slug}/`, site: esc(site.name), nav, footer, body,
+      head: jsonld({ '@context': 'https://schema.org', '@type': 'WebPage', name: sh.title, url: `${site.url}/shots/${sh.slug}/`, description: sh.description, datePublished: sh.published }),
+      scripts: `<script src="/assets/js/common.js"></script><script>(${sh.script.toString()})();</script>`,
+    })));
+  }
+  if (shots.length) {
+    await mkdir(path.join(out, 'shots'), { recursive: true });
+    await writeFile(path.join(out, 'shots', 'index.html'), lint('shots index', layout(base, {
+      lang: 'en-IN', title: `Shots | ${site.name}`, description: 'One small shareable page a week from Hisaab Tools: quizzes and score cards on the money rules in force in India.', canonical: `${site.url}/shots/`, site: esc(site.name), nav, footer,
+      body: `<main class="page home"><section class="hero"><h1>Shots</h1><p class="lede">One small shareable page a week. A quiz, a score, a card worth sending to a friend who still thinks the old regime is the default.</p></section><div class="cards">${shots.map(shotCard).join('')}</div></main>`, head: '', scripts: '',
+    })));
+  }
+
   // 404
   await writeFile(path.join(out, '404.html'), layout(base, { lang: 'en-IN', title: `Not found | ${site.name}`, description: '', canonical: site.url + '/', site: esc(site.name), nav, footer, body: `<main class="page prose"><h1>That page is not here</h1><p><a href="/">Back to all tools</a></p></main>`, head: '<meta name="robots" content="noindex">', scripts: '' }));
 
   // Sitemap and robots
-  const urls = ['/', ...tools.map((t) => `/${t.slug}/`), ...site.pages.map((p) => `/${p.slug}/`)];
+  const urls = ['/', ...tools.map((t) => `/${t.slug}/`), ...site.pages.map((p) => `/${p.slug}/`), ...(shots.length ? ['/shots/', ...shots.map((sh) => `/shots/${sh.slug}/`)] : [])];
   await writeFile(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.url}${u}</loc><lastmod>${site.updated}</lastmod></url>`).join('\n')}\n</urlset>\n`);
   await writeFile(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
 
-  console.log(`Built ${tools.length} tools, ${site.pages.length} pages -> ${path.relative(root, out)}`);
+  console.log(`Built ${tools.length} tools, ${site.pages.length} pages, ${shots.length} shot(s) -> ${path.relative(root, out)}`);
 }
 
 build().catch((e) => { console.error(e); process.exit(1); });
