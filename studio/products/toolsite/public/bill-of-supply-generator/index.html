@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bill of Supply Generator | Hisaab Tools</title>
+<meta name="description" content="Free bill of supply generator for India. Create an invoice without GST for a composition dealer, an exempt or nil-rated supply, or an unregistered seller, with the declaration required by Rule 49, then print or save as PDF. No signup, no watermark.">
+<link rel="canonical" href="https://hisaabtools.in/bill-of-supply-generator/">
+<meta property="og:title" content="Bill of Supply Generator | Hisaab Tools">
+<meta property="og:description" content="Free bill of supply generator for India. Create an invoice without GST for a composition dealer, an exempt or nil-rated supply, or an unregistered seller, with the declaration required by Rule 49, then print or save as PDF. No signup, no watermark.">
+<meta property="og:url" content="https://hisaabtools.in/bill-of-supply-generator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hisaab Tools">
+<meta name="theme-color" content="#faf8f3">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bill of Supply Generator","url":"https://hisaabtools.in/bill-of-supply-generator/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"description":"Free bill of supply generator for India. Create an invoice without GST for a composition dealer, an exempt or nil-rated supply, or an unregistered seller, with the declaration required by Rule 49, then print or save as PDF. No signup, no watermark."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hisaabtools.in/"},{"@type":"ListItem","position":2,"name":"Bill of Supply Generator","item":"https://hisaabtools.in/bill-of-supply-generator/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a composition dealer charge GST on the bill?","acceptedAnswer":{"@type":"Answer","text":"No. The composition scheme requires the dealer to pay tax at a flat rate out of their own pocket and bars them from collecting it. A bill with a GST line from a composition dealer is a breach of the scheme."}},{"@type":"Question","name":"Does an unregistered seller need a GSTIN on the bill?","acceptedAnswer":{"@type":"Answer","text":"No. Leave the GSTIN blank; the bill will show the supplier’s name and address only, with the declaration that the supplier is unregistered."}},{"@type":"Question","name":"Is HSN code compulsory on a bill of supply?","acceptedAnswer":{"@type":"Answer","text":"Rule 49 lists the HSN code among the contents. A GST Council FAQ from the early days of GST said composition dealers need not mention HSN. Showing it does no harm and the field is there if you want it."}},{"@type":"Question","name":"Can the recipient claim input tax credit on a bill of supply?","acceptedAnswer":{"@type":"Answer","text":"No. There is no tax on the document, so there is nothing to claim. The generator says this in the footer so a registered customer is not misled."}}]}</script>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="/">Hisaab Tools</a><div class="nav-links"><a href="/#tax">Tax</a><a href="/#salary">Salary</a><a href="/#loans">Loans</a><a href="/#investments">Investments</a><a href="/#documents">Documents</a></div></nav>
+
+<main class="page tool-page has-sheet">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/#documents">Documents</a></p>
+  <h1>Bill of Supply Generator: invoice without GST for composition dealers, exempt supplies and unregistered sellers</h1>
+  <p class="lede">Pick why no tax is charged, fill in the two parties and the line items, and the bill updates as you type with the correct declaration at the top.</p>
+  <div class="ad-slot" data-slot="top"></div>
+  <section class="tool" id="tool">
+<form id="f">
+  <fieldset><legend>Why no GST is charged</legend><div class="grid">
+    <label>Reason<select name="reason"><option value="comp">I am a composition taxable person</option><option value="exempt">The supply is exempt or nil rated</option><option value="unreg">I am not registered under GST</option></select></label>
+    <label>Bill number<input type="text" name="no" value="BOS-2026-001"></label>
+    <label>Date<input type="date" name="date"></label>
+  </div></fieldset>
+  <div class="grid-2">
+  <fieldset><legend>Supplier (you)</legend><div class="grid">
+    <label>Business name<input type="text" name="sname" placeholder="Sharma Sweets"></label>
+    <label>GSTIN <span class="hint">Leave blank if unregistered</span><input type="text" name="sgst" placeholder="27ABCDE1234F1Z5" maxlength="15" style="text-transform:uppercase"></label>
+    <label style="grid-column:1/-1">Address<textarea name="saddr" placeholder="12, Station Road, Thane 400601, Maharashtra"></textarea></label>
+    <label>State<select name="sstate" id="sstate"></select></label>
+    <label>Email or phone<input type="text" name="scontact" placeholder="98765 43210"></label>
+  </div></fieldset>
+  <fieldset><legend>Recipient</legend><div class="grid">
+    <label>Name<input type="text" name="bname" placeholder="Verma Caterers"></label>
+    <label>GSTIN (if registered)<input type="text" name="bgst" placeholder="27PQRST5678G1Z2" maxlength="15" style="text-transform:uppercase"></label>
+    <label style="grid-column:1/-1">Address<textarea name="baddr" placeholder="Shop 9, Market Yard, Pune 411037"></textarea></label>
+  </div></fieldset>
+  </div>
+  <fieldset><legend>Items</legend>
+    <div class="item-rows" id="items"></div>
+    <div class="actions"><button type="button" class="btn small secondary" id="add">Add line</button></div>
+  </fieldset>
+  <fieldset><legend>Payment and notes (optional)</legend><div class="grid-2">
+    <label>Bank or UPI details<textarea name="bank" placeholder="UPI: sharmasweets@upi"></textarea></label>
+    <label>Notes<textarea name="notes" placeholder="Goods once sold will not be taken back."></textarea></label>
+  </div></fieldset>
+  <div class="actions"><button type="button" class="btn secondary" id="pr">Print or save as PDF</button></div>
+  <div class="sheet" id="sheet"></div>
+</form></section>
+  <div class="ad-slot" data-slot="mid"></div>
+  <article class="explainer">
+<h2>When a bill of supply is the right document</h2>
+<p>A tax invoice is for a registered supplier charging GST. In three situations the supplier must not charge GST on the document, and the GST law calls the document a bill of supply. First, a composition taxable person, who pays a flat rate of tax out of pocket and may not collect it from customers. Second, a registered person making an exempt or nil-rated supply, such as unbranded food grains, fresh produce, educational services or residential rent. Third, by extension, an unregistered seller whose turnover is below the registration threshold; strictly they issue an ordinary bill, but the same layout without tax lines does the job and keeps a registered customer from mistaking it for a tax invoice.</p>
+<h3>What Rule 49 requires</h3>
+<p>Rule 49 of the CGST Rules sets the contents: the supplier's name, address and GSTIN; a consecutive serial number unique for the financial year, up to 16 characters; the date of issue; the recipient's name, address and GSTIN if registered; the HSN code of goods or accounting code of services; a description; the value of the supply after any discount; and the signature of the supplier or an authorised person. There is no tax column, no place-of-supply line and no reverse charge declaration, because none of these apply.</p>
+<h3>The composition declaration</h3>
+<p>A composition dealer must print the words "composition taxable person, not eligible to collect tax on supplies" at the top of every bill of supply. The generator puts it there when you choose that reason. Shortened forms such as "composition dealer" do not satisfy the rule. The dealer also displays the same words on a board at the place of business.</p>
+<h3>Numbering and records</h3>
+<p>Keep one series for bills of supply and another for any tax invoices you also issue; do not mix them. Numbers run consecutively within the financial year. A composition dealer reports the quarter's outward supplies in CMP-08 and the year in GSTR-4, so retain a copy of every bill for 72 months from the due date of the annual return.</p>
+<h3>Mixed supplies</h3>
+<p>If a registered person makes a taxable and an exempt supply to the same customer, the rules allow a single "invoice-cum-bill of supply" showing both. This generator does not combine the two; issue a tax invoice for the taxable part with the <a href="/gst-invoice-generator/">GST invoice generator</a> and a bill of supply for the exempt part.</p>
+<p class="tiny">The bill shows one value column with no tax. If you need discounts shown per line, enter the net rate. Rules are those in force on the date at the bottom of the page.</p></article>
+  <section class="faqs"><h2>Questions people ask</h2><details class="faq"><summary>Can a composition dealer charge GST on the bill?</summary><div><p>No. The composition scheme requires the dealer to pay tax at a flat rate out of their own pocket and bars them from collecting it. A bill with a GST line from a composition dealer is a breach of the scheme.</p></div></details><details class="faq"><summary>Does an unregistered seller need a GSTIN on the bill?</summary><div><p>No. Leave the GSTIN blank; the bill will show the supplier’s name and address only, with the declaration that the supplier is unregistered.</p></div></details><details class="faq"><summary>Is HSN code compulsory on a bill of supply?</summary><div><p>Rule 49 lists the HSN code among the contents. A GST Council FAQ from the early days of GST said composition dealers need not mention HSN. Showing it does no harm and the field is there if you want it.</p></div></details><details class="faq"><summary>Can the recipient claim input tax credit on a bill of supply?</summary><div><p>No. There is no tax on the document, so there is nothing to claim. The generator says this in the footer so a registered customer is not misled.</p></div></details></section>
+  <section class="related"><h2>Related tools</h2><div class="cards"><a class="card" href="/gst-invoice-generator/"><span class="card-cat">Documents</span><strong>GST Invoice Generator</strong><span>A compliant tax invoice with HSN codes and automatic tax split.</span></a><a class="card" href="/quotation-generator/"><span class="card-cat">Documents</span><strong>Quotation Generator</strong><span>A clean quote or estimate with line items, GST and an acceptance block.</span></a><a class="card" href="/delivery-challan-generator/"><span class="card-cat">Documents</span><strong>Delivery Challan Generator</strong><span>A challan for job work, goods on approval, branch transfers and supplies where the invoice follows.</span></a><a class="card" href="/gst-calculator/"><span class="card-cat">Tax</span><strong>GST Calculator</strong><span>Add GST to a price or pull it out of an inclusive amount.</span></a></div></section>
+  <div class="ad-slot" data-slot="bottom"></div>
+</main>
+<footer class="footer"><div><strong>Hisaab Tools</strong> is a set of free calculators and document generators for India. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/shots/">Shots</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Figures are for guidance. Confirm anything that matters with a chartered accountant. Updated 2026-11-11.</div></footer>
+<script src="/assets/js/common.js"></script><script>function invoiceDoc() {
+  const H = window.H;
+  const STATES = [['01', 'Jammu and Kashmir'], ['02', 'Himachal Pradesh'], ['03', 'Punjab'], ['04', 'Chandigarh'], ['05', 'Uttarakhand'], ['06', 'Haryana'], ['07', 'Delhi'], ['08', 'Rajasthan'], ['09', 'Uttar Pradesh'], ['10', 'Bihar'], ['11', 'Sikkim'], ['12', 'Arunachal Pradesh'], ['13', 'Nagaland'], ['14', 'Manipur'], ['15', 'Mizoram'], ['16', 'Tripura'], ['17', 'Meghalaya'], ['18', 'Assam'], ['19', 'West Bengal'], ['20', 'Jharkhand'], ['21', 'Odisha'], ['22', 'Chhattisgarh'], ['23', 'Madhya Pradesh'], ['24', 'Gujarat'], ['26', 'Dadra and Nagar Haveli and Daman and Diu'], ['27', 'Maharashtra'], ['29', 'Karnataka'], ['30', 'Goa'], ['31', 'Lakshadweep'], ['32', 'Kerala'], ['33', 'Tamil Nadu'], ['34', 'Puducherry'], ['35', 'Andaman and Nicobar Islands'], ['36', 'Telangana'], ['37', 'Andhra Pradesh'], ['38', 'Ladakh']];
+  const GST_RATES = [0, 5, 12, 18, 28];
+  function fillStates(sel, def) { sel.innerHTML = STATES.map(([c, n]) => '<option value="' + c + '">' + c + ' ' + n + '</option>').join(''); sel.value = def || '27'; }
+  function stateName(sel) { return sel.options[sel.selectedIndex].text.slice(3); }
+  function dmy(s) { return s ? s.split('-').reverse().join('/') : ''; }
+  // Adds one editable line. opts.tax adds the GST % column; opts.onChange runs after a row is removed.
+  function addRow(container, d, opts) {
+    d = d || {}; opts = opts || {};
+    const row = document.createElement('div'); row.className = 'item';
+    row.innerHTML = '<label>Description<input type="text" class="i-desc" value="' + H.esc(d.desc || '') + '" placeholder="' + H.esc(opts.placeholder || 'Website design services') + '"></label>' +
+      '<label>HSN / SAC<input type="text" class="i-hsn" value="' + H.esc(d.hsn || '') + '" placeholder="998314"></label>' +
+      '<label>Qty<input type="number" class="i-qty" value="' + (d.qty || 1) + '" min="0" step="any"></label>' +
+      '<label>Unit<input type="text" class="i-unit" value="' + H.esc(d.unit || 'nos') + '"></label>' +
+      '<label>Rate (₹)<input type="number" class="i-rate" value="' + (d.rate || 0) + '" min="0" step="any"></label>' +
+      (opts.tax ? '<label>GST %<select class="i-gst">' + GST_RATES.map((r) => '<option value="' + r + '"' + (r === 18 ? ' selected' : '') + '>' + r + '</option>').join('') + '</select></label>' : '') +
+      '<button type="button" class="btn small secondary i-del" title="Remove line">×</button>';
+    if (opts.tax && d.gst !== undefined) row.querySelector('.i-gst').value = String(d.gst);
+    row.querySelector('.i-del').addEventListener('click', () => { row.remove(); if (opts.onChange) opts.onChange(); });
+    container.appendChild(row);
+    return row;
+  }
+  // Reads every line into numbers and builds the items table rows.
+  function readItems(container, withTax) {
+    const lines = []; let taxable = 0, tax = 0, rows = '';
+    container.querySelectorAll('.item').forEach((r, i) => {
+      const qty = H.num(r.querySelector('.i-qty').value), rate = H.num(r.querySelector('.i-rate').value);
+      const g = withTax ? H.num(r.querySelector('.i-gst').value) : 0;
+      const amt = qty * rate, t = amt * g / 100; taxable += amt; tax += t;
+      const desc = r.querySelector('.i-desc').value, hsn = r.querySelector('.i-hsn').value, unit = r.querySelector('.i-unit').value;
+      lines.push({ desc, hsn, qty, unit, rate, gst: g, amt, tax: t });
+      rows += '<tr><td>' + (i + 1) + '</td><td style="text-align:left">' + H.esc(desc) + '</td><td>' + H.esc(hsn) + '</td><td>' + qty + ' ' + H.esc(unit) + '</td><td>' + H.inr(rate, 2) + '</td><td>' + H.inr(amt, 2) + '</td>' + (withTax ? '<td>' + g + '%</td><td>' + H.inr(t, 2) + '</td>' : '') + '</tr>';
+    });
+    const head = '<tr><th>#</th><th style="text-align:left">Description</th><th>HSN/SAC</th><th>Qty</th><th>Rate</th><th>' + (withTax ? 'Taxable' : 'Amount') + '</th>' + (withTax ? '<th>GST</th><th>Tax</th>' : '') + '</tr>';
+    return { lines, taxable, tax, table: '<div class="tbl-wrap"><table><thead>' + head + '</thead><tbody>' + rows + '</tbody></table></div>' };
+  }
+  // Tax lines for the totals table: CGST and SGST within a state, IGST across states.
+  function taxRows(tax, inter) { return inter ? '<tr><td>IGST</td><td>' + H.inr(tax, 2) + '</td></tr>' : '<tr><td>CGST</td><td>' + H.inr(tax / 2, 2) + '</td></tr><tr><td>SGST / UTGST</td><td>' + H.inr(tax / 2, 2) + '</td></tr>'; }
+  // Totals table with rounding to the rupee under Section 170 of the CGST Act. extraRows go between the first line and the total.
+  function totals(firstLabel, firstAmount, extraRows, total) {
+    const rounded = Math.round(total), roundOff = rounded - total;
+    return { rounded, html: '<table style="width:auto;min-width:260px"><tbody><tr><td>' + firstLabel + '</td><td>' + H.inr(firstAmount, 2) + '</td></tr>' + (extraRows || '') + (Math.abs(roundOff) >= 0.005 ? '<tr><td>Round off</td><td>' + (roundOff >= 0 ? '' : '-') + H.inr(Math.abs(roundOff), 2) + '</td></tr>' : '') + '<tr><td><strong>Total</strong></td><td><strong>' + H.inr(rounded, 2) + '</strong></td></tr></tbody></table>' };
+  }
+  // A party block: name, address, GSTIN and any extra lines.
+  function party(name, fallback, addr, gstin, extra) { return '<strong>' + (H.esc(name) || fallback) + '</strong><br><span class="muted">' + H.nl(addr) + (gstin ? '<br>GSTIN: ' + H.esc(gstin.toUpperCase()) : '') + (extra || '') + '</span>'; }
+  function signature(left, forName) { return '<div class="sig"><div class="muted">' + left + '</div><div>For ' + (H.esc(forName) || 'Supplier') + '<br><br><br>Authorised signatory</div></div>'; }
+  return { STATES, fillStates, stateName, dmy, addRow, readItems, taxRows, totals, party, signature };
+}</script><script>(function () {
+    const H = window.H, D = invoiceDoc();
+    const f = document.getElementById('f'), items = document.getElementById('items'), sheet = document.getElementById('sheet');
+    D.fillStates(f.elements.sstate, '27');
+    f.elements.date.value = H.today();
+    const addRow = (d) => D.addRow(items, d, { tax: false, onChange: render, placeholder: 'Mixed sweets, 1 kg box' });
+    addRow({ desc: 'Mixed sweets, 1 kg box', hsn: '2106', qty: 50, unit: 'nos', rate: 500 });
+    document.getElementById('add').addEventListener('click', () => { addRow(); render(); });
+    const DECL = { comp: 'Composition taxable person, not eligible to collect tax on supplies', exempt: 'Exempt supply. No GST is charged on this bill.', unreg: 'Supplier is not registered under GST. No GST is charged on this bill.' };
+    function render() {
+      const reason = f.elements.reason.value;
+      const it = D.readItems(items, false);
+      const tot = D.totals('Value of supply', it.taxable, '', it.taxable);
+      sheet.innerHTML = '<p class="muted" style="text-align:center;margin:0 0 10px;font-weight:600">' + DECL[reason] + '</p>' +
+        '<div class="row"><div><h2>Bill of Supply</h2><div class="muted">Bill no. <strong>' + H.esc(H.str(f, 'no')) + '</strong><br>Date: ' + D.dmy(H.str(f, 'date')) + '</div></div>' +
+        '<div class="right">' + D.party(H.str(f, 'sname'), 'Supplier name', H.str(f, 'saddr'), H.str(f, 'sgst'), '<br>State: ' + D.stateName(f.elements.sstate) + ' (' + f.elements.sstate.value + ')' + (H.str(f, 'scontact') ? '<br>' + H.esc(H.str(f, 'scontact')) : '')) + '</div></div>' +
+        '<div class="row" style="margin:14px 0"><div><strong>Bill to</strong><br>' + D.party(H.str(f, 'bname'), 'Recipient name', H.str(f, 'baddr'), H.str(f, 'bgst')) + '</div></div>' +
+        it.table +
+        '<div class="row" style="align-items:flex-start"><div style="flex:1;min-width:200px">' + (H.str(f, 'bank') ? '<strong>Payment</strong><br><span class="muted">' + H.nl(H.str(f, 'bank')) + '</span>' : '') + (H.str(f, 'notes') ? '<p class="muted">' + H.nl(H.str(f, 'notes')) + '</p>' : '') + '</div>' + tot.html + '</div>' +
+        '<p><span class="muted">Amount in words:</span> ' + H.words(tot.rounded) + '</p>' +
+        D.signature('No tax is charged on this document and no input tax credit can be claimed against it.', H.str(f, 'sname'));
+    }
+    H.bind(f, render);
+    items.addEventListener('input', render); items.addEventListener('change', render);
+    document.getElementById('pr').addEventListener('click', () => H.print());
+  })();</script>
+</body>
+</html>

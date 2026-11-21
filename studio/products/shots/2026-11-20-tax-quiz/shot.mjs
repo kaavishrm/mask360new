@@ -1,0 +1,96 @@
+// Weekly shot 1: a ten-question quiz on the money rules in force this year. Every answer is a figure
+// verified in the studio reports between 11 and 16 November 2026; the explanations name the rule.
+export default {
+  slug: 'money-rules-quiz-fy-2026-27',
+  published: '2026-11-20',
+  title: 'Money Rules Quiz FY 2026-27',
+  summary: 'Ten questions on this year’s tax, PF and investment rules. Get your score card.',
+  description: 'How well do you know the money rules for FY 2026-27? Ten quick questions on income tax, EPF, PPF, capital gains and late filing, with the correct figure explained after each one and a score card you can share.',
+  intro: 'Ten questions, one tap each. After every answer you see the right figure and why. At the end you get a score card you can download or share.',
+  body: `
+<section class="tool" id="quiz">
+  <div class="quiz-head"><span class="card-cat" id="q-progress">Question 1 of 10</span><span class="tiny" id="q-score">Score 0</span></div>
+  <h2 id="q-text" style="margin-top:.4em"></h2>
+  <div class="options" id="q-options"></div>
+  <div class="explain" id="q-explain" hidden></div>
+  <div class="actions" id="q-actions" hidden><button type="button" class="btn" id="q-next">Next question</button></div>
+</section>
+<section class="tool" id="result" hidden>
+  <div class="big"><div class="stat best"><b id="r-score"></b><span>out of 10</span></div><div class="stat"><b id="r-title"></b><span id="r-line"></span></div></div>
+  <img id="r-img" alt="Your score card" style="width:100%;max-width:600px;border:1px solid var(--line);border-radius:12px;margin-top:14px;display:block">
+  <canvas id="r-canvas" width="1200" height="630" hidden></canvas>
+  <div class="actions"><a class="btn" id="r-download" download="money-rules-quiz-score.png">Download score card</a><button type="button" class="btn secondary" id="r-share">Share</button><button type="button" class="btn secondary" id="r-copy">Copy result</button><button type="button" class="btn secondary" id="r-again">Try again</button></div>
+  <p class="note" id="r-note"></p>
+  <ol class="review" id="r-review"></ol>
+</section>`,
+  script: function () {
+    const Q = [
+      { q: 'Highest gross salary with zero income tax in the new regime for FY 2026-27?', o: ['₹7,00,000', '₹12,00,000', '₹12,75,000', '₹15,00,000'], a: 2, e: 'Taxable income up to ₹12 lakh is wiped out by the rebate, and the ₹75,000 standard deduction lifts the zero-tax salary to ₹12,75,000.' },
+      { q: 'Since 17 September 2026, the EPF wage ceiling for compulsory coverage is?', o: ['₹15,000', '₹21,000', '₹25,000', '₹30,000'], a: 2, e: 'The ceiling rose from ₹15,000 to ₹25,000 a month under the Code on Social Security, so the pension share is now up to ₹2,083 a month.' },
+      { q: 'The PPF interest rate for October to December 2026 is?', o: ['6.8%', '7.1%', '7.5%', '8.2%'], a: 1, e: '7.1%, unchanged since April 2020. Sukanya Samriddhi and SCSS pay 8.2% this quarter.' },
+      { q: 'Short-term capital gains on listed shares are taxed at?', o: ['10%', '12.5%', '15%', '20%'], a: 3, e: '20% since Budget 2024, with no rebate against it in the new regime.' },
+      { q: 'Long-term gains on equity shares and funds are exempt each year up to?', o: ['₹1,00,000', '₹1,25,000', '₹1,50,000', '₹2,00,000'], a: 1, e: '₹1,25,000 a year, shared across all your equity sales; the rest is taxed at 12.5%.' },
+      { q: 'The standard deduction for salaried people in the new regime is?', o: ['₹50,000', '₹60,000', '₹75,000', '₹1,00,000'], a: 2, e: '₹75,000 in the new regime and ₹50,000 in the old one.' },
+      { q: 'Last date to file a belated return for FY 2025-26?', o: ['31 July 2026', '30 September 2026', '31 December 2026', '31 March 2027'], a: 2, e: '31 December 2026, under the new regime only, with a late fee and 1% a month interest on unpaid tax.' },
+      { q: 'Late filing fee under Section 234F when total income is above ₹5 lakh?', o: ['₹1,000', '₹2,500', '₹5,000', '₹10,000'], a: 2, e: '₹5,000. It is ₹1,000 when total income is ₹5 lakh or less, and nil below the exemption limit.' },
+      { q: 'The EPS pension is pensionable salary × years of service divided by?', o: ['50', '60', '70', '100'], a: 2, e: '70. At the new ₹25,000 cap, 30 years of service plus the two-year weightage gives about ₹11,400 a month.' },
+      { q: 'Which state abolished professional tax from 1 April 2026?', o: ['Odisha', 'Kerala', 'Gujarat', 'Punjab'], a: 0, e: 'Odisha repealed its profession tax from FY 2026-27, giving up about ₹300 crore a year.' },
+    ];
+    const $ = (id) => document.getElementById(id);
+    let i = 0, score = 0, answers = [];
+    function show() {
+      const q = Q[i];
+      $('q-progress').textContent = 'Question ' + (i + 1) + ' of ' + Q.length;
+      $('q-score').textContent = 'Score ' + score;
+      $('q-text').textContent = q.q;
+      $('q-options').innerHTML = q.o.map((o, k) => '<button type="button" class="btn secondary opt" data-k="' + k + '">' + o + '</button>').join('');
+      $('q-explain').hidden = true; $('q-actions').hidden = true;
+      $('q-options').querySelectorAll('.opt').forEach((b) => b.addEventListener('click', () => pick(+b.dataset.k)));
+    }
+    function pick(k) {
+      const q = Q[i], right = k === q.a;
+      if (right) score++;
+      answers.push({ q: q.q, right, chosen: q.o[k], correct: q.o[q.a] });
+      $('q-options').querySelectorAll('.opt').forEach((b) => { b.disabled = true; const kk = +b.dataset.k; if (kk === q.a) b.classList.add('right'); else if (kk === k) b.classList.add('wrong'); });
+      $('q-explain').innerHTML = '<strong>' + (right ? 'Correct.' : 'Not quite. The answer is ' + q.o[q.a] + '.') + '</strong> ' + q.e;
+      $('q-explain').hidden = false; $('q-actions').hidden = false; $('q-score').textContent = 'Score ' + score;
+      $('q-next').textContent = i === Q.length - 1 ? 'See my score card' : 'Next question';
+    }
+    function verdict(s) { return s >= 9 ? ['CA material', 'You know the rules better than most people who file returns for a living.'] : s >= 7 ? ['Files their own return', 'Solid. A couple of figures to look up before March.'] : s >= 4 ? ['Reads the headlines', 'You know the big changes. The details are where the money is.'] : ['Needs a CA. Today.', 'No shame. That is what the calculators on this site are for.']; }
+    function draw(s) {
+      const c = $('r-canvas'), x = c.getContext('2d'), W = c.width, H = c.height, [t, line] = verdict(s);
+      x.fillStyle = '#faf8f3'; x.fillRect(0, 0, W, H);
+      x.fillStyle = '#0f5132'; x.fillRect(0, 0, W, 14);
+      x.fillStyle = '#5d655f'; x.font = '600 28px system-ui, -apple-system, Segoe UI, Roboto, sans-serif'; x.fillText('MONEY RULES QUIZ, FY 2026-27', 72, 96);
+      x.fillStyle = '#0f5132'; x.font = '700 190px system-ui, -apple-system, Segoe UI, Roboto, sans-serif'; x.fillText(s + '/10', 64, 300);
+      x.fillStyle = '#1b1f1c'; x.font = '700 56px system-ui, -apple-system, Segoe UI, Roboto, sans-serif'; x.fillText(t, 72, 400);
+      x.fillStyle = '#5d655f'; x.font = '400 30px system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
+      const words = line.split(' '); let row = '', y = 456; for (const w of words) { const test = row ? row + ' ' + w : w; if (x.measureText(test).width > W - 144) { x.fillText(row, 72, y); row = w; y += 40; } else row = test; } if (row) x.fillText(row, 72, y);
+      x.fillStyle = '#0f5132'; x.font = '600 32px system-ui, -apple-system, Segoe UI, Roboto, sans-serif'; x.fillText('hisaabtools.in/shots', 72, H - 56);
+      x.fillStyle = '#5d655f'; x.font = '400 26px system-ui, -apple-system, Segoe UI, Roboto, sans-serif'; const r = 'Take the quiz'; x.fillText(r, W - 72 - x.measureText(r).width, H - 56);
+      return c.toDataURL('image/png');
+    }
+    function finish() {
+      $('quiz').hidden = true; $('result').hidden = false;
+      const [t, line] = verdict(score);
+      $('r-score').textContent = String(score); $('r-title').textContent = t; $('r-line').textContent = line;
+      const url = draw(score); $('r-img').src = url; $('r-download').href = url;
+      $('r-note').textContent = 'Every answer above is a figure in force on 20 November 2026 and is explained on the calculators on this site.';
+      $('r-review').innerHTML = answers.map((a) => '<li class="' + (a.right ? 'ok' : 'miss') + '"><span>' + a.q + '</span><br><span class="tiny">' + (a.right ? 'Correct: ' + a.correct : 'You said ' + a.chosen + '. Answer: ' + a.correct) + '</span></li>').join('');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    const text = () => 'I scored ' + score + '/10 on the Money Rules Quiz for FY 2026-27 (' + verdict(score)[0] + '). Try it: ' + location.href;
+    $('q-next').addEventListener('click', () => { i++; if (i < Q.length) show(); else finish(); });
+    $('r-again').addEventListener('click', () => { i = 0; score = 0; answers = []; $('result').hidden = true; $('quiz').hidden = false; show(); });
+    $('r-copy').addEventListener('click', async () => { try { await navigator.clipboard.writeText(text()); $('r-copy').textContent = 'Copied'; } catch (e) { $('r-copy').textContent = 'Copy failed'; } });
+    $('r-share').addEventListener('click', async () => {
+      try {
+        const blob = await (await fetch($('r-img').src)).blob(); const file = new File([blob], 'money-rules-quiz-score.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) await navigator.share({ files: [file], text: text() });
+        else if (navigator.share) await navigator.share({ text: text(), url: location.href });
+        else { await navigator.clipboard.writeText(text()); $('r-share').textContent = 'Link copied'; }
+      } catch (e) { /* user cancelled or sharing unavailable */ }
+    });
+    show();
+  },
+};
