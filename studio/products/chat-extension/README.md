@@ -1,6 +1,6 @@
 # Conversation Shelf
 
-A Chrome extension (manifest v3) for the AI chat sites. Milestone 1 adds a side panel that lists the conversations the page already links to, filters them by title, marks the one you are in, and keeps up with the page as it re-renders.
+A Chrome extension (manifest v3) for the AI chat sites. Milestone 1 adds a side panel that lists the conversations the page already links to, filters them by title, marks the one you are in, and keeps up with the page as it re-renders. Milestone 2 adds folders: create, rename and delete them, file a conversation from the drop-down beside its title, and filter the shelf by folder or by the unfiled set.
 
 ```
 node scripts/make-icons.mjs   # renders icons/ from an inline SVG (already committed)
@@ -13,6 +13,10 @@ Load unpacked for a manual look: chrome://extensions, Developer mode, Load unpac
 
 `src/adapters.js` holds one entry per site with the hostnames and the shape of a conversation URL (`/c/<id>`, `/chat/<id>`, `/app/<id>`). `src/content.js` picks the adapter by hostname, or by whichever URL shape matches the most links when the host is unknown, then collects every matching link, deduplicates by id, and prefers links inside `nav`, `aside` or a navigation landmark so that links inside messages are ignored. No CSS class names are used; the sites change those often and URL shapes rarely.
 
+## Storage
+
+`src/store.js` keeps folders and assignments per site under `chrome.storage.local` inside the extension (the only permission requested), and falls back to `localStorage` when that API is absent, which is how the fixture tests run. The data is `{ folders: [{ id, name }], assign: { conversationId: folderId } }`; a conversation whose folder was deleted shows as unfiled.
+
 ## Fixtures
 
 `test/fixtures/*.html` are hand-written pages that follow each site's link shapes and include the traps the code must survive: duplicates (pinned and recent), absolute and relative hrefs, links without an id, and conversation links inside a message. They are not captures of the live sites, which need a signed-in account. When the owner opens the real sites, a saved copy of each page's navigation can replace the fixtures.
@@ -20,7 +24,7 @@ Load unpacked for a manual look: chrome://extensions, Developer mode, Load unpac
 ## Milestones
 
 1. Skeleton and conversation list: done.
-2. Folders stored locally.
+2. Folders stored locally: done.
 3. Search over conversation text.
 4. Export to Markdown.
 5. Paddle licence check for a paid tier.

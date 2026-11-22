@@ -27,7 +27,7 @@ const manifest = JSON.parse(await readFile(path.join(root, 'manifest.json'), 'ut
 check('manifest v3', manifest.manifest_version === 3);
 check('manifest content scripts cover the three sites', ['https://chatgpt.com/*', 'https://claude.ai/*', 'https://gemini.google.com/*'].every((m) => manifest.content_scripts[0].matches.includes(m)));
 for (const f of [...manifest.content_scripts[0].js, ...Object.values(manifest.icons)]) { try { await stat(path.join(root, f)); check('file exists ' + f, true); } catch { check('file exists ' + f, false); } }
-check('no permissions requested yet', manifest.permissions.length === 0);
+check('only the storage permission is requested', JSON.stringify(manifest.permissions) === JSON.stringify(['storage']));
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 800 } });
@@ -68,6 +68,52 @@ check('expand shows the list again', await page.locator('#shelf-list').isVisible
 const shots = path.join(root, 'test', 'shots');
 await import('node:fs/promises').then((fs) => fs.mkdir(shots, { recursive: true }));
 await page.screenshot({ path: path.join(shots, 'chatgpt.png') });
+
+// Folders (milestone 2), on the chatgpt fixture with the localStorage fallback
+await load('/c/aaa-111');
+const chips = () => page.locator('#shelf-folders .chip[data-id]').allInnerTexts();
+check('folders: the new-folder form is hidden until asked for', await page.locator('#shelf-newf').isHidden());
+check('folders: only the All chip before any folder exists', JSON.stringify(await chips()) === JSON.stringify(['All3']), JSON.stringify(await chips()));
+await page.locator('#shelf-folders .add').click();
+await page.locator('#shelf-newf input').fill('Trips');
+await page.locator('#shelf-newf button[type=submit]').click();
+check('folders: the form hides again after saving', await page.locator('#shelf-newf').isHidden());
+check('folders: new folder appears, selected, empty', JSON.stringify(await chips()) === JSON.stringify(['All3', 'Trips0', 'Unfiled3']), JSON.stringify(await chips()));
+check('folders: selected folder shows its empty message', (await page.locator('#shelf-list .empty').innerText()) === 'Nothing in this folder yet.');
+await page.locator('#shelf-folders .chip[data-id=""]').click();
+await page.locator('#shelf-list select[data-id="aaa-111"]').selectOption({ label: 'Trips' });
+check('folders: filing a conversation updates the counts', JSON.stringify(await chips()) === JSON.stringify(['All3', 'Trips1', 'Unfiled2']), JSON.stringify(await chips()));
+await page.locator('#shelf-folders .chip', { hasText: 'Trips' }).click();
+t = await titles();
+check('folders: folder filter shows only the filed conversation', JSON.stringify(t) === JSON.stringify(['Trip to Goa budget']), JSON.stringify(t));
+await page.locator('#shelf-folders .chip', { hasText: 'Unfiled' }).click();
+t = await titles();
+check('folders: unfiled filter shows the rest', JSON.stringify(t) === JSON.stringify(['Python regex help', 'Resume rewrite']), JSON.stringify(t));
+await load('/c/bbb-222');
+check('folders: folder and filing survive reload', JSON.stringify(await chips()) === JSON.stringify(['All3', 'Trips1', 'Unfiled2']), JSON.stringify(await chips()));
+check('folders: the select shows the stored folder after reload', (await page.locator('#shelf-list select[data-id="aaa-111"]').evaluate((s) => s.selectedOptions[0].textContent)) === 'Trips');
+await page.locator('#shelf-folders .chip', { hasText: 'Trips' }).click();
+await page.locator('#shelf-tools .rename').click();
+await page.locator('#shelf-newf input').fill('Travel');
+await page.locator('#shelf-newf button[type=submit]').click();
+check('folders: rename keeps the filing', JSON.stringify(await chips()) === JSON.stringify(['All3', 'Travel1', 'Unfiled2']), JSON.stringify(await chips()));
+await page.locator('#shelf-folders .chip', { hasText: 'Travel' }).click();
+await page.locator('#shelf-tools .del').click();
+check('folders: delete removes the folder and unfiles its conversations', JSON.stringify(await chips()) === JSON.stringify(['All3']), JSON.stringify(await chips()));
+check('folders: data persisted in localStorage for the site', await page.evaluate(() => { const d = JSON.parse(localStorage.getItem('conversationShelf.v1.chatgpt')); return d && d.folders.length === 0 && Object.keys(d.assign).length === 0; }));
+await page.screenshot({ path: path.join(shots, 'folders.png') });
+
+// Storage backend: with a chrome.storage.local shim present, folders go there and not to localStorage
+const ctx2 = await browser.newContext({ viewport: { width: 1200, height: 800 } });
+await ctx2.addInitScript(() => { window.chrome = { storage: { local: { _d: {}, get(k, cb) { cb({ [k]: this._d[k] }); }, set(o, cb) { Object.assign(this._d, o); if (cb) cb(); } } } }; });
+const p2 = await ctx2.newPage();
+await p2.goto(base + '/c/aaa-111');
+for (const js of manifest.content_scripts[0].js) await p2.addScriptTag({ url: base + '/' + js });
+await p2.waitForSelector('#conversation-shelf', { state: 'attached' });
+check('store: chrome.storage.local backend detected when present', await p2.evaluate(() => window.ConversationShelfStore.backend()) === 'chrome.storage.local');
+await p2.locator('#shelf-folders .add').click(); await p2.locator('#shelf-newf input').fill('Work'); await p2.locator('#shelf-newf button[type=submit]').click();
+check('store: folder written to chrome.storage.local, not localStorage', await p2.evaluate(() => { const d = window.chrome.storage.local._d['conversationShelf.v1.chatgpt']; return d && d.folders.length === 1 && d.folders[0].name === 'Work' && localStorage.getItem('conversationShelf.v1.chatgpt') === null; }));
+await ctx2.close();
 
 // Claude fixture
 await load('/chat/9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d');
