@@ -1,0 +1,113 @@
+/* Mask360 reel. Tokens come from website/DESIGN.md: Space Grotesk only, ink, paper, white, flame. */
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;src:url(/website/public/assets/fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;src:url(/website/public/assets/fonts/space-grotesk-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{--ink:#0a0a0a;--paper:#f3f2ee;--white:#fff;--flame:#f53901;--card:#161616}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--ink);color:#fff;
+  font-family:'Space Grotesk',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;font-kerning:normal}
+em{font-style:italic;color:var(--flame);font-synthesis:style}
+img{display:block}
+
+.scene{position:absolute;inset:0;overflow:hidden;display:none}
+.night{background:var(--ink);color:#fff}
+.paper{background:var(--paper);color:var(--ink)}
+.white{background:#fff;color:var(--ink)}
+
+/* type */
+.display{font-weight:700;font-size:176px;letter-spacing:-.035em;line-height:.94}
+.micro{font-weight:500;font-size:24px;letter-spacing:.12em;text-transform:uppercase;line-height:1.25;white-space:nowrap}
+.line{display:block;overflow:hidden;padding:.08em .12em .16em 0;margin:-.08em 0 -.16em 0}
+.line>.in{display:block;white-space:nowrap}
+
+/* pictures */
+.shot{position:absolute;inset:0;overflow:hidden;display:none;background:var(--ink)}
+.shot img,.half img,.pic img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.half{position:absolute;left:0;width:1080px;height:956px;overflow:hidden}
+.half.top{top:0}.half.bot{top:964px}
+.scrim{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(0,0,0,.80) 0px,rgba(0,0,0,.62) 320px,rgba(0,0,0,.30) 640px,rgba(0,0,0,0) 980px)}
+.scrim-t{position:absolute;left:0;top:0;width:1080px;height:700px;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(0,0,0,.62) 0px,rgba(0,0,0,.50) 340px,rgba(0,0,0,.16) 540px,rgba(0,0,0,0) 700px)}
+
+/* header strip: clocks, mark, section */
+#chrome{position:absolute;left:72px;right:72px;top:324px;height:36px;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  font-size:23px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;line-height:1;color:#fff;white-space:nowrap}
+#chrome .l{display:flex;gap:26px}
+#chrome .l i{font-style:normal;opacity:.62;margin-right:9px}
+#chrome .l b{font-weight:500;font-variant-numeric:tabular-nums}
+#chrome .c svg{height:30px;width:auto;display:block}
+#chrome .r{justify-self:end;font-variant-numeric:tabular-nums}
+#chrome .r i{font-style:normal;opacity:.62;margin-right:9px}
+
+/* caption under the work */
+.cap{position:absolute;left:72px;top:1318px;width:936px}
+.cap .rule{height:2px;background:rgba(255,255,255,.34);transform-origin:0 50%}
+.cap .micro{margin-top:20px;color:rgba(255,255,255,.78)}
+.cap .one{margin-top:12px;font-weight:600;font-size:60px;letter-spacing:-.022em;line-height:1.08;position:relative;height:72px}
+.cap .one .line{position:absolute;left:0;top:0}
+
+/* hook and payoff */
+.hook-micro{position:absolute;left:72px;top:1080px;color:rgba(255,255,255,.78)}
+.stack{position:absolute;left:66px;display:flex;flex-direction:column}   /* flex: the negative line margins must add up, not collapse */
+.stack .line{height:calc(.94em + .24em)}
+/* the payoff stack moves inside this window: lines enter from under its bottom edge */
+.pay-win{position:absolute;left:0;top:700px;width:1080px;height:764px;overflow:hidden}
+
+/* cards */
+.card{position:absolute;overflow:hidden;border-radius:36px;background:var(--card)}
+.card img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.card .inscrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0,rgba(0,0,0,.40) 22%,rgba(0,0,0,0) 46%)}
+.incap{position:absolute;left:44px;right:44px}
+.incap .micro{color:rgba(255,255,255,.78)}
+.incap .one{margin-top:10px;font-weight:600;font-size:52px;letter-spacing:-.022em;line-height:1.08}
+.tc{position:absolute;right:40px;top:36px;font-size:22px;font-weight:500;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.82)}
+.tc::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--flame);margin-right:12px;vertical-align:2px}
+
+/* wall */
+.wall{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 825px}
+.cell{position:absolute;width:208px;height:260px;overflow:hidden;border-radius:8px;background:var(--card)}
+.cell img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.pct{position:absolute;left:60px;top:1236px;font-weight:300;font-size:250px;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pct small{font-size:76px;letter-spacing:-.02em;margin-left:10px;font-weight:300}
+.wallscrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0,rgba(0,0,0,.70) 460px,rgba(0,0,0,.46) 690px,rgba(0,0,0,0) 920px),linear-gradient(to bottom,rgba(0,0,0,.66) 0,rgba(0,0,0,.50) 350px,rgba(0,0,0,0) 560px)}
+
+/* numbers */
+.num{position:absolute;left:64px;top:404px;height:250px;width:980px;overflow:hidden}
+.num .v{position:absolute;left:0;top:0;font-weight:700;font-size:228px;letter-spacing:-.045em;line-height:250px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.num-rule{position:absolute;left:72px;top:686px;width:936px;height:2px;background:rgba(10,10,10,.16);transform-origin:0 50%}
+.num-cap{position:absolute;left:72px;top:708px;width:936px;height:34px;overflow:hidden;color:rgba(10,10,10,.62)}
+.num-cap .micro{position:absolute;left:0;top:0}
+.num-card{left:72px;top:800px;width:936px;height:702px}
+.num-card .pic{position:absolute;inset:0;overflow:hidden}
+.cities{position:absolute;inset:0;background:var(--ink);color:#fff;padding:26px 52px}
+.cities .row{display:flex;justify-content:space-between;align-items:baseline;height:130px;border-bottom:2px solid rgba(255,255,255,.16);font-weight:600;font-size:66px;letter-spacing:-.025em;line-height:128px}
+.cities .row:last-child{border-bottom:0}
+.cities .row b{font-weight:300;font-variant-numeric:tabular-nums;letter-spacing:-.02em;color:rgba(255,255,255,.72)}
+
+/* index */
+.idx-micro{position:absolute;left:72px;top:404px;color:rgba(255,255,255,.64)}
+.idx-rule{position:absolute;left:72px;top:452px;width:936px;height:2px;background:rgba(255,255,255,.18)}
+.idx-win{position:absolute;left:72px;top:454px;width:936px;height:1100px;overflow:hidden}
+.idx-list{position:absolute;left:0;top:0;width:936px}
+.idx-row{position:absolute;left:0;width:936px;height:110px;display:flex;align-items:center;font-weight:600;font-size:76px;letter-spacing:-.03em;line-height:1;white-space:nowrap;color:#fff}
+.idx-row .n{width:104px;flex:none;font-size:23px;font-weight:500;letter-spacing:.06em;font-variant-numeric:tabular-nums;transform:translateY(-14px)}
+.idx-fade{position:absolute;left:0;width:1080px;pointer-events:none}
+
+/* grid lines for the payoff */
+.cols{position:absolute;inset:0}
+.cols i{position:absolute;top:0;width:2px;height:1920px;background:rgba(255,255,255,.085);transform-origin:50% 0}
+
+/* end card */
+.end-mark{position:absolute;left:230px;top:660px;width:620px;color:var(--ink)}
+.end-mark svg{width:620px;height:auto;display:block}
+.end-line{position:absolute;left:0;width:1080px;top:930px;text-align:center;font-weight:600;font-size:54px;letter-spacing:-.025em;line-height:1.12}
+.end-line{display:flex;flex-direction:column;align-items:center}
+.end-line .line{width:max-content;padding-left:.12em}
+.end-rule{position:absolute;left:72px;top:1318px;width:936px;height:2px;background:rgba(10,10,10,.16);transform-origin:50% 50%}
+.end-foot{position:absolute;left:72px;top:1342px;width:936px;display:flex;justify-content:space-between;color:rgba(10,10,10,.66)}
+
+/* debug guides: ?guides=1 */
+#guides{position:absolute;inset:0;z-index:99;pointer-events:none;display:none}
+#guides i{position:absolute;border:2px dashed rgba(0,255,200,.75)}
