@@ -4,7 +4,8 @@ Deep house at 120 BPM, F minor, 30 seconds, locked to the picture: a beat is 12 
     python3 audio.py out.wav
 
 Sections follow the timeline in src/reel.js:
-    0-2 hook | 2-14 work (six bars) | 14-16 the wall build | 16-20 numbers | 20-24 index | 24-27 payoff | 27-30 end card
+    0-4 hook | 4-6 work intro | 6-14 four cases | 14-16 four more, on the carousel |
+    16-20 under NDA | 20-24 numbers | 24-27 the closing line | 27-30 end card
 """
 import sys
 import numpy as np
@@ -189,7 +190,7 @@ CH = {
 }
 ROOT = {'Fm9': F2, 'Db9': Db2, 'Eb': Eb2, 'Cm7': C2}
 # one chord per bar, bar 1 is the hook
-PROG = ['Fm9', 'Fm9', 'Fm9', 'Db9', 'Eb', 'Fm9', 'Cm7', 'Cm7', 'Fm9', 'Db9', 'Eb', 'Cm7', 'Fm9', 'Fm9', 'Fm9']
+PROG = ['Fm9', 'Fm9', 'Db9', 'Fm9', 'Db9', 'Eb', 'Cm7', 'Cm7', 'Fm9', 'Db9', 'Fm9', 'Eb', 'Fm9', 'Fm9', 'Fm9']
 
 drums, low, mus, fx, tk, kb = Bus(), Bus(), Bus(), Bus(), Bus(), Bus()
 K, HC, HO, CL, SH, SN = kick(), hat(), hat(0.11, 0.32), clap(), shaker(), snare()
@@ -197,10 +198,16 @@ TICK, TOCK = tick(False), tick(True)
 kicks = []
 
 
-def groove(bar, t0, kick_beats=(0, 1, 2, 3), claps=True, hats=1.0, shk=0.0, stabs=(3, 6, 10, 13), stab_gain=1.0, bassline=True):
+def swipe(dur=0.14):
+    """A short breath of noise: the redaction bar sliding off a name."""
+    n = int(dur * SR); t = tt(n)
+    return norm(fade(filt(noise(n), 'bp', [1800, 7000]) * np.sin(np.pi * t / dur) ** 2, 0.002, 0.01))
+
+
+def groove(bar, t0, kick_beats=(0, 1, 2, 3), claps=True, hats=1.0, shk=0.0, stabs=(3, 6, 10, 13), stab_gain=1.0, bassline=True, kick_gain=0.90):
     chord = PROG[bar - 1]
     for b in kick_beats:
-        kb.add(K, t0 + b * BEAT, 0.90); kicks.append(t0 + b * BEAT)
+        kb.add(K, t0 + b * BEAT, kick_gain); kicks.append(t0 + b * BEAT)
     for b in range(4):
         drums.add(HO, t0 + b * BEAT + 0.25, 0.20 * hats, 0.18)                       # open hat off the beat
         if claps and b in (1, 3):
@@ -218,71 +225,91 @@ def groove(bar, t0, kick_beats=(0, 1, 2, 3), claps=True, hats=1.0, shk=0.0, stab
         mus.add(keys_st(CH[chord], dur=1.1, bright=0.9 + 0.25 * (i % 2)), t0 + s * 0.125, 0.34 * stab_gain * (1.0 if i % 2 == 0 else 0.8))
 
 
-# 0-2  hook: a low hit, a held chord, a watch ticking, then the cuts speed up
+# 0-4  hook: a low hit, a held chord and a watch ticking. The second line lands at 1 s, the palace
+#      goes dark around 2 s, "starts there" lands at 3 s.
 fx.add(boom(1.6, 0.10), 0.0, 0.55)
-mus.add(keys_st(CH['Fm9'], dur=2.4, bright=0.7), 0.0, 0.38)
-mus.add(pad(CH['Fm9'], 2.3) * np.minimum(1, tt(int(2.3 * SR)) / 1.2)[:, None], 0.0, 0.14)
-for i in range(8):
-    tk.add(TOCK if i % 2 else TICK, i * 0.25, 0.24, -0.25 if i % 2 == 0 else 0.25)
-for i, t in enumerate((1.0, 1.25, 1.5, 1.625, 1.75, 1.875)):                       # the picture cuts on these
-    drums.add(SN, t, 0.12 + 0.035 * i); drums.add(HC, t, 0.12 + 0.02 * i)
-fx.add(riser(1.25, 500, 8000), 0.75, 0.16)
-
-# 2-14  the work: six bars of groove, a little more arrives every bar
-for bar in range(2, 8):
-    t0 = (bar - 1) * BAR
-    groove(bar, t0, claps=bar >= 3, hats=0.8 if bar == 2 else 1.0, shk=0.0 if bar < 4 else 0.07, stab_gain=0.85 if bar == 2 else 1.0)
-    fx.add(riser(0.5, 1500, 9000, 3.0), t0 + BAR - 0.5, 0.07)                       # a breath into each new case
-kb.add(K, 13.75, 0.62); kicks.append(13.75)
-
-# 14-16  the wall: no kick, everything climbs
-fx.add(boom(1.4, 0.25), 14.0, 0.50)
-fx.add(riser(1.9, 300, 11000, 2.2), 14.0, 0.30)
-mus.add(pad(CH['Cm7'], 1.9, 2400) * (tt(int(1.9 * SR)) / 1.9)[:, None] ** 1.5, 14.0, 0.22)
-roll = [14.0 + i * 0.25 for i in range(4)] + [15.0 + i * 0.125 for i in range(4)] + [15.5 + i * 0.0625 for i in range(6)]
-for i, t in enumerate(roll):
-    g = 0.10 + 0.26 * (t - 14.0) / 1.875
-    drums.add(SN, t, g); tk.add(TICK if i % 2 == 0 else TOCK, t, 0.18 + 0.16 * (t - 14.0) / 1.875)
-low.add(bass(C2, 0.9), 14.0, 0.34)
-
-# 16-20  numbers: the drop. Every number lands with a hit and a counter running up
-for bar in (9, 10):
-    groove(bar, (bar - 1) * BAR, shk=0.10, hats=1.15, stabs=(3, 6, 11, 14), stab_gain=1.0)
-for i, t in enumerate((16.0, 17.0, 18.0, 19.0)):
-    fx.add(boom(1.4, 0.45 if i == 0 else 0.28), t, 0.70 if i == 0 else 0.30)
-    mus.add(keys_st(CH['Fm9h' if i % 2 == 0 else 'Ab9'], dur=1.3, bright=1.3), t, 0.30)
-    for j in range(7):                                                               # the count running up
-        tk.add(TICK, t + 0.03 + j * 0.055, 0.20 * (1 - j / 9), 0.0)
-
-# 20-24  index: one tick per house, the groove thins and then climbs out
-groove(11, 20.0, hats=0.7, stabs=(6, 13), stab_gain=0.8)
-groove(12, 22.0, kick_beats=(0, 1), claps=False, hats=0.6, stabs=(6,), stab_gain=0.7)
+mus.add(keys_st(CH['Fm9'], dur=3.0, bright=0.7), 0.0, 0.38)
+mus.add(pad(CH['Fm9'], 4.2) * np.minimum(1, tt(int(4.2 * SR)) / 1.5)[:, None], 0.0, 0.15)
 for i in range(16):
-    tk.add(TICK if i % 2 == 0 else TOCK, 20.0 + i * 0.25, 0.30, -0.2 if i % 2 == 0 else 0.2)
-fx.add(riser(1.4, 400, 10000, 2.4), 22.5, 0.26)
-for i, t in enumerate([23.0 + i * 0.125 for i in range(4)] + [23.5 + i * 0.0625 for i in range(6)]):
-    drums.add(SN, t, 0.10 + 0.24 * (t - 23.0) / 0.875)
+    tk.add(TOCK if i % 2 else TICK, i * 0.25, 0.20 + 0.006 * i, -0.25 if i % 2 == 0 else 0.25)
+fx.add(boom(1.0, 0.06), 1.0, 0.30)
+mus.add(keys_st(CH['Fm9h'], dur=1.8, bright=0.8), 1.0, 0.20)
+fx.add(riser(0.9, 400, 6000)[::-1].copy(), 1.6, 0.13)                                 # the light falls
+fx.add(boom(1.4, 0.20), 3.0, 0.48)
+mus.add(keys_st(CH['Ab9'], dur=1.6, bright=1.1), 3.0, 0.34)
+fx.add(riser(1.0, 500, 9000), 3.0, 0.20)
+for i, t in enumerate((3.5, 3.625, 3.75, 3.875)):
+    drums.add(SN, t, 0.10 + 0.04 * i)
 
-# 24-27  payoff: the floor drops away, then "Structure does." lands
-fx.add(boom(1.2, 0.05), 24.0, 0.36)
+# 4-6  work intro: the beat arrives, still light
+groove(3, 4.0, claps=False, hats=0.8, stab_gain=0.85)
+fx.add(boom(1.2, 0.30), 4.0, 0.40)
+fx.add(riser(0.5, 1500, 9000, 3.0), 5.5, 0.08)
+
+# 6-14  four cases, a bar each: the full groove
+for bar in range(4, 8):
+    t0 = (bar - 1) * BAR
+    groove(bar, t0, shk=0.0 if bar < 5 else 0.07)
+    fx.add(riser(0.5, 1500, 9000, 3.0), t0 + BAR - 0.5, 0.07)                       # a breath into each new case
+
+# 14-16  the carousel: one case per beat, and a climb into the drop-out
+groove(8, 14.0, shk=0.09, stabs=(3, 6))
+steps = (14.0, 14.5, 15.0, 15.5)
+for i, t in enumerate(steps):
+    tk.add(TICK if i % 2 == 0 else TOCK, t, 0.30); fx.add(swipe(0.16), t, 0.16)
+for i, t in enumerate([15.0 + i * 0.125 for i in range(8)]):
+    drums.add(SN, t, 0.10 + 0.03 * i)
+fx.add(riser(1.2, 400, 10000, 2.2), 14.7, 0.26)
+
+# 16-20  under NDA: everything drops away. A low pulse, a watch, and one tick as each name is uncovered
+fx.add(boom(2.2, 0.30), 16.0, 0.80)
+mus.add(pad(CH['Fm9'], 4.0, 800) * np.minimum(1, tt(int(4.0 * SR)) / 0.4)[:, None], 16.0, 0.22)
+mus.add(keys_st(CH['Fm9'], dur=2.6, bright=0.6), 16.0, 0.30)
+for t in (16.0, 17.0, 18.0, 19.0):
+    low.add(bass(F2, 0.5), t, 0.36)
+    kb.add(K, t, 0.55); kicks.append(t)
+for i in range(8):                                                                   # rows land on the half beats from 16.5
+    t = 16.5 + i * 0.25
+    tk.add(TICK if i % 2 == 0 else TOCK, t, 0.34, -0.2 if i % 2 == 0 else 0.2); fx.add(swipe(), t + 0.06, 0.20)
+fx.add(riser(1.4, 400, 10000, 2.4), 18.5, 0.26)
+for i, t in enumerate([19.0 + i * 0.125 for i in range(4)] + [19.5 + i * 0.0625 for i in range(6)]):
+    drums.add(SN, t, 0.10 + 0.24 * (t - 19.0) / 0.875)
+
+# 20-24  numbers: the drop. A stat lands on each beat from 20.5 and counts up
+for bar in (11, 12):
+    groove(bar, (bar - 1) * BAR, shk=0.10, hats=1.15, stabs=(3, 6, 11, 14))
+fx.add(boom(1.4, 0.45), 20.0, 0.70)
+mus.add(keys_st(CH['Fm9h'], dur=1.3, bright=1.3), 20.0, 0.30)
+for i, t in enumerate((20.5, 21.0, 21.5, 22.0)):
+    mus.add(keys_st(CH['Ab9' if i % 2 == 0 else 'Fm9h'], dur=1.1, bright=1.25), t, 0.24)
+    for j in range(9):                                                               # the count running up
+        tk.add(TICK, t + 0.03 + j * 0.055, 0.19 * (1 - j / 11), 0.0)
+fx.add(riser(1.0, 600, 10000, 2.6), 23.0, 0.20)
+for i, t in enumerate([23.5 + i * 0.0625 for i in range(6)]):
+    drums.add(SN, t, 0.12 + 0.03 * i)
+
+# 24-27  the closing line: the floor drops away, then the second sentence lands at 25.5
+fx.add(boom(1.4, 0.10), 24.0, 0.50)
 mus.add(pad(CH['Fm9'], 3.2, 900) * np.minimum(1, tt(int(3.2 * SR)) / 0.5)[:, None], 24.0, 0.16)
-for i, t in enumerate((24.0, 24.5)):
+mus.add(keys_st(CH['Fm9'], dur=1.8, bright=0.6), 24.0, 0.22)
+for i, t in enumerate((24.5, 25.0)):
     tk.add(TICK if i % 2 == 0 else TOCK, t, 0.22)
-fx.add(boom(2.4, 0.40), 25.0, 0.85)
-mus.add(keys_st(CH['Ab9'], dur=2.6, bright=1.25), 25.0, 0.48)
-mus.add(keys_st(CH['Fm9h'], dur=2.2, bright=0.9), 25.0, 0.20)
-low.add(bass(F2, 1.2), 25.0, 0.42)
-for i in range(4):
-    tk.add(TICK if i % 2 == 0 else TOCK, 25.5 + i * 0.5, 0.16)
+fx.add(boom(2.4, 0.40), 25.5, 0.85)
+mus.add(keys_st(CH['Ab9'], dur=2.4, bright=1.25), 25.5, 0.48)
+mus.add(keys_st(CH['Fm9h'], dur=2.0, bright=0.9), 25.5, 0.20)
+low.add(bass(F2, 1.0), 25.5, 0.42)
+for i in range(2):
+    tk.add(TICK if i % 2 == 0 else TOCK, 26.0 + i * 0.5, 0.16)
 
-# 27-30  end card: one last kick, the chord resolves, the watch keeps going into the loop
+# 27-30  end card: one last kick, the chord resolves, and the clocks tick: a tock on every second
 kb.add(K, 27.0, 0.80); kicks.append(27.0)
 fx.add(boom(1.2, 0.30), 27.0, 0.30)
 mus.add(keys_st(CH['Fm9'], dur=2.9, bright=1.0), 27.0, 0.44)
 mus.add(keys_st(CH['Fm9h'], dur=2.6, bright=0.8), 27.0, 0.18)
 low.add(bass(F2, 0.9), 27.0, 0.36)
 for i in range(11):
-    tk.add(TICK if i % 2 == 0 else TOCK, 27.25 + i * 0.25, 0.22 * (1 - i / 16), -0.25 if i % 2 == 0 else 0.25)
+    on_second = i % 4 == 3
+    tk.add(TOCK if on_second else TICK, 27.25 + i * 0.25, (0.30 if on_second else 0.16) * (1 - i / 18), -0.25 if i % 2 == 0 else 0.25)
 
 # ---------- mix ----------
 t = tt(N)
@@ -311,7 +338,7 @@ if '--stats' in sys.argv:
 
 # two breaths of near silence right before the drops, and a clean tail
 gap = np.ones(N)
-for a, b in ((15.89, 16.0), (23.89, 24.0)):
+for a, b in ((15.89, 16.0), (19.89, 20.0), (23.9, 24.0)):
     i, j = int(a * SR), int(b * SR); gap[i:j] = np.linspace(1, 0.12, j - i)
     gap[j:j + 240] = np.linspace(0.12, 1, 240)
 mix *= gap[:, None]

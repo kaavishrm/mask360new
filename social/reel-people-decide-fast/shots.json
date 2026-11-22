@@ -1,0 +1,38 @@
+{
+  "_note": "Every piece of footage the reel uses, cut from the public films and stills on mask360.agency. start and count are source frames; frames play one for one at 24 fps, so 30 fps sources run at four fifths speed. segments is a list of [output frames, source step] for a shot that changes speed. fit full = 1080 by 1920 film, fit still = a photograph with room to push in, fit tile = a 4 by 5 carousel tile. cx and cy place the crop, zoom trims baked-in borders and watermarks.",
+
+  "hook":        { "src": "hero.mp4", "start": 54, "segments": [[24, 1], [36, 2], [36, 1]], "fit": "full", "cx": 0.197, "cy": 0.3, "zoom": 1.1 },
+
+  "jb_colonnade": { "src": "jewel-bagh-film.mp4", "start": 492, "count": 12, "fit": "full" },
+  "jb_pool":     { "src": "jewel-bagh-film.mp4", "start": 590, "count": 12, "fit": "full" },
+  "jb_suite":    { "img": "jb-suite-living-room.jpg", "fit": "still" },
+  "jb_kitchen":  { "img": "jb-kitchen.jpg", "fit": "still" },
+
+  "at_pink":     { "src": "athleisure-film.mp4", "start": 96, "count": 12, "fit": "full" },
+  "at_stretch":  { "src": "athleisure-film.mp4", "start": 40, "count": 12, "fit": "full" },
+  "at_court":    { "img": "at-court-side.jpg", "fit": "still" },
+  "at_cast":     { "img": "at-cast-portrait.jpg", "fit": "still" },
+
+  "fb_watch":    { "src": "fire-boltt-quantum.mp4", "start": 30, "count": 12, "fit": "full" },
+  "fb_dark":     { "src": "fire-boltt-quantum.mp4", "start": 130, "count": 12, "fit": "full" },
+  "fb_statue":   { "src": "fire-boltt-quantum.mp4", "start": 706, "count": 12, "fit": "full" },
+  "fb_wrist":    { "src": "fire-boltt-quantum.mp4", "start": 770, "count": 12, "fit": "full" },
+
+  "nx_crowd":    { "src": "lolla-games.mp4", "start": 315, "count": 12, "fit": "full", "zoom": 1.1 },
+  "nx_arch":     { "src": "nexa-lounge.mp4", "start": 244, "count": 12, "fit": "full", "zoom": 1.1 },
+  "nx_gate":     { "src": "nexa-lounge.mp4", "start": 66, "count": 12, "fit": "full", "zoom": 1.1 },
+  "nx_stage":    { "src": "lolla-games.mp4", "start": 254, "count": 12, "fit": "full", "zoom": 1.1 },
+
+  "t_jewel":     { "img": "jewel-bagh.jpg", "fit": "tile" },
+  "t_athl":      { "img": "athleisure-launch.jpg", "fit": "tile", "cy": 0.3 },
+  "t_fire":      { "src": "fire-boltt-quantum.mp4", "start": 40, "count": 1, "fit": "tile" },
+  "t_nexa":      { "src": "nexa-lounge.mp4", "start": 250, "count": 1, "fit": "tile", "zoom": 1.12 },
+  "t_loreal":    { "src": "loreal.mp4", "start": 596, "count": 48, "fit": "tile", "cy": 0.35 },
+  "t_dior":      { "img": "dior-x-marangoni.png", "fit": "tile", "cx": 0.905, "cy": 0, "zoom": 1.22 },
+  "t_verona":    { "src": "verona.mp4", "start": 160, "count": 48, "fit": "tile" },
+  "t_smugglerz": { "img": "smugglerz-inc.jpg", "fit": "tile" },
+  "t_lamercie":  { "img": "la-mercie.jpg", "fit": "tile" },
+  "t_bms":       { "src": "bookmyshow.mp4", "start": 640, "count": 1, "fit": "tile", "cy": 0.94, "zoom": 1.06 },
+  "t_facets":    { "src": "pure-facets.mp4", "start": 300, "count": 48, "fit": "tile" },
+  "t_praana":    { "img": "praana.jpg", "fit": "tile" }
+}

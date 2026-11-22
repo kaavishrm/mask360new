@@ -2,12 +2,12 @@
 //   node render.mjs                 all 720 frames
 //   node render.mjs --stills 0,60   only these frames, into .cache/stills (for checking layouts)
 //   node render.mjs --from 336 --to 384
-// Frames that the timeline marks for motion blur are shot several times inside the frame
-// and averaged by blend.py afterwards.
+// Motion blur: for every frame the page reports how far things travel while the shutter is open.
+// A frame with real travel is shot many times inside the frame and averaged by blend.py afterwards.
 import { createServer } from 'node:http';
 import { readFile, mkdir, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { extname, join, resolve, dirname } from 'node:path';
+import { extname, join, resolve, dirname, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 
@@ -19,6 +19,7 @@ catch { ({ chromium } = require(join(process.env.NODE_PATH || '/opt/node22/lib/n
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '../..');                       // repo root, so the page can read website/public/assets
 const CACHE = process.env.REEL_CACHE || join(HERE, '.cache');
+const REL = '/' + relative(ROOT, HERE).split(sep).join('/');   // this folder as the page sees it
 const arg = (k, d) => { const i = process.argv.indexOf('--' + k); return i > -1 ? process.argv[i + 1] : d; };
 const flag = k => process.argv.includes('--' + k);
 
@@ -26,7 +27,7 @@ const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css
 const server = createServer(async (req, res) => {
   try {
     let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-    const cachePrefix = '/social/reel-taste-does-not-scale/.cache/';
+    const cachePrefix = REL + '/.cache/';
     const file = p.startsWith(cachePrefix) ? join(CACHE, p.slice(cachePrefix.length)) : join(ROOT, p);
     if (!file.startsWith(ROOT) && !file.startsWith(CACHE)) { res.writeHead(403).end(); return; }
     const buf = await readFile(file);
@@ -34,11 +35,13 @@ const server = createServer(async (req, res) => {
   } catch { res.writeHead(404).end('not found'); }
 });
 await new Promise(r => server.listen(0, '127.0.0.1', r));
-const base = `http://127.0.0.1:${server.address().port}/social/reel-taste-does-not-scale/src/index.html`;
+const base = `http://127.0.0.1:${server.address().port}${REL}/src/index.html`;
 
 const stills = arg('stills');
 const guides = flag('guides');
-const SHUTTER = 0.6;
+const SHUTTER = 0.5;                 // a 180 degree shutter
+const STEP = 2;                      // at most this many pixels of travel between two samples
+const MAX_SAMPLES = 64;
 const WORKERS = Number(arg('workers', stills ? 2 : 4));
 const outDir = stills ? join(CACHE, 'stills') : join(CACHE, 'frames');
 const subDir = join(CACHE, 'sub');
@@ -69,10 +72,12 @@ else { const a = Number(arg('from', 0)), b = Number(arg('to', meta.TOTAL)); fram
 
 const name = f => String(f).padStart(5, '0');
 const clip = { x: 0, y: 0, width: 1080, height: 1920 };
-let done = 0; const t0 = Date.now();
+let done = 0, shots = 0; const t0 = Date.now();
 async function work(page, list) {
   for (const f of list) {
-    const n = stills && !flag('blur') ? 1 : await page.evaluate(x => window.samples(x), f);
+    const travel = stills && !flag('blur') ? 0 : await page.evaluate(([x, sh]) => window.motion(x, sh), [f, SHUTTER]);
+    const n = Math.max(1, Math.min(MAX_SAMPLES, Math.ceil(travel / STEP)));
+    shots += n;
     if (n === 1) {
       await page.evaluate(x => window.seek(x), f);
       await page.screenshot({ path: join(outDir, name(f) + '.png'), clip });
@@ -88,5 +93,5 @@ async function work(page, list) {
 const pages = [first]; for (let i = 1; i < Math.min(WORKERS, frames.length); i++) pages.push(await open());
 const buckets = pages.map(() => []); frames.forEach((f, i) => buckets[i % pages.length].push(f));
 await Promise.all(pages.map((p, i) => work(p, buckets[i])));
-console.log(`rendered ${frames.length} frames in ${((Date.now() - t0) / 1000).toFixed(1)}s -> ${outDir}`);
+console.log(`rendered ${frames.length} frames from ${shots} exposures in ${((Date.now() - t0) / 1000).toFixed(1)}s -> ${outDir}`);
 await browser.close(); server.close();
