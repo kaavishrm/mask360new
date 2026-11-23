@@ -2,7 +2,9 @@
 // A state appears here only after its rule was read in the legislature's published text (or, where the
 // official site refuses automated reading, in a full reproduction of it), on the date in `verified`.
 // `start` names the event that starts the clock: 'vacate' (tenant moves out), 'termination' (the rental
-// agreement ends), or 'later' (the later of termination and delivery of possession).
+// agreement ends), 'earlier', or 'later' (the later of termination and delivery of possession). `days` may be
+// a number, 'month' (a calendar month), or null where the statute sets no fixed refund deadline. `business`
+// counts the days excluding Saturdays and Sundays. A step's fourth element flags 'business' or 'tenant'.
 export default function depositRules() {
   return [
     {
@@ -94,6 +96,96 @@ export default function depositRules() {
       forwarding: 'The tenant must give the landlord a forwarding or new address in writing. A tenant who does not is still owed the deposit but cannot recover the statutory damages or attorney fees.',
       penalty: 'A landlord who fails to comply owes the amount due plus damages equal to the amount wrongfully withheld and reasonable attorney fees.',
       verified: '2026-11-21', source: 'Ohio Revised Code official site (section effective 4 November 1974)',
+    },
+    {
+      code: 'WA', name: 'Washington', start: 'later', days: 30,
+      steps: [[30, 'Full and specific statement of the basis for keeping any of the deposit, with estimates or invoices, together with the refund due']],
+      cite: 'RCW 59.18.280(1) and (2)', url: 'https://app.leg.wa.gov/RCW/default.aspx?cite=59.18.280',
+      rule: 'Within 30 days after the termination of the rental agreement and vacation of the premises (or after the landlord learns of an abandonment), the landlord must give a full and specific statement of the basis for retaining any of the deposit, with copies of estimates or paid invoices, together with the refund due. Personal delivery or first-class mail to the last known address within the 30 days is compliance.',
+      forwarding: 'No forwarding address condition. The landlord may mail to your last known address, so give the new one in writing.',
+      penalty: 'A landlord who misses the 30 days is liable for the full deposit and may not raise claims against it, unless circumstances beyond the landlord’s control prevented a timely statement or the tenant abandoned. For an intentional refusal the court may award up to two times the deposit. The prevailing party recovers costs and attorney fees.',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Revised Code of Washington, current as of 1 January 2025 (the official page served only its navigation to a machine)',
+    },
+    {
+      code: 'MA', name: 'Massachusetts', start: 'termination', days: 30,
+      steps: [[30, 'Return the deposit or the balance, with an itemized list of damages sworn to under the penalties of perjury and written evidence of cost']],
+      cite: 'M.G.L. c. 186, § 15B(4), (6) and (7)', url: 'https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section15B',
+      rule: 'Within thirty days after the termination of occupancy under a tenancy at will, or the end of the tenancy stated in a written lease, the lessor must return the deposit or any balance. To keep anything for damage the lessor must give within the same thirty days an itemized list of damages sworn to under the pains and penalties of perjury, with written evidence of the cost.',
+      forwarding: 'The section sets no forwarding address condition; the duty runs from the end of the tenancy.',
+      penalty: 'A lessor who fails to return the deposit or balance within thirty days owes three times the amount due plus five per cent interest from the due date, court costs and attorney fees. A lessor who fails to furnish the sworn itemized list in time forfeits the right to keep any part of the deposit for damage.',
+      verified: '2026-11-23', source: 'official General Laws published by the Massachusetts Legislature (page dated 23 November 2026)',
+    },
+    {
+      code: 'AZ', name: 'Arizona', start: 'later', days: 14, business: true,
+      steps: [[14, 'Itemized list of all deductions with the amount due, by first-class mail to the last known address unless agreed otherwise in writing', null, 'business']],
+      cite: 'A.R.S. § 33-1321(D) and (E)', url: 'https://www.azleg.gov/ars/33/01321.htm',
+      rule: 'Within fourteen days, excluding Saturdays, Sundays and other legal holidays, after termination of the tenancy, delivery of possession and demand by the tenant, the landlord must provide an itemized list of all deductions together with the amount due. The calculator excludes weekends; a legal holiday in the window pushes the date one more business day.',
+      forwarding: 'Make a demand for the deposit in writing when you hand back the keys, since demand is one of the three events that start the clock. The list is mailed to your last known place of residence unless you arrange otherwise in writing. Amounts not disputed within sixty days after mailing are deemed valid.',
+      penalty: 'Twice the amount wrongfully withheld, on top of the property and money due.',
+      verified: '2026-11-23', source: 'official Arizona Revised Statutes published by the Arizona Legislature',
+    },
+    {
+      code: 'MI', name: 'Michigan', start: 'termination', days: 30,
+      steps: [[4, 'Your side: give the landlord your forwarding address in writing', null, 'tenant'], [30, 'Notice of damages with an itemized list and the balance of the deposit (or an electronic transfer within 10 days of the notice)'], [45, 'Last day for the landlord to sue for damages or return the balance; retention after this is not allowed']],
+      cite: 'MCL 554.609, 554.611, 554.612 and 554.613', url: 'https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-554-609',
+      rule: 'Within 30 days after the termination of occupancy the landlord must mail a notice of damages with an itemized list and a check for the balance, or send the balance electronically within 10 days of the notice. You must respond by mail within 7 days of receiving the notice, in detail, or forfeit the amount claimed. Within 45 days of the end of occupancy the landlord must either sue for the damages or return the balance.',
+      forwarding: 'You must give the landlord your forwarding address in writing within 4 days after you move out. If you do not, the landlord need not send the notice of damages, though your claim to the deposit survives.',
+      penalty: 'A landlord who does not comply fully waives all claimed damages and owes double the amount of the deposit retained.',
+      verified: '2026-11-23', source: 'official Michigan Compiled Laws site, complete through PA 114 of 2026 (section 554.609 as amended by 2026 PA 102, effective 21 September 2026)',
+    },
+    {
+      code: 'VA', name: 'Virginia', start: 'later', days: 45,
+      steps: [[45, 'Written itemization of deductions and the amount due'], [60, 'Itemization of damage and repair cost where the landlord gave written notice within the 45 days that the damage exceeds the deposit and needs a third-party contractor']],
+      cite: 'Va. Code § 55.1-1226(A), (B) and (E)', url: 'https://law.lis.virginia.gov/vacode/title55.1/chapter12/section55.1-1226/',
+      rule: 'Within 45 days after the termination date of the tenancy or the date the tenant vacates, whichever is later, the landlord must itemize the deposit, deductions and charges in a written notice and pay the amount due. Where damage exceeds the deposit and needs an outside contractor the landlord may take 15 more days for the itemization after giving written notice within the 45.',
+      forwarding: 'The deposit goes to the forwarding address you provide. If none is given the landlord may hold it in escrow and, a year after the 45-day period, remit it to the State Treasurer as unclaimed property.',
+      penalty: 'For a wilful failure to comply the court orders the return of the deposit together with actual damages and reasonable attorney fees.',
+      verified: '2026-11-23', source: 'official Code of Virginia published by the Virginia Legislative Information System (page dated 23 November 2026)',
+    },
+    {
+      code: 'CO', name: 'Colorado', start: 'later', days: 'month',
+      steps: [['month', 'Return the deposit, or the balance with a written statement of the exact reasons for keeping any part (a lease may extend this to at most sixty days)']],
+      cite: 'C.R.S. § 38-12-103(1), (2) and (3)', url: 'https://codes.findlaw.com/co/title-38-property-real-and-personal/co-rev-st-sect-38-12-103/',
+      rule: 'Within one month after the termination of the lease or surrender and acceptance of the premises, whichever occurs last, the landlord must return the deposit or deliver a written statement listing the exact reasons for keeping any part, with the balance. A lease may set a longer period of up to sixty days. Mailing the statement and payment to the last known address is compliance. Nothing may be kept for normal wear and tear.',
+      forwarding: 'No forwarding address condition; the landlord may mail to your last known address. Check the lease for a longer period, up to sixty days.',
+      penalty: 'A landlord who fails to give the statement in time forfeits the right to withhold anything. Wilful retention brings treble the amount wrongfully withheld plus attorney fees and costs, and the landlord bears the burden of proof. You must give the landlord at least seven days’ notice of your intention to sue first.',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Colorado Revised Statutes, current as of 1 January 2025',
+    },
+    {
+      code: 'MD', name: 'Maryland', start: 'termination', days: 45,
+      steps: [[45, 'Return the deposit with interest less damages rightfully withheld, and send a written list of damages with an itemized statement of costs by first-class mail']],
+      cite: 'Md. Code, Real Prop. § 8-203(e), (f) and (g)', url: 'https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-203',
+      rule: 'Within 45 days after the end of the tenancy the landlord must return the deposit with simple interest, less any damages rightfully withheld, and within the same 45 days present by first-class mail to the last known address a written list of the damages claimed with an itemized statement of costs.',
+      forwarding: 'To have the right to be present at the move-out inspection, send the landlord notice by certified mail at least 15 days before moving, stating the moving date and your new address. The list of damages goes to your last known address.',
+      penalty: 'A landlord who does not send the list of damages within 45 days forfeits the right to withhold any part of the deposit. A landlord who without a reasonable basis fails to return any part of it can be ordered to pay up to threefold the withheld amount plus attorney fees. No part of the section can be waived in a lease.',
+      verified: '2026-11-23', source: 'official statute text published by the Maryland General Assembly (the page shows no currency date)',
+    },
+    {
+      code: 'TN', name: 'Tennessee', start: 'vacate', days: null,
+      steps: [[30, 'Latest day damage can be discovered and charged against the deposit (earlier if a new tenant takes possession within 7 days)']],
+      cite: 'Tenn. Code § 66-28-301(b), (f) and (g)', url: 'https://codes.findlaw.com/tn/title-66-property/tn-code-sect-66-28-301/',
+      rule: 'Tennessee sets no fixed number of days for the refund. The landlord must send notice of the amount of any refund due to your last known or reasonably determinable address; if the landlord gets no response within sixty days of sending it the landlord may keep the deposit. Damage can be charged only if it was discovered before the earlier of thirty days after you vacated and seven days after a new tenant took possession. The Act applies in counties above a population threshold.',
+      forwarding: 'Give a forwarding address in writing and answer the landlord’s notice promptly; sixty days of silence after the notice lets the landlord keep the deposit. You may inspect for damage and ask in writing for the list of damages and estimated repair costs.',
+      penalty: 'A landlord who did not keep the deposit in the required account and did not provide the damage listing may not keep any part of it. The section states no multiple-damages penalty.',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Tennessee Code, current as of 2 January 2024 (the official code is published through a commercial service that refuses automated reading; no newer open text was found)',
+    },
+    {
+      code: 'IN', name: 'Indiana', start: 'later', days: 45, fwdCondition: true,
+      steps: [[45, 'Itemized written notice of amounts applied to rent, damage and utilities, with the amount due']],
+      cite: 'Ind. Code §§ 32-31-3-12, 32-31-3-14 and 32-31-3-15', url: 'https://codes.findlaw.com/in/title-32-property/in-code-sect-32-31-3-12/',
+      rule: 'Not more than 45 days after termination of the rental agreement and delivery of possession, the landlord must return the deposit less itemized amounts for rent, damage and unpaid utility or sewer charges, with written notice of the itemization and the amount due. The itemized list of damages must be mailed within 45 days with a check for the difference.',
+      forwarding: 'The landlord is not liable under the chapter until you supply a mailing address in writing. The calculator assumes you gave it by move-out; if you gave it later the duty arose then.',
+      penalty: 'A tenant can recover the whole deposit due plus reasonable attorney fees when the landlord fails to comply. A landlord who gives no notice of damages is taken to agree that none are due and must remit the full deposit immediately.',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Indiana Code, current as of 1 January 2026 (the official site returned no section text to a machine)',
+    },
+    {
+      code: 'MO', name: 'Missouri', start: 'termination', days: 30,
+      steps: [[30, 'Return the full deposit, or a written itemized list of damages with the balance, by mail to the last known address']],
+      cite: 'Mo. Rev. Stat. § 535.300(3), (5) and (6)', url: 'https://revisor.mo.gov/main/OneSection.aspx?section=535.300',
+      rule: 'Within thirty days after the date of termination of the tenancy the landlord must return the full deposit, or furnish a written itemized list of the damages for which any part is withheld together with the balance, mailed to your last known address.',
+      forwarding: 'The landlord must give you reasonable written or personal notice of the date and time of the move-out inspection and you have the right to be present. Give your new address in writing so the statement reaches you.',
+      penalty: 'Twice the amount wrongfully withheld.',
+      verified: '2026-11-23', source: 'official Revised Statutes of Missouri published by the Missouri Revisor (section effective 28 August 2018)',
     },
   ];
 }

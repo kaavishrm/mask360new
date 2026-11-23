@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Late Rent Fee Checker | Tenant Calc</title>
+<meta name="description" content="Free late rent fee checker for tenants and landlords. Pick a state, enter the rent, the due date, the date you paid and the fee in your lease, and see whether a fee may be charged yet, the maximum the statute allows, and the penalty for charging more, each with the statute section cited and the date it was verified.">
+<link rel="canonical" href="https://tenantcalc.com/late-rent-fee-checker/">
+<meta property="og:title" content="Late Rent Fee Checker | Tenant Calc">
+<meta property="og:description" content="Free late rent fee checker for tenants and landlords. Pick a state, enter the rent, the due date, the date you paid and the fee in your lease, and see whether a fee may be charged yet, the maximum the statute allows, and the penalty for charging more, each with the statute section cited and the date it was verified.">
+<meta property="og:url" content="https://tenantcalc.com/late-rent-fee-checker/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tenant Calc">
+<meta name="theme-color" content="#faf8f3">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Late Rent Fee Checker","url":"https://tenantcalc.com/late-rent-fee-checker/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free late rent fee checker for tenants and landlords. Pick a state, enter the rent, the due date, the date you paid and the fee in your lease, and see whether a fee may be charged yet, the maximum the statute allows, and the penalty for charging more, each with the statute section cited and the date it was verified."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tenantcalc.com/"},{"@type":"ListItem","position":2,"name":"Late Rent Fee Checker","item":"https://tenantcalc.com/late-rent-fee-checker/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My lease has no late fee clause. Can the landlord charge one?","acceptedAnswer":{"@type":"Answer","text":"In Texas, Virginia, Colorado and Arizona the statute says the fee must be in the written agreement, and in practice the same is true everywhere: a fee is a contract term. Ask for the clause in writing before paying any fee the lease does not mention."}},{"@type":"Question","name":"Rent was due on the first and I paid on the third. Can I be charged?","acceptedAnswer":{"@type":"Answer","text":"It depends on the state. In Texas the rent must have remained unpaid two full days after the due date, so a payment on the third is still inside the window and no fee is due; the fee becomes chargeable on the fourth. In New York, North Carolina, Tennessee and Washington you are still inside the five-day grace period, though in Washington a payment after the fifth day can carry a fee counted from the first. In Maryland and Virginia the statute sets no grace period, so the lease decides."}},{"@type":"Question","name":"The landlord is charging a daily late fee. Is that allowed?","acceptedAnswer":{"@type":"Answer","text":"Texas treats an initial fee plus daily fees as a single fee and tests the total against the cap. Colorado allows more than one fee for a late payment only if the total stays within its cap, and bars interest on a fee. North Carolina allows one fee per late payment. Elsewhere the lease and the general rule against penalties apply."}},{"@type":"Question","name":"What happens if the landlord charges more than the cap?","acceptedAnswer":{"@type":"Answer","text":"Texas sets a specific penalty: $100 plus three times the improper fee plus attorney fees. Colorado charges fifty dollars per violation and more if it is not cured within seven days of notice. In New York and North Carolina the lease term is void and the excess is not collectable. Keep the receipt and the lease, and raise it in writing first."}},{"@type":"Question","name":"Does this cover my city?","acceptedAnswer":{"@type":"Answer","text":"No. Chicago, several California cities and other places add rules on top of state law. Where the statute line says no statewide statute was found, check your city before relying on the lease alone."}}]}</script>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="/">Tenant Calc</a><div class="nav-links"><a href="/#deposits">Deposits</a><a href="/#rent">Rent</a><a href="/#notices">Notices</a><a href="/#documents">Documents</a></div></nav>
+
+<main class="page tool-page">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/#rent">Rent</a></p>
+  <h1>Late Rent Fee Checker: is the late fee legal in your state, and how much can it be?</h1>
+  <p class="lede">Most leases name a late fee. Some states cap it, some require a grace period before it can be charged, and many leave it to the lease. Choose your state and the checker applies the statute as written, names the section, and says when it was last checked.</p>
+  <div class="ad-slot" data-slot="top"></div>
+  <section class="tool" id="tool">
+<form id="f">
+  <div class="grid">
+    <label>State<select name="state" id="state"></select></label>
+    <label>Rent per period ($)<input type="number" name="rent" value="1500" min="0" step="1"></label>
+    <label>Rent is paid<select name="period"><option value="m">Monthly</option><option value="w">Weekly</option></select></label>
+    <label>Rent was due on<input type="date" name="due" value="2026-11-01"></label>
+    <label>Paid on (or today, if unpaid)<input type="date" name="paid" value="2026-11-10"></label>
+    <label>Late fee in your lease ($)<input type="number" name="fee" value="100" min="0" step="1"></label>
+    <label>Still unpaid when the fee was charged ($) <span class="hint">Usually the whole rent</span><input type="number" name="unpaid" value="1500" min="0" step="1"></label>
+    <label id="units-wrap">Units in the building<select name="units"><option value="4">4 or fewer</option><option value="5">More than 4</option></select></label>
+  </div>
+  <div class="result" id="out"></div>
+</form></section>
+  <div class="ad-slot" data-slot="mid"></div>
+  <article class="explainer">
+<h2>How late fee limits work</h2>
+<p>A late fee is a term of the lease, not a right the landlord has by default, and in every state on this list it has to be in the written agreement before it can be collected. On top of that, eleven of the twenty states covered here add one or both of two limits. The first is a grace period: a number of days after the due date during which no fee may be charged at all. New York and Washington allow a fee only once the rent is more than five days late, North Carolina and Tennessee at five days, Colorado at seven, Texas after two full days, and Massachusetts not until thirty days have passed. The second is a cap on the amount. New York caps it at the lesser of fifty dollars or five percent of the monthly rent; North Carolina and Maryland at five percent (with a fifteen-dollar floor in North Carolina); Colorado at the greater of fifty dollars or five percent of the past-due rent; Tennessee and Virginia at ten percent; and Texas presumes a fee reasonable up to twelve percent in a building of four or fewer units and ten percent in a larger one.</p>
+<span class="formula">Fee that can be charged = 0 inside the grace period, otherwise the lesser of the lease fee and the statutory cap</span>
+<h3>Reading the result</h3>
+<p>The first figure is the fee that can be charged for the payment you entered, after both limits. The cap uses the rent or, where the statute says so, the unpaid amount: Colorado, Maryland, Tennessee and Virginia measure against what is past due, so paying part of the rent on time lowers the cap. Texas asks how many units are in the building because its safe harbour differs. New Jersey is unusual: its five-business-day grace period protects only tenants who receive a Social Security old-age pension or certain disability or welfare benefits, and the checker shows the date for them while noting that other tenants have no statutory grace period. The remaining nine states on the list have no statewide statute that caps the fee or requires a grace period, and the checker says so rather than inventing a figure; the lease governs, subject to the general rule that a court will not enforce a fee that is a penalty rather than a reasonable estimate of the landlord’s loss, and to city ordinances such as Chicago’s.</p>
+<h3>What this checker does not do</h3>
+<p>It does not decide whether a fee is reasonable where the statute leaves that open, it does not apply city ordinances, and it does not handle daily accruing fees except in Texas, where the statute treats an initial fee plus daily fees as one fee against the cap. Interest on late rent, returned-payment charges and attorney fees are separate questions. Where a statute uses business days the checker excludes weekends only; a State or federal holiday inside the period adds a day. Each entry names the section it rests on and the date it was read, and nine entries rest on published state charts rather than a statute because no statewide statute could be found, which the source line says plainly.</p></article>
+  <section class="faqs"><h2>Questions people ask</h2><details class="faq"><summary>My lease has no late fee clause. Can the landlord charge one?</summary><div><p>In Texas, Virginia, Colorado and Arizona the statute says the fee must be in the written agreement, and in practice the same is true everywhere: a fee is a contract term. Ask for the clause in writing before paying any fee the lease does not mention.</p></div></details><details class="faq"><summary>Rent was due on the first and I paid on the third. Can I be charged?</summary><div><p>It depends on the state. In Texas the rent must have remained unpaid two full days after the due date, so a payment on the third is still inside the window and no fee is due; the fee becomes chargeable on the fourth. In New York, North Carolina, Tennessee and Washington you are still inside the five-day grace period, though in Washington a payment after the fifth day can carry a fee counted from the first. In Maryland and Virginia the statute sets no grace period, so the lease decides.</p></div></details><details class="faq"><summary>The landlord is charging a daily late fee. Is that allowed?</summary><div><p>Texas treats an initial fee plus daily fees as a single fee and tests the total against the cap. Colorado allows more than one fee for a late payment only if the total stays within its cap, and bars interest on a fee. North Carolina allows one fee per late payment. Elsewhere the lease and the general rule against penalties apply.</p></div></details><details class="faq"><summary>What happens if the landlord charges more than the cap?</summary><div><p>Texas sets a specific penalty: $100 plus three times the improper fee plus attorney fees. Colorado charges fifty dollars per violation and more if it is not cured within seven days of notice. In New York and North Carolina the lease term is void and the excess is not collectable. Keep the receipt and the lease, and raise it in writing first.</p></div></details><details class="faq"><summary>Does this cover my city?</summary><div><p>No. Chicago, several California cities and other places add rules on top of state law. Where the statute line says no statewide statute was found, check your city before relying on the lease alone.</p></div></details></section>
+  <section class="related"><h2>Related tools</h2><div class="cards"><a class="card" href="/prorated-rent-calculator/"><span class="card-cat">Rent</span><strong>Prorated Rent Calculator</strong><span>Daily rate by actual days, a 30-day month or a 365-day year, side by side.</span></a><a class="card" href="/security-deposit-return-deadline-calculator/"><span class="card-cat">Deposits</span><strong>Security Deposit Return Deadline Calculator</strong><span>Pick your state and move-out date. Get the deadline, what starts the clock, and the law section.</span></a></div></section>
+  <div class="ad-slot" data-slot="bottom"></div>
+</main>
+<footer class="footer"><div><strong>Tenant Calc</strong> is a set of free calculators and documents for landlords and tenants in the United States. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Rules are for guidance and name the statute they rest on. Confirm anything you will rely on with a local attorney or your state's tenant agency. Updated 2026-11-21.</div></footer>
+<script src="/assets/js/common.js"></script><script>function lateFeeRules() {
+  const none = (code, name) => ({
+    code, name, statute: false, grace: null, cap: () => null,
+    rule: 'No statewide statute was found that caps the late fee or requires a grace period, so the lease governs. A court can still refuse to enforce a fee that is a penalty rather than a reasonable estimate of the landlord’s loss, and some cities add their own rules.',
+    penalty: 'None stated in a statewide statute.',
+    cite: 'no statewide late fee statute found', url: '',
+    verified: '2026-11-23', source: 'three published state charts (Baselane, updated 22 October 2026; Flex, 2021; Landlord Studio, updated 6 November 2026) read on 2026-11-23, which agree on this state except that Baselane alone lists an unsourced Ohio cap; this is a secondary-source statement, not a verified statute',
+  });
+  return [
+    {
+      code: 'NY', name: 'New York', statute: true, grace: 6,
+      cap: (c) => Math.min(50, c.rent * 0.05),
+      rule: 'No late fee may be charged unless the rent has not been paid within five days of the date it was due, and the fee may not exceed fifty dollars or five percent of the monthly rent, whichever is less. A lease term that waives this is void. Co-operative apartments have a separate limit tied to the maintenance fee.',
+      penalty: 'The limit cannot be waived by lease; a fee above it is not collectable.',
+      cite: 'N.Y. Real Prop. Law § 238-a(2) and (3)', url: 'https://www.nysenate.gov/legislation/laws/RPP/238-A',
+      verified: '2026-11-23', source: 'New York State Senate statute site, revision of 17 October 2025',
+    },
+    {
+      code: 'NC', name: 'North Carolina', statute: true, grace: 5,
+      cap: (c) => (c.weekly ? Math.max(4, c.rent * 0.05) : Math.max(15, c.rent * 0.05)),
+      rule: 'A late fee may be charged only if the rent is five calendar days or more late, counting the day after the due date as day one. For monthly rent the fee may not exceed fifteen dollars or five percent of the monthly rent, whichever is greater; for weekly rent, four dollars or five percent of the weekly rent. It may be charged once per late payment and may not be deducted from a later payment so as to make that payment late.',
+      penalty: 'A lease term contrary to the section is void.',
+      cite: 'N.C. Gen. Stat. § 42-46(a), (b) and (h)', url: 'https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_42/GS_42-46.html',
+      verified: '2026-11-23', source: 'North Carolina General Assembly statute site (history through 2025-54)',
+    },
+    {
+      code: 'TX', name: 'Texas', statute: true, grace: 3, units: true,
+      cap: (c) => c.rent * (c.units > 4 ? 0.10 : 0.12),
+      rule: 'A landlord may not collect a late fee unless notice of it is in a written lease, the fee is reasonable, and some part of the rent has remained unpaid two full days after the day it was due. A fee is presumed reasonable if it does not exceed 12 percent of the rent for the period in a building of four or fewer units, or 10 percent in a larger building; a higher fee is allowed only if it does not exceed the landlord’s uncertain damages. An initial fee plus daily fees count as one fee.',
+      penalty: 'A landlord who violates the section owes $100, three times the improper fee, and the tenant’s attorney fees. A lease term waiving the section is void.',
+      cite: 'Tex. Prop. Code § 92.019(a), (a-1), (b), (c) and (d)', url: 'https://texas.public.law/statutes/tex._prop._code_section_92.019',
+      verified: '2026-11-23', source: 'Public.Law reproduction of the Property Code, verified against texas.gov on 26 May 2025 (the official page serves only its navigation to a machine)',
+    },
+    {
+      code: 'CO', name: 'Colorado', statute: true, grace: 7,
+      cap: (c) => Math.max(50, c.unpaid * 0.05),
+      rule: 'No late fee unless the rent payment is late by at least seven calendar days, and no fee above the greater of fifty dollars or five percent of the past-due rent. The fee must be disclosed in the rental agreement, no interest may be charged on it, fees for one late payment may not together exceed the cap, and the landlord must give written notice of the fee within 180 days of the due date. A late fee is not rent and cannot be the basis of an eviction.',
+      penalty: 'A non-compliant lease term is void. The landlord owes a fifty-dollar penalty for each violation and, if it is not cured within seven days of written notice, damages, a further penalty of $150 to $1,000 per violation, and attorney fees.',
+      cite: 'C.R.S. § 38-12-105(1) to (5) and (7)', url: 'https://codes.findlaw.com/co/title-38-property-real-and-personal/co-rev-st-sect-38-12-105/',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Colorado Revised Statutes, current as of 1 January 2025',
+    },
+    {
+      code: 'MA', name: 'Massachusetts', statute: true, grace: 30,
+      cap: () => null,
+      rule: 'No lease or rental agreement may impose any interest or penalty for failure to pay rent until thirty days after the rent was due. The section sets no cap on the amount once the thirty days have passed.',
+      penalty: 'A fee charged inside the thirty days is not permitted by the section.',
+      cite: 'M.G.L. c. 186, § 15B(1)(c)', url: 'https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section15B',
+      verified: '2026-11-23', source: 'official General Laws published by the Massachusetts Legislature (page dated 23 November 2026)',
+    },
+    {
+      code: 'MD', name: 'Maryland', statute: true, grace: null,
+      cap: (c) => (c.weekly ? Math.min(3, c.unpaid * 0.05) : c.unpaid * 0.05),
+      rule: 'A lease may not provide a penalty for late payment of rent above five percent of the unpaid rent due for the period for which the payment is delinquent. Where rent is paid weekly the penalty may not exceed three dollars a week or twelve dollars a month in total. The section sets no grace period.',
+      penalty: 'A lease provision above the cap is one the landlord may not use or enforce.',
+      cite: 'Md. Code, Real Prop. § 8-208(d)(3)', url: 'https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-208',
+      verified: '2026-11-23', source: 'official statute text published by the Maryland General Assembly (the page shows no currency date)',
+    },
+    {
+      code: 'VA', name: 'Virginia', statute: true, grace: null,
+      cap: (c) => Math.min(c.rent * 0.10, c.unpaid * 0.10),
+      rule: 'A landlord may charge for late payment only if the written rental agreement provides for it, and the charge may not exceed the lesser of ten percent of the periodic rent or ten percent of the remaining balance the tenant owes. The section sets no grace period for a written lease; where the landlord offers no written agreement, rent is late if unpaid by the fifth of the month.',
+      penalty: 'A charge above the cap, or one not provided for in the written agreement, is not permitted by the section.',
+      cite: 'Va. Code § 55.1-1204(C) and (E)', url: 'https://law.lis.virginia.gov/vacode/title55.1/chapter12/section55.1-1204/',
+      verified: '2026-11-23', source: 'official Code of Virginia (page dated 23 November 2026; subsection E reads the same in the version effective 1 July 2027)',
+    },
+    {
+      code: 'TN', name: 'Tennessee', statute: true, grace: 5,
+      cap: (c) => c.unpaid * 0.10,
+      rule: 'There is a five-day grace period beginning on the day the rent is due, with the due date counted as day one; no fee may be charged until it ends. If the last day falls on a Sunday or legal holiday and the rent is paid on the next business day, no fee may be charged. The fee may not exceed ten percent of the amount of rent past due. The Act applies in counties above a population threshold.',
+      penalty: 'A fee inside the grace period or above ten percent is not permitted by the section.',
+      cite: 'Tenn. Code § 66-28-201(d)', url: 'https://codes.findlaw.com/tn/title-66-property/tn-code-sect-66-28-201/',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Tennessee Code, current as of 2 January 2024 (the official code is published through a commercial service that refuses automated reading)',
+    },
+    {
+      code: 'NJ', name: 'New Jersey', statute: true, grace: 5, graceBusiness: true, groupOnly: true,
+      cap: () => null,
+      rule: 'For rent due on the first of the month, a tenant who is a senior citizen receiving a Social Security old-age pension (or a railroad or other governmental pension in its place), or who receives Social Security disability benefits, Supplemental Security Income or Work First New Jersey benefits, has a grace period of five business days in which to pay, and no late charge may include that period. A business day excludes Saturdays, Sundays and State or federal holidays. For other tenants the statute sets no grace period and no cap.',
+      penalty: 'A late charge that includes the grace period is not permitted for a covered tenant.',
+      cite: 'N.J.S.A. 2A:42-6.1 and 2A:42-6.3', url: 'https://codes.findlaw.com/nj/title-2a-administration-of-civil-and-criminal-justice/nj-st-sect-2a-42-6-1/',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the New Jersey Statutes, current as of 1 January 2024',
+    },
+    {
+      code: 'AZ', name: 'Arizona', statute: true, grace: null,
+      cap: () => null,
+      rule: 'The Residential Landlord and Tenant Act refers to a reasonable late fee set forth in a written rental agreement: a tenant who tenders all past-due rent and that fee before a special detainer action is filed is reinstated. The Act sets no cap and no grace period for the fee itself; the fee must be in the written lease and be reasonable.',
+      penalty: 'None stated for the fee itself.',
+      cite: 'A.R.S. § 33-1368(B)', url: 'https://www.azleg.gov/ars/33/01368.htm',
+      verified: '2026-11-23', source: 'official Arizona Revised Statutes published by the Arizona Legislature',
+    },
+    none('CA', 'California'), none('FL', 'Florida'), none('GA', 'Georgia'), none('IL', 'Illinois'), none('IN', 'Indiana'),
+    none('MI', 'Michigan'), none('MO', 'Missouri'), none('OH', 'Ohio'), none('PA', 'Pennsylvania'),
+    {
+      code: 'WA', name: 'Washington', statute: true, grace: 6,
+      cap: () => null,
+      rule: 'The landlord may not charge a late fee for rent that is paid within five days following its due date. If rent is more than five days past due, late fees may be charged from the first day after the due date until paid, so a payment on the sixth day or later can carry a fee for the whole period. The section sets no cap. A tenant whose income is monthly governmental assistance that arrives after the due date can require, in writing, a due date up to five days later.',
+      penalty: 'A fee for rent paid within the five days is not permitted by the section.',
+      cite: 'RCW 59.18.170(2) and (3)', url: 'https://app.leg.wa.gov/RCW/default.aspx?cite=59.18.170',
+      verified: '2026-11-23', source: 'FindLaw reproduction of the Revised Code of Washington, current as of 1 January 2025 (the official page serves only its navigation to a machine)',
+    },
+  ];
+}</script><script>(function () {
+    const H = window.H, RULES = lateFeeRules().slice().sort((a, b) => a.name.localeCompare(b.name));
+    const f = document.getElementById('f');
+    f.elements.state.innerHTML = RULES.map((r) => '<option value="' + r.code + '">' + r.name + '</option>').join('');
+    f.elements.state.value = 'TX';
+    H.bind(f, () => {
+      const r = RULES.find((x) => x.code === f.elements.state.value);
+      document.getElementById('units-wrap').style.display = r.units ? '' : 'none';
+      const rent = H.val(f, 'rent'), fee = H.val(f, 'fee'), unpaid = Math.min(H.val(f, 'unpaid'), rent || H.val(f, 'unpaid'));
+      const weekly = H.str(f, 'period') === 'w', units = Number(H.str(f, 'units'));
+      const due = H.parse(H.str(f, 'due')), paid = H.parse(H.str(f, 'paid')) || H.parse(H.today());
+      const el = document.getElementById('out');
+      if (!due || !rent) { el.innerHTML = '<p class="note">Enter the rent and the due date.</p>'; return; }
+      const daysLate = Math.round((paid - due) / 86400000);
+      const addBusiness = (d, n) => { let x = new Date(d.getTime()), left = n; while (left > 0) { x.setDate(x.getDate() + 1); if (x.getDay() !== 0 && x.getDay() !== 6) left--; } return x; };
+      const feeFrom = r.grace === null ? null : r.graceBusiness ? H.addDays(addBusiness(due, r.grace), 1) : H.addDays(due, r.grace);
+      const cap = r.cap({ rent, unpaid, weekly, units });
+      const capped = cap === null ? null : Math.round(cap * 100) / 100;
+      const tooEarly = feeFrom !== null && paid < feeFrom && !r.groupOnly;
+      const allowed = tooEarly ? 0 : capped === null ? fee : Math.min(fee, capped);
+      let verdict;
+      if (!r.statute) verdict = 'No statewide statute caps the fee or sets a grace period in ' + r.name + ', so the lease fee of ' + H.usd(fee, 2) + ' stands unless a court finds it unreasonable or a city rule applies.';
+      else if (tooEarly) verdict = 'Paid ' + daysLate + ' day' + (daysLate === 1 ? '' : 's') + ' after the due date. In ' + r.name + ' no fee may be charged before ' + H.mdy(feeFrom) + ', so no late fee is owed for this payment.';
+      else if (capped === null) verdict = (feeFrom ? 'The grace period ended before you paid. ' : '') + 'The statute sets no cap, so the lease fee of ' + H.usd(fee, 2) + ' applies' + (r.groupOnly ? ' unless you are in a covered group, in which case no fee may be charged before ' + H.mdy(feeFrom) + '.' : '.');
+      else if (fee > capped) verdict = 'The lease fee of ' + H.usd(fee, 2) + ' is above the ' + r.name + ' cap of ' + H.usd(capped, 2) + '. The most that can be charged is ' + H.usd(capped, 2) + '.';
+      else verdict = 'The lease fee of ' + H.usd(fee, 2) + ' is within the ' + r.name + ' cap of ' + H.usd(capped, 2) + (feeFrom ? ' and the grace period ended on ' + H.mdy(H.addDays(feeFrom, -1)) : '') + '.';
+      el.innerHTML = '<div class="big"><div class="stat best"><b>' + H.usd(allowed, 2) + '</b><span>Late fee that can be charged for this payment</span></div>' +
+        '<div class="stat"><b>' + (capped === null ? 'No cap' : H.usd(capped, 2)) + '</b><span>' + (capped === null ? 'The statute sets no maximum' : 'Statutory maximum') + '</span></div>' +
+        '<div class="stat"><b>' + (feeFrom ? H.mdy(feeFrom) : 'No grace period') + '</b><span>' + (feeFrom ? 'Earliest day a fee may be charged' + (r.groupOnly ? ' (covered tenants)' : '') : 'The statute sets none; the lease governs') + '</span></div>' +
+        '<div class="stat"><b>' + daysLate + '</b><span>Days after the due date</span></div></div>' +
+        '<p id="verdict"><strong>' + verdict + '</strong></p>' +
+        '<h3>The rule</h3><p>' + r.rule + '</p><p><strong>If the landlord charges more.</strong> ' + r.penalty + '</p>' +
+        '<p class="tiny">Source: ' + r.cite + ', read in the ' + r.source + ' on ' + r.verified + '.' + (r.url ? ' <a href="' + r.url + '" rel="noopener">Read the section</a>.' : '') + ' Days are counted from the due date; ' + (r.graceBusiness ? 'business days exclude Saturdays and Sundays here, and a State or federal holiday adds one more.' : 'where the statute speaks of days they are calendar days.') + '</p>';
+    });
+  })();</script>
+</body>
+</html>
