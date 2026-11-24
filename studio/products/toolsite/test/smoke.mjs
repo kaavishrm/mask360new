@@ -22,7 +22,7 @@ const base = `http://127.0.0.1:${port}`;
 await mkdir(shots, { recursive: true });
 
 const checks = [
-  ['/', async (p) => { const n = await p.locator('.card').count(); if (n < 20) throw new Error('home cards ' + n); }],
+  ['/', async (p) => { const n = await p.locator('.card').count(); if (n < 22) throw new Error('home cards ' + n); }],
   ['/income-tax-calculator/', async (p) => { const t = await p.locator('#out .stat b').first().innerText(); if (!t.startsWith('₹')) throw new Error(t); const rows = await p.locator('#out table tr').count(); if (rows < 8) throw new Error('rows ' + rows); return t; }],
   ['/gst-calculator/', async (p) => { await p.fill('input[name=amt]', '11800'); await p.click('label[for=m2]'); const t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹11,800.00') throw new Error(t); const base = await p.locator('#out .stat b').first().innerText(); if (base !== '₹10,000.00') throw new Error(base); return base + ' / ' + t; }],
   ['/emi-calculator/', async (p) => { const t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹26,035') throw new Error(t); return t; }],
@@ -38,6 +38,34 @@ const checks = [
   ['/tds-on-salary-calculator/', async (p) => { let t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹8,125') throw new Error('base ' + t); await p.fill('input[name=done]', '20000'); await p.fill('input[name=months]', '10'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹7,750') throw new Error('mid-year ' + t); await p.selectOption('select[name=regime]', 'old'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹18,982') throw new Error('old ' + t); return 'new 8,125 / mid-year 7,750 / old 18,982'; }],
   ['/income-tax-calculator-fy-2025-26/', async (p) => { const late = () => p.locator('#late b').innerText(); let t = await late(); if (t !== '₹5,000') throw new Error('default ' + t); await p.fill('input[name=salary]', '1500000'); t = await late(); if (t !== '₹8,900') throw new Error('15L 4 months ' + t); const b = await p.locator('#out .stat.best b').innerText(); if (b !== '₹97,500') throw new Error('best ' + b); await p.fill('input[name=filed]', '2026-12-01'); t = await late(); if (t !== '₹9,875') throw new Error('5 months ' + t); await p.fill('input[name=paid]', '97500'); t = await late(); if (t !== '₹5,000') throw new Error('paid ' + t); await p.fill('input[name=filed]', '2026-07-15'); t = await late(); if (t !== '₹0') throw new Error('on time ' + t); const old = await p.locator('#out .stat').nth(1).innerText(); if (old.includes('not available')) throw new Error('old regime should be open on time'); return 'fee 5,000 / 4 months 8,900 / 5 months 9,875 / paid 5,000 / on time 0'; }],
   ['/capital-gains-calculator-shares/', async (p) => { const tax = () => p.locator('#tax b').innerText(); let t = await tax(); if (t !== '₹0') throw new Error('default ' + t); await p.fill('input[name=sprice]', '3500'); t = await tax(); if (t !== '₹16,250') throw new Error('LT 2.5L ' + t); await p.fill('input[name=sdate]', '2025-03-01'); t = await tax(); if (t !== '₹52,000') throw new Error('ST ' + t); await p.fill('input[name=other]', '200000'); t = await tax(); if (t !== '₹10,400') throw new Error('shortfall ' + t); await p.fill('input[name=other]', '1200000'); await p.fill('input[name=bdate]', '2015-01-01'); await p.fill('input[name=sdate]', '2026-10-10'); await p.fill('input[name=bprice]', '100'); await p.fill('input[name=fmv]', '400'); await p.fill('input[name=sprice]', '700'); const g = await p.locator('#out .stat b').first().innerText(); if (g !== '₹30,000') throw new Error('grandfathered gain ' + g); t = await tax(); if (t !== '₹0') throw new Error('grandfathered tax ' + t); await p.fill('input[name=prevl]', '125000'); t = await tax(); if (t !== '₹3,900') throw new Error('exemption used ' + t); return 'LT 0 / 16,250 / ST 52,000 / shortfall 10,400 / grandfathered 30,000 gain, 0 then 3,900'; }],
+  ['/capital-gains-calculator-property/', async (p) => {
+    const tax = () => p.locator('#tax b').innerText(); const set = async (k, v) => { if (k === 'kind' || k === 'who' || k === 'regime') await p.selectOption('select[name=' + k + ']', v); else await p.fill('input[name=' + k + ']', v); return tax(); };
+    let t = await tax(); if (t !== '₹6,14,173') throw new Error('default indexed 20% ' + t);
+    const stat = await p.locator('#tax span').innerText(); if (!stat.includes('20% with indexation')) throw new Error('chosen ' + stat);
+    const rows = await p.locator('#out table tbody tr').allInnerTexts(); if (!rows.some((r) => r.includes('384 / 254') && r.includes('₹60,47,244'))) throw new Error('indexed cost row ' + rows.join('|').slice(0, 300));
+    t = await set('bdate', '2024-08-01'); if (t !== '₹6,50,000') throw new Error('after cutoff flat ' + t);
+    t = await set('bdate', '2015-06-10'); t = await set('bonds', '6000000'); if (t !== '₹0') throw new Error('bonds capped 50L ' + t);
+    t = await set('bonds', '0'); t = await set('house', '1000000'); if (t !== '₹4,06,173') throw new Error('82 house ' + t);
+    t = await set('kind', 'land'); if (t !== '₹5,45,932') throw new Error('86 proportionate ' + t);
+    t = await set('kind', 'house'); t = await set('house', '0'); t = await set('sdv', '10000000'); if (t !== '₹7,80,000') throw new Error('stamp duty value ' + t);
+    t = await set('sdv', '9800000'); if (t !== '₹6,14,173') throw new Error('within 110% ' + t);
+    t = await set('sdv', '0'); t = await set('other', '200000'); if (t !== '₹5,72,573') throw new Error('shortfall ' + t);
+    t = await set('other', '1200000'); t = await set('who', 'other'); if (t !== '₹6,50,000') throw new Error('non-resident no indexation ' + t);
+    t = await set('who', 'ind'); t = await set('bdate', '2025-01-10'); if (t !== '₹16,47,360') throw new Error('short term slab with surcharge ' + t);
+    t = await set('bdate', '2015-06-10'); t = await set('sale', '3000000'); const g = await p.locator('#out .stat b').first().innerText(); if (g !== '-₹10,00,000' || (await tax()) !== '₹0') throw new Error('loss ' + g);
+    return 'indexed 6,14,173 / flat 6,50,000 / bonds 0 / house 4,06,173 / land 5,45,932 / SDV 7,80,000 / shortfall 5,72,573 / ST 16,47,360 / loss';
+  }],
+  ['/capital-gains-calculator-debt-funds/', async (p) => {
+    const tax = () => p.locator('#tax b').innerText();
+    let t = await tax(); if (t !== '₹910') throw new Error('pre-2023 long term ' + t);
+    await p.fill('input[name=bdate]', '2023-06-15'); t = await tax(); if (t !== '₹7,280') throw new Error('section 76 slab with marginal relief ' + t);
+    const why = await p.locator('#out .note').first().innerText(); if (!why.includes('Section 76')) throw new Error('reason ' + why.slice(0, 80));
+    await p.selectOption('select[name=kind]', 'other'); t = await tax(); if (t !== '₹910') throw new Error('gold fund 24 months ' + t);
+    await p.fill('input[name=bdate]', '2025-01-10'); t = await tax(); if (t !== '₹7,280') throw new Error('other fund short term ' + t);
+    await p.fill('input[name=other]', '500000'); t = await tax(); if (t !== '₹0') throw new Error('rebate covers it ' + t);
+    await p.fill('input[name=sprice]', '20'); const g = await p.locator('#out .stat b').first().innerText(); if (g !== '-₹5,000' || (await tax()) !== '₹0') throw new Error('loss ' + g);
+    return 'LT 910 / s.76 7,280 / gold 910 / ST 7,280 then 0 / loss';
+  }],
   ['/epf-calculator/', async (p) => { let t = await p.locator('#out .stat.best b').innerText(); if (!/^₹\d,\d\d,\d\d,\d\d\d$/.test(t)) throw new Error('default ' + t); await p.fill('input[name=age]', '55'); await p.fill('input[name=g]', '0'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹3,04,651') throw new Error('3 years ' + t); const rows = await p.locator('#out table tbody tr').count(); if (rows !== 3) throw new Error('rows ' + rows); const r1 = await p.locator('#out table tbody tr').first().innerText(); if (!r1.includes('₹2,717') || !r1.includes('₹2,083')) throw new Error(r1); await p.selectOption('select[name=base]', 'cap'); t = await p.locator('#out .stat.best b').innerText(); if (t !== '₹2,31,700') throw new Error('capped ' + t); let pen = await p.locator('#out .stat').nth(3).innerText(); if (!pen.startsWith('₹0')) throw new Error('pension under 10 years ' + pen.slice(0, 20)); await p.fill('input[name=past]', '20'); pen = await p.locator('#out .stat').nth(3).innerText(); if (!pen.startsWith('₹8,929')) throw new Error('pension 23y + 2 ' + pen.slice(0, 20)); await p.fill('input[name=ret]', '57'); pen = await p.locator('#out .stat').nth(3).innerText(); if (!pen.startsWith('₹7,857')) throw new Error('no weightage before 58 ' + pen.slice(0, 20)); return '3y full 3,04,651 / capped 2,31,700 / pension 0, 8,929, 7,857'; }],
   ['/nps-calculator/', async (p) => { let t = await p.locator('#out .stat.best b').innerText(); if (!/^₹1,1\d,\d\d,\d\d\d$/.test(t)) throw new Error('default ' + t); await p.fill('input[name=age]', '58'); t = await p.locator('#out .stat.best b').innerText(); if (!/^₹1,33,33[67]$/.test(t)) throw new Error('2 years ' + t); const pen = await p.locator('#out .stat').nth(3).innerText(); if (!pen.startsWith('₹267')) throw new Error('pension ' + pen.slice(0, 20)); return '2y 1,33,33x / pension 267'; }],
   ['/bill-of-supply-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Bill of Supply') || !w.includes('not eligible to collect tax on supplies') || !w.includes('₹25,000.00') || w.includes('CGST')) throw new Error(w.slice(0, 300)); await p.selectOption('select[name=reason]', 'unreg'); w = await p.locator('#sheet').innerText(); if (!w.includes('not registered under GST')) throw new Error(w.slice(0, 200)); return 'composition + unregistered ok'; }],
@@ -86,6 +114,11 @@ if (overflow4) { failed++; console.log('FAIL mobile overflow on the quiz page');
 await mp.goto(base + '/delivery-challan-generator/');
 const overflow3 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
 if (overflow3) { failed++; console.log('FAIL mobile overflow on delivery challan page'); } else console.log('PASS mobile no horizontal overflow on delivery challan page');
+for (const u of ['/capital-gains-calculator-property/', '/capital-gains-calculator-debt-funds/']) {
+  await mp.goto(base + u);
+  const o = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+  if (o) { failed++; console.log('FAIL mobile overflow on ' + u); } else console.log('PASS mobile no horizontal overflow on ' + u);
+}
 await mp.goto(base + '/in-hand-salary-calculator/');
 const overflow2 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
 if (overflow2) { failed++; console.log('FAIL mobile overflow on in-hand salary page'); } else console.log('PASS mobile no horizontal overflow on in-hand salary page');
