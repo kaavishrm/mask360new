@@ -108,3 +108,7 @@ th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;l
   .receipt{border-bottom:0}
   @page{margin:16mm}
 }
+.bar{display:flex;height:22px;border-radius:8px;overflow:hidden;margin-top:14px;background:var(--line)}
+.bar span{display:block;height:100%}
+.legend{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px;font-size:.95rem}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:-1px}

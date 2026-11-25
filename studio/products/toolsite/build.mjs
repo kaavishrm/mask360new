@@ -150,7 +150,7 @@ async function build() {
     await writeFile(path.join(out, 'shots', sh.slug, 'index.html'), lint('shot ' + sh.slug, layout(base, {
       lang: 'en-IN', title: `${sh.title} | ${site.name}`, description: sh.description, canonical: `${site.url}/shots/${sh.slug}/`, site: esc(site.name), nav, footer, body,
       head: jsonld({ '@context': 'https://schema.org', '@type': 'WebPage', name: sh.title, url: `${site.url}/shots/${sh.slug}/`, description: sh.description, datePublished: sh.published }),
-      scripts: `<script src="/assets/js/common.js"></script><script>(${sh.script.toString()})();</script>`,
+      scripts: `<script src="/assets/js/common.js"></script>${(sh.lib || []).map((fn) => `<script>${fn.toString()}</script>`).join('')}<script>(${sh.script.toString()})();</script>`,
     })));
   }
   if (shots.length) {

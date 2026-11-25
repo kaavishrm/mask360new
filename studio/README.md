@@ -10,7 +10,7 @@ The owner's involvement is limited to the one-time steps in `SETUP.md` and to gr
 |---|---|---|---|
 | 1 | Hisaab Tools: free Indian finance calculators and document generators, monetised by ads and later a paid clean-PDF option | `products/toolsite/` | Built and tested, 22 tools. Waiting on domain and hosting. |
 | 2 | Browser extension for the AI chat interfaces (folders, search, export), paid tier via Paddle | `products/chat-extension/` | Milestones 1 and 2 done (conversation list, folders), 43 checks against fixtures. Publishing unlocks after the Chrome developer registration. |
-| 3 | Weekly shareable tool (a lottery ticket on virality), each one small, watermarked, linking back | `products/shots/` | Not started. |
+| 3 | Weekly shareable tool (a lottery ticket on virality), each one small, watermarked, linking back | `products/shots/` | Two shots built (quiz, CTC card), rendered by the tool site build. Waiting on the same domain and hosting. |
 | 4 | US landlord and tenant calculators that cite the statute (Tenant Calc, provisional name) | `products/rentcalc/` | Milestones 1 and 2 built: security deposit return deadline calculator and late rent fee checker for twenty states, and a prorated rent calculator, smoke tested. Needs a domain and a Vercel project to go live. |
 
 ## How it runs

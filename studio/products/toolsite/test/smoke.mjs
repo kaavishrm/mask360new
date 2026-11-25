@@ -71,7 +71,21 @@ const checks = [
   ['/bill-of-supply-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Bill of Supply') || !w.includes('not eligible to collect tax on supplies') || !w.includes('₹25,000.00') || w.includes('CGST')) throw new Error(w.slice(0, 300)); await p.selectOption('select[name=reason]', 'unreg'); w = await p.locator('#sheet').innerText(); if (!w.includes('not registered under GST')) throw new Error(w.slice(0, 200)); return 'composition + unregistered ok'; }],
   ['/quotation-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Quotation') || !w.includes('₹29,500.00') || !w.includes('CGST') || !w.includes('not a tax invoice')) throw new Error(w.slice(0, 300)); await p.selectOption('#pos', '07'); w = await p.locator('#sheet').innerText(); if (!w.includes('IGST') || !w.includes('₹4,500.00')) throw new Error(w.slice(0, 300)); return 'intra + inter ok'; }],
   ['/delivery-challan-generator/', async (p) => { let w = await p.locator('#sheet').innerText(); if (!w.includes('Delivery Challan') || !w.includes('ORIGINAL FOR CONSIGNEE') || !w.includes('₹25,000.00') || w.includes('CGST') || w.includes('IGST')) throw new Error(w.slice(0, 300)); await p.selectOption('select[name=purpose]', 'supply'); await p.selectOption('#pos', '27'); await p.selectOption('select[name=copy]', 'DUPLICATE FOR TRANSPORTER'); w = await p.locator('#sheet').innerText(); if (!w.includes('IGST') || !w.includes('₹4,500.00') || !w.includes('DUPLICATE FOR TRANSPORTER') || !w.includes('₹29,500.00')) throw new Error(w.slice(0, 400)); return 'job work + supply ok'; }],
-  ['/shots/', async (p) => { const n = await p.locator('.card').count(); if (n < 1) throw new Error('no shots'); return n + ' shot(s)'; }],
+  ['/shots/', async (p) => { const n = await p.locator('.card').count(); if (n < 2) throw new Error('shots ' + n); return n + ' shot(s)'; }],
+  ['/shots/ctc-in-one-card-fy-2026-27/', async (p) => {
+    const inhand = () => p.locator('#c-inhand').innerText();
+    let t = await inhand(); if (t !== '₹90,200') throw new Error('12L MH new ' + t);
+    if ((await p.locator('#c-pct').innerText()) !== '90%' || (await p.locator('#c-days').innerText()) !== '0') throw new Error('12L pct or days');
+    await p.fill('input[name=ctc]', '2400000'); t = await inhand(); if (t !== '₹1,58,721') throw new Error('24L MH new ' + t);
+    if ((await p.locator('#c-days').innerText()) !== '40') throw new Error('24L tax days ' + (await p.locator('#c-days').innerText()));
+    const legend = await p.locator('#c-legend li').allInnerTexts(); if (legend.length !== 5 || !legend[1].includes('₹2,62,548')) throw new Error('legend ' + legend.join('|'));
+    await p.selectOption('select[name=regime]', 'old'); t = await inhand(); if (t !== '₹1,42,710') throw new Error('24L MH old ' + t);
+    await p.selectOption('select[name=regime]', 'new'); await p.selectOption('select[name=state]', 'NONE'); t = await inhand(); if (t !== '₹1,58,921') throw new Error('24L no PT ' + t);
+    const src = await p.locator('#c-img').getAttribute('src'); if (!src || !src.startsWith('data:image/png')) throw new Error('card image missing');
+    const dl = await p.locator('#c-download').getAttribute('href'); if (dl !== src) throw new Error('download link');
+    const note = await p.locator('#c-note').innerText(); if (!note.includes('₹2,30,400')) throw new Error('PF both shares ' + note.slice(0, 80));
+    return '12L 90,200 90% / 24L 1,58,721 40 days / old 1,42,710 / no PT 1,58,921 / card';
+  }],
   ['/shots/money-rules-quiz-fy-2026-27/', async (p) => {
     const KEY = ['₹12,75,000', '₹25,000', '7.1%', '20%', '₹1,25,000', '₹75,000', '31 December 2026', '₹5,000', '70', 'Odisha'];
     const play = async (wrongFirst) => { for (let i = 0; i < KEY.length; i++) { if (i === 0 && wrongFirst) { await p.locator('.opt').filter({ hasNotText: KEY[0] }).first().click(); } else await p.locator('.opt', { hasText: KEY[i] }).first().click(); if (await p.locator('#q-explain').isHidden()) throw new Error('no explanation after answer ' + (i + 1)); await p.click('#q-next'); } return p.locator('#r-score').innerText(); };
@@ -108,6 +122,9 @@ const mp = await mob.newPage();
 await mp.goto(base + '/gst-invoice-generator/');
 const overflow = await mp.evaluate(() => { const w = document.documentElement.clientWidth; const bad = [...document.querySelectorAll('body *')].filter((el) => el.getBoundingClientRect().right > w + 1).map((el) => el.tagName + '.' + el.className).slice(0, 5); return document.documentElement.scrollWidth > w + 1 ? bad : null; });
 if (overflow) { failed++; console.log('FAIL mobile overflow on invoice page', overflow); } else console.log('PASS mobile no horizontal overflow');
+await mp.goto(base + '/shots/ctc-in-one-card-fy-2026-27/');
+const overflow5 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+if (overflow5) { failed++; console.log('FAIL mobile overflow on the CTC card page'); } else console.log('PASS mobile no horizontal overflow on the CTC card page');
 await mp.goto(base + '/shots/money-rules-quiz-fy-2026-27/');
 const overflow4 = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
 if (overflow4) { failed++; console.log('FAIL mobile overflow on the quiz page'); } else console.log('PASS mobile no horizontal overflow on the quiz page');
