@@ -9,5 +9,12 @@
   </div>
   <a href="/recents">All chats</a>
 </nav>
-<main><a href="/chat/1111aaaa-2222-3333-4444-555555555555">Continue in chat</a></main>
+<main><a href="/chat/1111aaaa-2222-3333-4444-555555555555">Continue in chat</a>
+  <div id="messages"></div>
+  <script>
+    const M = { '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d': ['Make me a weekly meal plan, vegetarian, high protein.', 'Monday: quinoa salad with chickpeas. Tuesday: paneer bhurji with roti. Wednesday: rajma chawal.'], '0f1e2d3c-4b5a-6978-8a9b-0c1d2e3f4a5b': ['Review this lease agreement for red flags.', 'The deposit clause allows deductions for normal wear and tear, which most states do not permit.'] };
+    const id = (location.pathname.match(/^\/chat\/([A-Za-z0-9-]+)/) || [])[1];
+    setTimeout(() => { document.getElementById('messages').innerHTML = (M[id] || ['Empty.']).map((t) => '<p>' + t + '</p>').join(''); }, 50);
+  </script>
+</main>
 </body></html>

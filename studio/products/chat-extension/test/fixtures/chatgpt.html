@@ -15,5 +15,16 @@
 </nav>
 <main>
   <article><p>Earlier you shared <a href="/c/zzz-999">a conversation link</a> inside a message. It must not appear in the shelf.</p></article>
+  <div id="messages"></div>
+  <script>
+    // Hand-written message bodies per conversation, filled in after load like the real page does.
+    const M = {
+      'aaa-111': ['Plan a four night Goa trip under 30,000 rupees for two.', 'Stay at Palolem for three nights and Panjim for one; budget 9,000 for rooms, 6,000 for food, 4,000 for scooters and fuel.'],
+      'bbb-222': ['Why does my regex not match the second line?', 'Use a lookahead: (?=\\d{4}) checks the year without consuming it, and add the m flag so ^ matches each line.'],
+      'ccc-333': ['Rewrite my resume summary for a product role.', 'Lead with impact: shipped three releases used by 40,000 merchants, cut onboarding time by half.'],
+    };
+    const id = (location.pathname.match(/^\/c\/([A-Za-z0-9-]+)/) || [])[1];
+    setTimeout(() => { document.getElementById('messages').innerHTML = (M[id] || ['Empty conversation.']).map((t, i) => '<div class="msg ' + (i % 2 ? 'assistant' : 'user') + '"><p>' + t + '</p></div>').join(''); }, 50);
+  </script>
 </main>
 </body></html>

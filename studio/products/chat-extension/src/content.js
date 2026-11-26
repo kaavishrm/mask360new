@@ -1,4 +1,5 @@
-// Conversation Shelf, milestone 2: list the conversations the page links to, and file them into folders.
+// Conversation Shelf, milestone 3: list the conversations the page links to, file them into folders, and
+// search titles plus the message text of every conversation that has been opened while the shelf was on.
 (function () {
   const ADAPTERS = window.ConversationShelfAdapters || [];
   const STORE = window.ConversationShelfStore;
@@ -36,6 +37,31 @@
     return (nav.length ? nav : all).map((c) => ({ id: c.id, title: c.title || 'Untitled conversation', href: c.href }));
   }
   function currentId(adapter) { const m = adapter.href.exec(location.pathname); return m ? m[1] : null; }
+  // The visible text of the open conversation: the main content area, or the body without navigation,
+  // with our own panel excluded (it lives in a shadow root, so its text is not in textContent anyway).
+  function pageText(doc) {
+    doc = doc || document;
+    const main = doc.querySelector('main, [role="main"]');
+    let text = '';
+    if (main) text = main.innerText || main.textContent || '';
+    else {
+      const clone = (doc.body || doc.documentElement).cloneNode(true);
+      clone.querySelectorAll('nav, aside, [role="navigation"], script, style, #' + HOST_ID).forEach((el) => el.remove());
+      text = clone.textContent || '';
+    }
+    return text.replace(/\s+/g, ' ').trim();
+  }
+  // Search: every word must appear in the title or the indexed text. Returns null for no match, else a snippet.
+  function match(q, title, text) {
+    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!words.length) return null;
+    const t = (title || '').toLowerCase(), x = (text || '').toLowerCase();
+    if (!words.every((w) => t.includes(w) || x.includes(w))) return null;
+    const w = words.find((ww) => x.includes(ww));
+    if (!w) return { inTitle: true, snippet: '' };
+    const i = x.indexOf(w), from = Math.max(0, i - 40), to = Math.min(text.length, i + w.length + 60);
+    return { inTitle: words.some((ww) => t.includes(ww)), snippet: (from ? '\u2026' : '') + text.slice(from, to) + (to < text.length ? '\u2026' : ''), word: text.slice(i, i + w.length) };
+  }
 
   const CSS = `
 :host{all:initial}
@@ -64,13 +90,19 @@ button:hover{background:#e6f1ea;color:#0f5132}
 .list a.active{background:#e6f1ea;color:#0f5132;font-weight:600}
 .list select{font:inherit;font-size:11px;color:#5d655f;border:1px solid transparent;border-radius:6px;background:transparent;max-width:92px;padding:2px}
 .list select:hover,.list select:focus{border-color:#e4e1d8;background:#fff;outline:none}
+.list .row{flex:1;min-width:0}
+.list .snip{display:block;padding:0 8px 6px;color:#5d655f;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.list .snip mark{background:#fff3dc;color:#9a5b00;border-radius:3px;padding:0 1px}
+.list .badge{display:inline-block;font-size:10px;color:#0f5132;background:#e6f1ea;border-radius:4px;padding:0 4px;margin-left:6px;vertical-align:1px}
+.meta{display:flex;justify-content:space-between;gap:8px;padding:0 10px 2px;color:#5d655f;font-size:11px}
+.meta button{padding:0 4px;font-size:11px}
 .empty{padding:10px;color:#5d655f}
-.shelf.collapsed .folders,.shelf.collapsed .tools,.shelf.collapsed .newf,.shelf.collapsed .filter,.shelf.collapsed .list,.shelf.collapsed .empty{display:none}
+.shelf.collapsed .folders,.shelf.collapsed .tools,.shelf.collapsed .newf,.shelf.collapsed .filter,.shelf.collapsed .meta,.shelf.collapsed .list,.shelf.collapsed .empty{display:none}
 .shelf.collapsed{width:auto}
 `;
 
-  let shadow, panel, listEl, countEl, filterEl, nameEl, foldersEl, toolsEl, newForm, newInput;
-  let adapter = null, siteId = 'unknown', data = { folders: [], assign: {} }, folder = '', lastItems = [], lastActive = null, editing = null, timer = null;
+  let shadow, panel, listEl, countEl, filterEl, nameEl, foldersEl, toolsEl, newForm, newInput, metaEl;
+  let adapter = null, siteId = 'unknown', data = { folders: [], assign: {} }, index = {}, folder = '', lastItems = [], lastActive = null, editing = null, timer = null, indexTimer = null;
 
   function mount() {
     if (document.getElementById(HOST_ID)) return;
@@ -81,11 +113,12 @@ button:hover{background:#e6f1ea;color:#0f5132}
     panel.innerHTML = '<div class="head"><b><span class="name">Conversations</span></b><span class="count">0</span><button type="button" class="toggle" title="Collapse or expand">–</button></div>' +
       '<div class="folders" id="shelf-folders"></div><div class="tools" id="shelf-tools"></div>' +
       '<form class="newf" id="shelf-newf" hidden><input type="text" maxlength="40" placeholder="Folder name" aria-label="Folder name"><button type="submit">Save</button><button type="button" class="cancel">Cancel</button></form>' +
-      '<input class="filter" type="search" placeholder="Filter by title" aria-label="Filter conversations">' +
+      '<input class="filter" type="search" placeholder="Search titles and messages" aria-label="Search conversations">' +
+      '<div class="meta" id="shelf-meta"></div>' +
       '<ul class="list" id="shelf-list"></ul>';
     shadow.append(style, panel);
     listEl = panel.querySelector('.list'); countEl = panel.querySelector('.count'); filterEl = panel.querySelector('.filter'); nameEl = panel.querySelector('.name');
-    foldersEl = panel.querySelector('#shelf-folders'); toolsEl = panel.querySelector('#shelf-tools'); newForm = panel.querySelector('#shelf-newf'); newInput = newForm.querySelector('input');
+    foldersEl = panel.querySelector('#shelf-folders'); toolsEl = panel.querySelector('#shelf-tools'); newForm = panel.querySelector('#shelf-newf'); newInput = newForm.querySelector('input'); metaEl = panel.querySelector('#shelf-meta');
     let collapsed = false;
     try { collapsed = localStorage.getItem(KEY) === '1'; } catch (e) { /* storage may be blocked */ }
     setCollapsed(collapsed);
@@ -122,27 +155,49 @@ button:hover{background:#e6f1ea;color:#0f5132}
     let shown = items;
     if (folder === '__unfiled') shown = shown.filter((c) => !data.folders.some((f) => f.id === data.assign[c.id]));
     else if (folder) shown = shown.filter((c) => data.assign[c.id] === folder);
-    if (q) shown = shown.filter((c) => c.title.toLowerCase().includes(q));
+    const hits = new Map();
+    if (q) shown = shown.filter((c) => { const m = match(q, c.title, (index[c.id] || {}).text); if (m) hits.set(c.id, m); return !!m; });
     countEl.textContent = String(items.length);
+    const indexed = items.filter((c) => index[c.id] && index[c.id].text).length;
+    metaEl.innerHTML = '<span>' + (indexed ? 'Messages searchable for ' + indexed + ' of ' + items.length : 'Open a conversation to make its messages searchable') + '</span>' + (Object.keys(index).length ? '<button type="button" class="clear-index" title="Forget the stored message text">Clear</button>' : '');
+    const clr = metaEl.querySelector('.clear-index'); if (clr) clr.addEventListener('click', async () => { index = {}; await STORE.clearIndex(siteId); render(lastItems, lastActive); });
     listEl.innerHTML = '';
-    if (!shown.length) { const li = document.createElement('li'); li.className = 'empty'; li.textContent = items.length ? (folder ? 'Nothing in this folder yet.' : 'No titles match.') : 'No conversations found on this page yet.'; listEl.appendChild(li); return; }
+    if (!shown.length) { const li = document.createElement('li'); li.className = 'empty'; li.textContent = items.length ? (q ? 'Nothing matches in titles or the messages searched so far.' : 'Nothing in this folder yet.') : 'No conversations found on this page yet.'; listEl.appendChild(li); return; }
     for (const c of shown) {
-      const li = document.createElement('li'); const a = document.createElement('a');
+      const li = document.createElement('li'); const row = document.createElement('div'); row.className = 'row'; const a = document.createElement('a');
       a.href = c.href; a.textContent = c.title; a.title = c.title; a.dataset.id = c.id;
       if (c.id === active) a.className = 'active';
+      const h = hits.get(c.id);
+      if (h && h.snippet) {
+        const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = 'in messages'; a.appendChild(badge);
+        const snip = document.createElement('span'); snip.className = 'snip'; snip.title = h.snippet;
+        const k = h.snippet.toLowerCase().indexOf(h.word.toLowerCase());
+        if (k >= 0) { snip.append(h.snippet.slice(0, k)); const mk = document.createElement('mark'); mk.textContent = h.snippet.slice(k, k + h.word.length); snip.append(mk, h.snippet.slice(k + h.word.length)); } else snip.textContent = h.snippet;
+        row.append(a, snip);
+      } else row.append(a);
       const sel = document.createElement('select'); sel.className = 'file'; sel.setAttribute('aria-label', 'Folder for ' + c.title); sel.dataset.id = c.id;
       sel.innerHTML = '<option value="">Unfiled</option>' + data.folders.map((f) => '<option value="' + f.id + '">' + esc(f.name) + '</option>').join('');
       sel.value = data.folders.some((f) => f.id === data.assign[c.id]) ? data.assign[c.id] : '';
       sel.addEventListener('change', async () => { if (sel.value) data.assign[c.id] = sel.value; else delete data.assign[c.id]; await persist(); render(lastItems, lastActive); });
-      li.append(a, sel); listEl.appendChild(li);
+      li.append(row, sel); listEl.appendChild(li);
     }
   }
 
   async function refresh() {
     const a = detect();
     if (!a) return;
-    if (a !== adapter) { adapter = a; siteId = a.id; data = await STORE.load(siteId); if (nameEl) nameEl.textContent = a.name + ' conversations'; }
-    render(collect(adapter), currentId(adapter));
+    if (a !== adapter) { adapter = a; siteId = a.id; data = await STORE.load(siteId); index = await STORE.loadIndex(siteId); if (nameEl) nameEl.textContent = a.name + ' conversations'; }
+    const items = collect(adapter), active = currentId(adapter);
+    render(items, active);
+    if (active) { clearTimeout(indexTimer); indexTimer = setTimeout(() => captureText(items, active), 600); }
+  }
+  // Store the open conversation's visible text once the page has settled, so it can be searched later.
+  async function captureText(items, id) {
+    const text = pageText();
+    if (text.length < 20) return;
+    const title = (items.find((c) => c.id === id) || {}).title || '';
+    const changed = await STORE.indexText(siteId, id, title, text);
+    if (changed) { index = await STORE.loadIndex(siteId); if (lastItems.length) render(lastItems, lastActive); }
   }
   function schedule() { clearTimeout(timer); timer = setTimeout(refresh, 250); }
   function start() {
@@ -155,6 +210,6 @@ button:hover{background:#e6f1ea;color:#0f5132}
     window.addEventListener('popstate', schedule);
   }
 
-  window.ConversationShelf = { detect, collect, refresh, version: '0.2.0' };
+  window.ConversationShelf = { detect, collect, refresh, pageText, match, version: '0.3.0' };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();

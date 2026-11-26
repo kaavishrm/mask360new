@@ -56,7 +56,8 @@ check('chatgpt: list updates after the page adds a link', t.length === 4 && t[3]
 // Filter
 await page.locator('#conversation-shelf .filter').fill('regex');
 t = await titles();
-check('chatgpt: filter narrows the list', JSON.stringify(t) === JSON.stringify(['Python regex help']), JSON.stringify(t));
+check('chatgpt: title search narrows the list', JSON.stringify(t) === JSON.stringify(['Python regex help']), JSON.stringify(t));
+check('chatgpt: a title-only hit carries no snippet', (await page.locator('#shelf-list .snip').count()) === 0);
 await page.locator('#conversation-shelf .filter').fill('');
 // Collapse persists across reload
 await page.locator('#conversation-shelf .toggle').click();
@@ -103,6 +104,47 @@ check('folders: delete removes the folder and unfiles its conversations', JSON.s
 check('folders: data persisted in localStorage for the site', await page.evaluate(() => { const d = JSON.parse(localStorage.getItem('conversationShelf.v1.chatgpt')); return d && d.folders.length === 0 && Object.keys(d.assign).length === 0; }));
 await page.screenshot({ path: path.join(shots, 'folders.png') });
 
+// Search (milestone 3): message text of opened conversations is indexed locally and searched with titles
+const meta = () => page.locator('#shelf-meta span').innerText();
+const waitIndexed = (n) => page.waitForFunction((n) => (document.querySelector('#conversation-shelf').shadowRoot.querySelector('#shelf-meta span') || {}).textContent === 'Messages searchable for ' + n + ' of 3', n, { timeout: 4000 }).catch(() => {});
+await load('/c/aaa-111'); await waitIndexed(1);
+check('search: opening a conversation indexes its messages', (await meta()) === 'Messages searchable for 1 of 3', await meta());
+await page.locator('#conversation-shelf .filter').fill('palolem');
+t = await titles();
+check('search: a word from the messages finds the conversation', t.length === 1 && t[0].startsWith('Trip to Goa budget'), JSON.stringify(t));
+check('search: the hit is badged and shows a snippet with the match marked', (await page.locator('#shelf-list .badge').innerText()) === 'in messages' && (await page.locator('#shelf-list .snip mark').innerText()) === 'Palolem' && (await page.locator('#shelf-list .snip').innerText()).includes('three nights'));
+await page.locator('#conversation-shelf .filter').fill('palolem regex');
+check('search: every word must match within one conversation', (await page.locator('#shelf-list .empty').innerText()) === 'Nothing matches in titles or the messages searched so far.');
+await page.locator('#conversation-shelf .filter').fill('goa 9,000');
+t = await titles();
+check('search: words can come from the title and the text together', t.length === 1 && t[0].startsWith('Trip to Goa budget'), JSON.stringify(t));
+await page.locator('#conversation-shelf .filter').fill('');
+await load('/c/bbb-222'); await waitIndexed(2);
+check('search: a second opened conversation joins the index', (await meta()) === 'Messages searchable for 2 of 3', await meta());
+await page.locator('#conversation-shelf .filter').fill('lookahead');
+t = await titles();
+check('search: finds text in the second conversation', t.length === 1 && t[0].startsWith('Python regex help'), JSON.stringify(t));
+await page.locator('#conversation-shelf .filter').fill('');
+check('search: index persisted in localStorage with capped text', await page.evaluate(() => { const d = JSON.parse(localStorage.getItem('conversationShelf.index.v1.chatgpt')); return d && Object.keys(d).length === 2 && d['aaa-111'].title === 'Trip to Goa budget' && d['aaa-111'].text.includes('Palolem') && !d['aaa-111'].text.includes('Lookahead'); }));
+check('search: stored text is capped at TEXT_CAP characters', await page.evaluate(async () => { const S = window.ConversationShelfStore; await S.indexText('captest', 'x1', 'T', 'a'.repeat(S.TEXT_CAP + 5000)); const d = await S.loadIndex('captest'); return d.x1.text.length === S.TEXT_CAP; }));
+check('search: the index does not mark a title-only match as in messages', await page.evaluate(() => { const m = window.ConversationShelf.match('goa budget', 'Trip to Goa budget', ''); return m && m.inTitle && m.snippet === ''; }));
+// Folder filter and search combine
+await page.locator('#shelf-folders .add').click(); await page.locator('#shelf-newf input').fill('Trips'); await page.locator('#shelf-newf button[type=submit]').click();
+await page.locator('#shelf-folders .chip[data-id=""]').click();
+await page.locator('#shelf-list select[data-id="aaa-111"]').selectOption({ label: 'Trips' });
+await page.locator('#shelf-folders .chip', { hasText: 'Trips' }).click();
+await page.locator('#conversation-shelf .filter').fill('lookahead');
+check('search: folder filter and search combine (no hit in this folder)', (await page.locator('#shelf-list .empty').innerText()) === 'Nothing matches in titles or the messages searched so far.');
+await page.locator('#conversation-shelf .filter').fill('palolem');
+t = await titles();
+check('search: folder filter and search combine (hit in this folder)', t.length === 1 && t[0].startsWith('Trip to Goa budget'), JSON.stringify(t));
+await page.locator('#conversation-shelf .filter').fill('');
+await page.locator('#shelf-folders .chip[data-id=""]').click();
+await page.locator('#shelf-folders .chip', { hasText: 'Trips' }).click(); await page.locator('#shelf-tools .del').click();
+await page.screenshot({ path: path.join(shots, 'search.png') });
+await page.locator('#shelf-meta .clear-index').click();
+check('search: clear forgets the stored text', (await meta()) === 'Open a conversation to make its messages searchable' && await page.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('conversationShelf.index.v1.chatgpt'))) === '{}'));
+
 // Storage backend: with a chrome.storage.local shim present, folders go there and not to localStorage
 const ctx2 = await browser.newContext({ viewport: { width: 1200, height: 800 } });
 await ctx2.addInitScript(() => { window.chrome = { storage: { local: { _d: {}, get(k, cb) { cb({ [k]: this._d[k] }); }, set(o, cb) { Object.assign(this._d, o); if (cb) cb(); } } } }; });
@@ -113,6 +155,8 @@ await p2.waitForSelector('#conversation-shelf', { state: 'attached' });
 check('store: chrome.storage.local backend detected when present', await p2.evaluate(() => window.ConversationShelfStore.backend()) === 'chrome.storage.local');
 await p2.locator('#shelf-folders .add').click(); await p2.locator('#shelf-newf input').fill('Work'); await p2.locator('#shelf-newf button[type=submit]').click();
 check('store: folder written to chrome.storage.local, not localStorage', await p2.evaluate(() => { const d = window.chrome.storage.local._d['conversationShelf.v1.chatgpt']; return d && d.folders.length === 1 && d.folders[0].name === 'Work' && localStorage.getItem('conversationShelf.v1.chatgpt') === null; }));
+await p2.waitForFunction(() => !!window.chrome.storage.local._d['conversationShelf.index.v1.chatgpt'], null, { timeout: 4000 }).catch(() => {});
+check('store: search index written to chrome.storage.local, not localStorage', await p2.evaluate(() => { const d = window.chrome.storage.local._d['conversationShelf.index.v1.chatgpt']; return d && d['aaa-111'] && d['aaa-111'].text.includes('Palolem') && localStorage.getItem('conversationShelf.index.v1.chatgpt') === null; }));
 await ctx2.close();
 
 // Claude fixture
@@ -121,6 +165,11 @@ check('claude adapter detected', await page.evaluate(() => window.ConversationSh
 t = await titles();
 check('claude: two conversations from the nav, message link ignored', JSON.stringify(t) === JSON.stringify(['Lease agreement review', 'Weekly meal plan']), JSON.stringify(t));
 check('claude: active item is the second', await page.locator('#shelf-list a.active').innerText() === 'Weekly meal plan');
+await page.waitForFunction(() => (document.querySelector('#conversation-shelf').shadowRoot.querySelector('#shelf-meta span') || {}).textContent === 'Messages searchable for 1 of 2', null, { timeout: 4000 }).catch(() => {});
+await page.locator('#conversation-shelf .filter').fill('quinoa');
+t = await titles();
+check('claude: message text searchable after opening', t.length === 1 && t[0].startsWith('Weekly meal plan') && (await page.locator('#shelf-list .snip mark').innerText()) === 'quinoa', JSON.stringify(t));
+await page.locator('#conversation-shelf .filter').fill('');
 
 // Gemini fixture: no nav element, so every matching link counts; "/app" without an id does not
 await load('/app/0a1b2c3d4e5f');
