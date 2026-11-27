@@ -204,12 +204,12 @@
       const pct = cur ? (nw - cur) / cur * 100 : 0;
       let req, basis;
       const inc = r.increase;
-      if (inc && inc.tiers && inc.pct === true) { const t = inc.tiers.find(([min]) => pct > min); req = { days: t[1] }; basis = 'the increase is ' + (pct > 10 ? 'more than' : 'not more than') + ' 10 percent, so ' + t[1] + ' days’ notice'; }
+      if (inc && inc.tiers && inc.pct === true) { const t = inc.tiers.find(([min]) => pct > min); req = { days: t[1] }; basis = 'the increase is ' + (pct > 10 ? 'more than' : 'not more than') + ' 10 percent and needs ' + t[1] + ' days’ notice'; }
       else if (inc && inc.tiers && inc.occupancy) {
-        if (pct >= inc.pct) { req = M.pick({ tiers: inc.tiers }, months); basis = 'the increase is ' + inc.pct + ' percent or more and the tenant has been in occupancy ' + months + ' months, so ' + req.days + ' days’ notice'; }
-        else { req = M.pick(r.landlord, months); basis = 'the increase is below ' + inc.pct + ' percent, so the statute’s rent increase rule does not apply; the notice a landlord needs to end the tenancy (' + M.label(req) + ') is used'; }
-      } else if (inc) { req = { days: inc.days, months: inc.months }; basis = M.label(req) + '’ notice' + (inc.note ? ' (' + inc.note + ')' : ''); }
-      else { req = M.pick(r.landlord.cause && r.landlord.days == null && r.landlord.months == null ? r.tenant : r.landlord, months); basis = 'no statutory rent increase rule; the notice used to end a month-to-month tenancy (' + M.label(req) + ') is applied'; }
+        if (pct >= inc.pct) { req = M.pick({ tiers: inc.tiers }, months); basis = 'the increase is ' + inc.pct + ' percent or more and the tenant has been in occupancy ' + months + ' months, which needs ' + req.days + ' days’ notice'; }
+        else { req = M.pick(r.landlord, months); basis = 'the increase is below ' + inc.pct + ' percent and the statute’s rent increase rule does not apply, the notice a landlord needs to end the tenancy (' + M.label(req) + ') is used'; }
+      } else if (inc) { req = { days: inc.days, months: inc.months }; basis = 'the statute requires ' + M.label(req) + '’ notice' + (inc.note ? ' (' + inc.note + ')' : ''); }
+      else { req = M.pick(r.landlord.cause && r.landlord.days == null && r.landlord.months == null ? r.tenant : r.landlord, months); basis = 'there is no statutory rent increase rule, the notice used to end a month-to-month tenancy (' + M.label(req) + ') is applied'; }
       const target = req.months ? M.addMonths(notice, req.months) : M.addDays(notice, req.days);
       const eff = M.nextDue(target, due);
       return { r, cur, nw, pct, notice, due, months, req, basis, target, eff };
