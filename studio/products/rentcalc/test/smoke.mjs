@@ -20,7 +20,7 @@ await mkdir(shots, { recursive: true });
 
 const best = (p) => p.locator('#out .stat.best b').innerText();
 const checks = [
-  ['/', async (p) => { const n = await p.locator('.card').count(); if (n < 3) throw new Error('home cards ' + n); return n + ' cards'; }],
+  ['/', async (p) => { const n = await p.locator('.card').count(); if (n < 5) throw new Error('home cards ' + n); return n + ' cards'; }],
   ['/prorated-rent-calculator/', async (p) => {
     let t = await best(p); if (t !== '$725.81') throw new Error('actual days ' + t);
     const stats = await p.locator('#out .stat b').allInnerTexts(); if (stats[1] !== '$750.00' || stats[2] !== '$739.73') throw new Error('other methods ' + stats);
@@ -105,6 +105,55 @@ const checks = [
     const n = await p.locator('#state option').count(); if (n !== 20) throw new Error('states ' + n);
     return 'TX 12/10 pct + 2 full days / NY 50 / NC 75, weekly 15 / CO 75, floor 50 / MA 30 days / MD / VA balance / TN grace / NJ business days / AZ / WA five days / CA none, 20 states';
   }],
+  ['/notice-to-vacate-date-calculator/', async (p) => {
+    const set = async (o) => { for (const [k, v] of Object.entries(o)) { if (k === 'state' || k === 'who' || k === 'due') await p.selectOption('select[name=' + k + ']', v); else await p.fill('input[name=' + k + ']', v); } return best(p); };
+    const stat = (i) => p.locator('#out .stat b').nth(i).innerText();
+    let t = await set({ state: 'NY', who: 'tenant', date: '2026-11-27', due: '1', months: '18' }); if (t !== 'December 31, 2026' || (await stat(1)) !== '1 month') throw new Error('NY tenant ' + t);
+    t = await set({ who: 'landlord' }); if (t !== 'January 26, 2027' || (await stat(1)) !== '60 days') throw new Error('NY landlord 18 months ' + t);
+    t = await set({ months: '30' }); if (t !== 'February 25, 2027') throw new Error('NY landlord 30 months ' + t);
+    t = await set({ months: '6' }); if (t !== 'December 27, 2026') throw new Error('NY landlord 6 months ' + t);
+    t = await set({ state: 'OH', who: 'tenant', months: '18' }); if (t !== 'December 31, 2026' || (await stat(2)) !== 'Rent day') throw new Error('OH ' + t);
+    const rows = await p.locator('#out table tbody tr').allInnerTexts(); if (!rows.some((r) => r.includes('December 27, 2026')) || !rows.some((r) => r.includes('January 1, 2027')) || !rows.some((r) => r.includes('7 days'))) throw new Error('OH rows ' + rows.join('|'));
+    t = await set({ due: '15' }); if (t !== 'January 14, 2027') throw new Error('OH due 15th ' + t);
+    t = await set({ state: 'CA', due: '1' }); if (t !== 'December 27, 2026' || (await stat(2)) !== 'Any day') throw new Error('CA tenant ' + t);
+    t = await set({ who: 'landlord' }); if (t !== 'January 26, 2027') throw new Error('CA landlord 18 months ' + t);
+    t = await set({ months: '6' }); if (t !== 'December 27, 2026') throw new Error('CA landlord under a year ' + t);
+    t = await set({ state: 'WA' }); if (t !== 'Cause required') throw new Error('WA landlord ' + t);
+    t = await set({ who: 'tenant' }); if (t !== 'December 31, 2026' || (await stat(1)) !== '20 days') throw new Error('WA tenant ' + t);
+    t = await set({ state: 'TX' }); if (t !== 'December 27, 2026') throw new Error('TX ' + t);
+    t = await set({ state: 'MD', who: 'landlord' }); if (t !== 'January 31, 2027') throw new Error('MD landlord 60 to period ' + t);
+    t = await set({ who: 'tenant' }); if (t !== 'December 31, 2026') throw new Error('MD tenant ' + t);
+    t = await set({ state: 'PA' }); if (t !== 'December 12, 2026') throw new Error('PA 15 days ' + t);
+    t = await set({ state: 'GA', who: 'landlord' }); if (t !== 'January 26, 2027') throw new Error('GA landlord 60 ' + t);
+    t = await set({ state: 'MI', who: 'tenant' }); if (t !== 'December 31, 2026') throw new Error('MI month to period ' + t);
+    t = await set({ state: 'MA' }); if (t !== 'December 27, 2026') throw new Error('MA ' + t);
+    t = await set({ state: 'NC' }); if (t !== 'December 31, 2026' || (await stat(1)) !== '7 days') throw new Error('NC ' + t);
+    t = await set({ state: 'MO' }); if (t !== 'December 31, 2026') throw new Error('MO ' + t);
+    t = await set({ state: 'NJ', who: 'landlord' }); if (t !== 'December 27, 2026' || !(await p.locator('#out .note').first().innerText()).includes('Anti-Eviction')) throw new Error('NJ landlord ' + t);
+    const cite = await p.locator('#out .tiny').innerText(); if (!cite.includes('2A:18-56') || !cite.includes('2026-11-27')) throw new Error('cite ' + cite.slice(0, 100));
+    const n = await p.locator('#state option').count(); if (n !== 20) throw new Error('states ' + n);
+    return 'NY 1 month / 30-60-90 / OH rent day, due 15th / CA any day / WA cause / TX / MD 60 / PA 15 / GA / MI / MA / NC 7 / MO / NJ, 20 states';
+  }],
+  ['/rent-increase-notice-generator/', async (p) => {
+    const set = async (o) => { for (const [k, v] of Object.entries(o)) { if (k === 'state' || k === 'due' || k === 'how') await p.selectOption('select[name=' + k + ']', v); else await p.fill('input[name=' + k + ']', v); } return best(p); };
+    const stat = (i) => p.locator('#out .stat b').nth(i).innerText();
+    let t = await set({ state: 'NY', cur: '1500', nw: '1600', date: '2026-11-27', due: '1', months: '24' }); if (t !== 'March 1, 2027' || (await stat(1)) !== '90 days' || (await stat(2)) !== '+6.7%') throw new Error('NY 90 ' + t);
+    t = await set({ months: '14' }); if (t !== 'February 1, 2027' || (await stat(1)) !== '60 days') throw new Error('NY 60 ' + t);
+    t = await set({ nw: '1550', months: '24' }); if (t !== 'March 1, 2027' || !(await p.locator('#out .note').first().innerText()).includes('below 5 percent')) throw new Error('NY below 5 ' + t);
+    t = await set({ state: 'CA', nw: '1700' }); if (t !== 'March 1, 2027' || (await stat(1)) !== '90 days') throw new Error('CA over 10 ' + t);
+    t = await set({ nw: '1600' }); if (t !== 'January 1, 2027' || (await stat(1)) !== '30 days') throw new Error('CA 30 ' + t);
+    t = await set({ how: 'First-class mail' }); if (!(await p.locator('#out .note').first().innerText()).includes('section 1013')) throw new Error('CA mail note');
+    t = await set({ state: 'WA', how: 'Hand delivered' }); if (t !== 'March 1, 2027' || (await stat(1)) !== '90 days') throw new Error('WA 90 ' + t);
+    t = await set({ state: 'VA' }); if (t !== 'January 1, 2027') throw new Error('VA ' + t);
+    t = await set({ state: 'MD' }); if (t !== 'February 1, 2027' || (await stat(1)) !== '60 days') throw new Error('MD ' + t);
+    t = await set({ state: 'TX' }); if (t !== 'January 1, 2027' || (await stat(1)) !== '1 month' || !(await p.locator('#out .note').first().innerText()).includes('no statutory rent increase rule')) throw new Error('TX fallback ' + t);
+    t = await set({ state: 'GA' }); if (t !== 'February 1, 2027' || (await stat(1)) !== '60 days') throw new Error('GA landlord 60 fallback ' + t);
+    t = await set({ state: 'NY', nw: '1600', months: '24' });
+    await p.fill('input[name=ll]', 'Jordan Lee'); await p.fill('input[name=tn]', 'Sam Rivera'); await p.fill('textarea[name=prop]', 'Apt 4B, 88 Elm Avenue'); await p.click('#go');
+    const sheet = await p.locator('#sheet').innerText(); if (!(await p.locator('#sheet').isVisible()) || !sheet.includes('March 1, 2027') || !sheet.includes('$1,600.00') || !sheet.includes('226-c') || !sheet.includes('Sam Rivera') || !sheet.includes('90 days')) throw new Error('sheet ' + sheet.slice(0, 200));
+    const n = await p.locator('#state option').count(); if (n !== 20) throw new Error('states ' + n);
+    return 'NY 90/60, below 5 / CA 90/30 + mail / WA 90 / VA / MD 60 / TX month / GA 60 / letter, 20 states';
+  }],
   ['/about/', async () => 'ok'], ['/privacy/', async () => 'ok'], ['/terms/', async () => 'ok'],
 ];
 
@@ -121,12 +170,19 @@ for (const [url, fn] of checks) {
 }
 const mob = await browser.newContext({ ...devices['iPhone 13'] });
 const mp = await mob.newPage();
-for (const u of ['/security-deposit-return-deadline-calculator/', '/prorated-rent-calculator/', '/late-rent-fee-checker/']) {
+for (const u of ['/security-deposit-return-deadline-calculator/', '/prorated-rent-calculator/', '/late-rent-fee-checker/', '/notice-to-vacate-date-calculator/', '/rent-increase-notice-generator/']) {
   await mp.goto(base + u);
   const over = await mp.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   if (over) { failed++; console.log('FAIL mobile overflow on ' + u); } else console.log('PASS mobile no horizontal overflow on ' + u);
 }
 await mp.screenshot({ path: path.join(shots, '_mobile_prorated.png') });
+// Print view of the rent increase letter: chrome hidden, sheet visible
+const pp = await browser.newPage({ viewport: { width: 1200, height: 900 } });
+await pp.goto(base + '/rent-increase-notice-generator/'); await pp.fill('input[name=ll]', 'A'); await pp.fill('input[name=tn]', 'B'); await pp.click('#go');
+await pp.emulateMedia({ media: 'print' });
+const printOk = await pp.evaluate(() => { const visible = (sel) => document.querySelector(sel).getClientRects().length > 0; return !visible('.nav') && !visible('h1') && visible('#sheet') && !visible('.actions'); });
+if (!printOk) { failed++; console.log('FAIL print view of the rent increase notice'); } else console.log('PASS print view shows only the notice letter');
+await pp.close();
 await browser.close(); server.close();
 if (errors.length) { console.log('Console/page errors:', errors); failed++; }
 console.log(failed ? `${failed} failure(s)` : 'All checks passed');

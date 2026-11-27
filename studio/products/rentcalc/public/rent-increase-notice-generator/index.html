@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rent Increase Notice Generator | Tenant Calc</title>
+<meta name="description" content="Free rent increase notice generator for landlords in 20 US states. Enter the current and new rent, the notice date and the rent due day, and the tool applies the state’s notice rule (30, 60 or 90 days, or one month, by size of increase or length of tenancy where the law says so), picks the first rent day the increase can take effect, and produces a letter citing the statute to print or save as PDF.">
+<link rel="canonical" href="https://tenantcalc.com/rent-increase-notice-generator/">
+<meta property="og:title" content="Rent Increase Notice Generator | Tenant Calc">
+<meta property="og:description" content="Free rent increase notice generator for landlords in 20 US states. Enter the current and new rent, the notice date and the rent due day, and the tool applies the state’s notice rule (30, 60 or 90 days, or one month, by size of increase or length of tenancy where the law says so), picks the first rent day the increase can take effect, and produces a letter citing the statute to print or save as PDF.">
+<meta property="og:url" content="https://tenantcalc.com/rent-increase-notice-generator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tenant Calc">
+<meta name="theme-color" content="#faf8f3">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rent Increase Notice Generator","url":"https://tenantcalc.com/rent-increase-notice-generator/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free rent increase notice generator for landlords in 20 US states. Enter the current and new rent, the notice date and the rent due day, and the tool applies the state’s notice rule (30, 60 or 90 days, or one month, by size of increase or length of tenancy where the law says so), picks the first rent day the increase can take effect, and produces a letter citing the statute to print or save as PDF."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tenantcalc.com/"},{"@type":"ListItem","position":2,"name":"Rent Increase Notice Generator","item":"https://tenantcalc.com/rent-increase-notice-generator/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I raise the rent mid-lease?","acceptedAnswer":{"@type":"Answer","text":"Not during a fixed term unless the lease allows it. The notice periods here apply to month-to-month tenancies and to the start of a new term after a fixed term ends."}},{"@type":"Question","name":"How often can I raise the rent?","acceptedAnswer":{"@type":"Answer","text":"Most states set no limit on frequency for an unregulated tenancy, only notice. Washington caps the annual amount under its 2025 law, California counts all increases in a twelve-month window toward the 10 percent trigger, and rent-controlled cities set their own rules."}},{"@type":"Question","name":"The tenant refuses to pay the new rent. What then?","acceptedAnswer":{"@type":"Answer","text":"If the notice was valid and ran its full period, the new rent is the rent, and non-payment is treated like any other non-payment. If the notice was short, serve it again. In New Jersey the increase must also be reasonable, and the tenant can contest it in the possession case."}},{"@type":"Question","name":"Do I need a reason to raise the rent?","acceptedAnswer":{"@type":"Answer","text":"No state in the list requires a reason for an increase, though New Jersey requires it to be not unconscionable and Washington caps the amount. A landlord may not raise the rent in retaliation for a complaint or as discrimination, which every state forbids separately."}}]}</script>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="/">Tenant Calc</a><div class="nav-links"><a href="/#deposits">Deposits</a><a href="/#rent">Rent</a><a href="/#notices">Notices</a><a href="/#documents">Documents</a></div></nav>
+
+<main class="page tool-page">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/#documents">Documents</a></p>
+  <h1>Rent Increase Notice Generator: the right notice period for your state, and a letter to print</h1>
+  <p class="lede">Fill in the parties, the rents and the date you will deliver the notice. The tool works out how much notice your state requires for this increase, sets the effective date to the first rent day the law allows, and writes the letter. Everything stays in your browser.</p>
+  <div class="ad-slot" data-slot="top"></div>
+  <section class="tool" id="tool">
+<form id="f">
+  <div class="grid-2">
+    <label>State<select name="state" id="state"></select></label>
+    <label>Landlord or manager name<input type="text" name="ll" placeholder="Jordan Lee"></label>
+    <label>Landlord address<textarea name="lladdr" placeholder="12 Oak Street, Columbus, OH 43215"></textarea></label>
+    <label>Tenant name(s)<input type="text" name="tn" placeholder="Sam Rivera"></label>
+    <label>Rental property address<textarea name="prop" placeholder="Apt 4B, 88 Elm Avenue, Columbus, OH 43215"></textarea></label>
+    <label>Current monthly rent ($)<input type="number" name="cur" value="1500" min="0" step="1"></label>
+    <label>New monthly rent ($)<input type="number" name="nw" value="1600" min="0" step="1"></label>
+    <label>Notice will be delivered on<input type="date" name="date" value="2026-11-27"></label>
+    <label>Rent is due on the<select name="due"></select></label>
+    <label>How long the tenant has lived there (months) <span class="hint">Sets the period in New York</span><input type="number" name="months" value="24" min="0" step="1"></label>
+    <label>Delivery<select name="how"><option>Hand delivered</option><option>First-class mail</option><option>Certified mail</option><option>Email, as the lease allows</option></select></label>
+  </div>
+  <div class="result" id="out"></div>
+  <div class="actions"><button type="button" class="btn" id="go">Generate notice</button><button type="button" class="btn secondary" id="pr">Print or save as PDF</button></div>
+  <p class="tool-note note">Tip: in the print dialog, set destination to Save as PDF. Keep a signed copy and proof of delivery.</p>
+  <div class="sheet" id="sheet" hidden></div>
+</form></section>
+  <div class="ad-slot" data-slot="mid"></div>
+  <article class="explainer">
+<h2>How much notice a rent increase needs</h2>
+<p>A landlord cannot change the rent of a month-to-month tenancy overnight. In most states the increase is treated as a change of terms that takes the same notice as ending the tenancy, and a handful of states have written a specific rent increase rule on top. California requires 30 days, or 90 days when the increase, together with any others in the previous twelve months, is more than 10 percent. New York requires 30, 60 or 90 days by how long the tenant has been there whenever the increase is 5 percent or more. Washington requires 90 days under its 2025 law, which also caps most annual increases. Maryland requires written notice by mail with a certificate of mailing or by email, 60 days ahead for a tenancy of a month. Colorado requires 60 days where there is no written agreement. Virginia makes the new rent effective on the next rent due date coming 30 days after the notice. New Jersey requires a valid notice to quit with notice of the increase, one month for a monthly tenancy, and the increase must not be unconscionable. Where the state has no specific rule, this tool uses the notice the landlord would need to end the tenancy, which is the safe reading and what most leases say.</p>
+<span class="formula">Effective date = the first rent due date on or after (notice date + the required notice)</span>
+<h3>Why the effective date is a rent day</h3>
+<p>Rent for a monthly tenancy is paid by the period, so an increase takes effect from the start of a period: the first rent due date that falls on or after the day the notice runs out. Giving notice on the 27th with rent due on the 1st and a 30-day rule therefore produces an effective date of the 1st of the month after next, not the 27th of next month. The letter the tool writes states that date, the old and new rent, the percentage, and the section of the statute the notice period comes from.</p>
+<h3>What the letter does not do</h3>
+<p>It does not override a lease. A fixed-term lease fixes the rent until it ends unless it says otherwise, and a month-to-month agreement may require longer notice than the statute, in which case the lease controls. It does not apply rent control or stabilization, local ordinances such as Seattle’s 180-day notice or Chicago’s, or the limits on subsidized housing, and it does not advise on whether an increase is reasonable; New Jersey courts can refuse an unconscionable one and Washington caps most increases. For a tenant who objects, the usual answer is that the tenancy may be ended on the ordinary notice instead.</p>
+<h3>Delivering it</h3>
+<p>Hand delivery with a signed acknowledgment or certified mail is enough everywhere in the list; Maryland specifies first-class mail with a certificate of mailing or email where the tenant has opted in, and California adds extra days for service by mail. Date the notice on the day it is actually delivered or posted, sign it, and keep a copy with the proof of delivery, because a short or unprovable notice simply pushes the increase to the next period.</p>
+<h3>States covered</h3>
+<p>Arizona, California, Colorado, Florida, Georgia, Illinois, Indiana, Maryland, Massachusetts, Michigan, Missouri, New Jersey, New York, North Carolina, Ohio, Pennsylvania, Tennessee, Texas, Virginia and Washington, each statute read on 27 November 2026 in the legislature’s text or a dated reproduction named in the source line.</p></article>
+  <section class="faqs"><h2>Questions people ask</h2><details class="faq"><summary>Can I raise the rent mid-lease?</summary><div><p>Not during a fixed term unless the lease allows it. The notice periods here apply to month-to-month tenancies and to the start of a new term after a fixed term ends.</p></div></details><details class="faq"><summary>How often can I raise the rent?</summary><div><p>Most states set no limit on frequency for an unregulated tenancy, only notice. Washington caps the annual amount under its 2025 law, California counts all increases in a twelve-month window toward the 10 percent trigger, and rent-controlled cities set their own rules.</p></div></details><details class="faq"><summary>The tenant refuses to pay the new rent. What then?</summary><div><p>If the notice was valid and ran its full period, the new rent is the rent, and non-payment is treated like any other non-payment. If the notice was short, serve it again. In New Jersey the increase must also be reasonable, and the tenant can contest it in the possession case.</p></div></details><details class="faq"><summary>Do I need a reason to raise the rent?</summary><div><p>No state in the list requires a reason for an increase, though New Jersey requires it to be not unconscionable and Washington caps the amount. A landlord may not raise the rent in retaliation for a complaint or as discrimination, which every state forbids separately.</p></div></details></section>
+  <section class="related"><h2>Related tools</h2><div class="cards"><a class="card" href="/notice-to-vacate-date-calculator/"><span class="card-cat">Notices</span><strong>Notice to Vacate Date Calculator</strong><span>Pick the state, who is giving notice and the date. See the notice the statute requires and the day the tenancy ends.</span></a><a class="card" href="/late-rent-fee-checker/"><span class="card-cat">Rent</span><strong>Late Rent Fee Checker</strong><span>Enter your state, rent, due date and the fee in your lease. See the statutory cap, the grace period and the date a fee may first be charged.</span></a><a class="card" href="/prorated-rent-calculator/"><span class="card-cat">Rent</span><strong>Prorated Rent Calculator</strong><span>Daily rate by actual days, a 30-day month or a 365-day year, side by side.</span></a></div></section>
+  <div class="ad-slot" data-slot="bottom"></div>
+</main>
+<footer class="footer"><div><strong>Tenant Calc</strong> is a set of free calculators and documents for landlords and tenants in the United States. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Rules are for guidance and name the statute they rest on. Confirm anything you will rely on with a local attorney or your state's tenant agency. Updated 2026-11-21.</div></footer>
+<script src="/assets/js/common.js"></script><script>function noticeRules() {
+  return [
+    { code: 'AZ', name: 'Arizona', tenant: { days: 30 }, landlord: { days: 30 }, align: 'period', week: 10, increase: null,
+      cite: 'A.R.S. § 33-1375(A) and (B)', url: 'https://www.azleg.gov/ars/33/01375.htm',
+      rule: 'Either party ends a month-to-month tenancy by written notice given at least thirty days before the periodic rental date named in the notice; a week-to-week tenancy needs ten days before the termination date.',
+      increaseRule: 'The Residential Landlord and Tenant Act sets no notice period for a rent increase in the sections read; a change to a month-to-month tenancy is in practice given with the same thirty days to a rental date.',
+      verified: '2026-11-27', source: 'official Arizona Revised Statutes published by the Arizona Legislature' },
+    { code: 'CA', name: 'California', tenant: { days: 30 }, landlord: { tiers: [[12, 60], [0, 30]] }, align: 'any', week: null, increase: { tiers: [[10, 90], [0, 30]], pct: true, mail: true },
+      cite: 'Cal. Civ. Code §§ 1946, 1946.1 and 827(b)', url: 'https://codes.findlaw.com/ca/civil-code/civ-sect-1946-1/',
+      rule: 'A tenant ends a month-to-month tenancy with at least 30 days’ written notice given at any time, and rent is due through the termination date. An owner must give at least 60 days, or 30 days if the tenant has lived there for less than one year (and in certain owner-sale cases).',
+      increaseRule: 'A rent increase needs at least 30 days’ written notice, or 90 days if the increase, combined with any other increases in the 12 months before it takes effect, is more than 10 percent of the rent charged at any time in those 12 months. Service by mail adds the days in Code of Civil Procedure section 1013.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Civil Code, current as of 1 January 2026 (the official site refuses automated reading)' },
+    { code: 'CO', name: 'Colorado', tenant: { days: 21 }, landlord: { cause: true, note: 'a residential landlord’s right to end the tenancy is governed by the for-cause rules in C.R.S. § 38-12-1302, which were not read for this page' }, align: 'period', week: 3, increase: { days: 60, note: 'where there is no written agreement' },
+      cite: 'C.R.S. §§ 13-40-107(1), (2)(c) and 38-12-701(2)', url: 'https://codes.findlaw.com/co/title-13-courts-and-court-procedure/co-rev-st-sect-13-40-107/',
+      rule: 'A tenant ends a tenancy of one month or longer but less than six months with written notice of at least twenty-one days that expires at the end of a tenancy period, naming the property and the termination date; one week to one month needs three days.',
+      increaseRule: 'In a residential tenancy with no written agreement the landlord may raise the rent only on at least sixty days’ written notice, and may not end such a tenancy mainly to raise the rent in a way inconsistent with that. The section sets no period for tenancies with a written agreement.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Colorado Revised Statutes, current as of 1 January 2025' },
+    { code: 'FL', name: 'Florida', tenant: { days: 30 }, landlord: { days: 30 }, align: 'period', week: 7, increase: null,
+      cite: 'Fla. Stat. § 83.57(3) and (4)', url: 'http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0083/Sections/0083.57.html',
+      rule: 'Either party ends a month-to-month tenancy by written notice given not less than 30 days before the end of any monthly period; week-to-week needs 7 days before the end of a weekly period, quarter-to-quarter 30 days and year-to-year 60 days before the end of the period.',
+      increaseRule: 'The section sets no notice period for a rent increase.',
+      verified: '2026-11-27', source: 'official 2026 Florida Statutes site' },
+    { code: 'GA', name: 'Georgia', tenant: { days: 30 }, landlord: { days: 60 }, align: 'any', week: null, increase: null,
+      cite: 'O.C.G.A. § 44-7-7', url: 'https://codes.findlaw.com/ga/title-44-property/ga-code-sect-44-7-7/',
+      rule: 'Sixty days’ notice from the landlord or 30 days’ notice from the tenant ends a tenancy at will, which is how Georgia treats a month-to-month tenancy without a fixed term.',
+      increaseRule: 'The section says nothing about rent increases; a landlord changes the rent of a tenancy at will by giving the same sixty days’ notice.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Georgia Code, current as of 28 March 2024 (the official code is not published as open text)' },
+    { code: 'IL', name: 'Illinois', tenant: { days: 30, note: 'the section states the landlord’s notice; a tenant’s notice follows the lease, which usually mirrors it' }, landlord: { days: 30 }, align: 'any', week: 7, increase: null,
+      cite: '735 ILCS 5/9-207(a) and (b)', url: 'https://codes.findlaw.com/il/chapter-735-civil-procedure/il-st-sect-735-5-9-207/',
+      rule: 'A landlord ends a tenancy for a term of less than one year, other than week to week, by 30 days’ written notice, and a week-to-week tenancy by 7 days’ written notice, except as provided in section 9-207.5 (not read for this page). Chicago and Cook County add their own rules.',
+      increaseRule: 'The section sets no notice period for a rent increase; Chicago’s ordinance does.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Illinois Compiled Statutes, current as of 1 January 2025 (the official site returned an error)' },
+    { code: 'IN', name: 'Indiana', tenant: { months: 1 }, landlord: { months: 1 }, align: 'any', week: null, increase: null,
+      cite: 'Ind. Code § 32-31-1-1(a)', url: 'https://codes.findlaw.com/in/title-32-property/in-code-sect-32-31-1-1/',
+      rule: 'A tenancy at will is ended by one month’s notice in writing delivered to the tenant. Indiana has no section naming month-to-month tenancies; this is the rule generally applied to them. Check the lease for its own notice clause.',
+      increaseRule: 'The sections read set no notice period for a rent increase.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Indiana Code, current as of 1 January 2026' },
+    { code: 'MA', name: 'Massachusetts', tenant: { months: 1, min: 30 }, landlord: { months: 1, min: 30 }, align: 'any', week: null, increase: null,
+      cite: 'M.G.L. c. 186, § 12', url: 'https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section12',
+      rule: 'A tenancy at will is ended by written notice equal to the interval between rent days or thirty days, whichever is longer, where rent is paid at intervals of less than three months (three months’ notice otherwise). To be safe, time the notice to expire on the day before a rent day.',
+      increaseRule: 'The section sets no notice period for a rent increase; a landlord changes the rent of a tenancy at will by the same notice.',
+      verified: '2026-11-27', source: 'official General Laws published by the Massachusetts Legislature (page dated 27 November 2026)' },
+    { code: 'MD', name: 'Maryland', tenant: { days: 30, note: 'does not apply in Baltimore City' }, landlord: { days: 60 }, align: 'period', week: null, increase: { days: 60, note: 'the section gives 60 days for terms of more than a week up to a month and 90 days for terms of more than a month; it does not name month-to-month tenancies, so 60 is the literal reading' },
+      cite: 'Md. Code, Real Prop. §§ 8-402(c) and 8-209(b)', url: 'https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-402',
+      rule: 'A landlord must give written notice 60 days before the expiration of a month-to-month tenancy; a tenant gives at least 30 days before the expiration (not in Baltimore City, which has its own rule). Local law in Baltimore City and Montgomery County adds to this.',
+      increaseRule: 'A residential landlord must notify the tenant in writing before raising the rent, by first-class mail with a certificate of mailing or electronically if the tenant chose that: at least 60 days ahead for a term of more than a week up to a month, 90 days for a term of more than a month. Local law may require more.',
+      verified: '2026-11-27', source: 'official statute text published by the Maryland General Assembly (the pages show no currency date)' },
+    { code: 'MI', name: 'Michigan', tenant: { months: 1 }, landlord: { months: 1 }, align: 'period', week: null, increase: null,
+      cite: 'MCL 554.134(1)', url: 'https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-554-134',
+      rule: 'Either party ends an estate at will by giving one month’s notice, which terminates the tenancy at the end of a period equal in length to the interval between times of payment: for monthly rent, the end of the next full rental period after the notice.',
+      increaseRule: 'The section says nothing about rent increases; the same one month’s notice to the end of a rental period is used to change the rent.',
+      verified: '2026-11-27', source: 'official Michigan Compiled Laws site, complete through PA 114 of 2026' },
+    { code: 'MO', name: 'Missouri', tenant: { months: 1 }, landlord: { months: 1 }, align: 'period', week: null, increase: null,
+      cite: 'Mo. Rev. Stat. § 441.060(4)', url: 'https://revisor.mo.gov/main/OneSection.aspx?section=441.060',
+      rule: 'Either party ends a month-to-month tenancy by written notice stating that the tenancy ends on a periodic rent-paying date not less than one month after the notice is received.',
+      increaseRule: 'The section sets no notice period for a rent increase.',
+      verified: '2026-11-27', source: 'official Revised Statutes of Missouri published by the Missouri Revisor (section effective 28 August 1997)' },
+    { code: 'NJ', name: 'New Jersey', tenant: { months: 1, note: 'the statute states the landlord’s notice to quit; a tenant’s one month follows the lease and general practice' }, landlord: { months: 1, cause: true, note: 'a landlord of a covered residential tenant may end the tenancy only on a ground listed in the Anti-Eviction Act; owner-occupied buildings of two units or fewer are exempt' }, align: 'any', week: null, increase: { months: 1, note: 'by a valid notice to quit and notice of the increase; the increase must not be unconscionable' },
+      cite: 'N.J.S.A. 2A:18-56(b), 2A:18-61.1 and 2A:18-61.1(f)', url: 'https://codes.findlaw.com/nj/title-2a-administration-of-civil-and-criminal-justice/nj-st-sect-2a-18-56/',
+      rule: 'A month-to-month tenancy is ended by one month’s notice to quit. A landlord of a residential tenant covered by the Anti-Eviction Act may remove the tenant only for one of its listed grounds, so cannot simply end a month-to-month tenancy; owner-occupied premises with no more than two rental units are outside the Act.',
+      increaseRule: 'A rent increase is imposed by a valid notice to quit together with notice of the increase, one month for a month-to-month tenancy; a tenant who then fails to pay can be removed only if the increase is not unconscionable and complies with any rent control ordinance.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the New Jersey Statutes, current as of 1 January 2024' },
+    { code: 'NY', name: 'New York', tenant: { months: 1 }, landlord: { tiers: [[24, 90], [12, 60], [0, 30]] }, align: 'period', landlordAlign: 'any', week: null, increase: { tiers: [[24, 90], [12, 60], [0, 30]], pct: 5, occupancy: true },
+      cite: 'N.Y. Real Prop. Law §§ 226-c and 232-b', url: 'https://www.nysenate.gov/legislation/laws/RPP/226-C',
+      rule: 'Outside New York City a tenant ends a month-to-month tenancy by notifying the landlord at least one month before the end of the term. A landlord who will not renew must give at least 30 days’ notice if the tenant has occupied the unit for less than one year without a lease of a year or more, 60 days for one to two years, and 90 days for two years or more, counted by the longer of time in occupancy and lease length.',
+      increaseRule: 'A rent increase of five percent or more needs the same 30, 60 or 90 days’ written notice by length of occupancy. Below five percent the section does not apply.',
+      verified: '2026-11-27', source: 'New York State Senate statute site (226-c revision of 22 August 2025, 232-b of 18 October 2019)' },
+    { code: 'NC', name: 'North Carolina', tenant: { days: 7 }, landlord: { days: 7 }, align: 'period', week: 2, increase: null,
+      cite: 'N.C. Gen. Stat. § 42-14', url: 'https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_42/GS_42-14.html',
+      rule: 'A month-to-month tenancy is ended by a notice to quit given seven days or more before the end of the current month of the tenancy; week to week needs two days, year to year one month. A manufactured home lot needs 60 days.',
+      increaseRule: 'The section says nothing about rent increases; a landlord changes the rent by the same notice before the end of the month.',
+      verified: '2026-11-27', source: 'North Carolina General Assembly statute site' },
+    { code: 'OH', name: 'Ohio', tenant: { days: 30 }, landlord: { days: 30 }, align: 'period', week: 7, increase: null,
+      cite: 'Ohio Rev. Code § 5321.17(A) and (B)', url: 'https://codes.ohio.gov/ohio-revised-code/section-5321.17',
+      rule: 'Either party ends or declines to renew a month-to-month tenancy by notice given at least thirty days before the periodic rental date; a week-to-week tenancy needs seven days before the termination date named in the notice.',
+      increaseRule: 'The section sets no notice period for a rent increase.',
+      verified: '2026-11-27', source: 'Ohio Revised Code official site (section effective 22 August 1990)' },
+    { code: 'PA', name: 'Pennsylvania', tenant: { days: 15 }, landlord: { days: 15 }, align: 'any', week: null, increase: null,
+      cite: '68 P.S. § 250.501(b) and (e)', url: 'https://codes.findlaw.com/pa/title-68-ps-real-and-personal-property/pa-st-sect-68-250-501/',
+      rule: 'For a lease of one year or less or for an indeterminate time, the notice to quit gives the tenant fifteen days from the date of service to leave; thirty days for a lease of more than one year. The lease may shorten or waive the notice. The Act states the landlord’s notice; a tenant’s notice follows the lease.',
+      increaseRule: 'The Act sets no notice period for a rent increase.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Landlord and Tenant Act of 1951, current as of 1 January 2026 (the official page served only its navigation)' },
+    { code: 'TN', name: 'Tennessee', tenant: { days: 30 }, landlord: { days: 30 }, align: 'period', week: 10, increase: null,
+      cite: 'Tenn. Code § 66-28-512(a) and (b)', url: 'https://codes.findlaw.com/tn/title-66-property/tn-code-sect-66-28-512/',
+      rule: 'Either party ends a month-to-month tenancy by written notice given at least thirty days before the periodic rental date named in the notice; week to week needs ten days before the termination date. The Act applies in counties above a population threshold.',
+      increaseRule: 'The section sets no notice period for a rent increase.',
+      verified: '2026-11-27', source: 'FindLaw reproduction of the Tennessee Code, current as of 2 January 2024' },
+    { code: 'TX', name: 'Texas', tenant: { months: 1 }, landlord: { months: 1 }, align: 'any', week: null, increase: null,
+      cite: 'Tex. Prop. Code § 91.001(a), (b) and (e)', url: 'https://texas.public.law/statutes/tex._prop._code_section_91.001',
+      rule: 'Either party ends a month-to-month tenancy by notice to the other; the tenancy ends on the later of the day named in the notice and one month after the day the notice is given. The parties may agree on a different period in a document signed by both.',
+      increaseRule: 'The section says nothing about rent increases; a landlord changes the rent of a month-to-month tenancy by the same one month’s notice.',
+      verified: '2026-11-27', source: 'Public.Law reproduction of the Property Code, verified against texas.gov on 26 May 2025' },
+    { code: 'VA', name: 'Virginia', tenant: { days: 30 }, landlord: { days: 30 }, align: 'period', week: 7, increase: { days: 30, align: 'period' },
+      cite: 'Va. Code § 55.1-1253(A) and (D)', url: 'https://law.lis.virginia.gov/vacode/title55.1/chapter12/section55.1-1253/',
+      rule: 'Either party ends a month-to-month tenancy by written notice served at least 30 days before the next rent due date, unless the rental agreement sets a different period; week to week needs seven days before the next rent due date.',
+      increaseRule: 'For a month-to-month tenant the new rent stated in a written notice takes effect on the next rent due date coming 30 days after the notice. Fixed-term and auto-renewing leases have a separate 60-day rule (90 days from 1 July 2027).',
+      verified: '2026-11-27', source: 'official Code of Virginia (page dated 27 November 2026)' },
+    { code: 'WA', name: 'Washington', tenant: { days: 20 }, landlord: { cause: true, note: 'only for a cause listed in RCW 59.18.650(2), with 60 to 120 days’ notice depending on the cause' }, align: 'period', week: null, increase: { days: 90 },
+      cite: 'RCW 59.18.200(1)(a), 59.18.650 and 59.18.140(3)', url: 'https://app.leg.wa.gov/RCW/default.aspx?cite=59.18.140',
+      rule: 'A tenant ends a month-to-month tenancy by written notice of 20 days or more before the end of any month of the tenancy. A landlord may not end a periodic tenancy except for a cause listed in RCW 59.18.650(2), each with its own notice (for example 90 days for owner occupancy or sale of a single-family home, 60 days for other good cause).',
+      increaseRule: 'A landlord must give at least 90 days’ written notice of a rent increase (60 days under the pre-May 2025 text; 30 days for subsidized tenancies), and the increase cannot take effect before the end of the lease term. The same 2025 law caps annual increases at the lower of 7 percent plus inflation and 10 percent for most tenancies; Seattle requires 180 days.',
+      verified: '2026-11-27', source: 'FindLaw reproductions of the RCW current as of 1 January 2025, with the 90 days taken from Chapter 209, Laws of 2025 (EHB 1217, effective 7 May 2025) as reported by the Rental Housing Association of Washington and the enrolled bill' },
+  ];
+}</script><script>function noticeMath() {
+  function addDays(d, n) { const x = new Date(d.getTime()); x.setDate(x.getDate() + n); return x; }
+  function addMonths(d, n) { const x = new Date(d.getFullYear(), d.getMonth() + n, 1); const last = new Date(x.getFullYear(), x.getMonth() + 1, 0).getDate(); x.setDate(Math.min(d.getDate(), last)); return x; }
+  // First rent due date on or after `after`.
+  function nextDue(after, dueDay) { let D = new Date(after.getFullYear(), after.getMonth(), dueDay); if (D < after) D = new Date(after.getFullYear(), after.getMonth() + 1, dueDay); return D; }
+  // Resolve a spec ({days}|{months}|{tiers}|{cause}) for a tenant who has been in occupancy `months` months.
+  function pick(spec, months) {
+    if (!spec) return null;
+    if (spec.tiers) { const t = spec.tiers.find(([min]) => months >= min) || spec.tiers[spec.tiers.length - 1]; return { days: t[1], tier: t[0], cause: !!spec.cause, note: spec.note }; }
+    return { days: spec.days, months: spec.months, min: spec.min, cause: !!spec.cause, note: spec.note };
+  }
+  function label(req) { if (!req || (req.days == null && req.months == null)) return ''; const base = req.months ? (req.months === 1 ? '1 month' : req.months + ' months') : req.days + ' days'; return req.min && req.min > 0 && req.months ? base + ' or ' + req.min + ' days, whichever is longer' : base; }
+  // Earliest day the notice can take effect. With align 'period' the tenancy ends the day before the first
+  // rent due date that is at least the required notice after the notice date; with 'any' it ends when the
+  // notice runs out.
+  function endDate(notice, req, align, dueDay) {
+    let target = req.months ? addMonths(notice, req.months) : addDays(notice, req.days);
+    if (req.min) { const alt = addDays(notice, req.min); if (alt > target) target = alt; }
+    if (align !== 'period') return { ends: target, due: null, target };
+    const D = nextDue(target, dueDay);
+    return { ends: addDays(D, -1), due: D, target };
+  }
+  return { addDays, addMonths, nextDue, pick, label, endDate };
+}</script><script>(function () {
+    const H = window.H, RULES = noticeRules(), M = noticeMath();
+    const f = document.getElementById('f'), out = document.getElementById('out'), sheet = document.getElementById('sheet');
+    f.elements.state.innerHTML = RULES.map((r) => '<option value="' + r.code + '">' + r.name + '</option>').join('');
+    f.elements.state.value = 'OH';
+    const ord = (n) => n + (n % 10 === 1 && n !== 11 ? 'st' : n % 10 === 2 && n !== 12 ? 'nd' : n % 10 === 3 && n !== 13 ? 'rd' : 'th');
+    f.elements.due.innerHTML = Array.from({ length: 28 }, (_, i) => '<option value="' + (i + 1) + '">' + ord(i + 1) + ' of the month</option>').join('');
+    let last = null;
+    function compute() {
+      const r = RULES.find((x) => x.code === f.elements.state.value), cur = H.val(f, 'cur'), nw = H.val(f, 'nw'), notice = H.parse(H.str(f, 'date')), due = H.val(f, 'due'), months = H.val(f, 'months');
+      if (!notice || !cur) return null;
+      const pct = cur ? (nw - cur) / cur * 100 : 0;
+      let req, basis;
+      const inc = r.increase;
+      if (inc && inc.tiers && inc.pct === true) { const t = inc.tiers.find(([min]) => pct > min); req = { days: t[1] }; basis = 'the increase is ' + (pct > 10 ? 'more than' : 'not more than') + ' 10 percent, so ' + t[1] + ' days’ notice'; }
+      else if (inc && inc.tiers && inc.occupancy) {
+        if (pct >= inc.pct) { req = M.pick({ tiers: inc.tiers }, months); basis = 'the increase is ' + inc.pct + ' percent or more and the tenant has been in occupancy ' + months + ' months, so ' + req.days + ' days’ notice'; }
+        else { req = M.pick(r.landlord, months); basis = 'the increase is below ' + inc.pct + ' percent, so the statute’s rent increase rule does not apply; the notice a landlord needs to end the tenancy (' + M.label(req) + ') is used'; }
+      } else if (inc) { req = { days: inc.days, months: inc.months }; basis = M.label(req) + '’ notice' + (inc.note ? ' (' + inc.note + ')' : ''); }
+      else { req = M.pick(r.landlord.cause && r.landlord.days == null && r.landlord.months == null ? r.tenant : r.landlord, months); basis = 'no statutory rent increase rule; the notice used to end a month-to-month tenancy (' + M.label(req) + ') is applied'; }
+      const target = req.months ? M.addMonths(notice, req.months) : M.addDays(notice, req.days);
+      const eff = M.nextDue(target, due);
+      return { r, cur, nw, pct, notice, due, months, req, basis, target, eff };
+    }
+    function show() {
+      const c = compute(); last = c;
+      if (!c) { out.innerHTML = '<p class="note">Enter the current rent and the notice date.</p>'; return; }
+      out.innerHTML = '<div class="big"><div class="stat best"><b>' + H.mdy(c.eff) + '</b><span>Earliest rent day the new rent can start</span></div>' +
+        '<div class="stat"><b>' + M.label(c.req) + '</b><span>Notice required in ' + c.r.name + '</span></div>' +
+        '<div class="stat"><b>' + (c.pct >= 0 ? '+' : '') + c.pct.toFixed(1) + '%</b><span>' + H.usd(c.cur) + ' to ' + H.usd(c.nw) + '</span></div></div>' +
+        '<p class="note">Because ' + c.basis + ', counted from ' + H.mdy(c.notice) + ' the period runs out on ' + H.mdy(c.target) + ', and the first rent day on or after that is ' + H.mdy(c.eff) + '.' + (c.r.increase && c.r.increase.mail && f.elements.how.value.includes('mail') ? ' Service by mail adds the days in Code of Civil Procedure section 1013; deliver earlier or add them.' : '') + '</p>' +
+        '<h3>The rule</h3><p>' + c.r.increaseRule + '</p>' +
+        '<p class="tiny">Source: ' + c.r.cite + ', read in the ' + c.r.source + ' on ' + c.r.verified + '. <a href="' + c.r.url + '" rel="noopener">Read the section</a>. A lease may require longer notice or limit increases during its term; rent control and local ordinances (Seattle, Chicago, Baltimore City, Montgomery County among others) add rules this tool does not apply.</p>';
+    }
+    function gen() {
+      show(); const c = last; if (!c) return;
+      const ll = H.str(f, 'll') || '____________', tn = H.str(f, 'tn') || '____________', prop = H.str(f, 'prop') || '____________', lladdr = H.str(f, 'lladdr'), how = H.str(f, 'how');
+      sheet.innerHTML = '<div class="row"><h2>Notice of Rent Increase</h2><div class="muted">Date: ' + H.mdy(c.notice) + '</div></div>' +
+        '<p><strong>To:</strong> ' + H.esc(tn) + '<br>' + H.nl(prop) + '</p>' +
+        '<p>This notice is to inform you that, effective <strong>' + H.mdy(c.eff) + '</strong>, the monthly rent for the premises at ' + H.nl(prop) + ' will increase from <strong>' + H.usd(c.cur) + '</strong> to <strong>' + H.usd(c.nw) + '</strong> per month, an increase of ' + H.usd(c.nw - c.cur) + ' (' + c.pct.toFixed(1) + '%). Rent remains due on the ' + ord(c.due) + ' of each month and is payable in the same manner as before.</p>' +
+        '<p>All other terms and conditions of your tenancy remain unchanged. If you do not wish to continue the tenancy at the new rent, you may give notice to end it in accordance with your rental agreement and state law.</p>' +
+        '<p class="muted">This notice is given ' + M.label(c.req) + ' or more before the effective date, as required by ' + c.r.cite + '. Delivered by: ' + H.esc(how) + '.</p>' +
+        '<div class="sig"><div>' + H.esc(ll) + (lladdr ? '<br><span class="muted">' + H.nl(lladdr) + '</span>' : '') + '<br><br>Signature of landlord or agent</div><div>Date</div></div>';
+      sheet.hidden = false;
+    }
+    H.bind(f, show);
+    document.getElementById('go').addEventListener('click', gen);
+    document.getElementById('pr').addEventListener('click', () => { gen(); H.print(); });
+  })();</script>
+</body>
+</html>
