@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your CTC in One Card, FY 2026-27 | Hisaab Tools</title>
+<meta name="description" content="Type your annual CTC and see it split into in-hand pay, income tax, employee and employer PF and professional tax for FY 2026-27, with the share that reaches your account and the days of the year each slice takes, as a card you can download or share.">
+<link rel="canonical" href="https://hisaabtools.in/shots/ctc-in-one-card-fy-2026-27/">
+<meta property="og:title" content="Your CTC in One Card, FY 2026-27 | Hisaab Tools">
+<meta property="og:description" content="Type your annual CTC and see it split into in-hand pay, income tax, employee and employer PF and professional tax for FY 2026-27, with the share that reaches your account and the days of the year each slice takes, as a card you can download or share.">
+<meta property="og:url" content="https://hisaabtools.in/shots/ctc-in-one-card-fy-2026-27/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hisaab Tools">
+<meta name="theme-color" content="#faf8f3">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Your CTC in One Card, FY 2026-27","url":"https://hisaabtools.in/shots/ctc-in-one-card-fy-2026-27/","description":"Type your annual CTC and see it split into in-hand pay, income tax, employee and employer PF and professional tax for FY 2026-27, with the share that reaches your account and the days of the year each slice takes, as a card you can download or share.","datePublished":"2026-11-25"}</script>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="/">Hisaab Tools</a><div class="nav-links"><a href="/#tax">Tax</a><a href="/#salary">Salary</a><a href="/#loans">Loans</a><a href="/#investments">Investments</a><a href="/#documents">Documents</a></div></nav>
+
+<main class="page tool-page shot-page">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/shots/">Shots</a></p>
+  <h1>Your CTC in One Card, FY 2026-27</h1>
+  <p class="lede">Your CTC, one card. Enter the number from your offer letter and see where every rupee goes this year, then download the card or share it.</p>
+  
+<section class="tool">
+  <form id="f" style="margin-bottom:16px">
+    <div class="grid">
+      <label>Annual CTC (₹)<input type="number" name="ctc" value="1200000" min="0" step="10000"></label>
+      <label>State for professional tax<select name="state">
+        <option value="MH">Maharashtra</option><option value="KA">Karnataka</option><option value="WB">West Bengal</option><option value="TG">Telangana</option><option value="AP">Andhra Pradesh</option><option value="GJ">Gujarat</option><option value="MP">Madhya Pradesh</option><option value="TN">Tamil Nadu (Chennai)</option><option value="KL">Kerala</option><option value="NONE">No professional tax (Delhi, UP, Haryana, Rajasthan, Punjab, Goa, Odisha and others)</option>
+      </select></label>
+      <label>Tax regime<select name="regime"><option value="new">New regime (default)</option><option value="old">Old regime, with ₹1,50,000 of deductions</option></select></label>
+      <label class="chk"><input type="checkbox" name="grat"> CTC includes a gratuity provision (4.81% of basic)</label>
+    </div>
+  </form>
+  <div class="big">
+    <div class="stat best"><b id="c-inhand"></b><span>In hand per month</span></div>
+    <div class="stat"><b id="c-pct"></b><span>of your CTC reaches your account</span></div>
+    <div class="stat"><b id="c-days"></b><span>days a year you work for income tax</span></div>
+  </div>
+  <div class="bar" id="c-bar" aria-hidden="true"></div>
+  <ul class="legend" id="c-legend"></ul>
+  <img id="c-img" alt="Your CTC card" style="width:100%;max-width:600px;border:1px solid var(--line);border-radius:12px;margin-top:14px;display:block">
+  <canvas id="c-canvas" width="1200" height="630" hidden></canvas>
+  <div class="actions"><a class="btn" id="c-download" download="my-ctc-card.png">Download card</a><button type="button" class="btn secondary" id="c-share">Share</button><button type="button" class="btn secondary" id="c-copy">Copy summary</button></div>
+  <p class="note" id="c-note"></p>
+  <p class="tiny">Assumes basic pay of 40% of CTC, HRA of 50% of basic, the employer’s 12% PF share inside the CTC, no variable pay, age below 60, and in the old regime ₹1,50,000 of deductions and no HRA exemption. For your own structure use the <a href="/in-hand-salary-calculator/">in-hand salary calculator</a>, which this card is built on.</p>
+</section>
+  <div class="ad-slot" data-slot="bottom"></div>
+  <p class="tiny">Published 2026-11-25. <a href="/shots/">All shots</a>.</p>
+</main>
+<footer class="footer"><div><strong>Hisaab Tools</strong> is a set of free calculators and document generators for India. Everything runs in your browser. Nothing you type is sent to a server.</div><div class="footer-links"><a href="/shots/">Shots</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></div><div class="footer-note">Figures are for guidance. Confirm anything that matters with a chartered accountant. Updated 2026-11-11.</div></footer>
+<script src="/assets/js/common.js"></script><script>function taxEngine() {
+  // Slabs announced in Budget 2025. They apply to FY 2025-26 (AY 2026-27) and continue unchanged for FY 2026-27 (tax year 2026-27).
+  const YEARS = {
+    '2025-26': { label: 'FY 2025-26 (AY 2026-27)', newSlabs: [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]], newRebateLimit: 1200000, oldRebateLimit: 500000, oldRebateMax: 12500, stdNew: 75000, stdOld: 50000 },
+    '2026-27': { label: 'FY 2026-27 (AY 2027-28)', newSlabs: [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]], newRebateLimit: 1200000, oldRebateLimit: 500000, oldRebateMax: 12500, stdNew: 75000, stdOld: 50000 },
+  };
+  function rules(fy) { return YEARS[fy] || YEARS['2026-27']; }
+  function oldSlabs(age) { const ex = age === 2 ? 500000 : age === 1 ? 300000 : 250000; return [[ex, 0], [500000, 0.05], [1000000, 0.20], [Infinity, 0.30]]; }
+  function slabTax(inc, slabs) { let t = 0, prev = 0; for (const [upto, r] of slabs) { if (inc > prev) t += (Math.min(inc, upto) - prev) * r; prev = upto; if (inc <= upto) break; } return t; }
+  function surchargeRate(inc, isNew) { if (inc > 5e7) return isNew ? 0.25 : 0.37; if (inc > 2e7) return 0.25; if (inc > 1e7) return 0.15; if (inc > 5e6) return 0.10; return 0; }
+  function thresholdBelow(inc) { let t = 0; for (const x of [5e6, 1e7, 2e7, 5e7]) if (inc > x) t = x; return t; }
+  // Returns tax after rebate, surcharge after marginal relief, cess and total for a taxable income.
+  function compute(taxable, isNew, age, fy) {
+    const R = rules(fy);
+    const slabs = isNew ? R.newSlabs : oldSlabs(age);
+    let tax = slabTax(taxable, slabs), rebate = 0;
+    if (isNew) { if (taxable <= R.newRebateLimit) rebate = tax; else { const cap = taxable - R.newRebateLimit; if (tax > cap) rebate = tax - cap; } }
+    else if (taxable <= R.oldRebateLimit) rebate = Math.min(tax, R.oldRebateMax);
+    tax -= rebate;
+    let sur = tax * surchargeRate(taxable, isNew);
+    const th = thresholdBelow(taxable);
+    if (sur > 0 && th > 0) {
+      const maxAllowed = slabTax(th, slabs) * (1 + surchargeRate(th, isNew)) + (taxable - th);
+      if (tax + sur > maxAllowed) sur = Math.max(0, maxAllowed - tax);
+    }
+    const cess = (tax + sur) * 0.04;
+    return { tax, rebate, sur, cess, total: tax + sur + cess };
+  }
+  return { rules, oldSlabs, slabTax, surchargeRate, compute };
+}</script><script>function professionalTax() {
+  return {
+    MH: (g, woman) => { if (woman && g <= 25000) return [0, 0]; const m = g <= 7500 ? 0 : g <= 10000 ? 175 : 200; return [m, m === 200 ? 2500 : m * 12]; },
+    KA: (g) => { const m = g >= 25000 ? 200 : 0; return [m, m === 200 ? 2500 : 0]; },
+    WB: (g) => { const m = g <= 20000 ? 0 : g <= 30000 ? 100 : g <= 50000 ? 140 : g <= 100000 ? 170 : 208; return [m, m * 12]; },
+    TG: (g) => { const m = g <= 15000 ? 0 : g <= 20000 ? 150 : 200; return [m, m * 12]; },
+    AP: (g) => { const m = g <= 15000 ? 0 : g <= 20000 ? 150 : 200; return [m, m * 12]; },
+    GJ: (g) => { const m = g <= 12000 ? 0 : 200; return [m, m * 12]; },
+    MP: (g) => { const y = g * 12; const a = y <= 225000 ? 0 : y <= 300000 ? 1500 : y <= 400000 ? 2000 : 2500; return [Math.round(a / 12), a]; },
+    TN: (g) => { const h = g * 6; const s = h <= 21000 ? 0 : h <= 30000 ? 180 : h <= 45000 ? 425 : h <= 60000 ? 930 : h <= 75000 ? 1025 : 1250; return [Math.round(s / 6), s * 2]; },
+    KL: (g) => { const h = g * 6; const s = h < 12000 ? 0 : h < 18000 ? 320 : h < 30000 ? 450 : h < 45000 ? 600 : h < 100000 ? 750 : h < 125000 ? 1000 : 1250; return [Math.round(s / 6), s * 2]; },
+    NONE: () => [0, 0],
+  };
+}</script><script>(function () {
+    const H = window.H, T = taxEngine(), PT = professionalTax();
+    const $ = (id) => document.getElementById(id);
+    const COLORS = { inhand: '#0f5132', tax: '#9a5b00', epf: '#5d655f', erpf: '#8a9a8e', pt: '#c9a227', grat: '#b8b2a4' };
+    function split(ctc, state, isNew, grat) {
+      const basicY = ctc * 0.40;
+      const pfY = Math.round(basicY * 0.12);
+      const gratY = grat ? Math.round(basicY * 0.0481) : 0;
+      const grossY = Math.max(0, ctc - pfY - gratY);
+      const [ptM, ptY] = PT[state](grossY / 12, false);
+      const dedY = isNew ? 75000 : 50000 + ptY + 150000;
+      const taxable = Math.max(0, grossY - dedY);
+      const taxY = Math.round(T.compute(taxable, isNew, 0, '2026-27').total);
+      const inHandY = grossY - pfY - ptY - taxY;
+      return { ctc, basicY, pfY, gratY, grossY, ptM, ptY, taxable, taxY, inHandY, inHandM: inHandY / 12 + ptY / 12 - ptM, slices: [['In hand', inHandY, 'inhand'], ['Income tax', taxY, 'tax'], ['Your PF', pfY, 'epf'], ['Employer PF', pfY, 'erpf'], ['Professional tax', ptY, 'pt'], ['Gratuity provision', gratY, 'grat']].filter((s) => s[1] > 0) };
+    }
+    const days = (part, whole) => Math.round(part / whole * 365);
+    function draw(r) {
+      const c = $('c-canvas'), x = c.getContext('2d'), W = c.width, Hh = c.height, F = 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif';
+      x.fillStyle = '#faf8f3'; x.fillRect(0, 0, W, Hh);
+      x.fillStyle = '#0f5132'; x.fillRect(0, 0, W, 14);
+      x.fillStyle = '#5d655f'; x.font = '600 28px ' + F; x.fillText('MY CTC OF ' + H.inr(r.ctc).toUpperCase() + ', FY 2026-27', 72, 96);
+      x.fillStyle = '#0f5132'; x.font = '700 150px ' + F; x.fillText(H.inr(Math.round(r.inHandM)), 64, 250);
+      x.fillStyle = '#1b1f1c'; x.font = '700 44px ' + F; x.fillText('in hand every month, ' + Math.round(r.inHandY / r.ctc * 100) + '% of CTC', 72, 318);
+      // stacked bar
+      let bx = 72; const by = 370, bw = W - 144, bh = 56;
+      for (const [, v, k] of r.slices) { const w = bw * v / r.ctc; x.fillStyle = COLORS[k]; x.fillRect(bx, by, Math.max(w, 2), bh); bx += w; }
+      let lx = 72; const ly = 480; x.font = '500 26px ' + F;
+      for (const [name, v, k] of r.slices) { x.fillStyle = COLORS[k]; x.fillRect(lx, ly - 20, 20, 20); x.fillStyle = '#1b1f1c'; const label = name + ' ' + Math.round(v / r.ctc * 100) + '%'; x.fillText(label, lx + 30, ly); lx += 30 + x.measureText(label).width + 36; if (lx > W - 260) break; }
+      x.fillStyle = '#5d655f'; x.font = '400 28px ' + F; x.fillText(days(r.taxY, r.ctc) + ' days of the year go to income tax, ' + days(r.pfY * 2, r.ctc) + ' to PF (both shares).', 72, 540);
+      x.fillStyle = '#0f5132'; x.font = '600 32px ' + F; x.fillText('hisaabtools.in/shots', 72, Hh - 44);
+      x.fillStyle = '#5d655f'; x.font = '400 26px ' + F; const t = 'Make your own card'; x.fillText(t, W - 72 - x.measureText(t).width, Hh - 44);
+      return c.toDataURL('image/png');
+    }
+    let last = null;
+    H.bind('f', (f) => {
+      const ctc = H.val(f, 'ctc'); if (!ctc) return;
+      const r = split(ctc, H.str(f, 'state'), H.str(f, 'regime') === 'new', f.elements.grat.checked); last = r;
+      $('c-inhand').textContent = H.inr(Math.round(r.inHandM));
+      $('c-pct').textContent = Math.round(r.inHandY / r.ctc * 100) + '%';
+      $('c-days').textContent = String(days(r.taxY, r.ctc));
+      $('c-bar').innerHTML = r.slices.map(([name, v, k]) => '<span style="width:' + (v / r.ctc * 100) + '%;background:' + COLORS[k] + '" title="' + name + '"></span>').join('');
+      $('c-legend').innerHTML = r.slices.map(([name, v, k]) => '<li><i style="background:' + COLORS[k] + '"></i>' + name + ' <b>' + H.inr(v) + '</b> <span class="tiny">' + Math.round(v / r.ctc * 100) + '%, ' + days(v, r.ctc) + ' days</span></li>').join('');
+      const url = draw(r); $('c-img').src = url; $('c-download').href = url;
+      $('c-note').textContent = (r.taxY === 0 ? 'No income tax: taxable income of ' + H.inr(r.taxable) + ' is within the ₹12 lakh rebate limit of the new regime. ' : 'Income tax of ' + H.inr(r.taxY) + ' on taxable income of ' + H.inr(r.taxable) + ', spread over twelve months. ') + 'Your PF account grows by ' + H.inr(r.pfY * 2) + ' a year from both shares' + (r.ptY ? ', and professional tax takes ' + H.inr(r.ptY) : '') + '. The card uses the figures in force on 25 November 2026.';
+    });
+    const text = () => 'My CTC of ' + H.inr(last.ctc) + ' is ' + H.inr(Math.round(last.inHandM)) + ' a month in hand, ' + Math.round(last.inHandY / last.ctc * 100) + '% of CTC. ' + days(last.taxY, last.ctc) + ' days a year go to income tax. Make yours: ' + location.href;
+    $('c-copy').addEventListener('click', async () => { try { await navigator.clipboard.writeText(text()); $('c-copy').textContent = 'Copied'; } catch (e) { $('c-copy').textContent = 'Copy failed'; } });
+    $('c-share').addEventListener('click', async () => {
+      try {
+        const blob = await (await fetch($('c-img').src)).blob(); const file = new File([blob], 'my-ctc-card.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) await navigator.share({ files: [file], text: text() });
+        else if (navigator.share) await navigator.share({ text: text(), url: location.href });
+        else { await navigator.clipboard.writeText(text()); $('c-share').textContent = 'Link copied'; }
+      } catch (e) { /* user cancelled or sharing unavailable */ }
+    });
+  })();</script>
+</body>
+</html>

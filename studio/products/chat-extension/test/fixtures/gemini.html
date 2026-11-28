@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Gemini fixture</title></head>
+<body>
+<div class="sidenav">
+  <a href="/app">New chat</a>
+  <div class="conversations-container">
+    <a href="/app/0a1b2c3d4e5f">Email to landlord</a>
+    <a href="/app/9f8e7d6c5b4a">Marathon training</a>
+    <a href="https://gemini.google.com/app/5e5e5e5e5e5e">Gift ideas</a>
+  </div>
+</div>
+<main><div id="messages"></div>
+  <script>
+    const M = { '0a1b2c3d4e5f': ['Draft an email to my landlord about the leaking kitchen tap.', 'Subject: Kitchen tap repair. Dear Mr Rao, the kitchen tap has been leaking since Monday.'] };
+    const id = (location.pathname.match(/^\/app\/([A-Za-z0-9]+)/) || [])[1];
+    setTimeout(() => { document.getElementById('messages').innerHTML = (M[id] || ['Empty.']).map((t) => '<p>' + t + '</p>').join(''); }, 50);
+  </script>
+</main>
+</body></html>

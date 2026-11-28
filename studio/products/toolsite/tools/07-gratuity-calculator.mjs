@@ -1,0 +1,52 @@
+export default {
+  slug: 'gratuity-calculator',
+  title: 'Gratuity Calculator',
+  h1: 'Gratuity Calculator under the Payment of Gratuity Act',
+  summary: 'Gratuity due on leaving a job after five years, with the tax-free limit.',
+  description: 'Free gratuity calculator for India. Work out gratuity payable after five years of service using the 15/26 formula under the Payment of Gratuity Act, with the ₹20 lakh tax exemption limit.',
+  category: 'salary',
+  related: ['income-tax-calculator', 'hra-calculator', 'salary-slip-generator'],
+  intro: 'Enter your last drawn basic plus dearness allowance and your length of service. The calculator applies the statutory formula and shows how much is tax free.',
+  tool: `
+<form id="f">
+  <div class="grid">
+    <label>Last drawn monthly basic + DA (₹)<input type="number" name="s" value="60000" min="0" step="1000"></label>
+    <label>Years of service<input type="number" name="y" value="7" min="0" max="60" step="1"></label>
+    <label>Extra months<input type="number" name="m" value="4" min="0" max="11" step="1"></label>
+    <label>Employer is<select name="cov"><option value="1" selected>Covered by the Gratuity Act (10+ employees)</option><option value="0">Not covered by the Act</option></select></label>
+  </div>
+  <div class="result" id="out"></div>
+</form>`,
+  script: function () {
+    const H = window.H;
+    H.bind('f', (f) => {
+      const s = H.val(f, 's'), y = H.val(f, 'y'), m = H.val(f, 'm'), cov = H.val(f, 'cov') === 1;
+      const years = cov ? y + (m >= 6 ? 1 : 0) : y;
+      const eligible = (y + m / 12) >= 5 || (cov && y === 4 && m >= 8);
+      const g = cov ? 15 * s * years / 26 : 15 * s * years / 30;
+      const exempt = Math.min(g, 2000000);
+      document.getElementById('out').innerHTML = eligible
+        ? '<div class="big"><div class="stat best"><b>' + H.inr(g) + '</b><span>Gratuity payable</span></div><div class="stat"><b>' + years + '</b><span>Years counted</span></div><div class="stat"><b>' + H.inr(exempt) + '</b><span>Tax free (up to ₹20 lakh)</span></div>' + (g > 2000000 ? '<div class="stat warn"><b>' + H.inr(g - 2000000) + '</b><span>Taxable portion</span></div>' : '') + '</div>' +
+          '<p class="note">Formula used: 15 × ' + H.inr(s) + ' × ' + years + ' ÷ ' + (cov ? '26' : '30') + '.</p>'
+        : '<div class="stat warn"><b>Not yet eligible</b><span>Gratuity needs five years of continuous service (four years and 240 days with the same employer also qualifies under the Act). It is paid regardless of tenure on death or disablement.</span></div>';
+    });
+  },
+  explainer: `
+<h2>The gratuity formula</h2>
+<span class="formula">Covered by the Act:  Gratuity = 15 × last salary × years ÷ 26
+Not covered:         Gratuity = 15 × average salary × years ÷ 30</span>
+<p>"Salary" means basic pay plus dearness allowance only. HRA, bonus and other allowances are excluded. The 26 in the denominator represents working days in a month, so the formula pays roughly 15 days of wages for every year of service.</p>
+<h2>Rounding of service</h2>
+<p>For employers covered by the Payment of Gratuity Act, service of more than six months in the final year counts as a full year. Seven years and seven months is treated as eight years. For employers outside the Act, only completed years count and the salary used is the average of the last ten months.</p>
+<h2>Who is eligible</h2>
+<p>Any employee who completes five years of continuous service with one employer, in an establishment with ten or more employees. Several court decisions treat four years and 240 days as five years. The five-year condition is waived when employment ends because of death or disablement; the amount is then paid to the nominee.</p>
+<h2>Tax treatment</h2>
+<p>Gratuity received by government employees is fully exempt. For others, the least of the actual gratuity, the formula amount, and ₹20 lakh is exempt under Section 10(10). The ₹20 lakh limit is a lifetime limit across all employers. Anything above it is taxed as salary.</p>
+<h2>When is it paid?</h2>
+<p>The employer must pay within 30 days of it becoming due. Delays attract simple interest at the rate notified by the government. The maximum gratuity payable under the Act is ₹20 lakh, though an employer can pay more under its own policy.</p>`,
+  faq: [
+    { q: 'Does gratuity count notice period and leave?', a: '<p>Yes. Continuous service includes paid leave, the notice period and any period of absence due to sickness, accident or authorised leave. Only unauthorised absence treated as a break by the employer is excluded.</p>' },
+    { q: 'Is gratuity part of CTC?', a: '<p>Many companies show a gratuity provision in the CTC, typically 4.81% of basic. That is the employer setting aside money; you receive it only on leaving after the qualifying period.</p>' },
+    { q: 'What if I resign at 4 years and 10 months?', a: '<p>Under the Act, four years and 240 days in the fifth year is treated as five years by several High Courts, so most employers pay. If your employer refuses, you can apply to the controlling authority under the Act.</p>' },
+  ],
+};

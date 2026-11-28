@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Conversation Shelf",
+  "version": "0.3.0",
+  "description": "A side panel that lists your conversations on ChatGPT, Claude and Gemini, files them into folders, and searches their titles and messages. Everything stays on your device.",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "src/adapters.js",
+        "src/store.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}

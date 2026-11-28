@@ -1,0 +1,78 @@
+export default {
+  slug: 'epf-calculator',
+  title: 'EPF Calculator',
+  h1: 'EPF Calculator: provident fund corpus at retirement and your EPS pension',
+  summary: 'Year-by-year PF balance with the ₹25,000 wage ceiling, plus the monthly pension estimate.',
+  description: 'Free EPF calculator for India. See your Employees Provident Fund balance at retirement year by year at the current 8.25% rate, with the employer share split between EPF and EPS at the ₹25,000 wage ceiling in force from 17 September 2026, and an estimate of the EPS monthly pension.',
+  category: 'investments',
+  related: ['nps-calculator', 'in-hand-salary-calculator', 'ppf-calculator', 'gratuity-calculator'],
+  intro: 'Enter your basic pay, age and expected raises. The calculator builds the PF balance year by year the way EPFO credits interest, splits the employer share into provident fund and pension, and estimates the pension the EPS would pay from 58.',
+  tool: `
+<form id="f">
+  <div class="grid">
+    <label>Current age<input type="number" name="age" value="30" min="18" max="59" step="1"></label>
+    <label>Age at retirement <span class="hint">EPS pension starts at 58</span><input type="number" name="ret" value="58" min="19" max="60" step="1"></label>
+    <label>Monthly basic pay plus DA (₹)<input type="number" name="basic" value="40000" min="0" step="500"></label>
+    <label>Expected yearly rise in basic (%)<input type="number" name="g" value="5" min="0" max="30" step="0.5"></label>
+    <label>Your contribution (% of basic) <span class="hint">12% statutory; more is VPF</span><input type="number" name="ee" value="12" min="12" max="100" step="1"></label>
+    <label>Employer contributes on<select name="base"><option value="full">Full basic (12%)</option><option value="cap">Basic up to the ₹25,000 ceiling (12%)</option></select></label>
+    <label>Current EPF balance (₹) <span class="hint">From your passbook</span><input type="number" name="bal" value="0" min="0" step="10000"></label>
+    <label>EPS service already completed (years)<input type="number" name="past" value="0" min="0" max="40" step="1"></label>
+    <label>Interest rate (% per year) <span class="hint">8.25% declared for FY 2025-26</span><input type="number" name="r" value="8.25" min="0" max="15" step="0.05"></label>
+  </div>
+  <div class="result" id="out"></div>
+</form>`,
+  script: function () {
+    const H = window.H;
+    const CEIL = 25000, EPS_RATE = 0.0833;
+    H.bind('f', (f) => {
+      const age = H.val(f, 'age'), ret = H.val(f, 'ret'), years = Math.max(0, Math.round(ret - age));
+      const g = H.val(f, 'g') / 100, r = H.val(f, 'r') / 100, eePct = Math.max(12, H.val(f, 'ee')) / 100, capped = f.elements.base.value === 'cap';
+      let basic = H.val(f, 'basic'), bal = H.val(f, 'bal'), contrib = 0, interest = 0, epsTotal = 0, rows = '';
+      for (let y = 1; y <= years; y++) {
+        const wage = Math.min(basic, CEIL);
+        const eps = Math.round(wage * EPS_RATE);
+        const er = (capped ? wage : basic) * 0.12 - eps;
+        const ee = basic * eePct;
+        const c = ee + er;
+        // EPFO credits interest once a year, computed on the monthly running balance: the opening balance earns for twelve months and each month's contribution from the month after it is credited.
+        const int = bal * r + c * r * 5.5;
+        bal += c * 12 + int; contrib += c * 12; interest += int; epsTotal += eps * 12;
+        rows += '<tr><td>Year ' + y + '<br><span class="tiny">age ' + (age + y) + '</span></td><td>' + H.inr(basic) + '</td><td>' + H.inr(ee) + '</td><td>' + H.inr(er) + '</td><td>' + H.inr(eps) + '</td><td>' + H.inr(int) + '</td><td>' + H.inr(bal) + '</td></tr>';
+        basic = basic * (1 + g);
+      }
+      const finalBasic = basic / (1 + g);
+      const service = Math.min(35, H.val(f, 'past') + Math.min(years, Math.max(0, 58 - age)));
+      const pensionable = Math.min(years ? finalBasic : H.val(f, 'basic'), CEIL);
+      const weight = service >= 20 && ret >= 58 ? 2 : 0;
+      const pension = service >= 10 ? Math.max(1000, Math.round(pensionable * (service + weight) / 70)) : 0;
+      document.getElementById('out').innerHTML =
+        '<div class="big"><div class="stat best"><b>' + H.inr(bal) + '</b><span>EPF balance at ' + ret + '</span></div>' +
+        '<div class="stat"><b>' + H.inr(contrib) + '</b><span>Contributions from now, yours and employer’s</span></div>' +
+        '<div class="stat"><b>' + H.inr(interest) + '</b><span>Interest earned</span></div>' +
+        '<div class="stat"><b>' + H.inr(pension) + '</b><span>EPS pension per month from 58' + (service < 10 ? ' (needs 10 years of service)' : '') + '</span></div></div>' +
+        '<div class="tbl-wrap"><table class="wide"><thead><tr><th>Year</th><th>Basic</th><th>You, per month</th><th>Employer to EPF</th><th>Employer to EPS</th><th>Interest</th><th>Balance</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+        '<p class="note">Pension estimate: pensionable salary ' + H.inr(pensionable) + ' (basic at retirement, capped at ₹25,000) × ' + service + ' years of service' + (weight ? ' plus 2 years of weightage' : '') + ' ÷ 70. Employer EPS contribution over the period: ' + H.inr(epsTotal) + '. If you retire before September 2031, part of the 60-month average used by EPFO is still capped at ₹15,000, so the actual pension will be lower than this figure.</p>';
+    });
+  },
+  explainer: `
+<h2>How the EPF balance builds</h2>
+<p>You contribute 12% of basic pay plus dearness allowance every month, and your employer matches it. The employer's 12% is split: 8.33% of wages up to the statutory ceiling goes to the Employees' Pension Scheme, and the rest goes into your provident fund account. From 17 September 2026 the ceiling is ₹25,000 a month, so the pension share is at most ₹2,083 and the employer's provident fund share on a ₹40,000 basic is ₹4,800 minus ₹2,083, which is ₹2,717. Some employers restrict their whole contribution to the ceiling; pick that option above if your payslip shows employer PF of ₹917.</p>
+<span class="formula">Employer to EPS  = 8.33% × min(basic + DA, ₹25,000)
+Employer to EPF  = 12% × basic (or 12% × ₹25,000 if capped) minus the EPS share
+Interest for the year = opening balance × rate + monthly contribution × rate × 5.5</span>
+<h3>How interest is credited</h3>
+<p>EPFO declares one rate for the financial year, 8.25% for FY 2025-26, and credits the interest once, after the year ends. The interest is worked out on the monthly running balance: the opening balance earns for the full year, and each month's contribution earns from the month after it is deposited. Over a year that is the same as the monthly contribution earning for five and a half months on average, which is the figure in the formula above. The rate is set by the EPFO board each year and has been 8.25% since FY 2023-24; change it above if a new rate is declared.</p>
+<h3>The pension from EPS</h3>
+<p>The pension share does not earn interest and is not part of your balance. Instead it buys a monthly pension from 58, provided you have at least ten years of service. The formula is pensionable salary times pensionable service divided by 70, where pensionable salary is the average of the last 60 months' wages capped at the ceiling, and two years of weightage are added for members who retire at 58 with 20 years of service or more. A member with 30 years of service and wages at the ceiling throughout gets ₹25,000 × 32 ÷ 70, about ₹11,400 a month. The minimum pension is ₹1,000. Because the ceiling was ₹15,000 until September 2026, anyone retiring in the next five years has a 60-month average that mixes both caps and will get less than the figure above.</p>
+<h3>Tax</h3>
+<p>Your contribution qualifies for Section 80C in the old regime. Interest is tax free except on your own contributions above ₹2,50,000 in a year, including VPF, where the interest on the excess is taxable. The employer's contribution is tax free up to 12% of salary, and the aggregate employer contribution to PF, NPS and superannuation is taxable as a perquisite above ₹7,50,000 a year. Withdrawal after five years of continuous service is tax free.</p>
+<p class="tiny">Not modelled: the EDLI insurance charge and administrative charges paid by the employer on top of the 12%, interest rounding to the rupee, breaks in service, partial withdrawals, and the EPS higher-pension option. The 60-month average for pensionable salary is approximated by the final year's basic.</p>`,
+  faq: [
+    { q: 'Why is my employer PF lower than my own contribution?', a: '<p>Because ₹2,083 of the employer’s 12% goes to the pension scheme, not your PF account, and some employers contribute only on the ₹25,000 ceiling. Your own 12% goes entirely to the PF account.</p>' },
+    { q: 'What changed with the ₹25,000 ceiling?', a: '<p>From 17 September 2026 the wage ceiling for compulsory PF, pension and insurance coverage rose from ₹15,000 to ₹25,000. The pension contribution rose from ₹1,250 to ₹2,083 a month for anyone earning at or above the ceiling, and employees earning between ₹15,001 and ₹25,000 who were outside PF became members.</p>' },
+    { q: 'Is the EPF interest rate fixed?', a: '<p>No. The EPFO board recommends a rate each year and the finance ministry ratifies it. It was 8.25% for FY 2023-24, FY 2024-25 and FY 2025-26. The calculator uses one rate for all years; a lower rate later would reduce the corpus.</p>' },
+    { q: 'Can I contribute more than 12%?', a: '<p>Yes, through voluntary provident fund, up to 100% of basic. It earns the same interest and the employer does not have to match it. Interest on your contributions above ₹2.5 lakh a year is taxable.</p>' },
+    { q: 'What happens to the EPS money if I leave before ten years?', a: '<p>You can withdraw it as a lump sum under the scheme’s withdrawal benefit table, or carry it forward with a scheme certificate to add to later service. After ten years of service withdrawal is not allowed and the money becomes a pension at 58.</p>' },
+  ],
+};
